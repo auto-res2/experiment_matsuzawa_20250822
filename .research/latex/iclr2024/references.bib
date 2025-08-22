@@ -5,3 +5,349 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{ai_2023_hrdfuse,
+ abstract = {Depth estimation from a monocular 360{\deg} image is a burgeoning problem
+owing to its holistic sensing of a scene. Recently, some methods, \eg,
+OmniFusion, have applied the tangent projection (TP) to represent a
+360{\deg}image and predicted depth values via patch-wise regressions, which are
+merged to get a depth map with equirectangular projection (ERP) format.
+However, these methods suffer from 1) non-trivial process of merging plenty of
+patches; 2) capturing less holistic-with-regional contextual information by
+directly regressing the depth value of each pixel. In this paper, we propose a
+novel framework, \textbf{HRDFuse}, that subtly combines the potential of
+convolutional neural networks (CNNs) and transformers by collaboratively
+learning the \textit{holistic} contextual information from the ERP and the
+\textit{regional} structural information from the TP. Firstly, we propose a
+spatial feature alignment (\textbf{SFA}) module that learns feature
+similarities between the TP and ERP to aggregate the TP features into a
+complete ERP feature map in a pixel-wise manner. Secondly, we propose a
+collaborative depth distribution classification (\textbf{CDDC}) module that
+learns the \textbf{holistic-with-regional} histograms capturing the ERP and TP
+depth distributions. As such, the final depth values can be predicted as a
+linear combination of histogram bin centers. Lastly, we adaptively combine the
+depth predictions from ERP and TP to obtain the final depth map. Extensive
+experiments show that our method predicts\textbf{ more smooth and accurate
+depth} results while achieving \textbf{favorably better} results than the SOTA
+methods.},
+ arxiv_url = {https://arxiv.org/pdf/2303.11616v3.pdf},
+ author = {Hao Ai and Zidong cao and Yan-pei Cao and Ying Shan and Lin Wang},
+ title = {HRDFuse: Monocular 360° Depth Estimation by Collaboratively Learning Holistic-With-Regional Depth Distributions},
+ year = {2023}
+}
+
+@article{anagnostidis_2023_navigating,
+ abstract = {In recent years, the state-of-the-art in deep learning has been dominated by
+very large models that have been pre-trained on vast amounts of data. The
+paradigm is very simple: investing more computational resources (optimally)
+leads to better performance, and even predictably so; neural scaling laws have
+been derived that accurately forecast the performance of a network for a
+desired level of compute. This leads to the notion of a `compute-optimal'
+model, i.e. a model that allocates a given level of compute during training
+optimally to maximize performance. In this work, we extend the concept of
+optimality by allowing for an `adaptive' model, i.e. a model that can change
+its shape during training. By doing so, we can design adaptive models that
+optimally traverse between the underlying scaling laws and outpace their
+`static' counterparts, leading to a significant reduction in the required
+compute to reach a given target performance. We show that our approach
+generalizes across modalities and different shape parameters.},
+ arxiv_url = {https://arxiv.org/pdf/2311.03233v3.pdf},
+ author = {Sotiris Anagnostidis and Gregor Bachmann and Imanol Schlag and Thomas Hofmann},
+ title = {Navigating Scaling Laws: Compute Optimality in Adaptive Model Training},
+ year = {2023}
+}
+
+@article{author_year_adatune,
+ title = {AdaTune: Adaptive Tensor Program Compilation Made Efficient}
+}
+
+@article{author_year_simple,
+ title = {A Simple Romance Between Multi-Exit Vision Transformer and Token Reduction}
+}
+
+@article{elbayad_2019_depth,
+ abstract = {State of the art sequence-to-sequence models for large scale tasks perform a
+fixed number of computations for each input sequence regardless of whether it
+is easy or hard to process. In this paper, we train Transformer models which
+can make output predictions at different stages of the network and we
+investigate different ways to predict how much computation is required for a
+particular sequence. Unlike dynamic computation in Universal Transformers,
+which applies the same set of layers iteratively, we apply different layers at
+every step to adjust both the amount of computation as well as the model
+capacity. On IWSLT German-English translation our approach matches the accuracy
+of a well tuned baseline Transformer while using less than a quarter of the
+decoder layers.},
+ arxiv_url = {https://arxiv.org/pdf/1910.10073v4.pdf},
+ author = {Maha Elbayad and Jiatao Gu and Edouard Grave and Michael Auli},
+ title = {Depth-Adaptive Transformer},
+ year = {2019}
+}
+
+@article{elbayad_2019_depth,
+ abstract = {State of the art sequence-to-sequence models for large scale tasks perform a
+fixed number of computations for each input sequence regardless of whether it
+is easy or hard to process. In this paper, we train Transformer models which
+can make output predictions at different stages of the network and we
+investigate different ways to predict how much computation is required for a
+particular sequence. Unlike dynamic computation in Universal Transformers,
+which applies the same set of layers iteratively, we apply different layers at
+every step to adjust both the amount of computation as well as the model
+capacity. On IWSLT German-English translation our approach matches the accuracy
+of a well tuned baseline Transformer while using less than a quarter of the
+decoder layers.},
+ arxiv_url = {https://arxiv.org/pdf/1910.10073v4.pdf},
+ author = {Maha Elbayad and Jiatao Gu and Edouard Grave and Michael Auli},
+ title = {Depth-Adaptive Transformer},
+ year = {2019}
+}
+
+@article{jazbec_2024_fast,
+ abstract = {Scaling machine learning models significantly improves their performance.
+However, such gains come at the cost of inference being slow and
+resource-intensive. Early-exit neural networks (EENNs) offer a promising
+solution: they accelerate inference by allowing intermediate layers to exit and
+produce a prediction early. Yet a fundamental issue with EENNs is how to
+determine when to exit without severely degrading performance. In other words,
+when is it 'safe' for an EENN to go 'fast'? To address this issue, we
+investigate how to adapt frameworks of risk control to EENNs. Risk control
+offers a distribution-free, post-hoc solution that tunes the EENN's exiting
+mechanism so that exits only occur when the output is of sufficient quality. We
+empirically validate our insights on a range of vision and language tasks,
+demonstrating that risk control can produce substantial computational savings,
+all the while preserving user-specified performance goals.},
+ arxiv_url = {https://arxiv.org/pdf/2405.20915v2.pdf},
+ author = {Metod Jazbec and Alexander Timans and Tin Hadži Veljković and Kaspar Sakmann and Dan Zhang and Christian A. Naesseth and Eric Nalisnick},
+ github_url = {https://github.com/google-research/t5x},
+ journal = {Advances in Neural Information Processing Systems (NeurIPS) 2024},
+ title = {Fast yet Safe: Early-Exiting with Risk Control},
+ year = {2024}
+}
+
+@article{karaev_2023_dynamicstereo,
+ abstract = {We consider the problem of reconstructing a dynamic scene observed from a
+stereo camera. Most existing methods for depth from stereo treat different
+stereo frames independently, leading to temporally inconsistent depth
+predictions. Temporal consistency is especially important for immersive AR or
+VR scenarios, where flickering greatly diminishes the user experience. We
+propose DynamicStereo, a novel transformer-based architecture to estimate
+disparity for stereo videos. The network learns to pool information from
+neighboring frames to improve the temporal consistency of its predictions. Our
+architecture is designed to process stereo videos efficiently through divided
+attention layers. We also introduce Dynamic Replica, a new benchmark dataset
+containing synthetic videos of people and animals in scanned environments,
+which provides complementary training and evaluation data for dynamic stereo
+closer to real applications than existing datasets. Training with this dataset
+further improves the quality of predictions of our proposed DynamicStereo as
+well as prior methods. Finally, it acts as a benchmark for consistent stereo
+methods.},
+ arxiv_url = {https://arxiv.org/pdf/2305.02296v1.pdf},
+ author = {Nikita Karaev and Ignacio Rocco and Benjamin Graham and Natalia Neverova and Andrea Vedaldi and Christian Rupprecht},
+ title = {DynamicStereo: Consistent Dynamic Depth From Stereo Videos},
+ year = {2023}
+}
+
+@article{koyuncu_2023_memorization,
+ abstract = {Many empirical studies have demonstrated the performance benefits of
+conditional computation in neural networks, including reduced inference time
+and power consumption. We study the fundamental limits of neural conditional
+computation from the perspective of memorization capacity. For Rectified Linear
+Unit (ReLU) networks without conditional computation, it is known that
+memorizing a collection of $n$ input-output relationships can be accomplished
+via a neural network with $O(\sqrt{n})$ neurons. Calculating the output of this
+neural network can be accomplished using $O(\sqrt{n})$ elementary arithmetic
+operations of additions, multiplications and comparisons for each input. Using
+a conditional ReLU network, we show that the same task can be accomplished
+using only $O(\log n)$ operations per input. This represents an almost
+exponential improvement as compared to networks without conditional
+computation. We also show that the $\Theta(\log n)$ rate is the best possible.
+Our achievability result utilizes a general methodology to synthesize a
+conditional network out of an unconditional network in a
+computationally-efficient manner, bridging the gap between unconditional and
+conditional architectures.},
+ arxiv_url = {https://arxiv.org/pdf/2303.11247v1.pdf},
+ author = {Erdem Koyuncu},
+ title = {Memorization Capacity of Neural Networks with Conditional Computation},
+ year = {2023}
+}
+
+@article{lei_2023_conditional,
+ abstract = {We propose Conditional Adapter (CoDA), a parameter-efficient transfer
+learning method that also improves inference efficiency. CoDA generalizes
+beyond standard adapter approaches to enable a new way of balancing speed and
+accuracy using conditional computation. Starting with an existing dense
+pretrained model, CoDA adds sparse activation together with a small number of
+new parameters and a light-weight training phase. Our experiments demonstrate
+that the CoDA approach provides an unexpectedly efficient way to transfer
+knowledge. Across a variety of language, vision, and speech tasks, CoDA
+achieves a 2x to 8x inference speed-up compared to the state-of-the-art Adapter
+approaches with moderate to no accuracy loss and the same parameter efficiency.},
+ arxiv_url = {https://arxiv.org/pdf/2304.04947v2.pdf},
+ author = {Tao Lei and Junwen Bai and Siddhartha Brahma and Joshua Ainslie and Kenton Lee and Yanqi Zhou and Nan Du and Vincent Y. Zhao and Yuexin Wu and Bo Li and Yu Zhang and Ming-Wei Chang},
+ github_url = {https://github.com/google-research/text-to-text-transfer-transformer},
+ title = {Conditional Adapters: Parameter-efficient Transfer Learning with Fast Inference},
+ year = {2023}
+}
+
+@article{seo_2023_mixnerf,
+ abstract = {Neural Radiance Field (NeRF) has broken new ground in the novel view
+synthesis due to its simple concept and state-of-the-art quality. However, it
+suffers from severe performance degradation unless trained with a dense set of
+images with different camera poses, which hinders its practical applications.
+Although previous methods addressing this problem achieved promising results,
+they relied heavily on the additional training resources, which goes against
+the philosophy of sparse-input novel-view synthesis pursuing the training
+efficiency. In this work, we propose MixNeRF, an effective training strategy
+for novel view synthesis from sparse inputs by modeling a ray with a mixture
+density model. Our MixNeRF estimates the joint distribution of RGB colors along
+the ray samples by modeling it with mixture of distributions. We also propose a
+new task of ray depth estimation as a useful training objective, which is
+highly correlated with 3D scene geometry. Moreover, we remodel the colors with
+regenerated blending weights based on the estimated ray depth and further
+improves the robustness for colors and viewpoints. Our MixNeRF outperforms
+other state-of-the-art methods in various standard benchmarks with superior
+efficiency of training and inference.},
+ arxiv_url = {https://arxiv.org/pdf/2302.08788v2.pdf},
+ author = {Seunghyeon Seo and Donghoon Han and Yeonjin Chang and Nojun Kwak},
+ title = {MixNeRF: Modeling a Ray With Mixture Density for Novel View Synthesis From Sparse Inputs},
+ year = {2023}
+}
+
+@article{shi_2024_decotr,
+ abstract = {In this paper, we introduce a novel approach that harnesses both 2D and 3D
+attentions to enable highly accurate depth completion without requiring
+iterative spatial propagations. Specifically, we first enhance a baseline
+convolutional depth completion model by applying attention to 2D features in
+the bottleneck and skip connections. This effectively improves the performance
+of this simple network and sets it on par with the latest, complex
+transformer-based models. Leveraging the initial depths and features from this
+network, we uplift the 2D features to form a 3D point cloud and construct a 3D
+point transformer to process it, allowing the model to explicitly learn and
+exploit 3D geometric features. In addition, we propose normalization techniques
+to process the point cloud, which improves learning and leads to better
+accuracy than directly using point transformers off the shelf. Furthermore, we
+incorporate global attention on downsampled point cloud features, which enables
+long-range context while still being computationally feasible. We evaluate our
+method, DeCoTR, on established depth completion benchmarks, including NYU Depth
+V2 and KITTI, showcasing that it sets new state-of-the-art performance. We
+further conduct zero-shot evaluations on ScanNet and DDAD benchmarks and
+demonstrate that DeCoTR has superior generalizability compared to existing
+approaches.},
+ arxiv_url = {https://arxiv.org/pdf/2403.12202v1.pdf},
+ author = {Yunxiao Shi and Manish Kumar Singh and Hong Cai and Fatih Porikli},
+ title = {DeCoTR: Enhancing Depth Completion with 2D and 3D Attentions},
+ year = {2024}
+}
+
+@article{tang_2022_you,
+ abstract = {Large-scale Transformer models bring significant improvements for various
+downstream vision language tasks with a unified architecture. The performance
+improvements come with increasing model size, resulting in slow inference speed
+and increased cost for severing. While some certain predictions benefit from
+the full complexity of the large-scale model, not all of inputs need the same
+amount of computation to conduct, potentially leading to computation resource
+waste. To handle this challenge, early exiting is proposed to adaptively
+allocate computational power in term of input complexity to improve inference
+efficiency. The existing early exiting strategies usually adopt output
+confidence based on intermediate layers as a proxy of input complexity to incur
+the decision of skipping following layers. However, such strategies cannot
+apply to encoder in the widely-used unified architecture with both encoder and
+decoder due to difficulty of output confidence estimation in the encoder. It is
+suboptimal in term of saving computation power to ignore the early exiting in
+encoder component. To handle this challenge, we propose a novel early exiting
+strategy for unified visual language models, which allows dynamically skip the
+layers in encoder and decoder simultaneously in term of input layer-wise
+similarities with multiple times of early exiting, namely \textbf{MuE}. By
+decomposing the image and text modalities in the encoder, MuE is flexible and
+can skip different layers in term of modalities, advancing the inference
+efficiency while minimizing performance drop. Experiments on the SNLI-VE and MS
+COCO datasets show that the proposed approach MuE can reduce expected inference
+time by up to 50\% and 40\% while maintaining 99\% and 96\% performance
+respectively.},
+ arxiv_url = {https://arxiv.org/pdf/2211.11152v2.pdf},
+ author = {Shengkun Tang and Yaqing Wang and Zhenglun Kong and Tianchi Zhang and Yao Li and Caiwen Ding and Yanzhi Wang and Yi Liang and Dongkuan Xu},
+ github_url = {https://github.com/OFA-Sys/OFA},
+ title = {You Need Multiple Exiting: Dynamic Early Exiting for Accelerating Unified Vision Language Model},
+ year = {2022}
+}
+
+@article{yan_2024_monocd,
+ abstract = {Monocular 3D object detection has attracted widespread attention due to its
+potential to accurately obtain object 3D localization from a single image at a
+low cost. Depth estimation is an essential but challenging subtask of monocular
+3D object detection due to the ill-posedness of 2D to 3D mapping. Many methods
+explore multiple local depth clues such as object heights and keypoints and
+then formulate the object depth estimation as an ensemble of multiple depth
+predictions to mitigate the insufficiency of single-depth information. However,
+the errors of existing multiple depths tend to have the same sign, which
+hinders them from neutralizing each other and limits the overall accuracy of
+combined depth. To alleviate this problem, we propose to increase the
+complementarity of depths with two novel designs. First, we add a new depth
+prediction branch named complementary depth that utilizes global and efficient
+depth clues from the entire image rather than the local clues to reduce the
+correlation of depth predictions. Second, we propose to fully exploit the
+geometric relations between multiple depth clues to achieve complementarity in
+form. Benefiting from these designs, our method achieves higher
+complementarity. Experiments on the KITTI benchmark demonstrate that our method
+achieves state-of-the-art performance without introducing extra data. In
+addition, complementary depth can also be a lightweight and plug-and-play
+module to boost multiple existing monocular 3d object detectors. Code is
+available at https://github.com/elvintanhust/MonoCD.},
+ arxiv_url = {https://arxiv.org/pdf/2404.03181v1.pdf},
+ author = {Longfei Yan and Pei Yan and Shengzhou Xiong and Xuanyu Xiang and Yihua Tan},
+ title = {MonoCD: Monocular 3D Object Detection with Complementary Depths},
+ year = {2024}
+}
+
+@article{zeng_2024_wordepth,
+ abstract = {Three-dimensional (3D) reconstruction from a single image is an ill-posed
+problem with inherent ambiguities, i.e. scale. Predicting a 3D scene from text
+description(s) is similarly ill-posed, i.e. spatial arrangements of objects
+described. We investigate the question of whether two inherently ambiguous
+modalities can be used in conjunction to produce metric-scaled reconstructions.
+To test this, we focus on monocular depth estimation, the problem of predicting
+a dense depth map from a single image, but with an additional text caption
+describing the scene. To this end, we begin by encoding the text caption as a
+mean and standard deviation; using a variational framework, we learn the
+distribution of the plausible metric reconstructions of 3D scenes corresponding
+to the text captions as a prior. To "select" a specific reconstruction or depth
+map, we encode the given image through a conditional sampler that samples from
+the latent space of the variational text encoder, which is then decoded to the
+output depth map. Our approach is trained alternatingly between the text and
+image branches: in one optimization step, we predict the mean and standard
+deviation from the text description and sample from a standard Gaussian, and in
+the other, we sample using a (image) conditional sampler. Once trained, we
+directly predict depth from the encoded text using the conditional sampler. We
+demonstrate our approach on indoor (NYUv2) and outdoor (KITTI) scenarios, where
+we show that language can consistently improve performance in both.},
+ arxiv_url = {https://arxiv.org/pdf/2404.03635v4.pdf},
+ author = {Ziyao Zeng and Daniel Wang and Fengyu Yang and Hyoungseob Park and Yangchao Wu and Stefano Soatto and Byung-Woo Hong and Dong Lao and Alex Wong},
+ title = {WorDepth: Variational Language Prior for Monocular Depth Estimation},
+ year = {2024}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{dinh_2016_density,
+ abstract = {Unsupervised learning of probabilistic models is a central yet challenging
+problem in machine learning. Specifically, designing models with tractable
+learning, sampling, inference and evaluation is crucial in solving this task.
+We extend the space of such models using real-valued non-volume preserving
+(real NVP) transformations, a set of powerful invertible and learnable
+transformations, resulting in an unsupervised learning algorithm with exact
+log-likelihood computation, exact sampling, exact inference of latent
+variables, and an interpretable latent space. We demonstrate its ability to
+model natural images on four datasets through sampling, log-likelihood
+evaluation and latent variable manipulations.},
+ arxiv_url = {https://arxiv.org/pdf/1605.08803v3.pdf},
+ author = {Laurent Dinh and Jascha Sohl-Dickstein and Samy Bengio},
+ title = {Density estimation using real nvp.},
+ year = {2016}
+}

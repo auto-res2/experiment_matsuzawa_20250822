@@ -33,7 +33,7 @@
 \DeclareMathOperator*{\argmin}{arg\,min}
 \DeclareMathOperator*{\argmax}{arg\,max}
 
-\graphicspath{{../}} % To reference your generated figures, see below.
+% To reference your generated figures, see below.
 
 \title{SOCA: Streaming Orthogonal Curvature Aggregation for Geometrically-Informed Meta-Continual Learning}
 
@@ -52,9 +52,9 @@ Modern Meta-Continual Learning (Meta-CL) faces a dichotomy between computational
 
 \section{Introduction}
 \label{sec:intro}
-The ambition to create artificial agents capable of lifelong learning—accumulating knowledge over time from a continuous stream of experiences—is a central goal in artificial intelligence. A primary obstacle to this goal is the phenomenon of catastrophic forgetting, where a model trained on a sequence of tasks rapidly loses its ability to perform well on earlier tasks. Current approaches in Meta-Continual Learning (Meta-CL) are largely split into two paradigms, each with significant drawbacks. On one hand, first-order streaming methods, such as those based on experience replay or gradient projection, are computationally efficient and designed for online settings [lin\_2024\_effective, mavrothalassitis\_2024\_efficient]. However, they are often geometrically naive, relying on heuristics or stored data samples to mitigate forgetting. On the other hand, second-order methods offer a more principled solution by modeling the geometry of the loss landscape \cite{author-year-meta}. By approximating the Hessian, these methods can identify and preserve important parameter configurations, but classic implementations like ELLA \cite{deng-2022-accelerated} or Laplace Redux \cite{daxberger-2021-laplace} are inherently offline, requiring access to data from all previous tasks to build their geometric models, rendering them unsuitable for true lifelong learning streams.
+The ambition to create artificial agents capable of lifelong learning—accumulating knowledge over time from a continuous stream of experiences—is a central goal in artificial intelligence. A primary obstacle to this goal is the phenomenon of catastrophic forgetting, where a model trained on a sequence of tasks rapidly loses its ability to perform well on earlier tasks. Current approaches in Meta-Continual Learning (Meta-CL) are largely split into two paradigms, each with significant drawbacks. On one hand, first-order streaming methods, such as those based on experience replay or gradient projection, are computationally efficient and designed for online settings [lin\_2024\_effective, mavrothalassitis\_2024\_efficient]. However, they are often geometrically naive, relying on heuristics or stored data samples to mitigate forgetting. On the other hand, second-order methods offer a more principled solution by modeling the geometry of the loss landscape. By approximating the Hessian, these methods can identify and preserve important parameter configurations, but classic implementations like ELLA or Laplace Redux are inherently offline, requiring access to data from all previous tasks to build their geometric models, rendering them unsuitable for true lifelong learning streams.
 
-This division creates a critical gap for practical lifelong learning systems, which demand both the efficiency of streaming algorithms and the geometrically-informed adaptation of second-order methods. The central challenge is twofold: first, how can we aggregate geometric information from a sequence of tasks into a single global model in a streaming fashion, without its memory and computational costs growing with the number of tasks? Second, how can this global model be leveraged to simultaneously prevent the erasure of past knowledge (stability) and accelerate the acquisition of new knowledge (plasticity)? Naive aggregation can lead to a redundant or unstable global model, failing to effectively manage the stability-plasticity dilemma \cite{hiratani-2024-disentangling}.
+This division creates a critical gap for practical lifelong learning systems, which demand both the efficiency of streaming algorithms and the geometrically-informed adaptation of second-order methods. The central challenge is twofold: first, how can we aggregate geometric information from a sequence of tasks into a single global model in a streaming fashion, without its memory and computational costs growing with the number of tasks? Second, how can this global model be leveraged to simultaneously prevent the erasure of past knowledge (stability) and accelerate the acquisition of new knowledge (plasticity)? Naive aggregation can lead to a redundant or unstable global model, failing to effectively manage the stability-plasticity dilemma.
 
 To address these challenges, we propose Streaming Orthogonal Curvature Aggregation (SOCA), a framework to build and maintain a persistent, low-rank, global meta-curvature model in a fully online manner. The core novelty of SOCA lies in its principled orthogonal fusion mechanism. Instead of simply adding new information, our method explicitly disentangles the geometric directions of a new task from the subspace already learned from past tasks. This allows the system to augment its knowledge base only with genuinely new information, ensuring the global model remains compact, expressive, and stable. This global meta-curvature model serves a dual purpose: first, it acts as a regularizer, constraining parameter updates for new tasks to lie within the low-loss subspace shared by previous tasks, thereby preventing catastrophic forgetting. Second, its inverse serves as a meta-learned pre-conditioner for a quasi-Newton optimizer, which reshapes the loss landscape to accelerate learning along novel geometric directions.
 
@@ -72,13 +72,13 @@ We validate SOCA on the Permuted MNIST and Split CIFAR-100 continual learning be
 Our work builds upon and synthesizes several distinct lines of research in continual learning (CL). We position SOCA by comparing and contrasting it with existing paradigms.
 
 \subsection{Streaming and Replay-Based Methods}
-A dominant approach to CL involves mitigating forgetting through rehearsal of past data or gradients. Experience Replay (ER) maintains a small buffer of samples from previous tasks to interleave with current task data during training \cite{author-year-long}. Methods like Averaged Gradient Episodic Memory (AGEM) build on this by projecting the current task's gradient to avoid conflicting with the gradients of buffered samples. More recent works aim to calibrate the gradient update directly, inspired by variance reduction techniques [lin\_2024\_effective, mavrothalassitis\_2024\_efficient]. While computationally efficient and effective, these methods are fundamentally limited. They lack an explicit model of the shared structure across tasks, and their performance is highly dependent on the quality and diversity of the replay buffer, which can be biased \cite{sun-2023-regularizing}. In contrast, SOCA replaces the storage of raw data with a compact, parametric model of shared task geometry, offering a more principled approach to knowledge consolidation.
+A dominant approach to CL involves mitigating forgetting through rehearsal of past data or gradients. Experience Replay (ER) maintains a small buffer of samples from previous tasks to interleave with current task data during training. Methods like Averaged Gradient Episodic Memory (AGEM) build on this by projecting the current task's gradient to avoid conflicting with the gradients of buffered samples. More recent works aim to calibrate the gradient update directly, inspired by variance reduction techniques [lin\_2024\_effective, mavrothalassitis\_2024\_efficient]. While computationally efficient and effective, these methods are fundamentally limited. They lack an explicit model of the shared structure across tasks, and their performance is highly dependent on the quality and diversity of the replay buffer, which can be biased. In contrast, SOCA replaces the storage of raw data with a compact, parametric model of shared task geometry, offering a more principled approach to knowledge consolidation.
 
 \subsection{Second-Order and Geometric Methods}
-Another class of methods leverages second-order information, typically an approximation of the Hessian matrix, to inform the learning process. These methods identify parameter directions critical for previous tasks and penalize changes along them. The Laplace approximation has been a popular framework for this, offering a Bayesian perspective on parameter importance \cite{daxberger-2021-laplace}. ELLA \cite{deng-2022-accelerated} provides an efficient way to learn a shared basis for multiple task models, which can be seen as a low-rank factorization of a global Hessian. The fundamental limitation of these methods is their offline nature. To update their global geometric model, they typically require iterating over data from all previously seen tasks, making their computational cost grow polynomially with the number of tasks. This renders them inapplicable to a true streaming setting. SOCA directly addresses this limitation by introducing a constant-time, online update rule for the global curvature model, making it the first to bring the geometric power of these methods to a scalable, streaming context.
+Another class of methods leverages second-order information, typically an approximation of the Hessian matrix, to inform the learning process. These methods identify parameter directions critical for previous tasks and penalize changes along them. The Laplace approximation has been a popular framework for this, offering a Bayesian perspective on parameter importance. ELLA provides an efficient way to learn a shared basis for multiple task models, which can be seen as a low-rank factorization of a global Hessian. The fundamental limitation of these methods is their offline nature. To update their global geometric model, they typically require iterating over data from all previously seen tasks, making their computational cost grow polynomially with the number of tasks. This renders them inapplicable to a true streaming setting. SOCA directly addresses this limitation by introducing a constant-time, online update rule for the global curvature model, making it the first to bring the geometric power of these methods to a scalable, streaming context.
 
 \subsection{Meta-Continual Learning}
-SOCA can be framed as a Meta-Continual Learning (Meta-CL) approach, where the goal is to 'learn to learn' continually. Many Meta-CL methods adapt algorithms like MAML \cite{finn-2017-model} to an online setting, aiming to learn a parameter initialization that can be quickly adapted to new tasks. Other work has focused on meta-learning variance reduction or other aspects of the optimization process \cite{author-year-meta}. SOCA contributes to this field by proposing to meta-learn a geometric prior—the global curvature model. This model serves as both a regularizer and a pre-conditioner, simultaneously addressing the meta-objectives of remembering the past (stability) and quickly learning the future (plasticity). The explicit disentangling of geometric information in SOCA provides a more structured approach than implicitly learning an initialization or learning rule.
+SOCA can be framed as a Meta-Continual Learning (Meta-CL) approach, where the goal is to 'learn to learn' continually. Many Meta-CL methods adapt algorithms like MAML to an online setting, aiming to learn a parameter initialization that can be quickly adapted to new tasks. Other work has focused on meta-learning variance reduction or other aspects of the optimization process. SOCA contributes to this field by proposing to meta-learn a geometric prior—the global curvature model. This model serves as both a regularizer and a pre-conditioner, simultaneously addressing the meta-objectives of remembering the past (stability) and quickly learning the future (plasticity). The explicit disentangling of geometric information in SOCA provides a more structured approach than implicitly learning an initialization or learning rule.
 
 \section{Background}
 \label{sec:background}
@@ -91,7 +91,7 @@ Continual Learning (CL) addresses the problem of training a model on a sequence 
 In optimization, the geometry of the loss landscape plays a crucial role. While first-order methods like Stochastic Gradient Descent (SGD) only use the local gradient (the direction of steepest descent), second-order methods utilize the Hessian matrix, $H$, which is the matrix of second partial derivatives of the loss function. The Hessian captures the local curvature of the loss surface. The eigenvectors of the Hessian correspond to the principal axes of this curvature, and the eigenvalues indicate the steepness along these axes. A positive-definite Hessian can be used to construct a pre-conditioner in a Newton-like optimization step, which can dramatically accelerate convergence by reshaping the loss landscape. In the context of CL, directions with large eigenvalues correspond to sharp curvature, where small parameter changes cause large changes in the loss. These directions are often considered critical to a task's solution and should be preserved.
 
 \subsection{Low-Rank Hessian Approximation}
-For modern deep neural networks with millions of parameters, computing and storing the full Hessian is computationally intractable. Consequently, practical second-order methods rely on approximations. A common and effective approach is to compute a low-rank approximation, $H \approx V\Lambda V^T$, where $V$ is a matrix whose columns are the top 'k' eigenvectors (principal curvature directions) and $\Lambda$ is a diagonal matrix of the corresponding eigenvalues. This captures the most salient geometric information in a compressed form. The ELLA framework \cite{deng-2022-accelerated} provides an efficient method to obtain such an approximation by leveraging a Nyström approximation of the Neural Tangent Kernel, avoiding the explicit formation of the Hessian.
+For modern deep neural networks with millions of parameters, computing and storing the full Hessian is computationally intractable. Consequently, practical second-order methods rely on approximations. A common and effective approach is to compute a low-rank approximation, $H \approx V\Lambda V^T$, where $V$ is a matrix whose columns are the top 'k' eigenvectors (principal curvature directions) and $\Lambda$ is a diagonal matrix of the corresponding eigenvalues. This captures the most salient geometric information in a compressed form. The ELLA framework provides an efficient method to obtain such an approximation by leveraging a Nyström approximation of the Neural Tangent Kernel, avoiding the explicit formation of the Hessian.
 
 \subsection{Problem Setting and Notation}
 We formalize the problem as follows. Let $\theta \in \mathbb{R}^d$ be the model parameters. The learning process proceeds over a sequence of tasks $T_1, T_2, \dots$ . For each task $T_t$, the goal is to find parameters $\theta_t$ that minimize the task-specific loss $L_t(\theta)$ while preserving performance on previous tasks $\{T_1, \dots, T_{t-1}\}$. Our method, SOCA, addresses this by learning and maintaining a global, low-rank meta-curvature model, $H_{\text{global}} = U_{\text{global}} S_{\text{global}} U_{\text{global}}^T$. Here, $U_{\text{global}}$ is a $d \times K_{\text{global}}$ orthonormal matrix representing the basis of the shared subspace, and $S_{\text{global}}$ is a $K_{\text{global}} \times K_{\text{global}}$ diagonal matrix of associated eigenvalues. The rank $K_{\text{global}}$ is a fixed hyperparameter, which crucially ensures that the memory and computational overhead of our meta-model remains constant, regardless of the number of tasks seen.
@@ -101,7 +101,7 @@ We formalize the problem as follows. Let $\theta \in \mathbb{R}^d$ be the model 
 Our method, Streaming Orthogonal Curvature Aggregation (SOCA), provides a principled framework for building and maintaining a global meta-curvature model in a fully online setting. It leverages this model to balance stability and plasticity throughout the lifelong learning process. The methodology unfolds in three key stages for each incoming task.
 
 \textbf{1. Task-Local Curvature Estimation}
-For each new task $T_t$, we begin by training the model to find a suitable parameter vector $\theta_t^*$ that minimizes the task loss $L_t(\theta)$. Around this solution, we compute an efficient, low-rank approximation of the task's Hessian matrix, denoted as $H_t \approx V_t \Lambda_t V_t^T$. Here, the columns of $V_t$ are the top $K_{\text{task}}$ eigenvectors, representing the most significant curvature directions for task $T_t$, and $\Lambda_t$ is a diagonal matrix containing the corresponding eigenvalues. To achieve this efficiently without forming the full Hessian, we adopt the technique from ELLA \cite{deng-2022-accelerated}, which uses a Nyström approximation of the Neural Tangent Kernel (NTK) to extract this low-rank structure.
+For each new task $T_t$, we begin by training the model to find a suitable parameter vector $\theta_t^*$ that minimizes the task loss $L_t(\theta)$. Around this solution, we compute an efficient, low-rank approximation of the task's Hessian matrix, denoted as $H_t \approx V_t \Lambda_t V_t^T$. Here, the columns of $V_t$ are the top $K_{\text{task}}$ eigenvectors, representing the most significant curvature directions for task $T_t$, and $\Lambda_t$ is a diagonal matrix containing the corresponding eigenvalues. To achieve this efficiently without forming the full Hessian, we adopt the technique from ELLA, which uses a Nyström approximation of the Neural Tangent Kernel (NTK) to extract this low-rank structure.
 
 \textbf{2. Streaming Orthogonal Curvature Fusion (Core Novelty)}
 This stage is the core of SOCA, replacing naive additive fusion of geometric information with a more stable, geometrically-grounded update. Given the current global curvature model $H_{\text{global}} = U_{\text{global}} S_{\text{global}} U_{\text{global}}^T$ from tasks 1 to t-1, and the new local model $H_t$, the update proceeds as follows:
@@ -166,49 +166,49 @@ In the more challenging class-incremental scenario of Split CIFAR-100, the perfo
 \subsection{Analysis of Transfer Metrics and Limitations}
 The Forward Transfer (FWT) metric was consistently logged as -20.00\% for all methods across both datasets. This uniformity suggests an issue with its implementation or applicability in our experimental framework, rendering it unusable for drawing conclusions about forward knowledge transfer. The primary limitation observed is the performance drop-off in the class-incremental setting. This indicates that our current curvature-based model does not fully address the challenges posed by learning entirely new classes with an expanding classifier head. Future work, including the planned ablation studies, will be necessary to dissect the failure modes and improve performance in this difficult but important setting.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.7\linewidth]{images/metrics_comparison_permuted_mnist.pdf}
 \caption{Comparison of Average Accuracy and Backward Transfer for all methods on the Permuted MNIST benchmark. SOCA shows a clear advantage in both metrics.}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.7\linewidth]{images/metrics_comparison_split_cifar100.pdf}
 \caption{Comparison of Average Accuracy and Backward Transfer for all methods on the Split CIFAR-100 benchmark. All methods perform poorly, with SOCA showing only a marginal improvement.}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.7\linewidth]{images/accuracy_heatmap_soca.pdf}
 \caption{Per-task accuracy heatmap for SOCA. The diagonal shows accuracy on a task immediately after training, while lower rows show performance on older tasks. High accuracy is maintained across the matrix, indicating low forgetting.}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.7\linewidth]{images/accuracy_heatmap_experience_replay.pdf}
 \caption{Per-task accuracy heatmap for Experience Replay. Performance on earlier tasks (left columns) degrades significantly as new tasks are learned.}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.7\linewidth]{images/accuracy_heatmap_finetune.pdf}
 \caption{Per-task accuracy heatmap for Finetune. Severe catastrophic forgetting is evident as the accuracy in the initial columns drops close to chance level.}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.7\linewidth]{images/forgetting_analysis_soca.pdf}
 \caption{Forgetting analysis for SOCA, showing performance on past tasks over time.}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.7\linewidth]{images/forgetting_analysis_experience_replay.pdf}
 \caption{Forgetting analysis for Experience Replay.}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[htbp]
 \centering
 \includegraphics[width=0.7\linewidth]{images/forgetting_analysis_finetune.pdf}
 \caption{Forgetting analysis for Finetune.}
@@ -222,7 +222,7 @@ Our experimental evaluation demonstrated the effectiveness of SOCA in the domain
 
 SOCA represents a significant step towards creating lifelong learning agents that are both scalable and geometrically-informed. Future work will focus on understanding and overcoming the limitations observed in class-incremental scenarios, potentially by integrating mechanisms that explicitly manage the classifier head. Furthermore, conducting the planned ablation studies will be crucial to dissect the individual contributions of our proposed components and refine the algorithm. Finally, extending the evaluation to more complex and heterogeneous task streams, such as Meta-Dataset, will be essential to test the true generalization capabilities of our approach.
 
-This work was generated by \textsc{AIRAS} \citep{airas2025}.
+This work was generated by \textsc{AIRAS}.
 
 \bibliographystyle{iclr2024_conference}
 \bibliography{references}

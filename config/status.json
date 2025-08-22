@@ -1,0 +1,12 @@
+{
+  "status_enum": "stopped",
+  "completion_time": "2025-08-22T05:35:15Z",
+  "experiment_status": "completed",
+  "results_summary": {
+    "snap_tta_first_batch_accuracy": 3.12,
+    "tent_first_batch_accuracy": 10.94,
+    "snap_tta_no_calibrator_first_batch_accuracy": 14.06,
+    "pdf_plots_generated": 3,
+    "experiments_completed": 3
+  }
+}

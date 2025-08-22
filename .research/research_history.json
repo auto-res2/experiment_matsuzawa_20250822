@@ -6,5 +6,52 @@
     "ViT memory tokens",
     "learned tokens ViT",
     "視覚トランスフォーマー レジスタトークン"
+  ],
+  "research_study_list": [
+    {
+      "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale"
+    },
+    {
+      "title": "An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale"
+    },
+    {
+      "title": "Vision Transformers Need Registers"
+    },
+    {
+      "title": "Vision Transformers Need Registers"
+    },
+    {
+      "title": "Vision Transformers Need Registers"
+    },
+    {
+      "title": "Universal Few-shot Learning of Dense Prediction Tasks with Visual Token Matching"
+    },
+    {
+      "title": "Vision Transformers Need Registers"
+    },
+    {
+      "title": "Vision Transformers Need Registers"
+    },
+    {
+      "title": "Video Token Merging for Long Video Understanding"
+    },
+    {
+      "title": "Vision Transformers Need Registers"
+    },
+    {
+      "title": "Vision Transformers Need Registers"
+    },
+    {
+      "title": "TokenLearner: Adaptive Space-Time Tokenization for Videos"
+    },
+    {
+      "title": "Vision Transformers Need Registers"
+    },
+    {
+      "title": "Vision Transformers Need Registers"
+    },
+    {
+      "title": "Learning Viewpoint-Agnostic Visual Representations by Recovering Tokens in 3D Space"
+    }
   ]
 }

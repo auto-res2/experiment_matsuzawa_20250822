@@ -6,5 +6,52 @@
     "conformal prediction time series",
     "quantile regression time series",
     "time series forecast calibration"
+  ],
+  "research_study_list": [
+    {
+      "title": "Conformal PID Control for Time Series Prediction"
+    },
+    {
+      "title": "Conformal Prediction with Temporal Quantile Adjustments"
+    },
+    {
+      "title": "Copula Conformal prediction for multi-step time series prediction"
+    },
+    {
+      "title": "RNN with Particle Flow for Probabilistic Spatio-temporal Forecasting"
+    },
+    {
+      "title": "RNN with Particle Flow for Probabilistic Spatio-temporal Forecasting"
+    },
+    {
+      "title": "VQ-TR: Vector Quantized Attention for Time Series Forecasting"
+    },
+    {
+      "title": "Conformal PID Control for Time Series Prediction"
+    },
+    {
+      "title": "Sequential Predictive Conformal Inference for Time Series"
+    },
+    {
+      "title": "Conformalized Time Series with Semantic Features"
+    },
+    {
+      "title": "Conformal Prediction with Temporal Quantile Adjustments"
+    },
+    {
+      "title": "Beyond Pinball Loss: Quantile Methods for Calibrated Uncertainty Quantification"
+    },
+    {
+      "title": "Fast Nonlinear Vector Quantile Regression"
+    },
+    {
+      "title": "Sampling-based Multi-dimensional Recalibration"
+    },
+    {
+      "title": "Calibration by Distribution Matching: Trainable Kernel Calibration Metrics"
+    },
+    {
+      "title": "Reliable Decisions with Threshold Calibration"
+    }
   ]
 }

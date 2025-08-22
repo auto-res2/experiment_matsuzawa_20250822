@@ -1,0 +1,10 @@
+{
+  "research_topic": "SHViT (Single-Head Vision Transformer)の精度-速度トレードオフに関して改善したい",
+  "queries": [
+    "Single-Head Vision Transformer",
+    "single-head attention ViT",
+    "token pruning ViT",
+    "token merging ViT",
+    "accuracy FLOPs ViT"
+  ]
+}

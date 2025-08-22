@@ -1,16 +1,16 @@
 {
   "experiment_name": "MoD-RCC_Risk_Controlled_Mixture_of_Depths",
-  "timestamp": "2025-08-22_08-24-01",
+  "timestamp": "2025-08-22_08-27-46",
   "final_metrics": {
     "clean_accuracy": 0.11,
-    "corrupted_accuracy": 0.17,
-    "robustness_gap": -0.06000000000000001,
+    "corrupted_accuracy": 0.18,
+    "robustness_gap": -0.06999999999999999,
     "risk_calibration_coverage": 1.0,
     "controlled_degradation": 0.09907753088545693,
     "target_epsilon": 0.1
   },
   "training_summary": {
-    "final_train_loss": 0.2849622091650963,
+    "final_train_loss": 0.32349072754383085,
     "final_val_accuracy": 0.11,
     "num_epochs": 3
   },

@@ -6,5 +6,52 @@
     "Hessian approximation lifelong learning",
     "Continual learning Fisher Information",
     "Meta-learning Laplace approximation"
+  ],
+  "research_study_list": [
+    {
+      "title": "Meta Continual Learning Revisited: Implicitly Enhancing Online Hessian Approximation via Variance Reduction"
+    },
+    {
+      "title": "Meta Continual Learning Revisited: Implicitly Enhancing Online Hessian Approximation via Variance Reduction"
+    },
+    {
+      "title": "Unifying Gradient Estimators for Meta-Reinforcement Learning  via Off-Policy Evaluation"
+    },
+    {
+      "title": "Efficient Continual Finite-Sum Minimization"
+    },
+    {
+      "title": "Linear Mode Connectivity in Multitask and Continual Learning"
+    },
+    {
+      "title": "An Effective Dynamic Gradient Calibration Method for Continual Learning"
+    },
+    {
+      "title": "Meta Continual Learning Revisited: Implicitly Enhancing Online Hessian Approximation via Variance Reduction"
+    },
+    {
+      "title": "Meta Continual Learning Revisited: Implicitly Enhancing Online Hessian Approximation via Variance Reduction"
+    },
+    {
+      "title": "Long Live the Lottery: The Existence of Winning Tickets in Lifelong Learning"
+    },
+    {
+      "title": "Regularizing Second-Order Influences for Continual Learning"
+    },
+    {
+      "title": "Disentangling and mitigating the impact of task similarity for continual learning"
+    },
+    {
+      "title": "CAM-GAN: Continual Adaptation Modules for Generative Adversarial Networks"
+    },
+    {
+      "title": "Laplace Redux - Effortless Bayesian Deep Learning"
+    },
+    {
+      "title": "Accelerated Linearized Laplace Approximation for Bayesian Deep Learning"
+    },
+    {
+      "title": "Accelerated Linearized Laplace Approximation for Bayesian Deep Learning"
+    }
   ]
 }

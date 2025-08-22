@@ -6,5 +6,52 @@
     "Hyperparameter Optimization Low Cost",
     "Multi-fidelity Optimization",
     "Hyperband algorithm"
+  ],
+  "research_study_list": [
+    {
+      "title": "Hyperparameter Optimization through Neural Network Partitioning"
+    },
+    {
+      "title": "Bayesian Optimization for Iterative Learning"
+    },
+    {
+      "title": "Efficient Hyperparameter Optimization with Adaptive Fidelity Identification"
+    },
+    {
+      "title": "Efficient Nonmyopic Bayesian Optimization via One-Shot Multi-Step Trees"
+    },
+    {
+      "title": "Scalable Bayesian Optimization via Focalized Sparse Gaussian Processes"
+    },
+    {
+      "title": "Scalable First-Order Bayesian Optimization via Structured Automatic Differentiation"
+    },
+    {
+      "title": "Economic Hyperparameter Optimization With Blended Search Strategy"
+    },
+    {
+      "title": "PASHA: Efficient HPO and NAS with Progressive Resource Allocation"
+    },
+    {
+      "title": "Hyperparameter Optimization through Neural Network Partitioning"
+    },
+    {
+      "title": "Multi-Fidelity Bayesian Optimization via Deep Neural Networks"
+    },
+    {
+      "title": "Multi-fidelity Monte Carlo: a pseudo-marginal approach"
+    },
+    {
+      "title": "Multi-fidelity Bayesian Optimization with Max-value Entropy Search and its Parallelization"
+    },
+    {
+      "title": "PriorBand: Practical Hyperparameter Optimization in the Age of Deep Learning"
+    },
+    {
+      "title": "Provably Efficient Online Hyperparameter Optimization with Population-Based Bandits"
+    },
+    {
+      "title": "Supervising the Multi-Fidelity Race of Hyperparameter Configurations"
+    }
   ]
 }

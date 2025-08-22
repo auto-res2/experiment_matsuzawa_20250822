@@ -6,5 +6,52 @@
     "Mixture of Experts latency",
     "Early Exit Networks",
     "Adaptive Computation Cost"
+  ],
+  "research_study_list": [
+    {
+      "title": "Switchable Decision: Dynamic Neural Generation Networks"
+    },
+    {
+      "title": "D-LLM: A Token Adaptive Computing Resource Allocation Strategy for Large Language Models"
+    },
+    {
+      "title": "DynamicDet: A Unified Dynamic Architecture for Object Detection"
+    },
+    {
+      "title": "Memorization Capacity of Neural Networks with Conditional Computation"
+    },
+    {
+      "title": "GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding"
+    },
+    {
+      "title": "Conditional Adapters: Parameter-efficient Transfer Learning with Fast Inference"
+    },
+    {
+      "title": "Toward Efficient Inference for Mixture of Experts"
+    },
+    {
+      "title": "DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale"
+    },
+    {
+      "title": "DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale"
+    },
+    {
+      "title": "Fast yet Safe: Early-Exiting with Risk Control"
+    },
+    {
+      "title": "Zero Time Waste: Recycling Predictions in Early Exit Neural Networks"
+    },
+    {
+      "title": "Jointly-Learned Exit and Inference for a Dynamic Neural Network"
+    },
+    {
+      "title": "Navigating Scaling Laws: Compute Optimality in Adaptive Model Training"
+    },
+    {
+      "title": "Locally Regularized Neural Differential Equations: Some Black Boxes were meant to remain closed!"
+    },
+    {
+      "title": "Adaptive Sampling for Efficient Softmax Approximation"
+    }
   ]
 }

@@ -6,5 +6,52 @@
     "token pruning ViT",
     "token merging ViT",
     "accuracy FLOPs ViT"
+  ],
+  "research_study_list": [
+    {
+      "title": "SHViT: Single-Head Vision Transformer with Memory Efficient Macro Design"
+    },
+    {
+      "title": "Training data-efficient image transformers & distillation through attention"
+    },
+    {
+      "title": "OmniMAE: Single Model Masked Pretraining on Images and Videos"
+    },
+    {
+      "title": "SHViT: Single-Head Vision Transformer with Memory Efficient Macro Design"
+    },
+    {
+      "title": "Training data-efficient image transformers & distillation through attention"
+    },
+    {
+      "title": "You Only Need Less Attention at Each Stage in Vision Transformers"
+    },
+    {
+      "title": "Beyond Attentive Tokens: Incorporating Token Importance and Diversity for Efficient Vision Transformers"
+    },
+    {
+      "title": "Joint Token Pruning and Squeezing Towards More Aggressive Compression of Vision Transformers"
+    },
+    {
+      "title": "Zero-TPrune: Zero-Shot Token Pruning through Leveraging of the Attention Graph in Pre-Trained Transformers"
+    },
+    {
+      "title": "Token Merging: Your ViT But Faster"
+    },
+    {
+      "title": "Token Merging: Your ViT But Faster"
+    },
+    {
+      "title": "Beyond Attentive Tokens: Incorporating Token Importance and Diversity for Efficient Vision Transformers"
+    },
+    {
+      "title": "Chasing Sparsity in Vision Transformers: An End-to-End Exploration"
+    },
+    {
+      "title": "Fast Vision Transformers with HiLo Attention"
+    },
+    {
+      "title": "Fast Vision Transformers with HiLo Attention"
+    }
   ]
 }

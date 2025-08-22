@@ -5,3 +5,520 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{chen_2023_hierarchical,
+ abstract = {Diffusion models (DMs) have recently been introduced in image deblurring and
+exhibited promising performance, particularly in terms of details
+reconstruction. However, the diffusion model requires a large number of
+inference iterations to recover the clean image from pure Gaussian noise, which
+consumes massive computational resources. Moreover, the distribution
+synthesized by the diffusion model is often misaligned with the target results,
+leading to restrictions in distortion-based metrics. To address the above
+issues, we propose the Hierarchical Integration Diffusion Model (HI-Diff), for
+realistic image deblurring. Specifically, we perform the DM in a highly
+compacted latent space to generate the prior feature for the deblurring
+process. The deblurring process is implemented by a regression-based method to
+obtain better distortion accuracy. Meanwhile, the highly compact latent space
+ensures the efficiency of the DM. Furthermore, we design the hierarchical
+integration module to fuse the prior into the regression-based model from
+multiple scales, enabling better generalization in complex blurry scenarios.
+Comprehensive experiments on synthetic and real-world blur datasets demonstrate
+that our HI-Diff outperforms state-of-the-art methods. Code and trained models
+are available at https://github.com/zhengchen1999/HI-Diff.},
+ arxiv_url = {https://arxiv.org/pdf/2305.12966v4.pdf},
+ author = {Zheng Chen and Yulun Zhang and Ding Liu and Bin Xia and Jinjin Gu and Linghe Kong and Xin Yuan},
+ github_url = {https://github.com/zhengchen1999/HI-Diff},
+ title = {Hierarchical Integration Diffusion Model for Realistic Image Deblurring},
+ year = {2023}
+}
+
+@article{chen_2024_simple,
+ abstract = {Diffusion-based generative methods have proven effective in modeling
+trajectories with offline datasets. However, they often face computational
+challenges and can falter in generalization, especially in capturing temporal
+abstractions for long-horizon tasks. To overcome this, we introduce the
+Hierarchical Diffuser, a simple, fast, yet surprisingly effective planning
+method combining the advantages of hierarchical and diffusion-based planning.
+Our model adopts a "jumpy" planning strategy at the higher level, which allows
+it to have a larger receptive field but at a lower computational cost -- a
+crucial factor for diffusion-based planning methods, as we have empirically
+verified. Additionally, the jumpy sub-goals guide our low-level planner,
+facilitating a fine-tuning stage and further improving our approach's
+effectiveness. We conducted empirical evaluations on standard offline
+reinforcement learning benchmarks, demonstrating our method's superior
+performance and efficiency in terms of training and planning speed compared to
+the non-hierarchical Diffuser as well as other hierarchical planning methods.
+Moreover, we explore our model's generalization capability, particularly on how
+our method improves generalization capabilities on compositional
+out-of-distribution tasks.},
+ arxiv_url = {https://arxiv.org/pdf/2401.02644v1.pdf},
+ author = {Chang Chen and Fei Deng and Kenji Kawaguchi and Caglar Gulcehre and Sungjin Ahn},
+ github_url = {https://github.com/jannerm/diffuser},
+ title = {Simple Hierarchical Planning with Diffusion},
+ year = {2024}
+}
+
+@article{chen_2024_simple,
+ abstract = {Diffusion-based generative methods have proven effective in modeling
+trajectories with offline datasets. However, they often face computational
+challenges and can falter in generalization, especially in capturing temporal
+abstractions for long-horizon tasks. To overcome this, we introduce the
+Hierarchical Diffuser, a simple, fast, yet surprisingly effective planning
+method combining the advantages of hierarchical and diffusion-based planning.
+Our model adopts a "jumpy" planning strategy at the higher level, which allows
+it to have a larger receptive field but at a lower computational cost -- a
+crucial factor for diffusion-based planning methods, as we have empirically
+verified. Additionally, the jumpy sub-goals guide our low-level planner,
+facilitating a fine-tuning stage and further improving our approach's
+effectiveness. We conducted empirical evaluations on standard offline
+reinforcement learning benchmarks, demonstrating our method's superior
+performance and efficiency in terms of training and planning speed compared to
+the non-hierarchical Diffuser as well as other hierarchical planning methods.
+Moreover, we explore our model's generalization capability, particularly on how
+our method improves generalization capabilities on compositional
+out-of-distribution tasks.},
+ arxiv_url = {https://arxiv.org/pdf/2401.02644v1.pdf},
+ author = {Chang Chen and Fei Deng and Kenji Kawaguchi and Caglar Gulcehre and Sungjin Ahn},
+ github_url = {https://github.com/jannerm/diffuser},
+ title = {Simple Hierarchical Planning with Diffusion},
+ year = {2024}
+}
+
+@article{li_2025_likelihood,
+ abstract = {Cascaded models are multi-scale generative models with a marked capacity for
+producing perceptually impressive samples at high resolutions. In this work, we
+show that they can also be excellent likelihood models, so long as we overcome
+a fundamental difficulty with probabilistic multi-scale models: the
+intractability of the likelihood function. Chiefly, in cascaded models each
+intermediary scale introduces extraneous variables that cannot be tractably
+marginalized out for likelihood evaluation. This issue vanishes by modeling the
+diffusion process on latent spaces induced by a class of transformations we
+call hierarchical volume-preserving maps, which decompose spatially structured
+data in a hierarchical fashion without introducing local distortions in the
+latent space. We demonstrate that two such maps are well-known in the
+literature for multiscale modeling: Laplacian pyramids and wavelet transforms.
+Not only do such reparameterizations allow the likelihood function to be
+directly expressed as a joint likelihood over the scales, we show that the
+Laplacian pyramid and wavelet transform also produces significant improvements
+to the state-of-the-art on a selection of benchmarks in likelihood modeling,
+including density estimation, lossless compression, and out-of-distribution
+detection. Investigating the theoretical basis of our empirical gains we
+uncover deep connections to score matching under the Earth Mover's Distance
+(EMD), which is a well-known surrogate for perceptual similarity. Code can be
+found at \href{https://github.com/lihenryhfl/pcdm}{this https url}.},
+ arxiv_url = {https://arxiv.org/pdf/2501.06999v1.pdf},
+ author = {Henry Li and Ronen Basri and Yuval Kluger},
+ title = {Likelihood Training of Cascaded Diffusion Models via Hierarchical Volume-preserving Maps},
+ year = {2025}
+}
+
+@article{lin_2023_hyperbolic,
+ abstract = {Finding meaningful representations and distances of hierarchical data is
+important in many fields. This paper presents a new method for hierarchical
+data embedding and distance. Our method relies on combining diffusion geometry,
+a central approach to manifold learning, and hyperbolic geometry. Specifically,
+using diffusion geometry, we build multi-scale densities on the data, aimed to
+reveal their hierarchical structure, and then embed them into a product of
+hyperbolic spaces. We show theoretically that our embedding and distance
+recover the underlying hierarchical structure. In addition, we demonstrate the
+efficacy of the proposed method and its advantages compared to existing methods
+on graph embedding benchmarks and hierarchical datasets.},
+ arxiv_url = {https://arxiv.org/pdf/2305.18962v1.pdf},
+ author = {Ya-Wei Eileen Lin and Ronald R. Coifman and Gal Mishne and Ronen Talmon},
+ github_url = {https://github.com/HazyResearch/HypHC},
+ title = {Hyperbolic Diffusion Embedding and Distance for Hierarchical Representation Learning},
+ year = {2023}
+}
+
+@article{lin_2023_hyperbolic,
+ abstract = {Finding meaningful representations and distances of hierarchical data is
+important in many fields. This paper presents a new method for hierarchical
+data embedding and distance. Our method relies on combining diffusion geometry,
+a central approach to manifold learning, and hyperbolic geometry. Specifically,
+using diffusion geometry, we build multi-scale densities on the data, aimed to
+reveal their hierarchical structure, and then embed them into a product of
+hyperbolic spaces. We show theoretically that our embedding and distance
+recover the underlying hierarchical structure. In addition, we demonstrate the
+efficacy of the proposed method and its advantages compared to existing methods
+on graph embedding benchmarks and hierarchical datasets.},
+ arxiv_url = {https://arxiv.org/pdf/2305.18962v1.pdf},
+ author = {Ya-Wei Eileen Lin and Ronald R. Coifman and Gal Mishne and Ronen Talmon},
+ github_url = {https://github.com/HazyResearch/hyperbolics},
+ title = {Hyperbolic Diffusion Embedding and Distance for Hierarchical Representation Learning},
+ year = {2023}
+}
+
+@article{moon_2024_simple,
+ abstract = {Diffusion models have shown remarkable performance in generation problems
+over various domains including images, videos, text, and audio. A practical
+bottleneck of diffusion models is their sampling speed, due to the repeated
+evaluation of score estimation networks during the inference. In this work, we
+propose a novel framework capable of adaptively allocating compute required for
+the score estimation, thereby reducing the overall sampling time of diffusion
+models. We observe that the amount of computation required for the score
+estimation may vary along the time step for which the score is estimated. Based
+on this observation, we propose an early-exiting scheme, where we skip the
+subset of parameters in the score estimation network during the inference,
+based on a time-dependent exit schedule. Using the diffusion models for image
+synthesis, we show that our method could significantly improve the sampling
+throughput of the diffusion models without compromising image quality.
+Furthermore, we also demonstrate that our method seamlessly integrates with
+various types of solvers for faster sampling, capitalizing on their
+compatibility to enhance overall efficiency. The source code and our
+experiments are available at \url{https://github.com/taehong-moon/ee-diffusion}},
+ arxiv_url = {https://arxiv.org/pdf/2408.05927v1.pdf},
+ author = {Taehong Moon and Moonseok Choi and EungGu Yun and Jongmin Yoon and Gayoung Lee and Jaewoong Cho and Juho Lee},
+ title = {A Simple Early Exiting Framework for Accelerated Sampling in Diffusion Models},
+ year = {2024}
+}
+
+@article{phung_2022_wavelet,
+ abstract = {Diffusion models are rising as a powerful solution for high-fidelity image
+generation, which exceeds GANs in quality in many circumstances. However, their
+slow training and inference speed is a huge bottleneck, blocking them from
+being used in real-time applications. A recent DiffusionGAN method
+significantly decreases the models' running time by reducing the number of
+sampling steps from thousands to several, but their speeds still largely lag
+behind the GAN counterparts. This paper aims to reduce the speed gap by
+proposing a novel wavelet-based diffusion scheme. We extract low-and-high
+frequency components from both image and feature levels via wavelet
+decomposition and adaptively handle these components for faster processing
+while maintaining good generation quality. Furthermore, we propose to use a
+reconstruction term, which effectively boosts the model training convergence.
+Experimental results on CelebA-HQ, CIFAR-10, LSUN-Church, and STL-10 datasets
+prove our solution is a stepping-stone to offering real-time and high-fidelity
+diffusion models. Our code and pre-trained checkpoints are available at
+\url{https://github.com/VinAIResearch/WaveDiff.git}.},
+ arxiv_url = {https://arxiv.org/pdf/2211.16152v2.pdf},
+ author = {Hao Phung and Quan Dao and Anh Tran},
+ title = {Wavelet Diffusion Models Are Fast and Scalable Image Generators},
+ year = {2022}
+}
+
+@article{salimans_2024_multistep,
+ abstract = {We present a new method for making diffusion models faster to sample. The
+method distills many-step diffusion models into few-step models by matching
+conditional expectations of the clean data given noisy data along the sampling
+trajectory. Our approach extends recently proposed one-step methods to the
+multi-step case, and provides a new perspective by interpreting these
+approaches in terms of moment matching. By using up to 8 sampling steps, we
+obtain distilled models that outperform not only their one-step versions but
+also their original many-step teacher models, obtaining new state-of-the-art
+results on the Imagenet dataset. We also show promising results on a large
+text-to-image model where we achieve fast generation of high resolution images
+directly in image space, without needing autoencoders or upsamplers.},
+ arxiv_url = {https://arxiv.org/pdf/2406.04103v1.pdf},
+ author = {Tim Salimans and Thomas Mensink and Jonathan Heek and Emiel Hoogeboom},
+ title = {Multistep Distillation of Diffusion Models via Moment Matching},
+ year = {2024}
+}
+
+@article{skorokhodov_2024_hierarchical,
+ abstract = {Diffusion models have demonstrated remarkable performance in image and video
+synthesis. However, scaling them to high-resolution inputs is challenging and
+requires restructuring the diffusion pipeline into multiple independent
+components, limiting scalability and complicating downstream applications. This
+makes it very efficient during training and unlocks end-to-end optimization on
+high-resolution videos. We improve PDMs in two principled ways. First, to
+enforce consistency between patches, we develop deep context fusion -- an
+architectural technique that propagates the context information from low-scale
+to high-scale patches in a hierarchical manner. Second, to accelerate training
+and inference, we propose adaptive computation, which allocates more network
+capacity and computation towards coarse image details. The resulting model sets
+a new state-of-the-art FVD score of 66.32 and Inception Score of 87.68 in
+class-conditional video generation on UCF-101 $256^2$, surpassing recent
+methods by more than 100%. Then, we show that it can be rapidly fine-tuned from
+a base $36\times 64$ low-resolution generator for high-resolution $64 \times
+288 \times 512$ text-to-video synthesis. To the best of our knowledge, our
+model is the first diffusion-based architecture which is trained on such high
+resolutions entirely end-to-end. Project webpage:
+https://snap-research.github.io/hpdm.},
+ arxiv_url = {https://arxiv.org/pdf/2406.07792v1.pdf},
+ author = {Ivan Skorokhodov and Willi Menapace and Aliaksandr Siarohin and Sergey Tulyakov},
+ title = {Hierarchical Patch Diffusion Models for High-Resolution Video Generation},
+ year = {2024}
+}
+
+@article{song_2020_denoising,
+ abstract = {Denoising diffusion probabilistic models (DDPMs) have achieved high quality
+image generation without adversarial training, yet they require simulating a
+Markov chain for many steps to produce a sample. To accelerate sampling, we
+present denoising diffusion implicit models (DDIMs), a more efficient class of
+iterative implicit probabilistic models with the same training procedure as
+DDPMs. In DDPMs, the generative process is defined as the reverse of a
+Markovian diffusion process. We construct a class of non-Markovian diffusion
+processes that lead to the same training objective, but whose reverse process
+can be much faster to sample from. We empirically demonstrate that DDIMs can
+produce high quality samples $10 \times$ to $50 \times$ faster in terms of
+wall-clock time compared to DDPMs, allow us to trade off computation for sample
+quality, and can perform semantically meaningful image interpolation directly
+in the latent space.},
+ arxiv_url = {https://arxiv.org/pdf/2010.02502v4.pdf},
+ author = {Jiaming Song and Chenlin Meng and Stefano Ermon},
+ title = {Denoising Diffusion Implicit Models},
+ year = {2020}
+}
+
+@article{wimbauer_2023_cache,
+ abstract = {Diffusion models have recently revolutionized the field of image synthesis
+due to their ability to generate photorealistic images. However, one of the
+major drawbacks of diffusion models is that the image generation process is
+costly. A large image-to-image network has to be applied many times to
+iteratively refine an image from random noise. While many recent works propose
+techniques to reduce the number of required steps, they generally treat the
+underlying denoising network as a black box. In this work, we investigate the
+behavior of the layers within the network and find that 1) the layers' output
+changes smoothly over time, 2) the layers show distinct patterns of change, and
+3) the change from step to step is often very small. We hypothesize that many
+layer computations in the denoising network are redundant. Leveraging this, we
+introduce block caching, in which we reuse outputs from layer blocks of
+previous steps to speed up inference. Furthermore, we propose a technique to
+automatically determine caching schedules based on each block's changes over
+timesteps. In our experiments, we show through FID, human evaluation and
+qualitative analysis that Block Caching allows to generate images with higher
+visual quality at the same computational cost. We demonstrate this for
+different state-of-the-art models (LDM and EMU) and solvers (DDIM and DPM).},
+ arxiv_url = {https://arxiv.org/pdf/2312.03209v2.pdf},
+ author = {Felix Wimbauer and Bichen Wu and Edgar Schoenfeld and Xiaoliang Dai and Ji Hou and Zijian He and Artsiom Sanakoyeu and Peizhao Zhang and Sam Tsai and Jonas Kohler and Christian Rupprecht and Daniel Cremers and Peter Vajda and Jialiang Wang},
+ title = {Cache Me if You Can: Accelerating Diffusion Models through Block Caching},
+ year = {2023}
+}
+
+@article{ye_2022_first,
+ abstract = {We propose a family of First Hitting Diffusion Models (FHDM), deep generative
+models that generate data with a diffusion process that terminates at a random
+first hitting time. This yields an extension of the standard fixed-time
+diffusion models that terminate at a pre-specified deterministic time. Although
+standard diffusion models are designed for continuous unconstrained data, FHDM
+is naturally designed to learn distributions on continuous as well as a range
+of discrete and structure domains. Moreover, FHDM enables instance-dependent
+terminate time and accelerates the diffusion process to sample higher quality
+data with fewer diffusion steps. Technically, we train FHDM by maximum
+likelihood estimation on diffusion trajectories augmented from observed data
+with conditional first hitting processes (i.e., bridge) derived based on Doob's
+$h$-transform, deviating from the commonly used time-reversal mechanism. We
+apply FHDM to generate data in various domains such as point cloud (general
+continuous distribution), climate and geographical events on earth (continuous
+distribution on the sphere), unweighted graphs (distribution of binary
+matrices), and segmentation maps of 2D images (high-dimensional categorical
+distribution). We observe considerable improvement compared with the
+state-of-the-art approaches in both quality and speed.},
+ arxiv_url = {https://arxiv.org/pdf/2209.01170v2.pdf},
+ author = {Mao Ye and Lemeng Wu and Qiang Liu},
+ github_url = {https://github.com/lushleaf/first_hitting_diffusion},
+ title = {First Hitting Diffusion Models for Generating Manifold, Graph and Categorical Data},
+ year = {2022}
+}
+
+@article{zhang_2023_improving,
+ abstract = {Diffusion models, emerging as powerful deep generative tools, excel in
+various applications. They operate through a two-steps process: introducing
+noise into training samples and then employing a model to convert random noise
+into new samples (e.g., images). However, their remarkable generative
+performance is hindered by slow training and sampling. This is due to the
+necessity of tracking extensive forward and reverse diffusion trajectories, and
+employing a large model with numerous parameters across multiple timesteps
+(i.e., noise levels). To tackle these challenges, we present a multi-stage
+framework inspired by our empirical findings. These observations indicate the
+advantages of employing distinct parameters tailored to each timestep while
+retaining universal parameters shared across all time steps. Our approach
+involves segmenting the time interval into multiple stages where we employ
+custom multi-decoder U-net architecture that blends time-dependent models with
+a universally shared encoder. Our framework enables the efficient distribution
+of computational resources and mitigates inter-stage interference, which
+substantially improves training efficiency. Extensive numerical experiments
+affirm the effectiveness of our framework, showcasing significant training and
+sampling efficiency enhancements on three state-of-the-art diffusion models,
+including large-scale latent diffusion models. Furthermore, our ablation
+studies illustrate the impact of two important components in our framework: (i)
+a novel timestep clustering algorithm for stage division, and (ii) an
+innovative multi-decoder U-net architecture, seamlessly integrating universal
+and customized hyperparameters.},
+ arxiv_url = {https://arxiv.org/pdf/2312.09181v3.pdf},
+ author = {Huijie Zhang and Yifu Lu and Ismail Alkhouri and Saiprasad Ravishankar and Dogyoon Song and Qing Qu},
+ github_url = {https://github.com/LucasYFL/Multistage_Diffusion},
+ title = {Improving Training Efficiency of Diffusion Models via Multi-Stage Framework and Tailored Multi-Decoder Architecture},
+ year = {2023}
+}
+
+@article{zhang_2023_improving,
+ abstract = {Diffusion models, emerging as powerful deep generative tools, excel in
+various applications. They operate through a two-steps process: introducing
+noise into training samples and then employing a model to convert random noise
+into new samples (e.g., images). However, their remarkable generative
+performance is hindered by slow training and sampling. This is due to the
+necessity of tracking extensive forward and reverse diffusion trajectories, and
+employing a large model with numerous parameters across multiple timesteps
+(i.e., noise levels). To tackle these challenges, we present a multi-stage
+framework inspired by our empirical findings. These observations indicate the
+advantages of employing distinct parameters tailored to each timestep while
+retaining universal parameters shared across all time steps. Our approach
+involves segmenting the time interval into multiple stages where we employ
+custom multi-decoder U-net architecture that blends time-dependent models with
+a universally shared encoder. Our framework enables the efficient distribution
+of computational resources and mitigates inter-stage interference, which
+substantially improves training efficiency. Extensive numerical experiments
+affirm the effectiveness of our framework, showcasing significant training and
+sampling efficiency enhancements on three state-of-the-art diffusion models,
+including large-scale latent diffusion models. Furthermore, our ablation
+studies illustrate the impact of two important components in our framework: (i)
+a novel timestep clustering algorithm for stage division, and (ii) an
+innovative multi-decoder U-net architecture, seamlessly integrating universal
+and customized hyperparameters.},
+ arxiv_url = {https://arxiv.org/pdf/2312.09181v3.pdf},
+ author = {Huijie Zhang and Yifu Lu and Ismail Alkhouri and Saiprasad Ravishankar and Dogyoon Song and Qing Qu},
+ github_url = {https://github.com/LucasYFL/Multistage_Diffusion},
+ title = {Improving Training Efficiency of Diffusion Models via Multi-Stage Framework and Tailored Multi-Decoder Architecture},
+ year = {2023}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{brehmer_2023_edgi,
+ abstract = {Embodied agents operate in a structured world, often solving tasks with
+spatial, temporal, and permutation symmetries. Most algorithms for planning and
+model-based reinforcement learning (MBRL) do not take this rich geometric
+structure into account, leading to sample inefficiency and poor generalization.
+We introduce the Equivariant Diffuser for Generating Interactions (EDGI), an
+algorithm for MBRL and planning that is equivariant with respect to the product
+of the spatial symmetry group SE(3), the discrete-time translation group Z, and
+the object permutation group Sn. EDGI follows the Diffuser framework (Janner et
+al., 2022) in treating both learning a world model and planning in it as a
+conditional generative modeling problem, training a diffusion model on an
+offline trajectory dataset. We introduce a new SE(3)xZxSn-equivariant diffusion
+model that supports multiple representations. We integrate this model in a
+planning loop, where conditioning and classifier guidance let us softly break
+the symmetry for specific tasks as needed. On object manipulation and
+navigation tasks, EDGI is substantially more sample efficient and generalizes
+better across the symmetry group than non-equivariant models.},
+ arxiv_url = {https://arxiv.org/pdf/2303.12410v2.pdf},
+ author = {Johann Brehmer and Joey Bose and Pim de Haan and Taco Cohen},
+ title = {EDGI: Equivariant diffusion for planning with embodied agents},
+ year = {2023}
+}
+
+@article{buckman_2018_sample,
+ abstract = {Integrating model-free and model-based approaches in reinforcement learning
+has the potential to achieve the high performance of model-free algorithms with
+low sample complexity. However, this is difficult because an imperfect dynamics
+model can degrade the performance of the learning algorithm, and in
+sufficiently complex environments, the dynamics model will almost always be
+imperfect. As a result, a key challenge is to combine model-based approaches
+with model-free learning in such a way that errors in the model do not degrade
+performance. We propose stochastic ensemble value expansion (STEVE), a novel
+model-based technique that addresses this issue. By dynamically interpolating
+between model rollouts of various horizon lengths for each individual example,
+STEVE ensures that the model is only utilized when doing so does not introduce
+significant errors. Our approach outperforms model-free baselines on
+challenging continuous control benchmarks with an order-of-magnitude increase
+in sample efficiency, and in contrast to previous model-based approaches,
+performance does not degrade in complex environments.},
+ arxiv_url = {https://arxiv.org/pdf/1807.01675v2.pdf},
+ author = {Jacob Buckman and Danijar Hafner and George Tucker and Eugene Brevdo and Honglak Lee},
+ journal = {Advances in Neural Information Processing Systems, 2019 (pp.
+  8224-8234)},
+ title = {Sample-efficient reinforcement learning with stochastic ensemble value expansion},
+ year = {2018}
+}
+
+@article{chen_2021_decision,
+ abstract = {We introduce a framework that abstracts Reinforcement Learning (RL) as a
+sequence modeling problem. This allows us to draw upon the simplicity and
+scalability of the Transformer architecture, and associated advances in
+language modeling such as GPT-x and BERT. In particular, we present Decision
+Transformer, an architecture that casts the problem of RL as conditional
+sequence modeling. Unlike prior approaches to RL that fit value functions or
+compute policy gradients, Decision Transformer simply outputs the optimal
+actions by leveraging a causally masked Transformer. By conditioning an
+autoregressive model on the desired return (reward), past states, and actions,
+our Decision Transformer model can generate future actions that achieve the
+desired return. Despite its simplicity, Decision Transformer matches or exceeds
+the performance of state-of-the-art model-free offline RL baselines on Atari,
+OpenAI Gym, and Key-to-Door tasks.},
+ arxiv_url = {https://arxiv.org/pdf/2106.01345v2.pdf},
+ author = {Lili Chen and Kevin Lu and Aravind Rajeswaran and Kimin Lee and Aditya Grover and Michael Laskin and Pieter Abbeel and Aravind Srinivas and Igor Mordatch},
+ title = {Decision transformer: Reinforcement learning via sequence modeling},
+ year = {2021}
+}
+
+@article{chen_2022_offline,
+ abstract = {In offline reinforcement learning, weighted regression is a common method to
+ensure the learned policy stays close to the behavior policy and to prevent
+selecting out-of-sample actions. In this work, we show that due to the limited
+distributional expressivity of policy models, previous methods might still
+select unseen actions during training, which deviates from their initial
+motivation. To address this problem, we adopt a generative approach by
+decoupling the learned policy into two parts: an expressive generative behavior
+model and an action evaluation model. The key insight is that such decoupling
+avoids learning an explicitly parameterized policy model with a closed-form
+expression. Directly learning the behavior policy allows us to leverage
+existing advances in generative modeling, such as diffusion-based methods, to
+model diverse behaviors. As for action evaluation, we combine our method with
+an in-sample planning technique to further avoid selecting out-of-sample
+actions and increase computational efficiency. Experimental results on D4RL
+datasets show that our proposed method achieves competitive or superior
+performance compared with state-of-the-art offline RL methods, especially in
+complex tasks such as AntMaze. We also empirically demonstrate that our method
+can successfully learn from a heterogeneous dataset containing multiple
+distinctive but similarly successful strategies, whereas previous unimodal
+policies fail.},
+ arxiv_url = {https://arxiv.org/pdf/2209.14548v2.pdf},
+ author = {Huayu Chen and Cheng Lu and Chengyang Ying and Hang Su and Jun Zhu},
+ title = {Offline reinforcement learning via high-fidelity generative behavior modeling},
+ year = {2022}
+}
+
+@article{dhariwal_2021_diffusion,
+ abstract = {We show that diffusion models can achieve image sample quality superior to
+the current state-of-the-art generative models. We achieve this on
+unconditional image synthesis by finding a better architecture through a series
+of ablations. For conditional image synthesis, we further improve sample
+quality with classifier guidance: a simple, compute-efficient method for
+trading off diversity for fidelity using gradients from a classifier. We
+achieve an FID of 2.97 on ImageNet 128$\times$128, 4.59 on ImageNet
+256$\times$256, and 7.72 on ImageNet 512$\times$512, and we match BigGAN-deep
+even with as few as 25 forward passes per sample, all while maintaining better
+coverage of the distribution. Finally, we find that classifier guidance
+combines well with upsampling diffusion models, further improving FID to 3.94
+on ImageNet 256$\times$256 and 3.85 on ImageNet 512$\times$512. We release our
+code at https://github.com/openai/guided-diffusion},
+ arxiv_url = {https://arxiv.org/pdf/2105.05233v4.pdf},
+ author = {Prafulla Dhariwal and Alex Nichol},
+ title = {Diffusion models beat GANs on image synthesis},
+ year = {2021}
+}
+
+@article{fu_2020_datasets,
+ abstract = {The offline reinforcement learning (RL) setting (also known as full batch
+RL), where a policy is learned from a static dataset, is compelling as progress
+enables RL methods to take advantage of large, previously-collected datasets,
+much like how the rise of large datasets has fueled results in supervised
+learning. However, existing online RL benchmarks are not tailored towards the
+offline setting and existing offline RL benchmarks are restricted to data
+generated by partially-trained agents, making progress in offline RL difficult
+to measure. In this work, we introduce benchmarks specifically designed for the
+offline setting, guided by key properties of datasets relevant to real-world
+applications of offline RL. With a focus on dataset collection, examples of
+such properties include: datasets generated via hand-designed controllers and
+human demonstrators, multitask datasets where an agent performs different tasks
+in the same environment, and datasets collected with mixtures of policies. By
+moving beyond simple benchmark tasks and data collected by partially-trained RL
+agents, we reveal important and unappreciated deficiencies of existing
+algorithms. To facilitate research, we have released our benchmark tasks and
+datasets with a comprehensive evaluation of existing algorithms, an evaluation
+protocol, and open-source examples. This serves as a common starting point for
+the community to identify shortcomings in existing offline RL methods and a
+collaborative route for progress in this emerging area.},
+ arxiv_url = {https://arxiv.org/pdf/2004.07219v4.pdf},
+ author = {Justin Fu and Aviral Kumar and Ofir Nachum and George Tucker and Sergey Levine},
+ title = {D4RL: Datasets for deep data-driven reinforcement learning},
+ year = {2020}
+}

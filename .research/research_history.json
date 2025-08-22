@@ -6,5 +6,52 @@
     "cross-domain prototypical networks",
     "transductive prototypical networks",
     "data augmentation prototypical networks"
+  ],
+  "research_study_list": [
+    {
+      "title": "A Closer Look at Prototype Classifier for Few-shot Image Classification"
+    },
+    {
+      "title": "A Theoretical Analysis of the Number of Shots in Few-Shot Learning"
+    },
+    {
+      "title": "FeCAM: Exploiting the Heterogeneity of Class Distributions in Exemplar-Free Continual Learning"
+    },
+    {
+      "title": "A Closer Look at Prototype Classifier for Few-shot Image Classification"
+    },
+    {
+      "title": "Topologically Densified Distributions"
+    },
+    {
+      "title": "A Theoretical Analysis of the Number of Shots in Few-Shot Learning"
+    },
+    {
+      "title": "Semantic Feature Learning for Universal Unsupervised Cross-Domain Retrieval"
+    },
+    {
+      "title": "Revisiting Prototypical Network for Cross Domain Few-Shot Learning"
+    },
+    {
+      "title": "Cross-domain Open-world Discovery"
+    },
+    {
+      "title": "Transductive Few-Shot Learning With Prototype-Based Label Propagation by Iterative Graph Refinement"
+    },
+    {
+      "title": "Parameterless Transductive Feature Re-representation for Few-Shot Learning"
+    },
+    {
+      "title": "Laplacian Regularized Few-Shot Learning"
+    },
+    {
+      "title": "Data Augmentation for Meta-Learning"
+    },
+    {
+      "title": "Adversarial Auto-Augment with Label Preservation: A Representation Learning Principle Guided Approach"
+    },
+    {
+      "title": "Adversarial Auto-Augment with Label Preservation: A Representation Learning Principle Guided Approach"
+    }
   ]
 }

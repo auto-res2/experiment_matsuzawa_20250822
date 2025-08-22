@@ -308,45 +308,18 @@ ut line 59.
 Package natbib Warning: Citation `ding_2022_davit' on page 2 undefined on input
  line 59.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.59 ... implementations like FlashAttention [dao_
-                                                  2022_flashattention, dao_2...
+
+Package natbib Warning: Citation `dao_2022_flashattention' on page 2 undefined 
+on input line 59.
 
 
-! LaTeX Error: Command \bfseries invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.59 ...s, such as SlotSSMs \cite{jiang_2024_slot}
-                                                  , which uses independent s...
+Package natbib Warning: Citation `dao_2023_flashattention' on page 2 undefined 
+on input line 59.
 
 
 Package natbib Warning: Citation `jiang_2024_slot' on page 2 undefined on input
  line 59.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.59 ...ur focus on spatial structure. \subsection
-                                                  {Modern Convolutional Netw...
-
-
-Underfull \hbox (badness 1270) in paragraph at lines 59--59
-\T1/ptm/m/n/10 (+20) ViTs and their hi-er-ar-chi-cal vari-ants like Swin Trans-
-former have set high bench-marks in
-
-Overfull \hbox (1289.3087pt too wide) in paragraph at lines 59--59
-\T1/ptm/m/n/10 (-20) [dao$[]\OT1/cmr/m/n/10 022[]\OML/cmm/m/it/10 lashattention
-; dao[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 lashattention\OT1/cmr/m/n/10 ]\OML
-/cmm/m/it/10 mitigatethisissuetosomeextent; ourapproachoffersanalternativearchi
-tecturalfoundationthatisefficientbydesign:Someworkshaveexploredincorporatingmod
-ularinductivebiasesintosequentialmodels; suchasSlotSSMs[]; whichusesindependent
-slotstomodeldifferentcomponents; aconceptcomplementarytoourfocusonspatialstruct
-ure:$ 
 
 Package natbib Warning: Citation `dai_2021_coatnet' on page 2 undefined on inpu
 t line 59.
@@ -365,36 +338,14 @@ Package natbib Warning: Citation `dao_2024_transformers' on page 3 undefined on
  input line 67.
 
 [3]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.67 ...tally departs from prior vision SSMs [liu_
-                                                  2024_vmamba, zhu_2024_visi...
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.67 ...ce}. We compute a compact state vector $h_
-                                                  {ij}$ for the chunk at gri...
+Package natbib Warning: Citation `liu_2024_vmamba' on page 4 undefined on input
+ line 67.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--67
-\T1/ptm/m/n/10 (+20) This step mod-els the long-range spa-tial de-pen-den-cies 
-be-tween chunks and is
+Package natbib Warning: Citation `zhu_2024_vision' on page 4 undefined on input
+ line 67.
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--67
-\T1/ptm/m/n/10 (+20) the 2D ana-logue of the re-cur-rent inter-chunk state prop
--a-ga-tion ($\OML/cmm/m/it/10 Y[]$\T1/ptm/m/n/10 (+20) ) in SSD.
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--67
-\T1/ptm/m/n/10 (+20) This is where our method fun-da-men-tally de-parts from pr
-ior vi-sion SSMs
-
-Overfull \hbox (262.41965pt too wide) in paragraph at lines 67--67
-\T1/ptm/m/n/10 (-20) [liu$[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 mamba; zhu[]\
-OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ision\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :In
-steadofperformingindependent\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 Dscans; wepropose
-atrue[]:Wecomputeacompactstatevector$\T1/ptm/m/n/10 (-20) h$[]$
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 67.
@@ -443,17 +394,16 @@ Package rerunfilecheck Warning: File `paper.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
 (rerunfilecheck)                or use package `bookmark'.
 
- )
-(see the transcript file for additional information)</usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
-sbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (7 pages, 132621 bytes).
+ )</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
+mr8a.pfb>
+Output written on paper.pdf (7 pages, 124415 bytes).
 Transcript written on paper.log.
 This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
 The top-level auxiliary file: paper.aux
@@ -474,7 +424,9 @@ Warning--empty year in author_year_dimensional
 Warning--empty year in author_year_dimensional
 Warning--empty journal in chen_2019_mmdetection
 Warning--empty journal in dai_2021_coatnet
+Warning--empty journal in dao_2023_flashattention
 Warning--empty journal in dao_2024_transformers
+Warning--empty journal in dao_2022_flashattention
 Warning--empty journal in ding_2022_davit
 Warning--empty journal in elnouby_2021_xcit
 Warning--empty journal in jiang_2024_slot
@@ -793,45 +745,18 @@ ut line 59.
 Package natbib Warning: Citation `ding_2022_davit' on page 2 undefined on input
  line 59.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.59 ... implementations like FlashAttention [dao_
-                                                  2022_flashattention, dao_2...
+
+Package natbib Warning: Citation `dao_2022_flashattention' on page 2 undefined 
+on input line 59.
 
 
-! LaTeX Error: Command \bfseries invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.59 ...s, such as SlotSSMs \cite{jiang_2024_slot}
-                                                  , which uses independent s...
+Package natbib Warning: Citation `dao_2023_flashattention' on page 2 undefined 
+on input line 59.
 
 
 Package natbib Warning: Citation `jiang_2024_slot' on page 2 undefined on input
  line 59.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.59 ...ur focus on spatial structure. \subsection
-                                                  {Modern Convolutional Netw...
-
-
-Underfull \hbox (badness 1270) in paragraph at lines 59--59
-\T1/ptm/m/n/10 (+20) ViTs and their hi-er-ar-chi-cal vari-ants like Swin Trans-
-former have set high bench-marks in
-
-Overfull \hbox (1289.3087pt too wide) in paragraph at lines 59--59
-\T1/ptm/m/n/10 (-20) [dao$[]\OT1/cmr/m/n/10 022[]\OML/cmm/m/it/10 lashattention
-; dao[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 lashattention\OT1/cmr/m/n/10 ]\OML
-/cmm/m/it/10 mitigatethisissuetosomeextent; ourapproachoffersanalternativearchi
-tecturalfoundationthatisefficientbydesign:Someworkshaveexploredincorporatingmod
-ularinductivebiasesintosequentialmodels; suchasSlotSSMs[]; whichusesindependent
-slotstomodeldifferentcomponents; aconceptcomplementarytoourfocusonspatialstruct
-ure:$ 
 
 Package natbib Warning: Citation `dai_2021_coatnet' on page 2 undefined on inpu
 t line 59.
@@ -850,36 +775,14 @@ Package natbib Warning: Citation `dao_2024_transformers' on page 3 undefined on
  input line 67.
 
 [3]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.67 ...tally departs from prior vision SSMs [liu_
-                                                  2024_vmamba, zhu_2024_visi...
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.67 ...ce}. We compute a compact state vector $h_
-                                                  {ij}$ for the chunk at gri...
+Package natbib Warning: Citation `liu_2024_vmamba' on page 4 undefined on input
+ line 67.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--67
-\T1/ptm/m/n/10 (+20) This step mod-els the long-range spa-tial de-pen-den-cies 
-be-tween chunks and is
+Package natbib Warning: Citation `zhu_2024_vision' on page 4 undefined on input
+ line 67.
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--67
-\T1/ptm/m/n/10 (+20) the 2D ana-logue of the re-cur-rent inter-chunk state prop
--a-ga-tion ($\OML/cmm/m/it/10 Y[]$\T1/ptm/m/n/10 (+20) ) in SSD.
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--67
-\T1/ptm/m/n/10 (+20) This is where our method fun-da-men-tally de-parts from pr
-ior vi-sion SSMs
-
-Overfull \hbox (262.41965pt too wide) in paragraph at lines 67--67
-\T1/ptm/m/n/10 (-20) [liu$[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 mamba; zhu[]\
-OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ision\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :In
-steadofperformingindependent\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 Dscans; wepropose
-atrue[]:Wecomputeacompactstatevector$\T1/ptm/m/n/10 (-20) h$[]$
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 67.
@@ -924,18 +827,16 @@ Package natbib Warning: There were undefined citations.
 Package natbib Warning: Citation(s) may have changed.
 (natbib)                Rerun to get citations correct.
 
-) )
-(see the transcript file for additional information)</usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
-sbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (7 pages, 146799 bytes).
+) )</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
+/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on paper.pdf (7 pages, 138855 bytes).
 Transcript written on paper.log.
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
@@ -1207,58 +1108,7 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1{/var/lib/texm
 f/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/d
 vips/base/8r.enc}] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-! Missing $ inserted.
-<inserted text> 
-                $
-l.59 ... implementations like FlashAttention [dao_
-                                                  2022_flashattention, dao_2...
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.59 ...ur focus on spatial structure. \subsection
-                                                  {Modern Convolutional Netw...
-
-
-Overfull \hbox (1362.64476pt too wide) in paragraph at lines 59--59
-\T1/ptm/m/n/10 (-20) [dao$[]\OT1/cmr/m/n/10 022[]\OML/cmm/m/it/10 lashattention
-; dao[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 lashattention\OT1/cmr/m/n/10 ]\OML
-/cmm/m/it/10 mitigatethisissuetosomeextent; ourapproachoffersanalternativearchi
-tecturalfoundationthatisefficientbydesign:Someworkshaveexploredincorporatingmod
-ularinductivebiasesintosequentialmodels; suchasSlotSSMs[][][] \OT1/cmr/m/n/10 (
-[]2024[])\OML/cmm/m/it/10 ; whichusesindependentslotstomodeldifferentcomponents
-; aconceptcomplementarytoourfocusonspatialstructure:$ 
 [2] [3]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.67 ...tally departs from prior vision SSMs [liu_
-                                                  2024_vmamba, zhu_2024_visi...
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.67 ...ce}. We compute a compact state vector $h_
-                                                  {ij}$ for the chunk at gri...
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--67
-\T1/ptm/m/n/10 (+20) This step mod-els the long-range spa-tial de-pen-den-cies 
-be-tween chunks and is
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--67
-\T1/ptm/m/n/10 (+20) the 2D ana-logue of the re-cur-rent inter-chunk state prop
--a-ga-tion ($\OML/cmm/m/it/10 Y[]$\T1/ptm/m/n/10 (+20) ) in SSD.
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--67
-\T1/ptm/m/n/10 (+20) This is where our method fun-da-men-tally de-parts from pr
-ior vi-sion SSMs
-
-Overfull \hbox (262.41965pt too wide) in paragraph at lines 67--67
-\T1/ptm/m/n/10 (-20) [liu$[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 mamba; zhu[]\
-OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ision\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :In
-steadofperformingindependent\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 Dscans; wepropose
-atrue[]:Wecomputeacompactstatevector$\T1/ptm/m/n/10 (-20) h$[]$
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 67.
@@ -1272,16 +1122,18 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 67.
 
 [4] [5] [6] (./paper.bbl
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)) [7] (./paper.aux) )
-(see the transcript file for additional information)</usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
-sbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (7 pages, 146963 bytes).
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)) [7] (./paper.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
+utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on paper.pdf (7 pages, 140902 bytes).
 Transcript written on paper.log.

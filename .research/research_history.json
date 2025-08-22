@@ -6,5 +6,52 @@
     "black-box prompt search",
     "gradient-free prompt optimization",
     "evolutionary prompt optimization"
+  ],
+  "research_study_list": [
+    {
+      "title": "Hard Prompts Made Easy: Gradient-Based Discrete Optimization for Prompt Tuning and Discovery"
+    },
+    {
+      "title": "Localized Zeroth-Order Prompt Optimization"
+    },
+    {
+      "title": "Large Language Models as Optimizers"
+    },
+    {
+      "title": "Large Language Models are Human-Level Prompt Engineers"
+    },
+    {
+      "title": "Optimizing Prompts for Text-to-Image Generation"
+    },
+    {
+      "title": "Can discrete information extraction prompts generalize across language models?"
+    },
+    {
+      "title": "Black-Box Tuning for Language-Model-as-a-Service"
+    },
+    {
+      "title": "Black-Box Tuning for Language-Model-as-a-Service"
+    },
+    {
+      "title": "Language Models as Black-Box Optimizers for Vision-Language Models"
+    },
+    {
+      "title": "Large Language Models as Optimizers"
+    },
+    {
+      "title": "Hard Prompts Made Easy: Gradient-Based Discrete Optimization for Prompt Tuning and Discovery"
+    },
+    {
+      "title": "Black-Box Tuning for Language-Model-as-a-Service"
+    },
+    {
+      "title": "Connecting Large Language Models with Evolutionary Algorithms Yields Powerful Prompt Optimizers"
+    },
+    {
+      "title": "Large Language Models as Optimizers"
+    },
+    {
+      "title": "Promptbreeder: Self-Referential Self-Improvement via Prompt Evolution"
+    }
   ]
 }

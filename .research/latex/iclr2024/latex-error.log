@@ -265,553 +265,276 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ... Models (DDPMs) \cite{ho\_2020\_denoising}
-                                                   and their follow-ups \cit...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.50 ... establish a new state-of-the-art for few_
+                                                  step generative modeling, ...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.51 \end{abstract}
+                   
+! Missing } inserted.
+<inserted text> 
+                }
+l.51 \end{abstract}
+                   
+
+Overfull \hbox (79.39859pt too wide) in paragraph at lines 50--51
+\T1/ptm/m/n/10 (-20) few$[]\OML/cmm/m/it/10 tepgenerativemodeling; particularly
+atasingleNumberofFunctionEvaluations\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 NFE \OT1/
+cmr/m/n/10 =
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.51 \end{abstract}
+                   
+
+Package natbib Warning: Citation `ho_2020_denoising' on page 1 undefined on inp
+ut line 55.
 
 
-Package natbib Warning: Citation `ho\T1\textunderscore2020\T1\textunderscoreden
-oising' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...ollow-ups \cite{karras\_2022\_elucidating}
-                                                   setting new benchmarks. T...
+Package natbib Warning: Citation `karras_2022_elucidating' on page 1 undefined 
+on input line 55.
 
 
-Package natbib Warning: Citation `karras\T1\textunderscore2022\T1\textunderscor
-eelucidating' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...ing Flows (CNFs) \cite{chen\_2018\_neural}
-                                                  , which learn a transforma...
+Package natbib Warning: Citation `chen_2018_neural' on page 1 undefined on inpu
+t line 55.
 
 
-Package natbib Warning: Citation `chen\T1\textunderscore2018\T1\textunderscoren
-eural' on page 1 undefined on input line 55.
-
-! Undefined control sequence.
-l.55 ...NFEs), making inference slow and costly.\n
-                                                  \nA promising direction fo...
-
-! Undefined control sequence.
-l.55 ...s), making inference slow and costly.\n\nA
-                                                   promising direction for i...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...g (FM) framework \cite{lipman\_2022\_flow}
-                                                   provides a simulation-fre...
+Package natbib Warning: Citation `lipman_2022_flow' on page 1 undefined on inpu
+t line 57.
 
 
-Package natbib Warning: Citation `lipman\T1\textunderscore2022\T1\textunderscor
-eflow' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...Rectified Flow (RF) \cite{liu\_2022\_flow}
-                                                   learns to approximate str...
+Package natbib Warning: Citation `liu_2022_flow' on page 1 undefined on input l
+ine 57.
 
 
-Package natbib Warning: Citation `liu\T1\textunderscore2022\T1\textunderscorefl
-ow' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ... Flow (2-RF++) \cite{lee\_2024\_improving}
-                                                   iteratively refine the fl...
+Package natbib Warning: Citation `lee_2024_improving' on page 1 undefined on in
+put line 57.
 
 
-Package natbib Warning: Citation `lee\T1\textunderscore2024\T1\textunderscoreim
-proving' on page 1 undefined on input line 55.
+Package natbib Warning: Citation `kornilov_2024_optimal' on page 1 undefined on
+ input line 59.
 
-! Undefined control sequence.
-l.55 ...and can accumulate errors at each stage.\n
-                                                  \nOn the other end of the ...
-
-! Undefined control sequence.
-l.55 ...can accumulate errors at each stage.\n\nOn
-                                                   the other end of the spec...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...ching (OFM) \cite{kornilov\_2024\_optimal}
-                                                  , a theoretically elegant ...
-
-
-Package natbib Warning: Citation `kornilov\T1\textunderscore2024\T1\textundersc
-oreoptimal' on page 1 undefined on input line 55.
-
-! Undefined control sequence.
-l.55 ... curiosity rather than a practical tool.\n
-                                                  \nTo bridge this critical ...
-
-! Undefined control sequence.
-l.55 ...iosity rather than a practical tool.\n\nTo
-                                                   bridge this critical gap ...
-
-! Undefined control sequence.
-l.55 ...works. Our contributions are as follows:\n
-                                                  \n\begin{itemize}
-! Undefined control sequence.
-l.55 ...rks. Our contributions are as follows:\n\n
-                                                  \begin{itemize}
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}]
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-! Undefined control sequence.
-l.65 ... within the Flow Matching (FM) paradigm.\n
-                                                  \nThe foundational concept...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.69 ...M will set a new state-of-the-art for few_
+                                                  step sampling, particularl...
 
-! Undefined control sequence.
-l.65 ...in the Flow Matching (FM) paradigm.\n\nThe
-                                                   foundational concept of F...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.70 
+     
 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...by Lipman et al. \cite{lipman\_2022\_flow}
-                                                  , established a simulation...
+Underfull \hbox (badness 1661) in paragraph at lines 69--70
+[]\T1/ptm/m/n/10 (+20) We out-line an ex-per-i-men-tal pro-to-col to val-i-date
+ AOFM on the CIFAR-10 im-age gen-er-
 
+Underfull \hbox (badness 3746) in paragraph at lines 69--70
+\T1/ptm/m/n/10 (+20) state-of-the-art for few$[]\OML/cmm/m/it/10 tepsampling; p
+articularlyforsingle \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 stepgeneration\OT1/c
+mr/m/n/10 (\OML/cmm/m/it/10 NFE \OT1/cmr/m/n/10 =
 
-Package natbib Warning: Citation `lipman\T1\textunderscore2022\T1\textunderscor
-eflow' on page 2 undefined on input line 65.
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+\OT1/cmr/m/n/10 1)\OML/cmm/m/it/10 ; outperformingbothmulti \OMS/cmsy/m/n/10 ^^
+@ \OML/cmm/m/it/10 stagerefinementmethodsanddistillation \OMS/cmsy/m/n/10 ^^@
 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...ing Flows (CNFs) \cite{chen\_2018\_neural}
-                                                   by regressing a neural ne...
+Overfull \hbox (351.77408pt too wide) in paragraph at lines 69--70
+\OML/cmm/m/it/10 basedapproaches:BymakingOTscalable; AOFMhasthepotentialtounloc
+knewapplicationsinscienceandengineeringwheregeometricallyoptimaltransportishigh
+lydesirable:$ 
 
-
-Package natbib Warning: Citation `chen\T1\textunderscore2018\T1\textunderscoren
-eural' on page 2 undefined on input line 65.
-
-! Undefined control sequence.
-l.65 ...l choices common in earlier CNF methods.\n
-                                                  \nA key research direction...
-
-! Undefined control sequence.
-l.65 ...hoices common in earlier CNF methods.\n\nA
-                                                   key research direction wi...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...Rectified Flow (RF) \cite{liu\_2022\_flow}
-                                                   was a significant step in...
+Package natbib Warning: Citation `lipman_2022_flow' on page 2 undefined on inpu
+t line 75.
 
 
-Package natbib Warning: Citation `liu\T1\textunderscore2022\T1\textunderscorefl
-ow' on page 2 undefined on input line 65.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...as 2-Rectified Flow \cite{liu\_2022\_flow}
-                                                   and its more recent impro...
+Package natbib Warning: Citation `chen_2018_neural' on page 2 undefined on inpu
+t line 75.
 
 
-Package natbib Warning: Citation `liu\T1\textunderscore2022\T1\textunderscorefl
-ow' on page 2 undefined on input line 65.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...ments (2-RF++) \cite{lee\_2024\_improving}
-                                                  . These methods iterativel...
+Package natbib Warning: Citation `liu_2022_flow' on page 2 undefined on input l
+ine 77.
 
 
-Package natbib Warning: Citation `lee\T1\textunderscore2024\T1\textunderscoreim
-proving' on page 2 undefined on input line 65.
-
-! Undefined control sequence.
-l.65 ...or accumulation of iterative refinement.\n
-                                                  \nOur method is a direct s...
-
-! Undefined control sequence.
-l.65 ...cumulation of iterative refinement.\n\nOur
-                                                   method is a direct succes...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...ching (OFM) \cite{kornilov\_2024\_optimal}
-                                                  . OFM provides the theoret...
+Package natbib Warning: Citation `liu_2022_flow' on page 2 undefined on input l
+ine 77.
 
 
-Package natbib Warning: Citation `kornilov\T1\textunderscore2024\T1\textundersc
-oreoptimal' on page 2 undefined on input line 65.
+Package natbib Warning: Citation `lee_2024_improving' on page 2 undefined on in
+put line 77.
 
-! Undefined control sequence.
-l.65 ...table algorithm to optimize it at scale.\n
-                                                  \nThe broader goal of few\...
 
-! Undefined control sequence.
-l.65 ... algorithm to optimize it at scale.\n\nThe
-                                                   broader goal of few\_step...
+Package natbib Warning: Citation `kornilov_2024_optimal' on page 2 undefined on
+ input line 79.
 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...tening (BOSS) \cite{nguyen\_2023\_bellman}
+! Missing $ inserted.
+<inserted text> 
+                $
+l.81 The broader goal of few_
+                             step generation has also been tackled by knowle...
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.81 ...ghtening (BOSS) \cite{nguyen_2023_bellman}
                                                    aim to distill a powerful...
 
 
-Package natbib Warning: Citation `nguyen\T1\textunderscore2023\T1\textunderscor
-ebellman' on page 2 undefined on input line 65.
+Package natbib Warning: Citation `nguyen_2023_bellman' on page 2 undefined on i
+nput line 81.
 
-! Undefined control sequence.
-l.69 ...on of Optimal Transport in this context.\n
-                                                  \n\textbf{Continuous Norma...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.82 
+     
 
-! Undefined control sequence.
-l.69 ... of Optimal Transport in this context.\n\n
-                                                  \textbf{Continuous Normali...
+Overfull \hbox (509.91434pt too wide) in paragraph at lines 81--82
+[]\T1/ptm/m/n/10 (-20) The broader goal of few$[]\OML/cmm/m/it/10 tepgeneration
+hasalsobeentackledbyknowledgedistillationtechniques:MethodslikeConsistencyModel
+sandBellmanOptimalStepsizeStraightening\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 BOSS\O
+T1/cmr/m/n/10 )[]\OML/cmm/m/it/10 aimtodistillapowerful; pre \OMS/cmsy/m/n/10 ^
+^@
 
-! Undefined control sequence.
-<recently read> \nA 
-                    
-l.69 ...bf{Continuous Normalizing Flows (CNFs)}\nA
-                                                   CNF \cite{chen\_2018\_neu...
+Overfull \hbox (9.99815pt too wide) in paragraph at lines 81--82
+\OML/cmm/m/it/10 trainedmulti \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 stepmodel\O
+T1/cmr/m/n/10 (\OML/cmm/m/it/10 typicallyadiffusionmodel\OT1/cmr/m/n/10 )\OML/c
+mm/m/it/10 intoahighlyefficientfew[]teporsingle \OMS/cmsy/m/n/10 ^^@
 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.69 ...s (CNFs)}\nA CNF \cite{chen\_2018\_neural}
-                                                   defines a continuous-time...
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
+\OML/cmm/m/it/10 stepsampler:Theseapproachesareeffectivebutrelyonacumbersomepre
+ \OMS/cmsy/m/n/10 ^^@
 
-
-Package natbib Warning: Citation `chen\T1\textunderscore2018\T1\textunderscoren
-eural' on page 2 undefined on input line 69.
-
-! Undefined control sequence.
-l.69 ...ntegrating this ODE from $t=0$ to $t=1$.\n
-                                                  \n\textbf{Flow Matching (F...
-
-! Undefined control sequence.
-l.69 ...egrating this ODE from $t=0$ to $t=1$.\n\n
-                                                  \textbf{Flow Matching (FM)...
-
-! Undefined control sequence.
-<recently read> \nTraining 
-                           
-l.69 ....\n\n\textbf{Flow Matching (FM)}\nTraining
-                                                   CNFs traditionally requir...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.69 ...r. Flow Matching \cite{lipman\_2022\_flow}
-                                                   introduced a simulation-f...
-
-
-Package natbib Warning: Citation `lipman\T1\textunderscore2022\T1\textunderscor
-eflow' on page 2 undefined on input line 69.
-
+Overfull \hbox (268.28381pt too wide) in paragraph at lines 81--82
+\OML/cmm/m/it/10 end; directlyfromscratch; tobeanefficientsamplerwithoutrequiri
+ngateachermodel:BylearningtheOTmap; ourapproachaimstoachievesuperiorsingle \OMS
+/cmsy/m/n/10 ^^@
 [2]
-! Undefined control sequence.
-l.70 where $x_t$ is sampled from $p_t$.\n
-                                         \n\textbf{Problem Setting: Optimal ...
 
-! Undefined control sequence.
-l.70 where $x_t$ is sampled from $p_t$.\n\n
-                                           \textbf{Problem Setting: Optimal ...
-
-! Undefined control sequence.
-<recently read> \nA 
-                    
-l.70 ...m Setting: Optimal Flow Matching (OFM)}\nA
-                                                   particularly desirable ch...
-
-! Undefined control sequence.
-l.70 ... cost, these paths represent the OT map.\n
-                                                  \nOptimal Flow Matching (O...
-
-! Undefined control sequence.
-l.70 ...ese paths represent the OT map.\n\nOptimal
-                                                   Flow Matching (OFM) \cite...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.70 ...ching (OFM) \cite{kornilov\_2024\_optimal}
-                                                   provides a method to lear...
+Package natbib Warning: Citation `chen_2018_neural' on page 3 undefined on inpu
+t line 88.
 
 
-Package natbib Warning: Citation `kornilov\T1\textunderscore2024\T1\textundersc
-oreoptimal' on page 3 undefined on input line 70.
-
-! Undefined control sequence.
-l.72 ...{\phi}$ with respect to its input $x_t$.\n
-                                                  \nThis formulation, howeve...
-
-! Undefined control sequence.
-l.72 ...$ with respect to its input $x_t$.\n\nThis
-                                                   formulation, however, pre...
-
-! Undefined control sequence.
-l.76 ...earns to perform the flow map inversion.\n
-                                                  \n\textbf{1. Amortized Flo...
-
-! Undefined control sequence.
-l.76 ...rns to perform the flow map inversion.\n\n
-                                                  \textbf{1. Amortized Flow ...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.76 ...w Map Inversion via Self-Consistency}\nThe
-                                                   standard OFM procedure re...
-
-! Undefined control sequence.
-l.76 ...n intermediate point $x_t$ and time $t$.\n
-                                                  \nA naive approach would b...
-
-! Undefined control sequence.
-l.76 ...ntermediate point $x_t$ and time $t$.\n\nA
-                                                   naive approach would be t...
-
-! Undefined control sequence.
-l.80 ... a single, efficient network evaluation.\n
-                                                  \n\textbf{2. Hessian-Free ...
-
-! Undefined control sequence.
-l.80 ... single, efficient network evaluation.\n\n
-                                                  \textbf{2. Hessian-Free Gr...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.80 ...Free Gradient via Conjugate Gradient}\nThe
-                                                   second major bottleneck i...
-
-! Undefined control sequence.
-l.80 ... dimensions, such as image generation.\nTo
-                                                   circumvent this, we refra...
-
-! Undefined control sequence.
-l.80 ....e., a Hessian-vector product (HVP).\nHVPs
-                                                   can be computed efficient...
-
-! Undefined control sequence.
-l.80 ...y scalable, nearly linear $O(k\cdot D)$.\n
-                                                  \n\textbf{Overall Training...
-
-! Undefined control sequence.
-l.80 ...scalable, nearly linear $O(k\cdot D)$.\n\n
-                                                  \textbf{Overall Training P...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.80 ...\n\textbf{Overall Training Procedure}\nThe
-                                                   complete AOFM training ob...
-
-[3]
-! Undefined control sequence.
-l.93 ...th a single function evaluation (NFE=1).\n
-                                                  \n\textbf{Dataset and Prep...
-
-! Undefined control sequence.
-l.93 ... a single function evaluation (NFE=1).\n\n
-                                                  \textbf{Dataset and Prepro...
-
-! Undefined control sequence.
-<recently read> \nWe 
-                     
-l.93 ...\n\n\textbf{Dataset and Preprocessing}\nWe
-                                                   use the CIFAR-10 dataset,...
-
-! Undefined control sequence.
-l.93 ...izontal flips with a probability of 0.5.\n
-                                                  \n\textbf{Evaluation Metri...
-
-! Undefined control sequence.
-l.93 ...ontal flips with a probability of 0.5.\n\n
-                                                  \textbf{Evaluation Metrics...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.93 ...f 0.5.\n\n\textbf{Evaluation Metrics}\nThe
-                                                   primary metric for quanti...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.93 ...n Distance (FID) \cite{heusel\_2017\_gans}
-                                                  , calculated between 50,00...
+Package natbib Warning: Citation `lipman_2022_flow' on page 3 undefined on inpu
+t line 91.
 
 
-Package natbib Warning: Citation `heusel\T1\textunderscore2017\T1\textunderscor
-egans' on page 4 undefined on input line 93.
+Package natbib Warning: Citation `kornilov_2024_optimal' on page 3 undefined on
+ input line 97.
 
-! Undefined control sequence.
-l.93 ... computational efficiency gains of AOFM.\n
-                                                  \n\textbf{Model Architectu...
+[3] [4]
 
-! Undefined control sequence.
-l.93 ...omputational efficiency gains of AOFM.\n\n
-                                                  \textbf{Model Architecture...
+Package natbib Warning: Citation `heusel_2017_gans' on page 5 undefined on inpu
+t line 141.
 
-! Undefined control sequence.
-<recently read> \nTo 
-                     
-l.93 ...xtbf{Model Architecture and Baselines}\nTo
-                                                   ensure a fair comparison,...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.141 ...e CIFAR-10 training set using the `clean_
+                                                  fid` library for consisten...
 
-! Undefined control sequence.
-l.93 ...er count of approximately 30-40 million.\n
-                                                  \begin{itemize}
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.97 ...ing (OFM) \cite{kornilov\_2024\_optimal}:}
-                                                   Due to its extreme comput...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.142 
+      
 
+Overfull \hbox (434.1187pt too wide) in paragraph at lines 140--142
+\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OML/cmm
+/m/it/10 ; \OT1/cmr/m/n/10 4\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 10\OML/cmm/m/it/
+10 ; \OT1/cmr/m/n/10 20\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 50\OMS/cmsy/m/n/10 g\
+OML/cmm/m/it/10 tocomprehensivelyassesstheperformancecurve:Additionally; wewill
+measuretrainingthroughput\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 samples=second\OT1/c
+mr/m/n/10 )\OML/cmm/m/it/10 toquantifythecomputationalefficiencygainsofAOFM:$ 
 
-Package natbib Warning: Citation `kornilov\T1\textunderscore2024\T1\textundersc
-oreoptimal' on page 4 undefined on input line 97.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.98 ...ctified Flow (RF) \cite{liu\_2022\_flow}:}
-                                                   The primary practical bas...
+Package natbib Warning: Citation `kornilov_2024_optimal' on page 5 undefined on
+ input line 149.
 
 
-Package natbib Warning: Citation `liu\T1\textunderscore2022\T1\textunderscorefl
-ow' on page 4 undefined on input line 98.
-
-[4]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.99 ...low (2-RF++) \cite{lee\_2024\_improving}:}
-                                                   A state-of-the-art multi-...
+Package natbib Warning: Citation `liu_2022_flow' on page 5 undefined on input l
+ine 150.
 
 
-Package natbib Warning: Citation `lee\T1\textunderscore2024\T1\textunderscoreim
-proving' on page 5 undefined on input line 99.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.100 ...bf{EDM \cite{karras\_2022\_elucidating}:}
-                                                   A top-tier diffusion mode...
+Package natbib Warning: Citation `lee_2024_improving' on page 5 undefined on in
+put line 151.
 
 
-Package natbib Warning: Citation `karras\T1\textunderscore2022\T1\textunderscor
-eelucidating' on page 5 undefined on input line 100.
+Package natbib Warning: Citation `karras_2022_elucidating' on page 5 undefined 
+on input line 152.
 
-! Undefined control sequence.
-<recently read> \nAll 
-                      
-l.105 \textbf{Training Protocol}\nAll
-                                      models will be trained for 400,000 ite...
-
-! Undefined control sequence.
-l.105 ...is configured to use $k=10$ iterations.\n
-                                                  \n\textbf{Ablation Studies...
-
-! Undefined control sequence.
-l.105 ... configured to use $k=10$ iterations.\n\n
-                                                  \textbf{Ablation Studies}\...
-
-! Undefined control sequence.
-<recently read> \nTo 
-                     
-l.105 ...rations.\n\n\textbf{Ablation Studies}\nTo
-                                                   isolate the contributions...
-
-! Undefined control sequence.
-l.115 ... experiments did not run to completion.\n
-                                                  \nAn analysis of the execu...
-
-! Undefined control sequence.
-l.115 ...eriments did not run to completion.\n\nAn
-                                                   analysis of the execution...
-
-! Undefined control sequence.
-l.115 ...sic sanity check of our implementation.\n
-                                                  \nUnfortunately, the main ...
-
-! Undefined control sequence.
-l.115 ...k of our implementation.\n\nUnfortunately
-                                                  , the main training loop, ...
-
-! Undefined control sequence.
-l.115 ... support our theoretical contributions.\n
-                                                  \nWhile we cannot present ...
-
-! Undefined control sequence.
-l.115 ...t our theoretical contributions.\n\nWhile
-                                                   we cannot present empiric...
-
-! Undefined control sequence.
-l.115 ...and are for illustrative purposes only.\n
-                                                  
-
-Underfull \vbox (badness 10000) has occurred while \output is active [5]
+[5]
 Underfull \vbox (badness 10000) has occurred while \output is active [6 <./imag
-es/aofm_fid_comparison.pdf> <./images/aofm_samples_nfe1.pdf>]
+es/aofm_fid_comparison.pdf>]
 Underfull \vbox (badness 5189) has occurred while \output is active [7 <./image
-s/aofm_samples_nfe2.pdf> <./images/aofm_samples_nfe4.pdf>]
+s/aofm_samples_nfe1.pdf> <./images/aofm_samples_nfe2.pdf>]
 Underfull \vbox (badness 5189) has occurred while \output is active [8 <./image
-s/aofm_samples_nfe10.pdf> <./images/aofm_samples_nfe20.pdf>]
-! Undefined control sequence.
-l.162 ...l data. AOFM bridges this critical gap.\n
-                                                  \nOur core contribution is...
-
-! Undefined control sequence.
-l.162 ...a. AOFM bridges this critical gap.\n\nOur
-                                                   core contribution is a co...
-
-! Undefined control sequence.
-l.162 ...OT models tractable for the first time.\n
-                                                  \nThe potential implicatio...
-
-! Undefined control sequence.
-l.162 ...dels tractable for the first time.\n\nThe
-                                                   potential implications of...
-
-! Undefined control sequence.
-l.162 ...ine learning and computational science.\n
-                                                  \nThe immediate future wor...
-
-! Undefined control sequence.
-l.162 ...earning and computational science.\n\nThe
-                                                   immediate future work is ...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.162 ...ational biology \cite{klein\_2023\_genot}
-                                                   and physics, where exact ...
+s/aofm_samples_nfe4.pdf> <./images/aofm_samples_nfe10.pdf>]
+Underfull \vbox (badness 2343) has occurred while \output is active [9 <./image
+s/aofm_samples_nfe20.pdf> <./images/training_losses.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.229 ...blish a new performance frontier for few_
+                                                  step, and particularly sin...
 
 
-Package natbib Warning: Citation `klein\T1\textunderscore2023\T1\textunderscore
-genot' on page 9 undefined on input line 162.
+LaTeX Warning: Command \textemdash invalid in math mode on input line 229.
 
 
-Package natbib Warning: Citation `airas2025' on page 9 undefined on input line 
-164.
+LaTeX Warning: Command \textemdash invalid in math mode on input line 229.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.230 
+      
+
+Underfull \hbox (badness 2591) in paragraph at lines 229--230
+[]\T1/ptm/m/n/10 (+20) The po-ten-tial im-pli-ca-tions of this work are sig-nif
+-i-cant. By en-abling the learn-ing of
+
+Underfull \hbox (badness 7133) in paragraph at lines 229--230
+\T1/ptm/m/n/10 (+20) the-o-ret-i-cally op-ti-mal, straight-line tra-jec-to-ries
+ in a sin-gle train-ing stage, AOFM is
+
+Underfull \hbox (badness 4699) in paragraph at lines 229--230
+\T1/ptm/m/n/10 (+20) poised to es-tab-lish a new per-for-mance fron-tier for fe
+w$[]\OML/cmm/m/it/10 tep; andparticularlysingle \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (240.3674pt too wide) in paragraph at lines 229--230
+\OML/cmm/m/it/10 step; generativemodeling:Furthermore; thecore[]amortizedoptimi
+zation[]paradigm\OT1/cmr/m/n/10 ^^V\OML/cmm/m/it/10 replacingexpensiveinternals
+olverswithjointlytrained; self \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (279.6458pt too wide) in paragraph at lines 229--230
+\OML/cmm/m/it/10 consistentneuralnetworks\OT1/cmr/m/n/10 ^^V\OML/cmm/m/it/10 of
+fersageneralizableblueprintthatcouldaccelerateawiderangeofcomplexmodelsinmachin
+elearningandcomputationalscience:$ 
+
+Package natbib Warning: Citation `klein_2023_genot' on page 10 undefined on inp
+ut line 231.
+
+
+Package natbib Warning: Citation `airas2025' on page 10 undefined on input line
+ 233.
 
 No file paper.bbl.
 
 Package natbib Warning: There were undefined citations.
 
-[9 <./images/training_losses.pdf>] (./paper.aux)
+[10] (./paper.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -831,105 +554,38 @@ cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (9 pages, 1197112 bytes).
+Output written on paper.pdf (10 pages, 1206821 bytes).
 Transcript written on paper.log.
 This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
 The top-level auxiliary file: paper.aux
-White space in argument---line 5 of file paper.aux
- : \citation{ho\protect
- :                      \T1\textunderscore 2020\protect \T1\textunderscore denoising}
-I'm skipping whatever remains of this command
-White space in argument---line 6 of file paper.aux
- : \citation{karras\protect
- :                          \T1\textunderscore 2022\protect \T1\textunderscore elucidating}
-I'm skipping whatever remains of this command
-White space in argument---line 7 of file paper.aux
- : \citation{chen\protect
- :                        \T1\textunderscore 2018\protect \T1\textunderscore neural}
-I'm skipping whatever remains of this command
-White space in argument---line 8 of file paper.aux
- : \citation{lipman\protect
- :                          \T1\textunderscore 2022\protect \T1\textunderscore flow}
-I'm skipping whatever remains of this command
-White space in argument---line 9 of file paper.aux
- : \citation{liu\protect
- :                       \T1\textunderscore 2022\protect \T1\textunderscore flow}
-I'm skipping whatever remains of this command
-White space in argument---line 10 of file paper.aux
- : \citation{lee\protect
- :                       \T1\textunderscore 2024\protect \T1\textunderscore improving}
-I'm skipping whatever remains of this command
-White space in argument---line 11 of file paper.aux
- : \citation{kornilov\protect
- :                            \T1\textunderscore 2024\protect \T1\textunderscore optimal}
-I'm skipping whatever remains of this command
-White space in argument---line 15 of file paper.aux
- : \citation{lipman\protect
- :                          \T1\textunderscore 2022\protect \T1\textunderscore flow}
-I'm skipping whatever remains of this command
-White space in argument---line 16 of file paper.aux
- : \citation{chen\protect
- :                        \T1\textunderscore 2018\protect \T1\textunderscore neural}
-I'm skipping whatever remains of this command
-White space in argument---line 17 of file paper.aux
- : \citation{liu\protect
- :                       \T1\textunderscore 2022\protect \T1\textunderscore flow}
-I'm skipping whatever remains of this command
-White space in argument---line 18 of file paper.aux
- : \citation{liu\protect
- :                       \T1\textunderscore 2022\protect \T1\textunderscore flow}
-I'm skipping whatever remains of this command
-White space in argument---line 19 of file paper.aux
- : \citation{lee\protect
- :                       \T1\textunderscore 2024\protect \T1\textunderscore improving}
-I'm skipping whatever remains of this command
-White space in argument---line 20 of file paper.aux
- : \citation{kornilov\protect
- :                            \T1\textunderscore 2024\protect \T1\textunderscore optimal}
-I'm skipping whatever remains of this command
-White space in argument---line 21 of file paper.aux
- : \citation{nguyen\protect
- :                          \T1\textunderscore 2023\protect \T1\textunderscore bellman}
-I'm skipping whatever remains of this command
-White space in argument---line 22 of file paper.aux
- : \citation{chen\protect
- :                        \T1\textunderscore 2018\protect \T1\textunderscore neural}
-I'm skipping whatever remains of this command
-White space in argument---line 23 of file paper.aux
- : \citation{lipman\protect
- :                          \T1\textunderscore 2022\protect \T1\textunderscore flow}
-I'm skipping whatever remains of this command
-White space in argument---line 27 of file paper.aux
- : \citation{kornilov\protect
- :                            \T1\textunderscore 2024\protect \T1\textunderscore optimal}
-I'm skipping whatever remains of this command
-White space in argument---line 34 of file paper.aux
- : \citation{heusel\protect
- :                          \T1\textunderscore 2017\protect \T1\textunderscore gans}
-I'm skipping whatever remains of this command
-White space in argument---line 35 of file paper.aux
- : \citation{kornilov\protect
- :                            \T1\textunderscore 2024\protect \T1\textunderscore optimal}
-I'm skipping whatever remains of this command
-White space in argument---line 36 of file paper.aux
- : \citation{liu\protect
- :                       \T1\textunderscore 2022\protect \T1\textunderscore flow}
-I'm skipping whatever remains of this command
-White space in argument---line 40 of file paper.aux
- : \citation{lee\protect
- :                       \T1\textunderscore 2024\protect \T1\textunderscore improving}
-I'm skipping whatever remains of this command
-White space in argument---line 41 of file paper.aux
- : \citation{karras\protect
- :                          \T1\textunderscore 2022\protect \T1\textunderscore elucidating}
-I'm skipping whatever remains of this command
-White space in argument---line 51 of file paper.aux
- : \citation{klein\protect
- :                         \T1\textunderscore 2023\protect \T1\textunderscore genot}
-I'm skipping whatever remains of this command
 The style file: iclr2024_conference.bst
 Database file #1: references.bib
-(There were 23 error messages)
+Repeated entry---line 108 of file references.bib
+ : @article{kornilov_2024_optimal
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 128 of file references.bib
+ : @article{kornilov_2024_optimal
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 148 of file references.bib
+ : @article{kornilov_2024_optimal
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 251 of file references.bib
+ : @article{liu_2022_flow
+ :                       ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in chen_2018_neural
+Warning--empty journal in ho_2020_denoising
+Warning--empty journal in karras_2022_elucidating
+Warning--empty journal in klein_2023_genot
+Warning--empty journal in kornilov_2024_optimal
+Warning--empty journal in lee_2024_improving
+Warning--empty journal in lipman_2022_flow
+Warning--empty journal in liu_2022_flow
+Warning--empty journal in nguyen_2023_bellman
+(There were 4 error messages)
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
@@ -1198,551 +854,272 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ... Models (DDPMs) \cite{ho\_2020\_denoising}
-                                                   and their follow-ups \cit...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.50 ... establish a new state-of-the-art for few_
+                                                  step generative modeling, ...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.51 \end{abstract}
+                   
+! Missing } inserted.
+<inserted text> 
+                }
+l.51 \end{abstract}
+                   
+
+Overfull \hbox (79.39859pt too wide) in paragraph at lines 50--51
+\T1/ptm/m/n/10 (-20) few$[]\OML/cmm/m/it/10 tepgenerativemodeling; particularly
+atasingleNumberofFunctionEvaluations\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 NFE \OT1/
+cmr/m/n/10 =
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.51 \end{abstract}
+                   
+
+Package natbib Warning: Citation `ho_2020_denoising' on page 1 undefined on inp
+ut line 55.
 
 
-Package natbib Warning: Citation `ho\T1\textunderscore2020\T1\textunderscoreden
-oising' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...ollow-ups \cite{karras\_2022\_elucidating}
-                                                   setting new benchmarks. T...
+Package natbib Warning: Citation `karras_2022_elucidating' on page 1 undefined 
+on input line 55.
 
 
-Package natbib Warning: Citation `karras\T1\textunderscore2022\T1\textunderscor
-eelucidating' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...ing Flows (CNFs) \cite{chen\_2018\_neural}
-                                                  , which learn a transforma...
+Package natbib Warning: Citation `chen_2018_neural' on page 1 undefined on inpu
+t line 55.
 
 
-Package natbib Warning: Citation `chen\T1\textunderscore2018\T1\textunderscoren
-eural' on page 1 undefined on input line 55.
-
-! Undefined control sequence.
-l.55 ...NFEs), making inference slow and costly.\n
-                                                  \nA promising direction fo...
-
-! Undefined control sequence.
-l.55 ...s), making inference slow and costly.\n\nA
-                                                   promising direction for i...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...g (FM) framework \cite{lipman\_2022\_flow}
-                                                   provides a simulation-fre...
+Package natbib Warning: Citation `lipman_2022_flow' on page 1 undefined on inpu
+t line 57.
 
 
-Package natbib Warning: Citation `lipman\T1\textunderscore2022\T1\textunderscor
-eflow' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...Rectified Flow (RF) \cite{liu\_2022\_flow}
-                                                   learns to approximate str...
+Package natbib Warning: Citation `liu_2022_flow' on page 1 undefined on input l
+ine 57.
 
 
-Package natbib Warning: Citation `liu\T1\textunderscore2022\T1\textunderscorefl
-ow' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ... Flow (2-RF++) \cite{lee\_2024\_improving}
-                                                   iteratively refine the fl...
+Package natbib Warning: Citation `lee_2024_improving' on page 1 undefined on in
+put line 57.
 
 
-Package natbib Warning: Citation `lee\T1\textunderscore2024\T1\textunderscoreim
-proving' on page 1 undefined on input line 55.
+Package natbib Warning: Citation `kornilov_2024_optimal' on page 1 undefined on
+ input line 59.
 
-! Undefined control sequence.
-l.55 ...and can accumulate errors at each stage.\n
-                                                  \nOn the other end of the ...
-
-! Undefined control sequence.
-l.55 ...can accumulate errors at each stage.\n\nOn
-                                                   the other end of the spec...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...ching (OFM) \cite{kornilov\_2024\_optimal}
-                                                  , a theoretically elegant ...
-
-
-Package natbib Warning: Citation `kornilov\T1\textunderscore2024\T1\textundersc
-oreoptimal' on page 1 undefined on input line 55.
-
-! Undefined control sequence.
-l.55 ... curiosity rather than a practical tool.\n
-                                                  \nTo bridge this critical ...
-
-! Undefined control sequence.
-l.55 ...iosity rather than a practical tool.\n\nTo
-                                                   bridge this critical gap ...
-
-! Undefined control sequence.
-l.55 ...works. Our contributions are as follows:\n
-                                                  \n\begin{itemize}
-! Undefined control sequence.
-l.55 ...rks. Our contributions are as follows:\n\n
-                                                  \begin{itemize}
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}]
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-! Undefined control sequence.
-l.65 ... within the Flow Matching (FM) paradigm.\n
-                                                  \nThe foundational concept...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.69 ...M will set a new state-of-the-art for few_
+                                                  step sampling, particularl...
 
-! Undefined control sequence.
-l.65 ...in the Flow Matching (FM) paradigm.\n\nThe
-                                                   foundational concept of F...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.70 
+     
 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...by Lipman et al. \cite{lipman\_2022\_flow}
-                                                  , established a simulation...
+Underfull \hbox (badness 1661) in paragraph at lines 69--70
+[]\T1/ptm/m/n/10 (+20) We out-line an ex-per-i-men-tal pro-to-col to val-i-date
+ AOFM on the CIFAR-10 im-age gen-er-
 
+Underfull \hbox (badness 3746) in paragraph at lines 69--70
+\T1/ptm/m/n/10 (+20) state-of-the-art for few$[]\OML/cmm/m/it/10 tepsampling; p
+articularlyforsingle \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 stepgeneration\OT1/c
+mr/m/n/10 (\OML/cmm/m/it/10 NFE \OT1/cmr/m/n/10 =
 
-Package natbib Warning: Citation `lipman\T1\textunderscore2022\T1\textunderscor
-eflow' on page 2 undefined on input line 65.
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+\OT1/cmr/m/n/10 1)\OML/cmm/m/it/10 ; outperformingbothmulti \OMS/cmsy/m/n/10 ^^
+@ \OML/cmm/m/it/10 stagerefinementmethodsanddistillation \OMS/cmsy/m/n/10 ^^@
 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...ing Flows (CNFs) \cite{chen\_2018\_neural}
-                                                   by regressing a neural ne...
+Overfull \hbox (351.77408pt too wide) in paragraph at lines 69--70
+\OML/cmm/m/it/10 basedapproaches:BymakingOTscalable; AOFMhasthepotentialtounloc
+knewapplicationsinscienceandengineeringwheregeometricallyoptimaltransportishigh
+lydesirable:$ 
 
-
-Package natbib Warning: Citation `chen\T1\textunderscore2018\T1\textunderscoren
-eural' on page 2 undefined on input line 65.
-
-! Undefined control sequence.
-l.65 ...l choices common in earlier CNF methods.\n
-                                                  \nA key research direction...
-
-! Undefined control sequence.
-l.65 ...hoices common in earlier CNF methods.\n\nA
-                                                   key research direction wi...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...Rectified Flow (RF) \cite{liu\_2022\_flow}
-                                                   was a significant step in...
+Package natbib Warning: Citation `lipman_2022_flow' on page 2 undefined on inpu
+t line 75.
 
 
-Package natbib Warning: Citation `liu\T1\textunderscore2022\T1\textunderscorefl
-ow' on page 2 undefined on input line 65.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...as 2-Rectified Flow \cite{liu\_2022\_flow}
-                                                   and its more recent impro...
+Package natbib Warning: Citation `chen_2018_neural' on page 2 undefined on inpu
+t line 75.
 
 
-Package natbib Warning: Citation `liu\T1\textunderscore2022\T1\textunderscorefl
-ow' on page 2 undefined on input line 65.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...ments (2-RF++) \cite{lee\_2024\_improving}
-                                                  . These methods iterativel...
+Package natbib Warning: Citation `liu_2022_flow' on page 2 undefined on input l
+ine 77.
 
 
-Package natbib Warning: Citation `lee\T1\textunderscore2024\T1\textunderscoreim
-proving' on page 2 undefined on input line 65.
-
-! Undefined control sequence.
-l.65 ...or accumulation of iterative refinement.\n
-                                                  \nOur method is a direct s...
-
-! Undefined control sequence.
-l.65 ...cumulation of iterative refinement.\n\nOur
-                                                   method is a direct succes...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...ching (OFM) \cite{kornilov\_2024\_optimal}
-                                                  . OFM provides the theoret...
+Package natbib Warning: Citation `liu_2022_flow' on page 2 undefined on input l
+ine 77.
 
 
-Package natbib Warning: Citation `kornilov\T1\textunderscore2024\T1\textundersc
-oreoptimal' on page 2 undefined on input line 65.
+Package natbib Warning: Citation `lee_2024_improving' on page 2 undefined on in
+put line 77.
 
-! Undefined control sequence.
-l.65 ...table algorithm to optimize it at scale.\n
-                                                  \nThe broader goal of few\...
 
-! Undefined control sequence.
-l.65 ... algorithm to optimize it at scale.\n\nThe
-                                                   broader goal of few\_step...
+Package natbib Warning: Citation `kornilov_2024_optimal' on page 2 undefined on
+ input line 79.
 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...tening (BOSS) \cite{nguyen\_2023\_bellman}
+! Missing $ inserted.
+<inserted text> 
+                $
+l.81 The broader goal of few_
+                             step generation has also been tackled by knowle...
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.81 ...ghtening (BOSS) \cite{nguyen_2023_bellman}
                                                    aim to distill a powerful...
 
 
-Package natbib Warning: Citation `nguyen\T1\textunderscore2023\T1\textunderscor
-ebellman' on page 2 undefined on input line 65.
+Package natbib Warning: Citation `nguyen_2023_bellman' on page 2 undefined on i
+nput line 81.
 
-! Undefined control sequence.
-l.69 ...on of Optimal Transport in this context.\n
-                                                  \n\textbf{Continuous Norma...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.82 
+     
 
-! Undefined control sequence.
-l.69 ... of Optimal Transport in this context.\n\n
-                                                  \textbf{Continuous Normali...
+Overfull \hbox (509.91434pt too wide) in paragraph at lines 81--82
+[]\T1/ptm/m/n/10 (-20) The broader goal of few$[]\OML/cmm/m/it/10 tepgeneration
+hasalsobeentackledbyknowledgedistillationtechniques:MethodslikeConsistencyModel
+sandBellmanOptimalStepsizeStraightening\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 BOSS\O
+T1/cmr/m/n/10 )[]\OML/cmm/m/it/10 aimtodistillapowerful; pre \OMS/cmsy/m/n/10 ^
+^@
 
-! Undefined control sequence.
-<recently read> \nA 
-                    
-l.69 ...bf{Continuous Normalizing Flows (CNFs)}\nA
-                                                   CNF \cite{chen\_2018\_neu...
+Overfull \hbox (9.99815pt too wide) in paragraph at lines 81--82
+\OML/cmm/m/it/10 trainedmulti \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 stepmodel\O
+T1/cmr/m/n/10 (\OML/cmm/m/it/10 typicallyadiffusionmodel\OT1/cmr/m/n/10 )\OML/c
+mm/m/it/10 intoahighlyefficientfew[]teporsingle \OMS/cmsy/m/n/10 ^^@
 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.69 ...s (CNFs)}\nA CNF \cite{chen\_2018\_neural}
-                                                   defines a continuous-time...
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
+\OML/cmm/m/it/10 stepsampler:Theseapproachesareeffectivebutrelyonacumbersomepre
+ \OMS/cmsy/m/n/10 ^^@
 
-
-Package natbib Warning: Citation `chen\T1\textunderscore2018\T1\textunderscoren
-eural' on page 2 undefined on input line 69.
-
-! Undefined control sequence.
-l.69 ...ntegrating this ODE from $t=0$ to $t=1$.\n
-                                                  \n\textbf{Flow Matching (F...
-
-! Undefined control sequence.
-l.69 ...egrating this ODE from $t=0$ to $t=1$.\n\n
-                                                  \textbf{Flow Matching (FM)...
-
-! Undefined control sequence.
-<recently read> \nTraining 
-                           
-l.69 ....\n\n\textbf{Flow Matching (FM)}\nTraining
-                                                   CNFs traditionally requir...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.69 ...r. Flow Matching \cite{lipman\_2022\_flow}
-                                                   introduced a simulation-f...
-
-
-Package natbib Warning: Citation `lipman\T1\textunderscore2022\T1\textunderscor
-eflow' on page 2 undefined on input line 69.
-
+Overfull \hbox (268.28381pt too wide) in paragraph at lines 81--82
+\OML/cmm/m/it/10 end; directlyfromscratch; tobeanefficientsamplerwithoutrequiri
+ngateachermodel:BylearningtheOTmap; ourapproachaimstoachievesuperiorsingle \OMS
+/cmsy/m/n/10 ^^@
 [2]
-! Undefined control sequence.
-l.70 where $x_t$ is sampled from $p_t$.\n
-                                         \n\textbf{Problem Setting: Optimal ...
 
-! Undefined control sequence.
-l.70 where $x_t$ is sampled from $p_t$.\n\n
-                                           \textbf{Problem Setting: Optimal ...
-
-! Undefined control sequence.
-<recently read> \nA 
-                    
-l.70 ...m Setting: Optimal Flow Matching (OFM)}\nA
-                                                   particularly desirable ch...
-
-! Undefined control sequence.
-l.70 ... cost, these paths represent the OT map.\n
-                                                  \nOptimal Flow Matching (O...
-
-! Undefined control sequence.
-l.70 ...ese paths represent the OT map.\n\nOptimal
-                                                   Flow Matching (OFM) \cite...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.70 ...ching (OFM) \cite{kornilov\_2024\_optimal}
-                                                   provides a method to lear...
+Package natbib Warning: Citation `chen_2018_neural' on page 3 undefined on inpu
+t line 88.
 
 
-Package natbib Warning: Citation `kornilov\T1\textunderscore2024\T1\textundersc
-oreoptimal' on page 3 undefined on input line 70.
-
-! Undefined control sequence.
-l.72 ...{\phi}$ with respect to its input $x_t$.\n
-                                                  \nThis formulation, howeve...
-
-! Undefined control sequence.
-l.72 ...$ with respect to its input $x_t$.\n\nThis
-                                                   formulation, however, pre...
-
-! Undefined control sequence.
-l.76 ...earns to perform the flow map inversion.\n
-                                                  \n\textbf{1. Amortized Flo...
-
-! Undefined control sequence.
-l.76 ...rns to perform the flow map inversion.\n\n
-                                                  \textbf{1. Amortized Flow ...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.76 ...w Map Inversion via Self-Consistency}\nThe
-                                                   standard OFM procedure re...
-
-! Undefined control sequence.
-l.76 ...n intermediate point $x_t$ and time $t$.\n
-                                                  \nA naive approach would b...
-
-! Undefined control sequence.
-l.76 ...ntermediate point $x_t$ and time $t$.\n\nA
-                                                   naive approach would be t...
-
-! Undefined control sequence.
-l.80 ... a single, efficient network evaluation.\n
-                                                  \n\textbf{2. Hessian-Free ...
-
-! Undefined control sequence.
-l.80 ... single, efficient network evaluation.\n\n
-                                                  \textbf{2. Hessian-Free Gr...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.80 ...Free Gradient via Conjugate Gradient}\nThe
-                                                   second major bottleneck i...
-
-! Undefined control sequence.
-l.80 ... dimensions, such as image generation.\nTo
-                                                   circumvent this, we refra...
-
-! Undefined control sequence.
-l.80 ....e., a Hessian-vector product (HVP).\nHVPs
-                                                   can be computed efficient...
-
-! Undefined control sequence.
-l.80 ...y scalable, nearly linear $O(k\cdot D)$.\n
-                                                  \n\textbf{Overall Training...
-
-! Undefined control sequence.
-l.80 ...scalable, nearly linear $O(k\cdot D)$.\n\n
-                                                  \textbf{Overall Training P...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.80 ...\n\textbf{Overall Training Procedure}\nThe
-                                                   complete AOFM training ob...
-
-[3]
-! Undefined control sequence.
-l.93 ...th a single function evaluation (NFE=1).\n
-                                                  \n\textbf{Dataset and Prep...
-
-! Undefined control sequence.
-l.93 ... a single function evaluation (NFE=1).\n\n
-                                                  \textbf{Dataset and Prepro...
-
-! Undefined control sequence.
-<recently read> \nWe 
-                     
-l.93 ...\n\n\textbf{Dataset and Preprocessing}\nWe
-                                                   use the CIFAR-10 dataset,...
-
-! Undefined control sequence.
-l.93 ...izontal flips with a probability of 0.5.\n
-                                                  \n\textbf{Evaluation Metri...
-
-! Undefined control sequence.
-l.93 ...ontal flips with a probability of 0.5.\n\n
-                                                  \textbf{Evaluation Metrics...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.93 ...f 0.5.\n\n\textbf{Evaluation Metrics}\nThe
-                                                   primary metric for quanti...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.93 ...n Distance (FID) \cite{heusel\_2017\_gans}
-                                                  , calculated between 50,00...
+Package natbib Warning: Citation `lipman_2022_flow' on page 3 undefined on inpu
+t line 91.
 
 
-Package natbib Warning: Citation `heusel\T1\textunderscore2017\T1\textunderscor
-egans' on page 4 undefined on input line 93.
+Package natbib Warning: Citation `kornilov_2024_optimal' on page 3 undefined on
+ input line 97.
 
-! Undefined control sequence.
-l.93 ... computational efficiency gains of AOFM.\n
-                                                  \n\textbf{Model Architectu...
+[3] [4]
 
-! Undefined control sequence.
-l.93 ...omputational efficiency gains of AOFM.\n\n
-                                                  \textbf{Model Architecture...
+Package natbib Warning: Citation `heusel_2017_gans' on page 5 undefined on inpu
+t line 141.
 
-! Undefined control sequence.
-<recently read> \nTo 
-                     
-l.93 ...xtbf{Model Architecture and Baselines}\nTo
-                                                   ensure a fair comparison,...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.141 ...e CIFAR-10 training set using the `clean_
+                                                  fid` library for consisten...
 
-! Undefined control sequence.
-l.93 ...er count of approximately 30-40 million.\n
-                                                  \begin{itemize}
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.97 ...ing (OFM) \cite{kornilov\_2024\_optimal}:}
-                                                   Due to its extreme comput...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.142 
+      
 
+Overfull \hbox (434.1187pt too wide) in paragraph at lines 140--142
+\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OML/cmm
+/m/it/10 ; \OT1/cmr/m/n/10 4\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 10\OML/cmm/m/it/
+10 ; \OT1/cmr/m/n/10 20\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 50\OMS/cmsy/m/n/10 g\
+OML/cmm/m/it/10 tocomprehensivelyassesstheperformancecurve:Additionally; wewill
+measuretrainingthroughput\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 samples=second\OT1/c
+mr/m/n/10 )\OML/cmm/m/it/10 toquantifythecomputationalefficiencygainsofAOFM:$ 
 
-Package natbib Warning: Citation `kornilov\T1\textunderscore2024\T1\textundersc
-oreoptimal' on page 4 undefined on input line 97.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.98 ...ctified Flow (RF) \cite{liu\_2022\_flow}:}
-                                                   The primary practical bas...
+Package natbib Warning: Citation `kornilov_2024_optimal' on page 5 undefined on
+ input line 149.
 
 
-Package natbib Warning: Citation `liu\T1\textunderscore2022\T1\textunderscorefl
-ow' on page 4 undefined on input line 98.
-
-[4]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.99 ...low (2-RF++) \cite{lee\_2024\_improving}:}
-                                                   A state-of-the-art multi-...
+Package natbib Warning: Citation `liu_2022_flow' on page 5 undefined on input l
+ine 150.
 
 
-Package natbib Warning: Citation `lee\T1\textunderscore2024\T1\textunderscoreim
-proving' on page 5 undefined on input line 99.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.100 ...bf{EDM \cite{karras\_2022\_elucidating}:}
-                                                   A top-tier diffusion mode...
+Package natbib Warning: Citation `lee_2024_improving' on page 5 undefined on in
+put line 151.
 
 
-Package natbib Warning: Citation `karras\T1\textunderscore2022\T1\textunderscor
-eelucidating' on page 5 undefined on input line 100.
+Package natbib Warning: Citation `karras_2022_elucidating' on page 5 undefined 
+on input line 152.
 
-! Undefined control sequence.
-<recently read> \nAll 
-                      
-l.105 \textbf{Training Protocol}\nAll
-                                      models will be trained for 400,000 ite...
-
-! Undefined control sequence.
-l.105 ...is configured to use $k=10$ iterations.\n
-                                                  \n\textbf{Ablation Studies...
-
-! Undefined control sequence.
-l.105 ... configured to use $k=10$ iterations.\n\n
-                                                  \textbf{Ablation Studies}\...
-
-! Undefined control sequence.
-<recently read> \nTo 
-                     
-l.105 ...rations.\n\n\textbf{Ablation Studies}\nTo
-                                                   isolate the contributions...
-
-! Undefined control sequence.
-l.115 ... experiments did not run to completion.\n
-                                                  \nAn analysis of the execu...
-
-! Undefined control sequence.
-l.115 ...eriments did not run to completion.\n\nAn
-                                                   analysis of the execution...
-
-! Undefined control sequence.
-l.115 ...sic sanity check of our implementation.\n
-                                                  \nUnfortunately, the main ...
-
-! Undefined control sequence.
-l.115 ...k of our implementation.\n\nUnfortunately
-                                                  , the main training loop, ...
-
-! Undefined control sequence.
-l.115 ... support our theoretical contributions.\n
-                                                  \nWhile we cannot present ...
-
-! Undefined control sequence.
-l.115 ...t our theoretical contributions.\n\nWhile
-                                                   we cannot present empiric...
-
-! Undefined control sequence.
-l.115 ...and are for illustrative purposes only.\n
-                                                  
-
-Underfull \vbox (badness 10000) has occurred while \output is active [5]
+[5]
 Underfull \vbox (badness 10000) has occurred while \output is active [6 <./imag
-es/aofm_fid_comparison.pdf> <./images/aofm_samples_nfe1.pdf>]
+es/aofm_fid_comparison.pdf>]
 Underfull \vbox (badness 5189) has occurred while \output is active [7 <./image
-s/aofm_samples_nfe2.pdf> <./images/aofm_samples_nfe4.pdf>]
+s/aofm_samples_nfe1.pdf> <./images/aofm_samples_nfe2.pdf>]
 Underfull \vbox (badness 5189) has occurred while \output is active [8 <./image
-s/aofm_samples_nfe10.pdf> <./images/aofm_samples_nfe20.pdf>]
-! Undefined control sequence.
-l.162 ...l data. AOFM bridges this critical gap.\n
-                                                  \nOur core contribution is...
-
-! Undefined control sequence.
-l.162 ...a. AOFM bridges this critical gap.\n\nOur
-                                                   core contribution is a co...
-
-! Undefined control sequence.
-l.162 ...OT models tractable for the first time.\n
-                                                  \nThe potential implicatio...
-
-! Undefined control sequence.
-l.162 ...dels tractable for the first time.\n\nThe
-                                                   potential implications of...
-
-! Undefined control sequence.
-l.162 ...ine learning and computational science.\n
-                                                  \nThe immediate future wor...
-
-! Undefined control sequence.
-l.162 ...earning and computational science.\n\nThe
-                                                   immediate future work is ...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.162 ...ational biology \cite{klein\_2023\_genot}
-                                                   and physics, where exact ...
+s/aofm_samples_nfe4.pdf> <./images/aofm_samples_nfe10.pdf>]
+Underfull \vbox (badness 2343) has occurred while \output is active [9 <./image
+s/aofm_samples_nfe20.pdf> <./images/training_losses.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.229 ...blish a new performance frontier for few_
+                                                  step, and particularly sin...
 
 
-Package natbib Warning: Citation `klein\T1\textunderscore2023\T1\textunderscore
-genot' on page 9 undefined on input line 162.
+LaTeX Warning: Command \textemdash invalid in math mode on input line 229.
 
 
-Package natbib Warning: Citation `airas2025' on page 9 undefined on input line 
-164.
+LaTeX Warning: Command \textemdash invalid in math mode on input line 229.
 
-(./paper.bbl (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
-Underfull \vbox (badness 10000) has occurred while \output is active [9 <./imag
-es/training_losses.pdf>])
+! Missing $ inserted.
+<inserted text> 
+                $
+l.230 
+      
+
+Underfull \hbox (badness 2591) in paragraph at lines 229--230
+[]\T1/ptm/m/n/10 (+20) The po-ten-tial im-pli-ca-tions of this work are sig-nif
+-i-cant. By en-abling the learn-ing of
+
+Underfull \hbox (badness 7133) in paragraph at lines 229--230
+\T1/ptm/m/n/10 (+20) the-o-ret-i-cally op-ti-mal, straight-line tra-jec-to-ries
+ in a sin-gle train-ing stage, AOFM is
+
+Underfull \hbox (badness 4699) in paragraph at lines 229--230
+\T1/ptm/m/n/10 (+20) poised to es-tab-lish a new per-for-mance fron-tier for fe
+w$[]\OML/cmm/m/it/10 tep; andparticularlysingle \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (240.3674pt too wide) in paragraph at lines 229--230
+\OML/cmm/m/it/10 step; generativemodeling:Furthermore; thecore[]amortizedoptimi
+zation[]paradigm\OT1/cmr/m/n/10 ^^V\OML/cmm/m/it/10 replacingexpensiveinternals
+olverswithjointlytrained; self \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (279.6458pt too wide) in paragraph at lines 229--230
+\OML/cmm/m/it/10 consistentneuralnetworks\OT1/cmr/m/n/10 ^^V\OML/cmm/m/it/10 of
+fersageneralizableblueprintthatcouldaccelerateawiderangeofcomplexmodelsinmachin
+elearningandcomputationalscience:$ 
+
+Package natbib Warning: Citation `klein_2023_genot' on page 10 undefined on inp
+ut line 231.
+
+
+Package natbib Warning: Citation `airas2025' on page 10 undefined on input line
+ 233.
+
+(./paper.bbl (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd))
 
 Package natbib Warning: There were undefined citations.
 
@@ -1762,8 +1139,9 @@ cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf
--dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (10 pages, 1208740 bytes).
+-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (10 pages, 1231392 bytes).
 Transcript written on paper.log.
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
@@ -2033,550 +1411,182 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ... Models (DDPMs) \cite{ho\_2020\_denoising}
-                                                   and their follow-ups \cit...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.50 ... establish a new state-of-the-art for few_
+                                                  step generative modeling, ...
 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.51 \end{abstract}
+                   
+! Missing } inserted.
+<inserted text> 
+                }
+l.51 \end{abstract}
+                   
 
-Package natbib Warning: Citation `ho\T1\textunderscore2020\T1\textunderscoreden
-oising' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...ollow-ups \cite{karras\_2022\_elucidating}
-                                                   setting new benchmarks. T...
-
-
-Package natbib Warning: Citation `karras\T1\textunderscore2022\T1\textunderscor
-eelucidating' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...ing Flows (CNFs) \cite{chen\_2018\_neural}
-                                                  , which learn a transforma...
-
-
-Package natbib Warning: Citation `chen\T1\textunderscore2018\T1\textunderscoren
-eural' on page 1 undefined on input line 55.
-
-! Undefined control sequence.
-l.55 ...NFEs), making inference slow and costly.\n
-                                                  \nA promising direction fo...
-
-! Undefined control sequence.
-l.55 ...s), making inference slow and costly.\n\nA
-                                                   promising direction for i...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...g (FM) framework \cite{lipman\_2022\_flow}
-                                                   provides a simulation-fre...
-
-
-Package natbib Warning: Citation `lipman\T1\textunderscore2022\T1\textunderscor
-eflow' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...Rectified Flow (RF) \cite{liu\_2022\_flow}
-                                                   learns to approximate str...
-
-
-Package natbib Warning: Citation `liu\T1\textunderscore2022\T1\textunderscorefl
-ow' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ... Flow (2-RF++) \cite{lee\_2024\_improving}
-                                                   iteratively refine the fl...
-
-
-Package natbib Warning: Citation `lee\T1\textunderscore2024\T1\textunderscoreim
-proving' on page 1 undefined on input line 55.
-
-! Undefined control sequence.
-l.55 ...and can accumulate errors at each stage.\n
-                                                  \nOn the other end of the ...
-
-! Undefined control sequence.
-l.55 ...can accumulate errors at each stage.\n\nOn
-                                                   the other end of the spec...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...ching (OFM) \cite{kornilov\_2024\_optimal}
-                                                  , a theoretically elegant ...
-
-
-Package natbib Warning: Citation `kornilov\T1\textunderscore2024\T1\textundersc
-oreoptimal' on page 1 undefined on input line 55.
-
-! Undefined control sequence.
-l.55 ... curiosity rather than a practical tool.\n
-                                                  \nTo bridge this critical ...
-
-! Undefined control sequence.
-l.55 ...iosity rather than a practical tool.\n\nTo
-                                                   bridge this critical gap ...
-
-! Undefined control sequence.
-l.55 ...works. Our contributions are as follows:\n
-                                                  \n\begin{itemize}
-! Undefined control sequence.
-l.55 ...rks. Our contributions are as follows:\n\n
-                                                  \begin{itemize}
+Overfull \hbox (79.39859pt too wide) in paragraph at lines 50--51
+\T1/ptm/m/n/10 (-20) few$[]\OML/cmm/m/it/10 tepgenerativemodeling; particularly
+atasingleNumberofFunctionEvaluations\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 NFE \OT1/
+cmr/m/n/10 =
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.51 \end{abstract}
+                   
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}]
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-! Undefined control sequence.
-l.65 ... within the Flow Matching (FM) paradigm.\n
-                                                  \nThe foundational concept...
-
-! Undefined control sequence.
-l.65 ...in the Flow Matching (FM) paradigm.\n\nThe
-                                                   foundational concept of F...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...by Lipman et al. \cite{lipman\_2022\_flow}
-                                                  , established a simulation...
-
-
-Package natbib Warning: Citation `lipman\T1\textunderscore2022\T1\textunderscor
-eflow' on page 2 undefined on input line 65.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...ing Flows (CNFs) \cite{chen\_2018\_neural}
-                                                   by regressing a neural ne...
-
-
-Package natbib Warning: Citation `chen\T1\textunderscore2018\T1\textunderscoren
-eural' on page 2 undefined on input line 65.
-
-! Undefined control sequence.
-l.65 ...l choices common in earlier CNF methods.\n
-                                                  \nA key research direction...
-
-! Undefined control sequence.
-l.65 ...hoices common in earlier CNF methods.\n\nA
-                                                   key research direction wi...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...Rectified Flow (RF) \cite{liu\_2022\_flow}
-                                                   was a significant step in...
-
-
-Package natbib Warning: Citation `liu\T1\textunderscore2022\T1\textunderscorefl
-ow' on page 2 undefined on input line 65.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...as 2-Rectified Flow \cite{liu\_2022\_flow}
-                                                   and its more recent impro...
-
-
-Package natbib Warning: Citation `liu\T1\textunderscore2022\T1\textunderscorefl
-ow' on page 2 undefined on input line 65.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...ments (2-RF++) \cite{lee\_2024\_improving}
-                                                  . These methods iterativel...
-
-
-Package natbib Warning: Citation `lee\T1\textunderscore2024\T1\textunderscoreim
-proving' on page 2 undefined on input line 65.
-
-! Undefined control sequence.
-l.65 ...or accumulation of iterative refinement.\n
-                                                  \nOur method is a direct s...
-
-! Undefined control sequence.
-l.65 ...cumulation of iterative refinement.\n\nOur
-                                                   method is a direct succes...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...ching (OFM) \cite{kornilov\_2024\_optimal}
-                                                  . OFM provides the theoret...
-
-
-Package natbib Warning: Citation `kornilov\T1\textunderscore2024\T1\textundersc
-oreoptimal' on page 2 undefined on input line 65.
-
-! Undefined control sequence.
-l.65 ...table algorithm to optimize it at scale.\n
-                                                  \nThe broader goal of few\...
-
-! Undefined control sequence.
-l.65 ... algorithm to optimize it at scale.\n\nThe
-                                                   broader goal of few\_step...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...tening (BOSS) \cite{nguyen\_2023\_bellman}
-                                                   aim to distill a powerful...
-
-
-Package natbib Warning: Citation `nguyen\T1\textunderscore2023\T1\textunderscor
-ebellman' on page 2 undefined on input line 65.
-
-! Undefined control sequence.
-l.69 ...on of Optimal Transport in this context.\n
-                                                  \n\textbf{Continuous Norma...
-
-! Undefined control sequence.
-l.69 ... of Optimal Transport in this context.\n\n
-                                                  \textbf{Continuous Normali...
-
-! Undefined control sequence.
-<recently read> \nA 
-                    
-l.69 ...bf{Continuous Normalizing Flows (CNFs)}\nA
-                                                   CNF \cite{chen\_2018\_neu...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.69 ...s (CNFs)}\nA CNF \cite{chen\_2018\_neural}
-                                                   defines a continuous-time...
-
-
-Package natbib Warning: Citation `chen\T1\textunderscore2018\T1\textunderscoren
-eural' on page 2 undefined on input line 69.
-
-! Undefined control sequence.
-l.69 ...ntegrating this ODE from $t=0$ to $t=1$.\n
-                                                  \n\textbf{Flow Matching (F...
-
-! Undefined control sequence.
-l.69 ...egrating this ODE from $t=0$ to $t=1$.\n\n
-                                                  \textbf{Flow Matching (FM)...
-
-! Undefined control sequence.
-<recently read> \nTraining 
-                           
-l.69 ....\n\n\textbf{Flow Matching (FM)}\nTraining
-                                                   CNFs traditionally requir...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.69 ...r. Flow Matching \cite{lipman\_2022\_flow}
-                                                   introduced a simulation-f...
-
-
-Package natbib Warning: Citation `lipman\T1\textunderscore2022\T1\textunderscor
-eflow' on page 2 undefined on input line 69.
-
-[2]
-! Undefined control sequence.
-l.70 where $x_t$ is sampled from $p_t$.\n
-                                         \n\textbf{Problem Setting: Optimal ...
-
-! Undefined control sequence.
-l.70 where $x_t$ is sampled from $p_t$.\n\n
-                                           \textbf{Problem Setting: Optimal ...
-
-! Undefined control sequence.
-<recently read> \nA 
-                    
-l.70 ...m Setting: Optimal Flow Matching (OFM)}\nA
-                                                   particularly desirable ch...
-
-! Undefined control sequence.
-l.70 ... cost, these paths represent the OT map.\n
-                                                  \nOptimal Flow Matching (O...
-
-! Undefined control sequence.
-l.70 ...ese paths represent the OT map.\n\nOptimal
-                                                   Flow Matching (OFM) \cite...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.70 ...ching (OFM) \cite{kornilov\_2024\_optimal}
-                                                   provides a method to lear...
-
-
-Package natbib Warning: Citation `kornilov\T1\textunderscore2024\T1\textundersc
-oreoptimal' on page 3 undefined on input line 70.
-
-! Undefined control sequence.
-l.72 ...{\phi}$ with respect to its input $x_t$.\n
-                                                  \nThis formulation, howeve...
-
-! Undefined control sequence.
-l.72 ...$ with respect to its input $x_t$.\n\nThis
-                                                   formulation, however, pre...
-
-! Undefined control sequence.
-l.76 ...earns to perform the flow map inversion.\n
-                                                  \n\textbf{1. Amortized Flo...
-
-! Undefined control sequence.
-l.76 ...rns to perform the flow map inversion.\n\n
-                                                  \textbf{1. Amortized Flow ...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.76 ...w Map Inversion via Self-Consistency}\nThe
-                                                   standard OFM procedure re...
-
-! Undefined control sequence.
-l.76 ...n intermediate point $x_t$ and time $t$.\n
-                                                  \nA naive approach would b...
-
-! Undefined control sequence.
-l.76 ...ntermediate point $x_t$ and time $t$.\n\nA
-                                                   naive approach would be t...
-
-! Undefined control sequence.
-l.80 ... a single, efficient network evaluation.\n
-                                                  \n\textbf{2. Hessian-Free ...
-
-! Undefined control sequence.
-l.80 ... single, efficient network evaluation.\n\n
-                                                  \textbf{2. Hessian-Free Gr...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.80 ...Free Gradient via Conjugate Gradient}\nThe
-                                                   second major bottleneck i...
-
-! Undefined control sequence.
-l.80 ... dimensions, such as image generation.\nTo
-                                                   circumvent this, we refra...
-
-! Undefined control sequence.
-l.80 ....e., a Hessian-vector product (HVP).\nHVPs
-                                                   can be computed efficient...
-
-! Undefined control sequence.
-l.80 ...y scalable, nearly linear $O(k\cdot D)$.\n
-                                                  \n\textbf{Overall Training...
-
-! Undefined control sequence.
-l.80 ...scalable, nearly linear $O(k\cdot D)$.\n\n
-                                                  \textbf{Overall Training P...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.80 ...\n\textbf{Overall Training Procedure}\nThe
-                                                   complete AOFM training ob...
-
-[3]
-! Undefined control sequence.
-l.93 ...th a single function evaluation (NFE=1).\n
-                                                  \n\textbf{Dataset and Prep...
-
-! Undefined control sequence.
-l.93 ... a single function evaluation (NFE=1).\n\n
-                                                  \textbf{Dataset and Prepro...
-
-! Undefined control sequence.
-<recently read> \nWe 
-                     
-l.93 ...\n\n\textbf{Dataset and Preprocessing}\nWe
-                                                   use the CIFAR-10 dataset,...
-
-! Undefined control sequence.
-l.93 ...izontal flips with a probability of 0.5.\n
-                                                  \n\textbf{Evaluation Metri...
-
-! Undefined control sequence.
-l.93 ...ontal flips with a probability of 0.5.\n\n
-                                                  \textbf{Evaluation Metrics...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.93 ...f 0.5.\n\n\textbf{Evaluation Metrics}\nThe
-                                                   primary metric for quanti...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.93 ...n Distance (FID) \cite{heusel\_2017\_gans}
-                                                  , calculated between 50,00...
-
-
-Package natbib Warning: Citation `heusel\T1\textunderscore2017\T1\textunderscor
-egans' on page 4 undefined on input line 93.
-
-! Undefined control sequence.
-l.93 ... computational efficiency gains of AOFM.\n
-                                                  \n\textbf{Model Architectu...
-
-! Undefined control sequence.
-l.93 ...omputational efficiency gains of AOFM.\n\n
-                                                  \textbf{Model Architecture...
-
-! Undefined control sequence.
-<recently read> \nTo 
-                     
-l.93 ...xtbf{Model Architecture and Baselines}\nTo
-                                                   ensure a fair comparison,...
-
-! Undefined control sequence.
-l.93 ...er count of approximately 30-40 million.\n
-                                                  \begin{itemize}
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.97 ...ing (OFM) \cite{kornilov\_2024\_optimal}:}
-                                                   Due to its extreme comput...
-
-
-Package natbib Warning: Citation `kornilov\T1\textunderscore2024\T1\textundersc
-oreoptimal' on page 4 undefined on input line 97.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.98 ...ctified Flow (RF) \cite{liu\_2022\_flow}:}
-                                                   The primary practical bas...
-
-
-Package natbib Warning: Citation `liu\T1\textunderscore2022\T1\textunderscorefl
-ow' on page 4 undefined on input line 98.
-
-[4]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.99 ...low (2-RF++) \cite{lee\_2024\_improving}:}
-                                                   A state-of-the-art multi-...
-
-
-Package natbib Warning: Citation `lee\T1\textunderscore2024\T1\textunderscoreim
-proving' on page 5 undefined on input line 99.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.100 ...bf{EDM \cite{karras\_2022\_elucidating}:}
-                                                   A top-tier diffusion mode...
-
-
-Package natbib Warning: Citation `karras\T1\textunderscore2022\T1\textunderscor
-eelucidating' on page 5 undefined on input line 100.
-
-! Undefined control sequence.
-<recently read> \nAll 
-                      
-l.105 \textbf{Training Protocol}\nAll
-                                      models will be trained for 400,000 ite...
-
-! Undefined control sequence.
-l.105 ...is configured to use $k=10$ iterations.\n
-                                                  \n\textbf{Ablation Studies...
-
-! Undefined control sequence.
-l.105 ... configured to use $k=10$ iterations.\n\n
-                                                  \textbf{Ablation Studies}\...
-
-! Undefined control sequence.
-<recently read> \nTo 
-                     
-l.105 ...rations.\n\n\textbf{Ablation Studies}\nTo
-                                                   isolate the contributions...
-
-! Undefined control sequence.
-l.115 ... experiments did not run to completion.\n
-                                                  \nAn analysis of the execu...
-
-! Undefined control sequence.
-l.115 ...eriments did not run to completion.\n\nAn
-                                                   analysis of the execution...
-
-! Undefined control sequence.
-l.115 ...sic sanity check of our implementation.\n
-                                                  \nUnfortunately, the main ...
-
-! Undefined control sequence.
-l.115 ...k of our implementation.\n\nUnfortunately
-                                                  , the main training loop, ...
-
-! Undefined control sequence.
-l.115 ... support our theoretical contributions.\n
-                                                  \nWhile we cannot present ...
-
-! Undefined control sequence.
-l.115 ...t our theoretical contributions.\n\nWhile
-                                                   we cannot present empiric...
-
-! Undefined control sequence.
-l.115 ...and are for illustrative purposes only.\n
-                                                  
-
-Underfull \vbox (badness 10000) has occurred while \output is active [5]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.69 ...M will set a new state-of-the-art for few_
+                                                  step sampling, particularl...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.70 
+     
+
+Underfull \hbox (badness 1661) in paragraph at lines 69--70
+[]\T1/ptm/m/n/10 (+20) We out-line an ex-per-i-men-tal pro-to-col to val-i-date
+ AOFM on the CIFAR-10 im-age gen-er-
+
+Underfull \hbox (badness 3746) in paragraph at lines 69--70
+\T1/ptm/m/n/10 (+20) state-of-the-art for few$[]\OML/cmm/m/it/10 tepsampling; p
+articularlyforsingle \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 stepgeneration\OT1/c
+mr/m/n/10 (\OML/cmm/m/it/10 NFE \OT1/cmr/m/n/10 =
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+\OT1/cmr/m/n/10 1)\OML/cmm/m/it/10 ; outperformingbothmulti \OMS/cmsy/m/n/10 ^^
+@ \OML/cmm/m/it/10 stagerefinementmethodsanddistillation \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (351.77408pt too wide) in paragraph at lines 69--70
+\OML/cmm/m/it/10 basedapproaches:BymakingOTscalable; AOFMhasthepotentialtounloc
+knewapplicationsinscienceandengineeringwheregeometricallyoptimaltransportishigh
+lydesirable:$ 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.81 The broader goal of few_
+                             step generation has also been tackled by knowle...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.82 
+     
+
+Overfull \hbox (592.77985pt too wide) in paragraph at lines 81--82
+[]\T1/ptm/m/n/10 (-20) The broader goal of few$[]\OML/cmm/m/it/10 tepgeneration
+hasalsobeentackledbyknowledgedistillationtechniques:MethodslikeConsistencyModel
+sandBellmanOptimalStepsizeStraightening\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 BOSS\O
+T1/cmr/m/n/10 )[][][] ([]2023[])\OML/cmm/m/it/10 aimtodistillapowerful; pre \OM
+S/cmsy/m/n/10 ^^@
+
+Overfull \hbox (9.99815pt too wide) in paragraph at lines 81--82
+\OML/cmm/m/it/10 trainedmulti \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 stepmodel\O
+T1/cmr/m/n/10 (\OML/cmm/m/it/10 typicallyadiffusionmodel\OT1/cmr/m/n/10 )\OML/c
+mm/m/it/10 intoahighlyefficientfew[]teporsingle \OMS/cmsy/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 81--82
+\OML/cmm/m/it/10 stepsampler:Theseapproachesareeffectivebutrelyonacumbersomepre
+ \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (268.28381pt too wide) in paragraph at lines 81--82
+\OML/cmm/m/it/10 end; directlyfromscratch; tobeanefficientsamplerwithoutrequiri
+ngateachermodel:BylearningtheOTmap; ourapproachaimstoachievesuperiorsingle \OMS
+/cmsy/m/n/10 ^^@
+[2] [3] [4]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.141 ...e CIFAR-10 training set using the `clean_
+                                                  fid` library for consisten...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.142 
+      
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--142
+[]\T1/ptm/b/n/10 (+20) Evaluation Met-rics \T1/ptm/m/n/10 (+20) The pri-mary me
+t-ric for quan-ti-ta-tive eval-u-a-tion is the
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--142
+\T1/ptm/m/n/10 (+20) Fréchet In-cep-tion Dis-tance (FID) []Heusel et al.[] ([]2
+017[]), cal-cu-lated be-tween
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--142
+\T1/ptm/m/n/10 (+20) 50,000 gen-er-ated sam-ples and the en-tire CIFAR-10 train
+-ing set us-ing the
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--142
+\T1/ptm/m/n/10 (+20) `clean$[]\OML/cmm/m/it/10 id\OT1/cmr/m/n/10 `\OML/cmm/m/it
+/10 libraryforconsistency:WewillreportFIDscoresacrossarangeofNFEs \OT1/cmr/m/n/
+10 :
+
+Overfull \hbox (434.1187pt too wide) in paragraph at lines 140--142
+\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OML/cmm
+/m/it/10 ; \OT1/cmr/m/n/10 4\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 10\OML/cmm/m/it/
+10 ; \OT1/cmr/m/n/10 20\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 50\OMS/cmsy/m/n/10 g\
+OML/cmm/m/it/10 tocomprehensivelyassesstheperformancecurve:Additionally; wewill
+measuretrainingthroughput\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 samples=second\OT1/c
+mr/m/n/10 )\OML/cmm/m/it/10 toquantifythecomputationalefficiencygainsofAOFM:$ 
+[5]
 Underfull \vbox (badness 10000) has occurred while \output is active [6 <./imag
-es/aofm_fid_comparison.pdf> <./images/aofm_samples_nfe1.pdf>]
+es/aofm_fid_comparison.pdf>]
 Underfull \vbox (badness 5189) has occurred while \output is active [7 <./image
-s/aofm_samples_nfe2.pdf> <./images/aofm_samples_nfe4.pdf>]
+s/aofm_samples_nfe1.pdf> <./images/aofm_samples_nfe2.pdf>]
 Underfull \vbox (badness 5189) has occurred while \output is active [8 <./image
-s/aofm_samples_nfe10.pdf> <./images/aofm_samples_nfe20.pdf>]
-! Undefined control sequence.
-l.162 ...l data. AOFM bridges this critical gap.\n
-                                                  \nOur core contribution is...
-
-! Undefined control sequence.
-l.162 ...a. AOFM bridges this critical gap.\n\nOur
-                                                   core contribution is a co...
-
-! Undefined control sequence.
-l.162 ...OT models tractable for the first time.\n
-                                                  \nThe potential implicatio...
-
-! Undefined control sequence.
-l.162 ...dels tractable for the first time.\n\nThe
-                                                   potential implications of...
-
-! Undefined control sequence.
-l.162 ...ine learning and computational science.\n
-                                                  \nThe immediate future wor...
-
-! Undefined control sequence.
-l.162 ...earning and computational science.\n\nThe
-                                                   immediate future work is ...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.162 ...ational biology \cite{klein\_2023\_genot}
-                                                   and physics, where exact ...
+s/aofm_samples_nfe4.pdf> <./images/aofm_samples_nfe10.pdf>]
+Underfull \vbox (badness 2343) has occurred while \output is active [9 <./image
+s/aofm_samples_nfe20.pdf> <./images/training_losses.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.229 ...blish a new performance frontier for few_
+                                                  step, and particularly sin...
 
 
-Package natbib Warning: Citation `klein\T1\textunderscore2023\T1\textunderscore
-genot' on page 9 undefined on input line 162.
+LaTeX Warning: Command \textemdash invalid in math mode on input line 229.
 
-(./paper.bbl (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
-Underfull \vbox (badness 10000) has occurred while \output is active [9 <./imag
-es/training_losses.pdf>])
 
-Package natbib Warning: There were undefined citations.
+LaTeX Warning: Command \textemdash invalid in math mode on input line 229.
 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.230 
+      
+
+Underfull \hbox (badness 2591) in paragraph at lines 229--230
+[]\T1/ptm/m/n/10 (+20) The po-ten-tial im-pli-ca-tions of this work are sig-nif
+-i-cant. By en-abling the learn-ing of
+
+Underfull \hbox (badness 7133) in paragraph at lines 229--230
+\T1/ptm/m/n/10 (+20) the-o-ret-i-cally op-ti-mal, straight-line tra-jec-to-ries
+ in a sin-gle train-ing stage, AOFM is
+
+Underfull \hbox (badness 4699) in paragraph at lines 229--230
+\T1/ptm/m/n/10 (+20) poised to es-tab-lish a new per-for-mance fron-tier for fe
+w$[]\OML/cmm/m/it/10 tep; andparticularlysingle \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (240.3674pt too wide) in paragraph at lines 229--230
+\OML/cmm/m/it/10 step; generativemodeling:Furthermore; thecore[]amortizedoptimi
+zation[]paradigm\OT1/cmr/m/n/10 ^^V\OML/cmm/m/it/10 replacingexpensiveinternals
+olverswithjointlytrained; self \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (279.6458pt too wide) in paragraph at lines 229--230
+\OML/cmm/m/it/10 consistentneuralnetworks\OT1/cmr/m/n/10 ^^V\OML/cmm/m/it/10 of
+fersageneralizableblueprintthatcouldaccelerateawiderangeofcomplexmodelsinmachin
+elearningandcomputationalscience:$ 
+(./paper.bbl (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd))
 [10] (./paper.aux) )
 (see the transcript file for additional information)</usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
@@ -2588,6 +1598,7 @@ cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf
--dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (10 pages, 1208844 bytes).
+-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (10 pages, 1233468 bytes).
 Transcript written on paper.log.

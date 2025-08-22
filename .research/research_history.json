@@ -6,5 +6,52 @@
     "GCL Representation Degeneration",
     "Graph InfoNCE Collapse",
     "Preventing Collapse GCL"
+  ],
+  "research_study_list": [
+    {
+      "title": "ContraNorm: A Contrastive Learning Perspective on Oversmoothing and Beyond"
+    },
+    {
+      "title": "A Neural Collapse Perspective on Feature Evolution in Graph Neural Networks"
+    },
+    {
+      "title": "Architecture Matters: Uncovering Implicit Mechanisms in Graph Contrastive Learning"
+    },
+    {
+      "title": "Uncovering the Structural Fairness in Graph Contrastive Learning"
+    },
+    {
+      "title": "Architecture Matters: Uncovering Implicit Mechanisms in Graph Contrastive Learning"
+    },
+    {
+      "title": "Contrastive Multi-View Representation Learning on Graphs"
+    },
+    {
+      "title": "Are Neurons Actually Collapsed? On the Fine-Grained Structure in Neural Representations"
+    },
+    {
+      "title": "Locality and Compositionality in Zero-Shot Learning"
+    },
+    {
+      "title": "GeomCA: Geometric Evaluation of Data Representations"
+    },
+    {
+      "title": "A Neural Collapse Perspective on Feature Evolution in Graph Neural Networks"
+    },
+    {
+      "title": "Combating Bilateral Edge Noise for Robust Link Prediction"
+    },
+    {
+      "title": "InfoGCL: Information-Aware Graph Contrastive Learning"
+    },
+    {
+      "title": "Linguistic Collapse: Neural Collapse in (Large) Language Models"
+    },
+    {
+      "title": "Neural collapse vs. low-rank bias: Is deep neural collapse really optimal?"
+    },
+    {
+      "title": "A Geometric Analysis of Neural Collapse with Unconstrained Features"
+    }
   ]
 }

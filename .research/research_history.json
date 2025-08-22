@@ -6,5 +6,52 @@
     "ニューラルネットワーク トロイの木馬",
     "バックドア検出 手法",
     "敵対的学習 防御効率"
+  ],
+  "research_study_list": [
+    {
+      "title": "Pre-activation Distributions Expose Backdoor Neurons"
+    },
+    {
+      "title": "A Unified Detection Framework for Inference-Stage Backdoor Defenses"
+    },
+    {
+      "title": "Rethinking Backdoor Attacks"
+    },
+    {
+      "title": "Defense against backdoor attacks via robust covariance estimation"
+    },
+    {
+      "title": "PureGen: Universal Data Purification for Train-Time Poison Defense via Generative Model Dynamics"
+    },
+    {
+      "title": "Not All Poisons are Created Equal: Robust Training against Data Poisoning"
+    },
+    {
+      "title": "Topological Detection of Trojaned Neural Networks"
+    },
+    {
+      "title": "Deep-TROJ: An Inference Stage Trojan Insertion Algorithm through Efficient Weight Replacement Attack"
+    },
+    {
+      "title": "Scanning Trojaned Models Using Out-of-Distribution Samples"
+    },
+    {
+      "title": "A Unified Detection Framework for Inference-Stage Backdoor Defenses"
+    },
+    {
+      "title": "Pre-activation Distributions Expose Backdoor Neurons"
+    },
+    {
+      "title": "CBD: A Certified Backdoor Detector Based on Local Dominant Probability"
+    },
+    {
+      "title": "Dual-Path Distillation: A Unified Framework to Improve Black-Box Attacks"
+    },
+    {
+      "title": " On Adaptive Attacks to Adversarial Example Defenses"
+    },
+    {
+      "title": "Towards Efficient and Effective Adversarial Training"
+    }
   ]
 }

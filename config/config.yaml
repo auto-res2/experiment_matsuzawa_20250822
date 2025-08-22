@@ -1,0 +1,26 @@
+# Default configuration for CAMLTO-Delta experiments
+seed: 0
+train_n: 2400
+val_n: 400
+
+experiment1:
+  hours: 4
+  steps_per_hour: 40
+  carbon_budget: 1.0
+  seed: 0
+  csv_trace: null
+  save_prefix: exp1
+
+experiment2:
+  hours: 6
+  steps_per_hour: 40
+  seed: 1
+  csv_trace: null
+  save_prefix: exp2
+
+experiment3:
+  hours: 16
+  slots: 2
+  seed: 2
+  csv_trace: null
+  save_prefix: exp3

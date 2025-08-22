@@ -1,0 +1,18 @@
+{
+  "experiment_name": "AST-SelfCheck",
+  "total_samples": 200,
+  "feature_dimensions": 10,
+  "test_accuracy": 0.725,
+  "auc_score": 0.7225705329153606,
+  "average_precision": 0.5198995622976814,
+  "calibration_ece": 0.19476071521639823,
+  "calibration_mce": 0.33626019954681396,
+  "brier_score": 0.20249996919395227,
+  "function_evaluations": 5,
+  "plots_generated": [
+    "roc_curve.pdf",
+    "precision_recall_curve.pdf",
+    "calibration_plot.pdf",
+    "confusion_matrix.pdf"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "config": {
+    "num_generations": 5,
+    "batch_size": 10,
+    "initial_population_size": 5,
+    "episode_length": 100,
+    "behavior_dim": 240,
+    "genome_size": 256,
+    "local_latent_dim": 8,
+    "global_latent_dim": 16,
+    "print_frequency": 1,
+    "seed": 42,
+    "output_dir": ".research/iteration1"
+  },
+  "fitness_history": [
+    0.8490437591785968,
+    0.8427191235394685,
+    0.9535568067200983,
+    0.8950442877974839,
+    0.8774010293413731
+  ],
+  "diversity_history": [
+    2.204213490888831,
+    2.2101400063031815,
+    2.1896832874922088,
+    2.190992324116284,
+    2.1688508870619527
+  ],
+  "niche_count_history": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "final_report": {
+    "fitness_metrics": {
+      "mean_fitness": 0.8817938407698127,
+      "max_fitness": 0.9954375161913099,
+      "std_fitness": 0.05166718978030669,
+      "num_elites": 10,
+      "num_niches": 1
+    },
+    "diversity_metrics": {
+      "diversity_score": 2.1688508870619527,
+      "coverage": 0.2880736622330774,
+      "num_behaviors": 10.0
+    },
+    "graph_metrics": {
+      "num_nodes": 1,
+      "num_edges": 0,
+      "connectivity": 1,
+      "avg_degree": 0.0,
+      "clustering_coefficient": 0.0,
+      "max_centrality": 1,
+      "avg_centrality": 1.0
+    },
+    "plot_paths": {
+      "fitness_evolution": ".research/iteration1/images/fitness_evolution.pdf",
+      "niche_evolution": ".research/iteration1/images/niche_evolution.pdf",
+      "behavior_space": ".research/iteration1/images/behavior_space_tsne.pdf",
+      "graph_structure": ".research/iteration1/images/graph_structure.pdf",
+      "vae_reconstruction": ".research/iteration1/images/vae_reconstruction.pdf"
+    },
+    "generation": 5,
+    "total_splits": 0,
+    "total_merges": 0
+  },
+  "runtime_seconds": 3.41784405708313
+}

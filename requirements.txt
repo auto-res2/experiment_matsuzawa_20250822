@@ -1,1 +1,17 @@
-# Please list the required python packages.
+# Dynamic Behavioral Cartography (DBC) Experiment Requirements
+torch>=2.0.0
+torchvision>=0.15.0
+brax>=0.9.0
+jax>=0.4.0
+jaxlib>=0.4.0
+numpy>=1.24.0
+scipy>=1.10.0
+scikit-learn>=1.3.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+pandas>=2.0.0
+diptest>=0.7.0
+networkx>=3.1
+tqdm>=4.65.0
+wandb>=0.15.0
+gym>=0.26.0

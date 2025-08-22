@@ -6,5 +6,52 @@
     "coreset selection continual learning",
     "parameter efficient continual learning",
     "reservoir sampling continual learning"
+  ],
+  "research_study_list": [
+    {
+      "title": "Continual Learning in Low-rank Orthogonal Subspaces"
+    },
+    {
+      "title": "Contextual Transformation Networks for Online Continual Learning"
+    },
+    {
+      "title": "SparCL: Sparse Continual Learning on the Edge"
+    },
+    {
+      "title": "Online Learned Continual Compression with Adaptive Quantization Modules"
+    },
+    {
+      "title": "Towards Backward-Compatible Continual Learning of Image Compression"
+    },
+    {
+      "title": "Layerwise Proximal Replay: A Proximal Point Method for Online Continual Learning"
+    },
+    {
+      "title": "Probabilistic Bilevel Coreset Selection"
+    },
+    {
+      "title": "Probabilistic Bilevel Coreset Selection"
+    },
+    {
+      "title": "Coresets via Bilevel Optimization for Continual Learning and Streaming"
+    },
+    {
+      "title": "Semantically-Shifted Incremental Adapter-Tuning is A Continual ViTransformer"
+    },
+    {
+      "title": "Contextual Transformation Networks for Online Continual Learning"
+    },
+    {
+      "title": "InfLoRA: Interference-Free Low-Rank Adaptation for Continual Learning"
+    },
+    {
+      "title": "Online Continual Learning from Imbalanced Data"
+    },
+    {
+      "title": "Regularizing Second-Order Influences for Continual Learning"
+    },
+    {
+      "title": "Graph-Based Continual Learning"
+    }
   ]
 }

@@ -1,1 +1,9 @@
-# Please list the required python packages.
+pandas==2.2.2
+numpy==1.26.4
+networkx==3.3
+torch==2.3.0
+matplotlib==3.8.4
+seaborn==0.13.2
+tqdm==4.66.4
+scikit-learn==1.4.2
+PyYAML==6.0.1

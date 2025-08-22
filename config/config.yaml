@@ -1,0 +1,22 @@
+experiment_params:
+  seed: 42
+  d_values: [10, 50, 100, 250, 500]
+  n_samples_to_generate: [100, 1000, 10000, 50000]
+  n_training_samples: 20000
+  n_runs: 5
+
+model_params:
+  cfs_epochs_base: 100
+  cfs_epochs_divisor: 200000
+  cfs_batch_size: 128
+  cfs_lr: 0.001
+
+paths:
+  data_dir: "data"
+  model_dir: "models"
+  image_dir: ".research/iteration1/images"
+  results_file: ".research/iteration1/results.csv"
+
+plotting:
+  fixed_n_samples_for_d_plot: 10000
+  fixed_d_for_n_samples_plot: 100

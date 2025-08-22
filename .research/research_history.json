@@ -1,0 +1,10 @@
+{
+  "research_topic": "説明可能AIの計算コストに関して改善したい",
+  "queries": [
+    "XAI computational efficiency",
+    "KernelSHAP acceleration",
+    "scalable LIME",
+    "efficient counterfactual explanations",
+    "approximate Shapley explanations"
+  ]
+}

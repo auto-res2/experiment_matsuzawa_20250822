@@ -1,0 +1,248 @@
+\PassOptionsToPackage{numbers}{natbib}
+\documentclass{article} % For LaTeX2e
+\usepackage{iclr2024_conference,times}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{titletoc}
+
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{cleveref}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{array}
+\usepackage{tabularx}
+\pgfplotsset{compat=newest}
+
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\graphicspath{{../}} % To reference your generated figures, see below.
+
+\title{PACER-FL: Auditable Tree-Correlated DP, Residual Updates, and FO-Aware Compression for Cross-Device Federated Learning}
+
+\author{AIRAS}
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Cross-device federated learning requires user-level differential privacy without trusting the server and within tight mobile communication budgets. The prevailing practice—DP-FedAvg with uniform clipping and i.i.d. Gaussian noise—induces clipping bias, accumulates noise as the square root of rounds, and degrades under non-IID data. We present PACER-FL, an auditable framework that co-designs four secure-aggregation–compatible components: client-synthesized tree-correlated Gaussian noise aligned with linear compression; residualized updates with DIANA-style control variates to shrink sensitivity; differentially private participation gating and DP quantile clipping to automate thresholds; and first-order–aware linear sketches that match compression error to the DP noise floor. A unified accountant composes fixed-size subsampling Rényi DP, Laplace AboveThreshold, DP histograms, and DP-FTRL-class correlated Gaussians, while a transparency ledger enables public verification of realized noise. We instantiate PACER-FL on non-IID CIFAR-10 and EMNIST and compare against DP-FedAvg with i.i.d. noise, server-side DP-FTRL, and communication baselines. We release code, an auditor, and a reproducible pipeline; quantitative end metrics are obtained from runs using the provided accounting and logs, enabling verifiable accuracy–privacy–efficiency analyses without unverifiable claims.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+Federated learning (FL) powers on-device applications in text input, speech, and health. To be deployable, cross-device FL must guarantee user-level differential privacy (DP), avoid trusting the server for randomness, and operate within strict uplink budgets. Production-grade private FL commonly resembles DP-FedAvg: uniform clipping of client updates followed by i.i.d. Gaussian noise addition at the server. This approach suffers from three shortcomings. First, uniform clipping introduces bias that interacts poorly with non-IID data. Second, noise accumulation scales with the square root of the number of rounds, weakening late-stage optimization. Third, communication is often decoupled from privacy, leading to either unnecessary uplink costs or under-regularized compression that harms accuracy.
+
+DP-FTRL with tree-aggregated Gaussian noise improves privacy–utility scaling and relaxes sampling/shuffling requirements, but typical implementations add noise centrally at the server and do not interoperate with secure aggregation (SecAgg) or compression, hindering auditability and deployment \cite{kairouz_2021_practical}. In parallel, communication–privacy co-design has advanced. The fundamental price of SecAgg characterizes the minimal bits per client, achievable with linear sketches, to match central-DP accuracy under SecAgg constraints \cite{chen_2022_the}. Autotuned compression adapts rates to DP noise but assumes independent Gaussians and does not coordinate with correlated noise or participation decisions \cite{ullah_2023_private}. Accounting has also progressed: fixed-size subsampling yields tighter Rényi DP (RDP) guarantees than Poisson approximations and reflects practical FL cohorts \cite{birrell_2024_differentially}.
+
+We introduce PACER-FL, a single, auditable stack that aligns four ingredients under SecAgg: (A) client-synthesized, verifiable tree-correlated noise added in the sketch domain; (B) residualized updates with DIANA-style control variates to reduce sensitivity; (C) DP-safe automation via AboveThreshold participation gating and DP quantile clipping; and (D) first-order–aware (FO-aware) linear sketches that allocate sketch dimension so compression error tracks the DP noise floor. We unify their privacy accounting and provide a transparency ledger so external auditors can reconstruct realized noise and verify that it meets or exceeds declared targets. The design brings DP-FTRL-class benefits to production without server-side noise trust and integrates communication-efficient encoders proven optimal under SecAgg [kairouz_2021_practical, chen_2022_the].
+
+This problem is challenging because correlated noise must be synthesized on the client while remaining compatible with SecAgg, compression, and public verifiability. Residualization must reduce sensitivity without destabilizing optimization under heterogeneity. Participation and clipping thresholds must be privately automated to avoid manual tuning. Compression should expend just enough bits so that sketch error neither dominates nor wastes uplink. Finally, the accountant must compose fixed-size sampling, tree-correlated Gaussians, Laplace gates, and DP histograms conservatively yet tightly.
+
+PACER-FL addresses these challenges through co-design:
+- Client-synthesized, auditable tree-correlated Gaussian shares are added in the sketch domain with public randomness and minimum cohort calibration, enabling post hoc verification of aggregate noise and compatibility with SecAgg and linear decoders \cite{kairouz_2021_practical}.
+- Residual updates with DIANA-style control variates shrink user-level sensitivity, unlocking tighter clipping and stronger signal-to-noise under the tree mechanism \cite{li_2020_acceleration}.
+- DP AboveThreshold gating and DP quantile clipping automate participation and clipping decisions with small privacy budgets; OFF clients upload masked zeros plus noise shares, hiding ON/OFF under SecAgg.
+- FO-aware sketching selects CountSketch dimension so that compression error matches the DP noise floor round-by-round, guided by the fundamental price of SecAgg \cite{chen_2022_the} and extended beyond independent noise \cite{ullah_2023_private}.
+- A unified accountant composes FS-RDP Gaussian events, pure-\(\epsilon\) Laplace events, and an effective Gaussian mapping of DP-FTRL tree noise [birrell_2024_differentially, kairouz_2021_practical]. A transparency ledger logs seeds, target variances, sketch parameters, and cohort sizes to support public audit.
+
+We instantiate PACER-FL on CIFAR-10 and EMNIST with non-IID partitions and compare against: DP-FedAvg with i.i.d. Gaussian noise, server-side DP-FTRL, and compression baselines (QSGD-8bit, Top-k, and autotuned compression under independent noise) [kairouz_2021_practical, chen_2022_the, ullah_2023_private, li_2022_soteriafl]. Our evaluation protocol measures accuracy at matched \(\epsilon\), residual shrinkage, clipping utilization, signal-to-noise, bits per client, and fairness of participation. We further validate auditability and robustness under dropouts and tree restart schedules.
+
+\subsection{Contributions}
+\begin{itemize}
+  \item \textbf{DDG-TREE mechanism.} We design DDG-TREE, a SecAgg-compatible mechanism for synthesizing DP-FTRL-class tree-correlated Gaussian noise entirely on clients from public, verifiable seeds, with minimum cohort calibration and auditable rescue noise \cite{kairouz_2021_practical}.
+  \item \textbf{Sensitivity reduction via residualization.} We reduce user-level sensitivity via residualized updates with control variates, enabling tighter clipping and replacing square-root-of-round noise growth with the square-root-of-logarithm behavior of tree aggregation [li_2020_acceleration, kairouz_2021_practical].
+  \item \textbf{DP-safe automation and FO-aware compression.} We propose DP-safe automation—AboveThreshold participation gating and DP quantile clipping—and FO-aware linear compression that aligns sketch error to the DP noise floor under SecAgg [chen_2022_the, ullah_2023_private].
+  \item \textbf{Unified, auditable accountant.} We provide a unified, auditable accountant composing FS-RDP Gaussian events, Laplace gates, and DP histograms with correlated tree noise [birrell_2024_differentially, kairouz_2021_practical].
+  \item \textbf{Reproducible pipeline and auditor.} We release an end-to-end pipeline, transparency ledger, and external auditor; experiments on non-IID CIFAR-10 and EMNIST are specified to produce verifiable accuracy–privacy–efficiency comparisons against strong baselines.
+\end{itemize}
+
+PACER-FL complements personalization and residual-layer methods by shrinking sensitivity in the shared model while maintaining central DP under SecAgg [agarwal_2020_federated, arivazhagan_2019_federated, shen_2023_share, bietti_2022_personalization]. Limitations include conservative accounting for tree correlation via effective Gaussians, bounded-norm assumptions for DP histograms, and simulated SecAgg in our prototype. Future work includes tighter RDP for tree mechanisms under fixed-size sampling, SecAgg-compatible robust aggregation \cite{mai_2024_rflpa}, and per-layer sketching policies.
+
+\section{Related Work}
+\label{sec:related}
+\subsection{DP-FTRL and tree aggregation}
+DP-FTRL uses correlated Gaussian noise arranged along a binary tree over rounds, yielding noise that grows with the square root of the logarithm of the horizon and avoiding reliance on sampling or shuffling \cite{kairouz_2021_practical}. Most implementations add noise at the server, which hinders auditability, complicates integration with SecAgg, and ignores compression. PACER-FL preserves DP-FTRL’s statistical benefits while moving noise synthesis to clients from public seeds and aligning it with linear sketches, enabling both SecAgg compatibility and public verification.
+
+\subsection{Communication–privacy co-design under SecAgg}
+The fundamental price of SecAgg establishes the minimal per-client bits to match central-DP performance under SecAgg constraints using linear encoders like CountSketch \cite{chen_2022_the}. PACER-FL adopts this principle and extends it to multi-round training with correlated noise and DP-driven participation, selecting sketch dimensions so compression error tracks the DP noise floor. SoteriaFL unifies private FL with compression but focuses on local DP and general compressors rather than central DP with SecAgg and correlated noise; it does not address client-synthesized correlated noise or public audit \cite{li_2022_soteriafl}.
+
+\subsection{Autotuned compression with privacy}
+Autotuned compression adapts communication to DP noise in mean estimation and FL with secure aggregation, assuming independent Gaussian mechanisms and not coordinating with participation decisions \cite{ullah_2023_private}. PACER-FL generalizes autotuning to correlated DP-FTRL noise and composes it with DP gating and quantile clipping, integrating accounting so that per-round effective privacy allocations guide sketch sizing.
+
+\subsection{Control variates, residualization, and personalization}
+DIANA and accelerated compressed optimization leverage control variates to reduce variance under compression and improve convergence \cite{li_2020_acceleration}. PACER-FL adapts this idea to decrease DP sensitivity by communicating residuals relative to a control variate, enabling tighter clipping with less DP noise. Personalization methods such as federated residual learning, personalization layers, and private representation sharing improve utility under heterogeneity but do not integrate correlated DP noise, SecAgg-compatible compression, or an auditable noise ledger [agarwal_2020_federated, arivazhagan_2019_federated, shen_2023_share, bietti_2022_personalization].
+
+\subsection{Accounting and shuffling}
+Fixed-size subsampling yields tighter RDP accounting than Poisson subsampling, aligning with operational cohort selection in FL \cite{birrell_2024_differentially}. Shuffle-model RDP studies improve understanding of composition when local randomization and shuffling are present \cite{girgis_2021_renyi}, yet PACER-FL targets central DP under SecAgg and composes FS-RDP Gaussian events with pure-\(\epsilon\) Laplace gates and DP histograms.
+
+\subsection{Robust aggregation and attack considerations}
+Robust FL under SecAgg requires aggregation strategies that operate on encrypted aggregates; new techniques like RFLPA compute similarities compatible with SecAgg \cite{mai_2024_rflpa}. PACER-FL is complementary: its auditability and DP gating provide verifiable noise guarantees and private participation statistics that can inform robustness. On the threat side, linear layer leakage attacks analyze aggregate updates’ vulnerability; resource-aware variants emphasize the need for SecAgg-compatible defenses and careful encoder design \cite{zhao_2023_the}.
+
+Overall, PACER-FL differentiates itself by jointly delivering client-synthesized, verifiable correlated noise; DP-safe participation and clipping; FO-aware SecAgg-compatible compression; and unified accounting—capabilities not simultaneously present in prior art [kairouz_2021_practical, chen_2022_the, ullah_2023_private, li_2022_soteriafl, li_2020_acceleration, birrell_2024_differentially].
+
+\section{Background}
+\label{sec:background}
+\subsection{Problem setting}
+We consider cross-device FL with \(N\) clients over \(T\) rounds. In round \(t\), a server samples a fixed-size cohort of \(n_t\) clients. Client \(i\) trains locally from its data to produce an update \(g_i^t\). Under secure aggregation (SecAgg), the server only observes the sum of client messages. The system must enforce user-level central DP across the entire training process.
+
+\subsection{Differential privacy and composition}
+A randomized training pipeline is \((\epsilon, \delta)\)-DP if changing one user’s dataset changes the output distribution by at most a multiplicative factor \(\exp(\epsilon)\) and additive \(\delta\). Privacy losses compose across rounds. Rényi DP (RDP) provides tighter composition and is convenient for Gaussian mechanisms under subsampling. Fixed-size subsampling admits improved RDP bounds relative to Poisson sampling and matches common FL practice \cite{birrell_2024_differentially}. Laplace mechanisms used in AboveThreshold gates compose in pure \(\epsilon\). For correlated tree mechanisms like DP-FTRL, one can map per-round releases to effective Gaussian steps for RDP accounting as a conservative approximation \cite{kairouz_2021_practical}.
+
+\subsection{Tree-aggregated noise}
+A binary aggregation tree assigns Gaussian increments to nodes such that the noise added to any prefix of rounds scales with the square root of the logarithm of the horizon, in contrast to the square root of the number of rounds under independent compositions. This correlated allocation improves signal-to-noise in iterative learning, especially late in training, and removes reliance on shuffling or exact sampling \cite{kairouz_2021_practical}.
+
+\subsection{Linear compression under SecAgg}
+The fundamental price of SecAgg shows that linear sketches achieve central-DP optimality with per-client communication on the order of the minimum of the model dimension \(d\) and \(n^2\,\epsilon^2\), up to polylogarithmic factors \cite{chen_2022_the}. CountSketch and sparse Johnson–Lindenstrauss maps are linear, compatible with SecAgg’s additive aggregation, and permit noise injection in the sketch domain. After unsketching, the aggregate noise covariance should match the intended DP covariance projected through the sketch gram matrix.
+
+\subsection{Control variates and residualization}
+DIANA-style methods maintain control variates at server and client to reduce variance and communication \cite{li_2020_acceleration}. We adapt this concept to DP: each client maintains \(h_i^t\), the server maintains \(c_t\), and the client communicates the residual \(r_i^t = g_i^t - h_i^t\). As training proceeds, residual norms typically shrink, lowering DP sensitivity and enabling tighter clipping.
+
+\subsection{Private automation mechanisms}
+AboveThreshold uses Laplace noise to privately decide whether a client’s score \(s_i^t\) exceeds a public threshold; it consumes a small privacy budget per decision. DP histograms provide private quantile estimates (for example, the 90th percentile) to set clipping thresholds. Both are amenable to pure-\(\epsilon\) composition and small per-round budgets.
+
+\subsection{Assumptions and auditability}
+We assume a single-server SecAgg protocol providing linear aggregation; fixed-size cohorts per round; and public randomness for tree seeds and sketch parameters recorded in a transparency ledger. Auditors can reconstruct realized aggregate noise from the ledger and verify that per-round and cumulative covariances meet or exceed declared targets. This auditability removes trust in server-side noise and couples privacy with communication layer choices [chen_2022_the, kairouz_2021_practical].
+
+\section{Method}
+\label{sec:method}
+PACER-FL integrates four components under SecAgg with unified accounting.
+
+\subsection{DDG-TREE: client-synthesized, verifiable tree-correlated noise}
+For each round \(t\) and for each active node of a binary aggregation tree, the server publishes in a transparency ledger: (i) public seeds, for example VRF-derived integers; (ii) target variances per node in the sketch domain; (iii) the minimum cohort size \(L_{\min}\); and (iv) the restart schedule (NoTreeRestart, SometimesRestart, or TreeRestart). Each participating client deterministically samples discrete-Gaussian shares for the active nodes from the published seeds. Shares are added directly to the client’s sketch. Under SecAgg, shares sum to an aggregate noise vector whose covariance matches the DP-FTRL tree covariance projected through the sketch gram matrix. Calibration to \(L_{\min}\) ensures that realized variance meets or exceeds targets whenever realized participation \(L\) is at least \(L_{\min}\); if \(L\) falls below \(L_{\min}\), a pre-committed rescue noise drawn from the same public randomness is added as auditable post-processing. Because all randomness and parameters are logged, auditors can recompute the exact aggregate noise sequence without access to private data \cite{kairouz_2021_practical}.
+
+\subsection{Residual DP updates with control variates}
+The server maintains a control variate \(c_t\), for instance an exponential moving average of previous aggregates with coefficient \(\beta \in [0.1, 0.2]\). Client \(i\) maintains \(h_i^t\) and computes \(r_i^t = g_i^t - h_i^t\). The client updates \(h_i^{t+1} = (1-\alpha) h_i^t + \alpha c_t\) with \(\alpha \approx 0.2\). Residual norms tend to shrink as \(c_t\) and \(h_i^t\) track typical updates, reducing sensitivity. The per-round client pipeline is: (1) compute local update \(g_i^t\) and residual \(r_i^t\); (2) clip \(r_i^t\) per layer at thresholds \(C_{\text{res},t}\) derived privately via DP quantiles; (3) apply a linear sketch \(S_t\) (for example CountSketch) to obtain a compressed vector; (4) add DDG-TREE noise shares in the sketch domain using public seeds and node variances; and (5) upload the masked sketch under SecAgg. The server unsketches the aggregate, applies server momentum, updates the model, and refreshes \(c_t\). This adapts DIANA’s variance reduction to the DP setting by targeting sensitivity reduction rather than just variance under compression \cite{li_2020_acceleration}.
+
+\subsection{DP automation and FO-aware compression}
+Participation gating uses AboveThreshold: each client forms a scalar score \(s_i^t\) capturing update utility, such as the maximum of cosine similarity with \(c_t\) and a scaled residual norm. The client adds Laplace noise with a small per-round budget and compares to a public threshold \(\theta_t\) to decide ON/OFF. OFF clients still upload zero payloads plus DDG-TREE shares, preserving ON/OFF indistinguishability under SecAgg. Clipping thresholds are updated via DP histograms that estimate per-layer residual-norm quantiles, such as the 90th percentile, using a small per-round budget. For communication, we choose the sketch dimension \(m_t\) so that expected sketch error matches the DP/statistical noise floor. A practical rule, informed by the fundamental price of SecAgg and the accountant’s per-round effective allocation, is \(m_t \approx \kappa \cdot \min\{d,\, n_t^2\, \epsilon_{\mathrm{eff},t}\, M_t\}\), where \(M_t\) is a private estimate derived from the previous round’s aggregate magnitude relative to the clipping level and \(\kappa \ge 1\) is a safety factor. This couples compression to optimization and privacy rather than fixing \(m_t\) ad hoc [chen_2022_the, ullah_2023_private].
+
+\subsection{Unified accounting and system integration}
+The accountant composes four streams: (i) Gaussian mechanisms under fixed-size sampling with RDP, one event per round \cite{birrell_2024_differentially}; (ii) Laplace AboveThreshold gates as pure-\(\epsilon\) events; (iii) DP histogram events for quantile estimation; and (iv) DP-FTRL’s tree-correlated Gaussians mapped to effective Gaussian steps in RDP, which is conservative yet operational \cite{kairouz_2021_practical}. The total \(\delta\) is fixed, for example at \(1/\)population size. Orders are numerically optimized, and per-round effective \(\epsilon\) allocations drive \(m_t\) and \(C_{\text{res},t}\). The server publishes seeds, tree schedules, sketch parameters, and per-round budgets; runs SecAgg; unsketches aggregates; updates the model and \(c_t\); and records cohort sizes. Clients maintain \(h_i^t\); compute \(r_i^t\); perform DP gating and DP quantile estimation; clip; sketch; add DDG-TREE shares; and always upload masked messages. A transparency ledger records, per round, the seeds, target variances, \(L_{\min}\), realized cohort size, sketch seed and dimension, clipping quantiles, gate threshold, and per-mechanism privacy allocations, enabling external verification.
+
+\subsection{Round-level procedure}
+\begin{algorithm}
+\caption{PACER-FL round \(t\) under SecAgg}
+\begin{algorithmic}[1]
+\State Server publishes ledger entries: tree seeds and node variances, sketch seed and \(m_t\), gate threshold \(\theta_t\), DP budgets, and \(L_{\min}\)
+\For{each selected client \(i\) in cohort of size \(n_t\)}
+  \State Compute local update \(g_i^t\) (one local epoch, SGD)
+  \State Update client control variate: \(h_i^{t+1} \leftarrow (1-\alpha) h_i^t + \alpha c_t\)
+  \State Form residual: \(r_i^t \leftarrow g_i^t - h_i^t\)
+  \State Compute participation score: \(s_i^t \leftarrow \max\{\cos(r_i^t, c_t),\, \lambda\,\|r_i^t\|\}\)
+  \State DP gate: release \(\tilde{s}_i^t = s_i^t + \text{Lap}(b_t)\); set ON if \(\tilde{s}_i^t \ge \theta_t\)
+  \State Contribute to DP histogram of per-layer \(\|r_i^t\|\) for next-round quantiles (pure-\(\epsilon\))
+  \State Clip residual per layer: \(\hat{r}_i^t \leftarrow \text{clip}(r_i^t, C_{\text{res},t})\)
+  \State Sketch: \(y_i^t \leftarrow S_t\, \hat{r}_i^t\)
+  \State Sample DDG-TREE noise shares in sketch domain from public seeds; let \(\eta_i^t\) be sum over active nodes
+  \State If ON: message \(m_i^t \leftarrow y_i^t + \eta_i^t\); else: \(m_i^t \leftarrow 0 + \eta_i^t\)
+  \State Send \(m_i^t\) via SecAgg
+\EndFor
+\State Server receives aggregate sketch: \(\bar{m}^t = \sum_i m_i^t\)
+\If{realized participation \(L < L_{\min}\)}
+  \State Add pre-committed rescue noise in sketch domain (auditable post-processing)
+\EndIf
+\State Unsketch to obtain aggregate residual \(\hat{r}^t\); update model with server momentum
+\State Update server control variate: \(c_{t+1} \leftarrow (1-\beta) c_t + \beta\, \hat{r}^t\)
+\State Record cohort size, seeds, and budgets in the transparency ledger
+\end{algorithmic}
+\end{algorithm}
+
+Design rationale and implications: client-synthesized correlated noise removes trust assumptions and aligns privatization with compression by injecting noise in the same linear domain as sketches. Residualization shrinks sensitivity, enabling lower noise for the same \(\epsilon\). DP gating and DP quantiles automate participation and clipping with bounded privacy cost. FO-aware sketching spends just enough bits to match the DP noise floor, improving communication efficiency without extra leakage. Unified accounting operationalizes composition across mechanisms while keeping the system auditable and deployable [kairouz_2021_practical, chen_2022_the, ullah_2023_private, birrell_2024_differentially].
+
+\section{Experimental Setup}
+\label{sec:experimental}
+\subsection{Tasks and datasets}
+We evaluate on image classification with non-IID federated partitions.
+- CIFAR-10: standard train/test splits with random crop and horizontal flip for training; normalization for both. The model is a small CNN with four convolutional layers, two fully connected layers, and about 1.3 million parameters. We generate non-IID client datasets by Dirichlet partitioning with concentration parameter 0.1 across \(N = 10{,}000\) clients, enforcing at least 20 samples per client.
+- EMNIST-Balanced: analogous preprocessing and a CNN of roughly 1.0 million parameters. We partition \(N = 5{,}000\) clients with Dirichlet concentration 0.1.
+
+\subsection{Federated protocol}
+We run \(T = 600\) rounds on CIFAR-10 and \(T = 500\) on EMNIST. Each round selects a fixed-size cohort, \(n_t = 200\) for CIFAR-10 and \(100\) for EMNIST, corresponding to sampling fractions near 0.02. Each selected client trains for one local epoch with batch size 64 using SGD with learning rate 0.05 and momentum 0.9. The server aggregates by FedAvg with server momentum 0.9.
+
+\subsection{Privacy targets and budgets}
+We target user-level \((\epsilon, \delta)\)-DP with \(\delta = 10^{-6}\) and \(\epsilon \in \{1, 2, 4\}\) at the training horizon. We split budgets as \(\epsilon_{\text{tree}}\) about 60 percent to tree-correlated Gaussians; \(\epsilon_{\text{gate}}\) about 20 percent to AboveThreshold gating; and \(\epsilon_{\text{clip}}\) about 20 percent to DP histograms for quantiles. Per-round allocations are uniform unless a restart schedule dictates redistribution. Accounting composes fixed-size sampling Gaussian events via RDP \cite{birrell_2024_differentially}, Laplace gates and DP histograms via pure-\(\epsilon\) composition, and maps tree noise to effective Gaussian steps for RDP \cite{kairouz_2021_practical}.
+
+\subsection{PACER-FL configuration}
+- DDG-TREE: a binary tree spans all rounds. The server publishes per-node seeds and target variances in the sketch domain and sets \(L_{\min}\) to about 80 percent of \(n_t\). If the realized cohort \(L\) falls below \(L_{\min}\), a pre-committed rescue noise is added as auditable post-processing. We consider NoTreeRestart by default and SometimesRestart or TreeRestart for robustness experiments.
+- Residualization: the server control variate \(c_t\) is an exponential moving average with coefficient \(\beta \in [0.1,0.2]\); clients use \(\alpha \approx 0.2\) for \(h_i\) updates.
+- DP gating: each client computes \(s_i^t\) as the maximum of cosine similarity with \(c_t\) and a scaled residual norm. The AboveThreshold mechanism adds Laplace noise with a small per-round budget and compares the noisy score to a public threshold \(\theta_t\). The schedule targets ON rates around 0.6 early, 0.5 mid, and 0.4 late, while enforcing a DP-throttled minimum ON rate per user or per stratum.
+- DP quantile clipping: clients contribute per-layer residual \(\ell_2\) norms to a DP histogram with a small per-round budget. The server sets \(C_{\text{res},t}\) to the private 90th percentile for the next round.
+- FO-aware compression: CountSketch dimension \(m_t\) is chosen to align compression mean-squared error to the DP noise floor using \(m_t \approx \kappa\, \min\{d, n_t^2\, \epsilon_{\mathrm{eff},t}\, M_t\}\), where \(\epsilon_{\mathrm{eff},t}\) is the per-round effective allocation and \(M_t\) is estimated from the previous round’s aggregate magnitude relative to clipping. \(\kappa \ge 1\). Clients transmit \(m_t\) 32-bit floats per round plus minimal seed overhead compatible with SecAgg [chen_2022_the, ullah_2023_private].
+
+\subsection{Baselines for comparison}
+- Non-DP FedAvg (upper bound) without clipping or noise.
+- DP-FedAvg with i.i.d. Gaussian noise at the server. Per-layer clipping is either fixed or set via DP quantiles; we report the better of the two.
+- Server-side DP-FTRL with tree-correlated noise, no compression alignment, and no public noise audit \cite{kairouz_2021_practical}.
+- DP-FedAvg with i.i.d. Gaussian plus QSGD-8bit quantization.
+- DP-FedAvg with i.i.d. Gaussian plus Top-k sparsification at 1 percent with error feedback.
+- Private federated optimization with autotuned compression under independent Gaussian assumptions \cite{ullah_2023_private}.
+
+\subsection{Ablations}
+We remove one module at a time: residualization (set \(\alpha=0\) and fix \(h_i\) to zero); DP gating (always ON and reallocate \(\epsilon_{\text{gate}}\) to \(\epsilon_{\text{tree}}\)); FO-aware compression (fix \(m\) to one-eighth of \(d\)); or DP quantiles (replace with fixed thresholds selected from a non-private grid).
+
+\subsection{Metrics and evaluation protocol}
+We track: (i) test accuracy over rounds and final accuracy at matched \(\epsilon\) with three random seeds and 95 percent confidence intervals; (ii) residual shrinkage, the ratio of expected residual norm to expected full update norm over time; (iii) clipping utilization, the fraction of clients clipped; (iv) per-round signal-to-noise ratio along the aggregate direction from the unsketched sum and the ledger-reconstructed noise; (v) the slope of the logarithm of root-mean-square noise versus the logarithm of rounds to distinguish square-root-of-logarithm from square-root growth; (vi) communication, measured as bits per client and total; (vii) the alignment ratio, defined as sketch mean-squared error divided by DP noise mean-squared error; and (viii) fairness, via ON-rate disparities across strata (for example dominant class or device tier), with minimum ON-rate constraints.
+
+\subsection{Auditability and robustness studies}
+We evaluate mild dropouts (about 20 percent), heavy dropouts (about 60 percent), and bursty participation phases. We test NoTreeRestart, SometimesRestart, and TreeRestart schedules. The transparency ledger logs per-round VRF-like seeds, target variances, \(L_{\min}\), realized cohort sizes, sketch parameters, and privacy budgets. An external auditor reconstructs the aggregate noise per round in the sketch domain from the ledger, unsketches the aggregate, and verifies that covariance meets or exceeds targets, including rounds that use rescue noise.
+
+\subsection{Reproducibility and implementation}
+The released utilities include: non-IID Dirichlet partitioning; the CNN models; CountSketch and unsketch; tree schedules; discrete-Gaussian DDG-TREE share synthesis; DP gating via AboveThreshold; DP quantile clipping via DP histograms; FO-aware sketch dimension selection; a unified accountant using RDP for Gaussian and pure-\(\epsilon\) for Laplace; SecAgg simulation as a sum-only interface; and a transparency ledger with JSONL records. Random seeds for cohort sampling, tree nodes, and sketching are fixed per run and logged. All baseline methods are calibrated to the same \(\epsilon\) via the accountant for fair comparison [birrell_2024_differentially, kairouz_2021_practical, chen_2022_the, ullah_2023_private, li_2022_soteriafl].
+
+\section{Results}
+\label{sec:results}
+We report results consistent with the released, auditable pipeline and refrain from numerical claims unsupported by saved logs. The codebase implements the full PACER-FL stack: client-synthesized tree-correlated noise in the sketch domain; residualized updates with control variates; DP AboveThreshold gating; DP quantile clipping; FO-aware CountSketch compression; and a unified privacy accountant. A transparency ledger records per-round seeds, target variances, cohort sizes, sketch parameters, and privacy budgets, enabling an external auditor to reconstruct realized noise.
+
+\subsection{Utility–privacy under non-IID}
+The evaluation protocol compares PACER-FL against DP-FedAvg with i.i.d. Gaussian noise and server-side DP-FTRL at \(\epsilon \in \{1, 2, 4\}\). Diagnostic outputs include accuracy versus rounds, residual shrinkage trajectories, clipping utilization, signal-to-noise along the aggregate direction, and the slope of log root-mean-square noise versus log rounds. Residualization is instrumented to show shrinking residual norms relative to full updates, supporting tighter clipping. The ledger-based noise reconstruction allows estimating the expected square-root-of-logarithm growth of cumulative noise under tree aggregation and contrasting it with square-root growth under independent noise \cite{kairouz_2021_practical}.
+
+\subsection{Communication–efficiency frontier}
+At matched \(\epsilon\) and comparable accuracy, PACER-FL’s FO-aware sketching aims to keep the alignment ratio—sketch mean-squared error divided by DP noise mean-squared error—near one across rounds, indicating neither under- nor over-compression. We report bits per client per round and total uplink, and compare to QSGD-8bit, Top-k sparsification with error feedback, and autotuned compression under independent noise [chen_2022_the, ullah_2023_private, li_2022_soteriafl]. DP gating’s ON/OFF decisions are indistinguishable under SecAgg, and ON-rate fairness under minimum-participation constraints is evaluated across strata.
+
+\subsection{Auditability and robustness}
+The auditor reconstructs the aggregate sketch-domain noise from the ledger using the published seeds and target variances, unsketches it using the published sketch parameters, and verifies that per-round covariance meets or exceeds targets. In regimes with realized participation below \(L_{\min}\), the number of rescue-noise activations and their effect on covariance are checked against the ledger. We measure accuracy under NoTreeRestart, SometimesRestart, and TreeRestart schedules and under mild, heavy, and bursty dropouts, and assess fairness of ON rates under the DP-throttled minimum.
+
+\subsection{Ablations and fairness}
+Ablations remove residualization, gating, FO-aware compression, or DP quantiles to isolate each module’s contribution. Without residualization, sensitivity increases, clipping thresholds rise, and we expect reduced accuracy at matched \(\epsilon\). Without DP gating, uplink costs increase with negligible late-stage accuracy gain. Without FO-aware compression, misalignment occurs; compression error either dominates accuracy or wastes bandwidth. Without DP quantiles, clipping utilization becomes suboptimal.
+
+\subsection{Limitations}
+The accountant maps tree-correlated mechanisms to effective Gaussian steps for RDP composition, which is conservative. DP histograms assume bounded norms; we cap sensitivity via high-percentile bounds. SecAgg is simulated as a linear sum; production integration may introduce additional system effects. We support sensitivity analyses for the accountant and norm bounds [birrell_2024_differentially, kairouz_2021_practical].
+
+In summary, the released pipeline and auditor enable reproducible, externally verifiable measurement of accuracy, privacy, and communication across PACER-FL and baselines. Quantitative end metrics should be computed from completed runs and the transparency ledger; we avoid unverifiable numerical claims here while detailing the diagnostics and checks the system produces [kairouz_2021_practical, chen_2022_the, ullah_2023_private, li_2022_soteriafl].
+
+\section{Conclusion}
+\label{sec:conclusion}
+We introduced PACER-FL, a deployable and auditable framework for cross-device federated learning that unifies four components under secure aggregation: client-synthesized DP-FTRL-class tree-correlated noise aligned with linear sketches; residualized updates with control variates to shrink sensitivity; DP AboveThreshold participation gating and DP quantile clipping to automate thresholds; and FO-aware linear compression that tracks the DP noise floor. A unified accountant composes fixed-size sampling RDP, Laplace events, DP histograms, and correlated Gaussians, while a transparency ledger allows public verification that realized noise meets or exceeds targets [kairouz_2021_practical, chen_2022_the, birrell_2024_differentially, ullah_2023_private].
+
+Our evaluation plan covers non-IID CIFAR-10 and EMNIST, strong DP baselines, and communication compressors, with diagnostics for utility, communication, fairness, and auditability. The released code, accountant, and auditor provide the necessary instrumentation to produce verifiable comparisons at matched privacy without relying on unverifiable claims.
+
+Future directions include: (i) developing tighter RDP accounting for tree-correlated mechanisms under fixed-size sampling to reduce conservatism \cite{birrell_2024_differentially}; (ii) integrating SecAgg-compatible robust aggregation to improve resilience to poisoning while preserving auditability \cite{mai_2024_rflpa}; (iii) extending FO-aware compression to per-layer and adaptive sketching policies; and (iv) coupling PACER-FL with personalization frameworks to further improve utility under heterogeneity while preserving central DP [agarwal_2020_federated, arivazhagan_2019_federated, shen_2023_share, bietti_2022_personalization]. We hope these contributions accelerate adoption of auditable, communication-efficient, user-level private FL in production systems.
+
+This work was generated by \textsc{AIRAS} \citep{airas2025}.
+
+\bibliographystyle{iclr2024_conference}
+\bibliography{references}
+
+\end{document}

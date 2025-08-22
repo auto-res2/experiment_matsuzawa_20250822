@@ -268,362 +268,100 @@ Underfull \hbox (badness 2951) in paragraph at lines 48--48
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Missing $ inserted.
-<inserted text> 
-                $
-l.55 ...ation to complex code generation [touvron_
-                                                  2023_llama, openai_2023_gp...
+
+Package natbib Warning: Citation `touvron_2023_llama' on page 1 undefined on in
+put line 55.
 
 
-! LaTeX Error: Command \bfseries invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.55 ... applications \cite{pope_2022_efficiently}
-                                                  . This challenge has catal...
+Package natbib Warning: Citation `openai_2023_gpt' on page 1 undefined on input
+ line 55.
 
 
 Package natbib Warning: Citation `pope_2022_efficiently' on page 1 undefined on
  input line 55.
 
-! Undefined control sequence.
-l.55 ...cant research into KV cache compression.\n
-                                                  \nExisting approaches to t...
-
-! Undefined control sequence.
-l.55 ...rch into KV cache compression.\n\nExisting
-                                                   approaches to this proble...
-
-
-! LaTeX Error: Command \bfseries invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.55 ...locality is paramount \cite{liu_2024_kivi}
-                                                  . Saliency-based methods, ...
-
 
 Package natbib Warning: Citation `liu_2024_kivi' on page 1 undefined on input l
-ine 55.
+ine 57.
 
 
-! LaTeX Error: Command \bfseries invalid in math mode.
+Package natbib Warning: Citation `zhang_2023_heavy' on page 1 undefined on inpu
+t line 57.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.55 ... depth dimension \cite{liu_2024_minicache}
-                                                  . The central challenge is...
+
+Package natbib Warning: Citation `he_2024_zipcache' on page 1 undefined on inpu
+t line 57.
 
 
 Package natbib Warning: Citation `liu_2024_minicache' on page 1 undefined on in
-put line 55.
+put line 57.
 
-! Undefined control sequence.
-l.55 ...versus semantic information differently.\n
-                                                  \nStatic methods commit to...
-
-! Undefined control sequence.
-l.55 ...emantic information differently.\n\nStatic
-                                                   methods commit to a singl...
-
-! Undefined control sequence.
-l.55 ...ng dynamic resource management policies.\n
-                                                  \nIn this paper, we introd...
-
-! Undefined control sequence.
-l.55 ...ynamic resource management policies.\n\nIn
-                                                   this paper, we introduce ...
-
-
-LaTeX Warning: Command \textemdash invalid in math mode on input line 55.
-
-
-LaTeX Warning: Command \textemdash invalid in math mode on input line 55.
-
-! Undefined control sequence.
-l.55 ...task, generation stage, and model depth.\n
-                                                  \nOur key contributions ar...
-
-! Undefined control sequence.
-l.55 ... generation stage, and model depth.\n\nOur
-                                                   key contributions are as ...
-
-! Undefined control sequence.
-l.55 ...n\nOur key contributions are as follows:\n
-                                                  \begin{itemize}
-! Missing $ inserted.
-<inserted text> 
-                $
-l.55 ...ributions are as follows:\n\begin{itemize}
-                                                  
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.55 ...ributions are as follows:\n\begin{itemize}
-                                                  
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
-\T1/ptm/m/n/10 (+20) The pro-lif-er-a-tion of Large Lan-guage Mod-els (LLMs) su
-ch as Llama and GPT-
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
-\T1/ptm/m/n/10 (+20) 4 has rev-o-lu-tion-ized nat-u-ral lan-guage pro-cess-ing,
- en-abling un-prece-dented ca-pa-bil-
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
-\T1/ptm/m/n/10 (+20) i-ties in tasks rang-ing from doc-u-ment sum-ma-riza-tion 
-to com-plex code gen-er-a-tion
-
-Overfull \hbox (82.1495pt too wide) in paragraph at lines 55--55
-\T1/ptm/m/n/10 (-20) [touvron$[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 lama; ope
-nai[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 pt\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 
-:AcorecomponentfacilitatingtheirabilitytohandlelongsequencesistheKey \OMS/cmsy/
-m/n/10 ^^@
-
-Overfull \hbox (894.44524pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 Value\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 KV\OT1/cmr/m/n/10 )\OML
-/cmm/m/it/10 cache; whichstoresintermediateattentionstatestopreventredundantcom
-putationsduringautoregressivedecoding:However; thememoryrequiredforthiscachesca
-leslinearlywithsequencelengthandbatchsize; rapidlybecomingtheprimarybottleneckf
-ordeployingLLMs; especiallyinlong \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (530.76462pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 contextapplications[]:Thischallengehascatalyzedsignificantrese
-archintoKVcachecompression:approachestothisproblem; whileeffectivetoadegree; ar
-efundamentallyconstrainedbytheirrelianceonstatic; hand \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (21.30853pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 craftedheuristics:Thesemethodscanbebroadlycategorizedalongthre
-eorthogonalaxes:Recency \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (99.03305pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 basedmethods; akintoKIVI; prioritizethemostrecenttokens; assum
-ingtemporallocalityisparamount[]:Saliency \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (1203.60912pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 basedmethods; suchasH\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 OandZip
-Cache; insteadretaintokenswithhighattentionscores; deemingthemsemanticallyimpor
-tantirrespectiveoftheirposition\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 zhang[]\OT1/cm
-r/m/n/10 023[]\OML/cmm/m/it/10 eavy; he[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 
-ipcache\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Finally; structuralmethodslikeMiniCac
-heexploitredundancyacrossmodellayers; mergingsimilarKVstatesinthedepthdimension
-[]:Thecentralchallengeisthattheoptimaltrade \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (1887.03871pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 offamongtheseaxesisnotfixed:Acodegenerationtaskmightbenefitfro
-mhighrecencytorecalllocalvariabledefinitions; whereasasummarizationtaskmaydeman
-dhighsaliencytoretainkeyfactsfromthebeginningofadocument:Furthermore; theideals
-trategycanvarywithinasinglegenerationprocessandacrossdifferentmodellayers; whic
-hhandlesyntacticversussemanticinformationdifferently:methodscommittoasinglestra
-tegy; imposingaperformanceceilingthatcannotadapttothisdynamiccomplexity:Theyoff
-eraone \OMS/cmsy/m/n/10 ^^@
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
-\OML/cmm/m/it/10 size \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 fits \OMS/cmsy/m/n/
-10 ^^@ \OML/cmm/m/it/10 allsolutiontoaproblemthatisinherentlycontext \OMS/cmsy/
-m/n/10 ^^@
-
-Overfull \hbox (398.07274pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 dependent:Thisobservationmotivatesaparadigmshift \OT1/cmr/m/n/
-10 : \OML/cmm/m/it/10 fromdesigningfixedcompressionalgorithmstolearningdynamicr
-esourcemanagementpolicies:thispaper; weintroduceALM \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (94.46896pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 Cache\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 AdaptiveLayer \OMS/cmsy
-/m/n/10 ^^@ \OML/cmm/m/it/10 wiseMeta \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 Cac
-he\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; aframeworkthatdirectlyaddressesthischalle
-ngebylearningameta \OMS/cmsy/m/n/10 ^^@
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
-\OML/cmm/m/it/10 policytocontrolKVcachecompressioninreal \OMS/cmsy/m/n/10 ^^@ \
-OML/cmm/m/it/10 time:ALM \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (767.65593pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 Cacheformulatescachemanagementasanoptimalcontrolproblemsolvedv
-iareinforcementlearning\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 RL\OT1/cmr/m/n/10 )\OM
-L/cmm/m/it/10 :ItsupplantsstaticheuristicswithalightweightRLagentthatlearnstody
-namicallyadjustaunifiedsetofcompression[]knobs[]\OT1/cmr/m/n/10 ^^V\OML/cmm/m/i
-t/10 controllingrecency; saliency; andlayer \OMS/cmsy/m/n/10 ^^@
-
-Underfull \hbox (badness 3977) in paragraph at lines 55--55
-\OML/cmm/m/it/10 merging\OT1/cmr/m/n/10 ^^V\OML/cmm/m/it/10 onaper \OMS/cmsy/m/
-n/10 ^^@ \OML/cmm/m/it/10 layer \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 blockbasi
-s:Thisenablesthemodeltolearnandapplycontext \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (134.11272pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 sensitivecompressionpoliciestailoredtothespecifictask; generat
-ionstage; andmodeldepth:keycontributionsareasfollows \OT1/cmr/m/n/10 :$ 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.56     \item \textbf
-                      {A Unified Multi-Axis Compression Framework:} We desig...
-
-
-Underfull \hbox (badness 10000) detected at line 56
-[][]
-
-Underfull \vbox (badness 6268) has occurred while \output is active [1{/var/lib
-/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/
-enc/dvips/base/8r.enc}]
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.57     \item \textbf
-                      {Reinforcement Learning for Dynamic Control:} We formu...
-
-
-Underfull \hbox (badness 10000) detected at line 57
-[][]
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.58     \item \textbf
-                      {A Two-Stage Hybrid Reward Training Scheme:} To ensure...
-
-
-Underfull \hbox (badness 10000) detected at line 58
-[][]
-
-! LaTeX Error: \begin{document} ended by \end{itemize}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.59 \end{itemize}
-                  
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.59 \end{itemize}
-                  
-! Undefined control sequence.
-l.60 \nWe
-          outline a rigorous experimental setup to evaluate ALM-Cache agains...
-
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
+dist/fonts/enc/dvips/base/8r.enc}]
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
 
 Package natbib Warning: Citation `liu_2024_kivi' on page 2 undefined on input l
-ine 67.
+ine 77.
 
 
 Package natbib Warning: Citation `zhang_2023_heavy' on page 2 undefined on inpu
-t line 70.
+t line 80.
 
 
 Package natbib Warning: Citation `he_2024_zipcache' on page 2 undefined on inpu
-t line 70.
+t line 80.
 
 
 Package natbib Warning: Citation `liu_2024_minicache' on page 2 undefined on in
-put line 73.
+put line 83.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.76 ...h minimal performance degradation [hooper_
-                                                  2024_kvquant, zhang_2024_c...
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.77 
-     
-! Missing } inserted.
-<inserted text> 
-                }
-l.77 
-     
-
-Underfull \hbox (badness 6493) in paragraph at lines 76--77
-\T1/ptm/m/n/10 (+20) Orthogonal to evic-tion and merg-ing strate-gies, quan-ti-
-za-tion re-duces mem-ory
-
-Underfull \hbox (badness 3895) in paragraph at lines 76--77
-\T1/ptm/m/n/10 (+20) by rep-re-sent-ing cache val-ues with lower nu-mer-i-cal p
-re-ci-sion. Meth-ods like
-
-Underfull \hbox (badness 2310) in paragraph at lines 76--77
-\T1/ptm/m/n/10 (+20) KVQuant and Cou-pled Quan-ti-za-tion have demon-strated th
-e abil-ity to com-press
-
-Overfull \hbox (96.96692pt too wide) in paragraph at lines 76--77
-\T1/ptm/m/n/10 (-20) [hooper$[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 vquant; zh
-ang[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ache\OT1/cmr/m/n/10 ]\OML/cmm/m/it/1
-0 :Whilepowerful; quantizationisacomplementarytechnique:ALM \OMS/cmsy/m/n/10 ^^
-@
-
-Overfull \hbox (844.29848pt too wide) in paragraph at lines 76--77
-\OML/cmm/m/it/10 Cachefocusesondeciding[]tokensandlayerstokeepormerge:Theoutput
-ofourpolicycouldsubsequentlybequantizedforfurthermemorysavings; butourlearnedco
-ntrolpolicyisnotdirectlyapplicabletoquantizationmethods; astheydonotinvolvetoke
-nevictionorstructuralmerging:[]$ 
 [2]
-! Too many }'s.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.77 
-     
+
+Package natbib Warning: Citation `hooper_2024_kvquant' on page 3 undefined on i
+nput line 86.
+
+
+Package natbib Warning: Citation `zhang_2024_cache' on page 3 undefined on inpu
+t line 86.
+
 
 Package natbib Warning: Citation `touvron_2023_llama' on page 3 undefined on in
-put line 85.
+put line 95.
 
-[3] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+[3]
 
 Package natbib Warning: Citation `liu_2024_kivi' on page 4 undefined on input l
-ine 101.
+ine 111.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.102 ...sed methods like H2O and ZipCache [zhang_
-                                                  2023_heavy, he_2024_zipcac...
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.102 ...3_heavy, he_2024_zipcache]. The $S \times
-                                                   (N - R)$ tokens with the ...
+Package natbib Warning: Citation `zhang_2023_heavy' on page 4 undefined on inpu
+t line 112.
+
+
+Package natbib Warning: Citation `he_2024_zipcache' on page 4 undefined on inpu
+t line 112.
 
 
 Package natbib Warning: Citation `liu_2024_minicache' on page 4 undefined on in
-put line 103.
+put line 113.
 
 [4] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
 
 Package natbib Warning: Citation `liu_2024_kivi' on page 5 undefined on input l
-ine 133.
+ine 143.
 
 
 Package natbib Warning: Citation `zhang_2023_heavy' on page 5 undefined on inpu
-t line 134.
+t line 144.
 
 
 Package natbib Warning: Citation `liu_2024_minicache' on page 5 undefined on in
-put line 135.
+put line 145.
 
 [5] [6]
 
 Package natbib Warning: Citation `airas2025' on page 7 undefined on input line 
-187.
+197.
 
 No file paper.bbl.
 
@@ -649,12 +387,16 @@ nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (7 pages, 157527 bytes).
+Output written on paper.pdf (7 pages, 148772 bytes).
 Transcript written on paper.log.
 This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
 The top-level auxiliary file: paper.aux
 The style file: iclr2024_conference.bst
 Database file #1: references.bib
+Repeated entry---line 83 of file references.bib
+ : @article{hooper_2024_kvquant
+ :                             ,
+I'm skipping whatever remains of this entry
 Repeated entry---line 143 of file references.bib
  : @article{liu_2024_kivi
  :                       ,
@@ -684,12 +426,15 @@ Repeated entry---line 602 of file references.bib
  :                            ,
 I'm skipping whatever remains of this entry
 Warning--empty journal in he_2024_zipcache
+Warning--empty journal in hooper_2024_kvquant
 Warning--empty journal in liu_2024_minicache
 Warning--empty journal in liu_2024_kivi
+Warning--empty journal in openai_2023_gpt
 Warning--empty journal in pope_2022_efficiently
 Warning--empty journal in touvron_2023_llama
+Warning--empty journal in zhang_2024_cache
 Warning--empty journal in zhang_2023_heavy
-(There were 7 error messages)
+(There were 8 error messages)
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
@@ -961,368 +706,106 @@ Underfull \hbox (badness 2951) in paragraph at lines 48--48
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Missing $ inserted.
-<inserted text> 
-                $
-l.55 ...ation to complex code generation [touvron_
-                                                  2023_llama, openai_2023_gp...
+
+Package natbib Warning: Citation `touvron_2023_llama' on page 1 undefined on in
+put line 55.
 
 
-! LaTeX Error: Command \bfseries invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.55 ... applications \cite{pope_2022_efficiently}
-                                                  . This challenge has catal...
+Package natbib Warning: Citation `openai_2023_gpt' on page 1 undefined on input
+ line 55.
 
 
 Package natbib Warning: Citation `pope_2022_efficiently' on page 1 undefined on
  input line 55.
 
-! Undefined control sequence.
-l.55 ...cant research into KV cache compression.\n
-                                                  \nExisting approaches to t...
-
-! Undefined control sequence.
-l.55 ...rch into KV cache compression.\n\nExisting
-                                                   approaches to this proble...
-
-
-! LaTeX Error: Command \bfseries invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.55 ...locality is paramount \cite{liu_2024_kivi}
-                                                  . Saliency-based methods, ...
-
 
 Package natbib Warning: Citation `liu_2024_kivi' on page 1 undefined on input l
-ine 55.
+ine 57.
 
 
-! LaTeX Error: Command \bfseries invalid in math mode.
+Package natbib Warning: Citation `zhang_2023_heavy' on page 1 undefined on inpu
+t line 57.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.55 ... depth dimension \cite{liu_2024_minicache}
-                                                  . The central challenge is...
+
+Package natbib Warning: Citation `he_2024_zipcache' on page 1 undefined on inpu
+t line 57.
 
 
 Package natbib Warning: Citation `liu_2024_minicache' on page 1 undefined on in
-put line 55.
+put line 57.
 
-! Undefined control sequence.
-l.55 ...versus semantic information differently.\n
-                                                  \nStatic methods commit to...
-
-! Undefined control sequence.
-l.55 ...emantic information differently.\n\nStatic
-                                                   methods commit to a singl...
-
-! Undefined control sequence.
-l.55 ...ng dynamic resource management policies.\n
-                                                  \nIn this paper, we introd...
-
-! Undefined control sequence.
-l.55 ...ynamic resource management policies.\n\nIn
-                                                   this paper, we introduce ...
-
-
-LaTeX Warning: Command \textemdash invalid in math mode on input line 55.
-
-
-LaTeX Warning: Command \textemdash invalid in math mode on input line 55.
-
-! Undefined control sequence.
-l.55 ...task, generation stage, and model depth.\n
-                                                  \nOur key contributions ar...
-
-! Undefined control sequence.
-l.55 ... generation stage, and model depth.\n\nOur
-                                                   key contributions are as ...
-
-! Undefined control sequence.
-l.55 ...n\nOur key contributions are as follows:\n
-                                                  \begin{itemize}
-! Missing $ inserted.
-<inserted text> 
-                $
-l.55 ...ributions are as follows:\n\begin{itemize}
-                                                  
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.55 ...ributions are as follows:\n\begin{itemize}
-                                                  
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
-\T1/ptm/m/n/10 (+20) The pro-lif-er-a-tion of Large Lan-guage Mod-els (LLMs) su
-ch as Llama and GPT-
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
-\T1/ptm/m/n/10 (+20) 4 has rev-o-lu-tion-ized nat-u-ral lan-guage pro-cess-ing,
- en-abling un-prece-dented ca-pa-bil-
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
-\T1/ptm/m/n/10 (+20) i-ties in tasks rang-ing from doc-u-ment sum-ma-riza-tion 
-to com-plex code gen-er-a-tion
-
-Overfull \hbox (82.1495pt too wide) in paragraph at lines 55--55
-\T1/ptm/m/n/10 (-20) [touvron$[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 lama; ope
-nai[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 pt\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 
-:AcorecomponentfacilitatingtheirabilitytohandlelongsequencesistheKey \OMS/cmsy/
-m/n/10 ^^@
-
-Overfull \hbox (894.44524pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 Value\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 KV\OT1/cmr/m/n/10 )\OML
-/cmm/m/it/10 cache; whichstoresintermediateattentionstatestopreventredundantcom
-putationsduringautoregressivedecoding:However; thememoryrequiredforthiscachesca
-leslinearlywithsequencelengthandbatchsize; rapidlybecomingtheprimarybottleneckf
-ordeployingLLMs; especiallyinlong \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (530.76462pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 contextapplications[]:Thischallengehascatalyzedsignificantrese
-archintoKVcachecompression:approachestothisproblem; whileeffectivetoadegree; ar
-efundamentallyconstrainedbytheirrelianceonstatic; hand \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (21.30853pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 craftedheuristics:Thesemethodscanbebroadlycategorizedalongthre
-eorthogonalaxes:Recency \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (99.03305pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 basedmethods; akintoKIVI; prioritizethemostrecenttokens; assum
-ingtemporallocalityisparamount[]:Saliency \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (1203.60912pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 basedmethods; suchasH\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 OandZip
-Cache; insteadretaintokenswithhighattentionscores; deemingthemsemanticallyimpor
-tantirrespectiveoftheirposition\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 zhang[]\OT1/cm
-r/m/n/10 023[]\OML/cmm/m/it/10 eavy; he[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 
-ipcache\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Finally; structuralmethodslikeMiniCac
-heexploitredundancyacrossmodellayers; mergingsimilarKVstatesinthedepthdimension
-[]:Thecentralchallengeisthattheoptimaltrade \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (1887.03871pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 offamongtheseaxesisnotfixed:Acodegenerationtaskmightbenefitfro
-mhighrecencytorecalllocalvariabledefinitions; whereasasummarizationtaskmaydeman
-dhighsaliencytoretainkeyfactsfromthebeginningofadocument:Furthermore; theideals
-trategycanvarywithinasinglegenerationprocessandacrossdifferentmodellayers; whic
-hhandlesyntacticversussemanticinformationdifferently:methodscommittoasinglestra
-tegy; imposingaperformanceceilingthatcannotadapttothisdynamiccomplexity:Theyoff
-eraone \OMS/cmsy/m/n/10 ^^@
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
-\OML/cmm/m/it/10 size \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 fits \OMS/cmsy/m/n/
-10 ^^@ \OML/cmm/m/it/10 allsolutiontoaproblemthatisinherentlycontext \OMS/cmsy/
-m/n/10 ^^@
-
-Overfull \hbox (398.07274pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 dependent:Thisobservationmotivatesaparadigmshift \OT1/cmr/m/n/
-10 : \OML/cmm/m/it/10 fromdesigningfixedcompressionalgorithmstolearningdynamicr
-esourcemanagementpolicies:thispaper; weintroduceALM \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (94.46896pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 Cache\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 AdaptiveLayer \OMS/cmsy
-/m/n/10 ^^@ \OML/cmm/m/it/10 wiseMeta \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 Cac
-he\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; aframeworkthatdirectlyaddressesthischalle
-ngebylearningameta \OMS/cmsy/m/n/10 ^^@
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
-\OML/cmm/m/it/10 policytocontrolKVcachecompressioninreal \OMS/cmsy/m/n/10 ^^@ \
-OML/cmm/m/it/10 time:ALM \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (767.65593pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 Cacheformulatescachemanagementasanoptimalcontrolproblemsolvedv
-iareinforcementlearning\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 RL\OT1/cmr/m/n/10 )\OM
-L/cmm/m/it/10 :ItsupplantsstaticheuristicswithalightweightRLagentthatlearnstody
-namicallyadjustaunifiedsetofcompression[]knobs[]\OT1/cmr/m/n/10 ^^V\OML/cmm/m/i
-t/10 controllingrecency; saliency; andlayer \OMS/cmsy/m/n/10 ^^@
-
-Underfull \hbox (badness 3977) in paragraph at lines 55--55
-\OML/cmm/m/it/10 merging\OT1/cmr/m/n/10 ^^V\OML/cmm/m/it/10 onaper \OMS/cmsy/m/
-n/10 ^^@ \OML/cmm/m/it/10 layer \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 blockbasi
-s:Thisenablesthemodeltolearnandapplycontext \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (134.11272pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 sensitivecompressionpoliciestailoredtothespecifictask; generat
-ionstage; andmodeldepth:keycontributionsareasfollows \OT1/cmr/m/n/10 :$ 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.56     \item \textbf
-                      {A Unified Multi-Axis Compression Framework:} We desig...
-
-
-Underfull \hbox (badness 10000) detected at line 56
-[][]
-
-Underfull \vbox (badness 6268) has occurred while \output is active [1{/var/lib
-/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/
-enc/dvips/base/8r.enc}]
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.57     \item \textbf
-                      {Reinforcement Learning for Dynamic Control:} We formu...
-
-
-Underfull \hbox (badness 10000) detected at line 57
-[][]
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.58     \item \textbf
-                      {A Two-Stage Hybrid Reward Training Scheme:} To ensure...
-
-
-Underfull \hbox (badness 10000) detected at line 58
-[][]
-
-! LaTeX Error: \begin{document} ended by \end{itemize}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.59 \end{itemize}
-                  
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.59 \end{itemize}
-                  
-! Undefined control sequence.
-l.60 \nWe
-          outline a rigorous experimental setup to evaluate ALM-Cache agains...
-
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
+dist/fonts/enc/dvips/base/8r.enc}]
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
 
 Package natbib Warning: Citation `liu_2024_kivi' on page 2 undefined on input l
-ine 67.
+ine 77.
 
 
 Package natbib Warning: Citation `zhang_2023_heavy' on page 2 undefined on inpu
-t line 70.
+t line 80.
 
 
 Package natbib Warning: Citation `he_2024_zipcache' on page 2 undefined on inpu
-t line 70.
+t line 80.
 
 
 Package natbib Warning: Citation `liu_2024_minicache' on page 2 undefined on in
-put line 73.
+put line 83.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.76 ...h minimal performance degradation [hooper_
-                                                  2024_kvquant, zhang_2024_c...
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.77 
-     
-! Missing } inserted.
-<inserted text> 
-                }
-l.77 
-     
-
-Underfull \hbox (badness 6493) in paragraph at lines 76--77
-\T1/ptm/m/n/10 (+20) Orthogonal to evic-tion and merg-ing strate-gies, quan-ti-
-za-tion re-duces mem-ory
-
-Underfull \hbox (badness 3895) in paragraph at lines 76--77
-\T1/ptm/m/n/10 (+20) by rep-re-sent-ing cache val-ues with lower nu-mer-i-cal p
-re-ci-sion. Meth-ods like
-
-Underfull \hbox (badness 2310) in paragraph at lines 76--77
-\T1/ptm/m/n/10 (+20) KVQuant and Cou-pled Quan-ti-za-tion have demon-strated th
-e abil-ity to com-press
-
-Overfull \hbox (96.96692pt too wide) in paragraph at lines 76--77
-\T1/ptm/m/n/10 (-20) [hooper$[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 vquant; zh
-ang[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ache\OT1/cmr/m/n/10 ]\OML/cmm/m/it/1
-0 :Whilepowerful; quantizationisacomplementarytechnique:ALM \OMS/cmsy/m/n/10 ^^
-@
-
-Overfull \hbox (844.29848pt too wide) in paragraph at lines 76--77
-\OML/cmm/m/it/10 Cachefocusesondeciding[]tokensandlayerstokeepormerge:Theoutput
-ofourpolicycouldsubsequentlybequantizedforfurthermemorysavings; butourlearnedco
-ntrolpolicyisnotdirectlyapplicabletoquantizationmethods; astheydonotinvolvetoke
-nevictionorstructuralmerging:[]$ 
 [2]
-! Too many }'s.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.77 
-     
+
+Package natbib Warning: Citation `hooper_2024_kvquant' on page 3 undefined on i
+nput line 86.
+
+
+Package natbib Warning: Citation `zhang_2024_cache' on page 3 undefined on inpu
+t line 86.
+
 
 Package natbib Warning: Citation `touvron_2023_llama' on page 3 undefined on in
-put line 85.
+put line 95.
 
-[3] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+[3]
 
 Package natbib Warning: Citation `liu_2024_kivi' on page 4 undefined on input l
-ine 101.
+ine 111.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.102 ...sed methods like H2O and ZipCache [zhang_
-                                                  2023_heavy, he_2024_zipcac...
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.102 ...3_heavy, he_2024_zipcache]. The $S \times
-                                                   (N - R)$ tokens with the ...
+Package natbib Warning: Citation `zhang_2023_heavy' on page 4 undefined on inpu
+t line 112.
+
+
+Package natbib Warning: Citation `he_2024_zipcache' on page 4 undefined on inpu
+t line 112.
 
 
 Package natbib Warning: Citation `liu_2024_minicache' on page 4 undefined on in
-put line 103.
+put line 113.
 
 [4] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
 
 Package natbib Warning: Citation `liu_2024_kivi' on page 5 undefined on input l
-ine 133.
+ine 143.
 
 
 Package natbib Warning: Citation `zhang_2023_heavy' on page 5 undefined on inpu
-t line 134.
+t line 144.
 
 
 Package natbib Warning: Citation `liu_2024_minicache' on page 5 undefined on in
-put line 135.
+put line 145.
 
 [5] [6]
 
 Package natbib Warning: Citation `airas2025' on page 7 undefined on input line 
-187.
+197.
 
-(./paper.bbl [7])
+(./paper.bbl [7] [8])
 
 Package natbib Warning: There were undefined citations.
 
-[8] (./paper.aux
+[9] (./paper.aux
 
 Package natbib Warning: Citation(s) may have changed.
 (natbib)                Rerun to get citations correct.
@@ -1338,7 +821,7 @@ nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (8 pages, 162317 bytes).
+Output written on paper.pdf (9 pages, 158531 bytes).
 Transcript written on paper.log.
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
@@ -1610,281 +1093,11 @@ Underfull \hbox (badness 2951) in paragraph at lines 48--48
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Missing $ inserted.
-<inserted text> 
-                $
-l.55 ...ation to complex code generation [touvron_
-                                                  2023_llama, openai_2023_gp...
-
-! Undefined control sequence.
-l.55 ...cant research into KV cache compression.\n
-                                                  \nExisting approaches to t...
-
-! Undefined control sequence.
-l.55 ...rch into KV cache compression.\n\nExisting
-                                                   approaches to this proble...
-
-! Undefined control sequence.
-l.55 ...versus semantic information differently.\n
-                                                  \nStatic methods commit to...
-
-! Undefined control sequence.
-l.55 ...emantic information differently.\n\nStatic
-                                                   methods commit to a singl...
-
-! Undefined control sequence.
-l.55 ...ng dynamic resource management policies.\n
-                                                  \nIn this paper, we introd...
-
-! Undefined control sequence.
-l.55 ...ynamic resource management policies.\n\nIn
-                                                   this paper, we introduce ...
-
-
-LaTeX Warning: Command \textemdash invalid in math mode on input line 55.
-
-
-LaTeX Warning: Command \textemdash invalid in math mode on input line 55.
-
-! Undefined control sequence.
-l.55 ...task, generation stage, and model depth.\n
-                                                  \nOur key contributions ar...
-
-! Undefined control sequence.
-l.55 ... generation stage, and model depth.\n\nOur
-                                                   key contributions are as ...
-
-! Undefined control sequence.
-l.55 ...n\nOur key contributions are as follows:\n
-                                                  \begin{itemize}
-! Missing $ inserted.
-<inserted text> 
-                $
-l.55 ...ributions are as follows:\n\begin{itemize}
-                                                  
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.55 ...ributions are as follows:\n\begin{itemize}
-                                                  
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
-\T1/ptm/m/n/10 (+20) The pro-lif-er-a-tion of Large Lan-guage Mod-els (LLMs) su
-ch as Llama and GPT-
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
-\T1/ptm/m/n/10 (+20) 4 has rev-o-lu-tion-ized nat-u-ral lan-guage pro-cess-ing,
- en-abling un-prece-dented ca-pa-bil-
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
-\T1/ptm/m/n/10 (+20) i-ties in tasks rang-ing from doc-u-ment sum-ma-riza-tion 
-to com-plex code gen-er-a-tion
-
-Overfull \hbox (82.1495pt too wide) in paragraph at lines 55--55
-\T1/ptm/m/n/10 (-20) [touvron$[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 lama; ope
-nai[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 pt\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 
-:AcorecomponentfacilitatingtheirabilitytohandlelongsequencesistheKey \OMS/cmsy/
-m/n/10 ^^@
-
-Overfull \hbox (894.44524pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 Value\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 KV\OT1/cmr/m/n/10 )\OML
-/cmm/m/it/10 cache; whichstoresintermediateattentionstatestopreventredundantcom
-putationsduringautoregressivedecoding:However; thememoryrequiredforthiscachesca
-leslinearlywithsequencelengthandbatchsize; rapidlybecomingtheprimarybottleneckf
-ordeployingLLMs; especiallyinlong \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (600.07568pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 contextapplications[][][] \OT1/cmr/m/n/10 ([]2022[])\OML/cmm/m
-/it/10 :ThischallengehascatalyzedsignificantresearchintoKVcachecompression:appr
-oachestothisproblem; whileeffectivetoadegree; arefundamentallyconstrainedbythei
-rrelianceonstatic; hand \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (21.30853pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 craftedheuristics:Thesemethodscanbebroadlycategorizedalongthre
-eorthogonalaxes:Recency \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (166.26727pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 basedmethods; akintoKIVI; prioritizethemostrecenttokens; assum
-ingtemporallocalityisparamount[][][] \OT1/cmr/m/n/10 ([]2024\OML/cmm/m/it/10 b[
-]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 :Saliency \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (1271.83757pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 basedmethods; suchasH\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 OandZip
-Cache; insteadretaintokenswithhighattentionscores; deemingthemsemanticallyimpor
-tantirrespectiveoftheirposition\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 zhang[]\OT1/cm
-r/m/n/10 023[]\OML/cmm/m/it/10 eavy; he[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 
-ipcache\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Finally; structuralmethodslikeMiniCac
-heexploitredundancyacrossmodellayers; mergingsimilarKVstatesinthedepthdimension
-[][][] \OT1/cmr/m/n/10 ([]2024\OML/cmm/m/it/10 a[]\OT1/cmr/m/n/10 )\OML/cmm/m/i
-t/10 :Thecentralchallengeisthattheoptimaltrade \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (1887.03871pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 offamongtheseaxesisnotfixed:Acodegenerationtaskmightbenefitfro
-mhighrecencytorecalllocalvariabledefinitions; whereasasummarizationtaskmaydeman
-dhighsaliencytoretainkeyfactsfromthebeginningofadocument:Furthermore; theideals
-trategycanvarywithinasinglegenerationprocessandacrossdifferentmodellayers; whic
-hhandlesyntacticversussemanticinformationdifferently:methodscommittoasinglestra
-tegy; imposingaperformanceceilingthatcannotadapttothisdynamiccomplexity:Theyoff
-eraone \OMS/cmsy/m/n/10 ^^@
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
-\OML/cmm/m/it/10 size \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 fits \OMS/cmsy/m/n/
-10 ^^@ \OML/cmm/m/it/10 allsolutiontoaproblemthatisinherentlycontext \OMS/cmsy/
-m/n/10 ^^@
-
-Overfull \hbox (398.07274pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 dependent:Thisobservationmotivatesaparadigmshift \OT1/cmr/m/n/
-10 : \OML/cmm/m/it/10 fromdesigningfixedcompressionalgorithmstolearningdynamicr
-esourcemanagementpolicies:thispaper; weintroduceALM \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (94.46896pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 Cache\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 AdaptiveLayer \OMS/cmsy
-/m/n/10 ^^@ \OML/cmm/m/it/10 wiseMeta \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 Cac
-he\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; aframeworkthatdirectlyaddressesthischalle
-ngebylearningameta \OMS/cmsy/m/n/10 ^^@
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--55
-\OML/cmm/m/it/10 policytocontrolKVcachecompressioninreal \OMS/cmsy/m/n/10 ^^@ \
-OML/cmm/m/it/10 time:ALM \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (767.65593pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 Cacheformulatescachemanagementasanoptimalcontrolproblemsolvedv
-iareinforcementlearning\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 RL\OT1/cmr/m/n/10 )\OM
-L/cmm/m/it/10 :ItsupplantsstaticheuristicswithalightweightRLagentthatlearnstody
-namicallyadjustaunifiedsetofcompression[]knobs[]\OT1/cmr/m/n/10 ^^V\OML/cmm/m/i
-t/10 controllingrecency; saliency; andlayer \OMS/cmsy/m/n/10 ^^@
-
-Underfull \hbox (badness 3977) in paragraph at lines 55--55
-\OML/cmm/m/it/10 merging\OT1/cmr/m/n/10 ^^V\OML/cmm/m/it/10 onaper \OMS/cmsy/m/
-n/10 ^^@ \OML/cmm/m/it/10 layer \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 blockbasi
-s:Thisenablesthemodeltolearnandapplycontext \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (134.11272pt too wide) in paragraph at lines 55--55
-\OML/cmm/m/it/10 sensitivecompressionpoliciestailoredtothespecifictask; generat
-ionstage; andmodeldepth:keycontributionsareasfollows \OT1/cmr/m/n/10 :$ 
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.56     \item \textbf
-                      {A Unified Multi-Axis Compression Framework:} We desig...
-
-
-Underfull \hbox (badness 10000) detected at line 56
-[][]
-
-Underfull \vbox (badness 6268) has occurred while \output is active [1{/var/lib
-/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/
-enc/dvips/base/8r.enc}]
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.57     \item \textbf
-                      {Reinforcement Learning for Dynamic Control:} We formu...
-
-
-Underfull \hbox (badness 10000) detected at line 57
-[][]
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.58     \item \textbf
-                      {A Two-Stage Hybrid Reward Training Scheme:} To ensure...
-
-
-Underfull \hbox (badness 10000) detected at line 58
-[][]
-
-! LaTeX Error: \begin{document} ended by \end{itemize}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.59 \end{itemize}
-                  
-! Extra \endgroup.
-<recently read> \endgroup 
-                          
-l.59 \end{itemize}
-                  
-! Undefined control sequence.
-l.60 \nWe
-          outline a rigorous experimental setup to evaluate ALM-Cache agains...
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.76 ...h minimal performance degradation [hooper_
-                                                  2024_kvquant, zhang_2024_c...
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.77 
-     
-! Missing } inserted.
-<inserted text> 
-                }
-l.77 
-     
-
-Underfull \hbox (badness 6493) in paragraph at lines 76--77
-\T1/ptm/m/n/10 (+20) Orthogonal to evic-tion and merg-ing strate-gies, quan-ti-
-za-tion re-duces mem-ory
-
-Underfull \hbox (badness 3895) in paragraph at lines 76--77
-\T1/ptm/m/n/10 (+20) by rep-re-sent-ing cache val-ues with lower nu-mer-i-cal p
-re-ci-sion. Meth-ods like
-
-Underfull \hbox (badness 2310) in paragraph at lines 76--77
-\T1/ptm/m/n/10 (+20) KVQuant and Cou-pled Quan-ti-za-tion have demon-strated th
-e abil-ity to com-press
-
-Overfull \hbox (96.96692pt too wide) in paragraph at lines 76--77
-\T1/ptm/m/n/10 (-20) [hooper$[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 vquant; zh
-ang[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ache\OT1/cmr/m/n/10 ]\OML/cmm/m/it/1
-0 :Whilepowerful; quantizationisacomplementarytechnique:ALM \OMS/cmsy/m/n/10 ^^
-@
-
-Overfull \hbox (844.29848pt too wide) in paragraph at lines 76--77
-\OML/cmm/m/it/10 Cachefocusesondeciding[]tokensandlayerstokeepormerge:Theoutput
-ofourpolicycouldsubsequentlybequantizedforfurthermemorysavings; butourlearnedco
-ntrolpolicyisnotdirectlyapplicabletoquantizationmethods; astheydonotinvolvetoke
-nevictionorstructuralmerging:[]$ 
-[2]
-! Too many }'s.
-\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.77 
-     
-[3] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-! Missing $ inserted.
-<inserted text> 
-                $
-l.102 ...sed methods like H2O and ZipCache [zhang_
-                                                  2023_heavy, he_2024_zipcac...
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.102 ...3_heavy, he_2024_zipcache]. The $S \times
-                                                   (N - R)$ tokens with the ...
-
-[4] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd) [5] [6]
-(./paper.bbl [7]) [8] (./paper.aux) )
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1{/var/lib/texm
+f/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/d
+vips/base/8r.enc}] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+[2] [3] [4] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd) [5]
+[6] [7] (./paper.bbl [8]) [9] (./paper.aux) )
 (see the transcript file for additional information)</usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
@@ -1895,5 +1108,5 @@ nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (8 pages, 162685 bytes).
+Output written on paper.pdf (9 pages, 159827 bytes).
 Transcript written on paper.log.

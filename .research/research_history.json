@@ -362,6 +362,38 @@
       "title": "Efficient Hierarchical Entropy Model for Learned Point Cloud Compression"
     }
   ],
+  "reference_research_study_list": [
+    {
+      "title": "Design, implementation and evaluation of a point cloud codec for tele-immersive video"
+    },
+    {
+      "title": "Draco 3d data compresison"
+    },
+    {
+      "title": "Compressing continuous point cloud data using image compression methods"
+    },
+    {
+      "title": "Real-time streaming point cloud compression for 3d lidar sensor using u-net"
+    },
+    {
+      "title": "Point cloud compression for 3d lidar sensor using recurrent neural network with residual blocks"
+    },
+    {
+      "title": "Octsqueeze: Octree- structured entropy model for lidar compression"
+    },
+    {
+      "title": "Pnpnet: End-to-end perception and prediction with tracking in the loop, 2020"
+    },
+    {
+      "title": "Semantickitti: A dataset for semantic scene understanding of lidar sequences"
+    },
+    {
+      "title": "A mathematical theory of communication"
+    },
+    {
+      "title": "The graph neural network model"
+    }
+  ],
   "new_method": {
     "method": "{\"Motivation\": \"State-of-the-art 3D models like PTv3 and PointMamba are memory-bound, making it infeasible to train on scenes with billions of points. Current workarounds are fundamentally flawed, creating a 'chicken-and-egg' dilemma: task-agnostic pre-sampling methods (e.g., Farthest Point Sampling, Nyström sampling in Falkon) discard semantically vital information, while post-training compression techniques (e.g., Compressed 3D GS, LightGaussian) do not alleviate the initial training memory bottleneck. We need a powerful model to identify important points for sampling, but we need an intelligently sampled dataset to train a powerful model in the first place. This research breaks this cycle with a task-aware coreset generator that co-evolves with the primary model, enabling memory-efficient training on point clouds that far exceed GPU capacity.\", \"Methodology\": \"We introduce a Self-Improving Coreset Distillation (SICoD) framework that iteratively trains a lightweight, geometry-based saliency predictor. This predictor, named 'Learnable Geometric Saliency' (LGS), operates out-of-core and learns to generate task-relevant coresets. The process is as follows: 1. **Bootstrap Phase**: An initial task model (Teacher_0) is trained on a uniformly random subset of the massive point cloud. 2. **Knowledge Distillation**: The current teacher model (Teacher_k) performs a forward pass over the entire out-of-core dataset to generate saliency scores for every point. Saliency is efficiently proxied by prediction entropy, where high uncertainty implies high importance, avoiding the prohibitive cost of backpropagation required by gradient-based importance metrics. 3. **Saliency Predictor Training**: The lightweight LGS predictor, a sparse 3D U-Net, is trained to regress these saliency scores using only local geometric features (XYZ, normals). This distills the complex, task-specific knowledge of the large teacher model into a simple, efficient geometric heuristic. 4. **Corrected Coreset Generation and Retraining**: The improved LGS predictor generates a new, higher-quality coreset via importance sampling. A superior task model (Teacher_{k+1}) is then trained on this new coreset. Crucially, the saliency scores from LGS are also used as per-point weights in the main model's loss function. This acts as a gradient correction mechanism, ensuring that under-sampled but important points contribute appropriately to the learning process, mitigating information loss. This iterative loop, where the coreset quality and task model performance are mutually reinforcing, fundamentally distinguishes our approach from the static, one-shot sampling in methods like Falkon.\", \"Expected Impact\": \"1. **Unprecedented Scalability**: Enables training of memory-intensive models like PTv3 and PointMamba on billion-point scenes, pushing the frontier of large-scale 3D perception. 2. **Superior Performance**: Models trained on SICoD-generated coresets are expected to significantly outperform those trained on data-agnostic samples of the same size, as they preserve sparse yet semantically critical structures. 3. **Democratized Research**: By drastically reducing memory footprints and computational costs, this method will make large-scale 3D deep learning faster and more accessible to researchers with limited hardware. 4. **A 'Learned FPS' Module**: The final trained LGS predictor can be deployed as a standalone, intelligent pre-processing layer, offering a high-performance, plug-and-play replacement for built-in sampling mechanisms in any point-based network.\"}",
     "experimental_design": {

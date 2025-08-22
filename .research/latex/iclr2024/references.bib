@@ -5,3 +5,462 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{author_year_magneto,
+ title = {Magneto: A Foundation Transformer}
+}
+
+@article{author_year_probabilistic,
+ title = {Probabilistic Transformer For Time Series Analysis}
+}
+
+@article{fathi_2023_block,
+ abstract = {State space models (SSMs) have shown impressive results on tasks that require
+modeling long-range dependencies and efficiently scale to long sequences owing
+to their subquadratic runtime complexity. Originally designed for continuous
+signals, SSMs have shown superior performance on a plethora of tasks, in vision
+and audio; however, SSMs still lag Transformer performance in Language Modeling
+tasks. In this work, we propose a hybrid layer named Block-State Transformer
+(BST), that internally combines an SSM sublayer for long-range
+contextualization, and a Block Transformer sublayer for short-term
+representation of sequences. We study three different, and completely
+parallelizable, variants that integrate SSMs and block-wise attention. We show
+that our model outperforms similar Transformer-based architectures on language
+modeling perplexity and generalizes to longer sequences. In addition, the
+Block-State Transformer demonstrates more than tenfold increase in speed at the
+layer level compared to the Block-Recurrent Transformer when model
+parallelization is employed.},
+ arxiv_url = {https://arxiv.org/pdf/2306.09539v4.pdf},
+ author = {Mahan Fathi and Jonathan Pilault and Orhan Firat and Christopher Pal and Pierre-Luc Bacon and Ross Goroshin},
+ github_url = {https://github.com/google-research/meliad},
+ title = {Block-State Transformers},
+ year = {2023}
+}
+
+@article{fathi_2023_block,
+ abstract = {State space models (SSMs) have shown impressive results on tasks that require
+modeling long-range dependencies and efficiently scale to long sequences owing
+to their subquadratic runtime complexity. Originally designed for continuous
+signals, SSMs have shown superior performance on a plethora of tasks, in vision
+and audio; however, SSMs still lag Transformer performance in Language Modeling
+tasks. In this work, we propose a hybrid layer named Block-State Transformer
+(BST), that internally combines an SSM sublayer for long-range
+contextualization, and a Block Transformer sublayer for short-term
+representation of sequences. We study three different, and completely
+parallelizable, variants that integrate SSMs and block-wise attention. We show
+that our model outperforms similar Transformer-based architectures on language
+modeling perplexity and generalizes to longer sequences. In addition, the
+Block-State Transformer demonstrates more than tenfold increase in speed at the
+layer level compared to the Block-Recurrent Transformer when model
+parallelization is employed.},
+ arxiv_url = {https://arxiv.org/pdf/2306.09539v4.pdf},
+ author = {Mahan Fathi and Jonathan Pilault and Orhan Firat and Christopher Pal and Pierre-Luc Bacon and Ross Goroshin},
+ title = {Block-State Transformers},
+ year = {2023}
+}
+
+@article{fu_2022_hungry,
+ abstract = {State space models (SSMs) have demonstrated state-of-the-art sequence
+modeling performance in some modalities, but underperform attention in language
+modeling. Moreover, despite scaling nearly linearly in sequence length instead
+of quadratically, SSMs are still slower than Transformers due to poor hardware
+utilization. In this paper, we make progress on understanding the expressivity
+gap between SSMs and attention in language modeling, and on reducing the
+hardware barrier between SSMs and attention. First, we use synthetic language
+modeling tasks to understand the gap between SSMs and attention. We find that
+existing SSMs struggle with two capabilities: recalling earlier tokens in the
+sequence and comparing tokens across the sequence. To understand the impact on
+language modeling, we propose a new SSM layer, H3, that is explicitly designed
+for these abilities. H3 matches attention on the synthetic languages and comes
+within 0.4 PPL of Transformers on OpenWebText. Furthermore, a hybrid
+125M-parameter H3-attention model that retains two attention layers
+surprisingly outperforms Transformers on OpenWebText by 1.0 PPL. Next, to
+improve the efficiency of training SSMs on modern hardware, we propose
+FlashConv. FlashConv uses a fused block FFT algorithm to improve efficiency on
+sequences up to 8K, and introduces a novel state passing algorithm that
+exploits the recurrent properties of SSMs to scale to longer sequences.
+FlashConv yields 2$\times$ speedup on the long-range arena benchmark and allows
+hybrid language models to generate text 2.4$\times$ faster than Transformers.
+Using FlashConv, we scale hybrid H3-attention language models up to 2.7B
+parameters on the Pile and find promising initial results, achieving lower
+perplexity than Transformers and outperforming Transformers in zero- and
+few-shot learning on a majority of tasks in the SuperGLUE benchmark.},
+ arxiv_url = {https://arxiv.org/pdf/2212.14052v3.pdf},
+ author = {Daniel Y. Fu and Tri Dao and Khaled K. Saab and Armin W. Thomas and Atri Rudra and Christopher Ré},
+ github_url = {https://github.com/HazyResearch/H3},
+ title = {Hungry Hungry Hippos: Towards Language Modeling with State Space Models},
+ year = {2022}
+}
+
+@article{fu_2022_hungry,
+ abstract = {State space models (SSMs) have demonstrated state-of-the-art sequence
+modeling performance in some modalities, but underperform attention in language
+modeling. Moreover, despite scaling nearly linearly in sequence length instead
+of quadratically, SSMs are still slower than Transformers due to poor hardware
+utilization. In this paper, we make progress on understanding the expressivity
+gap between SSMs and attention in language modeling, and on reducing the
+hardware barrier between SSMs and attention. First, we use synthetic language
+modeling tasks to understand the gap between SSMs and attention. We find that
+existing SSMs struggle with two capabilities: recalling earlier tokens in the
+sequence and comparing tokens across the sequence. To understand the impact on
+language modeling, we propose a new SSM layer, H3, that is explicitly designed
+for these abilities. H3 matches attention on the synthetic languages and comes
+within 0.4 PPL of Transformers on OpenWebText. Furthermore, a hybrid
+125M-parameter H3-attention model that retains two attention layers
+surprisingly outperforms Transformers on OpenWebText by 1.0 PPL. Next, to
+improve the efficiency of training SSMs on modern hardware, we propose
+FlashConv. FlashConv uses a fused block FFT algorithm to improve efficiency on
+sequences up to 8K, and introduces a novel state passing algorithm that
+exploits the recurrent properties of SSMs to scale to longer sequences.
+FlashConv yields 2$\times$ speedup on the long-range arena benchmark and allows
+hybrid language models to generate text 2.4$\times$ faster than Transformers.
+Using FlashConv, we scale hybrid H3-attention language models up to 2.7B
+parameters on the Pile and find promising initial results, achieving lower
+perplexity than Transformers and outperforming Transformers in zero- and
+few-shot learning on a majority of tasks in the SuperGLUE benchmark.},
+ arxiv_url = {https://arxiv.org/pdf/2212.14052v3.pdf},
+ author = {Daniel Y. Fu and Tri Dao and Khaled K. Saab and Armin W. Thomas and Atri Rudra and Christopher Ré},
+ github_url = {https://github.com/HazyResearch/H3},
+ title = {Hungry Hungry Hippos: Towards Language Modeling with State Space Models},
+ year = {2022}
+}
+
+@article{huang_2024_decision,
+ abstract = {Recent works have shown the remarkable superiority of transformer models in
+reinforcement learning (RL), where the decision-making problem is formulated as
+sequential generation. Transformer-based agents could emerge with
+self-improvement in online environments by providing task contexts, such as
+multiple trajectories, called in-context RL. However, due to the quadratic
+computation complexity of attention in transformers, current in-context RL
+methods suffer from huge computational costs as the task horizon increases. In
+contrast, the Mamba model is renowned for its efficient ability to process
+long-term dependencies, which provides an opportunity for in-context RL to
+solve tasks that require long-term memory. To this end, we first implement
+Decision Mamba (DM) by replacing the backbone of Decision Transformer (DT).
+Then, we propose a Decision Mamba-Hybrid (DM-H) with the merits of transformers
+and Mamba in high-quality prediction and long-term memory. Specifically, DM-H
+first generates high-value sub-goals from long-term memory through the Mamba
+model. Then, we use sub-goals to prompt the transformer, establishing
+high-quality predictions. Experimental results demonstrate that DM-H achieves
+state-of-the-art in long and short-term tasks, such as D4RL, Grid World, and
+Tmaze benchmarks. Regarding efficiency, the online testing of DM-H in the
+long-term task is 28$\times$ times faster than the transformer-based baselines.},
+ arxiv_url = {https://arxiv.org/pdf/2406.00079v1.pdf},
+ author = {Sili Huang and Jifeng Hu and Zhejian Yang and Liwei Yang and Tao Luo and Hechang Chen and Lichao Sun and Bo Yang},
+ title = {Decision Mamba: Reinforcement Learning via Hybrid Selective Sequence Modeling},
+ year = {2024}
+}
+
+@article{imfeld_2023_transformer,
+ abstract = {Fusion is a technique for merging multiple independently-trained neural
+networks in order to combine their capabilities. Past attempts have been
+restricted to the case of fully-connected, convolutional, and residual
+networks. This paper presents a systematic approach for fusing two or more
+transformer-based networks exploiting Optimal Transport to (soft-)align the
+various architectural components. We flesh out an abstraction for layer
+alignment, that can generalize to arbitrary architectures - in principle - and
+we apply this to the key ingredients of Transformers such as multi-head
+self-attention, layer-normalization, and residual connections, and we discuss
+how to handle them via various ablation studies. Furthermore, our method allows
+the fusion of models of different sizes (heterogeneous fusion), providing a new
+and efficient way to compress Transformers. The proposed approach is evaluated
+on both image classification tasks via Vision Transformer and natural language
+modeling tasks using BERT. Our approach consistently outperforms vanilla
+fusion, and, after a surprisingly short finetuning, also outperforms the
+individual converged parent models. In our analysis, we uncover intriguing
+insights about the significant role of soft alignment in the case of
+Transformers. Our results showcase the potential of fusing multiple
+Transformers, thus compounding their expertise, in the budding paradigm of
+model fusion and recombination. Code is available at
+https://github.com/graldij/transformer-fusion.},
+ arxiv_url = {https://arxiv.org/pdf/2310.05719v3.pdf},
+ author = {Moritz Imfeld and Jacopo Graldi and Marco Giordano and Thomas Hofmann and Sotiris Anagnostidis and Sidak Pal Singh},
+ github_url = {https://github.com/graldij/transformer-fusion},
+ title = {Transformer Fusion with Optimal Transport},
+ year = {2023}
+}
+
+@article{jiang_2024_slot,
+ abstract = {Recent State Space Models (SSMs) such as S4, S5, and Mamba have shown
+remarkable computational benefits in long-range temporal dependency modeling.
+However, in many sequence modeling problems, the underlying process is
+inherently modular and it is of interest to have inductive biases that mimic
+this modular structure. In this paper, we introduce SlotSSMs, a novel framework
+for incorporating independent mechanisms into SSMs to preserve or encourage
+separation of information. Unlike conventional SSMs that maintain a monolithic
+state vector, SlotSSMs maintains the state as a collection of multiple vectors
+called slots. Crucially, the state transitions are performed independently per
+slot with sparse interactions across slots implemented via the bottleneck of
+self-attention. In experiments, we evaluate our model in object-centric
+learning, 3D visual reasoning, and long-context video understanding tasks,
+which involve modeling multiple objects and their long-range temporal
+dependencies. We find that our proposed design offers substantial performance
+gains over existing sequence modeling methods. Project page is available at
+https://slotssms.github.io/},
+ arxiv_url = {https://arxiv.org/pdf/2406.12272v6.pdf},
+ author = {Jindong Jiang and Fei Deng and Gautam Singh and Minseung Lee and Sungjin Ahn},
+ github_url = {https://github.com/anirudh9119/RIMs},
+ title = {Slot State Space Models},
+ year = {2024}
+}
+
+@article{mehta_2022_long,
+ abstract = {State space models have shown to be effective at modeling long range
+dependencies, specially on sequence classification tasks. In this work we focus
+on autoregressive sequence modeling over English books, Github source code and
+ArXiv mathematics articles. Based on recent developments around the
+effectiveness of gated activation functions, we propose a new layer named Gated
+State Space (GSS) and show that it trains significantly faster than the
+diagonal version of S4 (i.e. DSS) on TPUs, is fairly competitive with several
+well-tuned Transformer-based baselines and exhibits zero-shot generalization to
+longer inputs while being straightforward to implement. Finally, we show that
+leveraging self-attention to model local dependencies improves the performance
+of GSS even further.},
+ arxiv_url = {https://arxiv.org/pdf/2206.13947v3.pdf},
+ author = {Harsh Mehta and Ankit Gupta and Ashok Cutkosky and Behnam Neyshabur},
+ title = {Long Range Language Modeling via Gated State Spaces},
+ year = {2022}
+}
+
+@article{park_2024_can,
+ abstract = {State-space models (SSMs), such as Mamba (Gu & Dao, 2023), have been proposed
+as alternatives to Transformer networks in language modeling, by incorporating
+gating, convolutions, and input-dependent token selection to mitigate the
+quadratic cost of multi-head attention. Although SSMs exhibit competitive
+performance, their in-context learning (ICL) capabilities, a remarkable
+emergent property of modern language models that enables task execution without
+parameter optimization, remain underexplored compared to Transformers. In this
+study, we evaluate the ICL performance of SSMs, focusing on Mamba, against
+Transformer models across various tasks. Our results show that SSMs perform
+comparably to Transformers in standard regression ICL tasks, while
+outperforming them in tasks like sparse parity learning. However, SSMs fall
+short in tasks involving non-standard retrieval functionality. To address these
+limitations, we introduce a hybrid model, MambaFormer, that combines Mamba with
+attention blocks, surpassing individual models in tasks where they struggle
+independently. Our findings suggest that hybrid architectures offer promising
+avenues for enhancing ICL in language models.},
+ arxiv_url = {https://arxiv.org/pdf/2402.04248v2.pdf},
+ author = {Jongho Park and Jaeseung Park and Zheyang Xiong and Nayoung Lee and Jaewoong Cho and Samet Oymak and Kangwook Lee and Dimitris Papailiopoulos},
+ github_url = {https://github.com/krafton-ai/mambaformer-icl},
+ title = {Can Mamba Learn How To Learn? A Comparative Study on In-Context Learning Tasks},
+ year = {2024}
+}
+
+@article{wang_2023_state,
+ abstract = {State-space models have gained popularity in sequence modelling due to their
+simple and efficient network structures. However, the absence of nonlinear
+activation along the temporal direction limits the model's capacity. In this
+paper, we prove that stacking state-space models with layer-wise nonlinear
+activation is sufficient to approximate any continuous sequence-to-sequence
+relationship. Our findings demonstrate that the addition of layer-wise
+nonlinear activation enhances the model's capacity to learn complex sequence
+patterns. Meanwhile, it can be seen both theoretically and empirically that the
+state-space models do not fundamentally resolve the issue of exponential
+decaying memory. Theoretical results are justified by numerical verifications.},
+ arxiv_url = {https://arxiv.org/pdf/2309.13414v3.pdf},
+ author = {Shida Wang and Beichen Xue},
+ title = {State-space models with layer-wise nonlinearity are universal approximators with exponential decaying memory},
+ year = {2023}
+}
+
+@article{wang_2024_the,
+ abstract = {Linear RNN architectures, like Mamba, can be competitive with Transformer
+models in language modeling while having advantageous deployment
+characteristics. Given the focus on training large-scale Transformer models, we
+consider the challenge of converting these pretrained models for deployment. We
+demonstrate that it is feasible to distill large Transformers into linear RNNs
+by reusing the linear projection weights from attention layers with academic
+GPU resources. The resulting hybrid model, which incorporates a quarter of the
+attention layers, achieves performance comparable to the original Transformer
+in chat benchmarks and outperforms open-source hybrid Mamba models trained from
+scratch with trillions of tokens in both chat benchmarks and general
+benchmarks. Moreover, we introduce a hardware-aware speculative decoding
+algorithm that accelerates the inference speed of Mamba and hybrid models.
+Overall we show how, with limited computation resources, we can remove many of
+the original attention layers and generate from the resulting model more
+efficiently. Our top-performing model, distilled from Llama3-8B-Instruct,
+achieves a 29.61 length-controlled win rate on AlpacaEval 2 against GPT-4 and
+7.35 on MT-Bench, surpassing the best 8B scale instruction-tuned linear RNN
+model. We also find that the distilled model has natural length extrapolation,
+showing almost perfect accuracy in the needle-in-a-haystack test at 20x the
+distillation length. Code and pre-trained checkpoints are open-sourced at
+https://github.com/jxiw/MambaInLlama and
+https://github.com/itsdaniele/speculative_mamba.},
+ arxiv_url = {https://arxiv.org/pdf/2408.15237v4.pdf},
+ author = {Junxiong Wang and Daniele Paliotta and Avner May and Alexander M. Rush and Tri Dao},
+ github_url = {https://github.com/jxiw/MambaInLlama},
+ title = {The Mamba in the Llama: Distilling and Accelerating Hybrid Models},
+ year = {2024}
+}
+
+@article{xi_2023_training,
+ abstract = {Quantizing the activation, weight, and gradient to 4-bit is promising to
+accelerate neural network training. However, existing 4-bit training methods
+require custom numerical formats which are not supported by contemporary
+hardware. In this work, we propose a training method for transformers with all
+matrix multiplications implemented with the INT4 arithmetic. Training with an
+ultra-low INT4 precision is challenging. To achieve this, we carefully analyze
+the specific structures of activation and gradients in transformers to propose
+dedicated quantizers for them. For forward propagation, we identify the
+challenge of outliers and propose a Hadamard quantizer to suppress the
+outliers. For backpropagation, we leverage the structural sparsity of gradients
+by proposing bit splitting and leverage score sampling techniques to quantize
+gradients accurately. Our algorithm achieves competitive accuracy on a wide
+range of tasks including natural language understanding, machine translation,
+and image classification. Unlike previous 4-bit training methods, our algorithm
+can be implemented on the current generation of GPUs. Our prototypical linear
+operator implementation is up to 2.2 times faster than the FP16 counterparts
+and speeds up the training by up to 35.1%.},
+ arxiv_url = {https://arxiv.org/pdf/2306.11987v2.pdf},
+ author = {Haocheng Xi and Changhao Li and Jianfei Chen and Jun Zhu},
+ github_url = {https://github.com/xijiu9/Train_Transformers_with_INT4},
+ title = {Training Transformers with 4-bit Integers},
+ year = {2023}
+}
+
+@article{yang_2024_parallelizing,
+ abstract = {Transformers with linear attention (i.e., linear transformers) and
+state-space models have recently been suggested as a viable linear-time
+alternative to transformers with softmax attention. However, these models still
+underperform transformers especially on tasks that require in-context
+retrieval. While more expressive variants of linear transformers which replace
+the additive update in linear transformers with the delta rule (DeltaNet) have
+been found to be more effective at associative recall, existing algorithms for
+training such models do not parallelize over sequence length and are thus
+inefficient to train on modern hardware. This work describes a
+hardware-efficient algorithm for training linear transformers with the delta
+rule, which exploits a memory-efficient representation for computing products
+of Householder matrices. This algorithm allows us to scale up DeltaNet to
+standard language modeling settings. We train a 1.3B model for 100B tokens and
+find that it outperforms recent linear-time baselines such as Mamba and GLA in
+terms of perplexity and zero-shot performance on downstream tasks. We also
+experiment with two hybrid models which combine DeltaNet layers with (1)
+sliding-window attention layers every other layer or (2) two global attention
+layers, and find that these hybrids outperform strong transformer baselines.},
+ arxiv_url = {https://arxiv.org/pdf/2406.06484v6.pdf},
+ author = {Songlin Yang and Bailin Wang and Yu Zhang and Yikang Shen and Yoon Kim},
+ github_url = {https://github.com/fla-org/flash-linear-attention},
+ title = {Parallelizing Linear Transformers with the Delta Rule over Sequence Length},
+ year = {2024}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{author_year_ffts,
+ title = {FFTs in external or hierarchical memory.}
+}
+
+@article{author_year_modern,
+ title = {Modern control theory}
+}
+
+@article{baevski_2018_adaptive,
+ abstract = {We introduce adaptive input representations for neural language modeling
+which extend the adaptive softmax of Grave et al. (2017) to input
+representations of variable capacity. There are several choices on how to
+factorize the input and output layers, and whether to model words, characters
+or sub-word units. We perform a systematic comparison of popular choices for a
+self-attentional architecture. Our experiments show that models equipped with
+adaptive embeddings are more than twice as fast to train than the popular
+character input CNN while having a lower number of parameters. On the
+WikiText-103 benchmark we achieve 18.7 perplexity, an improvement of 10.5
+perplexity compared to the previously best published result and on the Billion
+Word benchmark, we achieve 23.02 perplexity.},
+ arxiv_url = {https://arxiv.org/pdf/1809.10853v3.pdf},
+ author = {Alexei Baevski and Michael Auli},
+ title = {Adaptive input representations for neural language modeling.},
+ year = {2018}
+}
+
+@article{brown_2020_language,
+ abstract = {Recent work has demonstrated substantial gains on many NLP tasks and
+benchmarks by pre-training on a large corpus of text followed by fine-tuning on
+a specific task. While typically task-agnostic in architecture, this method
+still requires task-specific fine-tuning datasets of thousands or tens of
+thousands of examples. By contrast, humans can generally perform a new language
+task from only a few examples or from simple instructions - something which
+current NLP systems still largely struggle to do. Here we show that scaling up
+language models greatly improves task-agnostic, few-shot performance, sometimes
+even reaching competitiveness with prior state-of-the-art fine-tuning
+approaches. Specifically, we train GPT-3, an autoregressive language model with
+175 billion parameters, 10x more than any previous non-sparse language model,
+and test its performance in the few-shot setting. For all tasks, GPT-3 is
+applied without any gradient updates or fine-tuning, with tasks and few-shot
+demonstrations specified purely via text interaction with the model. GPT-3
+achieves strong performance on many NLP datasets, including translation,
+question-answering, and cloze tasks, as well as several tasks that require
+on-the-fly reasoning or domain adaptation, such as unscrambling words, using a
+novel word in a sentence, or performing 3-digit arithmetic. At the same time,
+we also identify some datasets where GPT-3's few-shot learning still struggles,
+as well as some datasets where GPT-3 faces methodological issues related to
+training on large web corpora. Finally, we find that GPT-3 can generate samples
+of news articles which human evaluators have difficulty distinguishing from
+articles written by humans. We discuss broader societal impacts of this finding
+and of GPT-3 in general.},
+ arxiv_url = {https://arxiv.org/pdf/2005.14165v4.pdf},
+ author = {Tom B. Brown and Benjamin Mann and Nick Ryder and Melanie Subbiah and Jared Kaplan and Prafulla Dhariwal and Arvind Neelakantan and Pranav Shyam and Girish Sastry and Amanda Askell and Sandhini Agarwal and Ariel Herbert-Voss and Gretchen Krueger and Tom Henighan and Rewon Child and Aditya Ramesh and Daniel M. Ziegler and Jeffrey Wu and Clemens Winter and Christopher Hesse and Mark Chen and Eric Sigler and Mateusz Litwin and Scott Gray and Benjamin Chess and Jack Clark and Christopher Berner and Sam McCandlish and Alec Radford and Ilya Sutskever and Dario Amodei},
+ title = {Language models are few-shot learners.},
+ year = {2020}
+}
+
+@article{choromanski_2020_rethinking,
+ abstract = {We introduce Performers, Transformer architectures which can estimate regular
+(softmax) full-rank-attention Transformers with provable accuracy, but using
+only linear (as opposed to quadratic) space and time complexity, without
+relying on any priors such as sparsity or low-rankness. To approximate softmax
+attention-kernels, Performers use a novel Fast Attention Via positive
+Orthogonal Random features approach (FAVOR+), which may be of independent
+interest for scalable kernel methods. FAVOR+ can be also used to efficiently
+model kernelizable attention mechanisms beyond softmax. This representational
+power is crucial to accurately compare softmax with other kernels for the first
+time on large-scale tasks, beyond the reach of regular Transformers, and
+investigate optimal attention-kernels. Performers are linear architectures
+fully compatible with regular Transformers and with strong theoretical
+guarantees: unbiased or nearly-unbiased estimation of the attention matrix,
+uniform convergence and low estimation variance. We tested Performers on a rich
+set of tasks stretching from pixel-prediction through text models to protein
+sequence modeling. We demonstrate competitive results with other examined
+efficient sparse and dense attention methods, showcasing effectiveness of the
+novel attention-learning paradigm leveraged by Performers.},
+ arxiv_url = {https://arxiv.org/pdf/2009.14794v4.pdf},
+ author = {Krzysztof Choromanski and Valerii Likhosherstov and David Dohan and Xingyou Song and Andreea Gane and Tamas Sarlos and Peter Hawkins and Jared Davis and Afroz Mohiuddin and Lukasz Kaiser and David Belanger and Lucy Colwell and Adrian Weller},
+ title = {Rethinking attention with performers.},
+ year = {2020}
+}
+
+@article{chowdhery_2022_palm,
+ abstract = {Large language models have been shown to achieve remarkable performance
+across a variety of natural language tasks using few-shot learning, which
+drastically reduces the number of task-specific training examples needed to
+adapt the model to a particular application. To further our understanding of
+the impact of scale on few-shot learning, we trained a 540-billion parameter,
+densely activated, Transformer language model, which we call Pathways Language
+Model PaLM. We trained PaLM on 6144 TPU v4 chips using Pathways, a new ML
+system which enables highly efficient training across multiple TPU Pods. We
+demonstrate continued benefits of scaling by achieving state-of-the-art
+few-shot learning results on hundreds of language understanding and generation
+benchmarks. On a number of these tasks, PaLM 540B achieves breakthrough
+performance, outperforming the finetuned state-of-the-art on a suite of
+multi-step reasoning tasks, and outperforming average human performance on the
+recently released BIG-bench benchmark. A significant number of BIG-bench tasks
+showed discontinuous improvements from model scale, meaning that performance
+steeply increased as we scaled to our largest model. PaLM also has strong
+capabilities in multilingual tasks and source code generation, which we
+demonstrate on a wide array of benchmarks. We additionally provide a
+comprehensive analysis on bias and toxicity, and study the extent of training
+data memorization with respect to model scale. Finally, we discuss the ethical
+considerations related to large language models and discuss potential
+mitigation strategies.},
+ arxiv_url = {https://arxiv.org/pdf/2204.02311v5.pdf},
+ author = {Aakanksha Chowdhery and Sharan Narang and Jacob Devlin and Maarten Bosma and Gaurav Mishra and Adam Roberts and Paul Barham and Hyung Won Chung and Charles Sutton and Sebastian Gehrmann and Parker Schuh and Kensen Shi and Sasha Tsvyashchenko and Joshua Maynez and Abhishek Rao and Parker Barnes and Yi Tay and Noam Shazeer and Vinodkumar Prabhakaran and Emily Reif and Nan Du and Ben Hutchinson and Reiner Pope and James Bradbury and Jacob Austin and Michael Isard and Guy Gur-Ari and Pengcheng Yin and Toju Duke and Anselm Levskaya and Sanjay Ghemawat and Sunipa Dev and Henryk Michalewski and Xavier Garcia and Vedant Misra and Kevin Robinson and Liam Fedus and Denny Zhou and Daphne Ippolito and David Luan and Hyeontaek Lim and Barret Zoph and Alexander Spiridonov and Ryan Sepassi and David Dohan and Shivani Agrawal and Mark Omernick and Andrew M. Dai and Thanumalayan Sankaranarayana Pillai and Marie Pellat and Aitor Lewkowycz and Erica Moreira and Rewon Child and Oleksandr Polozov and Katherine Lee and Zongwei Zhou and Xuezhi Wang and Brennan Saeta and Mark Diaz and Orhan Firat and Michele Catasta and Jason Wei and Kathy Meier-Hellstern and Douglas Eck and Jeff Dean and Slav Petrov and Noah Fiedel},
+ title = {Palm: Scaling language modeling with pathways.},
+ year = {2022}
+}

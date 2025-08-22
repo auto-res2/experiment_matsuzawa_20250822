@@ -1,0 +1,65 @@
+{
+  "experiment_type": "synthetic",
+  "config": {
+    "experiment": "synthetic",
+    "lora_rank": 4,
+    "hidden_dim": 32,
+    "n_tasks": 3,
+    "samples_per_task": 100,
+    "input_dim": 64,
+    "n_classes": 10,
+    "epochs_per_task": 2,
+    "batch_size": 16,
+    "learning_rate": 0.001,
+    "cpu": false,
+    "seed": 42,
+    "quick_test": true
+  },
+  "training_metrics": {
+    "task_losses": [
+      1.869199974196298,
+      0.935229173728398,
+      0.3514816053211689
+    ],
+    "task_accuracies": [
+      22.0,
+      46.75,
+      50.0
+    ],
+    "rotation_energies": [
+      0.8163963556289673,
+      1.7034543752670288,
+      2.519570529460907
+    ],
+    "risk_budgets": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "evaluation_metrics": {
+    "task_accuracies": [
+      100.0,
+      100.0,
+      100.0
+    ],
+    "task_losses": [
+      0.17021266158138001,
+      0.16213573196104594,
+      0.15896909151758468
+    ],
+    "average_accuracy": 100.0,
+    "final_accuracy": 100.0,
+    "backward_transfer": 20.0,
+    "forward_transfer": 25.0,
+    "forgetting": 0.0,
+    "n_tasks": 3
+  },
+  "training_time": 1.189591407775879,
+  "device": "cpu",
+  "model_info": {
+    "total_params": 8082,
+    "trainable_params": 8082,
+    "parameter_efficiency": 100.0
+  }
+}

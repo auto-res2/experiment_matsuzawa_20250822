@@ -5,3 +5,376 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{author_year_difficulty,
+ title = {Difficulty-Based Sampling for Debiased Contrastive Representation Learning}
+}
+
+@article{author_year_difficulty,
+ title = {Difficulty-Based Sampling for Debiased Contrastive Representation Learning}
+}
+
+@article{author_year_efficient,
+ title = {Efficient Training of Retrieval Models using Negative Cache}
+}
+
+@article{author_year_unbiased,
+ title = {Unbiased Classification through Bias-Contrastive and Bias-Balanced Learning}
+}
+
+@article{chen_2019_negative,
+ abstract = {We introduce Negative Sampling in Semi-Supervised Learning (NS3L), a simple,
+fast, easy to tune algorithm for semi-supervised learning (SSL). NS3L is
+motivated by the success of negative sampling/contrastive estimation. We
+demonstrate that adding the NS3L loss to state-of-the-art SSL algorithms, such
+as the Virtual Adversarial Training (VAT), significantly improves upon vanilla
+VAT and its variant, VAT with Entropy Minimization. By adding the NS3L loss to
+MixMatch, the current state-of-the-art approach on semi-supervised tasks, we
+observe significant improvements over vanilla MixMatch. We conduct extensive
+experiments on the CIFAR10, CIFAR100, SVHN and STL10 benchmark datasets.},
+ arxiv_url = {https://arxiv.org/pdf/1911.05166v2.pdf},
+ author = {John Chen and Vatsal Shah and Anastasios Kyrillidis},
+ title = {Negative Sampling in Semi-Supervised learning},
+ year = {2019}
+}
+
+@article{chen_2023_boosting,
+ abstract = {Semi-supervised learning (SSL) has attracted enormous attention due to its
+vast potential of mitigating the dependence on large labeled datasets. The
+latest methods (e.g., FixMatch) use a combination of consistency regularization
+and pseudo-labeling to achieve remarkable successes. However, these methods all
+suffer from the waste of complicated examples since all pseudo-labels have to
+be selected by a high threshold to filter out noisy ones. Hence, the examples
+with ambiguous predictions will not contribute to the training phase. For
+better leveraging all unlabeled examples, we propose two novel techniques:
+Entropy Meaning Loss (EML) and Adaptive Negative Learning (ANL). EML
+incorporates the prediction distribution of non-target classes into the
+optimization objective to avoid competition with target class, and thus
+generating more high-confidence predictions for selecting pseudo-label. ANL
+introduces the additional negative pseudo-label for all unlabeled data to
+leverage low-confidence examples. It adaptively allocates this label by
+dynamically evaluating the top-k performance of the model. EML and ANL do not
+introduce any additional parameter and hyperparameter. We integrate these
+techniques with FixMatch, and develop a simple yet powerful framework called
+FullMatch. Extensive experiments on several common SSL benchmarks
+(CIFAR-10/100, SVHN, STL-10 and ImageNet) demonstrate that FullMatch exceeds
+FixMatch by a large margin. Integrated with FlexMatch (an advanced
+FixMatch-based framework), we achieve state-of-the-art performance. Source code
+is at https://github.com/megvii-research/FullMatch.},
+ arxiv_url = {https://arxiv.org/pdf/2303.11066v1.pdf},
+ author = {Yuhao Chen and Xin Tan and Borui Zhao and Zhaowei Chen and Renjie Song and Jiajun Liang and Xuequan Lu},
+ github_url = {https://github.com/megvii-research/FullMatch},
+ title = {Boosting Semi-Supervised Learning by Exploiting All Unlabeled Data},
+ year = {2023}
+}
+
+@article{chuang_2020_debiased,
+ abstract = {A prominent technique for self-supervised representation learning has been to
+contrast semantically similar and dissimilar pairs of samples. Without access
+to labels, dissimilar (negative) points are typically taken to be randomly
+sampled datapoints, implicitly accepting that these points may, in reality,
+actually have the same label. Perhaps unsurprisingly, we observe that sampling
+negative examples from truly different labels improves performance, in a
+synthetic setting where labels are available. Motivated by this observation, we
+develop a debiased contrastive objective that corrects for the sampling of
+same-label datapoints, even without knowledge of the true labels. Empirically,
+the proposed objective consistently outperforms the state-of-the-art for
+representation learning in vision, language, and reinforcement learning
+benchmarks. Theoretically, we establish generalization bounds for the
+downstream classification task.},
+ arxiv_url = {https://arxiv.org/pdf/2007.00224v3.pdf},
+ author = {Ching-Yao Chuang and Joshua Robinson and Lin Yen-Chen and Antonio Torralba and Stefanie Jegelka},
+ github_url = {https://github.com/chingyaoc/DCL},
+ journal = {Advances in Neural Information Processing Systems (2020)},
+ title = {Debiased Contrastive Learning},
+ year = {2020}
+}
+
+@article{ding_2020_simplify,
+ abstract = {Negative sampling approaches are prevalent in implicit collaborative
+filtering for obtaining negative labels from massive unlabeled data. As two
+major concerns in negative sampling, efficiency and effectiveness are still not
+fully achieved by recent works that use complicate structures and overlook risk
+of false negative instances. In this paper, we first provide a novel
+understanding of negative instances by empirically observing that only a few
+instances are potentially important for model learning, and false negatives
+tend to have stable predictions over many training iterations. Above findings
+motivate us to simplify the model by sampling from designed memory that only
+stores a few important candidates and, more importantly, tackle the untouched
+false negative problem by favouring high-variance samples stored in memory,
+which achieves efficient sampling of true negatives with high-quality.
+Empirical results on two synthetic datasets and three real-world datasets
+demonstrate both robustness and superiorities of our negative sampling method.},
+ arxiv_url = {https://arxiv.org/pdf/2009.03376v1.pdf},
+ author = {Jingtao Ding and Yuhan Quan and Quanming Yao and Yong Li and Depeng Jin},
+ title = {Simplify and Robustify Negative Sampling for Implicit Collaborative Filtering},
+ year = {2020}
+}
+
+@article{kalantidis_2020_hard,
+ abstract = {Contrastive learning has become a key component of self-supervised learning
+approaches for computer vision. By learning to embed two augmented versions of
+the same image close to each other and to push the embeddings of different
+images apart, one can train highly transferable visual representations. As
+revealed by recent studies, heavy data augmentation and large sets of negatives
+are both crucial in learning such representations. At the same time, data
+mixing strategies either at the image or the feature level improve both
+supervised and semi-supervised learning by synthesizing novel examples, forcing
+networks to learn more robust features. In this paper, we argue that an
+important aspect of contrastive learning, i.e., the effect of hard negatives,
+has so far been neglected. To get more meaningful negative samples, current top
+contrastive self-supervised learning approaches either substantially increase
+the batch sizes, or keep very large memory banks; increasing the memory size,
+however, leads to diminishing returns in terms of performance. We therefore
+start by delving deeper into a top-performing framework and show evidence that
+harder negatives are needed to facilitate better and faster learning. Based on
+these observations, and motivated by the success of data mixing, we propose
+hard negative mixing strategies at the feature level, that can be computed
+on-the-fly with a minimal computational overhead. We exhaustively ablate our
+approach on linear classification, object detection and instance segmentation
+and show that employing our hard negative mixing procedure improves the quality
+of visual representations learned by a state-of-the-art self-supervised
+learning method.},
+ arxiv_url = {https://arxiv.org/pdf/2010.01028v2.pdf},
+ author = {Yannis Kalantidis and Mert Bulent Sariyildiz and Noe Pion and Philippe Weinzaepfel and Diane Larlus},
+ github_url = {https://github.com/facebookresearch/moco},
+ title = {Hard Negative Mixing for Contrastive Learning},
+ year = {2020}
+}
+
+@article{kalantidis_2020_hard,
+ abstract = {Contrastive learning has become a key component of self-supervised learning
+approaches for computer vision. By learning to embed two augmented versions of
+the same image close to each other and to push the embeddings of different
+images apart, one can train highly transferable visual representations. As
+revealed by recent studies, heavy data augmentation and large sets of negatives
+are both crucial in learning such representations. At the same time, data
+mixing strategies either at the image or the feature level improve both
+supervised and semi-supervised learning by synthesizing novel examples, forcing
+networks to learn more robust features. In this paper, we argue that an
+important aspect of contrastive learning, i.e., the effect of hard negatives,
+has so far been neglected. To get more meaningful negative samples, current top
+contrastive self-supervised learning approaches either substantially increase
+the batch sizes, or keep very large memory banks; increasing the memory size,
+however, leads to diminishing returns in terms of performance. We therefore
+start by delving deeper into a top-performing framework and show evidence that
+harder negatives are needed to facilitate better and faster learning. Based on
+these observations, and motivated by the success of data mixing, we propose
+hard negative mixing strategies at the feature level, that can be computed
+on-the-fly with a minimal computational overhead. We exhaustively ablate our
+approach on linear classification, object detection and instance segmentation
+and show that employing our hard negative mixing procedure improves the quality
+of visual representations learned by a state-of-the-art self-supervised
+learning method.},
+ arxiv_url = {https://arxiv.org/pdf/2010.01028v2.pdf},
+ author = {Yannis Kalantidis and Mert Bulent Sariyildiz and Noe Pion and Philippe Weinzaepfel and Diane Larlus},
+ github_url = {https://github.com/facebookresearch/moco},
+ title = {Hard Negative Mixing for Contrastive Learning},
+ year = {2020}
+}
+
+@article{kalantidis_2020_hard,
+ abstract = {Contrastive learning has become a key component of self-supervised learning
+approaches for computer vision. By learning to embed two augmented versions of
+the same image close to each other and to push the embeddings of different
+images apart, one can train highly transferable visual representations. As
+revealed by recent studies, heavy data augmentation and large sets of negatives
+are both crucial in learning such representations. At the same time, data
+mixing strategies either at the image or the feature level improve both
+supervised and semi-supervised learning by synthesizing novel examples, forcing
+networks to learn more robust features. In this paper, we argue that an
+important aspect of contrastive learning, i.e., the effect of hard negatives,
+has so far been neglected. To get more meaningful negative samples, current top
+contrastive self-supervised learning approaches either substantially increase
+the batch sizes, or keep very large memory banks; increasing the memory size,
+however, leads to diminishing returns in terms of performance. We therefore
+start by delving deeper into a top-performing framework and show evidence that
+harder negatives are needed to facilitate better and faster learning. Based on
+these observations, and motivated by the success of data mixing, we propose
+hard negative mixing strategies at the feature level, that can be computed
+on-the-fly with a minimal computational overhead. We exhaustively ablate our
+approach on linear classification, object detection and instance segmentation
+and show that employing our hard negative mixing procedure improves the quality
+of visual representations learned by a state-of-the-art self-supervised
+learning method.},
+ arxiv_url = {https://arxiv.org/pdf/2010.01028v2.pdf},
+ author = {Yannis Kalantidis and Mert Bulent Sariyildiz and Noe Pion and Philippe Weinzaepfel and Diane Larlus},
+ github_url = {https://github.com/facebookresearch/moco},
+ title = {Hard Negative Mixing for Contrastive Learning},
+ year = {2020}
+}
+
+@article{robinson_2020_contrastive,
+ abstract = {How can you sample good negative examples for contrastive learning? We argue
+that, as with metric learning, contrastive learning of representations benefits
+from hard negative samples (i.e., points that are difficult to distinguish from
+an anchor point). The key challenge toward using hard negatives is that
+contrastive methods must remain unsupervised, making it infeasible to adopt
+existing negative sampling strategies that use true similarity information. In
+response, we develop a new family of unsupervised sampling methods for
+selecting hard negative samples where the user can control the hardness. A
+limiting case of this sampling results in a representation that tightly
+clusters each class, and pushes different classes as far apart as possible. The
+proposed method improves downstream performance across multiple modalities,
+requires only few additional lines of code to implement, and introduces no
+computational overhead.},
+ arxiv_url = {https://arxiv.org/pdf/2010.04592v2.pdf},
+ author = {Joshua Robinson and Ching-Yao Chuang and Suvrit Sra and Stefanie Jegelka},
+ github_url = {https://github.com/joshr17/HCL},
+ title = {Contrastive Learning with Hard Negative Samples},
+ year = {2020}
+}
+
+@article{robinson_2020_contrastive,
+ abstract = {How can you sample good negative examples for contrastive learning? We argue
+that, as with metric learning, contrastive learning of representations benefits
+from hard negative samples (i.e., points that are difficult to distinguish from
+an anchor point). The key challenge toward using hard negatives is that
+contrastive methods must remain unsupervised, making it infeasible to adopt
+existing negative sampling strategies that use true similarity information. In
+response, we develop a new family of unsupervised sampling methods for
+selecting hard negative samples where the user can control the hardness. A
+limiting case of this sampling results in a representation that tightly
+clusters each class, and pushes different classes as far apart as possible. The
+proposed method improves downstream performance across multiple modalities,
+requires only few additional lines of code to implement, and introduces no
+computational overhead.},
+ arxiv_url = {https://arxiv.org/pdf/2010.04592v2.pdf},
+ author = {Joshua Robinson and Ching-Yao Chuang and Suvrit Sra and Stefanie Jegelka},
+ github_url = {https://github.com/joshr17/HCL},
+ title = {Contrastive Learning with Hard Negative Samples},
+ year = {2020}
+}
+
+@article{robinson_2020_contrastive,
+ abstract = {How can you sample good negative examples for contrastive learning? We argue
+that, as with metric learning, contrastive learning of representations benefits
+from hard negative samples (i.e., points that are difficult to distinguish from
+an anchor point). The key challenge toward using hard negatives is that
+contrastive methods must remain unsupervised, making it infeasible to adopt
+existing negative sampling strategies that use true similarity information. In
+response, we develop a new family of unsupervised sampling methods for
+selecting hard negative samples where the user can control the hardness. A
+limiting case of this sampling results in a representation that tightly
+clusters each class, and pushes different classes as far apart as possible. The
+proposed method improves downstream performance across multiple modalities,
+requires only few additional lines of code to implement, and introduces no
+computational overhead.},
+ arxiv_url = {https://arxiv.org/pdf/2010.04592v2.pdf},
+ author = {Joshua Robinson and Ching-Yao Chuang and Suvrit Sra and Stefanie Jegelka},
+ github_url = {https://github.com/joshr17/HCL},
+ title = {Contrastive Learning with Hard Negative Samples},
+ year = {2020}
+}
+
+@article{xiong_2020_approximate,
+ abstract = {Conducting text retrieval in a dense learned representation space has many
+intriguing advantages over sparse retrieval. Yet the effectiveness of dense
+retrieval (DR) often requires combination with sparse retrieval. In this paper,
+we identify that the main bottleneck is in the training mechanisms, where the
+negative instances used in training are not representative of the irrelevant
+documents in testing. This paper presents Approximate nearest neighbor Negative
+Contrastive Estimation (ANCE), a training mechanism that constructs negatives
+from an Approximate Nearest Neighbor (ANN) index of the corpus, which is
+parallelly updated with the learning process to select more realistic negative
+training instances. This fundamentally resolves the discrepancy between the
+data distribution used in the training and testing of DR. In our experiments,
+ANCE boosts the BERT-Siamese DR model to outperform all competitive dense and
+sparse retrieval baselines. It nearly matches the accuracy of
+sparse-retrieval-and-BERT-reranking using dot-product in the ANCE-learned
+representation space and provides almost 100x speed-up.},
+ arxiv_url = {https://arxiv.org/pdf/2007.00808v2.pdf},
+ author = {Lee Xiong and Chenyan Xiong and Ye Li and Kwok-Fung Tang and Jialin Liu and Paul Bennett and Junaid Ahmed and Arnold Overwijk},
+ github_url = {https://github.com/facebookresearch/DPR},
+ title = {Approximate Nearest Neighbor Negative Contrastive Learning for Dense Text Retrieval},
+ year = {2020}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{author_year_does,
+ title = {Does unlabeled data provably help? worst-case analysis of the sample complexity of semi-supervised learning}
+}
+
+@article{author_year_imagenet,
+ title = {Imagenet: A large-scale hierarchical image database}
+}
+
+@article{author_year_label,
+ title = {Label propagation and quadratic criterion}
+}
+
+@article{author_year_laplacian,
+ title = {Laplacian eigenmaps and spectral techniques for embedding and clustering}
+}
+
+@article{berthelot_2019_mixmatch,
+ abstract = {Semi-supervised learning has proven to be a powerful paradigm for leveraging
+unlabeled data to mitigate the reliance on large labeled datasets. In this
+work, we unify the current dominant approaches for semi-supervised learning to
+produce a new algorithm, MixMatch, that works by guessing low-entropy labels
+for data-augmented unlabeled examples and mixing labeled and unlabeled data
+using MixUp. We show that MixMatch obtains state-of-the-art results by a large
+margin across many datasets and labeled data amounts. For example, on CIFAR-10
+with 250 labels, we reduce error rate by a factor of 4 (from 38% to 11%) and by
+a factor of 2 on STL-10. We also demonstrate how MixMatch can help achieve a
+dramatically better accuracy-privacy trade-off for differential privacy.
+Finally, we perform an ablation study to tease apart which components of
+MixMatch are most important for its success.},
+ arxiv_url = {https://arxiv.org/pdf/1905.02249v2.pdf},
+ author = {David Berthelot and Nicholas Carlini and Ian Goodfellow and Nicolas Papernot and Avital Oliver and Colin Raffel},
+ title = {Mixmatch: A holistic approach to semi-supervised learning},
+ year = {2019}
+}
+
+@article{chawla_2011_learning,
+ abstract = {There has been increased interest in devising learning techniques that
+combine unlabeled data with labeled data ? i.e. semi-supervised learning.
+However, to the best of our knowledge, no study has been performed across
+various techniques and different types and amounts of labeled and unlabeled
+data. Moreover, most of the published work on semi-supervised learning
+techniques assumes that the labeled and unlabeled data come from the same
+distribution. It is possible for the labeling process to be associated with a
+selection bias such that the distributions of data points in the labeled and
+unlabeled sets are different. Not correcting for such bias can result in biased
+function approximation with potentially poor performance. In this paper, we
+present an empirical study of various semi-supervised learning techniques on a
+variety of datasets. We attempt to answer various questions such as the effect
+of independence or relevance amongst features, the effect of the size of the
+labeled and unlabeled sets and the effect of noise. We also investigate the
+impact of sample-selection bias on the semi-supervised learning techniques
+under study and implement a bivariate probit technique particularly designed to
+correct for such bias.},
+ arxiv_url = {https://arxiv.org/pdf/1109.2047v1.pdf},
+ author = {N. V. Chawla and Grigoris Karakoulas},
+ doi = {10.1613/jair.1509},
+ journal = {Journal Of Artificial Intelligence Research, Volume 23, pages
+  331-366, 2005},
+ title = {Learning from labeled and unlabeled data: An empirical study across techniques and domains},
+ year = {2011}
+}
+
+@article{gammerman_2013_learning,
+ abstract = {We describe a method for predicting a classification of an object given
+classifications of the objects in the training set, assuming that the pairs
+object/classification are generated by an i.i.d. process from a continuous
+probability distribution. Our method is a modification of Vapnik's
+support-vector machine; its main novelty is that it gives not only the
+prediction itself but also a practicable measure of the evidence found in
+support of that prediction. We also describe a procedure for assigning degrees
+of confidence to predictions made by the support vector machine. Some
+experimental results are presented, and possible extensions of the algorithms
+are discussed.},
+ arxiv_url = {https://arxiv.org/pdf/1301.7375v1.pdf},
+ author = {Alex Gammerman and Volodya Vovk and Vladimir Vapnik},
+ title = {Learning by transduction},
+ year = {2013}
+}

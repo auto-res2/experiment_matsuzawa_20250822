@@ -1,1 +1,15 @@
 # Please list the required python packages.
+torch
+transformers
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+tslearn
+fastdtw
+sentence-transformers
+rouge-score
+tqdm
+accelerate
+scipy

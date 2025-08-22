@@ -5,9 +5,9 @@
   "test_accuracy": 0.725,
   "auc_score": 0.7225705329153606,
   "average_precision": 0.5198995622976814,
-  "calibration_ece": 0.19476071521639823,
-  "calibration_mce": 0.33626019954681396,
-  "brier_score": 0.20249996919395227,
+  "calibration_ece": 0.1872345581650734,
+  "calibration_mce": 0.3413735032081604,
+  "brier_score": 0.1997572764683803,
   "function_evaluations": 5,
   "plots_generated": [
     "roc_curve.pdf",

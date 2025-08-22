@@ -287,6 +287,38 @@
       }
     }
   ],
+  "reference_research_study_list": [
+    {
+      "title": "Learning curves for SGD on structured features."
+    },
+    {
+      "title": "JAX: composable transformations of Python+NumPy programs"
+    },
+    {
+      "title": "Online passive-aggressive algorithms."
+    },
+    {
+      "title": "Exact learning dynamics of deep linear networks with prior knowledge."
+    },
+    {
+      "title": "Continual task learning in natural and artificial agents."
+    },
+    {
+      "title": "Three unfinished works on the optimal storage capacity of networks."
+    },
+    {
+      "title": "Embracing change: Continual learning in deep neural networks."
+    },
+    {
+      "title": "Cloudid: Trustworthy cloud-based and cross-enterprise biometric identification."
+    },
+    {
+      "title": "Control batch size and learning rate to generalize well: Theoretical and empirical evidence."
+    },
+    {
+      "title": "Bci learning phenomena can be explained by gradient-based optimization."
+    }
+  ],
   "new_method": {
     "method": "{\"motivation\": \"The training of Spiking Neural Networks (SNNs) is caught in a critical dilemma: methods compatible with standard frameworks like Online Training Through Time (OTTT) are computationally bottlenecked by dense gradient calculations, disregarding SNNs' inherent sparsity. Conversely, methods like Sparse Spiking Gradient Descent that exploit this sparsity for massive efficiency gains require custom CUDA kernels, hindering widespread adoption. A naive hybrid approach that calculates a dense gradient and then sparsifies it post-hoc fails to address the core computational bottleneck—the backward pass itself. This research introduces 'Forward-Gated Online Training Through Time' (FG-OTTT), a novel algorithm that resolves this trade-off. FG-OTTT achieves true computational efficiency by generating a dynamic sparse mask during the forward pass to fundamentally prune the backward pass *before* expensive dense computations occur. Crucially, it achieves this while maintaining complete compatibility with standard deep learning libraries, thereby genuinely democratizing efficient SNN research and enabling practical hardware-aware co-design.\", \"methodology\": \"FG-OTTT integrates a predictive gating mechanism directly into the autograd graph of the OTTT framework, eliminating the need to ever compute the full dense gradient tensor.\\n\\n1. **Base Framework:** The algorithm builds upon a standard OTTT implementation within a framework like PyTorch/SpikingJelly, which uses eligibility traces to enable online, forward-in-time learning.\\n\\n2. **Forward Gating Mechanism:** Instead of calculating a mask from a dense gradient, FG-OTTT computes a predictive binary mask `M` for each layer's weights *during the forward pass*. This mask combines a bio-inspired Hebbian gate with a stochastic gate for stability:\\n    *   **Hebbian Gate (`M_h`):** As in the original idea, an update is enabled if both pre-synaptic eligibility traces and post-synaptic activity traces are active, governed by learnable, per-neuron thresholds `theta_j`. This information is fully available at the end of the forward pass.\\n    *   **Stochastic Gate (`M_rand`):** To replace the computationally expensive magnitude-based 'salvage pathway', a small, fixed percentage of synaptic updates are enabled randomly at each step. This acts as an exploration mechanism, preventing synapse death and ensuring learning stability without needing access to gradient magnitudes.\\n    *   **Final Mask:** The final mask is the logical OR of the two gates: `M = M_h OR M_rand`.\\n\\n3. **Framework-Native Sparse Backward Pass:** This is the core innovation. Each learnable layer (e.g., Conv2d, Linear) is wrapped in a custom `torch.autograd.Function`.\\n    *   The `forward` method of this function executes the standard layer operation but also computes and saves the predictive mask `M` for the current time step.\\n    *   The `backward` method receives the upstream gradient (`grad_output`). It uses the stored mask `M` to compute a sparse weight gradient (`grad_weight`) and to sparsify the backpropagated error signal (`grad_input`). This avoids the dense matrix-matrix multiplications inherent to a standard backward pass, drastically reducing the required Floating Point Operations (FLOPs). This custom function is implemented using standard framework tools and requires no custom CUDA kernels.\\n\\n4. **Annealed Target-Driven Regularization:** The mechanism for learning the Hebbian thresholds `theta_j` is retained. The task loss is augmented with a target-driven sparsity regularizer, `L_total = L_task + lambda(t) * (sparsity(M) - S_target)^2`, where `S_target` is the desired computational density and `lambda(t)` is an annealing schedule. This provides a direct, principled way to control the efficiency-performance trade-off.\\n\\n5. **Evaluation Protocol:**\\n    *   **Implementation:** Implement FG-OTTT within the SpikingJelly framework by creating a `SparseOTTTLayer` that wraps standard PyTorch layers with the custom autograd function.\\n    *   **Baselines:** Benchmark against dense OTTT, BPTT, and the original HS-OTTT proposal (post-hoc sparsification). The key metric will be wall-clock training time and backward-pass FLOPs, in addition to accuracy and memory usage.\\n    *   **Datasets:** Evaluate on static (CIFAR-10/100) and neuromorphic (DVS-CIFAR10) datasets.\\n    *   **Ablation Study:** Analyze the impact of the stochastic gate vs. a magnitude-based gate, the necessity of learnable heterogeneous thresholds, and the effect of varying `S_target`.\", \"expected_impact\": \"1. **True Democratization of Efficient SNN Training:** By drastically reducing the computational cost (FLOPs) of the backward pass on standard GPU hardware without requiring custom kernels, FG-OTTT makes efficient SNN training accessible to the entire research community, not just those with specialized programming skills.\\n\\n2. **A Blueprint for Framework-Compatible Sparsity:** The core technique of using a forward-pass predictive mask to prune the autograd graph provides a generalizable blueprint for implementing various forms of dynamic sparse training in any standard deep learning framework, extending its impact beyond SNNs.\\n\\n3. **Practical Hardware-Algorithm Co-Design:** The `S_target` hyperparameter becomes a direct and effective controller of the computational budget (FLOPs), enabling researchers to train models that are 'sparse-by-design' and pre-optimized for deployment on resource-constrained neuromorphic hardware.\\n\\n4. **Improved Regularization and Generalization:** The predictive, activity-dependent nature of the gating mechanism acts as a strong, biologically-inspired regularizer that is fundamentally different from magnitude-based pruning, potentially leading to models that are more robust and generalize better.\"}",
     "experimental_design": {

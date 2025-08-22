@@ -6,5 +6,52 @@
     "self-consistency LLM",
     "chain-of-thought verification",
     "uncertainty calibration LLM"
+  ],
+  "research_study_list": [
+    {
+      "title": "Teaching Large Language Models to Self-Debug"
+    },
+    {
+      "title": "Is Self-Repair a Silver Bullet for Code Generation?"
+    },
+    {
+      "title": "SelfCheck: Using LLMs to Zero-Shot Check Their Own Step-by-Step Reasoning"
+    },
+    {
+      "title": "Large Language Models Cannot Self-Correct Reasoning Yet"
+    },
+    {
+      "title": "SelfCheck: Using LLMs to Zero-Shot Check Their Own Step-by-Step Reasoning"
+    },
+    {
+      "title": "LLM-Check: Investigating Detection of Hallucinations in Large Language Models"
+    },
+    {
+      "title": "Large Language Models Cannot Self-Correct Reasoning Yet"
+    },
+    {
+      "title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models"
+    },
+    {
+      "title": "Autoformalize Mathematical Statements by Symbolic Equivalence and Semantic Consistency"
+    },
+    {
+      "title": "Deductive Verification of Chain-of-Thought Reasoning"
+    },
+    {
+      "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"
+    },
+    {
+      "title": "Automatic Chain of Thought Prompting in Large Language Models"
+    },
+    {
+      "title": "Large Language Models Must Be Taught to Know What They Don’t Know"
+    },
+    {
+      "title": "Thermometer: Towards Universal Calibration for Large Language Models"
+    },
+    {
+      "title": "Can LLMs Express Their Uncertainty? An Empirical Evaluation of Confidence Elicitation in LLMs"
+    }
   ]
 }

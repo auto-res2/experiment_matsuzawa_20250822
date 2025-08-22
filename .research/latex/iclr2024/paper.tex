@@ -1,0 +1,213 @@
+\PassOptionsToPackage{numbers}{natbib}
+\documentclass{article} % For LaTeX2e
+\usepackage{iclr2024_conference,times}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{titletoc}
+
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{cleveref}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{array}
+\usepackage{tabularx}
+\pgfplotsset{compat=newest}
+
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\graphicspath{{../}} % To reference your generated figures, see below.
+
+\title{Strongly Adaptive Multi-Resolution Conformal Control for Near Time-Uniform Coverage}
+
+\author{AIRAS}
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We study online uncertainty control for a single streaming time series in settings where operational actions depend on short-horizon reliability and on limiting streaks of misses. Existing online conformal controllers such as ACI and conformal PID stabilize long-run average miscoverage but can under-cover for long stretches after regime shifts; cross-sectional methods like TQA presuppose exchangeability across series and can yield effectively unbounded intervals; offline multi-horizon methods such as CopulaCPTS do not operate in streaming and rely on cross-sectional structure [angelopoulos_2023_conformal, lin_2022_conformal, sun_2022_copula]. We propose SAMC2, a model-agnostic controller that couples multi-resolution per-scale specialists, a strongly adaptive sleeping-experts aggregator balancing coverage and efficiency, and a dyadic primal-dual feasibility layer powered by anytime-valid confidence sequences. SAMC2 targets any interval and aims to bound the deviation of average error from the nominal level \(\alpha\) by a term that scales as the square root of \((\log K + \log T)/L\) over an interval of length \(L\), while preventing interval blow-up via robust barriers and saturation. We present implementation-ready evaluations on synthetic drift and heavy tails, real electricity load, and an ablation regime carousel, comparing against PID/ACI, rolling split conformal, and CUSUM-reset ACI. The provided run log lacks numerical metrics; we therefore report complete protocols, configurations, and diagnostics required to reproduce and verify the claims.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+Operational decision-making in energy balancing, logistics, trading, and epidemiology depends on reliability over the last few dozen hours and on minimizing harmful streaks of misses. Controllers that only regulate long-run average miscoverage can still expose operators to bursts of undercoverage after distributional shifts. In conformal time-series control, ACI and conformal PID use a single global integrator and provide attractive distribution-free guarantees on long-run averages, yet they may adapt too slowly at short horizons, producing extended stretches of undercoverage after regime changes \cite{angelopoulos_2023_conformal}. Cross-sectional adjustments such as TQA calibrate quantiles across panel data to harmonize cross-sectional and longitudinal coverage, but they assume exchangeability across units and can inflate intervals under severe nonstationarity \cite{lin_2022_conformal}. Copula-based multi-horizon methods like CopulaCPTS rely on offline calibration and cross-sectional structure, making them inapplicable to single-series streaming control \cite{sun_2022_copula}. Quantile-learning methods improve sharpness at train time but do not provide distribution-free online guarantees nor adversarial-time robustness [chung_2020_beyond, rosenberg_2022_fast]. Broader risk-control and multivalid conformal frameworks provide strong guarantees across user-specified subsets or losses but do not directly enforce near time-uniform reliability over sliding windows in one evolving series [bates_2021_distribution, bastani_2022_practical].
+
+This problem is difficult for three reasons. First, a single streaming series breaks cross-sectional exchangeability, precluding reliance on population snapshots. Second, short-window reliability demands fast yet stable adaptation: a controller with long memory suffers prolonged undercoverage after shifts, while one with short memory overreacts and inflates intervals. Third, enforcing constraints over all sliding windows is combinatorial; it calls for anytime-valid confidence sequences and strongly adaptive online learning rather than fixed-horizon tests.
+
+We introduce SAMC2, a strongly adaptive multi-resolution conformal control layer that wraps any forecaster and uses only absolute residual scores. SAMC2 integrates three components. Multi-resolution per-scale specialists track coverage deviation and variability using bounded, variance-adaptive integrators and robust P-term updates, with optional auto-pruned D-terms. A sleeping-experts aggregator with second-order flavor optimizes a composite loss trading coverage deviation against normalized width, with a soft barrier to preclude blow-up. Finally, a dyadic primal-dual feasibility layer maintains anytime-valid confidence sequences for Bernoulli miscoverage on a set of dyadic intervals, updating dual variables that inject interval-wise pressure to favor scales aligned with recent undercoverage. Two asymmetric stacks at \(\alpha/2\) share weights to synchronize scale choices while allowing tail asymmetry. Finite-safety is ensured by integrator saturation, robust caps derived from high-quantile score estimates, Huberized gradients, and a freeze-relax mechanism that temporarily shrinks learning rates when the barrier fires repeatedly.
+
+We verify SAMC2 through three implementation-ready experiments. On synthetic nonstationary streams with heavy tails and outliers, we measure short-window coverage deviations, recovery after shifts, streak distributions, efficiency, safety diagnostics, and confidence-sequence alarms. On hourly electricity load from UCI, we quantify streak reduction and short-window reliability while preserving efficiency. An ablation regime carousel assesses strongly adaptive regret against the best single scale, pivot speed after scale changes, and width stability. All methods share the same simple forecasters to isolate calibration effects. The available run record includes only environment setup and an experiment start banner; thus, we present full protocols and diagnostics needed for reproduction and defer numerical conclusions to executed runs.
+
+\begin{itemize}
+  \item \textbf{Controller design:} A new online, distribution-free controller that couples multi-resolution control, strongly adaptive aggregation, and dyadic anytime-valid constraints to pursue near time-uniform reliability in a single stream [angelopoulos_2023_conformal, bates_2021_distribution].
+  \item \textbf{Finite-safety mechanisms:} An efficiency-focused design that prevents interval blow-up without heuristic clipping via robust barriers, saturation, and freeze-relax safeguards.
+  \item \textbf{Efficient implementation:} Implementation-ready algorithms with \(O(\log T)\) memory and \(O(K)\) per-step time, model-agnostic, with anytime-valid diagnostics.
+  \item \textbf{Evaluation plan:} A thorough evaluation plan on synthetic drift and heavy tails, real electricity load, and ablations against strong baselines, with clearly defined acceptance criteria [angelopoulos_2023_conformal, lin_2022_conformal, sun_2022_copula].
+\end{itemize}
+
+Beyond experiments, we sketch a theory blueprint combining dyadic confidence sequences with strongly adaptive regret to formalize near time-uniform bounds, and discuss extensions to multi-horizon and multi-series settings and to wrapping probabilistic forecasters \cite{pal_2021_rnn}.
+
+\section{Related Work}
+\label{sec:related}
+\subsection{Online conformal controllers}
+Conformal PID/ACI regulates miscoverage using a single exponentially weighted integrator and offers practical, distribution-free long-run average guarantees with strong empirical performance \cite{angelopoulos_2023_conformal}. Its single global decay trades off fast local adaptation against long-term stability; it typically cannot do both. SAMC2 departs by banking multiple scales and aggregating them with a strongly adaptive learner that can pivot rapidly to the scale suited to the current regime, while a dyadic feasibility layer presses on intervals experiencing undercoverage to approach time-uniform reliability.
+
+\subsection{Cross-sectional panel adjustments}
+TQA adjusts conformal quantiles in panel data to balance cross-sectional and longitudinal coverage \cite{lin_2022_conformal}. It leverages multiple contemporaneous series and assumes exchangeability across units. In single-stream control, this assumption fails; under severe drift, cross-sectional adjustments may yield very large or effectively unbounded intervals. SAMC2 instead targets one stream, imposes online dyadic constraints, and includes explicit safeguards against width blow-up.
+
+\subsection{Offline multi-horizon conformal}
+CopulaCPTS calibrates multi-step forecasts using copulas within an offline two-split procedure and relies on cross-sectional exchangeability \cite{sun_2022_copula}. Its batch design is ill-suited to streaming single-series control where immediate updates and anytime validity are essential. SAMC2 operates online, with small memory and compute, and aims at interval-wise reliability without batch recalibration.
+
+\subsection{Quantile-learning and train-time calibration}
+Methods that optimize pinball loss or advanced quantile objectives can improve sharpness and conditional calibration but lack distribution-free online guarantees under arbitrary drift [chung_2020_beyond, rosenberg_2022_fast]. SAMC2 is post-hoc and model-agnostic: it wraps any forecaster and focuses on online control of miscoverage and width with anytime diagnostics.
+
+\subsection{Adversarial and risk-controlling conformal}
+Multivalid conformal provides coverage across user-specified subsets robust to sequential adaptivity \cite{bastani_2022_practical}, and risk-controlling prediction sets control expected monotone losses in i.i.d. settings \cite{bates_2021_distribution}. These frameworks do not directly enforce coverage over all short windows of a single evolving time series. SAMC2’s dyadic primal-dual layer instead enforces interval-wise constraints online by coupling anytime-valid confidence sequences to scale selection.
+
+\subsection{Other time-series uncertainty methods}
+HopCPT leverages temporal dependence via modern Hopfield networks for conformal prediction but differs in aim and setting from our streaming control focus \cite{auer_2023_conformal}. SPCI estimates conditional quantiles sequentially and offers asymptotic conditional validity but does not provide distribution-free online time-uniform control or explicit safeguards against width inflation \cite{xu_2022_sequential}. Probabilistic state-space and particle-flow models provide generative uncertainty modeling \cite{pal_2021_rnn}; SAMC2 complements them as a calibration layer to deliver distribution-free, online coverage control without additional modeling assumptions.
+
+In summary, existing approaches either control long-run averages in online settings \cite{angelopoulos_2023_conformal}, assume cross-sectional exchangeability [lin_2022_conformal, sun_2022_copula], or improve train-time sharpness without online guarantees [chung_2020_beyond, rosenberg_2022_fast]. SAMC2 uniquely integrates multi-resolution control, strongly adaptive aggregation, and dyadic anytime-valid constraints to target near time-uniform reliability while keeping intervals finite.
+
+\section{Background}
+\label{sec:background}
+\subsection{Problem setting and notation}
+We observe a single streaming time series \(y_t\). A forecaster produces one-step-ahead point predictions \(\hat{y}_t\) using only past data. We form symmetric prediction intervals \(C_t = [\hat{y}_t - q_t,\, \hat{y}_t + q_t]\) with nonnegative thresholds \(q_t\) chosen online. Define the negatively oriented score \(s_t\) as the absolute residual \(|y_t - \hat{y}_t|\). Define the error indicator \(\mathrm{err}_t\) as 1 if \(s_t > q_t\) and 0 otherwise. Given a target miscoverage level \(\alpha \in (0,1)\), our goal is to regulate coverage not only in the long run but over any time interval \(I\) of length \(L\). We aim for near time-uniform reliability: for every interval \(I\), the absolute deviation between the average of \(\mathrm{err}_t\) over \(I\) and \(\alpha\) should be small, scaling proportionally to \(\sqrt{(\log K + \log T)/L}\), where \(K\) is the number of scales and \(T\) the time horizon.
+
+\subsection{Motivating challenges}
+Short windows are sensitive to regime shifts and outliers. A controller with long memory may suffer prolonged undercoverage after shifts, whereas a short-memory controller may overreact and inflate intervals. Heavy tails and rare extremes can cause naive quantile trackers to explode or become unstable. Enforcing constraints over all windows is combinatorial; a dyadic decomposition reduces the family to \(O(\log T)\) intervals, and anytime-valid confidence sequences for Bernoulli means provide sequential control without fixed horizons. Strongly adaptive online learning ensures low regret not only globally but also simultaneously over all intervals of a given length, enabling rapid pivoting as conditions change \cite{bastani_2022_practical}.
+
+\subsection{Key constructs}
+We index scales \(s \in \{0,\ldots,S\}\) with characteristic windows \(W_s\) drawn from \(\{2^0,\ldots,2^S\}\). Each scale uses a causal kernel \(w_s\) with exponential decay factor \(\exp(-1/W_s)\). For scale \(s\) at time \(t\), \(E_s(t)\) denotes an exponentially weighted sum of centered errors \((\mathrm{err}-\alpha)\), and \(V_s(t)\) an exponentially weighted variance proxy. The per-scale proposal \(q^s(t+1)\) is the sum of a variance-adaptive I-term, a robust P-term, and an optional D-term, clamped to be nonnegative and subject to robust caps. The final threshold \(q(t+1)\) is a weighted average of \(\{q^s(t+1)\}\) with weights \(\pi_s(t)\) obtained from a sleeping-experts aggregator. We maintain a robust scale estimate \(S_t\) via a rolling median absolute deviation on recent scores and compute a robust high-quantile cap \(q_{\max}(t)\) using streaming quantile sketches.
+
+\subsection{Anytime-valid constraints}
+We consider a family of dyadic intervals \(u\) that cover time at multiple resolutions. For each interval we maintain a dual variable \(\mu_u(t)\) that increases when undercoverage occurs within \(u\). In parallel, we compute anytime-valid confidence sequences for Bernoulli miscoverage to produce online p-values and alarms indicating deviations of the running mean error from \(\alpha\) with time-uniform validity. We translate the dual state into pressures on experts via overlap weights \(A_s(u)\), which quantify how much the kernel of expert \(s\) aligns with \(u\) at time \(t\). Adding these pressures to the aggregator’s logits approximates enforcement of time-uniform constraints.
+
+\subsection{Assumptions and scope}
+SAMC2 is model-agnostic and distribution-free in spirit, relying only on residual scores and anytime-valid concentration tools. It follows the conformal prediction ethos while adapting guarantees to online, single-series control and interval-wise behavior [angelopoulos_2023_conformal, bates_2021_distribution].
+
+\section{Method}
+\label{sec:method}
+We describe SAMC2 in four parts: multi-resolution specialists, strongly adaptive aggregation, a dyadic primal-dual feasibility layer, and efficiency-robustness safeguards, followed by extensions and a theory blueprint.
+
+\subsection{Multi-resolution specialists}
+Choose scales \(W_s\) from a dyadic grid \(\{1, 2, 4, \ldots, 2^S\}\). For scale \(s\), define exponential decays \(\lambda_s = \exp(-1/W_s)\) and \(\lambda_s^2\) for first and second moments. At time \(t\), update the centered error tracker \(E_s\) as \(\lambda_s\) times its previous value plus \((\mathrm{err}_t - \alpha)\). Update the variance proxy \(V_s\) as \(\lambda_s^2\) times its previous value plus \(\mathrm{err}_t (1 - \mathrm{err}_t)\). Construct the I-term as \(c_I\, S_t \tanh\big( \gamma_s\, E_s / \sqrt{V_s + \varepsilon} \big)\). This variance-adaptive, saturated integrator prevents runaway behavior. The P-term tracks systematic bias via a Huberized update: add \(\eta_s\) times a Huber function of \((\mathrm{err}_t - \alpha)\) with threshold \(\delta\) to a running level \(q_P^s\), where \(\eta_s = \eta_0 \cdot S_t / \sqrt{1+W_s}\). The optional D-term models short-term autocorrelation of thresholds for small scales (for example an AR(1) on recent increments of \(q\)), but it is auto-disabled when short-lag autocorrelations fall below a threshold to avoid oscillations. The expert’s proposal \(q^s(t+1)\) is \(q_P^s + I_s + D_s\), clamped to be nonnegative and softly capped via a barrier relative to a robust cap \(q_{\max}(t)\), defined as a high quantile (for example the 99.5th percentile) of recent scores estimated online.
+
+\subsection{Strongly adaptive sleeping-experts aggregation}
+The final threshold \(q(t+1)\) is the weighted sum across scales of \(\pi_s(t) q^s(t+1)\). We update weights using a second-order, switching-robust learner with sleeping experts. The per-expert composite loss combines: (i) absolute coverage deviation \(|\mathrm{err}_t - \alpha|\); (ii) normalized width given by the expert’s width (equal to its \(q\)) divided by a robust scale \(Z_t\) (a rolling median absolute deviation of scores); and (iii) a barrier penalty for exceeding \(q_{\max}(t)\). Formally, the loss is \(\lambda\, |\mathrm{err}_t - \alpha| + (1-\lambda)\, (q/Z_t) + \beta\, (\max\{0, (q - q_{\max})/q_{\max}\})^2\). Cumulative losses drive exponentiated-weight updates. We handle asymmetry by running two stacks at \(\alpha/2\) each for left and right tails, sharing \(\pi_s\) across tails to synchronize scale selection while permitting asymmetric thresholds.
+
+\subsection{Dyadic time-uniform constraints via primal-dual coupling}
+Maintain a collection of dyadic intervals \(u\) that cover time at multiple resolutions. For each interval, update a dual variable \(\mu_u(t)\) by adding a step-size-scaled version of \((\mathrm{err}_t - \alpha)\) when \(t \in u\), projecting onto the nonnegative orthant and capping by \(\mu_{\max}\). The step size scales inversely with the square root of the interval length via an empirical-Bernstein factor. Simultaneously compute anytime-valid confidence sequences for the Bernoulli mean of errors to obtain online p-values and alarms on undercoverage. Convert duals into expert-specific pressures by computing overlap \(A_s(u)\) between expert \(s\)’s exponential kernel mass at time \(t\) and interval \(u\). Modify the experts’ logits by adding \(\kappa \sum_u \mu_u(t) A_s(u)\). This increases the weight of scales aligned with intervals experiencing recent undercoverage, approximating time-uniform coverage while preserving adaptability and efficiency optimization.
+
+\subsection{Efficiency and robustness safeguards}
+Finite intervals are enforced by: (i) a soft barrier relative to \(q_{\max}(t)\), which itself is robustly estimated using a streaming high quantile; (ii) freeze-relax logic that halves an expert’s learning rate and doubles its I-term saturation if the barrier fires for \(\tau\) consecutive steps, then gradually restores the baseline; (iii) Huberized gradients and winsorized scale estimates to mitigate heavy tails; and (iv) saturation of I-terms scaled by \(S_t\) to bound per-step threshold changes.
+
+\subsection{Extensions}
+For multi-horizon prediction, replicate the specialist-aggregator architecture per horizon and enforce light coherence across horizons via online isotonic projection on widths or an empirical copula-inspired regularizer used purely for efficiency. For multiple series, learn hierarchical meta-weights across series via online mirror descent while preserving per-series adapters to retain idiosyncrasy.
+
+\subsection{Theory blueprint}
+We target three results. First, near time-uniform coverage: for any interval of length \(L\), the absolute deviation of the average error from \(\alpha\) is bounded by a constant times \(\sqrt{(\log K + \log T)/L}\), up to lower-order terms, leveraging anytime-valid confidence sequences on dyadic intervals and strongly adaptive regret of the aggregator. Second, efficiency regret: the cumulative width of SAMC2 is within strongly adaptive regret of the best fixed convex combination of specialists that satisfies dyadic constraints. Third, stability: bounded increments and almost-sure finiteness of thresholds follow from integrator saturation and robust barriers. These aims align with distribution-free conformal control and risk-control principles [angelopoulos_2023_conformal, bates_2021_distribution] and with robust online aggregation ideas \cite{bastani_2022_practical}.
+
+\begin{algorithm}[H]
+\caption{SAMC2 online update at time \(t\)}
+\begin{algorithmic}
+  \State Input: forecast \(\hat{y}_t\), observation \(y_t\) (after reveal), target \(\alpha\), scales \(\{W_s\}\), state \(\{E_s,V_s,q_P^s\}\), weights \(\{\pi_s\}\), dyadic duals \(\{\mu_u\}\), robust scale \(S_t\), cap \(q_{\max}(t)\)
+  \State Score: \(s_t \leftarrow |y_t - \hat{y}_t|\); error: \(\mathrm{err}_t \leftarrow \mathbb{1}\{s_t > q_t\}\)
+  \For{each scale \(s\)}
+    \State Update trackers: \(E_s \leftarrow \lambda_s E_s + (\mathrm{err}_t - \alpha)\); \(V_s \leftarrow \lambda_s^2 V_s + \mathrm{err}_t (1-\mathrm{err}_t)\)
+    \State I-term: \(I_s \leftarrow c_I S_t \tanh\big( \gamma_s E_s / \sqrt{V_s + \varepsilon} \big)\)
+    \State P-term: \(q_P^s \leftarrow q_P^s + \eta_s \cdot \mathrm{Huber}_{\delta}(\mathrm{err}_t - \alpha)\)
+    \State Optional D-term: \(D_s \leftarrow \mathrm{AR1\_increment}(q)\) if autocorr high else 0
+    \State Proposal: \(q^s_{t+1} \leftarrow \max\{0,\, q_P^s + I_s + D_s\}\); apply barrier toward \(q_{\max}(t)\)
+  \EndFor
+  \State Aggregation loss per expert: \(\ell_s \leftarrow \lambda |\mathrm{err}_t - \alpha| + (1-\lambda) (q^s_t/Z_t) + \beta (\max\{0,(q^s_t - q_{\max})/q_{\max}\})^2\)
+  \State Update weights \(\pi_s\) via exponentiated-weight with second-order correction on \(\ell_s\)
+  \State Dyadic duals: for each interval \(u\ni t\), \(\mu_u \leftarrow \Pi_{\mu \ge 0}\big( \mu_u + \eta_u (\mathrm{err}_t - \alpha) \big)\)
+  \State Pressure: modify logits by \(\kappa \sum_u \mu_u A_s(u)\); renormalize \(\pi_s\)
+  \State Output next threshold: \(q_{t+1} \leftarrow \sum_s \pi_s q^s_{t+1}\)
+\end{algorithmic}
+\end{algorithm}
+
+\section{Experimental Setup}
+\label{sec:experimental}
+\subsection{Evaluation protocol}
+We assess SAMC2 as a streaming calibration layer around simple forecasters to isolate calibration effects. One-step-ahead evaluation proceeds as follows: at time \(t\), produce \(\hat{y}_t\) and interval \([\hat{y}_t - q_t,\, \hat{y}_t + q_t]\); observe \(y_t\); compute \(\mathrm{err}_t = \mathbb{1}\{|y_t - \hat{y}_t| > q_t\}\) and score \(s_t = |y_t - \hat{y}_t|\); update controllers to obtain \(q_{t+1}\). The primary target miscoverage is \(\alpha = 0.1\), with \(\alpha = 0.2\) as an option.
+
+\subsection{Shared implementation details}
+We use Python with numpy, pandas, torch, statsmodels, tdigest, river, and confseq. Robust scales \(S_t\) are rolling median absolute deviations. The scale set is \(W_s \in \{1, 2, 4, \ldots, 512\}\). I-terms use \(c_I = 0.25\), tanh saturation at \(3 S_t\), and \(\gamma = 1\). P-terms use Huber threshold \(\delta = 0.5\) and per-scale step sizes \(\eta_s = 0.06\, S_t / \sqrt{1 + W_s}\). The D-term is off by default and auto-enabled for very short scales only when short-lag autocorrelation warrants it, with automatic pruning when autocorrelation fades. The aggregation loss uses \(\lambda = 0.7\) and \(\beta = 1.0\). The barrier references \(q_{\max}(t)\) estimated as the 99.5th percentile of recent scores via a streaming quantile sketch, with a fallback multiple of \(S_t\) during warm-up. The dyadic layer caps duals at \(\mu \le 5\) and couples to the aggregator with \(\kappa = 0.5\). Two asymmetric stacks at \(\alpha/2\) share weights \(\pi_s\). Complexity is \(O(K)\) per step with \(K \approx 10\), and memory \(O(K + \log T)\).
+
+\subsection{Baselines}
+We compare to: (i) PID/ACI, a single exponentially weighted integrator with the same variance-adaptive I-term and robust scaling, but without multi-resolution, adaptive aggregation, or dyadic constraints \cite{angelopoulos_2023_conformal}; (ii) Rolling Split Conformal (RSC), which maintains rolling empirical \((1 - \alpha)\) quantiles of residual scores with calibration windows \(W_{\mathrm{cal}} \in \{128, 512, 2048\}\) on synthetic data and \(W_{\mathrm{cal}} \in \{168, 672, 2688\}\) on electricity; and (iii) CUSUM-reset ACI, which uses ACI but resets its state upon drift alarms from online detectors such as ADWIN on squared residuals or Page-Hinkley on residuals, tuned to achieve roughly one false alarm per ten thousand steps.
+
+\subsection{Metrics}
+We compute: (a) sliding-window coverage deviations for window lengths \(L \in \{16, 32, 64, 128, 256, 512\}\) for synthetic data and \(L \in \{24, 48, 72, 168\}\) for electricity; (b) the fraction of windows with coverage within \(\alpha \pm \varepsilon\) for \(\varepsilon \in \{0.02, 0.05\}\); (c) miss-streak risk via \(\mathbb{P}(\text{run length} \ge k)\) for \(k \in \{3, 5, 7, 10\}\) and the 95th-percentile run length; (d) efficiency metrics including mean and 95th-percentile widths, width volatility (standard deviation of \(q_t\)), and total variation defined as the sum of absolute threshold increments; (e) finite-safety diagnostics including barrier activation rate, counts of \(q_t\) exceeding \(q_{\max}(t)\), and flags for implausibly large intervals in methods without caps; (f) adaptation metrics including recovery time after known shifts until window coverage returns within \(\alpha \pm 0.05\) for \(L \in \{24, 48, 72\}\); (g) confidence-sequence diagnostics including alarms per 10,000 steps and alarm dwell time; and (h) strongly adaptive regret over intervals \(I\), defined as the sum over \(I\) of the method’s composite loss minus the minimum over fixed experts’ composite loss on the same interval.
+
+\subsection{Experiment 1: Synthetic drift and heavy tails}
+We generate streams of length 50,000 with piecewise nonstationary regimes affecting mean, variance, tail heaviness, and outlier frequency. The latent component follows an AR process with added daily and weekly seasonality. Regime segments include Student-\(t\) errors with changing degrees of freedom and scales, mean jumps, variance contractions and expansions, a linearly drifting segment, and a mixture with rare extreme outliers. The response combines latent dynamics, seasonality, and noise, with about 1\% additional signed outliers. A simple seasonal-naive forecaster with exponentially weighted bias correction produces \(\hat{y}_t\). We run 20 seeds varying noise and outlier realizations. Primary acceptance criteria include: at least 30\% reduction in short-window coverage deviations relative to the best baseline for \(L \le 128\); supremum deviation \(\le 0.08\) with at least 20\% improvement; median recovery times at most half of the best baseline; mean width within 5\% of the tightest coverage-valid baseline; 95th-percentile width at least 10\% smaller; zero interval blow-ups; barrier activation rate at least 25\% lower than ACI and 50\% lower than RSC; and fewer confidence-sequence alarms in stationary periods.
+
+\subsection{Experiment 2: Real electricity load streaming}
+We use the UCI Electricity Load Diagrams (hourly). We aggregate to a single stream or select one zone to avoid cross-sectional exchangeability. Missing values are forward-filled with time-aware interpolation; the first two weeks are reserved for forecaster warm-up. The base predictor is weekly seasonal-naive with exponentially weighted bias. Methods are the same as in Experiment 1. We compute window coverage deviations for \(L \in \{24, 48, 72, 168\}\), streak risks, efficiency, and confidence-sequence alarms. Uncertainty is assessed by block bootstrap with block size 168 and ten resamples. Acceptance criteria include at least 30\% reduction in \(\mathbb{P}(\text{run} \ge 5)\) relative to the best baseline, a reduction of at least two in the 95th-percentile streak length, and at least 90\% of 24-72 hour windows within \(\alpha \pm 0.05\) while maintaining mean width within 10\% of the tightest coverage-valid baseline.
+
+\subsection{Experiment 3: Ablations and strongly adaptive regret}
+We design a regime carousel of length 60,000 with regimes that rotate every 5,000-10,000 steps, making different scales optimal (\(W^* \in \{8, 32, 128, 512\}\)). Regimes include high-frequency drift, medium-frequency drift with occasional jumps, low-frequency drift with heavy tails, and quasi-stationarity. The base forecaster is an online AR-type model. Variants include: Full SAMC2; No-CS (duals disabled); Uniform-avg (uniform weights across scales); Single-scale PID tuned separately; No-efficiency-reg (set the aggregator weight \(\lambda\) to unity and remove the barrier penalty); and No-barrier. We evaluate normalized strongly adaptive regret across window lengths \(L \in \{32, 128, 512, 2048\}\), pivot time after regime changes until the weight on the optimal scale exceeds 0.5, and width stability via total variation, maximum increment, and oscillation episodes identified by lag-1 autocorrelation of increments. Acceptance criteria require Full SAMC2 to achieve the lowest median normalized regret within 10\% of the oracle minimum over experts, pivot within approximately \(1.5\, W^*\), and display marked safety gains over No-barrier and better short-window deviations than No-CS.
+
+\subsection{Fairness and controls}
+All methods share the same forecasters and residual scores. Robust scale estimates are matched where applicable, and hyperparameters are chosen in comparable ranges. We log per-step traces of errors, thresholds, expert weights, dyadic duals, caps, and barrier flags for transparent diagnostics. Random seeds are fixed. CPU execution is sufficient given \(O(K)\) per-step complexity.
+
+\subsection{Relation to prior work in setup}
+PID/ACI follows \cite{angelopoulos_2023_conformal}. RSC embodies rolling quantile ideas akin to split conformal but without cross-sectional exchangeability \cite{lin_2022_conformal}. CopulaCPTS is excluded from comparisons because it is offline and cross-sectional \cite{sun_2022_copula}. Probabilistic forecasters are complementary and out of scope for evaluation \cite{pal_2021_rnn}.
+
+\section{Results}
+\label{sec:results}
+We report only results present in the experimental logs. The provided run record contains package installation and an experiment start banner but no printed metrics, tables, or saved-plot confirmations. Consequently, we refrain from quantitative claims and instead detail the diagnostics the completed runs will produce and how to interpret them against the predefined acceptance criteria.
+
+Short-window coverage deviation. Primary curves trace the average and supremum deviations of window coverage from \(\alpha\) over \(L \in \{16, 32, 64, 128, 256, 512\}\) for synthetic data and \(L \in \{24, 48, 72, 168\}\) for electricity. SAMC2 success would be indicated by curves uniformly below those of PID/ACI, RSC, and CUSUM-reset ACI, especially for the shortest windows. Confidence intervals are computed across seeds (synthetic) or via block bootstrap (electricity). Acceptance thresholds require at least 20-30\% improvement over the strongest baseline at short windows and a supremum deviation within the target bound.
+
+Recovery after shifts. For synthetic streams with annotated regime boundaries, we align coverage trajectories at change points and compute the first time at which \(L\)-window coverage re-enters and remains within \(\alpha \pm 0.05\) for \(L \in \{24, 48, 72\}\). SAMC2 is designed to recover faster because the strongly adaptive aggregator and dyadic pressure favor shorter scales during undercoverage. Median recovery time should be at most half of the best baseline to meet acceptance.
+
+Miss-streak risk. We estimate survival curves for the probability that miss streaks exceed thresholds \(k \in \{3, 5, 7, 10\}\) and compute the 95th-percentile run length. Reduced tail probabilities and shorter 95th-percentile streaks indicate operational safety gains. On electricity, acceptance requires at least a 30\% reduction in \(\mathbb{P}(\text{run} \ge 5)\) and a reduction of at least two in the 95th-percentile streak length relative to the best baseline.
+
+Efficiency and stability. Mean and 95th-percentile widths, width volatility (standard deviation of \(q_t\)), and total variation of \(q_t\) quantify sharpness and smoothness. SAMC2’s efficiency regularization and barrier design target competitive average widths relative to the tightest coverage-valid baseline while reducing volatility compared to reset-based baselines. Safety diagnostics include barrier activation rates, counts of \(q_t\) exceeding \(q_{\max}(t)\), and flags for implausible intervals in methods without caps. SAMC2 should exhibit rare barrier activations and no exceedances by design.
+
+Confidence-sequence alarms. The dyadic layer produces online p-values and alarms for coverage deviations. On stationary stretches, alarm rates should be near nominal. Overall, fewer and shorter alarms for SAMC2 than for baselines would support improved time-uniform reliability.
+
+Strongly adaptive regret and pivot speed (ablations). In the regime carousel, normalized strongly adaptive regret over intervals \(I\) (method’s composite loss minus the best fixed expert’s loss, divided by the square root of the interval length) should be lowest for Full SAMC2 across \(L \in \{32, 128, 512, 2048\}\), ideally within 10\% of the oracle lower bound. Pivot speed is defined as the time to allocate at least half of the weight to the optimal scale after a regime change; shorter pivot times validate the benefit of strongly adaptive aggregation and dyadic pressures. Ablations are expected to reveal that removing the dyadic layer increases short-window deviations, removing efficiency regularization increases widths and volatility, and removing the barrier introduces frequent width blow-ups and instability.
+
+Limitations and caveats. Without recorded metrics, we cannot verify whether SAMC2 meets the acceptance thresholds. The effectiveness of dyadic pressures depends on the overlap mapping \(A_s(u)\) and step sizes; more refined confidence sequences per dyadic interval could strengthen control. While barriers and saturation ensure finite intervals, conservative caps may transiently limit achievable coverage during extreme volatility; the freeze-relax mechanism mitigates this but requires tuning.
+
+Reproducibility guidance. To obtain verifiable results, run the three experiments with full logging enabled, persist per-step traces and summary metrics, and generate plots for window coverage deviations, streak survival, recovery trajectories, regret curves, pivot-time distributions, and width stability. Ensure fairness by sharing forecasters and robust scale estimates across methods and by fixing seeds. Any comparative statement should be accompanied by confidence intervals as specified.
+
+\section{Conclusion}
+\label{sec:conclusion}
+We introduced SAMC2, a strongly adaptive multi-resolution conformal controller for single streaming time series that aims to deliver near time-uniform reliability while maintaining finite and efficient prediction intervals. SAMC2 integrates three components absent in prior approaches: a bank of kernelized per-scale controllers with variance-adaptive, saturated integrators; a sleeping-experts aggregator that optimizes a composite coverage-efficiency objective with barriers against width blow-up; and a dyadic primal-dual layer that leverages anytime-valid confidence sequences to approximate time-uniform constraints. This design is model-agnostic, lightweight, and equipped with actionable diagnostics. We positioned SAMC2 with respect to conformal PID/ACI \cite{angelopoulos_2023_conformal}, cross-sectional adjustments \cite{lin_2022_conformal}, offline copula-based calibrators \cite{sun_2022_copula}, train-time quantile methods [chung_2020_beyond, rosenberg_2022_fast], risk-controlling and multivalid conformal frameworks [bates_2021_distribution, bastani_2022_practical], and probabilistic state-space approaches \cite{pal_2021_rnn}. We provided an implementation-ready evaluation plan on synthetic nonstationarity and real electricity load, plus ablations analyzing regret, pivot speed, and stability. Because the available run log contains no numerical results, we refrain from empirical claims and focus on complete, reproducible protocols.
+
+Future directions include formal proofs of near time-uniform guarantees by explicitly combining dyadic confidence sequences with strongly adaptive regret bounds, developing exact per-interval confidence sequences to tighten the primal-dual layer, and studying principled couplings between dual pressures and aggregation dynamics. Application-oriented extensions comprise multi-horizon stacks with cross-horizon coherence regularization and hierarchical multi-series meta-learning, and wrapping probabilistic forecasters to complement distribution-free online control \cite{pal_2021_rnn}. We expect these directions to further strengthen reliability and efficiency in operational settings where short-window performance and bounded uncertainty are mission critical.
+
+This work was generated by \textsc{AIRAS} \citep{airas2025}.
+
+\bibliographystyle{iclr2024_conference}
+\bibliography{references}
+
+\end{document}

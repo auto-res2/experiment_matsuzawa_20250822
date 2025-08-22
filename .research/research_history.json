@@ -6,5 +6,52 @@
     "selective scan memory",
     "selective state space memory",
     "Mamba-2 memory footprint"
+  ],
+  "research_study_list": [
+    {
+      "title": "VMamba: Visual State Space Model"
+    },
+    {
+      "title": "Vision Mamba Mender"
+    },
+    {
+      "title": "Vision Mamba: Efficient Visual Representation Learning with Bidirectional State Space Model"
+    },
+    {
+      "title": "VMamba: Visual State Space Model"
+    },
+    {
+      "title": "Vision Mamba Mender"
+    },
+    {
+      "title": "PointMamba: A Simple State Space Model for Point Cloud Analysis"
+    },
+    {
+      "title": "Kanerva++: Extending the Kanerva Machine With Differentiable, Locally Block Allocated Latent Memory"
+    },
+    {
+      "title": "Multigrid Neural Memory"
+    },
+    {
+      "title": "General Sequential Episodic Memory Model"
+    },
+    {
+      "title": "State-space models with layer-wise nonlinearity are universal approximators with exponential decaying memory"
+    },
+    {
+      "title": "StableSSM: Alleviating the Curse of Memory in State-space Models through Stable Reparameterization"
+    },
+    {
+      "title": "Theoretical Foundations of Deep Selective State-Space Models"
+    },
+    {
+      "title": "VMamba: Visual State Space Model"
+    },
+    {
+      "title": "Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality"
+    },
+    {
+      "title": "Vision Mamba Mender"
+    }
   ]
 }

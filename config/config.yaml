@@ -1,0 +1,40 @@
+# General Settings
+DEVICE: "cuda"
+SEED: 42
+DATA_DIR: "./data"
+OUTPUT_DIR: ".research/iteration1"
+MODELS_DIR: "./models"
+NUM_WORKERS: 2
+NUM_CLASSES: 100 # CIFAR-100
+
+# Pre-training Parameters
+PRETRAIN_EPOCHS_FULL: 100
+PRETRAIN_EPOCHS_TEST: 2
+PRETRAIN_BATCH_SIZE_FULL: 128
+PRETRAIN_BATCH_SIZE_TEST: 16
+PRETRAIN_LR: 0.03
+
+# Linear Evaluation Parameters
+LINEAR_EPOCHS_FULL: 100
+LINEAR_EPOCHS_TEST: 2
+LINEAR_BATCH_SIZE_FULL: 128
+LINEAR_BATCH_SIZE_TEST: 16
+LINEAR_LR: 0.003
+
+# MoCo Parameters
+MOCO_DIM: 128
+MOCO_K_FULL: 4096
+MOCO_K_TEST: 64
+MOCO_M: 0.999
+MOCO_T: 0.2
+
+# MTS (Our Method) Parameters
+MTS_LAMBDA: 2.0
+MTS_K_HARD_FULL: 32
+MTS_K_HARD_TEST: 8
+
+# DCL (Debiased Contrastive Learning) Parameters
+DCL_TAU_PLUS: 0.1
+
+# SRNS (Score-based Reliability for Negative Samples) Parameters
+SRNS_VAR_THRESH: 0.0001

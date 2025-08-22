@@ -265,159 +265,70 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...ht Frame (ETF) \cite{zhu\_2021\_geometric}
-                                                  . This geometry represents...
+
+Package natbib Warning: Citation `zhu-2021-geometric' on page 1 undefined on in
+put line 55.
 
 
-Package natbib Warning: Citation `zhu\T1\textunderscore2021\T1\textunderscorege
-ometric' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.57 ...r architectures \cite{skenk\_2024\_neural}
-                                                  . Instead, the inherent re...
+Package natbib Warning: Citation `skenk-2024-neural' on page 1 undefined on inp
+ut line 57.
 
 
-Package natbib Warning: Citation `skenk\T1\textunderscore2024\T1\textunderscore
-neural' on page 1 undefined on input line 57.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.57 ... applications \cite{guo\_2023\_contranorm}
-                                                  . On the other hand, the s...
-
-
-Package natbib Warning: Citation `guo\T1\textunderscore2023\T1\textunderscoreco
-ntranorm' on page 1 undefined on input line 57.
+Package natbib Warning: Citation `guo-2023-contranorm' on page 1 undefined on i
+nput line 57.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}]
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.71 ...hin a batch \cite{guo\_2023\_architecture}
-                                                  . These methods typically ...
+
+Package natbib Warning: Citation `guo-2023-architecture' on page 2 undefined on
+ input line 71.
 
 
-Package natbib Warning: Citation `guo\T1\textunderscore2023\T1\textunderscorear
-chitecture' on page 2 undefined on input line 71.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.73 ... distribution \cite{guo\_2023\_contranorm}
-                                                  . While theoretically soun...
+Package natbib Warning: Citation `guo-2023-contranorm' on page 2 undefined on i
+nput line 73.
 
 
-Package natbib Warning: Citation `guo\T1\textunderscore2023\T1\textunderscoreco
-ntranorm' on page 2 undefined on input line 73.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.75 ...ht Frame (ETF) \cite{zhu\_2021\_geometric}
-                                                  . This has been observed i...
+Package natbib Warning: Citation `zhu-2021-geometric' on page 2 undefined on in
+put line 75.
 
 
-Package natbib Warning: Citation `zhu\T1\textunderscore2021\T1\textunderscorege
-ometric' on page 2 undefined on input line 75.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.75 ... structure \cite{kothapalli\_2023\_neural}
-                                                  . The ETF geometry has bee...
+Package natbib Warning: Citation `kothapalli-2023-neural' on page 2 undefined o
+n input line 75.
 
 
-Package natbib Warning: Citation `kothapalli\T1\textunderscore2023\T1\textunder
-scoreneural' on page 2 undefined on input line 75.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.75 ...ure sub-optimal \cite{skenk\_2024\_neural}
-                                                  . This new theory suggests...
+Package natbib Warning: Citation `skenk-2024-neural' on page 2 undefined on inp
+ut line 75.
 
 
-Package natbib Warning: Citation `skenk\T1\textunderscore2024\T1\textunderscore
-neural' on page 2 undefined on input line 75.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.75 ...sed representations \cite{yang\_2023\_are}
-                                                  , ASAR is a constructive m...
-
-
-Package natbib Warning: Citation `yang\T1\textunderscore2023\T1\textunderscorea
-re' on page 2 undefined on input line 75.
+Package natbib Warning: Citation `yang-2023-are' on page 2 undefined on input l
+ine 75.
 
 [2]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.89 ...ETF) structure \cite{zhu\_2021\_geometric}
-                                                  . This means within-class ...
+
+Package natbib Warning: Citation `zhu-2021-geometric' on page 3 undefined on in
+put line 89.
 
 
-Package natbib Warning: Citation `zhu\T1\textunderscore2021\T1\textunderscorege
-ometric' on page 3 undefined on input line 89.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.89 ...on quality \cite{kothapalli\_2023\_neural}
-                                                  . However, a recent theore...
+Package natbib Warning: Citation `kothapalli-2023-neural' on page 3 undefined o
+n input line 89.
 
 
-Package natbib Warning: Citation `kothapalli\T1\textunderscore2023\T1\textunder
-scoreneural' on page 3 undefined on input line 89.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.89 ...lly sub-optimal \cite{skenk\_2024\_neural}
-                                                  . This 'low-rank bias' the...
+Package natbib Warning: Citation `skenk-2024-neural' on page 3 undefined on inp
+ut line 89.
 
 
-Package natbib Warning: Citation `skenk\T1\textunderscore2024\T1\textunderscore
-neural' on page 3 undefined on input line 89.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.93 ... bias' paradigm \cite{skenk\_2024\_neural}
-                                                  . ASAR introduces a dual-a...
-
-
-Package natbib Warning: Citation `skenk\T1\textunderscore2024\T1\textunderscore
-neural' on page 3 undefined on input line 93.
+Package natbib Warning: Citation `skenk-2024-neural' on page 3 undefined on inp
+ut line 93.
 
 [3] [4] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.129 ...mentations \cite{guo\_2023\_architecture}
-                                                  .
 
-Package natbib Warning: Citation `guo\T1\textunderscore2023\T1\textunderscorear
-chitecture' on page 5 undefined on input line 129.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.132 ...{ContraNorm} \cite{guo\_2023\_contranorm}
-                                                  , a global $O(N^2)$ regula...
+Package natbib Warning: Citation `guo-2023-architecture' on page 5 undefined on
+ input line 129.
 
 
-Package natbib Warning: Citation `guo\T1\textunderscore2023\T1\textunderscoreco
-ntranorm' on page 5 undefined on input line 132.
+Package natbib Warning: Citation `guo-2023-contranorm' on page 5 undefined on i
+nput line 132.
 
 [5]
 
@@ -425,42 +336,50 @@ LaTeX Warning: Reference `fig:experiment_summary' on page 6 undefined on input
 line 151.
 
 
-Overfull \hbox (364.51501pt too wide) in paragraph at lines 165--165
-[]        \T1/pcr/m/n/10 "ogbn-arxiv": "Weights only load failed. torch.seriali
-zation.add_safe_globals needed due to PyTorch version mismatch.",[] 
+Overfull \hbox (135.91463pt too wide) in paragraph at lines 166--166
+[]        \T1/pcr/m/n/7 "ogbn-arxiv": "Weights only load failed. torch.serializ
+ation.add_safe_globals needed due to PyTorch version mismatch.",[] 
 
-Overfull \hbox (244.51501pt too wide) in paragraph at lines 165--165
-[]        \T1/pcr/m/n/10 "ogbn-products": "EOF when reading a line. Potentially
- incomplete download or resource limitation."[] 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.174 ...k bias' theory \cite{skenk\_2024\_neural}
-                                                  , which challenges the opt...
+Overfull \hbox (51.91469pt too wide) in paragraph at lines 166--166
+[]        \T1/pcr/m/n/7 "ogbn-products": "EOF when reading a line. Potentially 
+incomplete download or resource limitation."[] 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.167 ...res. (filename: experiment_summary.json)}
+                                                  
+! Missing $ inserted.
+<inserted text> 
+                $
+l.167 ...res. (filename: experiment_summary.json)}
+                                                  
+! Missing $ inserted.
+<inserted text> 
+                $
+l.167 ...res. (filename: experiment_summary.json)}
+                                                  
+! Missing $ inserted.
+<inserted text> 
+                $
+l.167 ...res. (filename: experiment_summary.json)}
+                                                  
+
+Package natbib Warning: Citation `skenk-2024-neural' on page 6 undefined on inp
+ut line 175.
 
 
-Package natbib Warning: Citation `skenk\T1\textunderscore2024\T1\textunderscore
-neural' on page 6 undefined on input line 174.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.174 ...apse paradigm \cite{zhu\_2021\_geometric}
-                                                  , we identified the need f...
-
-
-Package natbib Warning: Citation `zhu\T1\textunderscore2021\T1\textunderscorege
-ometric' on page 6 undefined on input line 174.
+Package natbib Warning: Citation `zhu-2021-geometric' on page 6 undefined on in
+put line 175.
 
 
 Package natbib Warning: Citation `airas2025' on page 6 undefined on input line 
-182.
+183.
 
 No file paper.bbl.
 
 Package natbib Warning: There were undefined citations.
 
-[6] [7] (./paper.aux)
+[6] (./paper.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -485,81 +404,19 @@ usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb>
-Output written on paper.pdf (7 pages, 165991 bytes).
+Output written on paper.pdf (6 pages, 167077 bytes).
 Transcript written on paper.log.
 This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
 The top-level auxiliary file: paper.aux
-White space in argument---line 5 of file paper.aux
- : \citation{zhu\protect
- :                       \T1\textunderscore 2021\protect \T1\textunderscore geometric}
-I'm skipping whatever remains of this command
-White space in argument---line 6 of file paper.aux
- : \citation{skenk\protect
- :                         \T1\textunderscore 2024\protect \T1\textunderscore neural}
-I'm skipping whatever remains of this command
-White space in argument---line 7 of file paper.aux
- : \citation{guo\protect
- :                       \T1\textunderscore 2023\protect \T1\textunderscore contranorm}
-I'm skipping whatever remains of this command
-White space in argument---line 11 of file paper.aux
- : \citation{guo\protect
- :                       \T1\textunderscore 2023\protect \T1\textunderscore architecture}
-I'm skipping whatever remains of this command
-White space in argument---line 12 of file paper.aux
- : \citation{guo\protect
- :                       \T1\textunderscore 2023\protect \T1\textunderscore contranorm}
-I'm skipping whatever remains of this command
-White space in argument---line 13 of file paper.aux
- : \citation{zhu\protect
- :                       \T1\textunderscore 2021\protect \T1\textunderscore geometric}
-I'm skipping whatever remains of this command
-White space in argument---line 14 of file paper.aux
- : \citation{kothapalli\protect
- :                              \T1\textunderscore 2023\protect \T1\textunderscore neural}
-I'm skipping whatever remains of this command
-White space in argument---line 15 of file paper.aux
- : \citation{skenk\protect
- :                         \T1\textunderscore 2024\protect \T1\textunderscore neural}
-I'm skipping whatever remains of this command
-White space in argument---line 16 of file paper.aux
- : \citation{yang\protect
- :                        \T1\textunderscore 2023\protect \T1\textunderscore are}
-I'm skipping whatever remains of this command
-White space in argument---line 20 of file paper.aux
- : \citation{zhu\protect
- :                       \T1\textunderscore 2021\protect \T1\textunderscore geometric}
-I'm skipping whatever remains of this command
-White space in argument---line 21 of file paper.aux
- : \citation{kothapalli\protect
- :                              \T1\textunderscore 2023\protect \T1\textunderscore neural}
-I'm skipping whatever remains of this command
-White space in argument---line 22 of file paper.aux
- : \citation{skenk\protect
- :                         \T1\textunderscore 2024\protect \T1\textunderscore neural}
-I'm skipping whatever remains of this command
-White space in argument---line 23 of file paper.aux
- : \citation{skenk\protect
- :                         \T1\textunderscore 2024\protect \T1\textunderscore neural}
-I'm skipping whatever remains of this command
-White space in argument---line 35 of file paper.aux
- : \citation{guo\protect
- :                       \T1\textunderscore 2023\protect \T1\textunderscore architecture}
-I'm skipping whatever remains of this command
-White space in argument---line 36 of file paper.aux
- : \citation{guo\protect
- :                       \T1\textunderscore 2023\protect \T1\textunderscore contranorm}
-I'm skipping whatever remains of this command
-White space in argument---line 40 of file paper.aux
- : \citation{skenk\protect
- :                         \T1\textunderscore 2024\protect \T1\textunderscore neural}
-I'm skipping whatever remains of this command
-White space in argument---line 41 of file paper.aux
- : \citation{zhu\protect
- :                       \T1\textunderscore 2021\protect \T1\textunderscore geometric}
-I'm skipping whatever remains of this command
 The style file: iclr2024_conference.bst
 Database file #1: references.bib
-(There were 17 error messages)
+Warning--I didn't find a database entry for "zhu-2021-geometric"
+Warning--I didn't find a database entry for "skenk-2024-neural"
+Warning--I didn't find a database entry for "guo-2023-contranorm"
+Warning--I didn't find a database entry for "guo-2023-architecture"
+Warning--I didn't find a database entry for "kothapalli-2023-neural"
+Warning--I didn't find a database entry for "yang-2023-are"
+(There were 6 warnings)
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
@@ -828,193 +685,113 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...ht Frame (ETF) \cite{zhu\_2021\_geometric}
-                                                  . This geometry represents...
+
+Package natbib Warning: Citation `zhu-2021-geometric' on page 1 undefined on in
+put line 55.
 
 
-Package natbib Warning: Citation `zhu\T1\textunderscore2021\T1\textunderscorege
-ometric' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.57 ...r architectures \cite{skenk\_2024\_neural}
-                                                  . Instead, the inherent re...
+Package natbib Warning: Citation `skenk-2024-neural' on page 1 undefined on inp
+ut line 57.
 
 
-Package natbib Warning: Citation `skenk\T1\textunderscore2024\T1\textunderscore
-neural' on page 1 undefined on input line 57.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.57 ... applications \cite{guo\_2023\_contranorm}
-                                                  . On the other hand, the s...
-
-
-Package natbib Warning: Citation `guo\T1\textunderscore2023\T1\textunderscoreco
-ntranorm' on page 1 undefined on input line 57.
+Package natbib Warning: Citation `guo-2023-contranorm' on page 1 undefined on i
+nput line 57.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}]
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.71 ...hin a batch \cite{guo\_2023\_architecture}
-                                                  . These methods typically ...
+
+Package natbib Warning: Citation `guo-2023-architecture' on page 2 undefined on
+ input line 71.
 
 
-Package natbib Warning: Citation `guo\T1\textunderscore2023\T1\textunderscorear
-chitecture' on page 2 undefined on input line 71.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.73 ... distribution \cite{guo\_2023\_contranorm}
-                                                  . While theoretically soun...
+Package natbib Warning: Citation `guo-2023-contranorm' on page 2 undefined on i
+nput line 73.
 
 
-Package natbib Warning: Citation `guo\T1\textunderscore2023\T1\textunderscoreco
-ntranorm' on page 2 undefined on input line 73.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.75 ...ht Frame (ETF) \cite{zhu\_2021\_geometric}
-                                                  . This has been observed i...
+Package natbib Warning: Citation `zhu-2021-geometric' on page 2 undefined on in
+put line 75.
 
 
-Package natbib Warning: Citation `zhu\T1\textunderscore2021\T1\textunderscorege
-ometric' on page 2 undefined on input line 75.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.75 ... structure \cite{kothapalli\_2023\_neural}
-                                                  . The ETF geometry has bee...
+Package natbib Warning: Citation `kothapalli-2023-neural' on page 2 undefined o
+n input line 75.
 
 
-Package natbib Warning: Citation `kothapalli\T1\textunderscore2023\T1\textunder
-scoreneural' on page 2 undefined on input line 75.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.75 ...ure sub-optimal \cite{skenk\_2024\_neural}
-                                                  . This new theory suggests...
+Package natbib Warning: Citation `skenk-2024-neural' on page 2 undefined on inp
+ut line 75.
 
 
-Package natbib Warning: Citation `skenk\T1\textunderscore2024\T1\textunderscore
-neural' on page 2 undefined on input line 75.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.75 ...sed representations \cite{yang\_2023\_are}
-                                                  , ASAR is a constructive m...
-
-
-Package natbib Warning: Citation `yang\T1\textunderscore2023\T1\textunderscorea
-re' on page 2 undefined on input line 75.
+Package natbib Warning: Citation `yang-2023-are' on page 2 undefined on input l
+ine 75.
 
 [2]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.89 ...ETF) structure \cite{zhu\_2021\_geometric}
-                                                  . This means within-class ...
+
+Package natbib Warning: Citation `zhu-2021-geometric' on page 3 undefined on in
+put line 89.
 
 
-Package natbib Warning: Citation `zhu\T1\textunderscore2021\T1\textunderscorege
-ometric' on page 3 undefined on input line 89.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.89 ...on quality \cite{kothapalli\_2023\_neural}
-                                                  . However, a recent theore...
+Package natbib Warning: Citation `kothapalli-2023-neural' on page 3 undefined o
+n input line 89.
 
 
-Package natbib Warning: Citation `kothapalli\T1\textunderscore2023\T1\textunder
-scoreneural' on page 3 undefined on input line 89.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.89 ...lly sub-optimal \cite{skenk\_2024\_neural}
-                                                  . This 'low-rank bias' the...
+Package natbib Warning: Citation `skenk-2024-neural' on page 3 undefined on inp
+ut line 89.
 
 
-Package natbib Warning: Citation `skenk\T1\textunderscore2024\T1\textunderscore
-neural' on page 3 undefined on input line 89.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.93 ... bias' paradigm \cite{skenk\_2024\_neural}
-                                                  . ASAR introduces a dual-a...
-
-
-Package natbib Warning: Citation `skenk\T1\textunderscore2024\T1\textunderscore
-neural' on page 3 undefined on input line 93.
+Package natbib Warning: Citation `skenk-2024-neural' on page 3 undefined on inp
+ut line 93.
 
 [3] [4] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.129 ...mentations \cite{guo\_2023\_architecture}
-                                                  .
 
-Package natbib Warning: Citation `guo\T1\textunderscore2023\T1\textunderscorear
-chitecture' on page 5 undefined on input line 129.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.132 ...{ContraNorm} \cite{guo\_2023\_contranorm}
-                                                  , a global $O(N^2)$ regula...
+Package natbib Warning: Citation `guo-2023-architecture' on page 5 undefined on
+ input line 129.
 
 
-Package natbib Warning: Citation `guo\T1\textunderscore2023\T1\textunderscoreco
-ntranorm' on page 5 undefined on input line 132.
+Package natbib Warning: Citation `guo-2023-contranorm' on page 5 undefined on i
+nput line 132.
 
 [5]
-Overfull \hbox (364.51501pt too wide) in paragraph at lines 165--165
-[]        \T1/pcr/m/n/10 "ogbn-arxiv": "Weights only load failed. torch.seriali
-zation.add_safe_globals needed due to PyTorch version mismatch.",[] 
+Overfull \hbox (135.91463pt too wide) in paragraph at lines 166--166
+[]        \T1/pcr/m/n/7 "ogbn-arxiv": "Weights only load failed. torch.serializ
+ation.add_safe_globals needed due to PyTorch version mismatch.",[] 
 
-Overfull \hbox (244.51501pt too wide) in paragraph at lines 165--165
-[]        \T1/pcr/m/n/10 "ogbn-products": "EOF when reading a line. Potentially
- incomplete download or resource limitation."[] 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.174 ...k bias' theory \cite{skenk\_2024\_neural}
-                                                  , which challenges the opt...
+Overfull \hbox (51.91469pt too wide) in paragraph at lines 166--166
+[]        \T1/pcr/m/n/7 "ogbn-products": "EOF when reading a line. Potentially 
+incomplete download or resource limitation."[] 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.167 ...res. (filename: experiment_summary.json)}
+                                                  
+! Missing $ inserted.
+<inserted text> 
+                $
+l.167 ...res. (filename: experiment_summary.json)}
+                                                  
+! Missing $ inserted.
+<inserted text> 
+                $
+l.167 ...res. (filename: experiment_summary.json)}
+                                                  
+! Missing $ inserted.
+<inserted text> 
+                $
+l.167 ...res. (filename: experiment_summary.json)}
+                                                  
+
+Package natbib Warning: Citation `skenk-2024-neural' on page 6 undefined on inp
+ut line 175.
 
 
-Package natbib Warning: Citation `skenk\T1\textunderscore2024\T1\textunderscore
-neural' on page 6 undefined on input line 174.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.174 ...apse paradigm \cite{zhu\_2021\_geometric}
-                                                  , we identified the need f...
-
-
-Package natbib Warning: Citation `zhu\T1\textunderscore2021\T1\textunderscorege
-ometric' on page 6 undefined on input line 174.
+Package natbib Warning: Citation `zhu-2021-geometric' on page 6 undefined on in
+put line 175.
 
 
 Package natbib Warning: Citation `airas2025' on page 6 undefined on input line 
-182.
+183.
 
-(./paper.bbl [6])
+(./paper.bbl
+Underfull \vbox (badness 1087) has occurred while \output is active [6])
 
 Package natbib Warning: There were undefined citations.
 
@@ -1036,7 +813,7 @@ usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb>
-Output written on paper.pdf (7 pages, 167479 bytes).
+Output written on paper.pdf (7 pages, 168922 bytes).
 Transcript written on paper.log.
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
@@ -1306,189 +1083,109 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...ht Frame (ETF) \cite{zhu\_2021\_geometric}
-                                                  . This geometry represents...
+
+Package natbib Warning: Citation `zhu-2021-geometric' on page 1 undefined on in
+put line 55.
 
 
-Package natbib Warning: Citation `zhu\T1\textunderscore2021\T1\textunderscorege
-ometric' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.57 ...r architectures \cite{skenk\_2024\_neural}
-                                                  . Instead, the inherent re...
+Package natbib Warning: Citation `skenk-2024-neural' on page 1 undefined on inp
+ut line 57.
 
 
-Package natbib Warning: Citation `skenk\T1\textunderscore2024\T1\textunderscore
-neural' on page 1 undefined on input line 57.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.57 ... applications \cite{guo\_2023\_contranorm}
-                                                  . On the other hand, the s...
-
-
-Package natbib Warning: Citation `guo\T1\textunderscore2023\T1\textunderscoreco
-ntranorm' on page 1 undefined on input line 57.
+Package natbib Warning: Citation `guo-2023-contranorm' on page 1 undefined on i
+nput line 57.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}]
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.71 ...hin a batch \cite{guo\_2023\_architecture}
-                                                  . These methods typically ...
+
+Package natbib Warning: Citation `guo-2023-architecture' on page 2 undefined on
+ input line 71.
 
 
-Package natbib Warning: Citation `guo\T1\textunderscore2023\T1\textunderscorear
-chitecture' on page 2 undefined on input line 71.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.73 ... distribution \cite{guo\_2023\_contranorm}
-                                                  . While theoretically soun...
+Package natbib Warning: Citation `guo-2023-contranorm' on page 2 undefined on i
+nput line 73.
 
 
-Package natbib Warning: Citation `guo\T1\textunderscore2023\T1\textunderscoreco
-ntranorm' on page 2 undefined on input line 73.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.75 ...ht Frame (ETF) \cite{zhu\_2021\_geometric}
-                                                  . This has been observed i...
+Package natbib Warning: Citation `zhu-2021-geometric' on page 2 undefined on in
+put line 75.
 
 
-Package natbib Warning: Citation `zhu\T1\textunderscore2021\T1\textunderscorege
-ometric' on page 2 undefined on input line 75.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.75 ... structure \cite{kothapalli\_2023\_neural}
-                                                  . The ETF geometry has bee...
+Package natbib Warning: Citation `kothapalli-2023-neural' on page 2 undefined o
+n input line 75.
 
 
-Package natbib Warning: Citation `kothapalli\T1\textunderscore2023\T1\textunder
-scoreneural' on page 2 undefined on input line 75.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.75 ...ure sub-optimal \cite{skenk\_2024\_neural}
-                                                  . This new theory suggests...
+Package natbib Warning: Citation `skenk-2024-neural' on page 2 undefined on inp
+ut line 75.
 
 
-Package natbib Warning: Citation `skenk\T1\textunderscore2024\T1\textunderscore
-neural' on page 2 undefined on input line 75.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.75 ...sed representations \cite{yang\_2023\_are}
-                                                  , ASAR is a constructive m...
-
-
-Package natbib Warning: Citation `yang\T1\textunderscore2023\T1\textunderscorea
-re' on page 2 undefined on input line 75.
+Package natbib Warning: Citation `yang-2023-are' on page 2 undefined on input l
+ine 75.
 
 [2]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.89 ...ETF) structure \cite{zhu\_2021\_geometric}
-                                                  . This means within-class ...
+
+Package natbib Warning: Citation `zhu-2021-geometric' on page 3 undefined on in
+put line 89.
 
 
-Package natbib Warning: Citation `zhu\T1\textunderscore2021\T1\textunderscorege
-ometric' on page 3 undefined on input line 89.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.89 ...on quality \cite{kothapalli\_2023\_neural}
-                                                  . However, a recent theore...
+Package natbib Warning: Citation `kothapalli-2023-neural' on page 3 undefined o
+n input line 89.
 
 
-Package natbib Warning: Citation `kothapalli\T1\textunderscore2023\T1\textunder
-scoreneural' on page 3 undefined on input line 89.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.89 ...lly sub-optimal \cite{skenk\_2024\_neural}
-                                                  . This 'low-rank bias' the...
+Package natbib Warning: Citation `skenk-2024-neural' on page 3 undefined on inp
+ut line 89.
 
 
-Package natbib Warning: Citation `skenk\T1\textunderscore2024\T1\textunderscore
-neural' on page 3 undefined on input line 89.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.93 ... bias' paradigm \cite{skenk\_2024\_neural}
-                                                  . ASAR introduces a dual-a...
-
-
-Package natbib Warning: Citation `skenk\T1\textunderscore2024\T1\textunderscore
-neural' on page 3 undefined on input line 93.
+Package natbib Warning: Citation `skenk-2024-neural' on page 3 undefined on inp
+ut line 93.
 
 [3] [4] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.129 ...mentations \cite{guo\_2023\_architecture}
-                                                  .
 
-Package natbib Warning: Citation `guo\T1\textunderscore2023\T1\textunderscorear
-chitecture' on page 5 undefined on input line 129.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.132 ...{ContraNorm} \cite{guo\_2023\_contranorm}
-                                                  , a global $O(N^2)$ regula...
+Package natbib Warning: Citation `guo-2023-architecture' on page 5 undefined on
+ input line 129.
 
 
-Package natbib Warning: Citation `guo\T1\textunderscore2023\T1\textunderscoreco
-ntranorm' on page 5 undefined on input line 132.
+Package natbib Warning: Citation `guo-2023-contranorm' on page 5 undefined on i
+nput line 132.
 
 [5]
-Overfull \hbox (364.51501pt too wide) in paragraph at lines 165--165
-[]        \T1/pcr/m/n/10 "ogbn-arxiv": "Weights only load failed. torch.seriali
-zation.add_safe_globals needed due to PyTorch version mismatch.",[] 
+Overfull \hbox (135.91463pt too wide) in paragraph at lines 166--166
+[]        \T1/pcr/m/n/7 "ogbn-arxiv": "Weights only load failed. torch.serializ
+ation.add_safe_globals needed due to PyTorch version mismatch.",[] 
 
-Overfull \hbox (244.51501pt too wide) in paragraph at lines 165--165
-[]        \T1/pcr/m/n/10 "ogbn-products": "EOF when reading a line. Potentially
- incomplete download or resource limitation."[] 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.174 ...k bias' theory \cite{skenk\_2024\_neural}
-                                                  , which challenges the opt...
+Overfull \hbox (51.91469pt too wide) in paragraph at lines 166--166
+[]        \T1/pcr/m/n/7 "ogbn-products": "EOF when reading a line. Potentially 
+incomplete download or resource limitation."[] 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.167 ...res. (filename: experiment_summary.json)}
+                                                  
+! Missing $ inserted.
+<inserted text> 
+                $
+l.167 ...res. (filename: experiment_summary.json)}
+                                                  
+! Missing $ inserted.
+<inserted text> 
+                $
+l.167 ...res. (filename: experiment_summary.json)}
+                                                  
+! Missing $ inserted.
+<inserted text> 
+                $
+l.167 ...res. (filename: experiment_summary.json)}
+                                                  
+
+Package natbib Warning: Citation `skenk-2024-neural' on page 6 undefined on inp
+ut line 175.
 
 
-Package natbib Warning: Citation `skenk\T1\textunderscore2024\T1\textunderscore
-neural' on page 6 undefined on input line 174.
+Package natbib Warning: Citation `zhu-2021-geometric' on page 6 undefined on in
+put line 175.
 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.174 ...apse paradigm \cite{zhu\_2021\_geometric}
-                                                  , we identified the need f...
-
-
-Package natbib Warning: Citation `zhu\T1\textunderscore2021\T1\textunderscorege
-ometric' on page 6 undefined on input line 174.
-
-(./paper.bbl [6])
+(./paper.bbl
+Underfull \vbox (badness 1087) has occurred while \output is active [6])
 
 Package natbib Warning: There were undefined citations.
 
@@ -1505,5 +1202,5 @@ usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb>
-Output written on paper.pdf (7 pages, 167545 bytes).
+Output written on paper.pdf (7 pages, 169005 bytes).
 Transcript written on paper.log.

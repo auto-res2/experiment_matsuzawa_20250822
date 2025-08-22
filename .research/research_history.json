@@ -6,5 +6,52 @@
     "Hard Negative Mining SSL",
     "Debiased Contrastive Learning",
     "InfoNCE Negative Sampling"
+  ],
+  "research_study_list": [
+    {
+      "title": "Contrastive Learning with Hard Negative Samples"
+    },
+    {
+      "title": "Hard Negative Mixing for Contrastive Learning"
+    },
+    {
+      "title": "Negative Sampling in Semi-Supervised learning"
+    },
+    {
+      "title": "Contrastive Learning with Hard Negative Samples"
+    },
+    {
+      "title": "Hard Negative Mixing for Contrastive Learning"
+    },
+    {
+      "title": "Difficulty-Based Sampling for Debiased Contrastive Representation Learning"
+    },
+    {
+      "title": "Hard Negative Mixing for Contrastive Learning"
+    },
+    {
+      "title": "Contrastive Learning with Hard Negative Samples"
+    },
+    {
+      "title": "Boosting Semi-Supervised Learning by Exploiting All Unlabeled Data"
+    },
+    {
+      "title": "Debiased Contrastive Learning"
+    },
+    {
+      "title": "Difficulty-Based Sampling for Debiased Contrastive Representation Learning"
+    },
+    {
+      "title": "Unbiased Classification through Bias-Contrastive and Bias-Balanced Learning"
+    },
+    {
+      "title": "Simplify and Robustify Negative Sampling for Implicit Collaborative Filtering"
+    },
+    {
+      "title": "Approximate Nearest Neighbor Negative Contrastive Learning for Dense Text Retrieval"
+    },
+    {
+      "title": "Efficient Training of Retrieval Models using Negative Cache"
+    }
   ]
 }

@@ -1,0 +1,37 @@
+seed: 7
+# device: 'cuda' uses GPU if available; otherwise set to 'cpu'
+device: 'cuda'
+
+paths:
+  images_dir: .research/iteration1/images
+  data_dir: data
+  models_dir: models
+
+data:
+  pattern: blobs         # blobs | stripes
+  normal_noise: 0.05
+  n_train: 1000
+  n_val: 200
+  n_test: 300
+
+geometry:
+  k: 4                   # tangent subspace dimension
+  sigma_T: 0.25          # tangent smoothing std
+  sigma_N: 0.15          # normal smoothing std (beta ~ 0.6)
+
+train:
+  epochs: 5
+  batch_size: 64
+  lr: 0.001
+  lambda_R: 0.0005       # TaReS penalty weight
+
+eval:
+  batch_size: 128
+  M_cert: 256
+  ry_thresholds: [0.25, 0.5, 0.75]
+  # attack settings
+  attack_steps: 20
+  attack_n_eval: 64
+  attack_eps_y_list: [0.25, 0.5, 0.75]
+  # transitivity settings
+  trans_n_eval: 64

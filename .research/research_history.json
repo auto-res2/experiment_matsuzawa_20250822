@@ -6,5 +6,52 @@
     "PairNorm oversmoothing",
     "DropEdge GNN",
     "APPNP oversmoothing"
+  ],
+  "research_study_list": [
+    {
+      "title": "A Non-Asymptotic Analysis of Oversmoothing in Graph Neural Networks"
+    },
+    {
+      "title": "Towards Deeper Graph Neural Networks with Differentiable Group Normalization"
+    },
+    {
+      "title": "Demystifying Oversmoothing in Attention-Based Graph Neural Networks"
+    },
+    {
+      "title": "From Node Interaction To Hop Interaction: New Effective and Scalable Graph Learning Paradigm"
+    },
+    {
+      "title": "INDIGO: GNN-Based Inductive Knowledge Graph Completion Using Pair-Wise Encoding"
+    },
+    {
+      "title": "Universal Graph Convolutional Networks"
+    },
+    {
+      "title": "PairNorm: Tackling Oversmoothing in GNNs"
+    },
+    {
+      "title": "ContraNorm: A Contrastive Learning Perspective on Oversmoothing and Beyond"
+    },
+    {
+      "title": "Towards Deeper Graph Neural Networks with Differentiable Group Normalization"
+    },
+    {
+      "title": "DropEdge: Towards Deep Graph Convolutional Networks on Node Classification"
+    },
+    {
+      "title": "DropGNN: Random Dropouts Increase the Expressiveness of Graph Neural Networks"
+    },
+    {
+      "title": "DropGNN: Random Dropouts Increase the Expressiveness of Graph Neural Networks"
+    },
+    {
+      "title": "A Non-Asymptotic Analysis of Oversmoothing in Graph Neural Networks"
+    },
+    {
+      "title": "Node Dependent Local Smoothing for Scalable Graph Learning"
+    },
+    {
+      "title": "Node Dependent Local Smoothing for Scalable Graph Learning"
+    }
   ]
 }

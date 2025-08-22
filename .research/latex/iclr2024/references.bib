@@ -5,3 +5,352 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{author_year_anyda,
+ title = {AnyDA: Anytime Domain Adaptation}
+}
+
+@article{author_year_comprehensive,
+ title = {Comprehensive Knowledge Distillation with Causal Intervention}
+}
+
+@article{author_year_knowledge,
+ title = {Knowledge Distillation with Auxiliary Variable}
+}
+
+@article{author_year_knowledge,
+ title = {Knowledge Distillation with Auxiliary Variable}
+}
+
+@article{author_year_large,
+ title = {Large Scale Dataset Distillation with Domain Shift}
+}
+
+@article{author_year_multi,
+ title = {Multi-Level Logit Distillation}
+}
+
+@article{chung_2020_feature,
+ abstract = {Feature maps contain rich information about image intensity and spatial
+correlation. However, previous online knowledge distillation methods only
+utilize the class probabilities. Thus in this paper, we propose an online
+knowledge distillation method that transfers not only the knowledge of the
+class probabilities but also that of the feature map using the adversarial
+training framework. We train multiple networks simultaneously by employing
+discriminators to distinguish the feature map distributions of different
+networks. Each network has its corresponding discriminator which discriminates
+the feature map from its own as fake while classifying that of the other
+network as real. By training a network to fool the corresponding discriminator,
+it can learn the other network's feature map distribution. We show that our
+method performs better than the conventional direct alignment method such as L1
+and is more suitable for online distillation. Also, we propose a novel cyclic
+learning scheme for training more than two networks together. We have applied
+our method to various network architectures on the classification task and
+discovered a significant improvement of performance especially in the case of
+training a pair of a small network and a large one.},
+ arxiv_url = {https://arxiv.org/pdf/2002.01775v3.pdf},
+ author = {Inseop Chung and SeongUk Park and Jangho Kim and Nojun Kwak},
+ title = {Feature-map-level Online Adversarial Knowledge Distillation},
+ year = {2020}
+}
+
+@article{feng_2020_unsupervised,
+ abstract = {Conventional unsupervised multi-source domain adaptation (UMDA) methods
+assume all source domains can be accessed directly. This neglects the
+privacy-preserving policy, that is, all the data and computations must be kept
+decentralized. There exists three problems in this scenario: (1) Minimizing the
+domain distance requires the pairwise calculation of the data from source and
+target domains, which is not accessible. (2) The communication cost and privacy
+security limit the application of UMDA methods (e.g., the domain adversarial
+training). (3) Since users have no authority to check the data quality, the
+irrelevant or malicious source domains are more likely to appear, which causes
+negative transfer. In this study, we propose a privacy-preserving UMDA paradigm
+named Knowledge Distillation based Decentralized Domain Adaptation (KD3A),
+which performs domain adaptation through the knowledge distillation on models
+from different source domains. KD3A solves the above problems with three
+components: (1) A multi-source knowledge distillation method named Knowledge
+Vote to learn high-quality domain consensus knowledge. (2) A dynamic weighting
+strategy named Consensus Focus to identify both the malicious and irrelevant
+domains. (3) A decentralized optimization strategy for domain distance named
+BatchNorm MMD. The extensive experiments on DomainNet demonstrate that KD3A is
+robust to the negative transfer and brings a 100x reduction of communication
+cost compared with other decentralized UMDA methods. Moreover, our KD3A
+significantly outperforms state-of-the-art UMDA approaches.},
+ arxiv_url = {https://arxiv.org/pdf/2011.09757v7.pdf},
+ author = {Hao-Zhe Feng and Zhaoyang You and Minghao Chen and Tianye Zhang and Minfeng Zhu and Fei Wu and Chao Wu and Wei Chen},
+ title = {KD3A: Unsupervised Multi-Source Decentralized Domain Adaptation via Knowledge Distillation},
+ year = {2020}
+}
+
+@article{mazaheri_2020_robust,
+ abstract = {Varying domains and biased datasets can lead to differences between the
+training and the target distributions, known as covariate shift. Current
+approaches for alleviating this often rely on estimating the ratio of training
+and target probability density functions. These techniques require parameter
+tuning and can be unstable across different datasets. We present a new method
+for handling covariate shift using the empirical cumulative distribution
+function estimates of the target distribution by a rigorous generalization of a
+recent idea proposed by Vapnik and Izmailov. Further, we show experimentally
+that our method is more robust in its predictions, is not reliant on parameter
+tuning and shows similar classification performance compared to the current
+state-of-the-art techniques on synthetic and real datasets.},
+ arxiv_url = {https://arxiv.org/pdf/2010.12687v1.pdf},
+ author = {Bijan Mazaheri and Siddharth Jain and Jehoshua Bruck},
+ title = {Robust Correction of Sampling Bias using Cumulative Distribution Functions},
+ year = {2020}
+}
+
+@article{niu_2022_respecting,
+ abstract = {Knowledge distillation (KD) is essentially a process of transferring a
+teacher model's behavior, e.g., network response, to a student model. The
+network response serves as additional supervision to formulate the machine
+domain, which uses the data collected from the human domain as a transfer set.
+Traditional KD methods hold an underlying assumption that the data collected in
+both human domain and machine domain are both independent and identically
+distributed (IID). We point out that this naive assumption is unrealistic and
+there is indeed a transfer gap between the two domains. Although the gap offers
+the student model external knowledge from the machine domain, the imbalanced
+teacher knowledge would make us incorrectly estimate how much to transfer from
+teacher to student per sample on the non-IID transfer set. To tackle this
+challenge, we propose Inverse Probability Weighting Distillation (IPWD) that
+estimates the propensity score of a training sample belonging to the machine
+domain, and assigns its inverse amount to compensate for under-represented
+samples. Experiments on CIFAR-100 and ImageNet demonstrate the effectiveness of
+IPWD for both two-stage distillation and one-stage self-distillation.},
+ arxiv_url = {https://arxiv.org/pdf/2210.12787v1.pdf},
+ author = {Yulei Niu and Long Chen and Chang Zhou and Hanwang Zhang},
+ github_url = {https://github.com/bellymonster/Weighted-Soft-Label-Distillation},
+ title = {Respecting Transfer Gap in Knowledge Distillation},
+ year = {2022}
+}
+
+@article{niu_2022_respecting,
+ abstract = {Knowledge distillation (KD) is essentially a process of transferring a
+teacher model's behavior, e.g., network response, to a student model. The
+network response serves as additional supervision to formulate the machine
+domain, which uses the data collected from the human domain as a transfer set.
+Traditional KD methods hold an underlying assumption that the data collected in
+both human domain and machine domain are both independent and identically
+distributed (IID). We point out that this naive assumption is unrealistic and
+there is indeed a transfer gap between the two domains. Although the gap offers
+the student model external knowledge from the machine domain, the imbalanced
+teacher knowledge would make us incorrectly estimate how much to transfer from
+teacher to student per sample on the non-IID transfer set. To tackle this
+challenge, we propose Inverse Probability Weighting Distillation (IPWD) that
+estimates the propensity score of a training sample belonging to the machine
+domain, and assigns its inverse amount to compensate for under-represented
+samples. Experiments on CIFAR-100 and ImageNet demonstrate the effectiveness of
+IPWD for both two-stage distillation and one-stage self-distillation.},
+ arxiv_url = {https://arxiv.org/pdf/2210.12787v1.pdf},
+ author = {Yulei Niu and Long Chen and Chang Zhou and Hanwang Zhang},
+ github_url = {https://github.com/bellymonster/Weighted-Soft-Label-Distillation},
+ title = {Respecting Transfer Gap in Knowledge Distillation},
+ year = {2022}
+}
+
+@article{ojha_2022_what,
+ abstract = {Knowledge distillation aims to transfer useful information from a teacher
+network to a student network, with the primary goal of improving the student's
+performance for the task at hand. Over the years, there has a been a deluge of
+novel techniques and use cases of knowledge distillation. Yet, despite the
+various improvements, there seems to be a glaring gap in the community's
+fundamental understanding of the process. Specifically, what is the knowledge
+that gets distilled in knowledge distillation? In other words, in what ways
+does the student become similar to the teacher? Does it start to localize
+objects in the same way? Does it get fooled by the same adversarial samples?
+Does its data invariance properties become similar? Our work presents a
+comprehensive study to try to answer these questions. We show that existing
+methods can indeed indirectly distill these properties beyond improving task
+performance. We further study why knowledge distillation might work this way,
+and show that our findings have practical implications as well.},
+ arxiv_url = {https://arxiv.org/pdf/2205.16004v3.pdf},
+ author = {Utkarsh Ojha and Yuheng Li and Anirudh Sundara Rajan and Yingyu Liang and Yong Jae Lee},
+ title = {What Knowledge Gets Distilled in Knowledge Distillation?},
+ year = {2022}
+}
+
+@article{yang_2022_divide,
+ abstract = {Domain Adaptation of Black-box Predictors (DABP) aims to learn a model on an
+unlabeled target domain supervised by a black-box predictor trained on a source
+domain. It does not require access to both the source-domain data and the
+predictor parameters, thus addressing the data privacy and portability issues
+of standard domain adaptation. Existing DABP approaches mostly rely on model
+distillation from the black-box predictor, \emph{i.e.}, training the model with
+its noisy target-domain predictions, which however inevitably introduces the
+confirmation bias accumulated from the prediction noises. To mitigate such
+bias, we propose a new method, named BETA, to incorporate knowledge
+distillation and noisy label learning into one coherent framework. This is
+enabled by a new divide-to-adapt strategy. BETA divides the target domain into
+an easy-to-adapt subdomain with less noise and a hard-to-adapt subdomain. Then
+it deploys mutually-teaching twin networks to filter the predictor errors for
+each other and improve them progressively, from the easy to hard subdomains. As
+such, BETA effectively purifies the noisy labels and reduces error
+accumulation. We theoretically show that the target error of BETA is minimized
+by decreasing the noise ratio of the subdomains. Extensive experiments
+demonstrate BETA outperforms existing methods on all DABP benchmarks, and is
+even comparable with the standard domain adaptation methods that use the
+source-domain data.},
+ arxiv_url = {https://arxiv.org/pdf/2205.14467v1.pdf},
+ author = {Jianfei Yang and Xiangyu Peng and Kai Wang and Zheng Zhu and Jiashi Feng and Lihua Xie and Yang You},
+ github_url = {https://github.com/xyupeng/BETA},
+ title = {Divide to Adapt: Mitigating Confirmation Bias for Domain Adaptation of Black-Box Predictors},
+ year = {2022}
+}
+
+@article{zheng_2024_knowledge,
+ abstract = {As a technique to bridge logit matching and probability distribution
+matching, temperature scaling plays a pivotal role in knowledge distillation
+(KD). Conventionally, temperature scaling is applied to both teacher's logits
+and student's logits in KD. Motivated by some recent works, in this paper, we
+drop instead temperature scaling on the student side, and systematically study
+the resulting variant of KD, dubbed transformed teacher matching (TTM). By
+reinterpreting temperature scaling as a power transform of probability
+distribution, we show that in comparison with the original KD, TTM has an
+inherent R\'enyi entropy term in its objective function, which serves as an
+extra regularization term. Extensive experiment results demonstrate that thanks
+to this inherent regularization, TTM leads to trained students with better
+generalization than the original KD. To further enhance student's capability to
+match teacher's power transformed probability distribution, we introduce a
+sample-adaptive weighting coefficient into TTM, yielding a novel distillation
+approach dubbed weighted TTM (WTTM). It is shown, by comprehensive experiments,
+that although WTTM is simple, it is effective, improves upon TTM, and achieves
+state-of-the-art accuracy performance. Our source code is available at
+https://github.com/zkxufo/TTM.},
+ arxiv_url = {https://arxiv.org/pdf/2402.11148v2.pdf},
+ author = {Kaixiang Zheng and En-Hui Yang},
+ github_url = {https://github.com/zkxufo/TTM},
+ title = {Knowledge Distillation Based on Transformed Teacher Matching},
+ year = {2024}
+}
+
+@article{zhou_2021_rethinking,
+ abstract = {Knowledge distillation is an effective approach to leverage a well-trained
+network or an ensemble of them, named as the teacher, to guide the training of
+a student network. The outputs from the teacher network are used as soft labels
+for supervising the training of a new network. Recent studies
+\citep{muller2019does,yuan2020revisiting} revealed an intriguing property of
+the soft labels that making labels soft serves as a good regularization to the
+student network. From the perspective of statistical learning, regularization
+aims to reduce the variance, however how bias and variance change is not clear
+for training with soft labels. In this paper, we investigate the bias-variance
+tradeoff brought by distillation with soft labels. Specifically, we observe
+that during training the bias-variance tradeoff varies sample-wisely. Further,
+under the same distillation temperature setting, we observe that the
+distillation performance is negatively associated with the number of some
+specific samples, which are named as regularization samples since these samples
+lead to bias increasing and variance decreasing. Nevertheless, we empirically
+find that completely filtering out regularization samples also deteriorates
+distillation performance. Our discoveries inspired us to propose the novel
+weighted soft labels to help the network adaptively handle the sample-wise
+bias-variance tradeoff. Experiments on standard evaluation benchmarks validate
+the effectiveness of our method. Our code is available at
+\url{https://github.com/bellymonster/Weighted-Soft-Label-Distillation}.},
+ arxiv_url = {https://arxiv.org/pdf/2102.00650v1.pdf},
+ author = {Helong Zhou and Liangchen Song and Jiajie Chen and Ye Zhou and Guoli Wang and Junsong Yuan and Qian Zhang},
+ title = {Rethinking Soft Labels for Knowledge Distillation: A Bias–Variance Tradeoff Perspective},
+ year = {2021}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{ahn_2019_variational,
+ abstract = {Transferring knowledge from a teacher neural network pretrained on the same
+or a similar task to a student neural network can significantly improve the
+performance of the student neural network. Existing knowledge transfer
+approaches match the activations or the corresponding hand-crafted features of
+the teacher and the student networks. We propose an information-theoretic
+framework for knowledge transfer which formulates knowledge transfer as
+maximizing the mutual information between the teacher and the student networks.
+We compare our method with existing knowledge transfer methods on both
+knowledge distillation and transfer learning tasks and show that our method
+consistently outperforms existing methods. We further demonstrate the strength
+of our method on knowledge transfer across heterogeneous network architectures
+by transferring knowledge from a convolutional neural network (CNN) to a
+multi-layer perceptron (MLP) on CIFAR-10. The resulting MLP significantly
+outperforms the-state-of-the-art methods and it achieves similar performance to
+the CNN with a single convolutional layer.},
+ arxiv_url = {https://arxiv.org/pdf/1904.05835v1.pdf},
+ author = {Sungsoo Ahn and Shell Xu Hu and Andreas Damianou and Neil D. Lawrence and Zhenwen Dai},
+ title = {Variational information distillation for knowledge transfer.},
+ year = {2019}
+}
+
+@article{ai_2018_unbiased,
+ abstract = {Learning to rank with biased click data is a well-known challenge. A variety
+of methods has been explored to debias click data for learning to rank such as
+click models, result interleaving and, more recently, the unbiased
+learning-to-rank framework based on inverse propensity weighting. Despite their
+differences, most existing studies separate the estimation of click bias
+(namely the \textit{propensity model}) from the learning of ranking algorithms.
+To estimate click propensities, they either conduct online result
+randomization, which can negatively affect the user experience, or offline
+parameter estimation, which has special requirements for click data and is
+optimized for objectives (e.g. click likelihood) that are not directly related
+to the ranking performance of the system. In this work, we address those
+problems by unifying the learning of propensity models and ranking models. We
+find that the problem of estimating a propensity model from click data is a
+dual problem of unbiased learning to rank. Based on this observation, we
+propose a Dual Learning Algorithm (DLA) that jointly learns an unbiased ranker
+and an \textit{unbiased propensity model}. DLA is an automatic unbiased
+learning-to-rank framework as it directly learns unbiased ranking models from
+biased click data without any preprocessing. It can adapt to the change of bias
+distributions and is applicable to online learning. Our empirical experiments
+with synthetic and real-world data show that the models trained with DLA
+significantly outperformed the unbiased learning-to-rank algorithms based on
+result randomization and the models trained with relevance signals extracted by
+click models.},
+ arxiv_url = {https://arxiv.org/pdf/1804.05938v2.pdf},
+ author = {Qingyao Ai and Keping Bi and Cheng Luo and Jiafeng Guo and W. Bruce Croft},
+ doi = {10.1145/3209978.3209986},
+ title = {Unbiased learning to rank with unbiased propensity estimation.},
+ year = {2018}
+}
+
+@article{arjovsky_2019_invariant,
+ abstract = {We introduce Invariant Risk Minimization (IRM), a learning paradigm to
+estimate invariant correlations across multiple training distributions. To
+achieve this goal, IRM learns a data representation such that the optimal
+classifier, on top of that data representation, matches for all training
+distributions. Through theory and experiments, we show how the invariances
+learned by IRM relate to the causal structures governing the data and enable
+out-of-distribution generalization.},
+ arxiv_url = {https://arxiv.org/pdf/1907.02893v3.pdf},
+ author = {Martin Arjovsky and Léon Bottou and Ishaan Gulrajani and David Lopez-Paz},
+ title = {Invariant risk minimization.},
+ year = {2019}
+}
+
+@article{author_year_discriminative,
+ title = {Discriminative learning under covariate shift.}
+}
+
+@article{author_year_introduction,
+ title = {An introduction to propensity score methods for reducing the effects of confounding in observational studies.}
+}
+
+@article{cho_2019_the,
+ abstract = {In this paper, we present a thorough evaluation of the efficacy of knowledge
+distillation and its dependence on student and teacher architectures. Starting
+with the observation that more accurate teachers often don't make good
+teachers, we attempt to tease apart the factors that affect knowledge
+distillation performance. We find crucially that larger models do not often
+make better teachers. We show that this is a consequence of mismatched
+capacity, and that small students are unable to mimic large teachers. We find
+typical ways of circumventing this (such as performing a sequence of knowledge
+distillation steps) to be ineffective. Finally, we show that this effect can be
+mitigated by stopping the teacher's training early. Our results generalize
+across datasets and models.},
+ arxiv_url = {https://arxiv.org/pdf/1910.01348v1.pdf},
+ author = {Jang Hyun Cho and Bharath Hariharan},
+ journal = {ICCV 2019},
+ title = {On the efficacy of knowledge distillation.},
+ year = {2019}
+}

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/runner/work/experiment_matsuzawa_20250822/experiment_matsuzawa_20250822/src/main.py", line 206, in <module>
+    main()
+  File "/home/runner/work/experiment_matsuzawa_20250822/experiment_matsuzawa_20250822/src/main.py", line 187, in main
+    with open(args.config, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../config/config.yaml'

@@ -1,1 +1,11 @@
-# Please list the required python packages.
+torch>=2.0
+# torchvision is optional (used only if use_synthetic=False)
+torchvision>=0.15
+numpy>=1.22
+matplotlib>=3.7
+seaborn>=0.12
+PyYAML>=6.0
+pillow>=9.0
+# Differential privacy utilities (optional but recommended)
+dp-accounting>=0.4.3
+diffprivlib>=0.6.4

@@ -1,0 +1,36 @@
+# Default configuration for PACER-FL experiments (config/config.yaml)
+seed: 1
+use_cuda: false
+
+# Paths
+images_dir: .research/iteration1/images
+data_root: data
+models_dir: models
+
+# Data
+use_synthetic: true
+synth_n_per_class: 10
+synth_img_size: 8
+
+# Federated setup
+N: 40        # total clients
+T: 8         # rounds
+n_t: 8       # clients per round
+batch_size: 16
+alpha_dir: 0.3
+
+# Privacy
+eps: 1.5
+delta: 1.0e-6
+
+# PACER knobs
+beta: 0.1        # server control variate momentum
+alpha_cv: 0.2    # client control variate mixing
+L_min: 6         # min cohort assumed for noise calibration
+
+# Robustness/audit (used in Exp3)
+restart_mode: SometimesRestart   # NoTreeRestart | SometimesRestart | TreeRestart
+regime: R3                       # R1 | R2 | R3
+
+# Ledgers
+ledger_path: data/ledger_default.jsonl

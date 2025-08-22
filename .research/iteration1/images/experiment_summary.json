@@ -1,7 +1,7 @@
 {
-  "experiment_date": "2025-08-22T05:15:13.023146",
-  "device": "cpu",
-  "num_pretrain_epochs": 2,
-  "num_eval_runs": 1,
+  "experiment_date": "2025-08-22T05:21:21.264306",
+  "device": "cuda",
+  "num_pretrain_epochs": 20,
+  "num_eval_runs": 3,
   "results": {}
 }

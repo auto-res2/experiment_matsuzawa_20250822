@@ -5,3 +5,401 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{amos_2023_never,
+ abstract = {Modeling long-range dependencies across sequences is a longstanding goal in
+machine learning and has led to architectures, such as state space models, that
+dramatically outperform Transformers on long sequences. However, these
+impressive empirical gains have been by and large demonstrated on benchmarks
+(e.g. Long Range Arena), where models are randomly initialized and trained to
+predict a target label from an input sequence. In this work, we show that
+random initialization leads to gross overestimation of the differences between
+architectures and that pretraining with standard denoising objectives, using
+$\textit{only the downstream task data}$, leads to dramatic gains across
+multiple architectures and to very small gaps between Transformers and state
+space models (SSMs). In stark contrast to prior works, we find vanilla
+Transformers to match the performance of S4 on Long Range Arena when properly
+pretrained, and we improve the best reported results of SSMs on the PathX-256
+task by 20 absolute points. Subsequently, we analyze the utility of
+previously-proposed structured parameterizations for SSMs and show they become
+mostly redundant in the presence of data-driven initialization obtained through
+pretraining. Our work shows that, when evaluating different architectures on
+supervised tasks, incorporation of data-driven priors via pretraining is
+essential for reliable performance estimation, and can be done efficiently.},
+ arxiv_url = {https://arxiv.org/pdf/2310.02980v4.pdf},
+ author = {Ido Amos and Jonathan Berant and Ankit Gupta},
+ github_url = {https://github.com/HazyResearch/state-spaces},
+ title = {Never Train from Scratch: Fair Comparison of Long-Sequence Models Requires Data-Driven Priors},
+ year = {2023}
+}
+
+@article{amos_2023_never,
+ abstract = {Modeling long-range dependencies across sequences is a longstanding goal in
+machine learning and has led to architectures, such as state space models, that
+dramatically outperform Transformers on long sequences. However, these
+impressive empirical gains have been by and large demonstrated on benchmarks
+(e.g. Long Range Arena), where models are randomly initialized and trained to
+predict a target label from an input sequence. In this work, we show that
+random initialization leads to gross overestimation of the differences between
+architectures and that pretraining with standard denoising objectives, using
+$\textit{only the downstream task data}$, leads to dramatic gains across
+multiple architectures and to very small gaps between Transformers and state
+space models (SSMs). In stark contrast to prior works, we find vanilla
+Transformers to match the performance of S4 on Long Range Arena when properly
+pretrained, and we improve the best reported results of SSMs on the PathX-256
+task by 20 absolute points. Subsequently, we analyze the utility of
+previously-proposed structured parameterizations for SSMs and show they become
+mostly redundant in the presence of data-driven initialization obtained through
+pretraining. Our work shows that, when evaluating different architectures on
+supervised tasks, incorporation of data-driven priors via pretraining is
+essential for reliable performance estimation, and can be done efficiently.},
+ arxiv_url = {https://arxiv.org/pdf/2310.02980v4.pdf},
+ author = {Ido Amos and Jonathan Berant and Ankit Gupta},
+ github_url = {https://github.com/HazyResearch/state-spaces},
+ title = {Never Train from Scratch: Fair Comparison of Long-Sequence Models Requires Data-Driven Priors},
+ year = {2023}
+}
+
+@article{bick_2024_transformers,
+ abstract = {Transformer architectures have become a dominant paradigm for domains like
+language modeling but suffer in many inference settings due to their
+quadratic-time self-attention. Recently proposed subquadratic architectures,
+such as Mamba, have shown promise, but have been pretrained with substantially
+less computational resources than the strongest Transformer models. In this
+work, we present a method that is able to distill a pretrained Transformer
+architecture into alternative architectures such as state space models (SSMs).
+The key idea to our approach is that we can view both Transformers and SSMs as
+applying different forms of mixing matrices over the token sequences. We can
+thus progressively distill the Transformer architecture by matching different
+degrees of granularity in the SSM: first matching the mixing matrices
+themselves, then the hidden units at each block, and finally the end-to-end
+predictions. Our method, called MOHAWK, is able to distill a Mamba-2 variant
+based on the Phi-1.5 architecture (Phi-Mamba) using only 3B tokens and a hybrid
+version (Hybrid Phi-Mamba) using 5B tokens. Despite using less than 1% of the
+training data typically used to train models from scratch, Phi-Mamba boasts
+substantially stronger performance compared to all past open-source
+non-Transformer models. MOHAWK allows models like SSMs to leverage
+computational resources invested in training Transformer-based architectures,
+highlighting a new avenue for building such models.},
+ arxiv_url = {https://arxiv.org/pdf/2408.10189v2.pdf},
+ author = {Aviv Bick and Kevin Y. Li and Eric P. Xing and J. Zico Kolter and Albert Gu},
+ github_url = {https://github.com/microsoft/Samba},
+ title = {Transformers to SSMs: Distilling Quadratic Knowledge to Subquadratic Models},
+ year = {2024}
+}
+
+@article{bick_2024_transformers,
+ abstract = {Transformer architectures have become a dominant paradigm for domains like
+language modeling but suffer in many inference settings due to their
+quadratic-time self-attention. Recently proposed subquadratic architectures,
+such as Mamba, have shown promise, but have been pretrained with substantially
+less computational resources than the strongest Transformer models. In this
+work, we present a method that is able to distill a pretrained Transformer
+architecture into alternative architectures such as state space models (SSMs).
+The key idea to our approach is that we can view both Transformers and SSMs as
+applying different forms of mixing matrices over the token sequences. We can
+thus progressively distill the Transformer architecture by matching different
+degrees of granularity in the SSM: first matching the mixing matrices
+themselves, then the hidden units at each block, and finally the end-to-end
+predictions. Our method, called MOHAWK, is able to distill a Mamba-2 variant
+based on the Phi-1.5 architecture (Phi-Mamba) using only 3B tokens and a hybrid
+version (Hybrid Phi-Mamba) using 5B tokens. Despite using less than 1% of the
+training data typically used to train models from scratch, Phi-Mamba boasts
+substantially stronger performance compared to all past open-source
+non-Transformer models. MOHAWK allows models like SSMs to leverage
+computational resources invested in training Transformer-based architectures,
+highlighting a new avenue for building such models.},
+ arxiv_url = {https://arxiv.org/pdf/2408.10189v2.pdf},
+ author = {Aviv Bick and Kevin Y. Li and Eric P. Xing and J. Zico Kolter and Albert Gu},
+ github_url = {https://github.com/microsoft/Samba},
+ title = {Transformers to SSMs: Distilling Quadratic Knowledge to Subquadratic Models},
+ year = {2024}
+}
+
+@article{chiu_2022_low,
+ abstract = {Structured distributions, i.e. distributions over combinatorial spaces, are
+commonly used to learn latent probabilistic representations from observed data.
+However, scaling these models is bottlenecked by the high computational and
+memory complexity with respect to the size of the latent representations.
+Common models such as Hidden Markov Models (HMMs) and Probabilistic
+Context-Free Grammars (PCFGs) require time and space quadratic and cubic in the
+number of hidden states respectively. This work demonstrates a simple approach
+to reduce the computational and memory complexity of a large class of
+structured models. We show that by viewing the central inference step as a
+matrix-vector product and using a low-rank constraint, we can trade off model
+expressivity and speed via the rank. Experiments with neural parameterized
+structured models for language modeling, polyphonic music modeling,
+unsupervised grammar induction, and video modeling show that our approach
+matches the accuracy of standard models at large state spaces while providing
+practical speedups.},
+ arxiv_url = {https://arxiv.org/pdf/2201.02715v1.pdf},
+ author = {Justin T. Chiu and Yuntian Deng and Alexander M. Rush},
+ github_url = {https://github.com/dpfried/action-segmentation},
+ title = {Low-Rank Constraints for Fast Inference in Structured Models},
+ year = {2022}
+}
+
+@article{dowling_2024_exponential,
+ abstract = {State-space graphical models and the variational autoencoder framework
+provide a principled apparatus for learning dynamical systems from data.
+State-of-the-art probabilistic approaches are often able to scale to large
+problems at the cost of flexibility of the variational posterior or
+expressivity of the dynamics model. However, those consolidations can be
+detrimental if the ultimate goal is to learn a generative model capable of
+explaining the spatiotemporal structure of the data and making accurate
+forecasts. We introduce a low-rank structured variational autoencoding
+framework for nonlinear Gaussian state-space graphical models capable of
+capturing dense covariance structures that are important for learning dynamical
+systems with predictive capabilities. Our inference algorithm exploits the
+covariance structures that arise naturally from sample based approximate
+Gaussian message passing and low-rank amortized posterior updates --
+effectively performing approximate variational smoothing with time complexity
+scaling linearly in the state dimensionality. In comparisons with other deep
+state-space model architectures our approach consistently demonstrates the
+ability to learn a more predictive generative model. Furthermore, when applied
+to neural physiological recordings, our approach is able to learn a dynamical
+system capable of forecasting population spiking and behavioral correlates from
+a small portion of single trials.},
+ arxiv_url = {https://arxiv.org/pdf/2403.01371v4.pdf},
+ author = {Matthew Dowling and Yuan Zhao and Il Memming Park},
+ github_url = {https://github.com/qu-gg/torchssm},
+ title = {eXponential FAmily Dynamical Systems (XFADS): Large-scale nonlinear Gaussian state-space modeling},
+ year = {2024}
+}
+
+@article{gao_2024_enhancing,
+ abstract = {We propose Strongly Supervised pre-training with ScreenShots (S4) - a novel
+pre-training paradigm for Vision-Language Models using data from large-scale
+web screenshot rendering. Using web screenshots unlocks a treasure trove of
+visual and textual cues that are not present in using image-text pairs. In S4,
+we leverage the inherent tree-structured hierarchy of HTML elements and the
+spatial localization to carefully design 10 pre-training tasks with large scale
+annotated data. These tasks resemble downstream tasks across different domains
+and the annotations are cheap to obtain. We demonstrate that, compared to
+current screenshot pre-training objectives, our innovative pre-training method
+significantly enhances performance of image-to-text model in nine varied and
+popular downstream tasks - up to 76.1% improvements on Table Detection, and at
+least 1% on Widget Captioning.},
+ arxiv_url = {https://arxiv.org/pdf/2403.03346v2.pdf},
+ author = {Yuan Gao and Kunyu Shi and Pengkai Zhu and Edouard Belval and Oren Nuriel and Srikar Appalaraju and Shabnam Ghadar and Vijay Mahadevan and Zhuowen Tu and Stefano Soatto},
+ github_url = {https://github.com/microsoft/playwright},
+ title = {Enhancing Vision-Language Pre-training with Rich Supervisions},
+ year = {2024}
+}
+
+@article{gupta_2022_diagonal,
+ abstract = {Modeling long range dependencies in sequential data is a fundamental step
+towards attaining human-level performance in many modalities such as text,
+vision, audio and video. While attention-based models are a popular and
+effective choice in modeling short-range interactions, their performance on
+tasks requiring long range reasoning has been largely inadequate. In an
+exciting result, Gu et al. (ICLR 2022) proposed the $\textit{Structured State
+Space}$ (S4) architecture delivering large gains over state-of-the-art models
+on several long-range tasks across various modalities. The core proposition of
+S4 is the parameterization of state matrices via a diagonal plus low rank
+structure, allowing efficient computation. In this work, we show that one can
+match the performance of S4 even without the low rank correction and thus
+assuming the state matrices to be diagonal. Our $\textit{Diagonal State Space}$
+(DSS) model matches the performance of S4 on Long Range Arena tasks, speech
+classification on Speech Commands dataset, while being conceptually simpler and
+straightforward to implement.},
+ arxiv_url = {https://arxiv.org/pdf/2203.14343v3.pdf},
+ author = {Ankit Gupta and Albert Gu and Jonathan Berant},
+ github_url = {https://github.com/ag1988/dss},
+ title = {Diagonal State Spaces are as Effective as Structured State Spaces},
+ year = {2022}
+}
+
+@article{han_2024_sltrain,
+ abstract = {Large language models (LLMs) have shown impressive capabilities across
+various tasks. However, training LLMs from scratch requires significant
+computational power and extensive memory capacity. Recent studies have explored
+low-rank structures on weights for efficient fine-tuning in terms of parameters
+and memory, either through low-rank adaptation or factorization. While
+effective for fine-tuning, low-rank structures are generally less suitable for
+pretraining because they restrict parameters to a low-dimensional subspace. In
+this work, we propose to parameterize the weights as a sum of low-rank and
+sparse matrices for pretraining, which we call SLTrain. The low-rank component
+is learned via matrix factorization, while for the sparse component, we employ
+a simple strategy of uniformly selecting the sparsity support at random and
+learning only the non-zero entries with the fixed support. While being simple,
+the random fixed-support sparse learning strategy significantly enhances
+pretraining when combined with low-rank learning. Our results show that SLTrain
+adds minimal extra parameters and memory costs compared to pretraining with
+low-rank parameterization, yet achieves substantially better performance, which
+is comparable to full-rank training. Remarkably, when combined with
+quantization and per-layer updates, SLTrain can reduce memory requirements by
+up to 73% when pretraining the LLaMA 7B model.},
+ arxiv_url = {https://arxiv.org/pdf/2406.02214v2.pdf},
+ author = {Andi Han and Jiaxiang Li and Wei Huang and Mingyi Hong and Akiko Takeda and Pratik Jawanpuria and Bamdev Mishra},
+ github_url = {https://github.com/andyjm3/SLTrain},
+ title = {SLTrain: a sparse plus low rank approach for parameter and memory efficient pretraining},
+ year = {2024}
+}
+
+@article{jiang_2024_slot,
+ abstract = {Recent State Space Models (SSMs) such as S4, S5, and Mamba have shown
+remarkable computational benefits in long-range temporal dependency modeling.
+However, in many sequence modeling problems, the underlying process is
+inherently modular and it is of interest to have inductive biases that mimic
+this modular structure. In this paper, we introduce SlotSSMs, a novel framework
+for incorporating independent mechanisms into SSMs to preserve or encourage
+separation of information. Unlike conventional SSMs that maintain a monolithic
+state vector, SlotSSMs maintains the state as a collection of multiple vectors
+called slots. Crucially, the state transitions are performed independently per
+slot with sparse interactions across slots implemented via the bottleneck of
+self-attention. In experiments, we evaluate our model in object-centric
+learning, 3D visual reasoning, and long-context video understanding tasks,
+which involve modeling multiple objects and their long-range temporal
+dependencies. We find that our proposed design offers substantial performance
+gains over existing sequence modeling methods. Project page is available at
+https://slotssms.github.io/},
+ arxiv_url = {https://arxiv.org/pdf/2406.12272v6.pdf},
+ author = {Jindong Jiang and Fei Deng and Gautam Singh and Minseung Lee and Sungjin Ahn},
+ github_url = {https://github.com/anirudh9119/RIMs},
+ title = {Slot State Space Models},
+ year = {2024}
+}
+
+@article{liu_2022_masked,
+ abstract = {The vast majority of work in self-supervised learning, both theoretical and
+empirical (though mostly the latter), have largely focused on recovering good
+features for downstream tasks, with the definition of "good" often being
+intricately tied to the downstream task itself. This lens is undoubtedly very
+interesting, but suffers from the problem that there isn't a "canonical" set of
+downstream tasks to focus on -- in practice, this problem is usually resolved
+by competing on the benchmark dataset du jour.
+  In this paper, we present an alternative lens: one of parameter
+identifiability. More precisely, we consider data coming from a parametric
+probabilistic model, and train a self-supervised learning predictor with a
+suitably chosen parametric form. Then, we ask whether we can read off the
+ground truth parameters of the probabilistic model from the optimal predictor.
+We focus on the widely used self-supervised learning method of predicting
+masked tokens, which is popular for both natural languages and visual data.
+  While incarnations of this approach have already been successfully used for
+simpler probabilistic models (e.g. learning fully-observed undirected graphical
+models), we focus instead on latent-variable models capturing sequential
+structures -- namely Hidden Markov Models with both discrete and conditionally
+Gaussian observations. We show that there is a rich landscape of possibilities,
+out of which some prediction tasks yield identifiability, while others do not.
+Our results, borne of a theoretical grounding of self-supervised learning,
+could thus potentially beneficially inform practice. Moreover, we uncover close
+connections with uniqueness of tensor rank decompositions -- a widely used tool
+in studying identifiability through the lens of the method of moments.},
+ arxiv_url = {https://arxiv.org/pdf/2202.09305v1.pdf},
+ author = {Bingbin Liu and Daniel Hsu and Pradeep Ravikumar and Andrej Risteski},
+ title = {Masked Prediction: A Parameter Identifiability View},
+ year = {2022}
+}
+
+@article{udandarao_2024_zero,
+ abstract = {Web-crawled pretraining datasets underlie the impressive "zero-shot"
+evaluation performance of multimodal models, such as CLIP for
+classification/retrieval and Stable-Diffusion for image generation. However, it
+is unclear how meaningful the notion of "zero-shot" generalization is for such
+multimodal models, as it is not known to what extent their pretraining datasets
+encompass the downstream concepts targeted for during "zero-shot" evaluation.
+In this work, we ask: How is the performance of multimodal models on downstream
+concepts influenced by the frequency of these concepts in their pretraining
+datasets? We comprehensively investigate this question across 34 models and
+five standard pretraining datasets (CC-3M, CC-12M, YFCC-15M, LAION-400M,
+LAION-Aesthetics), generating over 300GB of data artifacts. We consistently
+find that, far from exhibiting "zero-shot" generalization, multimodal models
+require exponentially more data to achieve linear improvements in downstream
+"zero-shot" performance, following a sample inefficient log-linear scaling
+trend. This trend persists even when controlling for sample-level similarity
+between pretraining and downstream datasets, and testing on purely synthetic
+data distributions. Furthermore, upon benchmarking models on long-tailed data
+sampled based on our analysis, we demonstrate that multimodal models across the
+board perform poorly. We contribute this long-tail test set as the "Let it
+Wag!" benchmark to further research in this direction. Taken together, our
+study reveals an exponential need for training data which implies that the key
+to "zero-shot" generalization capabilities under large-scale training paradigms
+remains to be found.},
+ arxiv_url = {https://arxiv.org/pdf/2404.04125v3.pdf},
+ author = {Vishaal Udandarao and Ameya Prabhu and Adhiraj Ghosh and Yash Sharma and Philip H. S. Torr and Adel Bibi and Samuel Albanie and Matthias Bethge},
+ github_url = {https://github.com/visual-layer/fastdup},
+ title = {No "Zero-Shot" Without Exponential Data: Pretraining Concept Frequency Determines Multimodal Model Performance},
+ year = {2024}
+}
+
+@article{venuto_2022_multi,
+ abstract = {Using massive datasets to train large-scale models has emerged as a dominant
+approach for broad generalization in natural language and vision applications.
+In reinforcement learning, however, a key challenge is that available data of
+sequential decision making is often not annotated with actions - for example,
+videos of game-play are much more available than sequences of frames paired
+with their logged game controls. We propose to circumvent this challenge by
+combining large but sparsely-annotated datasets from a \emph{target}
+environment of interest with fully-annotated datasets from various other
+\emph{source} environments. Our method, Action Limited PreTraining (ALPT),
+leverages the generalization capabilities of inverse dynamics modelling (IDM)
+to label missing action data in the target environment. We show that utilizing
+even one additional environment dataset of labelled data during IDM pretraining
+gives rise to substantial improvements in generating action labels for
+unannotated sequences. We evaluate our method on benchmark game-playing
+environments and show that we can significantly improve game performance and
+generalization capability compared to other approaches, using annotated
+datasets equivalent to only $12$ minutes of gameplay. Highlighting the power of
+IDM, we show that these benefits remain even when target and source
+environments share no common actions.},
+ arxiv_url = {https://arxiv.org/pdf/2211.13337v2.pdf},
+ author = {David Venuto and Sherry Yang and Pieter Abbeel and Doina Precup and Igor Mordatch and Ofir Nachum},
+ title = {Multi-Environment Pretraining Enables Transfer to Action Limited Datasets},
+ year = {2022}
+}
+
+@article{wang_2024_the,
+ abstract = {Linear RNN architectures, like Mamba, can be competitive with Transformer
+models in language modeling while having advantageous deployment
+characteristics. Given the focus on training large-scale Transformer models, we
+consider the challenge of converting these pretrained models for deployment. We
+demonstrate that it is feasible to distill large Transformers into linear RNNs
+by reusing the linear projection weights from attention layers with academic
+GPU resources. The resulting hybrid model, which incorporates a quarter of the
+attention layers, achieves performance comparable to the original Transformer
+in chat benchmarks and outperforms open-source hybrid Mamba models trained from
+scratch with trillions of tokens in both chat benchmarks and general
+benchmarks. Moreover, we introduce a hardware-aware speculative decoding
+algorithm that accelerates the inference speed of Mamba and hybrid models.
+Overall we show how, with limited computation resources, we can remove many of
+the original attention layers and generate from the resulting model more
+efficiently. Our top-performing model, distilled from Llama3-8B-Instruct,
+achieves a 29.61 length-controlled win rate on AlpacaEval 2 against GPT-4 and
+7.35 on MT-Bench, surpassing the best 8B scale instruction-tuned linear RNN
+model. We also find that the distilled model has natural length extrapolation,
+showing almost perfect accuracy in the needle-in-a-haystack test at 20x the
+distillation length. Code and pre-trained checkpoints are open-sourced at
+https://github.com/jxiw/MambaInLlama and
+https://github.com/itsdaniele/speculative_mamba.},
+ arxiv_url = {https://arxiv.org/pdf/2408.15237v4.pdf},
+ author = {Junxiong Wang and Daniele Paliotta and Avner May and Alexander M. Rush and Tri Dao},
+ github_url = {https://github.com/jxiw/MambaInLlama},
+ title = {The Mamba in the Llama: Distilling and Accelerating Hybrid Models},
+ year = {2024}
+}
+
+@article{yang_2020_relational,
+ abstract = {Real-world dynamical systems often consist of multiple stochastic subsystems
+that interact with each other. Modeling and forecasting the behavior of such
+dynamics are generally not easy, due to the inherent hardness in understanding
+the complicated interactions and evolutions of their constituents. This paper
+introduces the relational state-space model (R-SSM), a sequential hierarchical
+latent variable model that makes use of graph neural networks (GNNs) to
+simulate the joint state transitions of multiple correlated objects. By letting
+GNNs cooperate with SSM, R-SSM provides a flexible way to incorporate
+relational information into the modeling of multi-object dynamics. We further
+suggest augmenting the model with normalizing flows instantiated for
+vertex-indexed random variables and propose two auxiliary contrastive
+objectives to facilitate the learning. The utility of R-SSM is empirically
+evaluated on synthetic and real time-series datasets.},
+ arxiv_url = {https://arxiv.org/pdf/2001.04050v1.pdf},
+ author = {Fan Yang and Ling Chen and Fan Zhou and Yusong Gao and Wei Cao},
+ title = {Relational State-Space Model for Stochastic Multi-Object Systems},
+ year = {2020}
+}

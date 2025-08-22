@@ -1,0 +1,179 @@
+\PassOptionsToPackage{numbers}{natbib}
+\documentclass{article} % For LaTeX2e
+\usepackage{iclr2024_conference,times}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{titletoc}
+
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{cleveref}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{array}
+\usepackage{tabularx}
+\pgfplotsset{compat=newest}
+
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\graphicspath{{../}} % To reference your generated figures, see below.
+
+\title{Velocity-Optimized Meta-Learning: Directly Targeting Convergence Speed}
+
+\author{AIRAS}
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Gradient-based meta-learning algorithms, such as Model-Agnostic Meta-Learning (MAML), are foundational for few-shot learning but are fundamentally limited by a 'short-horizon bias.' By optimizing for performance after a small, fixed number of adaptation steps, they learn initializations that excel at rapid early gains but often converge to suboptimal local minima, misaligning the meta-objective with the true goal of fast convergence. This is a challenging problem because naively extending the adaptation horizon is computationally prohibitive and can lead to unstable gradients. We introduce Velocity-Optimized Meta-Learning (VeloML), a new framework that directly addresses this objective mismatch. Our primary contribution is a novel meta-objective that acts as a differentiable surrogate for the number of steps required to solve a task, explicitly rewarding initializations that yield the fastest convergence paths. To handle task heterogeneity, we introduce a meta-learned relative thresholding mechanism that allows the model to learn a unified notion of 'solved' across a diverse task distribution. Finally, to ensure computational tractability, we propose a trajectory-aware hybrid-order gradient approximation that strategically modulates gradient fidelity along the adaptation path. We designed a comprehensive experimental protocol on standard few-shot benchmarks, Mini-ImageNet and Tiered-ImageNet, to verify that VeloML learns to solve new tasks in significantly fewer gradient steps, enables principled adaptive computation at inference time, and improves generalization by seeking wider, more stable solution basins.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+The ability to learn new concepts from only a few examples is a hallmark of human intelligence and a long-standing goal in machine learning. Gradient-based meta-learning has emerged as a powerful paradigm for this few-shot learning problem, with Model-Agnostic Meta-Learning (MAML) being a seminal approach. MAML learns a parameter initialization that can be rapidly adapted to a new task with just a few gradient steps. Despite its success, MAML and its derivatives are hampered by a fundamental flaw: the 'short-horizon bias'. The meta-objective optimizes for performance after a small, fixed number of inner-loop updates (e.g., 1 to 5 steps). This encourages initializations that are 'sprinters'—excellent at making quick initial progress—but often leads them into poor local minima, failing to achieve the best possible final performance. The true goal is not just to be good after \(K\) steps, but to find an initialization that converges to a good solution as quickly as possible, regardless of the precise number of steps.
+
+This objective mismatch is a difficult challenge. Simply increasing the number of inner-loop steps during meta-training is often computationally intractable due to the need to backpropagate through a long chain of operations, especially when using second-order gradients. Prior work has sought to address the symptoms of this problem rather than the cause. Some approaches focus on improving the optimization landscape by enforcing better conditioning, effectively making any path to the minimum faster \cite{hiller_2022_enforcing}. Others have attempted to improve the efficiency of each update step or make longer adaptation trajectories more computationally feasible [flennerhag_2023_optimistic, shin_2021_large]. However, these methods still operate under the same misaligned, fixed-horizon meta-objective.
+
+Inspired by work in accelerating iterative numerical methods that identified a similar objective mismatch \cite{arisaka_2022_principled}, we propose to reformulate the meta-objective itself. Our work, Velocity-Optimized Meta-Learning (VeloML), directly optimizes an initialization for its convergence velocity. Instead of asking 'how good is the model after K steps?', we ask 'how many steps does it take to solve the task?'. This reframing aligns the meta-training process with the desired inference-time behavior: fast and efficient adaptation.
+
+Our contributions are threefold:
+\begin{itemize}
+    \item \textbf{Direct Convergence Velocity Objective:} We introduce a novel meta-objective that acts as a smooth, differentiable surrogate for a 'step counter'. It directly penalizes every adaptation step taken before a task is considered solved, forcing the meta-learner to discover the shortest and most efficient optimization paths.
+    \item \textbf{Meta-Learned Relative Thresholding:} To accommodate a diverse distribution of tasks with varying difficulty, we propose a mechanism where the convergence threshold is not a fixed value but is set relative to the task's initial loss. The crucial ratio is a single, meta-learned scalar parameter, allowing the framework to learn a shared, optimal notion of 'sufficiently solved' across all tasks.
+    \item \textbf{Trajectory-Aware Hybrid-Order Gradients:} To make optimization over long horizons computationally feasible, we introduce a hybrid gradient strategy. It employs high-fidelity second-order gradients for the critical initial adaptation steps and transitions to a cheaper first-order approximation for the remainder of the trajectory, balancing accuracy with efficiency.
+\end{itemize}
+
+We outline a rigorous experimental setup to validate VeloML against strong baselines on standard few-shot classification benchmarks. We hypothesize that VeloML will not only converge in significantly fewer steps, reducing inference-time compute, but will also achieve competitive or superior final performance by learning more robust initializations situated in wider solution basins. This work paves the way for more principled and efficient meta-learning by directly optimizing for the speed of adaptation.
+
+\section{Related Work}
+\label{sec:related}
+Our work builds upon the rich literature of gradient-based meta-learning and is best understood by comparison to several distinct lines of research. The foundational method in this area is Model-Agnostic Meta-Learning (MAML), which learns a sensitive initialization by backpropagating through an inner-loop of gradient descent \cite{fallah_2019_the}. Many variants have been proposed, including first-order approximations like FOMAML for computational efficiency \cite{ji_2020_convergence} and Meta-SGD, which meta-learns per-parameter learning rates to accelerate adaptation. While VeloML also learns an initialization, its core contribution is a fundamentally different meta-objective. Whereas MAML and its derivatives optimize for performance at a fixed, short horizon, VeloML optimizes directly for the number of steps to convergence, addressing the inherent short-horizon bias.
+
+A significant line of related research focuses on improving the conditioning of the meta-learning problem. For instance, \cite{hiller_2022_enforcing} proposes to actively enforce a well-conditioned parameter space, inspired by preconditioning, to facilitate more rapid adaptation. This approach reshapes the optimization landscape to be more favorable for any gradient-based optimizer. In contrast, VeloML does not explicitly modify the landscape's geometry; instead, it seeks to find the most direct trajectory on the existing landscape by directly optimizing for convergence speed. Our method is therefore complementary to landscape conditioning techniques.
+
+Another category of methods aims to make meta-learning over longer adaptation horizons more practical. Continual Trajectory Shifting (CTS) \cite{shin_2021_large} introduces a technique to efficiently estimate parameter shifts, enabling more frequent meta-updates even with long inner loops. This work makes long optimization paths computationally tractable. Our work is orthogonal: while CTS provides the machinery to handle long trajectories, VeloML provides the principled objective to learn the shortest possible trajectory. Combining these approaches is a promising direction for future research.
+
+Other works have explored alternative meta-objectives or update rules. Optimistic Meta-Gradients \cite{flennerhag_2023_optimistic} connects meta-gradients to momentum and demonstrates that a form of optimism is necessary for acceleration. While this modifies the update dynamics, the meta-objective remains tied to performance at a fixed number of steps. Our \(L_{velo}\) objective is novel in that it integrates performance over the entire trajectory up to a convergence criterion. Finally, methods like SAMA \cite{choe_2023_making} focus on the scalability of meta-learning by using implicit differentiation to avoid expensive second-order gradient computations. VeloML's hybrid-order gradient is a different, explicit strategy for managing computational cost, tailored to the dynamics of an optimization trajectory where initial steps are often the most critical for determining the subsequent path.
+
+\section{Background}
+\label{sec:background}
+The foundation of our work lies in gradient-based meta-learning, a paradigm designed to produce models that can rapidly adapt to new tasks. The core idea is to treat the process of learning—the optimization trajectory itself—as an object to be optimized. This is typically framed as a bi-level optimization problem with an 'inner loop' for task-specific adaptation and an 'outer loop' for meta-level learning across a distribution of tasks.
+
+Model-Agnostic Meta-Learning (MAML) is a canonical algorithm in this space \cite{fallah_2019_the}. MAML learns a single parameter initialization, denoted \(\theta\), that serves as an effective starting point for fine-tuning on a variety of new tasks. For any given task, MAML uses a few steps of gradient descent to find task-specific parameters, and then updates the initial \(\theta\) based on the performance of these adapted parameters.
+
+\subsection{Problem Setting}
+We consider a standard few-shot learning setting. We are given a distribution of tasks \(p(T)\). Each task \(T_i\) is associated with a dataset \(D_i\) composed of a small support set \(D_i^S = \{(x_j, y_j)\}\) for adaptation and a query set \(D_i^Q\) for evaluating the adapted model. A model, parameterized by \(\theta\), has a loss function \(L(\theta; D)\). 
+
+In the MAML framework, for a given task \(T_i\), the initial parameters \(\theta\) are adapted using \(K\) steps of gradient descent on the support set \(D_i^S\). Let \(\phi_i^0 = \theta\). The inner-loop update for step \(k\) is:
+\(\phi_i^k = \phi_i^{k-1} - \alpha \nabla_{\phi} L(\phi_i^{k-1}; D_i^S)\)
+where \(\alpha\) is the inner-loop learning rate. After \(K\) steps, we obtain the adapted parameters \(\phi_i^K\).
+
+The meta-objective of MAML is to minimize the loss of the adapted model on the query set, averaged over all tasks:
+\(\min_{\theta} \sum_{T_i \sim p(T)} L(\phi_i^K; D_i^Q)\)
+
+The meta-optimization is performed by computing the gradient of this objective with respect to \(\theta\), which involves differentiating through the inner-loop optimization process. This requires second-order derivatives, making it computationally expensive, though a first-order approximation (FOMAML) is often used \cite{ji_2020_convergence}.
+
+A key assumption and limitation of this formulation is that \(K\) is a small, fixed hyperparameter (e.g., 1, 5, or 10). This leads to the 'short-horizon bias', where the meta-learner is incentivized to find an initialization \(\theta\) that performs well after exactly \(K\) steps, which may not be an initialization that converges to the best solution or does so in the fewest possible steps. Our work directly challenges this assumption by reformulating the meta-objective to reward convergence velocity over an extended, variable-length horizon.
+
+\section{Method}
+\label{sec:method}
+We introduce Velocity-Optimized Meta-Learning (VeloML), a framework that reframes the meta-learning objective to directly optimize for the speed of convergence. VeloML is built on three core components: a direct convergence velocity objective, a meta-learned relative threshold for defining task completion, and a computationally efficient hybrid-order gradient strategy.
+
+\subsection{Direct Convergence Velocity Objective}
+Instead of optimizing for performance at a fixed step \(K\), we aim to minimize the number of steps required to reach a solution. To create a differentiable objective, we formulate a surrogate loss that acts as a smooth 'step counter'. During the inner loop for a task \(T_i\), we perform adaptation for a variable number of steps up to a maximum horizon, \(K_{max}\). Let \(L_k\) be the loss on the support set \(D_i^S\) at adaptation step \(k\), and let \(\epsilon_{task}\) be a pre-defined loss threshold indicating that the task is 'solved'. Our velocity-optimized meta-objective, \(L_{velo}\), is defined as:
+
+\(L_{velo} = \sum_{k=1}^{K_{max}} \sigma(\alpha \cdot (L_k - \epsilon_{task}))\)
+
+Here, \(\sigma\) is the sigmoid function and \(\alpha\) is a hyperparameter controlling its steepness. When the loss \(L_k\) is significantly greater than the threshold \(\epsilon_{task}\), the sigmoid term \(\sigma(...)\) is close to 1. When \(L_k\) drops below \(\epsilon_{task}\), the term approaches 0. Thus, \(L_{velo}\) effectively counts the number of steps for which the task remains unsolved. By minimizing \(L_{velo}\) in the outer loop, the meta-learner is directly incentivized to find an initialization \(\theta\) that reduces the support set loss below the threshold \(\epsilon_{task}\) in the fewest possible steps.
+
+\subsection{Meta-Learned Relative Thresholding}
+A fixed, absolute threshold \(\epsilon_{task}\) is problematic for a heterogeneous distribution of tasks, where initial difficulty can vary greatly. A threshold that is appropriate for an easy task may be unattainable for a hard one. To address this, we make the threshold adaptive by setting it relative to the initial task difficulty. We define the threshold for task \(T_i\) as:
+
+\(\epsilon_{task} = r \cdot L_0\)
+
+where \(L_0\) is the initial loss on the support set \(D_i^S\) before any adaptation (\(L_0 = L(\theta; D_i^S)\)). The crucial component \(r\) is a single, positive scalar parameter that represents the desired *relative improvement rate*. Instead of being a fixed hyperparameter, \(r\) is meta-learned alongside the model parameters \(\theta\). This allows the model to learn an optimal, data-driven notion of what it means for a task to be 'solved' across the entire task distribution, gracefully handling task heterogeneity.
+
+\subsection{Trajectory-Aware Hybrid-Order Gradients}
+Backpropagating the \(L_{velo}\) objective through \(K_{max}\) steps using full second-order gradients (as in standard MAML) is computationally prohibitive. However, the initial steps of adaptation are the most critical for shaping the overall trajectory. We therefore propose a hybrid gradient strategy that modulates computational fidelity along the optimization path. For the first \(K_{hybrid}\) steps of the inner loop, we compute the meta-gradient using high-fidelity second-order information. This allows the meta-learner to precisely shape the initial descent direction. For all subsequent steps, from \(K_{hybrid} + 1\) to \(K_{max}\), we switch to a computationally cheap first-order approximation (as in FOMAML). This hybrid approach balances the need for precise gradient information early in the trajectory with the need for computational efficiency over a long horizon, making the VeloML objective practical to optimize. This strategy is distinct from prior work; rather than using a single approximation type \cite{ji_2020_convergence} or focusing on scalable implicit methods \cite{choe_2023_making}, we strategically vary the gradient quality over the adaptation trajectory.
+
+\section{Experimental Setup}
+\label{sec:experimental}
+Our experimental evaluation is designed to rigorously test the core hypotheses of VeloML: that it achieves faster convergence, enables adaptive and efficient inference, and maintains or improves final task performance compared to established baselines.
+
+\subsection{Datasets and Benchmarks}
+We use two standard few-shot image classification benchmarks to ensure comprehensive evaluation. 
+\begin{itemize}
+    \item \textbf{Mini-ImageNet:} A widely used subset of ImageNet containing 100 classes, split into 64 for meta-training, 16 for meta-validation, and 20 for meta-testing. It provides a testbed with moderate complexity and diversity.
+    \item \textbf{Tiered-ImageNet:} A larger and more challenging benchmark with 608 classes grouped into 34 high-level categories, with non-overlapping category splits for meta-training, validation, and testing. This setup evaluates generalization across more significant domain shifts.
+\end{itemize}
+
+For both datasets, we evaluate on the standard 5-way, 1-shot and 5-way, 5-shot task configurations. We use the \texttt{torch\_meta} library for consistent data loading and task generation.
+
+\subsection{Models and Baselines}
+To ensure a fair comparison, all methods utilize the same backbone architecture: a standard 4-layer convolutional network (Conv-4) with batch normalization and ReLU activations. 
+Our method, \textbf{VeloML}, is configured with a maximum adaptation horizon \(K_{max}=20\), a hybrid gradient switch at \(K_{hybrid}=3\), and a sigmoid steepness \(\alpha=10.0\). The relative threshold parameter \(r\) is initialized at 0.5 and meta-learned.
+We compare against a strong set of baselines:
+\begin{itemize}
+    \item \textbf{MAML:} The canonical second-order gradient-based meta-learning algorithm \cite{fallah_2019_the}.
+    \item \textbf{FOMAML:} The popular and computationally cheaper first-order variant of MAML \cite{ji_2020_convergence}.
+    \item \textbf{Meta-SGD:} A strong baseline that meta-learns per-parameter learning rates.
+    \item \textbf{Prototypical Networks (ProtoNets):} A leading metric-learning approach that provides a non-optimization-based comparison point.
+\end{itemize}
+
+\subsection{Implementation and Training Details}
+All models are implemented in PyTorch. The outer-loop meta-optimizer for all gradient-based methods is Adam with a learning rate of 1e-3. The inner-loop optimizer is standard SGD, with its learning rate tuned on the meta-validation set for each method. All experiments are conducted using 5 different random seeds to ensure robust and reproducible results, and we report the mean and 95\% confidence intervals across these runs.
+
+\subsection{Evaluation Protocol and Metrics}
+Evaluation is performed on 2,000 tasks sampled from the meta-test split of each dataset. We employ a suite of metrics to provide a holistic view of performance:
+\begin{itemize}
+    \item \textbf{Accuracy vs. Adaptation Steps Curve:} The primary visualization, plotting the average query set accuracy as a function of the number of inner-loop gradient steps. This directly evaluates convergence speed.
+    \item \textbf{Steps to Threshold (STT):} The mean number of gradient steps required for each method to reach a pre-defined target accuracy, providing a quantitative measure of speed.
+    \item \textbf{Area Under the Curve (AUC):} The area under the accuracy vs. steps curve (up to 10 steps), serving as a single-number summary of rapid adaptation performance.
+    \item \textbf{Final Accuracy:} The accuracy after a generous number of adaptation steps (e.g., 20) to compare the performance ceiling of each method.
+    \item \textbf{Adaptive Inference Performance (VeloML only):} We evaluate VeloML using its meta-learned stopping criterion (\(loss_k \leq r \cdot loss_0\)) and report the average number of steps taken, the average wall-clock inference time, and the resulting accuracy. This demonstrates the practical benefits of the adaptive computation mechanism.
+\end{itemize}
+
+\section{Results}
+\label{sec:results}
+The experiments were designed to provide a comprehensive empirical validation of Velocity-Optimized Meta-Learning (VeloML) against several standard meta-learning baselines on the Mini-ImageNet and Tiered-ImageNet benchmarks. The primary objective was to test the hypotheses that VeloML produces initializations that converge faster (H1), exhibit a superior performance profile across adaptation steps (H2), enable efficient adaptive inference (H3), and achieve competitive final performance (H4).
+
+However, the execution of the described experimental protocol was precluded by a technical issue during environment setup. The execution log indicates that the Python package manager, \texttt{pip}, was unable to resolve dependencies required to run the experiment. Specifically, a version conflict arose between the \texttt{torch} and \texttt{torchvision} libraries. The log shows that the dependency resolver performed an extensive, unsuccessful search through numerous versions of these packages before terminating with an error. This conflict prevented the creation of a viable runtime environment, and consequently, the main training and evaluation script was never executed.
+
+As a result of this technical failure, no performance data was generated for VeloML or any of the baseline models (MAML, FOMAML, Meta-SGD, ProtoNets). It is therefore impossible to draw any conclusions regarding the empirical performance of our proposed method. The core claims about VeloML's convergence speed, computational efficiency, and final accuracy remain untested. The well-defined experimental protocol and metrics could not be applied, and we are unable to present the planned 'Accuracy vs. Adaptation Steps' curves, summary tables for STT and AUC, or analysis of the adaptive inference behavior. The experimental design remains a sound proposal for future work, but its execution was preempted by the dependency issue. The resolution of this environment conflict is a necessary prerequisite for obtaining the data required to validate the contributions of this paper.
+
+\section{Conclusion}
+\label{sec:conclusion}
+In this paper, we identified the 'short-horizon bias' as a fundamental limitation of standard gradient-based meta-learning algorithms like MAML. This bias arises from a misaligned meta-objective that optimizes for performance after a small, fixed number of adaptation steps, rather than for the true goal of rapid convergence. To address this, we proposed Velocity-Optimized Meta-Learning (VeloML), a novel framework that directly optimizes for convergence speed. 
+
+Our key contributions include a new meta-objective that serves as a differentiable proxy for the number of steps to convergence, a meta-learned relative thresholding mechanism to handle task heterogeneity in a principled manner, and a trajectory-aware hybrid-order gradient strategy to ensure computational feasibility. Together, these components are designed to learn parameter initializations that are not just good 'sprinters' but are positioned to find high-quality solutions via the most efficient optimization paths.
+
+We formulated a rigorous experimental plan to validate VeloML's effectiveness on standard few-shot learning benchmarks. Unfortunately, due to a technical failure in resolving software dependencies, these experiments could not be executed. Consequently, the empirical verification of our method's advantages in terms of faster convergence, adaptive inference, and generalization performance remains an immediate priority for future work. The first step will be to resolve the technical issues and carry out the described evaluation. Looking further ahead, the principle of optimizing for convergence velocity could be extended to other domains, such as meta-reinforcement learning, or combined with more advanced techniques for managing long-horizon optimization, such as \cite{shin_2021_large}. The VeloML framework offers a promising new direction for creating more efficient and principled meta-learning algorithms.
+
+This work was generated by \textsc{AIRAS} \citep{airas2025}.
+
+\bibliographystyle{iclr2024_conference}
+\bibliography{references}
+
+\end{document}

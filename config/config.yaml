@@ -1,0 +1,44 @@
+experiment:
+  seed: 42
+  images_dir: .research/iteration1/images
+
+data:
+  dir: data
+  name: synthetic_tabular
+  n_train: 2000
+  n_val: 200
+  n_test: 200
+  d: 32
+  noise_std: 0.1
+
+model:
+  dir: models
+  type: mlp
+  hidden_dims: [128, 64]
+  lr: 0.001
+  epochs: 5
+  batch_size: 128
+
+csshap:
+  budgets: [200, 400]
+  order_trunc_k: 3
+  mom_groups: 5
+  order_skew: true
+  topL_singleton_factor: 4
+  tail_probes: 64
+
+experiments:
+  exp1:
+    d: 64
+    s: 5
+    R: 10.0
+    sigma: 0.01
+    budgets: [128, 256]
+    seed: 123
+  exp3:
+    d: 128
+    s_main: 8
+    s_pair: 8
+    R: 30.0
+    budgets: [200, 400]
+    seed: 321

@@ -6,5 +6,52 @@
     "double quantization QLoRA",
     "AWQ LLM",
     "GPTQ LLM"
+  ],
+  "research_study_list": [
+    {
+      "title": "LoftQ: LoRA-Fine-Tuning-aware Quantization for Large Language Models"
+    },
+    {
+      "title": "LoftQ: LoRA-Fine-Tuning-aware Quantization for Large Language Models"
+    },
+    {
+      "title": "Intriguing Properties of Quantization at Scale"
+    },
+    {
+      "title": "Overcoming Oscillations in Quantization-Aware Training"
+    },
+    {
+      "title": "Overcoming Oscillations in Quantization-Aware Training"
+    },
+    {
+      "title": "Outlier-aware Slicing for Post-Training Quantization in Vision Transformer"
+    },
+    {
+      "title": "LoftQ: LoRA-Fine-Tuning-aware Quantization for Large Language Models"
+    },
+    {
+      "title": "LoftQ: LoRA-Fine-Tuning-aware Quantization for Large Language Models"
+    },
+    {
+      "title": "QA-LoRA: Quantization-Aware Low-Rank Adaptation of Large Language Models"
+    },
+    {
+      "title": "Rethinking Generative Large Language Model Evaluation for Semantic Comprehension"
+    },
+    {
+      "title": "Extreme Compression of Large Language Models via Additive Quantization"
+    },
+    {
+      "title": "Q-Bench: A Benchmark for General-Purpose Foundation Models on Low-level Vision"
+    },
+    {
+      "title": "OPTQ: Accurate Quantization for Generative Pre-trained Transformers"
+    },
+    {
+      "title": "LoftQ: LoRA-Fine-Tuning-aware Quantization for Large Language Models"
+    },
+    {
+      "title": "LoftQ: LoRA-Fine-Tuning-aware Quantization for Large Language Models"
+    }
   ]
 }

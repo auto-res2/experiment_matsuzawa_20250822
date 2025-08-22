@@ -6,5 +6,52 @@
     "Guided Search exploration",
     "Novelty Search guidance",
     "Population diversity improvement"
+  ],
+  "research_study_list": [
+    {
+      "title": "Quality-Similar Diversity via Population Based Reinforcement Learning"
+    },
+    {
+      "title": "Hierarchically Organized Latent Modules for Exploratory Search in Morphogenetic Systems"
+    },
+    {
+      "title": "Hierarchically Organized Latent Modules for Exploratory Search in Morphogenetic Systems"
+    },
+    {
+      "title": "Evolving Populations of Diverse RL Agents with MAP-Elites"
+    },
+    {
+      "title": "Quality Diversity through Human Feedback: Towards Open-Ended Diversity-Driven Optimization"
+    },
+    {
+      "title": "Quality-Similar Diversity via Population Based Reinforcement Learning"
+    },
+    {
+      "title": "A Partially-Supervised Reinforcement Learning Framework for Visual Active Search"
+    },
+    {
+      "title": "Nonmyopic Multifidelity Acitve Search"
+    },
+    {
+      "title": "Learning a Latent Search Space for Routing Problems using Variational Autoencoders"
+    },
+    {
+      "title": "A Language Model’s Guide Through Latent Space"
+    },
+    {
+      "title": "NovelD: A Simple yet Effective Exploration Criterion"
+    },
+    {
+      "title": "Fake It Until You Make It : Towards Accurate Near-Distribution Novelty Detection"
+    },
+    {
+      "title": "Effective Diversity in Population Based Reinforcement Learning"
+    },
+    {
+      "title": "Quality-Similar Diversity via Population Based Reinforcement Learning"
+    },
+    {
+      "title": "Iteratively Learn Diverse Strategies with State Distance Information"
+    }
   ]
 }

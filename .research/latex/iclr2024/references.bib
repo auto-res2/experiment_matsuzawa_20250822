@@ -5,3 +5,526 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{author_year_learning,
+ title = {Learning a Latent Search Space for Routing Problems using Variational Autoencoders}
+}
+
+@article{author_year_noveld,
+ title = {NovelD: A Simple yet Effective Exploration Criterion}
+}
+
+@article{author_year_quality,
+ title = {Quality-Similar Diversity via Population Based Reinforcement Learning}
+}
+
+@article{author_year_quality,
+ title = {Quality-Similar Diversity via Population Based Reinforcement Learning}
+}
+
+@article{author_year_quality,
+ title = {Quality-Similar Diversity via Population Based Reinforcement Learning}
+}
+
+@article{ding_2023_quality,
+ abstract = {Reinforcement Learning from Human Feedback (RLHF) has shown potential in
+qualitative tasks where easily defined performance measures are lacking.
+However, there are drawbacks when RLHF is commonly used to optimize for average
+human preferences, especially in generative tasks that demand diverse model
+responses. Meanwhile, Quality Diversity (QD) algorithms excel at identifying
+diverse and high-quality solutions but often rely on manually crafted diversity
+metrics. This paper introduces Quality Diversity through Human Feedback (QDHF),
+a novel approach that progressively infers diversity metrics from human
+judgments of similarity among solutions, thereby enhancing the applicability
+and effectiveness of QD algorithms in complex and open-ended domains. Empirical
+studies show that QDHF significantly outperforms state-of-the-art methods in
+automatic diversity discovery and matches the efficacy of QD with manually
+crafted diversity metrics on standard benchmarks in robotics and reinforcement
+learning. Notably, in open-ended generative tasks, QDHF substantially enhances
+the diversity of text-to-image generation from a diffusion model and is more
+favorably received in user studies. We conclude by analyzing QDHF's
+scalability, robustness, and quality of derived diversity metrics, emphasizing
+its strength in open-ended optimization tasks. Code and tutorials are available
+at https://liding.info/qdhf.},
+ arxiv_url = {https://arxiv.org/pdf/2310.12103v3.pdf},
+ author = {Li Ding and Jenny Zhang and Jeff Clune and Lee Spector and Joel Lehman},
+ title = {Quality Diversity through Human Feedback: Towards Open-Ended Diversity-Driven Optimization},
+ year = {2023}
+}
+
+@article{etcheverry_2020_hierarchically,
+ abstract = {Self-organization of complex morphological patterns from local interactions
+is a fascinating phenomenon in many natural and artificial systems. In the
+artificial world, typical examples of such morphogenetic systems are cellular
+automata. Yet, their mechanisms are often very hard to grasp and so far
+scientific discoveries of novel patterns have primarily been relying on manual
+tuning and ad hoc exploratory search. The problem of automated diversity-driven
+discovery in these systems was recently introduced [26, 62], highlighting that
+two key ingredients are autonomous exploration and unsupervised representation
+learning to describe "relevant" degrees of variations in the patterns. In this
+paper, we motivate the need for what we call Meta-diversity search, arguing
+that there is not a unique ground truth interesting diversity as it strongly
+depends on the final observer and its motives. Using a continuous game-of-life
+system for experiments, we provide empirical evidences that relying on
+monolithic architectures for the behavioral embedding design tends to bias the
+final discoveries (both for hand-defined and unsupervisedly-learned features)
+which are unlikely to be aligned with the interest of a final end-user. To
+address these issues, we introduce a novel dynamic and modular architecture
+that enables unsupervised learning of a hierarchy of diverse representations.
+Combined with intrinsically motivated goal exploration algorithms, we show that
+this system forms a discovery assistant that can efficiently adapt its
+diversity search towards preferences of a user using only a very small amount
+of user feedback.},
+ arxiv_url = {https://arxiv.org/pdf/2007.01195v3.pdf},
+ author = {Mayalen Etcheverry and Clement Moulin-Frier and Pierre-Yves Oudeyer},
+ journal = {Advances in Neural Information Processing Systems 33 (NeurIPS 2020
+  - oral)},
+ title = {Hierarchically Organized Latent Modules for Exploratory Search in Morphogenetic Systems},
+ year = {2020}
+}
+
+@article{etcheverry_2020_hierarchically,
+ abstract = {Self-organization of complex morphological patterns from local interactions
+is a fascinating phenomenon in many natural and artificial systems. In the
+artificial world, typical examples of such morphogenetic systems are cellular
+automata. Yet, their mechanisms are often very hard to grasp and so far
+scientific discoveries of novel patterns have primarily been relying on manual
+tuning and ad hoc exploratory search. The problem of automated diversity-driven
+discovery in these systems was recently introduced [26, 62], highlighting that
+two key ingredients are autonomous exploration and unsupervised representation
+learning to describe "relevant" degrees of variations in the patterns. In this
+paper, we motivate the need for what we call Meta-diversity search, arguing
+that there is not a unique ground truth interesting diversity as it strongly
+depends on the final observer and its motives. Using a continuous game-of-life
+system for experiments, we provide empirical evidences that relying on
+monolithic architectures for the behavioral embedding design tends to bias the
+final discoveries (both for hand-defined and unsupervisedly-learned features)
+which are unlikely to be aligned with the interest of a final end-user. To
+address these issues, we introduce a novel dynamic and modular architecture
+that enables unsupervised learning of a hierarchy of diverse representations.
+Combined with intrinsically motivated goal exploration algorithms, we show that
+this system forms a discovery assistant that can efficiently adapt its
+diversity search towards preferences of a user using only a very small amount
+of user feedback.},
+ arxiv_url = {https://arxiv.org/pdf/2007.01195v3.pdf},
+ author = {Mayalen Etcheverry and Clement Moulin-Frier and Pierre-Yves Oudeyer},
+ journal = {Advances in Neural Information Processing Systems 33 (NeurIPS 2020
+  - oral)},
+ title = {Hierarchically Organized Latent Modules for Exploratory Search in Morphogenetic Systems},
+ year = {2020}
+}
+
+@article{fu_2023_iteratively,
+ abstract = {In complex reinforcement learning (RL) problems, policies with similar
+rewards may have substantially different behaviors. It remains a fundamental
+challenge to optimize rewards while also discovering as many diverse strategies
+as possible, which can be crucial in many practical applications. Our study
+examines two design choices for tackling this challenge, i.e., diversity
+measure and computation framework. First, we find that with existing diversity
+measures, visually indistinguishable policies can still yield high diversity
+scores. To accurately capture the behavioral difference, we propose to
+incorporate the state-space distance information into the diversity measure. In
+addition, we examine two common computation frameworks for this problem, i.e.,
+population-based training (PBT) and iterative learning (ITR). We show that
+although PBT is the precise problem formulation, ITR can achieve comparable
+diversity scores with higher computation efficiency, leading to improved
+solution quality in practice. Based on our analysis, we further combine ITR
+with two tractable realizations of the state-distance-based diversity measures
+and develop a novel diversity-driven RL algorithm, State-based Intrinsic-reward
+Policy Optimization (SIPO), with provable convergence properties. We
+empirically examine SIPO across three domains from robot locomotion to
+multi-agent games. In all of our testing environments, SIPO consistently
+produces strategically diverse and human-interpretable policies that cannot be
+discovered by existing baselines.},
+ arxiv_url = {https://arxiv.org/pdf/2310.14509v1.pdf},
+ author = {Wei Fu and Weihua Du and Jingwei Li and Sunli Chen and Jingzhao Zhang and Yi Wu},
+ github_url = {https://github.com/footoredo/rspo-iclr-2022},
+ title = {Iteratively Learn Diverse Strategies with State Distance Information},
+ year = {2023}
+}
+
+@article{mirzaei_2022_fake,
+ abstract = {We aim for image-based novelty detection. Despite considerable progress,
+existing models either fail or face a dramatic drop under the so-called
+"near-distribution" setting, where the differences between normal and anomalous
+samples are subtle. We first demonstrate existing methods experience up to 20%
+decrease in performance in the near-distribution setting. Next, we propose to
+exploit a score-based generative model to produce synthetic near-distribution
+anomalous data. Our model is then fine-tuned to distinguish such data from the
+normal samples. We provide a quantitative as well as qualitative evaluation of
+this strategy, and compare the results with a variety of GAN-based models.
+Effectiveness of our method for both the near-distribution and standard novelty
+detection is assessed through extensive experiments on datasets in diverse
+applications such as medical images, object classification, and quality
+control. This reveals that our method considerably improves over existing
+models, and consistently decreases the gap between the near-distribution and
+standard novelty detection performance. The code repository is available at
+https://github.com/rohban-lab/FITYMI.},
+ arxiv_url = {https://arxiv.org/pdf/2205.14297v2.pdf},
+ author = {Hossein Mirzaei and Mohammadreza Salehi and Sajjad Shahabi and Efstratios Gavves and Cees G. M. Snoek and Mohammad Sabokrou and Mohammad Hossein Rohban},
+ title = {Fake It Until You Make It : Towards Accurate Near-Distribution Novelty Detection},
+ year = {2022}
+}
+
+@article{nguyen_2021_nonmyopic,
+ abstract = {Active search is a learning paradigm where we seek to identify as many
+members of a rare, valuable class as possible given a labeling budget. Previous
+work on active search has assumed access to a faithful (and expensive) oracle
+reporting experimental results. However, some settings offer access to cheaper
+surrogates such as computational simulation that may aid in the search. We
+propose a model of multifidelity active search, as well as a novel,
+computationally efficient policy for this setting that is motivated by
+state-of-the-art classical policies. Our policy is nonmyopic and budget aware,
+allowing for a dynamic tradeoff between exploration and exploitation. We
+evaluate the performance of our solution on real-world datasets and demonstrate
+significantly better performance than natural benchmarks.},
+ arxiv_url = {https://arxiv.org/pdf/2106.06356v2.pdf},
+ author = {Quan Nguyen and Arghavan Modiri and Roman Garnett},
+ title = {Nonmyopic Multifidelity Acitve Search},
+ year = {2021}
+}
+
+@article{parkerholder_2020_effective,
+ abstract = {Exploration is a key problem in reinforcement learning, since agents can only
+learn from data they acquire in the environment. With that in mind, maintaining
+a population of agents is an attractive method, as it allows data be collected
+with a diverse set of behaviors. This behavioral diversity is often boosted via
+multi-objective loss functions. However, those approaches typically leverage
+mean field updates based on pairwise distances, which makes them susceptible to
+cycling behaviors and increased redundancy. In addition, explicitly boosting
+diversity often has a detrimental impact on optimizing already fruitful
+behaviors for rewards. As such, the reward-diversity trade off typically relies
+on heuristics. Finally, such methods require behavioral representations, often
+handcrafted and domain specific. In this paper, we introduce an approach to
+optimize all members of a population simultaneously. Rather than using pairwise
+distance, we measure the volume of the entire population in a behavioral
+manifold, defined by task-agnostic behavioral embeddings. In addition, our
+algorithm Diversity via Determinants (DvD), adapts the degree of diversity
+during training using online learning techniques. We introduce both
+evolutionary and gradient-based instantiations of DvD and show they effectively
+improve exploration without reducing performance when better exploration is not
+required.},
+ arxiv_url = {https://arxiv.org/pdf/2002.00632v3.pdf},
+ author = {Jack Parker-Holder and Aldo Pacchiano and Krzysztof Choromanski and Stephen Roberts},
+ github_url = {https://github.com/jparkerholder/DvD_ES},
+ title = {Effective Diversity in Population Based Reinforcement Learning},
+ year = {2020}
+}
+
+@article{pierrot_2023_evolving,
+ abstract = {Quality Diversity (QD) has emerged as a powerful alternative optimization
+paradigm that aims at generating large and diverse collections of solutions,
+notably with its flagship algorithm MAP-ELITES (ME) which evolves solutions
+through mutations and crossovers. While very effective for some unstructured
+problems, early ME implementations relied exclusively on random search to
+evolve the population of solutions, rendering them notoriously
+sample-inefficient for high-dimensional problems, such as when evolving neural
+networks. Follow-up works considered exploiting gradient information to guide
+the search in order to address these shortcomings through techniques borrowed
+from either Black-Box Optimization (BBO) or Reinforcement Learning (RL). While
+mixing RL techniques with ME unlocked state-of-the-art performance for robotics
+control problems that require a good amount of exploration, it also plagued
+these ME variants with limitations common among RL algorithms that ME was free
+of, such as hyperparameter sensitivity, high stochasticity as well as training
+instability, including when the population size increases as some components
+are shared across the population in recent approaches. Furthermore, existing
+approaches mixing ME with RL tend to be tied to a specific RL algorithm, which
+effectively prevents their use on problems where the corresponding RL algorithm
+fails. To address these shortcomings, we introduce a flexible framework that
+allows the use of any RL algorithm and alleviates the aforementioned
+limitations by evolving populations of agents (whose definition include
+hyperparameters and all learnable parameters) instead of just policies. We
+demonstrate the benefits brought about by our framework through extensive
+numerical experiments on a number of robotics control problems, some of which
+with deceptive rewards, taken from the QD-RL literature.},
+ arxiv_url = {https://arxiv.org/pdf/2303.12803v2.pdf},
+ author = {Thomas Pierrot and Arthur Flajolet},
+ github_url = {https://github.com/adaptive-intelligent-robotics/QDax},
+ title = {Evolving Populations of Diverse RL Agents with MAP-Elites},
+ year = {2023}
+}
+
+@article{rtte_2024_language,
+ abstract = {Concept guidance has emerged as a cheap and simple way to control the
+behavior of language models by probing their hidden representations for concept
+vectors and using them to perturb activations at inference time. While the
+focus of previous work has largely been on truthfulness, in this paper we
+extend this framework to a richer set of concepts such as appropriateness,
+humor, creativity and quality, and explore to what degree current detection and
+guidance strategies work in these challenging settings. To facilitate
+evaluation, we develop a novel metric for concept guidance that takes into
+account both the success of concept elicitation as well as the potential
+degradation in fluency of the guided model. Our extensive experiments reveal
+that while some concepts such as truthfulness more easily allow for guidance
+with current techniques, novel concepts such as appropriateness or humor either
+remain difficult to elicit, need extensive tuning to work, or even experience
+confusion. Moreover, we find that probes with optimal detection accuracies do
+not necessarily make for the optimal guides, contradicting previous
+observations for truthfulness. Our work warrants a deeper investigation into
+the interplay between detectability, guidability, and the nature of the
+concept, and we hope that our rich experimental test-bed for guidance research
+inspires stronger follow-up approaches.},
+ arxiv_url = {https://arxiv.org/pdf/2402.14433v1.pdf},
+ author = {Dimitri von Rütte and Sotiris Anagnostidis and Gregor Bachmann and Thomas Hofmann},
+ title = {A Language Model’s Guide Through Latent Space},
+ year = {2024}
+}
+
+@article{sarkar_2023_partially,
+ abstract = {Visual active search (VAS) has been proposed as a modeling framework in which
+visual cues are used to guide exploration, with the goal of identifying regions
+of interest in a large geospatial area. Its potential applications include
+identifying hot spots of rare wildlife poaching activity, search-and-rescue
+scenarios, identifying illegal trafficking of weapons, drugs, or people, and
+many others. State of the art approaches to VAS include applications of deep
+reinforcement learning (DRL), which yield end-to-end search policies, and
+traditional active search, which combines predictions with custom algorithmic
+approaches. While the DRL framework has been shown to greatly outperform
+traditional active search in such domains, its end-to-end nature does not make
+full use of supervised information attained either during training, or during
+actual search, a significant limitation if search tasks differ significantly
+from those in the training distribution. We propose an approach that combines
+the strength of both DRL and conventional active search by decomposing the
+search policy into a prediction module, which produces a geospatial
+distribution of regions of interest based on task embedding and search history,
+and a search module, which takes the predictions and search history as input
+and outputs the search distribution. We develop a novel meta-learning approach
+for jointly learning the resulting combined policy that can make effective use
+of supervised information obtained both at training and decision time. Our
+extensive experiments demonstrate that the proposed representation and
+meta-learning frameworks significantly outperform state of the art in visual
+active search on several problem domains.},
+ arxiv_url = {https://arxiv.org/pdf/2310.09689v2.pdf},
+ author = {Anindya Sarkar and Nathan Jacobs and Yevgeniy Vorobeychik},
+ title = {A Partially-Supervised Reinforcement Learning Framework for Visual Active Search},
+ year = {2023}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{author_year_jax,
+ title = {JAX: composable transformations of Python+NumPy programs}
+}
+
+@article{colas_2018_gep,
+ abstract = {In continuous action domains, standard deep reinforcement learning algorithms
+like DDPG suffer from inefficient exploration when facing sparse or deceptive
+reward problems. Conversely, evolutionary and developmental methods focusing on
+exploration like Novelty Search, Quality-Diversity or Goal Exploration
+Processes explore more robustly but are less efficient at fine-tuning policies
+using gradient descent. In this paper, we present the GEP-PG approach, taking
+the best of both worlds by sequentially combining a Goal Exploration Process
+and two variants of DDPG. We study the learning performance of these components
+and their combination on a low dimensional deceptive reward problem and on the
+larger Half-Cheetah benchmark. We show that DDPG fails on the former and that
+GEP-PG improves over the best DDPG variant in both environments. Supplementary
+videos and discussion can be found at http://frama.link/gep_pg, the code at
+http://github.com/flowersteam/geppg.},
+ arxiv_url = {https://arxiv.org/pdf/1802.05054v5.pdf},
+ author = {Cédric Colas and Olivier Sigaud and Pierre-Yves Oudeyer},
+ title = {GEP-PG: decoupling exploration and exploitation in deep reinforcement learning algorithms},
+ year = {2018}
+}
+
+@article{colas_2020_scaling,
+ abstract = {Quality-Diversity (QD) algorithms, and MAP-Elites (ME) in particular, have
+proven very useful for a broad range of applications including enabling real
+robots to recover quickly from joint damage, solving strongly deceptive maze
+tasks or evolving robot morphologies to discover new gaits. However, present
+implementations of MAP-Elites and other QD algorithms seem to be limited to
+low-dimensional controllers with far fewer parameters than modern deep neural
+network models. In this paper, we propose to leverage the efficiency of
+Evolution Strategies (ES) to scale MAP-Elites to high-dimensional controllers
+parameterized by large neural networks. We design and evaluate a new hybrid
+algorithm called MAP-Elites with Evolution Strategies (ME-ES) for post-damage
+recovery in a difficult high-dimensional control task where traditional ME
+fails. Additionally, we show that ME-ES performs efficient exploration, on par
+with state-of-the-art exploration algorithms in high-dimensional control tasks
+with strongly deceptive rewards.},
+ arxiv_url = {https://arxiv.org/pdf/2003.01825v3.pdf},
+ author = {Cédric Colas and Joost Huizinga and Vashisht Madhavan and Jeff Clune},
+ doi = {10.1145/3377930.3390217},
+ title = {Scaling map-elites to deep neuroevolution},
+ year = {2020}
+}
+
+@article{conti_2017_improving,
+ abstract = {Evolution strategies (ES) are a family of black-box optimization algorithms
+able to train deep neural networks roughly as well as Q-learning and policy
+gradient methods on challenging deep reinforcement learning (RL) problems, but
+are much faster (e.g. hours vs. days) because they parallelize better. However,
+many RL problems require directed exploration because they have reward
+functions that are sparse or deceptive (i.e. contain local optima), and it is
+unknown how to encourage such exploration with ES. Here we show that algorithms
+that have been invented to promote directed exploration in small-scale evolved
+neural networks via populations of exploring agents, specifically novelty
+search (NS) and quality diversity (QD) algorithms, can be hybridized with ES to
+improve its performance on sparse or deceptive deep RL tasks, while retaining
+scalability. Our experiments confirm that the resultant new algorithms, NS-ES
+and two QD algorithms, NSR-ES and NSRA-ES, avoid local optima encountered by ES
+to achieve higher performance on Atari and simulated robots learning to walk
+around a deceptive trap. This paper thus introduces a family of fast, scalable
+algorithms for reinforcement learning that are capable of directed exploration.
+It also adds this new family of exploration algorithms to the RL toolbox and
+raises the interesting possibility that analogous algorithms with multiple
+simultaneous paths of exploration might also combine well with existing RL
+algorithms outside ES.},
+ arxiv_url = {https://arxiv.org/pdf/1712.06560v3.pdf},
+ author = {Edoardo Conti and Vashisht Madhavan and Felipe Petroski Such and Joel Lehman and Kenneth O. Stanley and Jeff Clune},
+ title = {Improving exploration in evolution strategies for deep reinforcement learning via a population of novelty-seeking agents},
+ year = {2017}
+}
+
+@article{cully_2014_robots,
+ abstract = {As robots leave the controlled environments of factories to autonomously
+function in more complex, natural environments, they will have to respond to
+the inevitable fact that they will become damaged. However, while animals can
+quickly adapt to a wide variety of injuries, current robots cannot "think
+outside the box" to find a compensatory behavior when damaged: they are limited
+to their pre-specified self-sensing abilities, can diagnose only anticipated
+failure modes, and require a pre-programmed contingency plan for every type of
+potential damage, an impracticality for complex robots. Here we introduce an
+intelligent trial and error algorithm that allows robots to adapt to damage in
+less than two minutes, without requiring self-diagnosis or pre-specified
+contingency plans. Before deployment, a robot exploits a novel algorithm to
+create a detailed map of the space of high-performing behaviors: This map
+represents the robot's intuitions about what behaviors it can perform and their
+value. If the robot is damaged, it uses these intuitions to guide a
+trial-and-error learning algorithm that conducts intelligent experiments to
+rapidly discover a compensatory behavior that works in spite of the damage.
+Experiments reveal successful adaptations for a legged robot injured in five
+different ways, including damaged, broken, and missing legs, and for a robotic
+arm with joints broken in 14 different ways. This new technique will enable
+more robust, effective, autonomous robots, and suggests principles that animals
+may use to adapt to injury.},
+ arxiv_url = {https://arxiv.org/pdf/1407.3501v4.pdf},
+ author = {Antoine Cully and Jeff Clune and Danesh Tarapore and Jean-Baptiste Mouret},
+ doi = {10.1038/nature14422},
+ title = {Robots that can adapt like animals},
+ year = {2014}
+}
+
+@article{cully_2018_hierarchical,
+ abstract = {Enabling artificial agents to automatically learn complex, versatile and
+high-performing behaviors is a long-lasting challenge. This paper presents a
+step in this direction with hierarchical behavioral repertoires that stack
+several behavioral repertoires to generate sophisticated behaviors. Each
+repertoire of this architecture uses the lower repertoires to create complex
+behaviors as sequences of simpler ones, while only the lowest repertoire
+directly controls the agent's movements. This paper also introduces a novel
+approach to automatically define behavioral descriptors thanks to an
+unsupervised neural network that organizes the produced high-level behaviors.
+The experiments show that the proposed architecture enables a robot to learn
+how to draw digits in an unsupervised manner after having learned to draw lines
+and arcs. Compared to traditional behavioral repertoires, the proposed
+architecture reduces the dimensionality of the optimization problems by orders
+of magnitude and provides behaviors with a twice better fitness. More
+importantly, it enables the transfer of knowledge between robots: a
+hierarchical repertoire evolved for a robotic arm to draw digits can be
+transferred to a humanoid robot by simply changing the lowest layer of the
+hierarchy. This enables the humanoid to draw digits although it has never been
+trained for this task.},
+ arxiv_url = {https://arxiv.org/pdf/1804.07127v1.pdf},
+ author = {Antoine Cully and Yiannis Demiris},
+ doi = {10.1145/3205455.3205571},
+ journal = {Genetic and Evolutionary Computation Conference 2018},
+ title = {Hierarchical behavioral repertoires with unsupervised descriptors},
+ year = {2018}
+}
+
+@article{flajolet_2022_fast,
+ abstract = {Training populations of agents has demonstrated great promise in
+Reinforcement Learning for stabilizing training, improving exploration and
+asymptotic performance, and generating a diverse set of solutions. However,
+population-based training is often not considered by practitioners as it is
+perceived to be either prohibitively slow (when implemented sequentially), or
+computationally expensive (if agents are trained in parallel on independent
+accelerators). In this work, we compare implementations and revisit previous
+studies to show that the judicious use of compilation and vectorization allows
+population-based training to be performed on a single machine with one
+accelerator with minimal overhead compared to training a single agent. We also
+show that, when provided with a few accelerators, our protocols extend to large
+population sizes for applications such as hyperparameter tuning. We hope that
+this work and the public release of our code will encourage practitioners to
+use population-based learning more frequently for their research and
+applications.},
+ arxiv_url = {https://arxiv.org/pdf/2206.08888v1.pdf},
+ author = {Arthur Flajolet and Claire Bizon Monroc and Karim Beguir and Thomas Pierrot},
+ title = {Fast population-based reinforcement learning on a single machine},
+ year = {2022}
+}
+
+@article{fontaine_2019_covariance,
+ abstract = {We focus on the challenge of finding a diverse collection of quality
+solutions on complex continuous domains. While quality diver-sity (QD)
+algorithms like Novelty Search with Local Competition (NSLC) and MAP-Elites are
+designed to generate a diverse range of solutions, these algorithms require a
+large number of evaluations for exploration of continuous spaces. Meanwhile,
+variants of the Covariance Matrix Adaptation Evolution Strategy (CMA-ES) are
+among the best-performing derivative-free optimizers in single-objective
+continuous domains. This paper proposes a new QD algorithm called Covariance
+Matrix Adaptation MAP-Elites (CMA-ME). Our new algorithm combines the
+self-adaptation techniques of CMA-ES with archiving and mapping techniques for
+maintaining diversity in QD. Results from experiments based on standard
+continuous optimization benchmarks show that CMA-ME finds better-quality
+solutions than MAP-Elites; similarly, results on the strategic game Hearthstone
+show that CMA-ME finds both a higher overall quality and broader diversity of
+strategies than both CMA-ES and MAP-Elites. Overall, CMA-ME more than doubles
+the performance of MAP-Elites using standard QD performance metrics. These
+results suggest that QD algorithms augmented by operators from state-of-the-art
+optimization algorithms can yield high-performing methods for simultaneously
+exploring and optimizing continuous search spaces, with significant
+applications to design, testing, and reinforcement learning among other
+domains.},
+ arxiv_url = {https://arxiv.org/pdf/1912.02400v2.pdf},
+ author = {Matthew C. Fontaine and Julian Togelius and Stefanos Nikolaidis and Amy K. Hoover},
+ doi = {10.1145/3377930.3390232},
+ title = {Covariance matrix adaptation for the rapid illumination of behavior space},
+ year = {2019}
+}
+
+@article{fontaine_2021_differentiable,
+ abstract = {Quality diversity (QD) is a growing branch of stochastic optimization
+research that studies the problem of generating an archive of solutions that
+maximize a given objective function but are also diverse with respect to a set
+of specified measure functions. However, even when these functions are
+differentiable, QD algorithms treat them as "black boxes", ignoring gradient
+information. We present the differentiable quality diversity (DQD) problem, a
+special case of QD, where both the objective and measure functions are first
+order differentiable. We then present MAP-Elites via a Gradient Arborescence
+(MEGA), a DQD algorithm that leverages gradient information to efficiently
+explore the joint range of the objective and measure functions. Results in two
+QD benchmark domains and in searching the latent space of a StyleGAN show that
+MEGA significantly outperforms state-of-the-art QD algorithms, highlighting
+DQD's promise for efficient quality diversity optimization when gradient
+information is available. Source code is available at
+https://github.com/icaros-usc/dqd.},
+ arxiv_url = {https://arxiv.org/pdf/2106.03894v3.pdf},
+ author = {Matthew C. Fontaine and Stefanos Nikolaidis},
+ title = {Differentiable quality diversity},
+ year = {2021}
+}
+
+@article{freeman_2021_brax,
+ abstract = {We present Brax, an open source library for rigid body simulation with a
+focus on performance and parallelism on accelerators, written in JAX. We
+present results on a suite of tasks inspired by the existing reinforcement
+learning literature, but remade in our engine. Additionally, we provide
+reimplementations of PPO, SAC, ES, and direct policy optimization in JAX that
+compile alongside our environments, allowing the learning algorithm and the
+environment processing to occur on the same device, and to scale seamlessly on
+accelerators. Finally, we include notebooks that facilitate training of
+performant policies on common OpenAI Gym MuJoCo-like tasks in minutes.},
+ arxiv_url = {https://arxiv.org/pdf/2106.13281v1.pdf},
+ author = {C. Daniel Freeman and Erik Frey and Anton Raichuk and Sertan Girgin and Igor Mordatch and Olivier Bachem},
+ title = {Brax–a differentiable physics engine for large scale rigid body simulation},
+ year = {2021}
+}

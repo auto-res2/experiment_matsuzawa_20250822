@@ -6,5 +6,52 @@
     "online batch size adaptation",
     "gradient accumulation scheduling",
     "microbatch size optimization"
+  ],
+  "research_study_list": [
+    {
+      "title": "Towards Cheaper Inference in Deep Networks with Lower Bit-Width Accumulators"
+    },
+    {
+      "title": "Win: Weight-Decay-Integrated Nesterov Acceleration for Adaptive Gradient Algorithms"
+    },
+    {
+      "title": "Towards Better Understanding of Adaptive Gradient Algorithms in Generative Adversarial Nets"
+    },
+    {
+      "title": "ED-Batch: Efficient Automatic Batching of  Dynamic Neural Networks via Learned Finite State Machines"
+    },
+    {
+      "title": "SimiGrad: Fine-Grained Adaptive Batching for Large Scale Training using Gradient Similarity Measurement"
+    },
+    {
+      "title": "Batch size-invariance for policy optimization"
+    },
+    {
+      "title": "History-Gradient Aided Batch Size Adaptation for Variance Reduced Algorithms"
+    },
+    {
+      "title": "AdaScale SGD: A User-Friendly Algorithm for Distributed Training"
+    },
+    {
+      "title": "SimiGrad: Fine-Grained Adaptive Batching for Large Scale Training using Gradient Similarity Measurement"
+    },
+    {
+      "title": "Towards Cheaper Inference in Deep Networks with Lower Bit-Width Accumulators"
+    },
+    {
+      "title": "Zero Bubble (Almost) Pipeline Parallelism"
+    },
+    {
+      "title": "Normalization Layer Per-Example Gradients are Sufficient to Predict Gradient Noise Scale in Transformers"
+    },
+    {
+      "title": "On the Generalization Benefit of Noise in Stochastic Gradient Descent"
+    },
+    {
+      "title": "Don't Use Large Mini-batches, Use Local SGD"
+    },
+    {
+      "title": "An Even More Optimal Stochastic Optimization Algorithm: Minibatching and Interpolation Learning"
+    }
   ]
 }

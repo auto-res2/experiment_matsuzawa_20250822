@@ -6,5 +6,52 @@
     "GANs 計算コスト 削減",
     "synthetic data generation trade-off",
     "効率的 データ拡張 品質"
+  ],
+  "research_study_list": [
+    {
+      "title": "Real-Fake: Effective Training Data Synthesis Through Distribution Matching"
+    },
+    {
+      "title": "Self-Correcting Self-Consuming Loops for Generative Model Training"
+    },
+    {
+      "title": "Dataset Condensation via Efficient Synthetic-Data Parameterization"
+    },
+    {
+      "title": "Accelerating PDE Data Generation via Differential Operator Action in Solution Space"
+    },
+    {
+      "title": "Post-Training Quantization on Diffusion Models"
+    },
+    {
+      "title": "Accelerating Dataset Distillation via Model Augmentation"
+    },
+    {
+      "title": "Small-GAN: Speeding up GAN Training using Core-Sets "
+    },
+    {
+      "title": "E$^2$GAN: Efficient Training of Efficient GANs for Image-to-Image Translation"
+    },
+    {
+      "title": "GANs Can Play Lottery Tickets Too"
+    },
+    {
+      "title": "Real-Fake: Effective Training Data Synthesis Through Distribution Matching"
+    },
+    {
+      "title": "Synthetic Data, Real Errors: How (Not) to Publish and Use Synthetic Data"
+    },
+    {
+      "title": "Reimagining Synthetic Tabular Data Generation through Data-Centric AI: A Comprehensive Benchmark"
+    },
+    {
+      "title": "Distribution-Aware Data Expansion with Diffusion Models"
+    },
+    {
+      "title": "A Label is Worth A Thousand Images in Dataset Distillation"
+    },
+    {
+      "title": "Expanding Small-Scale Datasets with Guided Imagination"
+    }
   ]
 }

@@ -1,0 +1,28 @@
+=== pip install start Fri Aug 22 10:25:25 UTC 2025 ===
+Collecting torch (from -r requirements.txt (line 1))
+  Downloading torch-2.8.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (30 kB)
+Collecting gpytorch (from -r requirements.txt (line 2))
+  Downloading gpytorch-1.14-py3-none-any.whl.metadata (8.0 kB)
+Collecting pandas (from -r requirements.txt (line 4))
+  Downloading pandas-2.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
+Collecting numpy (from -r requirements.txt (line 5))
+  Downloading numpy-2.3.2-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+Collecting matplotlib (from -r requirements.txt (line 6))
+  Downloading matplotlib-3.10.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+Collecting seaborn (from -r requirements.txt (line 7))
+  Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting scipy (from -r requirements.txt (line 8))
+  Downloading scipy-1.16.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (61 kB)
+Collecting scikit-learn (from -r requirements.txt (line 9))
+  Downloading scikit_learn-1.7.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+Collecting ConfigSpace (from -r requirements.txt (line 10))
+  Downloading configspace-1.2.1.tar.gz (130 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting PyYAML (from -r requirements.txt (line 11))
+  Downloading PyYAML-6.0.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+=== experiment start Fri Aug 22 10:25:30 UTC 2025 ===

@@ -5,3 +5,421 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{author_year_balancing,
+ title = {Balancing Feature Similarity and Label Variability for Optimal Size-Aware One-shot Subset Selection}
+}
+
+@article{author_year_slimmable,
+ title = {Slimmable Dataset Condensation}
+}
+
+@article{citovsky_2021_batch,
+ abstract = {The ability to train complex and highly effective models often requires an
+abundance of training data, which can easily become a bottleneck in cost, time,
+and computational resources. Batch active learning, which adaptively issues
+batched queries to a labeling oracle, is a common approach for addressing this
+problem. The practical benefits of batch sampling come with the downside of
+less adaptivity and the risk of sampling redundant examples within a batch -- a
+risk that grows with the batch size. In this work, we analyze an efficient
+active learning algorithm, which focuses on the large batch setting. In
+particular, we show that our sampling method, which combines notions of
+uncertainty and diversity, easily scales to batch sizes (100K-1M) several
+orders of magnitude larger than used in previous studies and provides
+significant improvements in model training efficiency compared to recent
+baselines. Finally, we provide an initial theoretical analysis, proving label
+complexity guarantees for a related sampling method, which we show is
+approximately equivalent to our sampling method in specific settings.},
+ arxiv_url = {https://arxiv.org/pdf/2107.14263v1.pdf},
+ author = {Gui Citovsky and Giulia DeSalvo and Claudio Gentile and Lazaros Karydas and Anand Rajagopalan and Afshin Rostamizadeh and Sanjiv Kumar},
+ title = {Batch Active Learning at Scale},
+ year = {2021}
+}
+
+@article{katzsamuels_2021_improved,
+ abstract = {We consider active learning for binary classification in the agnostic
+pool-based setting. The vast majority of works in active learning in the
+agnostic setting are inspired by the CAL algorithm where each query is
+uniformly sampled from the disagreement region of the current version space.
+The sample complexity of such algorithms is described by a quantity known as
+the disagreement coefficient which captures both the geometry of the hypothesis
+space as well as the underlying probability space. To date, the disagreement
+coefficient has been justified by minimax lower bounds only, leaving the door
+open for superior instance dependent sample complexities. In this work we
+propose an algorithm that, in contrast to uniform sampling over the
+disagreement region, solves an experimental design problem to determine a
+distribution over examples from which to request labels. We show that the new
+approach achieves sample complexity bounds that are never worse than the best
+disagreement coefficient-based bounds, but in specific cases can be
+dramatically smaller. From a practical perspective, the proposed algorithm
+requires no hyperparameters to tune (e.g., to control the aggressiveness of
+sampling), and is computationally efficient by means of assuming access to an
+empirical risk minimization oracle (without any constraints). Empirically, we
+demonstrate that our algorithm is superior to state of the art agnostic active
+learning algorithms on image classification datasets.},
+ arxiv_url = {https://arxiv.org/pdf/2105.06499v1.pdf},
+ author = {Julian Katz-Samuels and Jifan Zhang and Lalit Jain and Kevin Jamieson},
+ title = {Improved Algorithms for Agnostic Pool-based Active Classification},
+ year = {2021}
+}
+
+@article{kolossov_2023_towards,
+ abstract = {Given a sample of size $N$, it is often useful to select a subsample of
+smaller size $n<N$ to be used for statistical estimation or learning. Such a
+data selection step is useful to reduce the requirements of data labeling and
+the computational complexity of learning. We assume to be given $N$ unlabeled
+samples $\{{\boldsymbol x}_i\}_{i\le N}$, and to be given access to a
+`surrogate model' that can predict labels $y_i$ better than random guessing.
+Our goal is to select a subset of the samples, to be denoted by $\{{\boldsymbol
+x}_i\}_{i\in G}$, of size $|G|=n<N$. We then acquire labels for this set and we
+use them to train a model via regularized empirical risk minimization.
+  By using a mixture of numerical experiments on real and synthetic data, and
+mathematical derivations under low- and high- dimensional asymptotics, we show
+that: $(i)$~Data selection can be very effective, in particular beating
+training on the full sample in some cases; $(ii)$~Certain popular choices in
+data selection methods (e.g. unbiased reweighted subsampling, or influence
+function-based subsampling) can be substantially suboptimal.},
+ arxiv_url = {https://arxiv.org/pdf/2309.14563v2.pdf},
+ author = {Germain Kolossov and Andrea Montanari and Pulkit Tandon},
+ title = {Towards a statistical theory of data selection under weak supervision},
+ year = {2023}
+}
+
+@article{maalouf_2023_autocoreset,
+ abstract = {A coreset is a tiny weighted subset of an input set, that closely resembles
+the loss function, with respect to a certain set of queries. Coresets became
+prevalent in machine learning as they have shown to be advantageous for many
+applications. While coreset research is an active research area, unfortunately,
+coresets are constructed in a problem-dependent manner, where for each problem,
+a new coreset construction algorithm is usually suggested, a process that may
+take time or may be hard for new researchers in the field. Even the generic
+frameworks require additional (problem-dependent) computations or proofs to be
+done by the user. Besides, many problems do not have (provable) small coresets,
+limiting their applicability. To this end, we suggest an automatic practical
+framework for constructing coresets, which requires (only) the input data and
+the desired cost function from the user, without the need for any other
+task-related computation to be done by the user. To do so, we reduce the
+problem of approximating a loss function to an instance of vector summation
+approximation, where the vectors we aim to sum are loss vectors of a specific
+subset of the queries, such that we aim to approximate the image of the
+function on this subset. We show that while this set is limited, the coreset is
+quite general. An extensive experimental study on various machine learning
+applications is also conducted. Finally, we provide a ``plug and play" style
+implementation, proposing a user-friendly system that can be easily used to
+apply coresets for many problems. Full open source code can be found at
+\href{https://github.com/alaamaalouf/AutoCoreset}{\text{https://github.com/alaamaalouf/AutoCoreset}}.
+We believe that these contributions enable future research and easier use and
+applications of coresets.},
+ arxiv_url = {https://arxiv.org/pdf/2305.11980v1.pdf},
+ author = {Alaa Maalouf and Murad Tukan and Vladimir Braverman and Daniela Rus},
+ github_url = {https://github.com/alaamaalouf/AutoCoreset},
+ title = {AutoCoreset: An Automatic Practical Coreset Construction Framework},
+ year = {2023}
+}
+
+@article{nguyen_2021_dataset,
+ abstract = {The effectiveness of machine learning algorithms arises from being able to
+extract useful features from large amounts of data. As model and dataset sizes
+increase, dataset distillation methods that compress large datasets into
+significantly smaller yet highly performant ones will become valuable in terms
+of training efficiency and useful feature extraction. To that end, we apply a
+novel distributed kernel based meta-learning framework to achieve
+state-of-the-art results for dataset distillation using infinitely wide
+convolutional neural networks. For instance, using only 10 datapoints (0.02% of
+original dataset), we obtain over 65% test accuracy on CIFAR-10 image
+classification task, a dramatic improvement over the previous best test
+accuracy of 40%. Our state-of-the-art results extend across many other settings
+for MNIST, Fashion-MNIST, CIFAR-10, CIFAR-100, and SVHN. Furthermore, we
+perform some preliminary analyses of our distilled datasets to shed light on
+how they differ from naturally occurring data.},
+ arxiv_url = {https://arxiv.org/pdf/2107.13034v3.pdf},
+ author = {Timothy Nguyen and Roman Novak and Lechao Xiao and Jaehoon Lee},
+ github_url = {https://github.com/google/neural-tangents},
+ title = {Dataset Distillation with Infinitely Wide Convolutional Networks},
+ year = {2021}
+}
+
+@article{park_2023_robust,
+ abstract = {Data pruning, which aims to downsize a large training set into a small
+informative subset, is crucial for reducing the enormous computational costs of
+modern deep learning. Though large-scale data collections invariably contain
+annotation noise and numerous robust learning methods have been developed, data
+pruning for the noise-robust learning scenario has received little attention.
+With state-of-the-art Re-labeling methods that self-correct erroneous labels
+while training, it is challenging to identify which subset induces the most
+accurate re-labeling of erroneous labels in the entire training set. In this
+paper, we formalize the problem of data pruning with re-labeling. We first show
+that the likelihood of a training example being correctly re-labeled is
+proportional to the prediction confidence of its neighborhood in the subset.
+Therefore, we propose a novel data pruning algorithm, Prune4Rel, that finds a
+subset maximizing the total neighborhood confidence of all training examples,
+thereby maximizing the re-labeling accuracy and generalization performance.
+Extensive experiments on four real and one synthetic noisy datasets show that
+\algname{} outperforms the baselines with Re-labeling models by up to 9.1% as
+well as those with a standard model by up to 21.6%.},
+ arxiv_url = {https://arxiv.org/pdf/2311.01002v1.pdf},
+ author = {Dongmin Park and Seola Choi and Doyoung Kim and Hwanjun Song and Jae-Gil Lee},
+ title = {Robust Data Pruning under Label Noise via Maximizing Re-labeling Accuracy},
+ year = {2023}
+}
+
+@article{paul_2021_deep,
+ abstract = {Recent success in deep learning has partially been driven by training
+increasingly overparametrized networks on ever larger datasets. It is therefore
+natural to ask: how much of the data is superfluous, which examples are
+important for generalization, and how do we find them? In this work, we make
+the striking observation that, in standard vision datasets, simple scores
+averaged over several weight initializations can be used to identify important
+examples very early in training. We propose two such scores -- the Gradient
+Normed (GraNd) and the Error L2-Norm (EL2N) scores -- and demonstrate their
+efficacy on a range of architectures and datasets by pruning significant
+fractions of training data without sacrificing test accuracy. In fact, using
+EL2N scores calculated a few epochs into training, we can prune half of the
+CIFAR10 training set while slightly improving test accuracy. Furthermore, for a
+given dataset, EL2N scores from one architecture or hyperparameter
+configuration generalize to other configurations. Compared to recent work that
+prunes data by discarding examples that are rarely forgotten over the course of
+training, our scores use only local information early in training. We also use
+our scores to detect noisy examples and study training dynamics through the
+lens of important examples -- we investigate how the data distribution shapes
+the loss surface and identify subspaces of the model's data representation that
+are relatively stable over training.},
+ arxiv_url = {https://arxiv.org/pdf/2107.07075v2.pdf},
+ author = {Mansheej Paul and Surya Ganguli and Gintare Karolina Dziugaite},
+ github_url = {https://github.com/mansheej/data_diet},
+ journal = {Advances in Neural Information Processing Systems 34 (NeurIPS
+  2021)},
+ title = {Deep Learning on a Data Diet: Finding Important Examples Early in Training},
+ year = {2021}
+}
+
+@article{sivasubramanian_2021_training,
+ abstract = {Data subset selection from a large number of training instances has been a
+successful approach toward efficient and cost-effective machine learning.
+However, models trained on a smaller subset may show poor generalization
+ability. In this paper, our goal is to design an algorithm for selecting a
+subset of the training data, so that the model can be trained quickly, without
+significantly sacrificing on accuracy. More specifically, we focus on data
+subset selection for L2 regularized regression problems and provide a novel
+problem formulation which seeks to minimize the training loss with respect to
+both the trainable parameters and the subset of training data, subject to error
+bounds on the validation set. We tackle this problem using several technical
+innovations. First, we represent this problem with simplified constraints using
+the dual of the original training problem and show that the objective of this
+new representation is a monotone and alpha-submodular function, for a wide
+variety of modeling choices. Such properties lead us to develop SELCON, an
+efficient majorization-minimization algorithm for data subset selection, that
+admits an approximation guarantee even when the training provides an imperfect
+estimate of the trained model. Finally, our experiments on several datasets
+show that SELCON trades off accuracy and efficiency more effectively than the
+current state-of-the-art.},
+ arxiv_url = {https://arxiv.org/pdf/2106.12491v1.pdf},
+ author = {Durga Sivasubramanian and Rishabh Iyer and Ganesh Ramakrishnan and Abir De},
+ github_url = {https://github.com/abir-de/SELCON},
+ journal = {ICML 2021},
+ title = {Training Data Subset Selection for Regression with Controlled Generalization Error},
+ year = {2021}
+}
+
+@article{tolochinsky_2018_generic,
+ abstract = {Coreset (or core-set) is a small weighted \emph{subset} $Q$ of an input set
+$P$ with respect to a given \emph{monotonic} function
+$f:\mathbb{R}\to\mathbb{R}$ that \emph{provably} approximates its fitting loss
+$\sum_{p\in P}f(p\cdot x)$ to \emph{any} given $x\in\mathbb{R}^d$. Using $Q$ we
+can obtain approximation of $x^*$ that minimizes this loss, by running
+\emph{existing} optimization algorithms on $Q$. In this work we provide: (i) A
+lower bound which proves that there are sets with no coresets smaller than
+$n=|P|$ for general monotonic loss functions. (ii) A proof that, under a
+natural assumption that holds e.g. for logistic regression and the sigmoid
+activation functions, a small coreset exists for \emph{any} input $P$. (iii) A
+generic coreset construction algorithm that computes such a small coreset $Q$
+in $O(nd+n\log n)$ time, and (iv) Experimental results which demonstrate that
+our coresets are effective and are much smaller in practice than predicted in
+theory.},
+ arxiv_url = {https://arxiv.org/pdf/1802.07382v3.pdf},
+ author = {Elad Tolochinsky and Ibrahim Jubran and Dan Feldman},
+ title = {Generic Coreset for Scalable Learning of Monotonic Kernels: Logistic Regression, Sigmoid and more},
+ year = {2018}
+}
+
+@article{tolochinsky_2018_generic,
+ abstract = {Coreset (or core-set) is a small weighted \emph{subset} $Q$ of an input set
+$P$ with respect to a given \emph{monotonic} function
+$f:\mathbb{R}\to\mathbb{R}$ that \emph{provably} approximates its fitting loss
+$\sum_{p\in P}f(p\cdot x)$ to \emph{any} given $x\in\mathbb{R}^d$. Using $Q$ we
+can obtain approximation of $x^*$ that minimizes this loss, by running
+\emph{existing} optimization algorithms on $Q$. In this work we provide: (i) A
+lower bound which proves that there are sets with no coresets smaller than
+$n=|P|$ for general monotonic loss functions. (ii) A proof that, under a
+natural assumption that holds e.g. for logistic regression and the sigmoid
+activation functions, a small coreset exists for \emph{any} input $P$. (iii) A
+generic coreset construction algorithm that computes such a small coreset $Q$
+in $O(nd+n\log n)$ time, and (iv) Experimental results which demonstrate that
+our coresets are effective and are much smaller in practice than predicted in
+theory.},
+ arxiv_url = {https://arxiv.org/pdf/1802.07382v3.pdf},
+ author = {Elad Tolochinsky and Ibrahim Jubran and Dan Feldman},
+ title = {Generic Coreset for Scalable Learning of Monotonic Kernels: Logistic Regression, Sigmoid and more},
+ year = {2018}
+}
+
+@article{yang_2022_dataset,
+ abstract = {The great success of deep learning heavily relies on increasingly larger
+training data, which comes at a price of huge computational and infrastructural
+costs. This poses crucial questions that, do all training data contribute to
+model's performance? How much does each individual training sample or a
+sub-training-set affect the model's generalization, and how to construct the
+smallest subset from the entire training data as a proxy training set without
+significantly sacrificing the model's performance? To answer these, we propose
+dataset pruning, an optimization-based sample selection method that can (1)
+examine the influence of removing a particular set of training samples on
+model's generalization ability with theoretical guarantee, and (2) construct
+the smallest subset of training data that yields strictly constrained
+generalization gap. The empirically observed generalization gap of dataset
+pruning is substantially consistent with our theoretical expectations.
+Furthermore, the proposed method prunes 40% training examples on the CIFAR-10
+dataset, halves the convergence time with only 1.3% test accuracy decrease,
+which is superior to previous score-based sample selection methods.},
+ arxiv_url = {https://arxiv.org/pdf/2205.09329v2.pdf},
+ author = {Shuo Yang and Zeke Xie and Hanyu Peng and Min Xu and Mingming Sun and Ping Li},
+ title = {Dataset Pruning: Reducing Training Data by Examining Generalization Influence},
+ year = {2022}
+}
+
+@article{yang_2024_what,
+ abstract = {Dataset distillation has emerged as a strategy to overcome the hurdles
+associated with large datasets by learning a compact set of synthetic data that
+retains essential information from the original dataset. While distilled data
+can be used to train high performing models, little is understood about how the
+information is stored. In this study, we posit and answer three questions about
+the behavior, representativeness, and point-wise information content of
+distilled data. We reveal distilled data cannot serve as a substitute for real
+data during training outside the standard evaluation setting for dataset
+distillation. Additionally, the distillation process retains high task
+performance by compressing information related to the early training dynamics
+of real models. Finally, we provide an framework for interpreting distilled
+data and reveal that individual distilled data points contain meaningful
+semantic information. This investigation sheds light on the intricate nature of
+distilled data, providing a better understanding on how they can be effectively
+utilized.},
+ arxiv_url = {https://arxiv.org/pdf/2406.04284v2.pdf},
+ author = {William Yang and Ye Zhu and Zhiwei Deng and Olga Russakovsky},
+ title = {What is Dataset Distillation Learning?},
+ year = {2024}
+}
+
+@article{zhu_2022_efficient,
+ abstract = {The goal of active learning is to achieve the same accuracy achievable by
+passive learning, while using much fewer labels. Exponential savings in terms
+of label complexity have been proved in very special cases, but fundamental
+lower bounds show that such improvements are impossible in general. This
+suggests a need to explore alternative goals for active learning. Learning with
+abstention is one such alternative. In this setting, the active learning
+algorithm may abstain from prediction and incur an error that is marginally
+smaller than random guessing. We develop the first computationally efficient
+active learning algorithm with abstention. Our algorithm provably achieves
+$\mathsf{polylog}(\frac{1}{\varepsilon})$ label complexity, without any low
+noise conditions. Such performance guarantee reduces the label complexity by an
+exponential factor, relative to passive learning and active learning that is
+not allowed to abstain. Furthermore, our algorithm is guaranteed to only
+abstain on hard examples (where the true label distribution is close to a fair
+coin), a novel property we term \emph{proper abstention} that also leads to a
+host of other desirable characteristics (e.g., recovering minimax guarantees in
+the standard setting, and avoiding the undesirable ``noise-seeking'' behavior
+often seen in active learning). We also provide novel extensions of our
+algorithm that achieve \emph{constant} label complexity and deal with model
+misspecification.},
+ arxiv_url = {https://arxiv.org/pdf/2204.00043v2.pdf},
+ author = {Yinglun Zhu and Robert Nowak},
+ title = {Efficient Active Learning with Abstention},
+ year = {2022}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{author_year_influential,
+ title = {Influential observations, high leverage points, and outliers in linear regression}
+}
+
+@article{author_year_sampling,
+ title = {Sampling algorithms for l 2 regression and applications}
+}
+
+@article{caron_2020_unsupervised,
+ abstract = {Unsupervised image representations have significantly reduced the gap with
+supervised pretraining, notably with the recent achievements of contrastive
+learning methods. These contrastive methods typically work online and rely on a
+large number of explicit pairwise feature comparisons, which is computationally
+challenging. In this paper, we propose an online algorithm, SwAV, that takes
+advantage of contrastive methods without requiring to compute pairwise
+comparisons. Specifically, our method simultaneously clusters the data while
+enforcing consistency between cluster assignments produced for different
+augmentations (or views) of the same image, instead of comparing features
+directly as in contrastive learning. Simply put, we use a swapped prediction
+mechanism where we predict the cluster assignment of a view from the
+representation of another view. Our method can be trained with large and small
+batches and can scale to unlimited amounts of data. Compared to previous
+contrastive methods, our method is more memory efficient since it does not
+require a large memory bank or a special momentum network. In addition, we also
+propose a new data augmentation strategy, multi-crop, that uses a mix of views
+with different resolutions in place of two full-resolution views, without
+increasing the memory or compute requirements much. We validate our findings by
+achieving 75.3% top-1 accuracy on ImageNet with ResNet-50, as well as
+surpassing supervised pretraining on all the considered transfer tasks.},
+ arxiv_url = {https://arxiv.org/pdf/2006.09882v5.pdf},
+ author = {Mathilde Caron and Ishan Misra and Julien Mairal and Priya Goyal and Piotr Bojanowski and Armand Joulin},
+ title = {Unsupervised learning of visual features by contrasting cluster assignments},
+ year = {2020}
+}
+
+@article{drineas_2007_faster,
+ abstract = {Least squares approximation is a technique to find an approximate solution to
+a system of linear equations that has no exact solution. In a typical setting,
+one lets $n$ be the number of constraints and $d$ be the number of variables,
+with $n \gg d$. Then, existing exact methods find a solution vector in
+$O(nd^2)$ time. We present two randomized algorithms that provide very accurate
+relative-error approximations to the optimal value and the solution vector of a
+least squares approximation problem more rapidly than existing exact
+algorithms. Both of our algorithms preprocess the data with the Randomized
+Hadamard Transform. One then uniformly randomly samples constraints and solves
+the smaller problem on those constraints, and the other performs a sparse
+random projection and solves the smaller problem on those projected
+coordinates. In both cases, solving the smaller problem provides relative-error
+approximations, and, if $n$ is sufficiently larger than $d$, the approximate
+solution can be computed in $O(nd \log d)$ time.},
+ arxiv_url = {https://arxiv.org/pdf/0710.1435v4.pdf},
+ author = {Petros Drineas and Michael W. Mahoney and S. Muthukrishnan and Tamas Sarlos},
+ title = {Faster least squares approximation},
+ year = {2007}
+}
+
+@article{gal_2017_deep,
+ abstract = {Even though active learning forms an important pillar of machine learning,
+deep learning tools are not prevalent within it. Deep learning poses several
+difficulties when used in an active learning setting. First, active learning
+(AL) methods generally rely on being able to learn and update models from small
+amounts of data. Recent advances in deep learning, on the other hand, are
+notorious for their dependence on large amounts of data. Second, many AL
+acquisition functions rely on model uncertainty, yet deep learning methods
+rarely represent such model uncertainty. In this paper we combine recent
+advances in Bayesian deep learning into the active learning framework in a
+practical way. We develop an active learning framework for high dimensional
+data, a task which has been extremely challenging so far, with very sparse
+existing literature. Taking advantage of specialised models such as Bayesian
+convolutional neural networks, we demonstrate our active learning techniques
+with image data, obtaining a significant improvement on existing active
+learning approaches. We demonstrate this on both the MNIST dataset, as well as
+for skin cancer diagnosis from lesion images (ISIC2016 task).},
+ arxiv_url = {https://arxiv.org/pdf/1703.02910v1.pdf},
+ author = {Yarin Gal and Riashat Islam and Zoubin Ghahramani},
+ title = {Deep bayesian active learning with image data},
+ year = {2017}
+}

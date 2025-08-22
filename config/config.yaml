@@ -1,0 +1,19 @@
+# Default configuration for SAMC2 experiments
+experiment: test  # one of: test, exp1, exp2, exp3
+alpha: 0.1
+
+# General controls
+T: 2000     # length for synthetic/test (ignored for exp2 if CSV provided)
+seed: 0
+seeds: [0, 1]  # used by exp1 if provided
+
+# RSC baseline window sizes (exp1/exp2)
+rsc_windows: [128, 512, 2048]
+
+# Exp2 data (optional). If null or invalid, a synthetic electricity-like series is generated.
+electricity_csv_path: null  # e.g., data/electricity_hourly.csv
+
+# Output dirs are fixed by spec:
+# - .research/iteration1/images for figures
+# - data/ for data
+# - models/ for results/models

@@ -5,3 +5,550 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{ahdritz_2024_distinguishing,
+ abstract = {We study the feasibility of identifying epistemic uncertainty (reflecting a
+lack of knowledge), as opposed to aleatoric uncertainty (reflecting entropy in
+the underlying distribution), in the outputs of large language models (LLMs)
+over free-form text. In the absence of ground-truth probabilities, we explore a
+setting where, in order to (approximately) disentangle a given LLM's
+uncertainty, a significantly larger model stands in as a proxy for the ground
+truth. We show that small linear probes trained on the embeddings of frozen,
+pretrained models accurately predict when larger models will be more confident
+at the token level and that probes trained on one text domain generalize to
+others. Going further, we propose a fully unsupervised method that achieves
+non-trivial accuracy on the same task. Taken together, we interpret these
+results as evidence that LLMs naturally contain internal representations of
+different types of uncertainty that could potentially be leveraged to devise
+more informative indicators of model confidence in diverse practical settings.},
+ arxiv_url = {https://arxiv.org/pdf/2402.03563v2.pdf},
+ author = {Gustaf Ahdritz and Tian Qin and Nikhil Vyas and Boaz Barak and Benjamin L. Edelman},
+ github_url = {https://github.com/gahdritz/llm_uncertainty},
+ title = {Distinguishing the Knowable from the Unknowable with Language Models},
+ year = {2024}
+}
+
+@article{author_year_llm,
+ title = {LLM-Check: Investigating Detection of Hallucinations in Large Language Models}
+}
+
+@article{band_2024_linguistic,
+ abstract = {Language models (LMs) may lead their users to make suboptimal downstream
+decisions when they confidently hallucinate. This issue can be mitigated by
+having the LM verbally convey the probability that its claims are correct, but
+existing models cannot produce long-form text with calibrated confidence
+statements. Through the lens of decision-making, we define linguistic
+calibration for long-form generations: an LM is linguistically calibrated if
+its generations enable its users to make calibrated probabilistic predictions.
+This definition enables a training framework where a supervised finetuning step
+bootstraps an LM to emit long-form generations with confidence statements such
+as "I estimate a 30% chance of..." or "I am certain that...", followed by a
+reinforcement learning step which rewards generations that enable a user to
+provide calibrated answers to related questions. We linguistically calibrate
+Llama 2 7B and find in automated and human evaluations of long-form generations
+that it is significantly more calibrated than strong finetuned factuality
+baselines with comparable accuracy. These findings generalize under significant
+domain shifts to scientific and biomedical questions and to an entirely
+held-out person biography generation task. Our results demonstrate that
+long-form generations may be calibrated end-to-end by constructing an objective
+in the space of the predictions that users make in downstream decision-making.},
+ arxiv_url = {https://arxiv.org/pdf/2404.00474v2.pdf},
+ author = {Neil Band and Xuechen Li and Tengyu Ma and Tatsunori Hashimoto},
+ github_url = {https://github.com/tatsu-lab/linguistic_calibration},
+ title = {Linguistic Calibration of Long-Form Generations},
+ year = {2024}
+}
+
+@article{cherian_2024_large,
+ abstract = {We develop new conformal inference methods for obtaining validity guarantees
+on the output of large language models (LLMs). Prior work in conformal language
+modeling identifies a subset of the text that satisfies a high-probability
+guarantee of correctness. These methods work by filtering claims from the LLM's
+original response if a scoring function evaluated on the claim fails to exceed
+a threshold calibrated via split conformal prediction. Existing methods in this
+area suffer from two deficiencies. First, the guarantee stated is not
+conditionally valid. The trustworthiness of the filtering step may vary based
+on the topic of the response. Second, because the scoring function is
+imperfect, the filtering step can remove many valuable and accurate claims. We
+address both of these challenges via two new conformal methods. First, we
+generalize the conditional conformal procedure of Gibbs et al. (2023) in order
+to adaptively issue weaker guarantees when they are required to preserve the
+utility of the output. Second, we show how to systematically improve the
+quality of the scoring function via a novel algorithm for differentiating
+through the conditional conformal procedure. We demonstrate the efficacy of our
+approach on biography and medical question-answering datasets.},
+ arxiv_url = {https://arxiv.org/pdf/2406.09714v2.pdf},
+ author = {John J. Cherian and Isaac Gibbs and Emmanuel J. Candès},
+ title = {Large language model validity via enhanced conformal prediction methods},
+ year = {2024}
+}
+
+@article{du_2024_haloscope,
+ abstract = {The surge in applications of large language models (LLMs) has prompted
+concerns about the generation of misleading or fabricated information, known as
+hallucinations. Therefore, detecting hallucinations has become critical to
+maintaining trust in LLM-generated content. A primary challenge in learning a
+truthfulness classifier is the lack of a large amount of labeled truthful and
+hallucinated data. To address the challenge, we introduce HaloScope, a novel
+learning framework that leverages the unlabeled LLM generations in the wild for
+hallucination detection. Such unlabeled data arises freely upon deploying LLMs
+in the open world, and consists of both truthful and hallucinated information.
+To harness the unlabeled data, we present an automated membership estimation
+score for distinguishing between truthful and untruthful generations within
+unlabeled mixture data, thereby enabling the training of a binary truthfulness
+classifier on top. Importantly, our framework does not require extra data
+collection and human annotations, offering strong flexibility and practicality
+for real-world applications. Extensive experiments show that HaloScope can
+achieve superior hallucination detection performance, outperforming the
+competitive rivals by a significant margin. Code is available at
+https://github.com/deeplearningwisc/haloscope.},
+ arxiv_url = {https://arxiv.org/pdf/2409.17504v1.pdf},
+ author = {Xuefeng Du and Chaowei Xiao and Yixuan Li},
+ github_url = {https://github.com/deeplearning-wisc/haloscope},
+ title = {HaloScope: Harnessing Unlabeled LLM Generations for Hallucination Detection},
+ year = {2024}
+}
+
+@article{gu_2024_anah,
+ abstract = {Large language models (LLMs) exhibit hallucinations in long-form
+question-answering tasks across various domains and wide applications. Current
+hallucination detection and mitigation datasets are limited in domains and
+sizes, which struggle to scale due to prohibitive labor costs and insufficient
+reliability of existing hallucination annotators. To facilitate the scalable
+oversight of LLM hallucinations, this paper introduces an iterative
+self-training framework that simultaneously and progressively scales up the
+hallucination annotation dataset and improves the accuracy of the hallucination
+annotator. Based on the Expectation Maximization (EM) algorithm, in each
+iteration, the framework first applies a hallucination annotation pipeline to
+annotate a scaled dataset and then trains a more accurate hallucination
+annotator on the dataset. This new hallucination annotator is adopted in the
+hallucination annotation pipeline used for the next iteration. Extensive
+experimental results demonstrate that the finally obtained hallucination
+annotator with only 7B parameters surpasses the performance of GPT-4 and
+obtains new state-of-the-art hallucination detection results on HaluEval and
+HalluQA by zero-shot inference. Such an annotator can not only evaluate the
+hallucination levels of various LLMs on the large-scale dataset but also help
+to mitigate the hallucination of LLMs generations, with the Natural Language
+Inference (NLI) metric increasing from 25% to 37% on HaluEval.},
+ arxiv_url = {https://arxiv.org/pdf/2407.04693v2.pdf},
+ author = {Yuzhe Gu and Ziwei Ji and Wenwei Zhang and Chengqi Lyu and Dahua Lin and Kai Chen},
+ github_url = {https://github.com/open-compass/ANAH},
+ title = {ANAH-v2: Scaling Analytical Hallucination Annotation of Large Language Models},
+ year = {2024}
+}
+
+@article{hou_2023_decomposing,
+ abstract = {Uncertainty decomposition refers to the task of decomposing the total
+uncertainty of a predictive model into aleatoric (data) uncertainty, resulting
+from inherent randomness in the data-generating process, and epistemic (model)
+uncertainty, resulting from missing information in the model's training data.
+In large language models (LLMs) specifically, identifying sources of
+uncertainty is an important step toward improving reliability, trustworthiness,
+and interpretability, but remains an important open research question. In this
+paper, we introduce an uncertainty decomposition framework for LLMs, called
+input clarification ensembling, which can be applied to any pre-trained LLM.
+Our approach generates a set of clarifications for the input, feeds them into
+an LLM, and ensembles the corresponding predictions. We show that, when
+aleatoric uncertainty arises from ambiguity or under-specification in LLM
+inputs, this approach makes it possible to factor an (unclarified) LLM's
+predictions into separate aleatoric and epistemic terms, using a decomposition
+similar to the one employed by Bayesian neural networks. Empirical evaluations
+demonstrate that input clarification ensembling provides accurate and reliable
+uncertainty quantification on several language processing tasks. Code and data
+are available at https://github.com/UCSB-NLP-Chang/llm_uncertainty.},
+ arxiv_url = {https://arxiv.org/pdf/2311.08718v2.pdf},
+ author = {Bairu Hou and Yujian Liu and Kaizhi Qian and Jacob Andreas and Shiyu Chang and Yang Zhang},
+ title = {Decomposing Uncertainty for Large Language Models through Input Clarification Ensembling},
+ year = {2023}
+}
+
+@article{hou_2023_decomposing,
+ abstract = {Uncertainty decomposition refers to the task of decomposing the total
+uncertainty of a predictive model into aleatoric (data) uncertainty, resulting
+from inherent randomness in the data-generating process, and epistemic (model)
+uncertainty, resulting from missing information in the model's training data.
+In large language models (LLMs) specifically, identifying sources of
+uncertainty is an important step toward improving reliability, trustworthiness,
+and interpretability, but remains an important open research question. In this
+paper, we introduce an uncertainty decomposition framework for LLMs, called
+input clarification ensembling, which can be applied to any pre-trained LLM.
+Our approach generates a set of clarifications for the input, feeds them into
+an LLM, and ensembles the corresponding predictions. We show that, when
+aleatoric uncertainty arises from ambiguity or under-specification in LLM
+inputs, this approach makes it possible to factor an (unclarified) LLM's
+predictions into separate aleatoric and epistemic terms, using a decomposition
+similar to the one employed by Bayesian neural networks. Empirical evaluations
+demonstrate that input clarification ensembling provides accurate and reliable
+uncertainty quantification on several language processing tasks. Code and data
+are available at https://github.com/UCSB-NLP-Chang/llm_uncertainty.},
+ arxiv_url = {https://arxiv.org/pdf/2311.08718v2.pdf},
+ author = {Bairu Hou and Yujian Liu and Kaizhi Qian and Jacob Andreas and Shiyu Chang and Yang Zhang},
+ title = {Decomposing Uncertainty for Large Language Models through Input Clarification Ensembling},
+ year = {2023}
+}
+
+@article{kapoor_2024_large,
+ abstract = {When using large language models (LLMs) in high-stakes applications, we need
+to know when we can trust their predictions. Some works argue that prompting
+high-performance LLMs is sufficient to produce calibrated uncertainties, while
+others introduce sampling methods that can be prohibitively expensive. In this
+work, we first argue that prompting on its own is insufficient to achieve good
+calibration and then show that fine-tuning on a small dataset of correct and
+incorrect answers can create an uncertainty estimate with good generalization
+and small computational overhead. We show that a thousand graded examples are
+sufficient to outperform baseline methods and that training through the
+features of a model is necessary for good performance and tractable for large
+open-source models when using LoRA. We also investigate the mechanisms that
+enable reliable LLM uncertainty estimation, finding that many models can be
+used as general-purpose uncertainty estimators, applicable not just to their
+own uncertainties but also the uncertainty of other models. Lastly, we show
+that uncertainty estimates inform human use of LLMs in human-AI collaborative
+settings through a user study.},
+ arxiv_url = {https://arxiv.org/pdf/2406.08391v3.pdf},
+ author = {Sanyam Kapoor and Nate Gruver and Manley Roberts and Katherine Collins and Arka Pal and Umang Bhatt and Adrian Weller and Samuel Dooley and Micah Goldblum and Andrew Gordon Wilson},
+ github_url = {https://github.com/activatedgeek/calibration-tuning},
+ title = {Large Language Models Must Be Taught to Know What They Don’t Know},
+ year = {2024}
+}
+
+@article{liu_2023_litcab,
+ abstract = {A model is considered well-calibrated when its probability estimate aligns
+with the actual likelihood of the output being correct. Calibrating language
+models (LMs) is crucial, as it plays a vital role in detecting and mitigating
+hallucinations of LMs as well as building more trustworthy models. However,
+standard calibration techniques may not be suited for LM calibration. For
+instance, post-processing methods such as temperature scaling do not reorder
+the candidate generations. On the other hand, training-based methods require
+fine-tuning the entire model, which is impractical for LMs of large scale. We
+present LitCab, a lightweight calibration mechanism consisting of a single
+linear layer that takes the input text representation and predicts a bias term,
+which is then added to the LM output logits. LitCab improves model calibration
+by only adding < 2% of the original model parameters. For evaluation, we
+construct CaT, a benchmark consisting of eight text generation tasks, covering
+responses ranging from short phrases to paragraphs. We test LitCab with
+Llama2-7B, where it improves calibration across all tasks, reducing the average
+ECE score by as large as 30%. We further conduct a comprehensive evaluation
+with multiple popular open-sourced LMs from GPT and LLaMA families, yielding
+the following key findings: (i) Larger models within the same family exhibit
+better calibration on tasks with short generation tasks, but not necessarily
+for longer ones. (ii) GPT-family models show superior calibration compared to
+LLaMA, Llama2, and Vicuna models, despite having much fewer parameters. (iii)
+Fine-tuning pretrained model (e.g., LLaMA) with samples of limited purpose
+(e.g., conversations) may lead to worse calibration, highlighting the
+importance of fine-tuning setups for calibrating LMs.},
+ arxiv_url = {https://arxiv.org/pdf/2310.19208v2.pdf},
+ author = {Xin Liu and Muhammad Khalifa and Lu Wang},
+ github_url = {https://github.com/launchnlp/LitCab},
+ title = {LitCab: Lightweight Language Model Calibration over Short- and Long-form Responses},
+ year = {2023}
+}
+
+@article{mohri_2024_language,
+ abstract = {Guaranteeing the correctness and factuality of language model (LM) outputs is
+a major open problem. In this work, we propose conformal factuality, a
+framework that can ensure high probability correctness guarantees for LMs by
+connecting language modeling and conformal prediction. We observe that the
+correctness of an LM output is equivalent to an uncertainty quantification
+problem, where the uncertainty sets are defined as the entailment set of an
+LM's output. Using this connection, we show that conformal prediction in
+language models corresponds to a back-off algorithm that provides high
+probability correctness guarantees by progressively making LM outputs less
+specific (and expanding the associated uncertainty sets). This approach applies
+to any black-box LM and requires very few human-annotated samples. Evaluations
+of our approach on closed book QA (FActScore, NaturalQuestions) and reasoning
+tasks (MATH) show that our approach can provide 80-90% correctness guarantees
+while retaining the majority of the LM's original output.},
+ arxiv_url = {https://arxiv.org/pdf/2402.10978v1.pdf},
+ author = {Christopher Mohri and Tatsunori Hashimoto},
+ github_url = {https://github.com/tatsu-lab/conformal-factual-lm},
+ title = {Language Models with Conformal Factuality Guarantees},
+ year = {2024}
+}
+
+@article{quach_2023_conformal,
+ abstract = {We propose a novel approach to conformal prediction for generative language
+models (LMs). Standard conformal prediction produces prediction sets -- in
+place of single predictions -- that have rigorous, statistical performance
+guarantees. LM responses are typically sampled from the model's predicted
+distribution over the large, combinatorial output space of natural language.
+Translating this process to conformal prediction, we calibrate a stopping rule
+for sampling different outputs from the LM that get added to a growing set of
+candidates until we are confident that the output set is sufficient. Since some
+samples may be low-quality, we also simultaneously calibrate and apply a
+rejection rule for removing candidates from the output set to reduce noise.
+Similar to conformal prediction, we prove that the sampled set returned by our
+procedure contains at least one acceptable answer with high probability, while
+still being empirically precise (i.e., small) on average. Furthermore, within
+this set of candidate responses, we show that we can also accurately identify
+subsets of individual components -- such as phrases or sentences -- that are
+each independently correct (e.g., that are not "hallucinations"), again with
+statistical guarantees. We demonstrate the promise of our approach on multiple
+tasks in open-domain question answering, text summarization, and radiology
+report generation using different LM variants.},
+ arxiv_url = {https://arxiv.org/pdf/2306.10193v2.pdf},
+ author = {Victor Quach and Adam Fisch and Tal Schuster and Adam Yala and Jae Ho Sohn and Tommi S. Jaakkola and Regina Barzilay},
+ github_url = {https://github.com/Varal7/conformal-language-modeling},
+ title = {Conformal Language Modeling},
+ year = {2023}
+}
+
+@article{shen_2024_thermometer,
+ abstract = {We consider the issue of calibration in large language models (LLM). Recent
+studies have found that common interventions such as instruction tuning often
+result in poorly calibrated LLMs. Although calibration is well-explored in
+traditional applications, calibrating LLMs is uniquely challenging. These
+challenges stem as much from the severe computational requirements of LLMs as
+from their versatility, which allows them to be applied to diverse tasks.
+Addressing these challenges, we propose THERMOMETER, a calibration approach
+tailored to LLMs. THERMOMETER learns an auxiliary model, given data from
+multiple tasks, for calibrating a LLM. It is computationally efficient,
+preserves the accuracy of the LLM, and produces better-calibrated responses for
+new tasks. Extensive empirical evaluations across various benchmarks
+demonstrate the effectiveness of the proposed method.},
+ arxiv_url = {https://arxiv.org/pdf/2403.08819v2.pdf},
+ author = {Maohao Shen and Subhro Das and Kristjan Greenewald and Prasanna Sattigeri and Gregory Wornell and Soumya Ghosh},
+ title = {Thermometer: Towards Universal Calibration for Large Language Models},
+ year = {2024}
+}
+
+@article{wang_2024_blob,
+ abstract = {Large Language Models (LLMs) often suffer from overconfidence during
+inference, particularly when adapted to downstream domain-specific tasks with
+limited data. Previous work addresses this issue by employing approximate
+Bayesian estimation after the LLMs are trained, enabling them to quantify
+uncertainty. However, such post-training approaches' performance is severely
+limited by the parameters learned during training. In this paper, we go beyond
+post-training Bayesianization and propose Bayesian Low-Rank Adaptation by
+Backpropagation (BLoB), an algorithm that continuously and jointly adjusts both
+the mean and covariance of LLM parameters throughout the whole fine-tuning
+process. Our empirical results verify the effectiveness of BLoB in terms of
+generalization and uncertainty estimation, when evaluated on both
+in-distribution and out-of-distribution data.},
+ arxiv_url = {https://arxiv.org/pdf/2406.11675v5.pdf},
+ author = {Yibin Wang and Haizhou Shi and Ligong Han and Dimitris Metaxas and Hao Wang},
+ github_url = {https://github.com/Wang-ML-Lab/bayesian-peft},
+ title = {BLoB: Bayesian Low-Rank Adaptation by Backpropagation for Large Language Models},
+ year = {2024}
+}
+
+@article{ye_2024_benchmarking,
+ abstract = {The proliferation of open-source Large Language Models (LLMs) from various
+institutions has highlighted the urgent need for comprehensive evaluation
+methods. However, current evaluation platforms, such as the widely recognized
+HuggingFace open LLM leaderboard, neglect a crucial aspect -- uncertainty,
+which is vital for thoroughly assessing LLMs. To bridge this gap, we introduce
+a new benchmarking approach for LLMs that integrates uncertainty
+quantification. Our examination involves nine LLMs (LLM series) spanning five
+representative natural language processing tasks. Our findings reveal that: I)
+LLMs with higher accuracy may exhibit lower certainty; II) Larger-scale LLMs
+may display greater uncertainty compared to their smaller counterparts; and
+III) Instruction-finetuning tends to increase the uncertainty of LLMs. These
+results underscore the significance of incorporating uncertainty in the
+evaluation of LLMs.},
+ arxiv_url = {https://arxiv.org/pdf/2401.12794v3.pdf},
+ author = {Fanghua Ye and Mingming Yang and Jianhui Pang and Longyue Wang and Derek F. Wong and Emine Yilmaz and Shuming Shi and Zhaopeng Tu},
+ github_url = {https://github.com/smartyfh/LLM-Uncertainty-Bench},
+ title = {Benchmarking LLMs via Uncertainty Quantification},
+ year = {2024}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{amini_2019_mathqa,
+ abstract = {We introduce a large-scale dataset of math word problems and an interpretable
+neural math problem solver that learns to map problems to operation programs.
+Due to annotation challenges, current datasets in this domain have been either
+relatively small in scale or did not offer precise operational annotations over
+diverse problem types. We introduce a new representation language to model
+precise operation programs corresponding to each math problem that aim to
+improve both the performance and the interpretability of the learned models.
+Using this representation language, our new dataset, MathQA, significantly
+enhances the AQuA dataset with fully-specified operational programs. We
+additionally introduce a neural sequence-to-program model enhanced with
+automatic problem categorization. Our experiments show improvements over
+competitive baselines in our MathQA as well as the AQuA dataset. The results
+are still significantly lower than human performance indicating that the
+dataset poses new challenges for future research. Our dataset is available at:
+https://math-qa.github.io/math-QA/},
+ arxiv_url = {https://arxiv.org/pdf/1905.13319v1.pdf},
+ author = {Aida Amini and Saadia Gabriel and Peter Lin and Rik Koncel-Kedziorski and Yejin Choi and Hannaneh Hajishirzi},
+ title = {MathQA: Towards interpretable math word problem solving with operation-based formalisms.},
+ year = {2019}
+}
+
+@article{author_year_pattern,
+ title = {Pattern recognition and machine learning.}
+}
+
+@article{author_year_truth,
+ title = {Truth is a lie: Crowd truth and the seven myths of human annotation.}
+}
+
+@article{azaria_2023_the,
+ abstract = {While Large Language Models (LLMs) have shown exceptional performance in
+various tasks, one of their most prominent drawbacks is generating inaccurate
+or false information with a confident tone. In this paper, we provide evidence
+that the LLM's internal state can be used to reveal the truthfulness of
+statements. This includes both statements provided to the LLM, and statements
+that the LLM itself generates. Our approach is to train a classifier that
+outputs the probability that a statement is truthful, based on the hidden layer
+activations of the LLM as it reads or generates the statement. Experiments
+demonstrate that given a set of test sentences, of which half are true and half
+false, our trained classifier achieves an average of 71\% to 83\% accuracy
+labeling which sentences are true versus false, depending on the LLM base
+model. Furthermore, we explore the relationship between our classifier's
+performance and approaches based on the probability assigned to the sentence by
+the LLM. We show that while LLM-assigned sentence probability is related to
+sentence truthfulness, this probability is also dependent on sentence length
+and the frequencies of words in the sentence, resulting in our trained
+classifier providing a more reliable approach to detecting truthfulness,
+highlighting its potential to enhance the reliability of LLM-generated content
+and its practical applicability in real-world scenarios.},
+ arxiv_url = {https://arxiv.org/pdf/2304.13734v2.pdf},
+ author = {Amos Azaria and Tom Mitchell},
+ title = {The internal state of an llm knows when its lying.},
+ year = {2023}
+}
+
+@article{bhatt_2023_learning,
+ abstract = {Individual human decision-makers may benefit from different forms of support
+to improve decision outcomes, but when each form of support will yield better
+outcomes? In this work, we posit that personalizing access to decision support
+tools can be an effective mechanism for instantiating the appropriate use of AI
+assistance. Specifically, we propose the general problem of learning a decision
+support policy that, for a given input, chooses which form of support to
+provide to decision-makers for whom we initially have no prior information. We
+develop $\texttt{Modiste}$, an interactive tool to learn personalized decision
+support policies. $\texttt{Modiste}$ leverages stochastic contextual bandit
+techniques to personalize a decision support policy for each decision-maker and
+supports extensions to the multi-objective setting to account for auxiliary
+objectives like the cost of support. We find that personalized policies
+outperform offline policies, and, in the cost-aware setting, reduce the
+incurred cost with minimal degradation to performance. Our experiments include
+various realistic forms of support (e.g., expert consensus and predictions from
+a large language model) on vision and language tasks. Our human subject
+experiments validate our computational experiments, demonstrating that
+personalization can yield benefits in practice for real users, who interact
+with $\texttt{Modiste}$.},
+ arxiv_url = {https://arxiv.org/pdf/2304.06701v3.pdf},
+ author = {Umang Bhatt and Valerie Chen and Katherine M. Collins and Parameswaran Kamalaruban and Emma Kallina and Adrian Weller and Ameet Talwalkar},
+ title = {Learning personalized decision support policies.},
+ year = {2023}
+}
+
+@article{bisk_2019_piqa,
+ abstract = {To apply eyeshadow without a brush, should I use a cotton swab or a
+toothpick? Questions requiring this kind of physical commonsense pose a
+challenge to today's natural language understanding systems. While recent
+pretrained models (such as BERT) have made progress on question answering over
+more abstract domains - such as news articles and encyclopedia entries, where
+text is plentiful - in more physical domains, text is inherently limited due to
+reporting bias. Can AI systems learn to reliably answer physical common-sense
+questions without experiencing the physical world? In this paper, we introduce
+the task of physical commonsense reasoning and a corresponding benchmark
+dataset Physical Interaction: Question Answering or PIQA. Though humans find
+the dataset easy (95% accuracy), large pretrained models struggle (77%). We
+provide analysis about the dimensions of knowledge that existing models lack,
+which offers significant opportunities for future research.},
+ arxiv_url = {https://arxiv.org/pdf/1911.11641v1.pdf},
+ author = {Yonatan Bisk and Rowan Zellers and Ronan Le Bras and Jianfeng Gao and Yejin Choi},
+ title = {Piqa: Reasoning about physical commonsense in natural language.},
+ year = {2019}
+}
+
+@article{bowman_2015_large,
+ abstract = {Understanding entailment and contradiction is fundamental to understanding
+natural language, and inference about entailment and contradiction is a
+valuable testing ground for the development of semantic representations.
+However, machine learning research in this area has been dramatically limited
+by the lack of large-scale resources. To address this, we introduce the
+Stanford Natural Language Inference corpus, a new, freely available collection
+of labeled sentence pairs, written by humans doing a novel grounded task based
+on image captioning. At 570K pairs, it is two orders of magnitude larger than
+all other resources of its type. This increase in scale allows lexicalized
+classifiers to outperform some sophisticated existing entailment models, and it
+allows a neural network-based model to perform competitively on natural
+language inference benchmarks for the first time.},
+ arxiv_url = {https://arxiv.org/pdf/1508.05326v1.pdf},
+ author = {Samuel R. Bowman and Gabor Angeli and Christopher Potts and Christopher D. Manning},
+ title = {A large annotated corpus for learning natural language inference.},
+ year = {2015}
+}
+
+@article{burns_2022_discovering,
+ abstract = {Existing techniques for training language models can be misaligned with the
+truth: if we train models with imitation learning, they may reproduce errors
+that humans make; if we train them to generate text that humans rate highly,
+they may output errors that human evaluators can't detect. We propose
+circumventing this issue by directly finding latent knowledge inside the
+internal activations of a language model in a purely unsupervised way.
+Specifically, we introduce a method for accurately answering yes-no questions
+given only unlabeled model activations. It works by finding a direction in
+activation space that satisfies logical consistency properties, such as that a
+statement and its negation have opposite truth values. We show that despite
+using no supervision and no model outputs, our method can recover diverse
+knowledge represented in large language models: across 6 models and 10
+question-answering datasets, it outperforms zero-shot accuracy by 4\% on
+average. We also find that it cuts prompt sensitivity in half and continues to
+maintain high accuracy even when models are prompted to generate incorrect
+answers. Our results provide an initial step toward discovering what language
+models know, distinct from what they say, even when we don't have access to
+explicit ground truth labels.},
+ arxiv_url = {https://arxiv.org/pdf/2212.03827v2.pdf},
+ author = {Collin Burns and Haotian Ye and Dan Klein and Jacob Steinhardt},
+ title = {Discovering latent knowledge in language models without supervision.},
+ year = {2022}
+}
+
+@article{chiang_2023_can,
+ abstract = {Human evaluation is indispensable and inevitable for assessing the quality of
+texts generated by machine learning models or written by humans. However, human
+evaluation is very difficult to reproduce and its quality is notoriously
+unstable, hindering fair comparisons among different natural language
+processing (NLP) models and algorithms. Recently, large language models (LLMs)
+have demonstrated exceptional performance on unseen tasks when only the task
+instructions are provided. In this paper, we explore if such an ability of the
+LLMs can be used as an alternative to human evaluation. We present the LLMs
+with the exact same instructions, samples to be evaluated, and questions used
+to conduct human evaluation, and then ask the LLMs to generate responses to
+those questions; we dub this LLM evaluation. We use human evaluation and LLM
+evaluation to evaluate the texts in two NLP tasks: open-ended story generation
+and adversarial attacks. We show that the result of LLM evaluation is
+consistent with the results obtained by expert human evaluation: the texts
+rated higher by human experts are also rated higher by the LLMs. We also find
+that the results of LLM evaluation are stable over different formatting of the
+task instructions and the sampling algorithm used to generate the answer. We
+are the first to show the potential of using LLMs to assess the quality of
+texts and discuss the limitations and ethical considerations of LLM evaluation.},
+ arxiv_url = {https://arxiv.org/pdf/2305.01937v1.pdf},
+ author = {Cheng-Han Chiang and Hung-yi Lee},
+ title = {Can large language models be an alternative to human evaluations?},
+ year = {2023}
+}
+
+@article{openai_2023_gpt,
+ abstract = {We report the development of GPT-4, a large-scale, multimodal model which can
+accept image and text inputs and produce text outputs. While less capable than
+humans in many real-world scenarios, GPT-4 exhibits human-level performance on
+various professional and academic benchmarks, including passing a simulated bar
+exam with a score around the top 10% of test takers. GPT-4 is a
+Transformer-based model pre-trained to predict the next token in a document.
+The post-training alignment process results in improved performance on measures
+of factuality and adherence to desired behavior. A core component of this
+project was developing infrastructure and optimization methods that behave
+predictably across a wide range of scales. This allowed us to accurately
+predict some aspects of GPT-4's performance based on models trained with no
+more than 1/1,000th the compute of GPT-4.},
+ arxiv_url = {https://arxiv.org/pdf/2303.08774v6.pdf},
+ author = {OpenAI and Josh Achiam and Steven Adler and Sandhini Agarwal and Lama Ahmad and Ilge Akkaya and Florencia Leoni Aleman and Diogo Almeida and Janko Altenschmidt and Sam Altman and Shyamal Anadkat and Red Avila and Igor Babuschkin and Suchir Balaji and Valerie Balcom and Paul Baltescu and Haiming Bao and Mohammad Bavarian and Jeff Belgum and Irwan Bello and Jake Berdine and Gabriel Bernadett-Shapiro and Christopher Berner and Lenny Bogdonoff and Oleg Boiko and Madelaine Boyd and Anna-Luisa Brakman and Greg Brockman and Tim Brooks and Miles Brundage and Kevin Button and Trevor Cai and Rosie Campbell and Andrew Cann and Brittany Carey and Chelsea Carlson and Rory Carmichael and Brooke Chan and Che Chang and Fotis Chantzis and Derek Chen and Sully Chen and Ruby Chen and Jason Chen and Mark Chen and Ben Chess and Chester Cho and Casey Chu and Hyung Won Chung and Dave Cummings and Jeremiah Currier and Yunxing Dai and Cory Decareaux and Thomas Degry and Noah Deutsch and Damien Deville and Arka Dhar and David Dohan and Steve Dowling and Sheila Dunning and Adrien Ecoffet and Atty Eleti and Tyna Eloundou and David Farhi and Liam Fedus and Niko Felix and Simón Posada Fishman and Juston Forte and Isabella Fulford and Leo Gao and Elie Georges and Christian Gibson and Vik Goel and Tarun Gogineni and Gabriel Goh and Rapha Gontijo-Lopes and Jonathan Gordon and Morgan Grafstein and Scott Gray and Ryan Greene and Joshua Gross and Shixiang Shane Gu and Yufei Guo and Chris Hallacy and Jesse Han and Jeff Harris and Yuchen He and Mike Heaton and Johannes Heidecke and Chris Hesse and Alan Hickey and Wade Hickey and Peter Hoeschele and Brandon Houghton and Kenny Hsu and Shengli Hu and Xin Hu and Joost Huizinga and Shantanu Jain and Shawn Jain and Joanne Jang and Angela Jiang and Roger Jiang and Haozhun Jin and Denny Jin and Shino Jomoto and Billie Jonn and Heewoo Jun and Tomer Kaftan and Łukasz Kaiser and Ali Kamali and Ingmar Kanitscheider and Nitish Shirish Keskar and Tabarak Khan and Logan Kilpatrick and Jong Wook Kim and Christina Kim and Yongjik Kim and Jan Hendrik Kirchner and Jamie Kiros and Matt Knight and Daniel Kokotajlo and Łukasz Kondraciuk and Andrew Kondrich and Aris Konstantinidis and Kyle Kosic and Gretchen Krueger and Vishal Kuo and Michael Lampe and Ikai Lan and Teddy Lee and Jan Leike and Jade Leung and Daniel Levy and Chak Ming Li and Rachel Lim and Molly Lin and Stephanie Lin and Mateusz Litwin and Theresa Lopez and Ryan Lowe and Patricia Lue and Anna Makanju and Kim Malfacini and Sam Manning and Todor Markov and Yaniv Markovski and Bianca Martin and Katie Mayer and Andrew Mayne and Bob McGrew and Scott Mayer McKinney and Christine McLeavey and Paul McMillan and Jake McNeil and David Medina and Aalok Mehta and Jacob Menick and Luke Metz and Andrey Mishchenko and Pamela Mishkin and Vinnie Monaco and Evan Morikawa and Daniel Mossing and Tong Mu and Mira Murati and Oleg Murk and David Mély and Ashvin Nair and Reiichiro Nakano and Rajeev Nayak and Arvind Neelakantan and Richard Ngo and Hyeonwoo Noh and Long Ouyang and Cullen O'Keefe and Jakub Pachocki and Alex Paino and Joe Palermo and Ashley Pantuliano and Giambattista Parascandolo and Joel Parish and Emy Parparita and Alex Passos and Mikhail Pavlov and Andrew Peng and Adam Perelman and Filipe de Avila Belbute Peres and Michael Petrov and Henrique Ponde de Oliveira Pinto and Michael and Pokorny and Michelle Pokrass and Vitchyr H. Pong and Tolly Powell and Alethea Power and Boris Power and Elizabeth Proehl and Raul Puri and Alec Radford and Jack Rae and Aditya Ramesh and Cameron Raymond and Francis Real and Kendra Rimbach and Carl Ross and Bob Rotsted and Henri Roussez and Nick Ryder and Mario Saltarelli and Ted Sanders and Shibani Santurkar and Girish Sastry and Heather Schmidt and David Schnurr and John Schulman and Daniel Selsam and Kyla Sheppard and Toki Sherbakov and Jessica Shieh and Sarah Shoker and Pranav Shyam and Szymon Sidor and Eric Sigler and Maddie Simens and Jordan Sitkin and Katarina Slama and Ian Sohl and Benjamin Sokolowsky and Yang Song and Natalie Staudacher and Felipe Petroski Such and Natalie Summers and Ilya Sutskever and Jie Tang and Nikolas Tezak and Madeleine B. Thompson and Phil Tillet and Amin Tootoonchian and Elizabeth Tseng and Preston Tuggle and Nick Turley and Jerry Tworek and Juan Felipe Cerón Uribe and Andrea Vallone and Arun Vijayvergiya and Chelsea Voss and Carroll Wainwright and Justin Jay Wang and Alvin Wang and Ben Wang and Jonathan Ward and Jason Wei and CJ Weinmann and Akila Welihinda and Peter Welinder and Jiayi Weng and Lilian Weng and Matt Wiethoff and Dave Willner and Clemens Winter and Samuel Wolrich and Hannah Wong and Lauren Workman and Sherwin Wu and Jeff Wu and Michael Wu and Kai Xiao and Tao Xu and Sarah Yoo and Kevin Yu and Qiming Yuan and Wojciech Zaremba and Rowan Zellers and Chong Zhang and Marvin Zhang and Shengjia Zhao and Tianhao Zheng and Juntang Zhuang and William Zhuk and Barret Zoph},
+ title = {Gpt-4 technical report.},
+ year = {2023}
+}

@@ -1,0 +1,6 @@
+=== pip install start Fri Aug 22 10:21:36 UTC 2025 ===
+Collecting torch>=1.9.0 (from -r requirements.txt (line 1))
+  Downloading torch-2.8.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (30 kB)
+Collecting torchvision>=0.10.0 (from -r requirements.txt (line 2))
+  Downloading torchvision-0.23.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (6.1 kB)
+=== experiment start Fri Aug 22 10:21:38 UTC 2025 ===

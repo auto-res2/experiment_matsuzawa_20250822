@@ -5,3 +5,358 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{angelopoulos_2023_conformal,
+ abstract = {We study the problem of uncertainty quantification for time series
+prediction, with the goal of providing easy-to-use algorithms with formal
+guarantees. The algorithms we present build upon ideas from conformal
+prediction and control theory, are able to prospectively model conformal scores
+in an online setting, and adapt to the presence of systematic errors due to
+seasonality, trends, and general distribution shifts. Our theory both
+simplifies and strengthens existing analyses in online conformal prediction.
+Experiments on 4-week-ahead forecasting of statewide COVID-19 death counts in
+the U.S. show an improvement in coverage over the ensemble forecaster used in
+official CDC communications. We also run experiments on predicting electricity
+demand, market returns, and temperature using autoregressive, Theta, Prophet,
+and Transformer models. We provide an extendable codebase for testing our
+methods and for the integration of new algorithms, data sets, and forecasting
+rules.},
+ arxiv_url = {https://arxiv.org/pdf/2307.16895v1.pdf},
+ author = {Anastasios N. Angelopoulos and Emmanuel J. Candes and Ryan J. Tibshirani},
+ github_url = {https://github.com/aangelopoulos/conformal-time-series},
+ title = {Conformal PID Control for Time Series Prediction},
+ year = {2023}
+}
+
+@article{angelopoulos_2023_conformal,
+ abstract = {We study the problem of uncertainty quantification for time series
+prediction, with the goal of providing easy-to-use algorithms with formal
+guarantees. The algorithms we present build upon ideas from conformal
+prediction and control theory, are able to prospectively model conformal scores
+in an online setting, and adapt to the presence of systematic errors due to
+seasonality, trends, and general distribution shifts. Our theory both
+simplifies and strengthens existing analyses in online conformal prediction.
+Experiments on 4-week-ahead forecasting of statewide COVID-19 death counts in
+the U.S. show an improvement in coverage over the ensemble forecaster used in
+official CDC communications. We also run experiments on predicting electricity
+demand, market returns, and temperature using autoregressive, Theta, Prophet,
+and Transformer models. We provide an extendable codebase for testing our
+methods and for the integration of new algorithms, data sets, and forecasting
+rules.},
+ arxiv_url = {https://arxiv.org/pdf/2307.16895v1.pdf},
+ author = {Anastasios N. Angelopoulos and Emmanuel J. Candes and Ryan J. Tibshirani},
+ github_url = {https://github.com/aangelopoulos/conformal-time-series},
+ title = {Conformal PID Control for Time Series Prediction},
+ year = {2023}
+}
+
+@article{author_year_conformalized,
+ title = {Conformalized Time Series with Semantic Features}
+}
+
+@article{author_year_reliable,
+ title = {Reliable Decisions with Threshold Calibration}
+}
+
+@article{author_year_sampling,
+ title = {Sampling-based Multi-dimensional Recalibration}
+}
+
+@article{author_year_vector,
+ title = {VQ-TR: Vector Quantized Attention for Time Series Forecasting}
+}
+
+@article{chung_2020_beyond,
+ abstract = {Among the many ways of quantifying uncertainty in a regression setting,
+specifying the full quantile function is attractive, as quantiles are amenable
+to interpretation and evaluation. A model that predicts the true conditional
+quantiles for each input, at all quantile levels, presents a correct and
+efficient representation of the underlying uncertainty. To achieve this, many
+current quantile-based methods focus on optimizing the so-called pinball loss.
+However, this loss restricts the scope of applicable regression models, limits
+the ability to target many desirable properties (e.g. calibration, sharpness,
+centered intervals), and may produce poor conditional quantiles. In this work,
+we develop new quantile methods that address these shortcomings. In particular,
+we propose methods that can apply to any class of regression model, allow for
+selecting a trade-off between calibration and sharpness, optimize for
+calibration of centered intervals, and produce more accurate conditional
+quantiles. We provide a thorough experimental evaluation of our methods, which
+includes a high dimensional uncertainty quantification task in nuclear fusion.},
+ arxiv_url = {https://arxiv.org/pdf/2011.09588v4.pdf},
+ author = {Youngseog Chung and Willie Neiswanger and Ian Char and Jeff Schneider},
+ github_url = {https://github.com/YoungseogChung/calibrated-quantile-uq},
+ title = {Beyond Pinball Loss: Quantile Methods for Calibrated Uncertainty Quantification},
+ year = {2020}
+}
+
+@article{lin_2022_conformal,
+ abstract = {We develop Temporal Quantile Adjustment (TQA), a general method to construct
+efficient and valid prediction intervals (PIs) for regression on
+cross-sectional time series data. Such data is common in many domains,
+including econometrics and healthcare. A canonical example in healthcare is
+predicting patient outcomes using physiological time-series data, where a
+population of patients composes a cross-section. Reliable PI estimators in this
+setting must address two distinct notions of coverage: cross-sectional coverage
+across a cross-sectional slice, and longitudinal coverage along the temporal
+dimension for each time series. Recent works have explored adapting Conformal
+Prediction (CP) to obtain PIs in the time series context. However, none handles
+both notions of coverage simultaneously. CP methods typically query a
+pre-specified quantile from the distribution of nonconformity scores on a
+calibration set. TQA adjusts the quantile to query in CP at each time $t$,
+accounting for both cross-sectional and longitudinal coverage in a
+theoretically-grounded manner. The post-hoc nature of TQA facilitates its use
+as a general wrapper around any time series regression model. We validate TQA's
+performance through extensive experimentation: TQA generally obtains efficient
+PIs and improves longitudinal coverage while preserving cross-sectional
+coverage.},
+ arxiv_url = {https://arxiv.org/pdf/2205.09940v2.pdf},
+ author = {Zhen Lin and Shubhendu Trivedi and Jimeng Sun},
+ title = {Conformal Prediction with Temporal Quantile Adjustments},
+ year = {2022}
+}
+
+@article{lin_2022_conformal,
+ abstract = {We develop Temporal Quantile Adjustment (TQA), a general method to construct
+efficient and valid prediction intervals (PIs) for regression on
+cross-sectional time series data. Such data is common in many domains,
+including econometrics and healthcare. A canonical example in healthcare is
+predicting patient outcomes using physiological time-series data, where a
+population of patients composes a cross-section. Reliable PI estimators in this
+setting must address two distinct notions of coverage: cross-sectional coverage
+across a cross-sectional slice, and longitudinal coverage along the temporal
+dimension for each time series. Recent works have explored adapting Conformal
+Prediction (CP) to obtain PIs in the time series context. However, none handles
+both notions of coverage simultaneously. CP methods typically query a
+pre-specified quantile from the distribution of nonconformity scores on a
+calibration set. TQA adjusts the quantile to query in CP at each time $t$,
+accounting for both cross-sectional and longitudinal coverage in a
+theoretically-grounded manner. The post-hoc nature of TQA facilitates its use
+as a general wrapper around any time series regression model. We validate TQA's
+performance through extensive experimentation: TQA generally obtains efficient
+PIs and improves longitudinal coverage while preserving cross-sectional
+coverage.},
+ arxiv_url = {https://arxiv.org/pdf/2205.09940v2.pdf},
+ author = {Zhen Lin and Shubhendu Trivedi and Jimeng Sun},
+ title = {Conformal Prediction with Temporal Quantile Adjustments},
+ year = {2022}
+}
+
+@article{marx_2023_calibration,
+ abstract = {Calibration ensures that probabilistic forecasts meaningfully capture
+uncertainty by requiring that predicted probabilities align with empirical
+frequencies. However, many existing calibration methods are specialized for
+post-hoc recalibration, which can worsen the sharpness of forecasts. Drawing on
+the insight that calibration can be viewed as a distribution matching task, we
+introduce kernel-based calibration metrics that unify and generalize popular
+forms of calibration for both classification and regression. These metrics
+admit differentiable sample estimates, making it easy to incorporate a
+calibration objective into empirical risk minimization. Furthermore, we provide
+intuitive mechanisms to tailor calibration metrics to a decision task, and
+enforce accurate loss estimation and no regret decisions. Our empirical
+evaluation demonstrates that employing these metrics as regularizers enhances
+calibration, sharpness, and decision-making across a range of regression and
+classification tasks, outperforming methods relying solely on post-hoc
+recalibration.},
+ arxiv_url = {https://arxiv.org/pdf/2310.20211v1.pdf},
+ author = {Charles Marx and Sofian Zalouk and Stefano Ermon},
+ github_url = {https://github.com/kernel-calibration/kernel-calibration},
+ title = {Calibration by Distribution Matching: Trainable Kernel Calibration Metrics},
+ year = {2023}
+}
+
+@article{pal_2021_rnn,
+ abstract = {Spatio-temporal forecasting has numerous applications in analyzing wireless,
+traffic, and financial networks. Many classical statistical models often fall
+short in handling the complexity and high non-linearity present in time-series
+data. Recent advances in deep learning allow for better modelling of spatial
+and temporal dependencies. While most of these models focus on obtaining
+accurate point forecasts, they do not characterize the prediction uncertainty.
+In this work, we consider the time-series data as a random realization from a
+nonlinear state-space model and target Bayesian inference of the hidden states
+for probabilistic forecasting. We use particle flow as the tool for
+approximating the posterior distribution of the states, as it is shown to be
+highly effective in complex, high-dimensional settings. Thorough
+experimentation on several real world time-series datasets demonstrates that
+our approach provides better characterization of uncertainty while maintaining
+comparable accuracy to the state-of-the art point forecasting methods.},
+ arxiv_url = {https://arxiv.org/pdf/2106.06064v1.pdf},
+ author = {Soumyasundar Pal and Liheng Ma and Yingxue Zhang and Mark Coates},
+ title = {RNN with Particle Flow for Probabilistic Spatio-temporal Forecasting},
+ year = {2021}
+}
+
+@article{pal_2021_rnn,
+ abstract = {Spatio-temporal forecasting has numerous applications in analyzing wireless,
+traffic, and financial networks. Many classical statistical models often fall
+short in handling the complexity and high non-linearity present in time-series
+data. Recent advances in deep learning allow for better modelling of spatial
+and temporal dependencies. While most of these models focus on obtaining
+accurate point forecasts, they do not characterize the prediction uncertainty.
+In this work, we consider the time-series data as a random realization from a
+nonlinear state-space model and target Bayesian inference of the hidden states
+for probabilistic forecasting. We use particle flow as the tool for
+approximating the posterior distribution of the states, as it is shown to be
+highly effective in complex, high-dimensional settings. Thorough
+experimentation on several real world time-series datasets demonstrates that
+our approach provides better characterization of uncertainty while maintaining
+comparable accuracy to the state-of-the art point forecasting methods.},
+ arxiv_url = {https://arxiv.org/pdf/2106.06064v1.pdf},
+ author = {Soumyasundar Pal and Liheng Ma and Yingxue Zhang and Mark Coates},
+ title = {RNN with Particle Flow for Probabilistic Spatio-temporal Forecasting},
+ year = {2021}
+}
+
+@article{rosenberg_2022_fast,
+ abstract = {Quantile regression (QR) is a powerful tool for estimating one or more
+conditional quantiles of a target variable $\mathrm{Y}$ given explanatory
+features $\boldsymbol{\mathrm{X}}$. A limitation of QR is that it is only
+defined for scalar target variables, due to the formulation of its objective
+function, and since the notion of quantiles has no standard definition for
+multivariate distributions. Recently, vector quantile regression (VQR) was
+proposed as an extension of QR for vector-valued target variables, thanks to a
+meaningful generalization of the notion of quantiles to multivariate
+distributions via optimal transport. Despite its elegance, VQR is arguably not
+applicable in practice due to several limitations: (i) it assumes a linear
+model for the quantiles of the target $\boldsymbol{\mathrm{Y}}$ given the
+features $\boldsymbol{\mathrm{X}}$; (ii) its exact formulation is intractable
+even for modestly-sized problems in terms of target dimensions, number of
+regressed quantile levels, or number of features, and its relaxed dual
+formulation may violate the monotonicity of the estimated quantiles; (iii) no
+fast or scalable solvers for VQR currently exist. In this work we fully address
+these limitations, namely: (i) We extend VQR to the non-linear case, showing
+substantial improvement over linear VQR; (ii) We propose {vector monotone
+rearrangement}, a method which ensures the quantile functions estimated by VQR
+are monotone functions; (iii) We provide fast, GPU-accelerated solvers for
+linear and nonlinear VQR which maintain a fixed memory footprint, and
+demonstrate that they scale to millions of samples and thousands of quantile
+levels; (iv) We release an optimized python package of our solvers as to
+widespread the use of VQR in real-world applications.},
+ arxiv_url = {https://arxiv.org/pdf/2205.14977v3.pdf},
+ author = {Aviv A. Rosenberg and Sanketh Vedula and Yaniv Romano and Alex M. Bronstein},
+ journal = {The Eleventh International Conference on Learning Representations
+  (ICLR 2023)},
+ title = {Fast Nonlinear Vector Quantile Regression},
+ year = {2022}
+}
+
+@article{sun_2022_copula,
+ abstract = {Accurate uncertainty measurement is a key step to building robust and
+reliable machine learning systems. Conformal prediction is a distribution-free
+uncertainty quantification algorithm popular for its ease of implementation,
+statistical coverage guarantees, and versatility for underlying forecasters.
+However, existing conformal prediction algorithms for time series are limited
+to single-step prediction without considering the temporal dependency. In this
+paper, we propose a Copula Conformal Prediction algorithm for multivariate,
+multi-step Time Series forecasting, CopulaCPTS. We prove that CopulaCPTS has
+finite sample validity guarantee. On several synthetic and real-world
+multivariate time series datasets, we show that CopulaCPTS produces more
+calibrated and sharp confidence intervals for multi-step prediction tasks than
+existing techniques.},
+ arxiv_url = {https://arxiv.org/pdf/2212.03281v4.pdf},
+ author = {Sophia Sun and Rose Yu},
+ github_url = {https://github.com/Rose-STL-Lab/CopulaCPTS},
+ journal = {ICLR 2024},
+ title = {Copula Conformal prediction for multi-step time series prediction},
+ year = {2022}
+}
+
+@article{xu_2022_sequential,
+ abstract = {We present a new distribution-free conformal prediction algorithm for
+sequential data (e.g., time series), called the \textit{sequential predictive
+conformal inference} (\texttt{SPCI}). We specifically account for the nature
+that time series data are non-exchangeable, and thus many existing conformal
+prediction algorithms are not applicable. The main idea is to adaptively
+re-estimate the conditional quantile of non-conformity scores (e.g., prediction
+residuals), upon exploiting the temporal dependence among them. More precisely,
+we cast the problem of conformal prediction interval as predicting the quantile
+of a future residual, given a user-specified point prediction algorithm.
+Theoretically, we establish asymptotic valid conditional coverage upon
+extending consistency analyses in quantile regression. Using simulation and
+real-data experiments, we demonstrate a significant reduction in interval width
+of \texttt{SPCI} compared to other existing methods under the desired empirical
+coverage.},
+ arxiv_url = {https://arxiv.org/pdf/2212.03463v3.pdf},
+ author = {Chen Xu and Yao Xie},
+ title = {Sequential Predictive Conformal Inference for Time Series},
+ year = {2022}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{auer_2023_conformal,
+ abstract = {To quantify uncertainty, conformal prediction methods are gaining
+continuously more interest and have already been successfully applied to
+various domains. However, they are difficult to apply to time series as the
+autocorrelative structure of time series violates basic assumptions required by
+conformal prediction. We propose HopCPT, a novel conformal prediction approach
+for time series that not only copes with temporal structures but leverages
+them. We show that our approach is theoretically well justified for time series
+where temporal dependencies are present. In experiments, we demonstrate that
+our new approach outperforms state-of-the-art conformal prediction methods on
+multiple real-world time series datasets from four different domains.},
+ arxiv_url = {https://arxiv.org/pdf/2303.12783v2.pdf},
+ author = {Andreas Auer and Martin Gauch and Daniel Klotz and Sepp Hochreiter},
+ title = {Conformal prediction for time series with modern Hopfield networks.},
+ year = {2023}
+}
+
+@article{author_year_evaluation,
+ title = {Evaluation of individual and ensemble probabilistic forecasts of COVID-19 mortality in the United States.}
+}
+
+@article{author_year_the,
+ title = {The theta model: A decomposition approach to forecasting.}
+}
+
+@article{bastani_2022_practical,
+ abstract = {We give a simple, generic conformal prediction method for sequential
+prediction that achieves target empirical coverage guarantees against
+adversarially chosen data. It is computationally lightweight -- comparable to
+split conformal prediction -- but does not require having a held-out validation
+set, and so all data can be used for training models from which to derive a
+conformal score. It gives stronger than marginal coverage guarantees in two
+ways. First, it gives threshold calibrated prediction sets that have correct
+empirical coverage even conditional on the threshold used to form the
+prediction set from the conformal score. Second, the user can specify an
+arbitrary collection of subsets of the feature space -- possibly intersecting
+-- and the coverage guarantees also hold conditional on membership in each of
+these subsets. We call our algorithm MVP, short for MultiValid Prediction. We
+give both theory and an extensive set of empirical evaluations.},
+ arxiv_url = {https://arxiv.org/pdf/2206.01067v1.pdf},
+ author = {Osbert Bastani and Varun Gupta and Christopher Jung and Georgy Noarov and Ramya Ramalingam and Aaron Roth},
+ title = {Practical adversarial multivalid conformal prediction.},
+ year = {2022}
+}
+
+@article{bates_2021_distribution,
+ abstract = {While improving prediction accuracy has been the focus of machine learning in
+recent years, this alone does not suffice for reliable decision-making.
+Deploying learning systems in consequential settings also requires calibrating
+and communicating the uncertainty of predictions. To convey instance-wise
+uncertainty for prediction tasks, we show how to generate set-valued
+predictions from a black-box predictor that control the expected loss on future
+test points at a user-specified level. Our approach provides explicit
+finite-sample guarantees for any dataset by using a holdout set to calibrate
+the size of the prediction sets. This framework enables simple,
+distribution-free, rigorous error control for many tasks, and we demonstrate it
+in five large-scale machine learning problems: (1) classification problems
+where some mistakes are more costly than others; (2) multi-label
+classification, where each observation has multiple associated labels; (3)
+classification problems where the labels have a hierarchical structure; (4)
+image segmentation, where we wish to predict a set of pixels containing an
+object of interest; and (5) protein structure prediction. Lastly, we discuss
+extensions to uncertainty quantification for ranking, metric learning and
+distributionally robust learning.},
+ arxiv_url = {https://arxiv.org/pdf/2101.02703v3.pdf},
+ author = {Stephen Bates and Anastasios Angelopoulos and Lihua Lei and Jitendra Malik and Michael I. Jordan},
+ title = {Distribution-free, risk-controlling prediction sets.},
+ year = {2021}
+}

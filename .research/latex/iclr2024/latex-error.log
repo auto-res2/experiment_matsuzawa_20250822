@@ -362,137 +362,11 @@ nput line 129.
 Package natbib Warning: Citation `hou_2023_decomposing' on page 4 undefined on 
 input line 129.
 
-[4]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.148 ...$ responses using nucleus sampling (`top_
-                                                  p=0.9`, `temperature=0.7`)...
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.149 
-      
-
-Underfull \hbox (badness 6380) in paragraph at lines 147--149
-[]\T1/ptm/b/n/10 (+20) Experimental Pro-to-col \T1/ptm/m/n/10 (+20) For each qu
-es-tion in the datasets, we gen-er-ate an en-sem-
-
-Underfull \hbox (badness 2689) in paragraph at lines 147--149
-\T1/ptm/m/n/10 (+20) ble of $\OML/cmm/m/it/10 k \OT1/cmr/m/n/10 = 10$ \T1/ptm/m
-/n/10 (+20) re-sponses us-ing nu-cleus sam-pling (`top$[] \OT1/cmr/m/n/10 = 0\O
-ML/cmm/m/it/10 :\OT1/cmr/m/n/10 9`\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 `\OML/cmm/
-m/it/10 temperature \OT1/cmr/m/n/10 =
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--149
-\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 7`)\OML/cmm/m/it/10 :Duringg
-eneration; weusePyTorchhooksonthefinalpre \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10
- layer \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (5.5773pt too wide) in paragraph at lines 147--149
-\OML/cmm/m/it/10 normmoduletoextractthehiddenstateforeverygeneratedtoken; formi
-ng$\T1/ptm/m/n/10 (-20) k$\OML/cmm/m/it/10 latenttrajectories:$ 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.153 ...-L6-v2`), perform k-means clustering (`k_
-                                                  se=3`), and compute the en...
-
-
-! LaTeX Error: Command \item invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.154     \item
-                \textbf{Lexical Similarity:} Calculated as the average pairw...
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.154     \item \textbf
-                       {Lexical Similarity:} Calculated as the average pairw...
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.154     \item \textbf
-                       {Lexical Similarity:} Calculated as the average pairw...
-
-
-! LaTeX Error: Command \item invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.155     \item
-                \textbf{HaloScope \cite{du_2024_haloscope}:} To be included ...
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.155     \item \textbf
-                       {HaloScope \cite{du_2024_haloscope}:} To be included ...
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.155     \item \textbf
-                       {HaloScope \cite{du_2024_haloscope}:} To be included ...
-
-
-Underfull \hbox (badness 4779) in paragraph at lines 153--155
-[]\T1/ptm/b/n/10 (+20) Semantic En-tropy (SE): \T1/ptm/m/n/10 (+20) We em-bed e
-ach of the $\OML/cmm/m/it/10 k$ \T1/ptm/m/n/10 (+20) text re-sponses us-ing a
-
-Underfull \hbox (badness 2384) in paragraph at lines 153--155
-\T1/ptm/m/n/10 (+20) sentence-transformer (`all-MiniLM-L6-v2`), per-form k-mean
-s clus-ter-ing (`k$[]\OML/cmm/m/it/10 e \OT1/cmr/m/n/10 =
-
-Overfull \hbox (140.69417pt too wide) in paragraph at lines 153--155
-\OT1/cmr/m/n/10 3`)\OML/cmm/m/it/10 ; andcomputetheentropyoftheclusterdistribut
-ion:[][][]CalculatedastheaveragepairwiseROUGE \OMS/cmsy/m/n/10 ^^@
-! Extra }, or forgotten \endgroup.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.155     \item \textbf
-                       {HaloScope \cite{du_2024_haloscope}:} To be included ...
-
+[4] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
 
 Package natbib Warning: Citation `du_2024_haloscope' on page 5 undefined on inp
 ut line 155.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.168 ...sampling parameters (`temperature`, `top_
-                                                  p`), and comparing the uti...
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.169 
-      
-
-Underfull \hbox (badness 1087) in paragraph at lines 167--169
-[]\T1/ptm/b/n/10 (+20) Ablation Stud-ies \T1/ptm/m/n/10 (+20) To en-sure ro-bus
-t-ness, we plan sev-eral ab-la-tion stud-ies, in-clud-ing vary-
-
-Underfull \hbox (badness 1221) in paragraph at lines 167--169
-\T1/ptm/m/n/10 (+20) ing the en-sem-ble size $\OML/cmm/m/it/10 k$ \T1/ptm/m/n/1
-0 (+20) ({3, 5, 10, 20}), ad-just-ing sam-pling pa-ram-e-ters (`tem-per-a-ture`
-,
 [5]
 Underfull \vbox (badness 10000) has occurred while \output is active [6]
 Underfull \vbox (badness 10000) has occurred while \output is active [7 <./imag
@@ -527,9 +401,10 @@ pe1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
-msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (10 pages, 195138 bytes).
+msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on paper.pdf (10 pages, 200434 bytes).
 Transcript written on paper.log.
 This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
 The top-level auxiliary file: paper.aux
@@ -917,137 +792,11 @@ nput line 129.
 Package natbib Warning: Citation `hou_2023_decomposing' on page 4 undefined on 
 input line 129.
 
-[4]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.148 ...$ responses using nucleus sampling (`top_
-                                                  p=0.9`, `temperature=0.7`)...
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.149 
-      
-
-Underfull \hbox (badness 6380) in paragraph at lines 147--149
-[]\T1/ptm/b/n/10 (+20) Experimental Pro-to-col \T1/ptm/m/n/10 (+20) For each qu
-es-tion in the datasets, we gen-er-ate an en-sem-
-
-Underfull \hbox (badness 2689) in paragraph at lines 147--149
-\T1/ptm/m/n/10 (+20) ble of $\OML/cmm/m/it/10 k \OT1/cmr/m/n/10 = 10$ \T1/ptm/m
-/n/10 (+20) re-sponses us-ing nu-cleus sam-pling (`top$[] \OT1/cmr/m/n/10 = 0\O
-ML/cmm/m/it/10 :\OT1/cmr/m/n/10 9`\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 `\OML/cmm/
-m/it/10 temperature \OT1/cmr/m/n/10 =
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--149
-\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 7`)\OML/cmm/m/it/10 :Duringg
-eneration; weusePyTorchhooksonthefinalpre \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10
- layer \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (5.5773pt too wide) in paragraph at lines 147--149
-\OML/cmm/m/it/10 normmoduletoextractthehiddenstateforeverygeneratedtoken; formi
-ng$\T1/ptm/m/n/10 (-20) k$\OML/cmm/m/it/10 latenttrajectories:$ 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.153 ...-L6-v2`), perform k-means clustering (`k_
-                                                  se=3`), and compute the en...
-
-
-! LaTeX Error: Command \item invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.154     \item
-                \textbf{Lexical Similarity:} Calculated as the average pairw...
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.154     \item \textbf
-                       {Lexical Similarity:} Calculated as the average pairw...
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.154     \item \textbf
-                       {Lexical Similarity:} Calculated as the average pairw...
-
-
-! LaTeX Error: Command \item invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.155     \item
-                \textbf{HaloScope \cite{du_2024_haloscope}:} To be included ...
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.155     \item \textbf
-                       {HaloScope \cite{du_2024_haloscope}:} To be included ...
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.155     \item \textbf
-                       {HaloScope \cite{du_2024_haloscope}:} To be included ...
-
-
-Underfull \hbox (badness 4779) in paragraph at lines 153--155
-[]\T1/ptm/b/n/10 (+20) Semantic En-tropy (SE): \T1/ptm/m/n/10 (+20) We em-bed e
-ach of the $\OML/cmm/m/it/10 k$ \T1/ptm/m/n/10 (+20) text re-sponses us-ing a
-
-Underfull \hbox (badness 2384) in paragraph at lines 153--155
-\T1/ptm/m/n/10 (+20) sentence-transformer (`all-MiniLM-L6-v2`), per-form k-mean
-s clus-ter-ing (`k$[]\OML/cmm/m/it/10 e \OT1/cmr/m/n/10 =
-
-Overfull \hbox (140.69417pt too wide) in paragraph at lines 153--155
-\OT1/cmr/m/n/10 3`)\OML/cmm/m/it/10 ; andcomputetheentropyoftheclusterdistribut
-ion:[][][]CalculatedastheaveragepairwiseROUGE \OMS/cmsy/m/n/10 ^^@
-! Extra }, or forgotten \endgroup.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.155     \item \textbf
-                       {HaloScope \cite{du_2024_haloscope}:} To be included ...
-
+[4] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
 
 Package natbib Warning: Citation `du_2024_haloscope' on page 5 undefined on inp
 ut line 155.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.168 ...sampling parameters (`temperature`, `top_
-                                                  p`), and comparing the uti...
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.169 
-      
-
-Underfull \hbox (badness 1087) in paragraph at lines 167--169
-[]\T1/ptm/b/n/10 (+20) Ablation Stud-ies \T1/ptm/m/n/10 (+20) To en-sure ro-bus
-t-ness, we plan sev-eral ab-la-tion stud-ies, in-clud-ing vary-
-
-Underfull \hbox (badness 1221) in paragraph at lines 167--169
-\T1/ptm/m/n/10 (+20) ing the en-sem-ble size $\OML/cmm/m/it/10 k$ \T1/ptm/m/n/1
-0 (+20) ({3, 5, 10, 20}), ad-just-ing sam-pling pa-ram-e-ters (`tem-per-a-ture`
-,
 [5]
 Underfull \vbox (badness 10000) has occurred while \output is active [6]
 Underfull \vbox (badness 10000) has occurred while \output is active [7 <./imag
@@ -1061,7 +810,7 @@ _gpt2.pdf>]
 Package natbib Warning: Citation `airas2025' on page 10 undefined on input line
  253.
 
-(./paper.bbl (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd))
+(./paper.bbl)
 
 Package natbib Warning: There were undefined citations.
 
@@ -1081,7 +830,7 @@ fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (10 pages, 208124 bytes).
+Output written on paper.pdf (10 pages, 204534 bytes).
 Transcript written on paper.log.
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
@@ -1353,135 +1102,7 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1{/var/lib/texm
 f/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/d
 vips/base/8r.enc}] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-[2] [3] [4]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.148 ...$ responses using nucleus sampling (`top_
-                                                  p=0.9`, `temperature=0.7`)...
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.149 
-      
-
-Underfull \hbox (badness 6380) in paragraph at lines 147--149
-[]\T1/ptm/b/n/10 (+20) Experimental Pro-to-col \T1/ptm/m/n/10 (+20) For each qu
-es-tion in the datasets, we gen-er-ate an en-sem-
-
-Underfull \hbox (badness 2689) in paragraph at lines 147--149
-\T1/ptm/m/n/10 (+20) ble of $\OML/cmm/m/it/10 k \OT1/cmr/m/n/10 = 10$ \T1/ptm/m
-/n/10 (+20) re-sponses us-ing nu-cleus sam-pling (`top$[] \OT1/cmr/m/n/10 = 0\O
-ML/cmm/m/it/10 :\OT1/cmr/m/n/10 9`\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 `\OML/cmm/
-m/it/10 temperature \OT1/cmr/m/n/10 =
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--149
-\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 7`)\OML/cmm/m/it/10 :Duringg
-eneration; weusePyTorchhooksonthefinalpre \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10
- layer \OMS/cmsy/m/n/10 ^^@
-
-Overfull \hbox (5.5773pt too wide) in paragraph at lines 147--149
-\OML/cmm/m/it/10 normmoduletoextractthehiddenstateforeverygeneratedtoken; formi
-ng$\T1/ptm/m/n/10 (-20) k$\OML/cmm/m/it/10 latenttrajectories:$ 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.153 ...-L6-v2`), perform k-means clustering (`k_
-                                                  se=3`), and compute the en...
-
-
-! LaTeX Error: Command \item invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.154     \item
-                \textbf{Lexical Similarity:} Calculated as the average pairw...
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.154     \item \textbf
-                       {Lexical Similarity:} Calculated as the average pairw...
-
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.154     \item \textbf
-                       {Lexical Similarity:} Calculated as the average pairw...
-
-
-! LaTeX Error: Command \item invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.155     \item
-                \textbf{HaloScope \cite{du_2024_haloscope}:} To be included ...
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.155     \item \textbf
-                       {HaloScope \cite{du_2024_haloscope}:} To be included ...
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.155     \item \textbf
-                       {HaloScope \cite{du_2024_haloscope}:} To be included ...
-
-
-Underfull \hbox (badness 4779) in paragraph at lines 153--155
-[]\T1/ptm/b/n/10 (+20) Semantic En-tropy (SE): \T1/ptm/m/n/10 (+20) We em-bed e
-ach of the $\OML/cmm/m/it/10 k$ \T1/ptm/m/n/10 (+20) text re-sponses us-ing a
-
-Underfull \hbox (badness 2384) in paragraph at lines 153--155
-\T1/ptm/m/n/10 (+20) sentence-transformer (`all-MiniLM-L6-v2`), per-form k-mean
-s clus-ter-ing (`k$[]\OML/cmm/m/it/10 e \OT1/cmr/m/n/10 =
-
-Overfull \hbox (140.69417pt too wide) in paragraph at lines 153--155
-\OT1/cmr/m/n/10 3`)\OML/cmm/m/it/10 ; andcomputetheentropyoftheclusterdistribut
-ion:[][][]CalculatedastheaveragepairwiseROUGE \OMS/cmsy/m/n/10 ^^@
-! Extra }, or forgotten \endgroup.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.155     \item \textbf
-                       {HaloScope \cite{du_2024_haloscope}:} To be included ...
-
-[5]
-! Missing $ inserted.
-<inserted text> 
-                $
-l.168 ...sampling parameters (`temperature`, `top_
-                                                  p`), and comparing the uti...
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.169 
-      
-
-Underfull \hbox (badness 1087) in paragraph at lines 167--169
-[]\T1/ptm/b/n/10 (+20) Ablation Stud-ies \T1/ptm/m/n/10 (+20) To en-sure ro-bus
-t-ness, we plan sev-eral ab-la-tion stud-ies, in-clud-ing vary-
-
-Underfull \hbox (badness 1221) in paragraph at lines 167--169
-\T1/ptm/m/n/10 (+20) ing the en-sem-ble size $\OML/cmm/m/it/10 k$ \T1/ptm/m/n/1
-0 (+20) ({3, 5, 10, 20}), ad-just-ing sam-pling pa-ram-e-ters (`tem-per-a-ture`
-,
-
+[2] [3] [4] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd) [5]
 Underfull \vbox (badness 10000) has occurred while \output is active [6]
 Underfull \vbox (badness 10000) has occurred while \output is active [7 <./imag
 es/roc_curves_comparison_gpt2.pdf> <./images/score_distributions_ltd_gpt2.pdf>]
@@ -1489,8 +1110,7 @@ es/roc_curves_comparison_gpt2.pdf> <./images/score_distributions_ltd_gpt2.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active [8 <./imag
 es/score_distributions_lexical_diversity_gpt2.pdf> <./images/score_distribution
 s_semantic_entropy_gpt2.pdf>] [9 <./images/score_distributions_haloscope_(mock)
-_gpt2.pdf>] (./paper.bbl
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)) [10] (./paper.aux)
+_gpt2.pdf>] (./paper.bbl) [10] (./paper.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -1505,5 +1125,5 @@ fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (10 pages, 211122 bytes).
+Output written on paper.pdf (10 pages, 207512 bytes).
 Transcript written on paper.log.

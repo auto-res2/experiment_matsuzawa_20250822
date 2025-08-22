@@ -6,5 +6,52 @@
     "certified adversarial training",
     "Lipschitz certified radius",
     "alpha-beta-CROWN"
+  ],
+  "research_study_list": [
+    {
+      "title": "Breaking  Certified  Defenses:  Semantic  Adversarial  Examples  With  Spoofed  Robustness  Certificates"
+    },
+    {
+      "title": "Second-Order Provable Defenses against Adversarial Attacks"
+    },
+    {
+      "title": "Double Bubble, Toil and Trouble: Enhancing Certified Robustness through Transitivity"
+    },
+    {
+      "title": "Curse of Dimensionality on Randomized Smoothing for Certifiable Robustness"
+    },
+    {
+      "title": "Randomized Smoothing of All Shapes and Sizes"
+    },
+    {
+      "title": "Higher-Order Certification For Randomized Smoothing"
+    },
+    {
+      "title": "Accelerating Certified Robustness Training via Knowledge Transfer"
+    },
+    {
+      "title": "Accelerating Certified Robustness Training via Knowledge Transfer"
+    },
+    {
+      "title": "Adversarial Training and Provable Defenses: Bridging the Gap"
+    },
+    {
+      "title": "Semialgebraic Optimization for Lipschitz Constants of ReLU Networks"
+    },
+    {
+      "title": "ECLipsE: Efficient Compositional Lipschitz Constant Estimation for Deep Neural Networks"
+    },
+    {
+      "title": "Lipschitz constant estimation of Neural Networks via sparse polynomial optimization"
+    },
+    {
+      "title": "Crowdsourcing via Annotator Co-occurrence Imputation and Provable Symmetric Nonnegative Matrix Factorization"
+    },
+    {
+      "title": "Crowdsourcing via Annotator Co-occurrence Imputation and Provable Symmetric Nonnegative Matrix Factorization"
+    },
+    {
+      "title": "Sparse and Continuous Attention Mechanisms"
+    }
   ]
 }

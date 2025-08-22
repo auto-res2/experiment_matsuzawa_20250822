@@ -5,3 +5,469 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{alman_2023_how,
+ abstract = {In the classical transformer attention scheme, we are given three $n \times
+d$ size matrices $Q, K, V$ (the query, key, and value tokens), and the goal is
+to compute a new $n \times d$ size matrix $D^{-1} \exp(QK^\top) V$ where $D =
+\mathrm{diag}( \exp(QK^\top) {\bf 1}_n )$. In this work, we study a
+generalization of attention which captures triple-wise correlations. This
+generalization is able to solve problems about detecting triple-wise
+connections that were shown to be impossible for transformers. The potential
+downside of this generalization is that it appears as though computations are
+even more difficult, since the straightforward algorithm requires cubic time in
+$n$. However, we show that in the bounded-entry setting (which arises in
+practice, and which is well-studied in both theory and practice), there is
+actually a near-linear time algorithm. More precisely, we show that bounded
+entries are both necessary and sufficient for quickly performing generalized
+computations:
+  $\bullet$ On the positive side, if all entries of the input matrices are
+bounded above by $o(\sqrt[3]{\log n})$ then we show how to approximate the
+``tensor-type'' attention matrix in $n^{1+o(1)}$ time.
+  $\bullet$ On the negative side, we show that if the entries of the input
+matrices may be as large as $\Omega(\sqrt[3]{\log n})$, then there is no
+algorithm that runs faster than $n^{3-o(1)}$ (assuming the Strong Exponential
+Time Hypothesis from fine-grained complexity theory).
+  We also show that our construction, algorithms, and lower bounds naturally
+generalize to higher-order tensors and correlations. Interestingly, the higher
+the order of the tensors, the lower the bound on the entries needs to be for an
+efficient algorithm. Our results thus yield a natural tradeoff between the
+boundedness of the entries, and order of the tensor one may use for more
+expressive, efficient attention computation.},
+ arxiv_url = {https://arxiv.org/pdf/2310.04064v1.pdf},
+ author = {Josh Alman and Zhao Song},
+ title = {How to Capture Higher-order Correlations? Generalizing Matrix Softmax Attention to Kronecker Computation},
+ year = {2023}
+}
+
+@article{author_year_kernel,
+ title = {Kernel Multimodal Continuous Attention}
+}
+
+@article{cambier_2020_shifted,
+ abstract = {Training with larger number of parameters while keeping fast iterations is an
+increasingly adopted strategy and trend for developing better performing Deep
+Neural Network (DNN) models. This necessitates increased memory footprint and
+computational requirements for training. Here we introduce a novel methodology
+for training deep neural networks using 8-bit floating point (FP8) numbers.
+Reduced bit precision allows for a larger effective memory and increased
+computational speed. We name this method Shifted and Squeezed FP8 (S2FP8). We
+show that, unlike previous 8-bit precision training methods, the proposed
+method works out-of-the-box for representative models: ResNet-50, Transformer
+and NCF. The method can maintain model accuracy without requiring fine-tuning
+loss scaling parameters or keeping certain layers in single precision. We
+introduce two learnable statistics of the DNN tensors - shifted and squeezed
+factors that are used to optimally adjust the range of the tensors in 8-bits,
+thus minimizing the loss in information due to quantization.},
+ arxiv_url = {https://arxiv.org/pdf/2001.05674v1.pdf},
+ author = {Léopold Cambier and Anahita Bhiwandiwalla and Ting Gong and Mehran Nekuii and Oguz H Elibol and Hanlin Tang},
+ title = {Shifted and Squeezed 8-bit Floating Point format for Low-Precision Training of Deep Neural Networks},
+ year = {2020}
+}
+
+@article{dao_2022_flashattention,
+ abstract = {Transformers are slow and memory-hungry on long sequences, since the time and
+memory complexity of self-attention are quadratic in sequence length.
+Approximate attention methods have attempted to address this problem by trading
+off model quality to reduce the compute complexity, but often do not achieve
+wall-clock speedup. We argue that a missing principle is making attention
+algorithms IO-aware -- accounting for reads and writes between levels of GPU
+memory. We propose FlashAttention, an IO-aware exact attention algorithm that
+uses tiling to reduce the number of memory reads/writes between GPU high
+bandwidth memory (HBM) and GPU on-chip SRAM. We analyze the IO complexity of
+FlashAttention, showing that it requires fewer HBM accesses than standard
+attention, and is optimal for a range of SRAM sizes. We also extend
+FlashAttention to block-sparse attention, yielding an approximate attention
+algorithm that is faster than any existing approximate attention method.
+FlashAttention trains Transformers faster than existing baselines: 15%
+end-to-end wall-clock speedup on BERT-large (seq. length 512) compared to the
+MLPerf 1.1 training speed record, 3$\times$ speedup on GPT-2 (seq. length 1K),
+and 2.4$\times$ speedup on long-range arena (seq. length 1K-4K). FlashAttention
+and block-sparse FlashAttention enable longer context in Transformers, yielding
+higher quality models (0.7 better perplexity on GPT-2 and 6.4 points of lift on
+long-document classification) and entirely new capabilities: the first
+Transformers to achieve better-than-chance performance on the Path-X challenge
+(seq. length 16K, 61.4% accuracy) and Path-256 (seq. length 64K, 63.1%
+accuracy).},
+ arxiv_url = {https://arxiv.org/pdf/2205.14135v2.pdf},
+ author = {Tri Dao and Daniel Y. Fu and Stefano Ermon and Atri Rudra and Christopher Ré},
+ github_url = {https://github.com/HazyResearch/flash-attention},
+ title = {FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness},
+ year = {2022}
+}
+
+@article{dao_2022_flashattention,
+ abstract = {Transformers are slow and memory-hungry on long sequences, since the time and
+memory complexity of self-attention are quadratic in sequence length.
+Approximate attention methods have attempted to address this problem by trading
+off model quality to reduce the compute complexity, but often do not achieve
+wall-clock speedup. We argue that a missing principle is making attention
+algorithms IO-aware -- accounting for reads and writes between levels of GPU
+memory. We propose FlashAttention, an IO-aware exact attention algorithm that
+uses tiling to reduce the number of memory reads/writes between GPU high
+bandwidth memory (HBM) and GPU on-chip SRAM. We analyze the IO complexity of
+FlashAttention, showing that it requires fewer HBM accesses than standard
+attention, and is optimal for a range of SRAM sizes. We also extend
+FlashAttention to block-sparse attention, yielding an approximate attention
+algorithm that is faster than any existing approximate attention method.
+FlashAttention trains Transformers faster than existing baselines: 15%
+end-to-end wall-clock speedup on BERT-large (seq. length 512) compared to the
+MLPerf 1.1 training speed record, 3$\times$ speedup on GPT-2 (seq. length 1K),
+and 2.4$\times$ speedup on long-range arena (seq. length 1K-4K). FlashAttention
+and block-sparse FlashAttention enable longer context in Transformers, yielding
+higher quality models (0.7 better perplexity on GPT-2 and 6.4 points of lift on
+long-document classification) and entirely new capabilities: the first
+Transformers to achieve better-than-chance performance on the Path-X challenge
+(seq. length 16K, 61.4% accuracy) and Path-256 (seq. length 64K, 63.1%
+accuracy).},
+ arxiv_url = {https://arxiv.org/pdf/2205.14135v2.pdf},
+ author = {Tri Dao and Daniel Y. Fu and Stefano Ermon and Atri Rudra and Christopher Ré},
+ github_url = {https://github.com/HazyResearch/flash-attention},
+ title = {FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness},
+ year = {2022}
+}
+
+@article{dao_2022_flashattention,
+ abstract = {Transformers are slow and memory-hungry on long sequences, since the time and
+memory complexity of self-attention are quadratic in sequence length.
+Approximate attention methods have attempted to address this problem by trading
+off model quality to reduce the compute complexity, but often do not achieve
+wall-clock speedup. We argue that a missing principle is making attention
+algorithms IO-aware -- accounting for reads and writes between levels of GPU
+memory. We propose FlashAttention, an IO-aware exact attention algorithm that
+uses tiling to reduce the number of memory reads/writes between GPU high
+bandwidth memory (HBM) and GPU on-chip SRAM. We analyze the IO complexity of
+FlashAttention, showing that it requires fewer HBM accesses than standard
+attention, and is optimal for a range of SRAM sizes. We also extend
+FlashAttention to block-sparse attention, yielding an approximate attention
+algorithm that is faster than any existing approximate attention method.
+FlashAttention trains Transformers faster than existing baselines: 15%
+end-to-end wall-clock speedup on BERT-large (seq. length 512) compared to the
+MLPerf 1.1 training speed record, 3$\times$ speedup on GPT-2 (seq. length 1K),
+and 2.4$\times$ speedup on long-range arena (seq. length 1K-4K). FlashAttention
+and block-sparse FlashAttention enable longer context in Transformers, yielding
+higher quality models (0.7 better perplexity on GPT-2 and 6.4 points of lift on
+long-document classification) and entirely new capabilities: the first
+Transformers to achieve better-than-chance performance on the Path-X challenge
+(seq. length 16K, 61.4% accuracy) and Path-256 (seq. length 64K, 63.1%
+accuracy).},
+ arxiv_url = {https://arxiv.org/pdf/2205.14135v2.pdf},
+ author = {Tri Dao and Daniel Y. Fu and Stefano Ermon and Atri Rudra and Christopher Ré},
+ github_url = {https://github.com/HazyResearch/flash-attention},
+ title = {FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness},
+ year = {2022}
+}
+
+@article{dao_2023_flashattention,
+ abstract = {Scaling Transformers to longer sequence lengths has been a major problem in
+the last several years, promising to improve performance in language modeling
+and high-resolution image understanding, as well as to unlock new applications
+in code, audio, and video generation. The attention layer is the main
+bottleneck in scaling to longer sequences, as its runtime and memory increase
+quadratically in the sequence length. FlashAttention exploits the asymmetric
+GPU memory hierarchy to bring significant memory saving (linear instead of
+quadratic) and runtime speedup (2-4$\times$ compared to optimized baselines),
+with no approximation. However, FlashAttention is still not nearly as fast as
+optimized matrix-multiply (GEMM) operations, reaching only 25-40\% of the
+theoretical maximum FLOPs/s. We observe that the inefficiency is due to
+suboptimal work partitioning between different thread blocks and warps on the
+GPU, causing either low-occupancy or unnecessary shared memory reads/writes. We
+propose FlashAttention-2, with better work partitioning to address these
+issues. In particular, we (1) tweak the algorithm to reduce the number of
+non-matmul FLOPs (2) parallelize the attention computation, even for a single
+head, across different thread blocks to increase occupancy, and (3) within each
+thread block, distribute the work between warps to reduce communication through
+shared memory. These yield around 2$\times$ speedup compared to FlashAttention,
+reaching 50-73\% of the theoretical maximum FLOPs/s on A100 and getting close
+to the efficiency of GEMM operations. We empirically validate that when used
+end-to-end to train GPT-style models, FlashAttention-2 reaches training speed
+of up to 225 TFLOPs/s per A100 GPU (72\% model FLOPs utilization).},
+ arxiv_url = {https://arxiv.org/pdf/2307.08691v1.pdf},
+ author = {Tri Dao},
+ github_url = {https://github.com/Dao-AILab/flash-attention},
+ title = {FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning},
+ year = {2023}
+}
+
+@article{dao_2023_flashattention,
+ abstract = {Scaling Transformers to longer sequence lengths has been a major problem in
+the last several years, promising to improve performance in language modeling
+and high-resolution image understanding, as well as to unlock new applications
+in code, audio, and video generation. The attention layer is the main
+bottleneck in scaling to longer sequences, as its runtime and memory increase
+quadratically in the sequence length. FlashAttention exploits the asymmetric
+GPU memory hierarchy to bring significant memory saving (linear instead of
+quadratic) and runtime speedup (2-4$\times$ compared to optimized baselines),
+with no approximation. However, FlashAttention is still not nearly as fast as
+optimized matrix-multiply (GEMM) operations, reaching only 25-40\% of the
+theoretical maximum FLOPs/s. We observe that the inefficiency is due to
+suboptimal work partitioning between different thread blocks and warps on the
+GPU, causing either low-occupancy or unnecessary shared memory reads/writes. We
+propose FlashAttention-2, with better work partitioning to address these
+issues. In particular, we (1) tweak the algorithm to reduce the number of
+non-matmul FLOPs (2) parallelize the attention computation, even for a single
+head, across different thread blocks to increase occupancy, and (3) within each
+thread block, distribute the work between warps to reduce communication through
+shared memory. These yield around 2$\times$ speedup compared to FlashAttention,
+reaching 50-73\% of the theoretical maximum FLOPs/s on A100 and getting close
+to the efficiency of GEMM operations. We empirically validate that when used
+end-to-end to train GPT-style models, FlashAttention-2 reaches training speed
+of up to 225 TFLOPs/s per A100 GPU (72\% model FLOPs utilization).},
+ arxiv_url = {https://arxiv.org/pdf/2307.08691v1.pdf},
+ author = {Tri Dao},
+ github_url = {https://github.com/Dao-AILab/flash-attention},
+ title = {FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning},
+ year = {2023}
+}
+
+@article{kuzmin_2022_quantization,
+ abstract = {When quantizing neural networks for efficient inference, low-bit integers are
+the go-to format for efficiency. However, low-bit floating point numbers have
+an extra degree of freedom, assigning some bits to work on an exponential scale
+instead. This paper in-depth investigates this benefit of the floating point
+format for neural network inference. We detail the choices that can be made for
+the FP8 format, including the important choice of the number of bits for the
+mantissa and exponent, and show analytically in which settings these choices
+give better performance. Then we show how these findings translate to real
+networks, provide an efficient implementation for FP8 simulation, and a new
+algorithm that enables the learning of both the scale parameters and the number
+of exponent bits in the FP8 format. Our chief conclusion is that when doing
+post-training quantization for a wide range of networks, the FP8 format is
+better than INT8 in terms of accuracy, and the choice of the number of exponent
+bits is driven by the severity of outliers in the network. We also conduct
+experiments with quantization-aware training where the difference in formats
+disappears as the network is trained to reduce the effect of outliers.},
+ arxiv_url = {https://arxiv.org/pdf/2208.09225v2.pdf},
+ author = {Andrey Kuzmin and Mart Van Baalen and Yuwei Ren and Markus Nagel and Jorn Peters and Tijmen Blankevoort},
+ github_url = {https://github.com/Qualcomm-AI-research/FP8-quantization},
+ title = {FP8 Quantization: The Power of the Exponent},
+ year = {2022}
+}
+
+@article{nguyen_2022_fourierformer,
+ abstract = {Multi-head attention empowers the recent success of transformers, the
+state-of-the-art models that have achieved remarkable success in sequence
+modeling and beyond. These attention mechanisms compute the pairwise dot
+products between the queries and keys, which results from the use of
+unnormalized Gaussian kernels with the assumption that the queries follow a
+mixture of Gaussian distribution. There is no guarantee that this assumption is
+valid in practice. In response, we first interpret attention in transformers as
+a nonparametric kernel regression. We then propose the FourierFormer, a new
+class of transformers in which the dot-product kernels are replaced by the
+novel generalized Fourier integral kernels. Different from the dot-product
+kernels, where we need to choose a good covariance matrix to capture the
+dependency of the features of data, the generalized Fourier integral kernels
+can automatically capture such dependency and remove the need to tune the
+covariance matrix. We theoretically prove that our proposed Fourier integral
+kernels can efficiently approximate any key and query distributions. Compared
+to the conventional transformers with dot-product attention, FourierFormers
+attain better accuracy and reduce the redundancy between attention heads. We
+empirically corroborate the advantages of FourierFormers over the baseline
+transformers in a variety of practical applications including language modeling
+and image classification.},
+ arxiv_url = {https://arxiv.org/pdf/2206.00206v1.pdf},
+ author = {Tan Nguyen and Minh Pham and Tam Nguyen and Khai Nguyen and Stanley J. Osher and Nhat Ho},
+ github_url = {https://github.com/IDSIA/lmtool-fwp},
+ title = {FourierFormer: Transformer Meets Generalized Fourier Integral Theorem},
+ year = {2022}
+}
+
+@article{shah_2024_flashattention,
+ abstract = {Attention, as a core layer of the ubiquitous Transformer architecture, is the
+bottleneck for large language models and long-context applications.
+FlashAttention elaborated an approach to speed up attention on GPUs through
+minimizing memory reads/writes. However, it has yet to take advantage of new
+capabilities present in recent hardware, with FlashAttention-2 achieving only
+35% utilization on the H100 GPU. We develop three main techniques to speed up
+attention on Hopper GPUs: exploiting asynchrony of the Tensor Cores and TMA to
+(1) overlap overall computation and data movement via warp-specialization and
+(2) interleave block-wise matmul and softmax operations, and (3) block
+quantization and incoherent processing that leverages hardware support for FP8
+low-precision. We demonstrate that our method, FlashAttention-3, achieves
+speedup on H100 GPUs by 1.5-2.0$\times$ with FP16 reaching up to 740 TFLOPs/s
+(75% utilization), and with FP8 reaching close to 1.2 PFLOPs/s. We validate
+that FP8 FlashAttention-3 achieves 2.6$\times$ lower numerical error than a
+baseline FP8 attention.},
+ arxiv_url = {https://arxiv.org/pdf/2407.08608v2.pdf},
+ author = {Jay Shah and Ganesh Bikshandi and Ying Zhang and Vijay Thakkar and Pradeep Ramani and Tri Dao},
+ github_url = {https://github.com/Dao-AILab/flash-attention},
+ title = {FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision},
+ year = {2024}
+}
+
+@article{shah_2024_flashattention,
+ abstract = {Attention, as a core layer of the ubiquitous Transformer architecture, is the
+bottleneck for large language models and long-context applications.
+FlashAttention elaborated an approach to speed up attention on GPUs through
+minimizing memory reads/writes. However, it has yet to take advantage of new
+capabilities present in recent hardware, with FlashAttention-2 achieving only
+35% utilization on the H100 GPU. We develop three main techniques to speed up
+attention on Hopper GPUs: exploiting asynchrony of the Tensor Cores and TMA to
+(1) overlap overall computation and data movement via warp-specialization and
+(2) interleave block-wise matmul and softmax operations, and (3) block
+quantization and incoherent processing that leverages hardware support for FP8
+low-precision. We demonstrate that our method, FlashAttention-3, achieves
+speedup on H100 GPUs by 1.5-2.0$\times$ with FP16 reaching up to 740 TFLOPs/s
+(75% utilization), and with FP8 reaching close to 1.2 PFLOPs/s. We validate
+that FP8 FlashAttention-3 achieves 2.6$\times$ lower numerical error than a
+baseline FP8 attention.},
+ arxiv_url = {https://arxiv.org/pdf/2407.08608v2.pdf},
+ author = {Jay Shah and Ganesh Bikshandi and Ying Zhang and Vijay Thakkar and Pradeep Ramani and Tri Dao},
+ github_url = {https://github.com/Dao-AILab/flash-attention},
+ title = {FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision},
+ year = {2024}
+}
+
+@article{shah_2024_flashattention,
+ abstract = {Attention, as a core layer of the ubiquitous Transformer architecture, is the
+bottleneck for large language models and long-context applications.
+FlashAttention elaborated an approach to speed up attention on GPUs through
+minimizing memory reads/writes. However, it has yet to take advantage of new
+capabilities present in recent hardware, with FlashAttention-2 achieving only
+35% utilization on the H100 GPU. We develop three main techniques to speed up
+attention on Hopper GPUs: exploiting asynchrony of the Tensor Cores and TMA to
+(1) overlap overall computation and data movement via warp-specialization and
+(2) interleave block-wise matmul and softmax operations, and (3) block
+quantization and incoherent processing that leverages hardware support for FP8
+low-precision. We demonstrate that our method, FlashAttention-3, achieves
+speedup on H100 GPUs by 1.5-2.0$\times$ with FP16 reaching up to 740 TFLOPs/s
+(75% utilization), and with FP8 reaching close to 1.2 PFLOPs/s. We validate
+that FP8 FlashAttention-3 achieves 2.6$\times$ lower numerical error than a
+baseline FP8 attention.},
+ arxiv_url = {https://arxiv.org/pdf/2407.08608v2.pdf},
+ author = {Jay Shah and Ganesh Bikshandi and Ying Zhang and Vijay Thakkar and Pradeep Ramani and Tri Dao},
+ github_url = {https://github.com/Dao-AILab/flash-attention},
+ title = {FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision},
+ year = {2024}
+}
+
+@article{shah_2024_flashattention,
+ abstract = {Attention, as a core layer of the ubiquitous Transformer architecture, is the
+bottleneck for large language models and long-context applications.
+FlashAttention elaborated an approach to speed up attention on GPUs through
+minimizing memory reads/writes. However, it has yet to take advantage of new
+capabilities present in recent hardware, with FlashAttention-2 achieving only
+35% utilization on the H100 GPU. We develop three main techniques to speed up
+attention on Hopper GPUs: exploiting asynchrony of the Tensor Cores and TMA to
+(1) overlap overall computation and data movement via warp-specialization and
+(2) interleave block-wise matmul and softmax operations, and (3) block
+quantization and incoherent processing that leverages hardware support for FP8
+low-precision. We demonstrate that our method, FlashAttention-3, achieves
+speedup on H100 GPUs by 1.5-2.0$\times$ with FP16 reaching up to 740 TFLOPs/s
+(75% utilization), and with FP8 reaching close to 1.2 PFLOPs/s. We validate
+that FP8 FlashAttention-3 achieves 2.6$\times$ lower numerical error than a
+baseline FP8 attention.},
+ arxiv_url = {https://arxiv.org/pdf/2407.08608v2.pdf},
+ author = {Jay Shah and Ganesh Bikshandi and Ying Zhang and Vijay Thakkar and Pradeep Ramani and Tri Dao},
+ github_url = {https://github.com/Dao-AILab/flash-attention},
+ title = {FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision},
+ year = {2024}
+}
+
+@article{teo_2024_unveiling,
+ abstract = {The remarkable success of transformers in sequence modeling tasks, spanning
+various applications in natural language processing and computer vision, is
+attributed to the critical role of self-attention. Similar to the development
+of most deep learning models, the construction of these attention mechanisms
+relies on heuristics and experience. In our work, we derive self-attention from
+kernel principal component analysis (kernel PCA) and show that self-attention
+projects its query vectors onto the principal component axes of its key matrix
+in a feature space. We then formulate the exact formula for the value matrix in
+self-attention, theoretically and empirically demonstrating that this value
+matrix captures the eigenvectors of the Gram matrix of the key vectors in
+self-attention. Leveraging our kernel PCA framework, we propose Attention with
+Robust Principal Components (RPC-Attention), a novel class of robust attention
+that is resilient to data contamination. We empirically demonstrate the
+advantages of RPC-Attention over softmax attention on the ImageNet-1K object
+classification, WikiText-103 language modeling, and ADE20K image segmentation
+task.},
+ arxiv_url = {https://arxiv.org/pdf/2406.13762v2.pdf},
+ author = {Rachel S. Y. Teo and Tan M. Nguyen},
+ github_url = {https://github.com/rachtsy/KPCA_code},
+ title = {Unveiling the Hidden Structure of Self-Attention via Kernel Principal Component Analysis},
+ year = {2024}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{beltagy_2020_longformer,
+ abstract = {Transformer-based models are unable to process long sequences due to their
+self-attention operation, which scales quadratically with the sequence length.
+To address this limitation, we introduce the Longformer with an attention
+mechanism that scales linearly with sequence length, making it easy to process
+documents of thousands of tokens or longer. Longformer's attention mechanism is
+a drop-in replacement for the standard self-attention and combines a local
+windowed attention with a task motivated global attention. Following prior work
+on long-sequence transformers, we evaluate Longformer on character-level
+language modeling and achieve state-of-the-art results on text8 and enwik8. In
+contrast to most prior work, we also pretrain Longformer and finetune it on a
+variety of downstream tasks. Our pretrained Longformer consistently outperforms
+RoBERTa on long document tasks and sets new state-of-the-art results on WikiHop
+and TriviaQA. We finally introduce the Longformer-Encoder-Decoder (LED), a
+Longformer variant for supporting long document generative sequence-to-sequence
+tasks, and demonstrate its effectiveness on the arXiv summarization dataset.},
+ arxiv_url = {https://arxiv.org/pdf/2004.05150v2.pdf},
+ author = {Iz Beltagy and Matthew E. Peters and Arman Cohan},
+ title = {Longformer: The long-document transformer.},
+ year = {2020}
+}
+
+@article{chen_2021_scatterbrain,
+ abstract = {Recent advances in efficient Transformers have exploited either the sparsity
+or low-rank properties of attention matrices to reduce the computational and
+memory bottlenecks of modeling long sequences. However, it is still challenging
+to balance the trade-off between model quality and efficiency to perform a
+one-size-fits-all approximation for different tasks. To better understand this
+trade-off, we observe that sparse and low-rank approximations excel in
+different regimes, determined by the softmax temperature in attention, and
+sparse + low-rank can outperform each individually. Inspired by the classical
+robust-PCA algorithm for sparse and low-rank decomposition, we propose
+Scatterbrain, a novel way to unify sparse (via locality sensitive hashing) and
+low-rank (via kernel feature map) attention for accurate and efficient
+approximation. The estimation is unbiased with provably low error. We
+empirically show that Scatterbrain can achieve 2.1x lower error than baselines
+when serving as a drop-in replacement in BigGAN image generation and
+pre-trained T2T-ViT. On a pre-trained T2T Vision transformer, even without
+fine-tuning, Scatterbrain can reduce 98% of attention memory at the cost of
+only 1% drop in accuracy. We demonstrate Scatterbrain for end-to-end training
+with up to 4 points better perplexity and 5 points better average accuracy than
+sparse or low-rank efficient transformers on language modeling and
+long-range-arena tasks.},
+ arxiv_url = {https://arxiv.org/pdf/2110.15343v1.pdf},
+ author = {Beidi Chen and Tri Dao and Eric Winsor and Zhao Song and Atri Rudra and Christopher Ré},
+ title = {Scatterbrain: Unifying sparse and low-rank attention.},
+ year = {2021}
+}
+
+@article{choromanski_2020_rethinking,
+ abstract = {We introduce Performers, Transformer architectures which can estimate regular
+(softmax) full-rank-attention Transformers with provable accuracy, but using
+only linear (as opposed to quadratic) space and time complexity, without
+relying on any priors such as sparsity or low-rankness. To approximate softmax
+attention-kernels, Performers use a novel Fast Attention Via positive
+Orthogonal Random features approach (FAVOR+), which may be of independent
+interest for scalable kernel methods. FAVOR+ can be also used to efficiently
+model kernelizable attention mechanisms beyond softmax. This representational
+power is crucial to accurately compare softmax with other kernels for the first
+time on large-scale tasks, beyond the reach of regular Transformers, and
+investigate optimal attention-kernels. Performers are linear architectures
+fully compatible with regular Transformers and with strong theoretical
+guarantees: unbiased or nearly-unbiased estimation of the attention matrix,
+uniform convergence and low estimation variance. We tested Performers on a rich
+set of tasks stretching from pixel-prediction through text models to protein
+sequence modeling. We demonstrate competitive results with other examined
+efficient sparse and dense attention methods, showcasing effectiveness of the
+novel attention-learning paradigm leveraged by Performers.},
+ arxiv_url = {https://arxiv.org/pdf/2009.14794v4.pdf},
+ author = {Krzysztof Choromanski and Valerii Likhosherstov and David Dohan and Xingyou Song and Andreea Gane and Tamas Sarlos and Peter Hawkins and Jared Davis and Afroz Mohiuddin and Lukasz Kaiser and David Belanger and Lucy Colwell and Adrian Weller},
+ title = {Rethinking attention with performers.},
+ year = {2020}
+}

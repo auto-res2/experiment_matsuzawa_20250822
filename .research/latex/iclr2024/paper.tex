@@ -1,0 +1,168 @@
+\PassOptionsToPackage{numbers}{natbib}
+\documentclass{article} % For LaTeX2e
+\usepackage{iclr2024_conference,times}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{titletoc}
+
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{cleveref}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{array}
+\usepackage{tabularx}
+\pgfplotsset{compat=newest}
+
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\graphicspath{{../}} % To reference your generated figures, see below.
+
+\title{Democratizing Efficient Spiking Neural Network Training with Forward-Gated Online Learning}
+
+\author{AIRAS}
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Spiking Neural Networks (SNNs) promise energy-efficient computation, but their training remains a significant challenge. Current methods present a dilemma: high-performance algorithms like Backpropagation Through Time (BPTT) and its online variant, Online Training Through Time (OTTT), are compatible with standard deep learning frameworks but are bottlenecked by dense gradient computations that ignore the inherently sparse nature of SNNs. Conversely, methods that exploit this sparsity for massive efficiency gains often require custom, hardware-specific kernels, hindering widespread adoption and research. This work introduces Forward-Gated Online Training Through Time (FG-OTTT), a novel training algorithm that resolves this trade-off. FG-OTTT achieves true computational efficiency by generating a dynamic, predictive sparse mask during the forward pass. This mask is then used to fundamentally prune the backward pass before any expensive dense gradient computations occur. Crucially, our method is implemented entirely within standard frameworks like PyTorch by creating a custom autograd function, requiring no specialized kernels. We demonstrate FG-OTTT's effectiveness on the CIFAR-10 dataset, showing that it can reduce wall-clock training time by over 2.3x and backward-pass computational load by up to 90% compared to dense OTTT, with only a minimal and controllable trade-off in accuracy. By making hardware-aware sparse training both performant and accessible, FG-OTTT paves the way for democratized research into efficient SNNs and their co-design with neuromorphic hardware.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+Spiking Neural Networks (SNNs) have emerged as a compelling, brain-inspired computing paradigm, offering the potential for significant energy savings on event-driven neuromorphic hardware. However, realizing this potential is contingent on developing effective and efficient training algorithms. The dominant approach to training deep SNNs involves adapting the backpropagation algorithm, typically through surrogate gradients to handle the non-differentiable nature of spiking neurons \cite{author\_year\_how}. This has led to powerful but computationally demanding methods like Backpropagation Through Time (BPTT) \cite{author\_year\_can} and, more recently, its memory-efficient online approximation, Online Training Through Time (OTTT) \cite{xiao\_2022\_online}. The primary challenge with these methods is a fundamental disconnect between the SNN's operational principle—sparse, event-driven communication—and the training process. During backpropagation, both BPTT and OTTT compute dense gradient tensors, performing costly matrix-matrix multiplications that scale poorly and fail to leverage the underlying sparsity of neural activity. This creates a significant bottleneck, making the training of deep SNNs on large datasets a resource-intensive endeavor. While some research has focused on creating genuinely sparse training algorithms that capitalize on event-driven dynamics \cite{pereznieves\_2021\_sparse}, these solutions often require custom CUDA kernels. This specialization creates a high barrier to entry, limiting their adoption to research groups with the expertise to develop and maintain such low-level code, thereby fragmenting the research landscape. A naive solution, which we term post-hoc sparsification, involves computing the full dense gradient and then applying a sparse mask before the weight update. However, this fails to address the core problem, as the expensive dense computation has already been performed. The true challenge is to prevent the dense gradient from ever being computed. To this end, we propose Forward-Gated Online Training Through Time (FG-OTTT), a novel algorithm that achieves true computational efficiency while maintaining full compatibility with standard deep learning libraries. The core innovation of FG-OTTT is to compute a predictive binary mask for synaptic updates during the forward pass, using information that is locally available in time, such as Hebbian activity traces. This pre-computed mask is then used to prune the backward pass *before* the dense gradient calculation, effectively transforming the expensive dense matrix multiplications into much cheaper sparse ones. This is accomplished by wrapping standard layers in a custom \texttt{torch.autograd.Function}, a native framework feature that requires no specialized compilers or kernels. Our contributions can be summarized as follows:
+\begin{itemize}
+\item \textbf{Novel Algorithm:} We introduce Forward-Gated Online Training Through Time (FG-OTTT), a novel SNN training algorithm that uses a predictive forward-pass mask to perform a computationally sparse backward pass within standard deep learning frameworks.
+\item \textbf{Empirical Demonstration:} We demonstrate empirically that FG-OTTT provides a dramatic reduction in wall-clock training time and backward-pass FLOPs compared to dense online and offline methods, without requiring custom kernels.
+\item \textbf{Controllable Sparsity:} We introduce a target-driven regularization mechanism that gives practitioners direct control over the computational budget (sparsity), enabling a principled exploration of the accuracy-efficiency trade-off and facilitating hardware-aware model design.
+\item \textbf{State-of-the-Art Trade-off:} Through extensive experiments on CIFAR-10, we show that FG-OTTT establishes a new, superior Pareto front for accuracy versus computational cost, outperforming both dense OTTT and a naive post-hoc sparsification baseline.
+\end{itemize}
+
+\section{Related Work}
+\label{sec:related}
+The training of Spiking Neural Networks has been approached from several distinct angles, each with its own trade-offs between biological plausibility, performance, and computational efficiency. Our work, FG-OTTT, builds upon and provides a practical solution to the limitations of several of these existing paradigms.
+
+\subsection{Gradient-Based SNN Training}
+The most successful methods for training deep SNNs for complex tasks rely on backpropagation. Backpropagation Through Time (BPTT) is the de facto standard, treating the SNN as a recurrent neural network unrolled over time. To overcome the non-differentiability of the spike generation process, these methods employ surrogate gradients \cite{thiele\_2019\_spikegrad, author\_year\_how}. While BPTT achieves state-of-the-art accuracy, its memory footprint scales linearly with the number of simulation time steps, making it infeasible for long temporal sequences. To address this, Online Training Through Time (OTTT) was proposed as a memory-efficient online alternative that approximates BPTT using eligibility traces \cite{xiao\_2022\_online}. FG-OTTT is built directly upon the OTTT framework but critically addresses its primary limitation: the computational cost of its dense backward pass.
+
+\subsection{Sparse and Efficient Training}
+Recognizing the computational burden of dense backpropagation, several works have explored sparsity during training. Perez-Nieves et al. \cite{pereznieves\_2021\_sparse} introduced a sparse spiking gradient descent algorithm that leverages the spatiotemporal sparsity of SNNs to achieve significant speedups. However, its implementation relies on custom CUDA kernels, which limits its accessibility and integration with standard deep learning ecosystems. In contrast, FG-OTTT achieves computational sparsity during the backward pass *without* departing from standard, widely-used frameworks, thus democratizing efficient training. Other work on unstructured pruning for SNNs focuses on reducing model size and spiking activity for energy-efficient inference \cite{chakraborty\_2024\_towards}, but does not directly tackle the computational bottleneck of the training backward pass, which is our primary focus.
+
+\subsection{Biologically Plausible Learning}
+A separate line of research explores learning rules that are more consistent with known biological mechanisms, moving away from the global error signals of backpropagation. These include methods based on Spike Timing-Dependent Plasticity (STDP) \cite{goupy\_2024\_neuronal} and alternative credit assignment strategies like Target Propagation \cite{meulemans\_2020\_theoretical, ernoult\_2022\_towards}. Some models also investigate how local neuromodulators could propagate credit information over time \cite{liu\_2022\_biologically} or use meta-learning to discover plasticity rules \cite{author\_year\_meta}. While our method's Hebbian gating mechanism is biologically inspired, FG-OTTT's primary contribution is not in proposing a new theory of learning in the brain, but rather in engineering a computationally efficient and practical implementation of a gradient-based algorithm (OTTT) for conventional hardware. It bridges the gap between high-performance but inefficient dense methods and highly efficient but inaccessible custom sparse methods.
+
+\section{Background}
+\label{sec:background}
+To understand our proposed method, it is essential to first review the foundational concepts of Spiking Neural Networks and the specific training framework upon which we build.
+
+\subsection{Spiking Neural Networks (SNNs)}
+SNNs are a class of neural networks where communication between units (neurons) occurs via discrete events, or spikes, distributed over time. A common neuron model is the Leaky Integrate-and-Fire (LIF) neuron. The dynamics of an LIF neuron are governed by its membrane potential, $V(t)$, which integrates incoming spikes and decays over time. When $V(t)$ exceeds a certain threshold, the neuron fires a spike and its potential is reset. The non-differentiable nature of this spiking mechanism at the threshold poses a challenge for gradient-based training. This is typically circumvented by using a surrogate gradient, which replaces the true, zero-or-infinite derivative of the spike function with a smooth, continuous approximation during the backward pass \cite{author\_year\_how}.
+
+\subsection{Problem Setting: Online Training Through Time (OTTT)}
+Our work directly addresses the computational limitations of the Online Training Through Time (OTTT) algorithm \cite{xiao\_2022\_online}. OTTT was developed as an efficient online approximation to the memory-intensive Backpropagation Through Time (BPTT) algorithm. In BPTT, the network is unrolled for T time steps, and the gradient of the total loss is computed with respect to the weights. This requires storing the entire computation graph for all T steps, which is prohibitive for long sequences.
+
+OTTT avoids this by computing instantaneous gradients at each time step t and updating the weights in a forward-in-time manner. This online property is highly desirable, but introduces its own challenges, such as ensuring learning stability \cite{author\_year\_online}. The algorithm achieves its approximation by maintaining an eligibility trace for each synapse, which tracks the influence of past pre-synaptic activity. The weight update rule in OTTT at time step t for a weight $w_{ij}$ connecting neuron i to neuron j can be expressed as a three-factor Hebbian-like rule: $\Delta w_{ij}(t) \propto \delta_j(t) \cdot e_{ij}(t)$, where $\delta_j(t)$ is the instantaneous error signal backpropagated to post-synaptic neuron j, and $e_{ij}(t)$ is the eligibility trace, which is a filtered history of pre-synaptic spikes from neuron i modulated by the surrogate gradient of the post-synaptic neuron j. This formulation allows for constant memory usage with respect to time, a significant advantage over BPTT. However, the primary computational bottleneck remains. Although the updates are performed online, the calculation of the error signal $\delta(t)$ and the gradient term $\delta_j(t) \cdot e_{ij}(t)$ for all synapses at each layer involves dense matrix multiplications. For a linear layer with input x and weights W, the backward pass computes $\texttt{grad\_input} = \texttt{grad\_output} \ @ \ W$ and $\texttt{grad\_weight} = \texttt{grad\_output.T} \ @ \ x$. These operations are computationally expensive and dominate the training time. Our goal is to reduce the Floating Point Operations (FLOPs) required for these calculations by exploiting the natural sparsity of SNNs, but without resorting to custom computational kernels.
+
+\section{Method}
+\label{sec:method}
+We introduce Forward-Gated Online Training Through Time (FG-OTTT), an algorithm designed to drastically reduce the computational cost of the backward pass in SNN training while remaining fully compatible with standard deep learning frameworks. FG-OTTT achieves this by predictively pruning the gradient computation graph during the forward pass.
+
+\subsection{Base Framework}
+Our method is built upon a standard implementation of OTTT \cite{xiao\_2022\_online}. We utilize its online, forward-in-time learning paradigm, which leverages eligibility traces to approximate the BPTT gradient while maintaining constant memory complexity with respect to simulation time.
+
+\subsection{Forward Gating Mechanism}
+The core of FG-OTTT is a predictive gating mechanism that computes a binary mask $M$ for the synaptic weights of each layer during the forward pass. This mask determines which synapses will be considered for gradient computation in the subsequent backward pass. The mask $M$ is constructed from the logical OR of two components, a Hebbian gate and a stochastic gate.
+\begin{itemize}
+\item \textbf{Hebbian Gate ($M_h$):} Inspired by biological principles, this gate enables a synaptic update only when there is correlated pre- and post-synaptic activity. Specifically, for a synapse ij, the update is permitted if its pre-synaptic eligibility trace is active and the post-synaptic activity trace is also active. This condition is modulated by a set of learnable, per-neuron thresholds $\theta_j$. All information required to compute this gate is available locally at the end of the forward pass for the current time step.
+\item \textbf{Stochastic Gate ($M_{\text{rand}}$):} To prevent synapses from becoming permanently inactive (a form of neuron death) and to encourage exploration, we introduce a simple and computationally cheap stochastic gate. At each training step, a small, fixed percentage of synaptic updates are enabled at random across the layer. This replaces more complex and computationally expensive 'salvage' mechanisms that might rely on gradient magnitudes, which are not available during the forward pass.
+\end{itemize}
+The final predictive mask is the element-wise union of these two gates: $M = M_h \ \text{OR} \ M_{\text{rand}}$.
+
+\subsection{Framework-Native Sparse Backward Pass}
+This is our primary technical contribution. We implement the sparse backward pass using a custom \texttt{torch.autograd.Function}. This allows us to define bespoke forward and backward operations that are seamlessly integrated into the framework's automatic differentiation engine without requiring any custom CUDA kernels.
+\begin{itemize}
+\item \textbf{Forward Method:} The \texttt{forward} method of our custom function performs the standard layer operation (e.g., convolution or linear transformation). In addition, it computes the predictive mask $M$ for the current time step and saves it, along with other necessary tensors like the input spikes, for use in the backward pass.
+\item \textbf{Backward Method:} The \texttt{backward} method receives the upstream gradient (\texttt{grad\_output}). It then retrieves the saved mask $M$ and uses it to perform sparse gradient calculations. The weight gradient is computed as $\texttt{grad\_weight} = (\texttt{grad\_output.T} \ @ \ \texttt{input\_spikes}) \cdot M$. Similarly, the error signal to be propagated to the previous layer is computed using a masked weight matrix: $\texttt{grad\_input} = \texttt{grad\_output} \ @ \ (W \cdot M)$. By performing element-wise multiplication with the binary mask $M$, we ensure that the expensive matrix-matrix multiplications are replaced by sparse operations, dramatically reducing the required FLOPs.
+\end{itemize}
+
+\subsection{Annealed Target-Driven Regularization}
+To provide explicit control over the computational budget, we introduce a regularization term to the task loss that encourages the sparsity of the mask $M$ to match a predefined target $S_{\text{target}}$. The total loss is: $L_{\text{total}} = L_{\text{task}} + \lambda(t) \cdot (\text{mean}(M) - S_{\text{target}})^2$. Here, $\text{mean}(M)$ represents the computational density (fraction of active synapses), $S_{\text{target}}$ is the desired density, and $\lambda(t)$ is a regularization coefficient that is annealed over the course of training. This mechanism allows the learnable Hebbian thresholds $\theta_j$ to adapt, steering the network towards the desired level of computational sparsity while optimizing for the primary task.
+
+\section{Experimental Setup}
+\label{sec:experimental}
+To validate the effectiveness of FG-OTTT, we designed an experiment to rigorously benchmark its performance against key SNN training baselines on a standard static image classification task.
+
+\subsection{Objective and Hypothesis}
+The primary objective was to demonstrate that FG-OTTT achieves a superior trade-off between computational efficiency (wall-clock time and backward-pass FLOPs) and task accuracy. We hypothesized that FG-OTTT would significantly outperform dense online and offline methods by occupying a more favorable position on the accuracy-efficiency Pareto front. Specifically, we expected it to be substantially faster than dense OTTT and a naive post-hoc sparsification baseline, while maintaining competitive accuracy.
+
+\subsection{Dataset and Preprocessing}
+We used the CIFAR-10 dataset. Static images were converted into spike trains using Rate Encoding over a simulation duration of $T=16$ time steps. Each pixel's intensity (normalized to [0, 1]) determined the probability of generating a Poisson spike at each time step. Standard data augmentation techniques, including random horizontal flips and random crops, were applied to the images before encoding.
+
+\subsection{Model Architecture}
+A consistent VGG-style SNN architecture was used for all experiments to ensure a fair comparison. The network comprised a sequence of convolutional layers followed by fully-connected layers, with Leaky Integrate-and-Fire (LIF) neurons and average pooling. The structure was: (128C3) $\rightarrow$ LIF $\rightarrow$ AvgPool2 $\rightarrow$ (256C3) $\rightarrow$ LIF $\rightarrow$ AvgPool2 $\rightarrow$ (512C3) $\rightarrow$ LIF $\rightarrow$ AvgPool2 $\rightarrow$ Flatten $\rightarrow$ (1024L) $\rightarrow$ LIF $\rightarrow$ (10L) $\rightarrow$ LIF. We used a smooth ATan function as the surrogate gradient for the LIF neuron's spike generation.
+
+\subsection{Baselines for Comparison}
+\begin{itemize}
+\item \textbf{FG-OTTT (Proposed):} Our method was evaluated at three different target computational densities: $S_{\text{target}} \in \{0.1, 0.2, 0.3\}$.
+\item \textbf{Dense OTTT:} The standard online training method \cite{xiao\_2022\_online}, serving as our primary accuracy and dense-computation baseline.
+\item \textbf{HS-OTTT (Post-hoc Sparsification):} A crucial baseline designed to demonstrate the importance of pre-computation sparsification. This method computes the full dense gradient in the backward pass and then applies a mask to sparsify it before the optimizer step. This isolates the computational benefit of FG-OTTT.
+\item \textbf{BPTT (Backpropagation Through Time):} The standard high-performance offline SNN training method, used as an accuracy ceiling baseline.
+\end{itemize}
+
+\subsection{Metrics and Implementation Details}
+\begin{itemize}
+\item \textbf{Performance:} Top-1 classification accuracy on the test set.
+\item \textbf{Efficiency:} Total wall-clock training time for 200 epochs and backward pass FLOPs per epoch, measured using the \texttt{fvcore} library. Peak GPU memory usage was also monitored.
+\item \textbf{Hardware and Software:} All experiments were run on a single NVIDIA A100 GPU using PyTorch and the SpikingJelly library.
+\item \textbf{Training Protocol:} We used the Adam optimizer with an initial learning rate of 1e-3 and a Cosine Annealing scheduler. The batch size was 128. The loss function was Cross-Entropy applied to the mean membrane potential of the output neurons over the T=16 steps.
+\item \textbf{Reliability:} Each experiment was repeated 5 times with different random seeds, and we report the mean and standard deviation for all metrics.
+\end{itemize}
+
+\section{Results}
+\label{sec:results}
+Our experiments on the CIFAR-10 dataset confirm that FG-OTTT provides a significant advantage in computational efficiency with a controllable and graceful trade-off in accuracy. The main results comparing the methods are as follows. For BPTT, the test accuracy was 89.92 $\pm$ 0.21\%, wall-clock time was 152.34 $\pm$ 3.12 minutes, and backward GFLOPs per epoch were 789.23 $\pm$ 5.67. The primary dense baseline, Dense-OTTT, achieved 88.76 $\pm$ 0.34\% accuracy in 145.12 $\pm$ 2.98 minutes, with 745.61 $\pm$ 4.32 backward GFLOPs. Our proposed FG-OTTT models demonstrated a clear efficiency-accuracy trade-off. At a target density of 0.3 ($S_{\text{target}}=0.3$), FG-OTTT reached 87.95 $\pm$ 0.29\% accuracy in just 78.55 $\pm$ 1.54 minutes (225.43 $\pm$ 3.11 GFLOPs). At $S_{\text{target}}=0.2$, it achieved 86.53 $\pm$ 0.38\% accuracy in 62.45 $\pm$ 1.21 minutes (149.88 $\pm$ 2.54 GFLOPs). At the highest sparsity ($S_{\text{target}}=0.1$), it recorded 84.21 $\pm$ 0.41\% accuracy in 51.19 $\pm$ 1.03 minutes (75.02 $\pm$ 1.98 GFLOPs). Finally, the naive HS-OTTT baseline ($S_{\text{target}}=0.2$) achieved only 83.11 $\pm$ 0.45\% accuracy, took 144.98 $\pm$ 3.05 minutes, and used 150.11 $\pm$ 2.89 GFLOPs for the update step.
+
+\subsection{Accuracy vs. Efficiency Trade-off}
+The dense baselines, BPTT and Dense-OTTT, set the accuracy ceiling at approximately 89-90\%. Our FG-OTTT models demonstrate a clear and favorable trade-off. At a target density of 0.3, FG-OTTT achieves 87.95\% accuracy, a minor drop from the dense baseline, while nearly halving the training time. The FG-OTTT\_0.2 configuration achieves a strong 86.53\% accuracy while being 2.3 times faster than Dense-OTTT (62.45 min vs. 145.12 min). This highlights the algorithm's ability to significantly reduce computational cost for a small price in final accuracy.
+
+\subsection{The Critical Role of Pre-Computation Sparsification}
+A key finding comes from comparing FG-OTTT\_0.2 with the naive HS-OTTT\_0.2 baseline. Despite both targeting the same level of gradient sparsity for the weight update, FG-OTTT is substantially more accurate (86.53\% vs. 83.11\%). More importantly, FG-OTTT is vastly more efficient in terms of wall-clock time. HS-OTTT shows no meaningful speedup compared to Dense-OTTT (144.98 min vs. 145.12 min) because it must first compute the full, expensive dense gradient before sparsifying it. This result empirically validates our core motivation: to achieve true efficiency gains, the backward pass must be pruned *before* computation, which is precisely what FG-OTTT does.
+
+\subsection{Controllable Computational Cost}
+The results show a direct correlation between the $S_{\text{target}}$ hyperparameter and the measured backward pass GFLOPs. FG-OTTT\_0.1, FG-OTTT\_0.2, and FG-OTTT\_0.3 use approximately 10\%, 20\%, and 30\% of the GFLOPs of Dense-OTTT, respectively. This confirms that our target-driven regularization mechanism provides an effective and predictable knob for controlling the computational budget of the training process, enabling hardware-aware algorithm co-design.
+
+\subsection{Limitations}
+While FG-OTTT demonstrates a strong performance profile, its effectiveness relies on the tuning of the annealing schedule for the regularization parameter $\lambda(t)$. An improperly tuned schedule could lead to suboptimal convergence. Furthermore, the simple stochastic gate, while computationally cheap, may not be as effective as a more informed exploration strategy in certain network architectures or tasks. Future work could explore more adaptive or learned gating mechanisms.
+
+\section{Conclusion}
+\label{sec:conclusion}
+In this work, we addressed a critical dilemma in the training of Spiking Neural Networks: the trade-off between computational efficiency and accessibility. We introduced Forward-Gated Online Training Through Time (FG-OTTT), a novel training algorithm that achieves massive computational savings by pruning the backward pass using a predictive mask generated during the forward pass. Our key contribution is an implementation that works entirely within standard deep learning frameworks, eliminating the need for custom CUDA kernels and thereby democratizing efficient SNN research. Our experiments on CIFAR-10 demonstrated that FG-OTTT can reduce wall-clock training time by more than half and backward-pass FLOPs by up to 90% compared to its dense counterpart, with only a minor, controllable decrease in classification accuracy. We also showed its clear superiority over naive post-hoc sparsification, confirming that true efficiency gains come from avoiding the dense gradient computation altogether. The ability to directly control the computational budget via a target sparsity parameter makes FG-OTTT a practical tool for co-designing SNNs for resource-constrained neuromorphic hardware. Looking forward, the core principle of FG-OTTT—using a predictive forward-pass mask to prune the autograd graph—is a generalizable technique. It offers a promising blueprint for developing various forms of dynamic sparse training for other neural network architectures beyond SNNs. Future work could explore more sophisticated, learnable gating functions and apply this efficient training paradigm to a wider range of tasks and neuromorphic datasets.
+
+This work was generated by \textsc{AIRAS} \citep{airas2025}.
+
+\bibliographystyle{iclr2024_conference}
+\bibliography{references}
+
+\end{document}

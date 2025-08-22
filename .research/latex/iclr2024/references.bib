@@ -5,3 +5,386 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{author_year_efficient,
+ title = {Efficient Hierarchical Entropy Model for Learned Point Cloud Compression}
+}
+
+@article{author_year_efficient,
+ title = {Efficient Hierarchical Entropy Model for Learned Point Cloud Compression}
+}
+
+@article{biswas_2020_muscle,
+ abstract = {We present a novel compression algorithm for reducing the storage of LiDAR
+sensor data streams. Our model exploits spatio-temporal relationships across
+multiple LiDAR sweeps to reduce the bitrate of both geometry and intensity
+values. Towards this goal, we propose a novel conditional entropy model that
+models the probabilities of the octree symbols by considering both coarse level
+geometry and previous sweeps' geometric and intensity information. We then use
+the learned probability to encode the full data stream into a compact one. Our
+experiments demonstrate that our method significantly reduces the joint
+geometry and intensity bitrate over prior state-of-the-art LiDAR compression
+methods, with a reduction of 7-17% and 15-35% on the UrbanCity and
+SemanticKITTI datasets respectively.},
+ arxiv_url = {https://arxiv.org/pdf/2011.07590v2.pdf},
+ author = {Sourav Biswas and Jerry Liu and Kelvin Wong and Shenlong Wang and Raquel Urtasun},
+ github_url = {https://github.com/MPEGGroup/mpeg-pcc-tmc13},
+ title = {MuSCLE: Multi Sweep Compression of LiDAR using Deep Entropy Models},
+ year = {2020}
+}
+
+@article{biswas_2020_muscle,
+ abstract = {We present a novel compression algorithm for reducing the storage of LiDAR
+sensor data streams. Our model exploits spatio-temporal relationships across
+multiple LiDAR sweeps to reduce the bitrate of both geometry and intensity
+values. Towards this goal, we propose a novel conditional entropy model that
+models the probabilities of the octree symbols by considering both coarse level
+geometry and previous sweeps' geometric and intensity information. We then use
+the learned probability to encode the full data stream into a compact one. Our
+experiments demonstrate that our method significantly reduces the joint
+geometry and intensity bitrate over prior state-of-the-art LiDAR compression
+methods, with a reduction of 7-17% and 15-35% on the UrbanCity and
+SemanticKITTI datasets respectively.},
+ arxiv_url = {https://arxiv.org/pdf/2011.07590v2.pdf},
+ author = {Sourav Biswas and Jerry Liu and Kelvin Wong and Shenlong Wang and Raquel Urtasun},
+ github_url = {https://github.com/cwi-dis/cwi-pcl-codec},
+ title = {MuSCLE: Multi Sweep Compression of LiDAR using Deep Entropy Models},
+ year = {2020}
+}
+
+@article{biswas_2020_muscle,
+ abstract = {We present a novel compression algorithm for reducing the storage of LiDAR
+sensor data streams. Our model exploits spatio-temporal relationships across
+multiple LiDAR sweeps to reduce the bitrate of both geometry and intensity
+values. Towards this goal, we propose a novel conditional entropy model that
+models the probabilities of the octree symbols by considering both coarse level
+geometry and previous sweeps' geometric and intensity information. We then use
+the learned probability to encode the full data stream into a compact one. Our
+experiments demonstrate that our method significantly reduces the joint
+geometry and intensity bitrate over prior state-of-the-art LiDAR compression
+methods, with a reduction of 7-17% and 15-35% on the UrbanCity and
+SemanticKITTI datasets respectively.},
+ arxiv_url = {https://arxiv.org/pdf/2011.07590v2.pdf},
+ author = {Sourav Biswas and Jerry Liu and Kelvin Wong and Shenlong Wang and Raquel Urtasun},
+ github_url = {https://github.com/MPEGGroup/mpeg-pcc-tmc13},
+ title = {MuSCLE: Multi Sweep Compression of LiDAR using Deep Entropy Models},
+ year = {2020}
+}
+
+@article{biswas_2020_muscle,
+ abstract = {We present a novel compression algorithm for reducing the storage of LiDAR
+sensor data streams. Our model exploits spatio-temporal relationships across
+multiple LiDAR sweeps to reduce the bitrate of both geometry and intensity
+values. Towards this goal, we propose a novel conditional entropy model that
+models the probabilities of the octree symbols by considering both coarse level
+geometry and previous sweeps' geometric and intensity information. We then use
+the learned probability to encode the full data stream into a compact one. Our
+experiments demonstrate that our method significantly reduces the joint
+geometry and intensity bitrate over prior state-of-the-art LiDAR compression
+methods, with a reduction of 7-17% and 15-35% on the UrbanCity and
+SemanticKITTI datasets respectively.},
+ arxiv_url = {https://arxiv.org/pdf/2011.07590v2.pdf},
+ author = {Sourav Biswas and Jerry Liu and Kelvin Wong and Shenlong Wang and Raquel Urtasun},
+ github_url = {https://github.com/cwi-dis/cwi-pcl-codec},
+ title = {MuSCLE: Multi Sweep Compression of LiDAR using Deep Entropy Models},
+ year = {2020}
+}
+
+@article{ding_2020_layered,
+ abstract = {In real world, our datasets often contain outliers. Moreover, the outliers
+can seriously affect the final machine learning result. Most existing
+algorithms for handling outliers take high time complexities (e.g. quadratic or
+cubic complexity). {\em Coreset} is a popular approach for compressing data so
+as to speed up the optimization algorithms. However, the current coreset
+methods cannot be easily extended to handle the case with outliers. In this
+paper, we propose a new variant of coreset technique, {\em layered sampling},
+to deal with two fundamental robust optimization problems: {\em
+$k$-median/means clustering with outliers} and {\em linear regression with
+outliers}. This new coreset method is in particular suitable to speed up the
+iterative algorithms (which often improve the solution within a local range)
+for those robust optimization problems. Moreover, our method is easy to be
+implemented in practice. We expect that our framework of layered sampling will
+be applicable to other robust optimization problems.},
+ arxiv_url = {https://arxiv.org/pdf/2002.11904v1.pdf},
+ author = {Hu Ding and Zixiu Wang},
+ title = {Layered Sampling for Robust Optimization Problems},
+ year = {2020}
+}
+
+@article{fan_2023_lightgaussian,
+ abstract = {Recent advances in real-time neural rendering using point-based techniques
+have enabled broader adoption of 3D representations. However, foundational
+approaches like 3D Gaussian Splatting impose substantial storage overhead, as
+Structure-from-Motion (SfM) points can grow to millions, often requiring
+gigabyte-level disk space for a single unbounded scene. This growth presents
+scalability challenges and hinders splatting efficiency. To address this, we
+introduce LightGaussian, a method for transforming 3D Gaussians into a more
+compact format. Inspired by Network Pruning, LightGaussian identifies Gaussians
+with minimal global significance on scene reconstruction, and applies a pruning
+and recovery process to reduce redundancy while preserving visual quality.
+Knowledge distillation and pseudo-view augmentation then transfer spherical
+harmonic coefficients to a lower degree, yielding compact representations.
+Gaussian Vector Quantization, based on each Gaussian's global significance,
+further lowers bitwidth with minimal accuracy loss. LightGaussian achieves an
+average 15x compression rate while boosting FPS from 144 to 237 within the
+3D-GS framework, enabling efficient complex scene representation on the
+Mip-NeRF 360 and Tank & Temple datasets. The proposed Gaussian pruning approach
+is also adaptable to other 3D representations (e.g., Scaffold-GS),
+demonstrating strong generalization capabilities.},
+ arxiv_url = {https://arxiv.org/pdf/2311.17245v6.pdf},
+ author = {Zhiwen Fan and Kevin Wang and Kairun Wen and Zehao Zhu and Dejia Xu and Zhangyang Wang},
+ title = {LightGaussian: Unbounded 3D Gaussian Compression with 15x Reduction and 200+ FPS},
+ year = {2023}
+}
+
+@article{huang_2023_channel,
+ abstract = {Channel pruning can effectively reduce both computational cost and memory
+footprint of the original network while keeping a comparable accuracy
+performance. Though great success has been achieved in channel pruning for 2D
+image-based convolutional networks (CNNs), existing works seldom extend the
+channel pruning methods to 3D point-based neural networks (PNNs). Directly
+implementing the 2D CNN channel pruning methods to PNNs undermine the
+performance of PNNs because of the different representations of 2D images and
+3D point clouds as well as the network architecture disparity. In this paper,
+we proposed CP$^3$, which is a Channel Pruning Plug-in for Point-based network.
+CP$^3$ is elaborately designed to leverage the characteristics of point clouds
+and PNNs in order to enable 2D channel pruning methods for PNNs. Specifically,
+it presents a coordinate-enhanced channel importance metric to reflect the
+correlation between dimensional information and individual channel features,
+and it recycles the discarded points in PNN's sampling process and reconsiders
+their potentially-exclusive information to enhance the robustness of channel
+pruning. Experiments on various PNN architectures show that CP$^3$ constantly
+improves state-of-the-art 2D CNN pruning approaches on different point cloud
+tasks. For instance, our compressed PointNeXt-S on ScanObjectNN achieves an
+accuracy of 88.52% with a pruning rate of 57.8%, outperforming the baseline
+pruning methods with an accuracy gain of 1.94%.},
+ arxiv_url = {https://arxiv.org/pdf/2303.13097v1.pdf},
+ author = {Yaomin Huang and Ning Liu and Zhengping Che and Zhiyuan Xu and Chaomin Shen and Yaxin Peng and Guixu Zhang and Xinmei Liu and Feifei Feng and Jian Tang},
+ title = {CP3: Channel Pruning Plug-In for Point-Based Networks},
+ year = {2023}
+}
+
+@article{liang_2024_pointmamba,
+ abstract = {Transformers have become one of the foundational architectures in point cloud
+analysis tasks due to their excellent global modeling ability. However, the
+attention mechanism has quadratic complexity, making the design of a linear
+complexity method with global modeling appealing. In this paper, we propose
+PointMamba, transferring the success of Mamba, a recent representative state
+space model (SSM), from NLP to point cloud analysis tasks. Unlike traditional
+Transformers, PointMamba employs a linear complexity algorithm, presenting
+global modeling capacity while significantly reducing computational costs.
+Specifically, our method leverages space-filling curves for effective point
+tokenization and adopts an extremely simple, non-hierarchical Mamba encoder as
+the backbone. Comprehensive evaluations demonstrate that PointMamba achieves
+superior performance across multiple datasets while significantly reducing GPU
+memory usage and FLOPs. This work underscores the potential of SSMs in 3D
+vision-related tasks and presents a simple yet effective Mamba-based baseline
+for future research. The code will be made available at
+\url{https://github.com/LMD0311/PointMamba}.},
+ arxiv_url = {https://arxiv.org/pdf/2402.10739v5.pdf},
+ author = {Dingkang Liang and Xin Zhou and Wei Xu and Xingkui Zhu and Zhikang Zou and Xiaoqing Ye and Xiao Tan and Xiang Bai},
+ github_url = {https://github.com/LMD0311/PointMamba},
+ title = {PointMamba: A Simple State Space Model for Point Cloud Analysis},
+ year = {2024}
+}
+
+@article{liang_2024_pointmamba,
+ abstract = {Transformers have become one of the foundational architectures in point cloud
+analysis tasks due to their excellent global modeling ability. However, the
+attention mechanism has quadratic complexity, making the design of a linear
+complexity method with global modeling appealing. In this paper, we propose
+PointMamba, transferring the success of Mamba, a recent representative state
+space model (SSM), from NLP to point cloud analysis tasks. Unlike traditional
+Transformers, PointMamba employs a linear complexity algorithm, presenting
+global modeling capacity while significantly reducing computational costs.
+Specifically, our method leverages space-filling curves for effective point
+tokenization and adopts an extremely simple, non-hierarchical Mamba encoder as
+the backbone. Comprehensive evaluations demonstrate that PointMamba achieves
+superior performance across multiple datasets while significantly reducing GPU
+memory usage and FLOPs. This work underscores the potential of SSMs in 3D
+vision-related tasks and presents a simple yet effective Mamba-based baseline
+for future research. The code will be made available at
+\url{https://github.com/LMD0311/PointMamba}.},
+ arxiv_url = {https://arxiv.org/pdf/2402.10739v5.pdf},
+ author = {Dingkang Liang and Xin Zhou and Wei Xu and Xingkui Zhu and Zhikang Zou and Xiaoqing Ye and Xiao Tan and Xiang Bai},
+ github_url = {https://github.com/LMD0311/PointMamba},
+ title = {PointMamba: A Simple State Space Model for Point Cloud Analysis},
+ year = {2024}
+}
+
+@article{meanti_2020_kernel,
+ abstract = {Kernel methods provide an elegant and principled approach to nonparametric
+learning, but so far could hardly be used in large scale problems, since
+na\"ive implementations scale poorly with data size. Recent advances have shown
+the benefits of a number of algorithmic ideas, for example combining
+optimization, numerical linear algebra and random projections. Here, we push
+these efforts further to develop and test a solver that takes full advantage of
+GPU hardware. Towards this end, we designed a preconditioned gradient solver
+for kernel methods exploiting both GPU acceleration and parallelization with
+multiple GPUs, implementing out-of-core variants of common linear algebra
+operations to guarantee optimal hardware utilization. Further, we optimize the
+numerical precision of different operations and maximize efficiency of
+matrix-vector multiplications. As a result we can experimentally show dramatic
+speedups on datasets with billions of points, while still guaranteeing state of
+the art performance. Additionally, we make our software available as an easy to
+use library.},
+ arxiv_url = {https://arxiv.org/pdf/2006.10350v2.pdf},
+ author = {Giacomo Meanti and Luigi Carratino and Lorenzo Rosasco and Alessandro Rudi},
+ github_url = {https://github.com/FalkonML/falkon},
+ title = {Kernel Methods Through the Roof: Handling Billions of Points Efficiently},
+ year = {2020}
+}
+
+@article{meanti_2020_kernel,
+ abstract = {Kernel methods provide an elegant and principled approach to nonparametric
+learning, but so far could hardly be used in large scale problems, since
+na\"ive implementations scale poorly with data size. Recent advances have shown
+the benefits of a number of algorithmic ideas, for example combining
+optimization, numerical linear algebra and random projections. Here, we push
+these efforts further to develop and test a solver that takes full advantage of
+GPU hardware. Towards this end, we designed a preconditioned gradient solver
+for kernel methods exploiting both GPU acceleration and parallelization with
+multiple GPUs, implementing out-of-core variants of common linear algebra
+operations to guarantee optimal hardware utilization. Further, we optimize the
+numerical precision of different operations and maximize efficiency of
+matrix-vector multiplications. As a result we can experimentally show dramatic
+speedups on datasets with billions of points, while still guaranteeing state of
+the art performance. Additionally, we make our software available as an easy to
+use library.},
+ arxiv_url = {https://arxiv.org/pdf/2006.10350v2.pdf},
+ author = {Giacomo Meanti and Luigi Carratino and Lorenzo Rosasco and Alessandro Rudi},
+ github_url = {https://github.com/FalkonML/falkon},
+ title = {Kernel Methods Through the Roof: Handling Billions of Points Efficiently},
+ year = {2020}
+}
+
+@article{niedermayr_2023_compressed,
+ abstract = {Recently, high-fidelity scene reconstruction with an optimized 3D Gaussian
+splat representation has been introduced for novel view synthesis from sparse
+image sets. Making such representations suitable for applications like network
+streaming and rendering on low-power devices requires significantly reduced
+memory consumption as well as improved rendering efficiency. We propose a
+compressed 3D Gaussian splat representation that utilizes sensitivity-aware
+vector clustering with quantization-aware training to compress directional
+colors and Gaussian parameters. The learned codebooks have low bitrates and
+achieve a compression rate of up to $31\times$ on real-world scenes with only
+minimal degradation of visual quality. We demonstrate that the compressed splat
+representation can be efficiently rendered with hardware rasterization on
+lightweight GPUs at up to $4\times$ higher framerates than reported via an
+optimized GPU compute pipeline. Extensive experiments across multiple datasets
+demonstrate the robustness and rendering speed of the proposed approach.},
+ arxiv_url = {https://arxiv.org/pdf/2401.02436v2.pdf},
+ author = {Simon Niedermayr and Josef Stumpfegger and Rüdiger Westermann},
+ github_url = {https://github.com/KeKsBoTer/c3dgs},
+ title = {Compressed 3D Gaussian Splatting for Accelerated Novel View Synthesis},
+ year = {2023}
+}
+
+@article{wu_2023_point,
+ abstract = {This paper is not motivated to seek innovation within the attention
+mechanism. Instead, it focuses on overcoming the existing trade-offs between
+accuracy and efficiency within the context of point cloud processing,
+leveraging the power of scale. Drawing inspiration from recent advances in 3D
+large-scale representation learning, we recognize that model performance is
+more influenced by scale than by intricate design. Therefore, we present Point
+Transformer V3 (PTv3), which prioritizes simplicity and efficiency over the
+accuracy of certain mechanisms that are minor to the overall performance after
+scaling, such as replacing the precise neighbor search by KNN with an efficient
+serialized neighbor mapping of point clouds organized with specific patterns.
+This principle enables significant scaling, expanding the receptive field from
+16 to 1024 points while remaining efficient (a 3x increase in processing speed
+and a 10x improvement in memory efficiency compared with its predecessor,
+PTv2). PTv3 attains state-of-the-art results on over 20 downstream tasks that
+span both indoor and outdoor scenarios. Further enhanced with multi-dataset
+joint training, PTv3 pushes these results to a higher level.},
+ arxiv_url = {https://arxiv.org/pdf/2312.10035v2.pdf},
+ author = {Xiaoyang Wu and Li Jiang and Peng-Shuai Wang and Zhijian Liu and Xihui Liu and Yu Qiao and Wanli Ouyang and Tong He and Hengshuang Zhao},
+ github_url = {https://github.com/Pointcept/PointTransformerV3},
+ title = {Point Transformer V3: Simpler Faster Stronger},
+ year = {2023}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{author_year_compressing,
+ title = {Compressing continuous point cloud data using image compression methods}
+}
+
+@article{author_year_design,
+ title = {Design, implementation and evaluation of a point cloud codec for tele-immersive video}
+}
+
+@article{author_year_draco,
+ title = {Draco 3d data compresison}
+}
+
+@article{author_year_mathematical,
+ title = {A mathematical theory of communication}
+}
+
+@article{author_year_point,
+ title = {Point cloud compression for 3d lidar sensor using recurrent neural network with residual blocks}
+}
+
+@article{author_year_real,
+ title = {Real-time streaming point cloud compression for 3d lidar sensor using u-net}
+}
+
+@article{author_year_the,
+ title = {The graph neural network model}
+}
+
+@article{behley_2019_semantickitti,
+ abstract = {Semantic scene understanding is important for various applications. In
+particular, self-driving cars need a fine-grained understanding of the surfaces
+and objects in their vicinity. Light detection and ranging (LiDAR) provides
+precise geometric information about the environment and is thus a part of the
+sensor suites of almost all self-driving cars. Despite the relevance of
+semantic scene understanding for this application, there is a lack of a large
+dataset for this task which is based on an automotive LiDAR.
+  In this paper, we introduce a large dataset to propel research on laser-based
+semantic segmentation. We annotated all sequences of the KITTI Vision Odometry
+Benchmark and provide dense point-wise annotations for the complete $360^{o}$
+field-of-view of the employed automotive LiDAR. We propose three benchmark
+tasks based on this dataset: (i) semantic segmentation of point clouds using a
+single scan, (ii) semantic segmentation using multiple past scans, and (iii)
+semantic scene completion, which requires to anticipate the semantic scene in
+the future. We provide baseline experiments and show that there is a need for
+more sophisticated models to efficiently tackle these tasks. Our dataset opens
+the door for the development of more advanced methods, but also provides
+plentiful data to investigate new research directions.},
+ arxiv_url = {https://arxiv.org/pdf/1904.01416v3.pdf},
+ author = {Jens Behley and Martin Garbade and Andres Milioto and Jan Quenzel and Sven Behnke and Cyrill Stachniss and Juergen Gall},
+ title = {Semantickitti: A dataset for semantic scene understanding of lidar sequences},
+ year = {2019}
+}
+
+@article{huang_2020_octsqueeze,
+ abstract = {We present a novel deep compression algorithm to reduce the memory footprint
+of LiDAR point clouds. Our method exploits the sparsity and structural
+redundancy between points to reduce the bitrate. Towards this goal, we first
+encode the LiDAR points into an octree, a data-efficient structure suitable for
+sparse point clouds. We then design a tree-structured conditional entropy model
+that models the probabilities of the octree symbols to encode the octree into a
+compact bitstream. We validate the effectiveness of our method over two
+large-scale datasets. The results demonstrate that our approach reduces the
+bitrate by 10-20% at the same reconstruction quality, compared to the previous
+state-of-the-art. Importantly, we also show that for the same bitrate, our
+approach outperforms other compression algorithms when performing downstream 3D
+segmentation and detection tasks using compressed representations. Our
+algorithm can be used to reduce the onboard and offboard storage of LiDAR
+points for applications such as self-driving cars, where a single vehicle
+captures 84 billion points per day},
+ arxiv_url = {https://arxiv.org/pdf/2005.07178v2.pdf},
+ author = {Lila Huang and Shenlong Wang and Kelvin Wong and Jerry Liu and Raquel Urtasun},
+ title = {Octsqueeze: Octree- structured entropy model for lidar compression},
+ year = {2020}
+}

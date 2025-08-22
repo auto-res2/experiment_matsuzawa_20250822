@@ -6,5 +6,52 @@
     "multimodal knowledge distillation",
     "sparse cross-modal attention",
     "VLM pruning"
+  ],
+  "research_study_list": [
+    {
+      "title": "Accelerating Vision-Language Pretraining With Free Language Modeling"
+    },
+    {
+      "title": "You Need Multiple Exiting: Dynamic Early Exiting for Accelerating Unified Vision Language Model"
+    },
+    {
+      "title": "Transferable and Principled Efficiency for Open-Vocabulary Segmentation"
+    },
+    {
+      "title": "Q-VLM: Post-training Quantization for Large Vision-Language Models"
+    },
+    {
+      "title": "Scaling the Codebook Size of VQ-GAN to 100,000 with a Utilization Rate of 99%"
+    },
+    {
+      "title": "Quantized Variational Inference"
+    },
+    {
+      "title": "The Modality Focusing Hypothesis: Towards Understanding Crossmodal Knowledge Distillation"
+    },
+    {
+      "title": "The Modality Focusing Hypothesis: Towards Understanding Crossmodal Knowledge Distillation"
+    },
+    {
+      "title": "C2KD: Bridging the Modality Gap for Cross-Modal Knowledge Distillation"
+    },
+    {
+      "title": "Towards More Unified In-context Visual Understanding"
+    },
+    {
+      "title": "Multimodal Contrastive Learning with LIMoE: the Language-Image Mixture of Experts"
+    },
+    {
+      "title": "Improving fine-grained understanding in image-text pre-training"
+    },
+    {
+      "title": "Exploring Intrinsic Dimension for Vision-Language Model Pruning"
+    },
+    {
+      "title": "MULTIFLOW: Shifting Towards Task-Agnostic Vision-Language Pruning"
+    },
+    {
+      "title": "ECoFLaP: Efficient Coarse-to-Fine Layer-Wise Pruning for Vision-Language Models"
+    }
   ]
 }

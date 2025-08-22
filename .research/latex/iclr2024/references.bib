@@ -5,3 +5,396 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{author_year_dimensional,
+ title = {A 2-Dimensional State Space Layer for Spatial Inductive Bias}
+}
+
+@article{author_year_mambatree,
+ title = {MambaTree: Tree Topology is All You Need in State Space Model}
+}
+
+@article{author_year_mambatree,
+ title = {MambaTree: Tree Topology is All You Need in State Space Model}
+}
+
+@article{author_year_matching,
+ title = {Matching Structure for Dual Learning}
+}
+
+@article{author_year_matching,
+ title = {Matching Structure for Dual Learning}
+}
+
+@article{author_year_vision,
+ title = {Vision Mamba Mender}
+}
+
+@article{author_year_vision,
+ title = {Vision Mamba Mender}
+}
+
+@article{author_year_vision,
+ title = {Vision Mamba Mender}
+}
+
+@article{dao_2024_transformers,
+ abstract = {While Transformers have been the main architecture behind deep learning's
+success in language modeling, state-space models (SSMs) such as Mamba have
+recently been shown to match or outperform Transformers at small to medium
+scale. We show that these families of models are actually quite closely
+related, and develop a rich framework of theoretical connections between SSMs
+and variants of attention, connected through various decompositions of a
+well-studied class of structured semiseparable matrices. Our state space
+duality (SSD) framework allows us to design a new architecture (Mamba-2) whose
+core layer is an a refinement of Mamba's selective SSM that is 2-8X faster,
+while continuing to be competitive with Transformers on language modeling.},
+ arxiv_url = {https://arxiv.org/pdf/2405.21060v1.pdf},
+ author = {Tri Dao and Albert Gu},
+ github_url = {https://github.com/state-spaces/mamba},
+ title = {Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality},
+ year = {2024}
+}
+
+@article{dao_2024_transformers,
+ abstract = {While Transformers have been the main architecture behind deep learning's
+success in language modeling, state-space models (SSMs) such as Mamba have
+recently been shown to match or outperform Transformers at small to medium
+scale. We show that these families of models are actually quite closely
+related, and develop a rich framework of theoretical connections between SSMs
+and variants of attention, connected through various decompositions of a
+well-studied class of structured semiseparable matrices. Our state space
+duality (SSD) framework allows us to design a new architecture (Mamba-2) whose
+core layer is an a refinement of Mamba's selective SSM that is 2-8X faster,
+while continuing to be competitive with Transformers on language modeling.},
+ arxiv_url = {https://arxiv.org/pdf/2405.21060v1.pdf},
+ author = {Tri Dao and Albert Gu},
+ github_url = {https://github.com/state-spaces/mamba},
+ title = {Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality},
+ year = {2024}
+}
+
+@article{jiang_2024_slot,
+ abstract = {Recent State Space Models (SSMs) such as S4, S5, and Mamba have shown
+remarkable computational benefits in long-range temporal dependency modeling.
+However, in many sequence modeling problems, the underlying process is
+inherently modular and it is of interest to have inductive biases that mimic
+this modular structure. In this paper, we introduce SlotSSMs, a novel framework
+for incorporating independent mechanisms into SSMs to preserve or encourage
+separation of information. Unlike conventional SSMs that maintain a monolithic
+state vector, SlotSSMs maintains the state as a collection of multiple vectors
+called slots. Crucially, the state transitions are performed independently per
+slot with sparse interactions across slots implemented via the bottleneck of
+self-attention. In experiments, we evaluate our model in object-centric
+learning, 3D visual reasoning, and long-context video understanding tasks,
+which involve modeling multiple objects and their long-range temporal
+dependencies. We find that our proposed design offers substantial performance
+gains over existing sequence modeling methods. Project page is available at
+https://slotssms.github.io/},
+ arxiv_url = {https://arxiv.org/pdf/2406.12272v6.pdf},
+ author = {Jindong Jiang and Fei Deng and Gautam Singh and Minseung Lee and Sungjin Ahn},
+ github_url = {https://github.com/singhgautam/steve},
+ title = {Slot State Space Models},
+ year = {2024}
+}
+
+@article{liu_2024_vmamba,
+ abstract = {Designing computationally efficient network architectures remains an ongoing
+necessity in computer vision. In this paper, we adapt Mamba, a state-space
+language model, into VMamba, a vision backbone with linear time complexity. At
+the core of VMamba is a stack of Visual State-Space (VSS) blocks with the 2D
+Selective Scan (SS2D) module. By traversing along four scanning routes, SS2D
+bridges the gap between the ordered nature of 1D selective scan and the
+non-sequential structure of 2D vision data, which facilitates the collection of
+contextual information from various sources and perspectives. Based on the VSS
+blocks, we develop a family of VMamba architectures and accelerate them through
+a succession of architectural and implementation enhancements. Extensive
+experiments demonstrate VMamba's promising performance across diverse visual
+perception tasks, highlighting its superior input scaling efficiency compared
+to existing benchmark models. Source code is available at
+https://github.com/MzeroMiko/VMamba.},
+ arxiv_url = {https://arxiv.org/pdf/2401.10166v4.pdf},
+ author = {Yue Liu and Yunjie Tian and Yuzhong Zhao and Hongtian Yu and Lingxi Xie and Yaowei Wang and Qixiang Ye and Jianbin Jiao and Yunfan Liu},
+ github_url = {https://github.com/open-mmlab/mmsegmentation},
+ title = {VMamba: Visual State Space Model},
+ year = {2024}
+}
+
+@article{liu_2024_vmamba,
+ abstract = {Designing computationally efficient network architectures remains an ongoing
+necessity in computer vision. In this paper, we adapt Mamba, a state-space
+language model, into VMamba, a vision backbone with linear time complexity. At
+the core of VMamba is a stack of Visual State-Space (VSS) blocks with the 2D
+Selective Scan (SS2D) module. By traversing along four scanning routes, SS2D
+bridges the gap between the ordered nature of 1D selective scan and the
+non-sequential structure of 2D vision data, which facilitates the collection of
+contextual information from various sources and perspectives. Based on the VSS
+blocks, we develop a family of VMamba architectures and accelerate them through
+a succession of architectural and implementation enhancements. Extensive
+experiments demonstrate VMamba's promising performance across diverse visual
+perception tasks, highlighting its superior input scaling efficiency compared
+to existing benchmark models. Source code is available at
+https://github.com/MzeroMiko/VMamba.},
+ arxiv_url = {https://arxiv.org/pdf/2401.10166v4.pdf},
+ author = {Yue Liu and Yunjie Tian and Yuzhong Zhao and Hongtian Yu and Lingxi Xie and Yaowei Wang and Qixiang Ye and Jianbin Jiao and Yunfan Liu},
+ github_url = {https://github.com/MzeroMiko/VMamba},
+ title = {VMamba: Visual State Space Model},
+ year = {2024}
+}
+
+@article{shi_2024_multi,
+ abstract = {Despite the significant achievements of Vision Transformers (ViTs) in various
+vision tasks, they are constrained by the quadratic complexity. Recently, State
+Space Models (SSMs) have garnered widespread attention due to their global
+receptive field and linear complexity with respect to the input length,
+demonstrating substantial potential across fields including natural language
+processing and computer vision. To improve the performance of SSMs in vision
+tasks, a multi-scan strategy is widely adopted, which leads to significant
+redundancy of SSMs. For a better trade-off between efficiency and performance,
+we analyze the underlying reasons behind the success of the multi-scan
+strategy, where long-range dependency plays an important role. Based on the
+analysis, we introduce Multi-Scale Vision Mamba (MSVMamba) to preserve the
+superiority of SSMs in vision tasks with limited parameters. It employs a
+multi-scale 2D scanning technique on both original and downsampled feature
+maps, which not only benefits long-range dependency learning but also reduces
+computational costs. Additionally, we integrate a Convolutional Feed-Forward
+Network (ConvFFN) to address the lack of channel mixing. Our experiments
+demonstrate that MSVMamba is highly competitive, with the MSVMamba-Tiny model
+achieving 82.8% top-1 accuracy on ImageNet, 46.9% box mAP, and 42.2% instance
+mAP with the Mask R-CNN framework, 1x training schedule on COCO, and 47.6% mIoU
+with single-scale testing on ADE20K.Code is available at
+\url{https://github.com/YuHengsss/MSVMamba}.},
+ arxiv_url = {https://arxiv.org/pdf/2405.14174v1.pdf},
+ author = {Yuheng Shi and Minjing Dong and Chang Xu},
+ github_url = {https://github.com/YuHengsss/MSVMamba},
+ title = {Multi-Scale VMamba: Hierarchy in Hierarchy Visual State Space Model},
+ year = {2024}
+}
+
+@article{zhu_2024_vision,
+ abstract = {Recently the state space models (SSMs) with efficient hardware-aware designs,
+i.e., the Mamba deep learning model, have shown great potential for long
+sequence modeling. Meanwhile building efficient and generic vision backbones
+purely upon SSMs is an appealing direction. However, representing visual data
+is challenging for SSMs due to the position-sensitivity of visual data and the
+requirement of global context for visual understanding. In this paper, we show
+that the reliance on self-attention for visual representation learning is not
+necessary and propose a new generic vision backbone with bidirectional Mamba
+blocks (Vim), which marks the image sequences with position embeddings and
+compresses the visual representation with bidirectional state space models. On
+ImageNet classification, COCO object detection, and ADE20k semantic
+segmentation tasks, Vim achieves higher performance compared to
+well-established vision transformers like DeiT, while also demonstrating
+significantly improved computation & memory efficiency. For example, Vim is
+2.8$\times$ faster than DeiT and saves 86.8% GPU memory when performing batch
+inference to extract features on images with a resolution of 1248$\times$1248.
+The results demonstrate that Vim is capable of overcoming the computation &
+memory constraints on performing Transformer-style understanding for
+high-resolution images and it has great potential to be the next-generation
+backbone for vision foundation models. Code is available at
+https://github.com/hustvl/Vim.},
+ arxiv_url = {https://arxiv.org/pdf/2401.09417v3.pdf},
+ author = {Lianghui Zhu and Bencheng Liao and Qian Zhang and Xinlong Wang and Wenyu Liu and Xinggang Wang},
+ github_url = {https://github.com/hustvl/Vim},
+ title = {Vision Mamba: Efficient Visual Representation Learning with Bidirectional State Space Model},
+ year = {2024}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{author_year_imagenet,
+ title = {Imagenet: A large-scale hierarchical image database}
+}
+
+@article{author_year_mmsegmentation,
+ title = {MMSegmentation: Openmmlab semantic segmentation toolbox and benchmark}
+}
+
+@article{chen_2019_mmdetection,
+ abstract = {We present MMDetection, an object detection toolbox that contains a rich set
+of object detection and instance segmentation methods as well as related
+components and modules. The toolbox started from a codebase of MMDet team who
+won the detection track of COCO Challenge 2018. It gradually evolves into a
+unified platform that covers many popular detection methods and contemporary
+modules. It not only includes training and inference codes, but also provides
+weights for more than 200 network models. We believe this toolbox is by far the
+most complete detection toolbox. In this paper, we introduce the various
+features of this toolbox. In addition, we also conduct a benchmarking study on
+different methods, components, and their hyper-parameters. We wish that the
+toolbox and benchmark could serve the growing research community by providing a
+flexible toolkit to reimplement existing methods and develop their own new
+detectors. Code and models are available at
+https://github.com/open-mmlab/mmdetection. The project is under active
+development and we will keep this document updated.},
+ arxiv_url = {https://arxiv.org/pdf/1906.07155v1.pdf},
+ author = {Kai Chen and Jiaqi Wang and Jiangmiao Pang and Yuhang Cao and Yu Xiong and Xiaoxiao Li and Shuyang Sun and Wansen Feng and Ziwei Liu and Jiarui Xu and Zheng Zhang and Dazhi Cheng and Chenchen Zhu and Tianheng Cheng and Qijie Zhao and Buyu Li and Xin Lu and Rui Zhu and Yue Wu and Jifeng Dai and Jingdong Wang and Jianping Shi and Wanli Ouyang and Chen Change Loy and Dahua Lin},
+ title = {Mmdetection: Open mmlab detection toolbox and benchmark},
+ year = {2019}
+}
+
+@article{dai_2017_deformable,
+ abstract = {Convolutional neural networks (CNNs) are inherently limited to model
+geometric transformations due to the fixed geometric structures in its building
+modules. In this work, we introduce two new modules to enhance the
+transformation modeling capacity of CNNs, namely, deformable convolution and
+deformable RoI pooling. Both are based on the idea of augmenting the spatial
+sampling locations in the modules with additional offsets and learning the
+offsets from target tasks, without additional supervision. The new modules can
+readily replace their plain counterparts in existing CNNs and can be easily
+trained end-to-end by standard back-propagation, giving rise to deformable
+convolutional networks. Extensive experiments validate the effectiveness of our
+approach on sophisticated vision tasks of object detection and semantic
+segmentation. The code would be released.},
+ arxiv_url = {https://arxiv.org/pdf/1703.06211v3.pdf},
+ author = {Jifeng Dai and Haozhi Qi and Yuwen Xiong and Yi Li and Guodong Zhang and Han Hu and Yichen Wei},
+ title = {Deformable convolutional networks},
+ year = {2017}
+}
+
+@article{dai_2021_coatnet,
+ abstract = {Transformers have attracted increasing interests in computer vision, but they
+still fall behind state-of-the-art convolutional networks. In this work, we
+show that while Transformers tend to have larger model capacity, their
+generalization can be worse than convolutional networks due to the lack of the
+right inductive bias. To effectively combine the strengths from both
+architectures, we present CoAtNets(pronounced "coat" nets), a family of hybrid
+models built from two key insights: (1) depthwise Convolution and
+self-Attention can be naturally unified via simple relative attention; (2)
+vertically stacking convolution layers and attention layers in a principled way
+is surprisingly effective in improving generalization, capacity and efficiency.
+Experiments show that our CoAtNets achieve state-of-the-art performance under
+different resource constraints across various datasets: Without extra data,
+CoAtNet achieves 86.0% ImageNet top-1 accuracy; When pre-trained with 13M
+images from ImageNet-21K, our CoAtNet achieves 88.56% top-1 accuracy, matching
+ViT-huge pre-trained with 300M images from JFT-300M while using 23x less data;
+Notably, when we further scale up CoAtNet with JFT-3B, it achieves 90.88% top-1
+accuracy on ImageNet, establishing a new state-of-the-art result.},
+ arxiv_url = {https://arxiv.org/pdf/2106.04803v2.pdf},
+ author = {Zihang Dai and Hanxiao Liu and Quoc V. Le and Mingxing Tan},
+ title = {Coatnet: Marrying convolution and attention for all data sizes},
+ year = {2021}
+}
+
+@article{dao_2022_flashattention,
+ abstract = {Transformers are slow and memory-hungry on long sequences, since the time and
+memory complexity of self-attention are quadratic in sequence length.
+Approximate attention methods have attempted to address this problem by trading
+off model quality to reduce the compute complexity, but often do not achieve
+wall-clock speedup. We argue that a missing principle is making attention
+algorithms IO-aware -- accounting for reads and writes between levels of GPU
+memory. We propose FlashAttention, an IO-aware exact attention algorithm that
+uses tiling to reduce the number of memory reads/writes between GPU high
+bandwidth memory (HBM) and GPU on-chip SRAM. We analyze the IO complexity of
+FlashAttention, showing that it requires fewer HBM accesses than standard
+attention, and is optimal for a range of SRAM sizes. We also extend
+FlashAttention to block-sparse attention, yielding an approximate attention
+algorithm that is faster than any existing approximate attention method.
+FlashAttention trains Transformers faster than existing baselines: 15%
+end-to-end wall-clock speedup on BERT-large (seq. length 512) compared to the
+MLPerf 1.1 training speed record, 3$\times$ speedup on GPT-2 (seq. length 1K),
+and 2.4$\times$ speedup on long-range arena (seq. length 1K-4K). FlashAttention
+and block-sparse FlashAttention enable longer context in Transformers, yielding
+higher quality models (0.7 better perplexity on GPT-2 and 6.4 points of lift on
+long-document classification) and entirely new capabilities: the first
+Transformers to achieve better-than-chance performance on the Path-X challenge
+(seq. length 16K, 61.4% accuracy) and Path-256 (seq. length 64K, 63.1%
+accuracy).},
+ arxiv_url = {https://arxiv.org/pdf/2205.14135v2.pdf},
+ author = {Tri Dao and Daniel Y. Fu and Stefano Ermon and Atri Rudra and Christopher Ré},
+ title = {Flashattention: Fast and memory-efficient exact attention with io-awareness},
+ year = {2022}
+}
+
+@article{dao_2023_flashattention,
+ abstract = {Scaling Transformers to longer sequence lengths has been a major problem in
+the last several years, promising to improve performance in language modeling
+and high-resolution image understanding, as well as to unlock new applications
+in code, audio, and video generation. The attention layer is the main
+bottleneck in scaling to longer sequences, as its runtime and memory increase
+quadratically in the sequence length. FlashAttention exploits the asymmetric
+GPU memory hierarchy to bring significant memory saving (linear instead of
+quadratic) and runtime speedup (2-4$\times$ compared to optimized baselines),
+with no approximation. However, FlashAttention is still not nearly as fast as
+optimized matrix-multiply (GEMM) operations, reaching only 25-40\% of the
+theoretical maximum FLOPs/s. We observe that the inefficiency is due to
+suboptimal work partitioning between different thread blocks and warps on the
+GPU, causing either low-occupancy or unnecessary shared memory reads/writes. We
+propose FlashAttention-2, with better work partitioning to address these
+issues. In particular, we (1) tweak the algorithm to reduce the number of
+non-matmul FLOPs (2) parallelize the attention computation, even for a single
+head, across different thread blocks to increase occupancy, and (3) within each
+thread block, distribute the work between warps to reduce communication through
+shared memory. These yield around 2$\times$ speedup compared to FlashAttention,
+reaching 50-73\% of the theoretical maximum FLOPs/s on A100 and getting close
+to the efficiency of GEMM operations. We empirically validate that when used
+end-to-end to train GPT-style models, FlashAttention-2 reaches training speed
+of up to 225 TFLOPs/s per A100 GPU (72\% model FLOPs utilization).},
+ arxiv_url = {https://arxiv.org/pdf/2307.08691v1.pdf},
+ author = {Tri Dao},
+ title = {Flashattention-2: Faster attention with better parallelism and work partitioning},
+ year = {2023}
+}
+
+@article{ding_2022_davit,
+ abstract = {In this work, we introduce Dual Attention Vision Transformers (DaViT), a
+simple yet effective vision transformer architecture that is able to capture
+global context while maintaining computational efficiency. We propose
+approaching the problem from an orthogonal angle: exploiting self-attention
+mechanisms with both "spatial tokens" and "channel tokens". With spatial
+tokens, the spatial dimension defines the token scope, and the channel
+dimension defines the token feature dimension. With channel tokens, we have the
+inverse: the channel dimension defines the token scope, and the spatial
+dimension defines the token feature dimension. We further group tokens along
+the sequence direction for both spatial and channel tokens to maintain the
+linear complexity of the entire model. We show that these two self-attentions
+complement each other: (i) since each channel token contains an abstract
+representation of the entire image, the channel attention naturally captures
+global interactions and representations by taking all spatial positions into
+account when computing attention scores between channels; (ii) the spatial
+attention refines the local representations by performing fine-grained
+interactions across spatial locations, which in turn helps the global
+information modeling in channel attention. Extensive experiments show our DaViT
+achieves state-of-the-art performance on four different tasks with efficient
+computations. Without extra data, DaViT-Tiny, DaViT-Small, and DaViT-Base
+achieve 82.8%, 84.2%, and 84.6% top-1 accuracy on ImageNet-1K with 28.3M,
+49.7M, and 87.9M parameters, respectively. When we further scale up DaViT with
+1.5B weakly supervised image and text pairs, DaViT-Gaint reaches 90.4% top-1
+accuracy on ImageNet-1K. Code is available at https://github.com/dingmyu/davit.},
+ arxiv_url = {https://arxiv.org/pdf/2204.03645v1.pdf},
+ author = {Mingyu Ding and Bin Xiao and Noel Codella and Ping Luo and Jingdong Wang and Lu Yuan},
+ title = {Davit: Dual attention vision transformers},
+ year = {2022}
+}
+
+@article{elnouby_2021_xcit,
+ abstract = {Following their success in natural language processing, transformers have
+recently shown much promise for computer vision. The self-attention operation
+underlying transformers yields global interactions between all tokens ,i.e.
+words or image patches, and enables flexible modelling of image data beyond the
+local interactions of convolutions. This flexibility, however, comes with a
+quadratic complexity in time and memory, hindering application to long
+sequences and high-resolution images. We propose a "transposed" version of
+self-attention that operates across feature channels rather than tokens, where
+the interactions are based on the cross-covariance matrix between keys and
+queries. The resulting cross-covariance attention (XCA) has linear complexity
+in the number of tokens, and allows efficient processing of high-resolution
+images. Our cross-covariance image transformer (XCiT) is built upon XCA. It
+combines the accuracy of conventional transformers with the scalability of
+convolutional architectures. We validate the effectiveness and generality of
+XCiT by reporting excellent results on multiple vision benchmarks, including
+image classification and self-supervised feature learning on ImageNet-1k,
+object detection and instance segmentation on COCO, and semantic segmentation
+on ADE20k.},
+ arxiv_url = {https://arxiv.org/pdf/2106.09681v2.pdf},
+ author = {Alaaeldin El-Nouby and Hugo Touvron and Mathilde Caron and Piotr Bojanowski and Matthijs Douze and Armand Joulin and Ivan Laptev and Natalia Neverova and Gabriel Synnaeve and Jakob Verbeek and Hervé Jegou},
+ title = {Xcit: Cross-covariance image transformers},
+ year = {2021}
+}

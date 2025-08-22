@@ -5,3 +5,338 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{author_year_long,
+ title = {Long Live the Lottery: The Existence of Winning Tickets in Lifelong Learning}
+}
+
+@article{author_year_meta,
+ title = {Meta Continual Learning Revisited: Implicitly Enhancing Online Hessian Approximation via Variance Reduction}
+}
+
+@article{author_year_meta,
+ title = {Meta Continual Learning Revisited: Implicitly Enhancing Online Hessian Approximation via Variance Reduction}
+}
+
+@article{author_year_meta,
+ title = {Meta Continual Learning Revisited: Implicitly Enhancing Online Hessian Approximation via Variance Reduction}
+}
+
+@article{author_year_meta,
+ title = {Meta Continual Learning Revisited: Implicitly Enhancing Online Hessian Approximation via Variance Reduction}
+}
+
+@article{daxberger_2021_laplace,
+ abstract = {Bayesian formulations of deep learning have been shown to have compelling
+theoretical properties and offer practical functional benefits, such as
+improved predictive uncertainty quantification and model selection. The Laplace
+approximation (LA) is a classic, and arguably the simplest family of
+approximations for the intractable posteriors of deep neural networks. Yet,
+despite its simplicity, the LA is not as popular as alternatives like
+variational Bayes or deep ensembles. This may be due to assumptions that the LA
+is expensive due to the involved Hessian computation, that it is difficult to
+implement, or that it yields inferior results. In this work we show that these
+are misconceptions: we (i) review the range of variants of the LA including
+versions with minimal cost overhead; (ii) introduce "laplace", an easy-to-use
+software library for PyTorch offering user-friendly access to all major flavors
+of the LA; and (iii) demonstrate through extensive experiments that the LA is
+competitive with more popular alternatives in terms of performance, while
+excelling in terms of computational cost. We hope that this work will serve as
+a catalyst to a wider adoption of the LA in practical deep learning, including
+in domains where Bayesian approaches are not typically considered at the
+moment.},
+ arxiv_url = {https://arxiv.org/pdf/2106.14806v3.pdf},
+ author = {Erik Daxberger and Agustinus Kristiadi and Alexander Immer and Runa Eschenhagen and Matthias Bauer and Philipp Hennig},
+ github_url = {https://github.com/AlexImmer/Laplace},
+ title = {Laplace Redux - Effortless Bayesian Deep Learning},
+ year = {2021}
+}
+
+@article{deng_2022_accelerated,
+ abstract = {Laplace approximation (LA) and its linearized variant (LLA) enable effortless
+adaptation of pretrained deep neural networks to Bayesian neural networks. The
+generalized Gauss-Newton (GGN) approximation is typically introduced to improve
+their tractability. However, LA and LLA are still confronted with non-trivial
+inefficiency issues and should rely on Kronecker-factored, diagonal, or even
+last-layer approximate GGN matrices in practical use. These approximations are
+likely to harm the fidelity of learning outcomes. To tackle this issue,
+inspired by the connections between LLA and neural tangent kernels (NTKs), we
+develop a Nystrom approximation to NTKs to accelerate LLA. Our method benefits
+from the capability of popular deep learning libraries for forward mode
+automatic differentiation, and enjoys reassuring theoretical guarantees.
+Extensive studies reflect the merits of the proposed method in aspects of both
+scalability and performance. Our method can even scale up to architectures like
+vision transformers. We also offer valuable ablation studies to diagnose our
+method. Code is available at \url{https://github.com/thudzj/ELLA}.},
+ arxiv_url = {https://arxiv.org/pdf/2210.12642v1.pdf},
+ author = {Zhijie Deng and Feng Zhou and Jun Zhu},
+ github_url = {https://github.com/thudzj/ELLA},
+ title = {Accelerated Linearized Laplace Approximation for Bayesian Deep Learning},
+ year = {2022}
+}
+
+@article{deng_2022_accelerated,
+ abstract = {Laplace approximation (LA) and its linearized variant (LLA) enable effortless
+adaptation of pretrained deep neural networks to Bayesian neural networks. The
+generalized Gauss-Newton (GGN) approximation is typically introduced to improve
+their tractability. However, LA and LLA are still confronted with non-trivial
+inefficiency issues and should rely on Kronecker-factored, diagonal, or even
+last-layer approximate GGN matrices in practical use. These approximations are
+likely to harm the fidelity of learning outcomes. To tackle this issue,
+inspired by the connections between LLA and neural tangent kernels (NTKs), we
+develop a Nystrom approximation to NTKs to accelerate LLA. Our method benefits
+from the capability of popular deep learning libraries for forward mode
+automatic differentiation, and enjoys reassuring theoretical guarantees.
+Extensive studies reflect the merits of the proposed method in aspects of both
+scalability and performance. Our method can even scale up to architectures like
+vision transformers. We also offer valuable ablation studies to diagnose our
+method. Code is available at \url{https://github.com/thudzj/ELLA}.},
+ arxiv_url = {https://arxiv.org/pdf/2210.12642v1.pdf},
+ author = {Zhijie Deng and Feng Zhou and Jun Zhu},
+ github_url = {https://github.com/thudzj/ELLA},
+ title = {Accelerated Linearized Laplace Approximation for Bayesian Deep Learning},
+ year = {2022}
+}
+
+@article{hiratani_2024_disentangling,
+ abstract = {Continual learning of partially similar tasks poses a challenge for
+artificial neural networks, as task similarity presents both an opportunity for
+knowledge transfer and a risk of interference and catastrophic forgetting.
+However, it remains unclear how task similarity in input features and readout
+patterns influences knowledge transfer and forgetting, as well as how they
+interact with common algorithms for continual learning. Here, we develop a
+linear teacher-student model with latent structure and show analytically that
+high input feature similarity coupled with low readout similarity is
+catastrophic for both knowledge transfer and retention. Conversely, the
+opposite scenario is relatively benign. Our analysis further reveals that
+task-dependent activity gating improves knowledge retention at the expense of
+transfer, while task-dependent plasticity gating does not affect either
+retention or transfer performance at the over-parameterized limit. In contrast,
+weight regularization based on the Fisher information metric significantly
+improves retention, regardless of task similarity, without compromising
+transfer performance. Nevertheless, its diagonal approximation and
+regularization in the Euclidean space are much less robust against task
+similarity. We demonstrate consistent results in a permuted MNIST task with
+latent variables. Overall, this work provides insights into when continual
+learning is difficult and how to mitigate it.},
+ arxiv_url = {https://arxiv.org/pdf/2405.20236v1.pdf},
+ author = {Naoki Hiratani},
+ title = {Disentangling and mitigating the impact of task similarity for continual learning},
+ year = {2024}
+}
+
+@article{lin_2024_effective,
+ abstract = {Continual learning (CL) is a fundamental topic in machine learning, where the
+goal is to train a model with continuously incoming data and tasks. Due to the
+memory limit, we cannot store all the historical data, and therefore confront
+the ``catastrophic forgetting'' problem, i.e., the performance on the previous
+tasks can substantially decrease because of the missing information in the
+latter period. Though a number of elegant methods have been proposed, the
+catastrophic forgetting phenomenon still cannot be well avoided in practice. In
+this paper, we study the problem from the gradient perspective, where our aim
+is to develop an effective algorithm to calibrate the gradient in each updating
+step of the model; namely, our goal is to guide the model to be updated in the
+right direction under the situation that a large amount of historical data are
+unavailable. Our idea is partly inspired by the seminal stochastic variance
+reduction methods (e.g., SVRG and SAGA) for reducing the variance of gradient
+estimation in stochastic gradient descent algorithms. Another benefit is that
+our approach can be used as a general tool, which is able to be incorporated
+with several existing popular CL methods to achieve better performance. We also
+conduct a set of experiments on several benchmark datasets to evaluate the
+performance in practice.},
+ arxiv_url = {https://arxiv.org/pdf/2407.20956v1.pdf},
+ author = {Weichen Lin and Jiaxiang Chen and Ruomin Huang and Hu Ding},
+ github_url = {https://github.com/aimagelab/mammoth},
+ title = {An Effective Dynamic Gradient Calibration Method for Continual Learning},
+ year = {2024}
+}
+
+@article{mavrothalassitis_2024_efficient,
+ abstract = {Given a sequence of functions $f_1,\ldots,f_n$ with $f_i:\mathcal{D}\mapsto
+\mathbb{R}$, finite-sum minimization seeks a point ${x}^\star \in \mathcal{D}$
+minimizing $\sum_{j=1}^n f_j(x)/n$. In this work, we propose a key twist into
+the finite-sum minimization, dubbed as continual finite-sum minimization, that
+asks for a sequence of points ${x}_1^\star,\ldots,{x}_n^\star \in \mathcal{D}$
+such that each ${x}^\star_i \in \mathcal{D}$ minimizes the prefix-sum
+$\sum_{j=1}^if_j(x)/i$. Assuming that each prefix-sum is strongly convex, we
+develop a first-order continual stochastic variance reduction gradient method
+($\mathrm{CSVRG}$) producing an $\epsilon$-optimal sequence with
+$\mathcal{\tilde{O}}(n/\epsilon^{1/3} + 1/\sqrt{\epsilon})$ overall first-order
+oracles (FO). An FO corresponds to the computation of a single gradient $\nabla
+f_j(x)$ at a given $x \in \mathcal{D}$ for some $j \in [n]$. Our approach
+significantly improves upon the $\mathcal{O}(n/\epsilon)$ FOs that
+$\mathrm{StochasticGradientDescent}$ requires and the $\mathcal{O}(n^2 \log
+(1/\epsilon))$ FOs that state-of-the-art variance reduction methods such as
+$\mathrm{Katyusha}$ require. We also prove that there is no natural first-order
+method with $\mathcal{O}\left(n/\epsilon^\alpha\right)$ gradient complexity for
+$\alpha < 1/4$, establishing that the first-order complexity of our method is
+nearly tight.},
+ arxiv_url = {https://arxiv.org/pdf/2406.04731v1.pdf},
+ author = {Ioannis Mavrothalassitis and Stratis Skoulakis and Leello Tadesse Dadi and Volkan Cevher},
+ title = {Efficient Continual Finite-Sum Minimization},
+ year = {2024}
+}
+
+@article{mirzadeh_2020_linear,
+ abstract = {Continual (sequential) training and multitask (simultaneous) training are
+often attempting to solve the same overall objective: to find a solution that
+performs well on all considered tasks. The main difference is in the training
+regimes, where continual learning can only have access to one task at a time,
+which for neural networks typically leads to catastrophic forgetting. That is,
+the solution found for a subsequent task does not perform well on the previous
+ones anymore. However, the relationship between the different minima that the
+two training regimes arrive at is not well understood. What sets them apart? Is
+there a local structure that could explain the difference in performance
+achieved by the two different schemes? Motivated by recent work showing that
+different minima of the same task are typically connected by very simple curves
+of low error, we investigate whether multitask and continual solutions are
+similarly connected. We empirically find that indeed such connectivity can be
+reliably achieved and, more interestingly, it can be done by a linear path,
+conditioned on having the same initialization for both. We thoroughly analyze
+this observation and discuss its significance for the continual learning
+process. Furthermore, we exploit this finding to propose an effective algorithm
+that constrains the sequentially learned minima to behave as the multitask
+solution. We show that our method outperforms several state of the art
+continual learning algorithms on various vision benchmarks.},
+ arxiv_url = {https://arxiv.org/pdf/2010.04495v1.pdf},
+ author = {Seyed Iman Mirzadeh and Mehrdad Farajtabar and Dilan Gorur and Razvan Pascanu and Hassan Ghasemzadeh},
+ github_url = {https://github.com/imirzadeh/MC-SGD},
+ title = {Linear Mode Connectivity in Multitask and Continual Learning},
+ year = {2020}
+}
+
+@article{sun_2023_regularizing,
+ abstract = {Continual learning aims to learn on non-stationary data streams without
+catastrophically forgetting previous knowledge. Prevalent replay-based methods
+address this challenge by rehearsing on a small buffer holding the seen data,
+for which a delicate sample selection strategy is required. However, existing
+selection schemes typically seek only to maximize the utility of the ongoing
+selection, overlooking the interference between successive rounds of selection.
+Motivated by this, we dissect the interaction of sequential selection steps
+within a framework built on influence functions. We manage to identify a new
+class of second-order influences that will gradually amplify incidental bias in
+the replay buffer and compromise the selection process. To regularize the
+second-order effects, a novel selection objective is proposed, which also has
+clear connections to two widely adopted criteria. Furthermore, we present an
+efficient implementation for optimizing the proposed criterion. Experiments on
+multiple continual learning benchmarks demonstrate the advantage of our
+approach over state-of-the-art methods. Code is available at
+https://github.com/feifeiobama/InfluenceCL.},
+ arxiv_url = {https://arxiv.org/pdf/2304.10177v1.pdf},
+ author = {Zhicheng Sun and Yadong Mu and Gang Hua},
+ title = {Regularizing Second-Order Influences for Continual Learning},
+ year = {2023}
+}
+
+@article{tang_2021_unifying,
+ abstract = {Model-agnostic meta-reinforcement learning requires estimating the Hessian
+matrix of value functions. This is challenging from an implementation
+perspective, as repeatedly differentiating policy gradient estimates may lead
+to biased Hessian estimates. In this work, we provide a unifying framework for
+estimating higher-order derivatives of value functions, based on off-policy
+evaluation. Our framework interprets a number of prior approaches as special
+cases and elucidates the bias and variance trade-off of Hessian estimates. This
+framework also opens the door to a new family of estimates, which can be easily
+implemented with auto-differentiation libraries, and lead to performance gains
+in practice.},
+ arxiv_url = {https://arxiv.org/pdf/2106.13125v2.pdf},
+ author = {Yunhao Tang and Tadashi Kozuno and Mark Rowland and Rémi Munos and Michal Valko},
+ github_url = {https://github.com/robintyh1/neurips2021-meta-gradient-offpolicy-evaluation},
+ title = {Unifying Gradient Estimators for Meta-Reinforcement Learning  via Off-Policy Evaluation},
+ year = {2021}
+}
+
+@article{varshney_2021_cam,
+ abstract = {We present a continual learning approach for generative adversarial networks
+(GANs), by designing and leveraging parameter-efficient feature map
+transformations. Our approach is based on learning a set of global and
+task-specific parameters. The global parameters are fixed across tasks whereas
+the task-specific parameters act as local adapters for each task, and help in
+efficiently obtaining task-specific feature maps. Moreover, we propose an
+element-wise addition of residual bias in the transformed feature space, which
+further helps stabilize GAN training in such settings. Our approach also
+leverages task similarity information based on the Fisher information matrix.
+Leveraging this knowledge from previous tasks significantly improves the model
+performance. In addition, the similarity measure also helps reduce the
+parameter growth in continual adaptation and helps to learn a compact model. In
+contrast to the recent approaches for continually-learned GANs, the proposed
+approach provides a memory-efficient way to perform effective continual data
+generation. Through extensive experiments on challenging and diverse datasets,
+we show that the feature-map-transformation approach outperforms
+state-of-the-art methods for continually-learned GANs, with substantially fewer
+parameters. The proposed method generates high-quality samples that can also
+improve the generative-replay-based continual learning for discriminative
+tasks.},
+ arxiv_url = {https://arxiv.org/pdf/2103.04032v2.pdf},
+ author = {Sakshi Varshney and Vinay Kumar Verma and Srijith P K and Lawrence Carin and Piyush Rai},
+ title = {CAM-GAN: Continual Adaptation Modules for Generative Adversarial Networks},
+ year = {2021}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{finn_2017_model,
+ abstract = {We propose an algorithm for meta-learning that is model-agnostic, in the
+sense that it is compatible with any model trained with gradient descent and
+applicable to a variety of different learning problems, including
+classification, regression, and reinforcement learning. The goal of
+meta-learning is to train a model on a variety of learning tasks, such that it
+can solve new learning tasks using only a small number of training samples. In
+our approach, the parameters of the model are explicitly trained such that a
+small number of gradient steps with a small amount of training data from a new
+task will produce good generalization performance on that task. In effect, our
+method trains the model to be easy to fine-tune. We demonstrate that this
+approach leads to state-of-the-art performance on two few-shot image
+classification benchmarks, produces good results on few-shot regression, and
+accelerates fine-tuning for policy gradient reinforcement learning with neural
+network policies.},
+ arxiv_url = {https://arxiv.org/pdf/1703.03400v3.pdf},
+ author = {Chelsea Finn and Pieter Abbeel and Sergey Levine},
+ title = {Model-agnostic meta-learning for fast adaptation of deep networks},
+ year = {2017}
+}
+
+@article{levine_2015_end,
+ abstract = {Policy search methods can allow robots to learn control policies for a wide
+range of tasks, but practical applications of policy search often require
+hand-engineered components for perception, state estimation, and low-level
+control. In this paper, we aim to answer the following question: does training
+the perception and control systems jointly end-to-end provide better
+performance than training each component separately? To this end, we develop a
+method that can be used to learn policies that map raw image observations
+directly to torques at the robot's motors. The policies are represented by deep
+convolutional neural networks (CNNs) with 92,000 parameters, and are trained
+using a partially observed guided policy search method, which transforms policy
+search into supervised learning, with supervision provided by a simple
+trajectory-centric reinforcement learning method. We evaluate our method on a
+range of real-world manipulation tasks that require close coordination between
+vision and control, such as screwing a cap onto a bottle, and present simulated
+comparisons to a range of prior policy search methods.},
+ arxiv_url = {https://arxiv.org/pdf/1504.00702v5.pdf},
+ author = {Sergey Levine and Chelsea Finn and Trevor Darrell and Pieter Abbeel},
+ title = {End-to-end training of deep visuomotor policies},
+ year = {2015}
+}
+
+@article{mnih_2013_playing,
+ abstract = {We present the first deep learning model to successfully learn control
+policies directly from high-dimensional sensory input using reinforcement
+learning. The model is a convolutional neural network, trained with a variant
+of Q-learning, whose input is raw pixels and whose output is a value function
+estimating future rewards. We apply our method to seven Atari 2600 games from
+the Arcade Learning Environment, with no adjustment of the architecture or
+learning algorithm. We find that it outperforms all previous approaches on six
+of the games and surpasses a human expert on three of them.},
+ arxiv_url = {https://arxiv.org/pdf/1312.5602v1.pdf},
+ author = {Volodymyr Mnih and Koray Kavukcuoglu and David Silver and Alex Graves and Ioannis Antonoglou and Daan Wierstra and Martin Riedmiller},
+ title = {Playing atari with deep reinforcement learning},
+ year = {2013}
+}

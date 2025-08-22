@@ -6,5 +6,52 @@
     "energy-efficient model training",
     "ML carbon footprint estimation",
     "machine learning LCA"
+  ],
+  "research_study_list": [
+    {
+      "title": "LLMCarbon: Modeling the End-to-End Carbon Footprint of Large Language Models"
+    },
+    {
+      "title": "LLMCarbon: Modeling the End-to-End Carbon Footprint of Large Language Models"
+    },
+    {
+      "title": "Position: Tensor Networks are a Valuable Asset for Green AI"
+    },
+    {
+      "title": "Inductive-bias-driven Reinforcement Learning For Efficient Schedules in Heterogeneous Clusters"
+    },
+    {
+      "title": "Energy-Efficient Scheduling with Predictions"
+    },
+    {
+      "title": "Learning Augmented Energy Minimization via Speed Scaling"
+    },
+    {
+      "title": "A Multi-Level Framework for Accelerating Training Transformer Models"
+    },
+    {
+      "title": "POET: Training Neural Networks on Tiny Devices with Integrated Rematerialization and Paging"
+    },
+    {
+      "title": "POET: Training Neural Networks on Tiny Devices with Integrated Rematerialization and Paging"
+    },
+    {
+      "title": "LLMCarbon: Modeling the End-to-End Carbon Footprint of Large Language Models"
+    },
+    {
+      "title": "LLMCarbon: Modeling the End-to-End Carbon Footprint of Large Language Models"
+    },
+    {
+      "title": "CE-NAS: An End-to-End Carbon-Efficient Neural Architecture Search Framework"
+    },
+    {
+      "title": "Identifying General Mechanism Shifts in Linear Causal Representations"
+    },
+    {
+      "title": "Causal Component Analysis"
+    },
+    {
+      "title": "Counterfactual Data Augmentation using Locally Factored Dynamics"
+    }
   ]
 }

@@ -5,3 +5,498 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{anagnostidis_2023_navigating,
+ abstract = {In recent years, the state-of-the-art in deep learning has been dominated by
+very large models that have been pre-trained on vast amounts of data. The
+paradigm is very simple: investing more computational resources (optimally)
+leads to better performance, and even predictably so; neural scaling laws have
+been derived that accurately forecast the performance of a network for a
+desired level of compute. This leads to the notion of a `compute-optimal'
+model, i.e. a model that allocates a given level of compute during training
+optimally to maximize performance. In this work, we extend the concept of
+optimality by allowing for an `adaptive' model, i.e. a model that can change
+its shape during training. By doing so, we can design adaptive models that
+optimally traverse between the underlying scaling laws and outpace their
+`static' counterparts, leading to a significant reduction in the required
+compute to reach a given target performance. We show that our approach
+generalizes across modalities and different shape parameters.},
+ arxiv_url = {https://arxiv.org/pdf/2311.03233v3.pdf},
+ author = {Sotiris Anagnostidis and Gregor Bachmann and Imanol Schlag and Thomas Hofmann},
+ title = {Navigating Scaling Laws: Compute Optimality in Adaptive Model Training},
+ year = {2023}
+}
+
+@article{author_year_adaptive,
+ title = {Adaptive Sampling for Efficient Softmax Approximation}
+}
+
+@article{author_year_llm,
+ title = {D-LLM: A Token Adaptive Computing Resource Allocation Strategy for Large Language Models}
+}
+
+@article{author_year_toward,
+ title = {Toward Efficient Inference for Mixture of Experts}
+}
+
+@article{jazbec_2024_fast,
+ abstract = {Scaling machine learning models significantly improves their performance.
+However, such gains come at the cost of inference being slow and
+resource-intensive. Early-exit neural networks (EENNs) offer a promising
+solution: they accelerate inference by allowing intermediate layers to exit and
+produce a prediction early. Yet a fundamental issue with EENNs is how to
+determine when to exit without severely degrading performance. In other words,
+when is it 'safe' for an EENN to go 'fast'? To address this issue, we
+investigate how to adapt frameworks of risk control to EENNs. Risk control
+offers a distribution-free, post-hoc solution that tunes the EENN's exiting
+mechanism so that exits only occur when the output is of sufficient quality. We
+empirically validate our insights on a range of vision and language tasks,
+demonstrating that risk control can produce substantial computational savings,
+all the while preserving user-specified performance goals.},
+ arxiv_url = {https://arxiv.org/pdf/2405.20915v2.pdf},
+ author = {Metod Jazbec and Alexander Timans and Tin Hadži Veljković and Kaspar Sakmann and Dan Zhang and Christian A. Naesseth and Eric Nalisnick},
+ github_url = {https://github.com/raymin0223/fast_robust_early_exit},
+ journal = {Advances in Neural Information Processing Systems (NeurIPS) 2024},
+ title = {Fast yet Safe: Early-Exiting with Risk Control},
+ year = {2024}
+}
+
+@article{koyuncu_2023_memorization,
+ abstract = {Many empirical studies have demonstrated the performance benefits of
+conditional computation in neural networks, including reduced inference time
+and power consumption. We study the fundamental limits of neural conditional
+computation from the perspective of memorization capacity. For Rectified Linear
+Unit (ReLU) networks without conditional computation, it is known that
+memorizing a collection of $n$ input-output relationships can be accomplished
+via a neural network with $O(\sqrt{n})$ neurons. Calculating the output of this
+neural network can be accomplished using $O(\sqrt{n})$ elementary arithmetic
+operations of additions, multiplications and comparisons for each input. Using
+a conditional ReLU network, we show that the same task can be accomplished
+using only $O(\log n)$ operations per input. This represents an almost
+exponential improvement as compared to networks without conditional
+computation. We also show that the $\Theta(\log n)$ rate is the best possible.
+Our achievability result utilizes a general methodology to synthesize a
+conditional network out of an unconditional network in a
+computationally-efficient manner, bridging the gap between unconditional and
+conditional architectures.},
+ arxiv_url = {https://arxiv.org/pdf/2303.11247v1.pdf},
+ author = {Erdem Koyuncu},
+ title = {Memorization Capacity of Neural Networks with Conditional Computation},
+ year = {2023}
+}
+
+@article{lei_2023_conditional,
+ abstract = {We propose Conditional Adapter (CoDA), a parameter-efficient transfer
+learning method that also improves inference efficiency. CoDA generalizes
+beyond standard adapter approaches to enable a new way of balancing speed and
+accuracy using conditional computation. Starting with an existing dense
+pretrained model, CoDA adds sparse activation together with a small number of
+new parameters and a light-weight training phase. Our experiments demonstrate
+that the CoDA approach provides an unexpectedly efficient way to transfer
+knowledge. Across a variety of language, vision, and speech tasks, CoDA
+achieves a 2x to 8x inference speed-up compared to the state-of-the-art Adapter
+approaches with moderate to no accuracy loss and the same parameter efficiency.},
+ arxiv_url = {https://arxiv.org/pdf/2304.04947v2.pdf},
+ author = {Tao Lei and Junwen Bai and Siddhartha Brahma and Joshua Ainslie and Kenton Lee and Yanqi Zhou and Nan Du and Vincent Y. Zhao and Yuexin Wu and Bo Li and Yu Zhang and Ming-Wei Chang},
+ title = {Conditional Adapters: Parameter-efficient Transfer Learning with Fast Inference},
+ year = {2023}
+}
+
+@article{lepikhin_2020_gshard,
+ abstract = {Neural network scaling has been critical for improving the model quality in
+many real-world machine learning applications with vast amounts of training
+data and compute. Although this trend of scaling is affirmed to be a sure-fire
+approach for better model quality, there are challenges on the path such as the
+computation cost, ease of programming, and efficient implementation on parallel
+devices. GShard is a module composed of a set of lightweight annotation APIs
+and an extension to the XLA compiler. It provides an elegant way to express a
+wide range of parallel computation patterns with minimal changes to the
+existing model code. GShard enabled us to scale up multilingual neural machine
+translation Transformer model with Sparsely-Gated Mixture-of-Experts beyond 600
+billion parameters using automatic sharding. We demonstrate that such a giant
+model can efficiently be trained on 2048 TPU v3 accelerators in 4 days to
+achieve far superior quality for translation from 100 languages to English
+compared to the prior art.},
+ arxiv_url = {https://arxiv.org/pdf/2006.16668v1.pdf},
+ author = {Dmitry Lepikhin and HyoukJoong Lee and Yuanzhong Xu and Dehao Chen and Orhan Firat and Yanping Huang and Maxim Krikun and Noam Shazeer and Zhifeng Chen},
+ title = {GShard: Scaling Giant Models with Conditional Computation and Automatic Sharding},
+ year = {2020}
+}
+
+@article{lin_2023_dynamicdet,
+ abstract = {Dynamic neural network is an emerging research topic in deep learning. With
+adaptive inference, dynamic models can achieve remarkable accuracy and
+computational efficiency. However, it is challenging to design a powerful
+dynamic detector, because of no suitable dynamic architecture and exiting
+criterion for object detection. To tackle these difficulties, we propose a
+dynamic framework for object detection, named DynamicDet. Firstly, we carefully
+design a dynamic architecture based on the nature of the object detection task.
+Then, we propose an adaptive router to analyze the multi-scale information and
+to decide the inference route automatically. We also present a novel
+optimization strategy with an exiting criterion based on the detection losses
+for our dynamic detectors. Last, we present a variable-speed inference
+strategy, which helps to realize a wide range of accuracy-speed trade-offs with
+only one dynamic detector. Extensive experiments conducted on the COCO
+benchmark demonstrate that the proposed DynamicDet achieves new
+state-of-the-art accuracy-speed trade-offs. For instance, with comparable
+accuracy, the inference speed of our dynamic detector Dy-YOLOv7-W6 surpasses
+YOLOv7-E6 by 12%, YOLOv7-D6 by 17%, and YOLOv7-E6E by 39%. The code is
+available at https://github.com/VDIGPKU/DynamicDet.},
+ arxiv_url = {https://arxiv.org/pdf/2304.05552v1.pdf},
+ author = {Zhihao Lin and Yongtao Wang and Jinhe Zhang and Xiaojie Chu},
+ title = {DynamicDet: A Unified Dynamic Architecture for Object Detection},
+ year = {2023}
+}
+
+@article{pal_2023_locally,
+ abstract = {Implicit layer deep learning techniques, like Neural Differential Equations,
+have become an important modeling framework due to their ability to adapt to
+new problems automatically. Training a neural differential equation is
+effectively a search over a space of plausible dynamical systems. However,
+controlling the computational cost for these models is difficult since it
+relies on the number of steps the adaptive solver takes. Most prior works have
+used higher-order methods to reduce prediction timings while greatly increasing
+training time or reducing both training and prediction timings by relying on
+specific training algorithms, which are harder to use as a drop-in replacement
+due to strict requirements on automatic differentiation. In this manuscript, we
+use internal cost heuristics of adaptive differential equation solvers at
+stochastic time points to guide the training toward learning a dynamical system
+that is easier to integrate. We "close the black-box" and allow the use of our
+method with any adjoint technique for gradient calculations of the differential
+equation solution. We perform experimental studies to compare our method to
+global regularization to show that we attain similar performance numbers
+without compromising the flexibility of implementation on ordinary differential
+equations (ODEs) and stochastic differential equations (SDEs). We develop two
+sampling strategies to trade off between performance and training time. Our
+method reduces the number of function evaluations to 0.556-0.733x and
+accelerates predictions by 1.3-2x.},
+ arxiv_url = {https://arxiv.org/pdf/2303.02262v3.pdf},
+ author = {Avik Pal and Alan Edelman and Chris Rackauckas},
+ title = {Locally Regularized Neural Differential Equations: Some Black Boxes were meant to remain closed!},
+ year = {2023}
+}
+
+@article{rajbhandari_2022_deepspeed,
+ abstract = {As the training of giant dense models hits the boundary on the availability
+and capability of the hardware resources today, Mixture-of-Experts (MoE) models
+become one of the most promising model architectures due to their significant
+training cost reduction compared to a quality-equivalent dense model. Its
+training cost saving is demonstrated from encoder-decoder models (prior works)
+to a 5x saving for auto-aggressive language models (this work along with
+parallel explorations). However, due to the much larger model size and unique
+architecture, how to provide fast MoE model inference remains challenging and
+unsolved, limiting its practical usage. To tackle this, we present
+DeepSpeed-MoE, an end-to-end MoE training and inference solution as part of the
+DeepSpeed library, including novel MoE architecture designs and model
+compression techniques that reduce MoE model size by up to 3.7x, and a highly
+optimized inference system that provides 7.3x better latency and cost compared
+to existing MoE inference solutions. DeepSpeed-MoE offers an unprecedented
+scale and efficiency to serve massive MoE models with up to 4.5x faster and 9x
+cheaper inference compared to quality-equivalent dense models. We hope our
+innovations and systems help open a promising path to new directions in the
+large model landscape, a shift from dense to sparse MoE models, where training
+and deploying higher-quality models with fewer resources becomes more widely
+possible.},
+ arxiv_url = {https://arxiv.org/pdf/2201.05596v2.pdf},
+ author = {Samyam Rajbhandari and Conglong Li and Zhewei Yao and Minjia Zhang and Reza Yazdani Aminabadi and Ammar Ahmad Awan and Jeff Rasley and Yuxiong He},
+ github_url = {https://github.com/microsoft/DeepSpeed},
+ title = {DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale},
+ year = {2022}
+}
+
+@article{rajbhandari_2022_deepspeed,
+ abstract = {As the training of giant dense models hits the boundary on the availability
+and capability of the hardware resources today, Mixture-of-Experts (MoE) models
+become one of the most promising model architectures due to their significant
+training cost reduction compared to a quality-equivalent dense model. Its
+training cost saving is demonstrated from encoder-decoder models (prior works)
+to a 5x saving for auto-aggressive language models (this work along with
+parallel explorations). However, due to the much larger model size and unique
+architecture, how to provide fast MoE model inference remains challenging and
+unsolved, limiting its practical usage. To tackle this, we present
+DeepSpeed-MoE, an end-to-end MoE training and inference solution as part of the
+DeepSpeed library, including novel MoE architecture designs and model
+compression techniques that reduce MoE model size by up to 3.7x, and a highly
+optimized inference system that provides 7.3x better latency and cost compared
+to existing MoE inference solutions. DeepSpeed-MoE offers an unprecedented
+scale and efficiency to serve massive MoE models with up to 4.5x faster and 9x
+cheaper inference compared to quality-equivalent dense models. We hope our
+innovations and systems help open a promising path to new directions in the
+large model landscape, a shift from dense to sparse MoE models, where training
+and deploying higher-quality models with fewer resources becomes more widely
+possible.},
+ arxiv_url = {https://arxiv.org/pdf/2201.05596v2.pdf},
+ author = {Samyam Rajbhandari and Conglong Li and Zhewei Yao and Minjia Zhang and Reza Yazdani Aminabadi and Ammar Ahmad Awan and Jeff Rasley and Yuxiong He},
+ github_url = {https://github.com/microsoft/DeepSpeed},
+ title = {DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale},
+ year = {2022}
+}
+
+@article{regol_2023_jointly,
+ abstract = {Large pretrained models, coupled with fine-tuning, are slowly becoming
+established as the dominant architecture in machine learning. Even though these
+models offer impressive performance, their practical application is often
+limited by the prohibitive amount of resources required for every inference.
+Early-exiting dynamic neural networks (EDNN) circumvent this issue by allowing
+a model to make some of its predictions from intermediate layers (i.e.,
+early-exit). Training an EDNN architecture is challenging as it consists of two
+intertwined components: the gating mechanism (GM) that controls early-exiting
+decisions and the intermediate inference modules (IMs) that perform inference
+from intermediate representations. As a result, most existing approaches rely
+on thresholding confidence metrics for the gating mechanism and strive to
+improve the underlying backbone network and the inference modules. Although
+successful, this approach has two fundamental shortcomings: 1) the GMs and the
+IMs are decoupled during training, leading to a train-test mismatch; and 2) the
+thresholding gating mechanism introduces a positive bias into the predictive
+probabilities, making it difficult to readily extract uncertainty information.
+We propose a novel architecture that connects these two modules. This leads to
+significant performance improvements on classification datasets and enables
+better uncertainty characterization capabilities.},
+ arxiv_url = {https://arxiv.org/pdf/2310.09163v2.pdf},
+ author = {Florence Regol and Joud Chataoui and Mark Coates},
+ title = {Jointly-Learned Exit and Inference for a Dynamic Neural Network},
+ year = {2023}
+}
+
+@article{woczyk_2021_zero,
+ abstract = {The problem of reducing processing time of large deep learning models is a
+fundamental challenge in many real-world applications. Early exit methods
+strive towards this goal by attaching additional Internal Classifiers (ICs) to
+intermediate layers of a neural network. ICs can quickly return predictions for
+easy examples and, as a result, reduce the average inference time of the whole
+model. However, if a particular IC does not decide to return an answer early,
+its predictions are discarded, with its computations effectively being wasted.
+To solve this issue, we introduce Zero Time Waste (ZTW), a novel approach in
+which each IC reuses predictions returned by its predecessors by (1) adding
+direct connections between ICs and (2) combining previous outputs in an
+ensemble-like manner. We conduct extensive experiments across various datasets
+and architectures to demonstrate that ZTW achieves a significantly better
+accuracy vs. inference time trade-off than other recently proposed early exit
+methods.},
+ arxiv_url = {https://arxiv.org/pdf/2106.05409v2.pdf},
+ author = {Maciej Wołczyk and Bartosz Wójcik and Klaudia Bałazy and Igor Podolak and Jacek Tabor and Marek Śmieja and Tomasz Trzciński},
+ github_url = {https://github.com/gmum/Zero-Time-Waste},
+ title = {Zero Time Waste: Recycling Predictions in Early Exit Neural Networks},
+ year = {2021}
+}
+
+@article{zhang_2024_switchable,
+ abstract = {Auto-regressive generation models achieve competitive performance across many
+different NLP tasks such as summarization, question answering, and
+classifications. However, they are also known for being slow in inference,
+which makes them challenging to deploy in real-time applications. We propose a
+switchable decision to accelerate inference by dynamically assigning
+computation resources for each data instance. Automatically making decisions on
+where to skip and how to balance quality and computation cost with constrained
+optimization, our dynamic neural generation networks enforce the efficient
+inference path and determine the optimized trade-off. Experiments across
+question answering, summarization, and classification benchmarks show that our
+method benefits from less computation cost during inference while keeping the
+same accuracy. Extensive experiments and ablation studies demonstrate that our
+method can be general, effective, and beneficial for many NLP tasks.},
+ arxiv_url = {https://arxiv.org/pdf/2405.04513v1.pdf},
+ author = {Shujian Zhang and Korawat Tanwisuth and Chengyue Gong and Pengcheng He and Mingyuan Zhou},
+ title = {Switchable Decision: Dynamic Neural Generation Networks},
+ year = {2024}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{abadi_2016_tensorflow,
+ abstract = {TensorFlow is a machine learning system that operates at large scale and in
+heterogeneous environments. TensorFlow uses dataflow graphs to represent
+computation, shared state, and the operations that mutate that state. It maps
+the nodes of a dataflow graph across many machines in a cluster, and within a
+machine across multiple computational devices, including multicore CPUs,
+general-purpose GPUs, and custom designed ASICs known as Tensor Processing
+Units (TPUs). This architecture gives flexibility to the application developer:
+whereas in previous "parameter server" designs the management of shared state
+is built into the system, TensorFlow enables developers to experiment with
+novel optimizations and training algorithms. TensorFlow supports a variety of
+applications, with particularly strong support for training and inference on
+deep neural networks. Several Google services use TensorFlow in production, we
+have released it as an open-source project, and it has become widely used for
+machine learning research. In this paper, we describe the TensorFlow dataflow
+model in contrast to existing systems, and demonstrate the compelling
+performance that TensorFlow achieves for several real-world applications.},
+ arxiv_url = {https://arxiv.org/pdf/1605.08695v2.pdf},
+ author = {Martín Abadi and Paul Barham and Jianmin Chen and Zhifeng Chen and Andy Davis and Jeffrey Dean and Matthieu Devin and Sanjay Ghemawat and Geoffrey Irving and Michael Isard and Manjunath Kudlur and Josh Levenberg and Rajat Monga and Sherry Moore and Derek G. Murray and Benoit Steiner and Paul Tucker and Vijay Vasudevan and Pete Warden and Martin Wicke and Yuan Yu and Xiaoqiang Zheng},
+ title = {Tensorflow: a system for large-scale machine learning},
+ year = {2016}
+}
+
+@article{author_year_nvidia,
+ title = {Nvidia a100 tensor core gpu: Performance and innovation}
+}
+
+@article{bochkovskiy_2020_optimal,
+ abstract = {There are a huge number of features which are said to improve Convolutional
+Neural Network (CNN) accuracy. Practical testing of combinations of such
+features on large datasets, and theoretical justification of the result, is
+required. Some features operate on certain models exclusively and for certain
+problems exclusively, or only for small-scale datasets; while some features,
+such as batch-normalization and residual-connections, are applicable to the
+majority of models, tasks, and datasets. We assume that such universal features
+include Weighted-Residual-Connections (WRC), Cross-Stage-Partial-connections
+(CSP), Cross mini-Batch Normalization (CmBN), Self-adversarial-training (SAT)
+and Mish-activation. We use new features: WRC, CSP, CmBN, SAT, Mish activation,
+Mosaic data augmentation, CmBN, DropBlock regularization, and CIoU loss, and
+combine some of them to achieve state-of-the-art results: 43.5% AP (65.7% AP50)
+for the MS COCO dataset at a realtime speed of ~65 FPS on Tesla V100. Source
+code is at https://github.com/AlexeyAB/darknet},
+ arxiv_url = {https://arxiv.org/pdf/2004.10934v1.pdf},
+ author = {Alexey Bochkovskiy and Chien-Yao Wang and Hong-Yuan Mark Liao},
+ title = {Yolov4: Optimal speed and accuracy of object detection},
+ year = {2020}
+}
+
+@article{cai_2017_cascade,
+ abstract = {In object detection, an intersection over union (IoU) threshold is required
+to define positives and negatives. An object detector, trained with low IoU
+threshold, e.g. 0.5, usually produces noisy detections. However, detection
+performance tends to degrade with increasing the IoU thresholds. Two main
+factors are responsible for this: 1) overfitting during training, due to
+exponentially vanishing positive samples, and 2) inference-time mismatch
+between the IoUs for which the detector is optimal and those of the input
+hypotheses. A multi-stage object detection architecture, the Cascade R-CNN, is
+proposed to address these problems. It consists of a sequence of detectors
+trained with increasing IoU thresholds, to be sequentially more selective
+against close false positives. The detectors are trained stage by stage,
+leveraging the observation that the output of a detector is a good distribution
+for training the next higher quality detector. The resampling of progressively
+improved hypotheses guarantees that all detectors have a positive set of
+examples of equivalent size, reducing the overfitting problem. The same cascade
+procedure is applied at inference, enabling a closer match between the
+hypotheses and the detector quality of each stage. A simple implementation of
+the Cascade R-CNN is shown to surpass all single-model object detectors on the
+challenging COCO dataset. Experiments also show that the Cascade R-CNN is
+widely applicable across detector architectures, achieving consistent gains
+independently of the baseline detector strength. The code will be made
+available at https://github.com/zhaoweicai/cascade-rcnn.},
+ arxiv_url = {https://arxiv.org/pdf/1712.00726v1.pdf},
+ author = {Zhaowei Cai and Nuno Vasconcelos},
+ title = {Cascade r-cnn: Delving into high quality object detection},
+ year = {2017}
+}
+
+@article{chen_2019_detnas,
+ abstract = {Object detectors are usually equipped with backbone networks designed for
+image classification. It might be sub-optimal because of the gap between the
+tasks of image classification and object detection. In this work, we present
+DetNAS to use Neural Architecture Search (NAS) for the design of better
+backbones for object detection. It is non-trivial because detection training
+typically needs ImageNet pre-training while NAS systems require accuracies on
+the target detection task as supervisory signals. Based on the technique of
+one-shot supernet, which contains all possible networks in the search space, we
+propose a framework for backbone search on object detection. We train the
+supernet under the typical detector training schedule: ImageNet pre-training
+and detection fine-tuning. Then, the architecture search is performed on the
+trained supernet, using the detection task as the guidance. This framework
+makes NAS on backbones very efficient. In experiments, we show the
+effectiveness of DetNAS on various detectors, for instance, one-stage RetinaNet
+and the two-stage FPN. We empirically find that networks searched on object
+detection shows consistent superiority compared to those searched on ImageNet
+classification. The resulting architecture achieves superior performance than
+hand-crafted networks on COCO with much less FLOPs complexity.},
+ arxiv_url = {https://arxiv.org/pdf/1903.10979v4.pdf},
+ author = {Yukang Chen and Tong Yang and Xiangyu Zhang and Gaofeng Meng and Xinyu Xiao and Jian Sun},
+ title = {Detnas: Backbone search for object detection},
+ year = {2019}
+}
+
+@article{du_2019_spinenet,
+ abstract = {Convolutional neural networks typically encode an input image into a series
+of intermediate features with decreasing resolutions. While this structure is
+suited to classification tasks, it does not perform well for tasks requiring
+simultaneous recognition and localization (e.g., object detection). The
+encoder-decoder architectures are proposed to resolve this by applying a
+decoder network onto a backbone model designed for classification tasks. In
+this paper, we argue encoder-decoder architecture is ineffective in generating
+strong multi-scale features because of the scale-decreased backbone. We propose
+SpineNet, a backbone with scale-permuted intermediate features and cross-scale
+connections that is learned on an object detection task by Neural Architecture
+Search. Using similar building blocks, SpineNet models outperform ResNet-FPN
+models by ~3% AP at various scales while using 10-20% fewer FLOPs. In
+particular, SpineNet-190 achieves 52.5% AP with a MaskR-CNN detector and
+achieves 52.1% AP with a RetinaNet detector on COCO for a single model without
+test-time augmentation, significantly outperforms prior art of detectors.
+SpineNet can transfer to classification tasks, achieving 5% top-1 accuracy
+improvement on a challenging iNaturalist fine-grained dataset. Code is at:
+https://github.com/tensorflow/tpu/tree/master/models/official/detection.},
+ arxiv_url = {https://arxiv.org/pdf/1912.05027v3.pdf},
+ author = {Xianzhi Du and Tsung-Yi Lin and Pengchong Jin and Golnaz Ghiasi and Mingxing Tan and Yin Cui and Quoc V. Le and Xiaodan Song},
+ title = {Spinenet: Learning scale-permuted backbone for recognition and localization},
+ year = {2019}
+}
+
+@article{figurnov_2016_spatially,
+ abstract = {This paper proposes a deep learning architecture based on Residual Network
+that dynamically adjusts the number of executed layers for the regions of the
+image. This architecture is end-to-end trainable, deterministic and
+problem-agnostic. It is therefore applicable without any modifications to a
+wide range of computer vision problems such as image classification, object
+detection and image segmentation. We present experimental results showing that
+this model improves the computational efficiency of Residual Networks on the
+challenging ImageNet classification and COCO object detection datasets.
+Additionally, we evaluate the computation time maps on the visual saliency
+dataset cat2000 and find that they correlate surprisingly well with human eye
+fixation positions.},
+ arxiv_url = {https://arxiv.org/pdf/1612.02297v2.pdf},
+ author = {Michael Figurnov and Maxwell D. Collins and Yukun Zhu and Li Zhang and Jonathan Huang and Dmitry Vetrov and Ruslan Salakhutdinov},
+ title = {Spatially adaptive computation time for residual networks},
+ year = {2016}
+}
+
+@article{gao_2019_new,
+ abstract = {Representing features at multiple scales is of great importance for numerous
+vision tasks. Recent advances in backbone convolutional neural networks (CNNs)
+continually demonstrate stronger multi-scale representation ability, leading to
+consistent performance gains on a wide range of applications. However, most
+existing methods represent the multi-scale features in a layer-wise manner. In
+this paper, we propose a novel building block for CNNs, namely Res2Net, by
+constructing hierarchical residual-like connections within one single residual
+block. The Res2Net represents multi-scale features at a granular level and
+increases the range of receptive fields for each network layer. The proposed
+Res2Net block can be plugged into the state-of-the-art backbone CNN models,
+e.g., ResNet, ResNeXt, and DLA. We evaluate the Res2Net block on all these
+models and demonstrate consistent performance gains over baseline models on
+widely-used datasets, e.g., CIFAR-100 and ImageNet. Further ablation studies
+and experimental results on representative computer vision tasks, i.e., object
+detection, class activation mapping, and salient object detection, further
+verify the superiority of the Res2Net over the state-of-the-art baseline
+methods. The source code and trained models are available on
+https://mmcheng.net/res2net/.},
+ arxiv_url = {https://arxiv.org/pdf/1904.01169v3.pdf},
+ author = {Shang-Hua Gao and Ming-Ming Cheng and Kai Zhao and Xin-Yu Zhang and Ming-Hsuan Yang and Philip Torr},
+ doi = {10.1109/TPAMI.2019.2938758},
+ journal = {IEEE TPAMI 2021},
+ title = {Res2net: A new multi-scale backbone architecture},
+ year = {2019}
+}
+
+@article{ghiasi_2019_nas,
+ abstract = {Current state-of-the-art convolutional architectures for object detection are
+manually designed. Here we aim to learn a better architecture of feature
+pyramid network for object detection. We adopt Neural Architecture Search and
+discover a new feature pyramid architecture in a novel scalable search space
+covering all cross-scale connections. The discovered architecture, named
+NAS-FPN, consists of a combination of top-down and bottom-up connections to
+fuse features across scales. NAS-FPN, combined with various backbone models in
+the RetinaNet framework, achieves better accuracy and latency tradeoff compared
+to state-of-the-art object detection models. NAS-FPN improves mobile detection
+accuracy by 2 AP compared to state-of-the-art SSDLite with MobileNetV2 model in
+[32] and achieves 48.3 AP which surpasses Mask R-CNN [10] detection accuracy
+with less computation time.},
+ arxiv_url = {https://arxiv.org/pdf/1904.07392v1.pdf},
+ author = {Golnaz Ghiasi and Tsung-Yi Lin and Ruoming Pang and Quoc V. Le},
+ title = {Nas-fpn: Learning scalable feature pyramid architecture for object detection},
+ year = {2019}
+}

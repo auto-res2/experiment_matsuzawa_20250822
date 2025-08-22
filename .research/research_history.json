@@ -6,5 +6,52 @@
     "gradient compression federated privacy",
     "efficient secure aggregation federated",
     "RDP accounting federated learning"
+  ],
+  "research_study_list": [
+    {
+      "title": "Practical and Private (Deep) Learning Without Sampling or Shuffling"
+    },
+    {
+      "title": "Personalization Improves Privacy-Accuracy Tradeoffs in Federated Learning"
+    },
+    {
+      "title": "Personalization Improves Privacy-Accuracy Tradeoffs in Federated Learning"
+    },
+    {
+      "title": "Personalization Improves Privacy-Accuracy Tradeoffs in Federated Learning"
+    },
+    {
+      "title": "Personalization Improves Privacy-Accuracy Tradeoffs in Federated Learning"
+    },
+    {
+      "title": "Renyi Differential Privacy of The Subsampled Shuffle Model In Distributed Learning"
+    },
+    {
+      "title": "SoteriaFL: A Unified Framework for Private Federated Learning with Communication Compression"
+    },
+    {
+      "title": "Private Federated Learning with Autotuned Compression"
+    },
+    {
+      "title": "Acceleration for Compressed Gradient Descent in Distributed and Federated Optimization"
+    },
+    {
+      "title": "RFLPA: A Robust Federated Learning Framework against Poisoning Attacks with Secure Aggregation"
+    },
+    {
+      "title": "Elastic Aggregation for Federated Optimization"
+    },
+    {
+      "title": "The Resource Problem of Using Linear Layer Leakage Attack in Federated Learning"
+    },
+    {
+      "title": "Differentially Private Stochastic Gradient Descent with Fixed-Size Minibatches: Tighter RDP Guarantees with or without Replacement"
+    },
+    {
+      "title": "Share Your Representation Only: Guaranteed Improvement of the Privacy-Utility Tradeoff in Federated Learning"
+    },
+    {
+      "title": "The Fundamental Price of Secure Aggregation in Differentially Private Federated Learning"
+    }
   ]
 }

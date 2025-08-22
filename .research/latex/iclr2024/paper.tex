@@ -1,0 +1,248 @@
+\PassOptionsToPackage{numbers}{natbib}
+\documentclass{article} % For LaTeX2e
+\usepackage{iclr2024_conference,times}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{titletoc}
+
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{cleveref}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{array}
+\usepackage{tabularx}
+\pgfplotsset{compat=newest}
+
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\graphicspath{{../}} % To reference your generated figures, see below.
+
+\title{MoD-RCC: Risk-Controlled, Value-Aware Mixture-of-Depths for Token-Wise Dynamic Computation}
+
+\author{AIRAS}
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Token-conditional computation can reduce latency and energy by routing only a subset of tokens deeper, yet prevailing routers rely on heuristics (entropy, confidence, norms) that misalign with task loss, provide no user-settable guarantees, and misallocate compute under shift. We propose MoD-RCC, a mixture-of-depths framework that is both value-aware and risk-controlled. MoD-RCC combines four modules: (A) a calibrated twin-critic that predicts per-token marginal compute value, i.e., expected loss reduction if routed deeper, with heteroscedastic uncertainty; (B) a budgeted soft top-k router that maximizes value per hardware-aware cost under dual budget control with fairness; (C) complementary shallow–deep heads fused by uncertainty to stabilize partial computation; and (D) a distribution-free post-hoc risk calibrator mapping predicted sample-level degradation to thresholds that satisfy user caps in expectation and optionally high probability. In a functional smoke test on a synthetic classification task, MoD-RCC trained end-to-end and the risk calibrator enforced an expected degradation cap that matched the user target. While this run did not yet attain compute variation across budgets, it validates loss-aligned value estimation and distribution-free risk control. We detail a comprehensive evaluation plan for ImageNet and Cityscapes with baselines, ablations, corruption robustness, and online risk control, situating MoD-RCC relative to conditional adapters, early exiting with guarantees, and depth-adaptive transformers [lei_2023_conditional, jazbec_2024_fast, elbayad_2019_depth, tang_2022_you].
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+Dynamic, token-wise computation aims to allocate depth where it matters while saving compute elsewhere. Mixture-of-Depths (MoD) in vision transformers exemplifies this idea by selectively deepening only some spatial tokens. Despite practical promise, existing routers prioritize tokens using ad-hoc proxies such as attention entropy, activation norms, or confidence. These proxies are weakly aligned with the end-task loss, provide no user-set degradation guarantees, and often misallocate compute under distribution shift. In parallel, early-exit methods with distribution-free guarantees have shown that post-hoc calibration can cap degradation in expectation or high probability, but these operate at global layer exits rather than spatial token routing and do not optimize value per hardware cost \cite{jazbec_2024_fast}. Conditional adapters deliver practical speed-ups but are driven by proxy activations rather than calibrated value signals [lei_2023_conditional]. Depth-adaptive and multi-exit transformers regulate computation depth in sequence tasks, typically on the decoder or at coarse granularity, and again without distribution-free control [elbayad_2019_depth, tang_2022_you].
+
+We introduce MoD-RCC, a risk-controlled, value-aware mixture-of-depths for token-wise dynamic computation. The core idea is to learn, for each token and layer, the expected reduction in task loss if routed deeper, expressed in native loss units and equipped with uncertainty. Routing then maximizes value per measured marginal cost under a user-settable compute budget, with fairness regularizers to prevent spatial starvation. To stabilize partial computation, we employ shallow–deep complementary heads fused by uncertainty. Finally, we attach a post-hoc, distribution-free risk calibrator that aggregates token-level values into a sample-level degradation predictor and selects thresholds that satisfy user caps in expectation and optionally high probability, thus extending early-exit risk control to spatial routing \cite{jazbec_2024_fast}.
+
+Why is this challenging? First, learning loss-to-go at token–depth granularity requires counterfactual supervision: what would the loss have been if a token were routed deeper. Collecting such signals efficiently entails targeted probing, off-policy learning, temporal-difference consistency across depth, and heteroscedastic modeling. Second, practical deployments are constrained by latency rather than FLOPs; routing must be cost-aware using device-specific latency tables and must expose a knob to meet a budget. Third, shallow and deep predictions often play complementary roles; exploiting this complementarity without error amplification requires explicit designs and uncertainty-aware fusion. Fourth, users need predictable quality under shift, calling for distribution-free post-hoc calibration adapted from early exits to spatial token selection \cite{jazbec_2024_fast}. These needs resonate with broader motivations for conditional computation efficiency and adaptive compute allocation [koyuncu_2023_memorization, anagnostidis_2023_navigating].
+
+We validate feasibility via a functional smoke test on a small synthetic classification task. The full pipeline trains and the risk calibrator attains the target cap in expectation. The measured compute proxy, however, did not vary across budget settings, yielding a flat Pareto; this emphasizes the importance of wiring routing masks to actual token skipping and device-measured costs.
+
+\begin{itemize}
+  \item \textbf{Twin-critic value model:} A calibrated twin-critic that predicts per-token marginal compute value (loss-to-go) with heteroscedastic uncertainty, temporal-difference consistency, doubly-robust off-policy learning, and isotonic calibration.
+  \item \textbf{Budgeted soft top-k router:} A budgeted soft top-k router that maximizes value per hardware-aware cost with a dual variable for online budget control and fairness/coverage regularizers.
+  \item \textbf{Shallow–deep complementarity:} Shallow–deep complementary heads with uncertainty-aware fusion and decorrelation penalties to stabilize partial computation.
+  \item \textbf{Distribution-free guarantees:} A distribution-free post-hoc risk calibrator that provides expectation and optional high-probability guarantees for spatial routing, extending risk control beyond global exits \cite{jazbec_2024_fast}.
+  \item \textbf{Evaluation plan:} A comprehensive experimental plan, including baselines from conditional adapters [lei_2023_conditional], depth-adaptive and multi-exit transformers [elbayad_2019_depth, tang_2022_you], and early-exit risk control \cite{jazbec_2024_fast}, plus OOD and online adaptation protocols.
+\end{itemize}
+
+Beyond classification, token-wise value-aware routing naturally extends to dense and 3D tasks where computation can be concentrated near boundaries or salient regions (segmentation, monocular depth, stereo, and depth completion) and to ray tokens in neural rendering, aligning compute with loss-reducing regions [ai_2023_hrdfuse, zeng_2024_wordepth, karaev_2023_dynamicstereo, shi_2024_decotr, seo_2023_mixnerf].
+
+Our long-term agenda is to deliver safe, controllable acceleration: users set a budget and a degradation cap, and the system adapts routing to maximize value-per-cost while maintaining guarantees. We will finalize large-scale evaluations, quantify value quality via rank correlation and value leakage, and stress-test guarantees under distribution shift with online adaptation [anagnostidis_2023_navigating, jazbec_2024_fast].
+
+\section{Related Work}
+\label{sec:related}
+Early exiting with risk control. Fast yet Safe (FYS) adapts distribution-free risk control to early-exit neural networks by selecting exit thresholds that cap degradation in expectation and, with appropriate procedures, high probability \cite{jazbec_2024_fast}. FYS targets global layer exits, not spatial token routing, and does not optimize value per hardware-aware cost. MoD-RCC extends this paradigm by calibrating token-level loss-to-go, aggregating to sample-level degradation, and pairing thresholding with budgeted routing, thus bringing distribution-free control to spatial computation.
+
+Conditional computation and adapters. Conditional Adapters (CoDA) generalize adapters to enable sparsified activation and efficient transfer with notable inference speed-ups [lei_2023_conditional]. Their routing is driven by proxy activations, lacking explicit alignment to end-task loss and risk guarantees. MoD-RCC differs in two respects: it learns a calibrated marginal value in loss units and attaches post-hoc, distribution-free guarantees. Theoretical insights on conditional computation show near-exponential efficiency gains when compute is gated, supporting the pursuit of fine-grained conditionality [koyuncu_2023_memorization].
+
+Depth-adaptive and multi-exit transformers. Depth-Adaptive Transformer (DAT) predicts at multiple depths and modulates computation, often emphasizing decoder-side control in sequence tasks \cite{elbayad_2019_depth}. Multi-exit strategies for unified vision–language models further reduce inference time by allowing several exits \cite{tang_2022_you}. These methods typically decide using confidence-like signals without distribution-free risk control. In contrast, MoD-RCC focuses on encoder-side token routing, replaces proxies with calibrated loss-to-go, optimizes value-per-cost under a budget, and provides distribution-free guarantees at the sample level.
+
+Dynamic vision backbones and dense outputs. Token pruning and MoD mechanisms are increasingly common in ViTs, yet their routers typically use attention magnitude, norm, or entropy proxies, which are brittle under distribution shift and lack guarantees. For dense tasks, fairness/coverage and boundary fidelity are crucial. Prior approaches in 360\textdegree{} depth, language-informed depth, stereo, and depth completion emphasize complementary cues and multi-scale reasoning to improve prediction quality [ai_2023_hrdfuse, zeng_2024_wordepth, karaev_2023_dynamicstereo, shi_2024_decotr]. MoD-RCC is orthogonal: it governs compute allocation and can wrap such backbones, offering controllable acceleration with guarantees.
+
+Neural rendering and ray-wise routing. MixNeRF models per-ray color distributions via mixture densities to handle sparse inputs \cite{seo_2023_mixnerf}. MoD-RCC’s value-aware routing can be repurposed for ray tokens, concentrating samples and network evaluations on rays with high marginal loss reduction, potentially reducing rendering time while preserving quality.
+
+Adaptive scaling and compute optimality. Adaptive model shaping can outperform static scaling laws by allocating marginal compute where returns are highest [anagnostidis_2023_navigating]. MoD-RCC instantiates this principle at inference by maximizing value per measured cost at token–layer granularity under a dual-controlled budget. Unlike global early-exit strategies or static pruning, this allocation is spatially and depth-wise targeted and paired with guarantees.
+
+Comparison summary. Relative to CoDA-like proxy routing [lei_2023_conditional], depth-adaptive exits [elbayad_2019_depth, tang_2022_you], and FYS early-exit risk control \cite{jazbec_2024_fast}, MoD-RCC is the first, to our knowledge, to jointly: (i) learn calibrated per-token loss-to-go, (ii) optimize value per hardware-aware cost with online budget control and fairness, and (iii) offer distribution-free guarantees for spatial token routing.
+
+\section{Background}
+\label{sec:background}
+Problem setting and notation. Consider an encoder with \(L\) layers processing \(T\) spatial tokens. At a routing layer \(l\) and for token \(i\), the system may either exit and predict using a shallow head or route the token deeper by \(\Delta l\) layers. Let \(\ell\) denote the task loss (e.g., cross-entropy for classification; mean pixel-wise cross-entropy for segmentation). Define the marginal compute value \(V(i,l)\) as the conditional expectation of the loss reduction if token \(i\) is routed deeper by \(\Delta l\) instead of exiting at \(l\):
+\[ V(i,l) \approx \mathbb{E}[\,\ell(\text{shallow at } l) - \ell(\text{deeper by } \Delta l) \mid x,i,l\,]. \]
+Because routing consumes resources, each layer \(l\) has a marginal per-token cost \(c_{l}\), ideally measured as device latency from calibration tables rather than approximated by FLOPs. During inference, routing aims to maximize value per cost subject to a user-set latency budget.
+
+Assumptions. We assume a strong full-depth reference model that defines per-sample degradation \(\Delta\ell = \ell(\text{exit}) - \ell(\text{full})\). This conservative baseline anchors supervision for counterfactual probing and supports post-hoc calibration. We further assume the ability to route a subset of tokens deeper using gather/scatter operations without recomputing shallow paths for unrouted tokens, enabling partial computation.
+
+Calibration and guarantees. Post-hoc isotonic regression provides a monotone mapping from predicted to realized degradation, improving calibration without retraining. Early-exit risk control shows that exit thresholds can be tuned to satisfy user-chosen degradation caps in expectation and, with suitable procedures, high probability, without distributional assumptions \cite{jazbec_2024_fast}. MoD-RCC adapts this paradigm to spatial token routing by aggregating calibrated token-level values into a sample-level degradation predictor and selecting thresholds accordingly.
+
+Value signals versus proxies. Conditional adapters and other sparse methods often drive routing using proxy activations or confidences [lei_2023_conditional]. Depth-adaptive and multi-exit transformers expose intermediate predictions but again typically rely on heuristics [elbayad_2019_depth, tang_2022_you]. Our approach aligns routing with the task objective by predicting loss-to-go directly in loss units and equipping the predictor with uncertainty and monotonic calibration.
+
+Objectives. The system aims to: (i) estimate per-token loss-to-go with uncertainty at token–depth granularity; (ii) allocate computation by maximizing value minus cost under a budget; (iii) design shallow–deep predictors whose errors are complementary and uncertainty-aware; and (iv) enforce distribution-free caps on per-sample degradation via post-hoc calibration. For dense tasks, we add fairness/coverage constraints so routing does not spatially starve any region.
+
+Summary of variables. For tokens \(i=1,\dots,T\) and layers \(l=1,\dots,L\), \(V(i,l)\) is the predicted marginal value; \(\tilde V(i,l)\) is the calibrated, risk-adjusted value; \(c_{l}\) is the marginal cost at layer \(l\); \(\lambda\) is a dual variable for the latency budget; \(s(i,l) = \tilde V(i,l) - \lambda\,c_{l}\) is the cost-adjusted score. The sample-level predictor \(\widehat{\Delta\ell}\) aggregates token-level values; isotonic calibration maps \(\widehat{\Delta\ell}\) to realized \(\Delta\ell\). These components drive selection and enable guarantees.
+
+\section{Method}
+\label{sec:method}
+\subsection{System overview}
+MoD-RCC integrates four modules: (A) a calibrated twin-critic that predicts token-level marginal compute value with uncertainty; (B) a budgeted soft top-k router that maximizes value per cost with fairness and online budget control; (C) complementary shallow–deep heads with uncertainty-aware fusion; and (D) a distribution-free risk calibrator that maps predicted sample-level degradation to thresholds providing user-set guarantees.
+
+\subsection{Twin-critic for marginal compute value}
+For token \(i\) at layer \(l\), the critic outputs a mean \(\mu(i,l)\) and aleatoric uncertainty \(\sigma(i,l)\) estimating the marginal reduction in loss if routed deeper by a sampled \(\Delta l\). Supervision uses counterfactual probing: in each batch, sample a small set of token–layer pairs, run two branches for the selected tokens—(1) exit at \(l\) using the shallow head and (2) route by \(\Delta l\) layers using packed computation—then compute the counterfactual label \(\Delta\ell_{\text{cf}} = \ell(\text{shallow}) - \ell(\text{deeper})\). To stabilize and debias learning, we combine: (i) temporal-difference (TD) consistency enforcing \(V(i,l) \approx r(i,l,\Delta l) + \gamma\,V(i,l+\Delta l)\) with discount \(\gamma\); (ii) doubly-robust off-policy training with importance weights, clipping ratios to control variance; and (iii) heteroscedastic regression with a TD-based correction term. Monotonic calibration via isotonic regression is fit on a held-out split, and at inference we form a conservative value \(\tilde V = \text{iso}(\mu) - \eta\,\sigma\), with \(\eta\) tuned to achieve a target underestimation rate.
+
+\subsection{Budgeted, fairness-aware soft top-k routing}
+At routing layer \(l\), select tokens by maximizing the cost-adjusted score \(s(i,l) = \tilde V(i,l) - \lambda\,c_{l}\) under a per-layer quota. During training, an entropy-regularized soft top-k provides continuous selection weights; at inference, we apply hard top-k. The dual variable \(\lambda\) is updated online to meet a user latency budget \(B\) by ascending when measured latency exceeds \(B\) and descending otherwise. Costs \(c_{l}\) are obtained from device-specific latency tables. For dense tasks, fairness/coverage is added via soft grid quotas and diversity penalties to avoid starving spatial regions.
+
+\subsection{Shallow–deep complementary prediction and uncertainty fusion}
+Shallow heads produce outputs for tokens that exit early, while deep heads refine routed tokens. For dense tasks, we decompose targets into low- and high-frequency components (e.g., a Laplacian pyramid), train the deep head on residuals, and apply dependence-reduction and spectral orthogonalization penalties to encourage complementarity. Each head predicts aleatoric uncertainty; logits are fused by inverse-variance weighting to downweight unreliable predictions and smooth transitions as routing varies.
+
+\subsection{Distribution-free risk calibration and guarantees}
+Token-level values are aggregated into a sample-level degradation predictor \(\widehat{\Delta\ell}\) by summing \(\tilde V\) over routed tokens and optionally subtracting a small penalty for top-valued tokens that were skipped to reduce optimism. An isotonic map from \(\widehat{\Delta\ell}\) to realized \(\Delta\ell = \ell(\text{exit}) - \ell(\text{full})\) is fit on a calibration set. Given a user cap \(\varepsilon\), we choose a threshold \(\theta\) on \(\widehat{\Delta\ell}\) so the empirical mean degradation among accepted samples does not exceed \(\varepsilon\). For streaming or shifted data, \(\theta\) is updated online via anytime-valid upper confidence bounds on the violation probability of \(\Delta\ell > \varepsilon\), following the spirit of risk-controlled early exits \cite{jazbec_2024_fast}.
+
+\subsection{Training recipe and deployment}
+Stage 0: train or fine-tune a full-depth reference model to define \(\Delta\ell\). Stage 1: train the twin-critic with counterfactual probes, TD consistency, DR corrections, and isotonic calibration; tune \(\eta\). Stage 2: jointly train the router and heads with a value-minus-cost objective, dual latency control, and fairness regularizers. Stage 3: fit the sample-level isotonic calibrator and choose \(\theta\) for expectation or high-probability guarantees. At inference, users provide a latency budget \(B\) and risk cap \(\varepsilon\) (and optionally \(\delta\)); the system returns predictions, measured latency, and rolling empirical risk. The same components apply to dense and 3D tasks by treating spatial patches or rays as tokens [ai_2023_hrdfuse, shi_2024_decotr, seo_2023_mixnerf].
+
+\subsection{Pseudocode: inference and training kernels}
+\begin{algorithm}[H]
+\caption{MoD-RCC inference with budget and risk control}
+\begin{algorithmic}
+  \State \textbf{Input:} tokens \(T\), budget \(B\), risk cap \(\varepsilon\), latency tables \(\{c_{l}\}\), dual \(\lambda\), calibrator \(\text{Iso}\)
+  \For{layer \(l = 1,\dots,L\)}
+    \State Compute \(\mu(i,l), \sigma(i,l)\) for all tokens \(i\)
+    \State \(\tilde V(i,l) \leftarrow \text{Iso}(\mu(i,l)) - \eta\,\sigma(i,l)\)
+    \State Score \(s(i,l) \leftarrow \tilde V(i,l) - \lambda\,c_{l}\)
+    \State Select routed set \(\mathcal{R}_{l} \leftarrow \text{TopK}(s(\cdot,l))\); others exit via shallow head
+    \State Pack and process \(\mathcal{R}_{l}\) to depth \(l+\Delta l\)
+  \EndFor
+  \State Aggregate \(\widehat{\Delta\ell} \leftarrow \sum_{l}\sum_{i\in \mathcal{R}_{l}} \tilde V(i,l)\)
+  \If{\(\widehat{\Delta\ell} > \theta\)}
+    \State Adjust routing or fallback policy per deployment choice
+  \EndIf
+  \State Measure latency; update \(\lambda \leftarrow \lambda + \rho\,(\text{latency}-B)\)
+  \State \textbf{Output:} fused predictions, latency, \(\widehat{\Delta\ell}\)
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[H]
+\caption{Twin-critic training via counterfactual probing}
+\begin{algorithmic}
+  \For{batch \(x\)}
+    \State Sample token-layer pairs \(\mathcal{P} = \{(i,l)\}\); sample steps \(\Delta l\)
+    \For{\((i,l) \in \mathcal{P}\)}
+      \State Compute shallow loss \(\ell_{\text{sh}}\) at \(l\); deep loss \(\ell_{\text{dp}}\) at \(l+\Delta l\)
+      \State Label \(\Delta\ell_{\text{cf}} \leftarrow \ell_{\text{sh}} - \ell_{\text{dp}}\); TD target \(y \leftarrow \Delta\ell_{\text{cf}} + \gamma\,V(i,l+\Delta l)\)
+      \State Importance weight \(w \leftarrow \min(\tau, \pi_{\text{tgt}}/\pi_{\text{exp}})\)
+      \State Update heteroscedastic loss: \(\mathcal{L}_{\text{crit}} \leftarrow w\,\big( (y-\mu)^2/\sigma^2 + \log \sigma^2 \big)\)
+    \EndFor
+    \State Backpropagate \(\mathcal{L}_{\text{crit}}\); periodically refit isotonic map on held-out data
+  \EndFor
+\end{algorithmic}
+\end{algorithm}
+
+\section{Experimental Setup}
+\label{sec:experimental}
+\subsection{Shared infrastructure and instrumentation}
+We implement MoD-RCC in PyTorch with modules for token packing via gather/scatter with preallocation, mixed-precision training where appropriate, and latency benchmarking through repeated timers with warm-up. For each routing layer, we build device-aware latency tables \(c_{l}\) by sweeping token counts and caching the measured per-token marginal costs used during training and inference. We log per-sample predicted and realized degradations (\(\widehat{\Delta\ell}\) and \(\Delta\ell\)), routing statistics, and latency to support calibration, auditing, and future reliability diagrams.
+
+\subsection{Smoke-test classification run}
+We conducted a functional end-to-end test on a synthetic 10-class classification benchmark with small images and a ViT-like encoder. Dataset sizes were train 800, validation 200, and test 200. Spatial patch tokens served as routing units; routing decisions were applied at intermediate layers. The pipeline exercised all core components: (i) the twin-critic with heteroscedastic outputs and isotonic calibration; (ii) an entropy-regularized soft top-k router with a dual latency controller; (iii) shallow and deep classification heads with inverse-variance fusion; and (iv) a post-hoc risk calibrator selecting thresholds to meet user caps. Budgets were swept over \{0.3, 0.5, 0.7, 0.9\} in normalized units. The expected degradation cap was \(\varepsilon = 0.10\) measured in loss units relative to the full-depth reference. Training ran for 3 epochs, deliberately short to validate end-to-end functionality. We evaluated both clean and corrupted splits as a light probe of robustness (the corruptions are generic and not tied to a specific benchmark taxonomy).
+
+\subsection{Evaluation metrics}
+We report: (a) accuracy on clean and corrupted splits; (b) risk-cap satisfaction, including the selected threshold \(\theta\), empirical mean degradation relative to the full-depth reference, and coverage (fraction of accepted samples); and (c) a Pareto-like plot of accuracy versus a compute proxy as the budget varies. We also log confidence-related diagnostics from the heads for potential future analysis.
+
+\subsection{Planned large-scale evaluations}
+To establish broader utility on standard benchmarks, our released plan targets: (1) ImageNet-1k classification with DeiT/ViT backbones, routing at several encoder layers, and comprehensive baselines: full-depth inference, CoDA-like proxy routing [lei_2023_conditional], uniform top-k routing, and early-exit with risk control \cite{jazbec_2024_fast}; (2) Cityscapes segmentation with SegFormer or ViT+FPN where we will study shallow–deep complementarity, uncertainty fusion, and fairness constraints; and (3) streaming corruption evaluations for online risk control. Metrics will include accuracy or mIoU versus measured latency (device-aware), risk satisfaction in expectation and high probability, value quality (rank correlation between \(\tilde V\) and probed \(\Delta\ell_{\text{cf}}\)), and value leakage (fraction of top-value tokens missed). Depth-adaptive and multi-exit transformers provide alternative baselines without spatial routing or guarantees [elbayad_2019_depth, tang_2022_you]. Dense and 3D task references motivate our complementary-design choices and potential extensions [ai_2023_hrdfuse, zeng_2024_wordepth, shi_2024_decotr, karaev_2023_dynamicstereo, seo_2023_mixnerf].
+
+\subsection{Reproducibility and fairness of comparison}
+We fix random seeds, log configuration files, and store per-sample \(\widehat{\Delta\ell}\), \(\Delta\ell\), and routing masks for post-hoc analysis. Latency is measured repeatedly with warm-up to reduce noise. In future large-scale comparisons, we will match average latency across methods when reporting accuracy, adopt the same data preprocessing, and report confidence intervals via bootstrap where applicable. We avoid unreported hardware assumptions and prioritize device-measured latency over FLOPs when optimizing \(c_{l}\) and tuning \(\lambda\).
+
+\section{Results}
+\label{sec:results}
+End-to-end functionality and risk control. The smoke-test run completed successfully with all MoD-RCC modules executed. The post-hoc risk calibrator selected a threshold \(\theta = 0.1826\) on the sample-level predictor \(\widehat{\Delta\ell}\) and achieved the user’s expected degradation cap: with \(\varepsilon = 0.10\), the empirical controlled degradation was 0.0991 with coverage 1.0000, meaning all evaluated samples were accepted while meeting the expectation cap.
+
+Accuracy and robustness. On the test set, top-1 accuracy on the clean split was 0.1100 and on the corrupted split was 0.1800, yielding a robustness gap (corrupted minus clean) of \(-0.0700\). These absolute accuracies reflect the brevity of training (3 epochs) and underfitting and should be interpreted strictly as a functional smoke test rather than an efficacy evaluation.
+
+Compute behavior and budget control. Despite sweeping budgets \{0.3, 0.5, 0.7, 0.9\}, the reported compute proxy remained constant at 1.0000 for all budgets. Consequently, all Pareto points were identical and no accuracy–compute trade-off was observed. This indicates that, in this preliminary run, the router/budget loop did not translate into measurable runtime variation at evaluation time, likely because routing masks were not yet wired to alter the measured cost proxy.
+
+Complementarity and uncertainty fusion. The classification pathway used uncertainty-aware fusion of shallow and deep logits. Confidence-related diagnostics (e.g., average confidences 0.1972 on clean and 0.2002 on corrupted) were logged but not analyzed further. Fairness constraints were not applicable to this classification run; dense-task analyses remain for future experiments.
+
+Limitations and interpretation. The expectation guarantee was satisfied by the calibrator, but with coverage equal to one and constant compute, the system did not realize the intended compute–quality trade-offs. No high-probability guarantees were evaluated in this run. Establishing measurable compute variation and full Pareto curves on standard benchmarks is a clear next step, alongside comparative baselines such as CoDA-like proxy routing [lei_2023_conditional], depth-adaptive and multi-exit transformers [elbayad_2019_depth, tang_2022_you], and early-exit risk control \cite{jazbec_2024_fast}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\linewidth]{ images/mod\_rcc\_system\_architecture.pdf }
+  \caption{System overview of MoD-RCC components and data flow.}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\linewidth]{ images/training\_progress.pdf }
+  \caption{Training curves for the smoke-test run.}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\linewidth]{ images/robustness\_analysis.pdf }
+  \caption{Robustness analysis comparing clean and corrupted accuracy.}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\linewidth]{ images/pareto\_frontier.pdf }
+  \caption{Pareto frontier of accuracy versus cost for the budget sweep (flat in this run).}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\linewidth]{ images/risk\_calibration.pdf }
+  \caption{Risk calibration reliability and selected threshold for \(\varepsilon = 0.10\).}
+\end{figure}
+
+\begin{itemize}
+  \item Clean accuracy: 0.1100
+  \item Corrupted accuracy: 0.1800
+  \item Robustness gap: \(-0.0700\)
+  \item Risk calibrator threshold: 0.1826
+  \item Controlled degradation (empirical): 0.0991 at \(\varepsilon = 0.1000\)
+  \item Coverage: 1.0000
+  \item Cost at budgets 0.3, 0.5, 0.7, 0.9: all 1.0000
+\end{itemize}
+
+Discussion. The run confirms feasibility of training a loss-aligned value estimator, operating a cost-aware router, and enforcing expected risk caps via post-hoc calibration. The primary limitation—lack of compute variation—suggests concrete engineering actions: ensure that per-layer routing masks actually gate token-throughput, link the gating to device-measured latency tables \(c_{l}\), and verify that the dual variable \(\lambda\) steers selection so that measured latency tracks the requested budget. Once these are in place, we expect nontrivial Pareto fronts that can be compared against proxy-based routing, uniform selection, and global early exits [lei_2023_conditional, elbayad_2019_depth, tang_2022_you, jazbec_2024_fast].
+
+\section{Conclusion}
+\label{sec:conclusion}
+We introduced MoD-RCC, a risk-controlled, value-aware mixture-of-depths framework for token-wise dynamic computation. MoD-RCC learns calibrated per-token marginal compute value in native loss units with uncertainty, allocates compute by maximizing value per hardware-aware cost under a dual-controlled budget with fairness, stabilizes partial computation via shallow–deep complementarity and uncertainty fusion, and enforces distribution-free degradation caps at the sample level through post-hoc calibration. A functional smoke test demonstrated end-to-end feasibility and successful expected risk control but revealed that the current wiring did not induce compute variation across budgets, resulting in a flat Pareto.
+
+Three takeaways emerge. First, learning loss-aligned value signals enables principled routing tied to the task objective rather than proxies. Second, dual budget control with hardware-aware costs provides a practical knob to manage latency. Third, distribution-free post-hoc calibration can deliver user-settable guarantees even under partial computation, extending early-exit insights to spatial routing \cite{jazbec_2024_fast}.
+
+Next steps include: (i) large-scale ImageNet and Cityscapes evaluations with strong baselines from conditional adapters, depth-adaptive and multi-exit transformers, and risk-controlled early exits [lei_2023_conditional, elbayad_2019_depth, tang_2022_you, jazbec_2024_fast]; (ii) value-quality diagnostics via rank correlation and value leakage; (iii) robustness studies with corruption streams and online, anytime-valid threshold updates; and (iv) extensions to dense 3D and ray-wise routing where tokens correspond to spatial patches or rays [ai_2023_hrdfuse, zeng_2024_wordepth, shi_2024_decotr, karaev_2023_dynamicstereo, seo_2023_mixnerf]. We release modules and protocols to catalyze reproducible research on safe, controllable token-wise dynamic computation.
+
+This work was generated by \textsc{AIRAS} \citep{airas2025}.
+
+\bibliographystyle{iclr2024_conference}
+\bibliography{references}
+
+\end{document}

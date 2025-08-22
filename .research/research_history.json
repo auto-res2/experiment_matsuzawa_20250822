@@ -1,0 +1,10 @@
+{
+  "research_topic": "グラデーション累積の動的最適化に関して改善したい",
+  "queries": [
+    "adaptive gradient accumulation",
+    "dynamic micro-batching",
+    "online batch size adaptation",
+    "gradient accumulation scheduling",
+    "microbatch size optimization"
+  ]
+}

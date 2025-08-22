@@ -5,3 +5,319 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{author_year_general,
+ title = {General Sequential Episodic Memory Model}
+}
+
+@article{author_year_vision,
+ title = {Vision Mamba Mender}
+}
+
+@article{author_year_vision,
+ title = {Vision Mamba Mender}
+}
+
+@article{author_year_vision,
+ title = {Vision Mamba Mender}
+}
+
+@article{cirone_2024_theoretical,
+ abstract = {Structured state-space models (SSMs) such as S4, stemming from the seminal
+work of Gu et al., are gaining popularity as effective approaches for modeling
+sequential data. Deep SSMs demonstrate outstanding performance across a diverse
+set of domains, at a reduced training and inference cost compared to
+attention-based transformers. Recent developments show that if the linear
+recurrence powering SSMs allows for multiplicative interactions between inputs
+and hidden states (e.g. GateLoop, Mamba, GLA), then the resulting architecture
+can surpass in both in accuracy and efficiency attention-powered foundation
+models trained on text, at scales of billion parameters. In this paper, we give
+theoretical grounding to this recent finding using tools from Rough Path
+Theory: we show that when random linear recurrences are equipped with simple
+input-controlled transitions (selectivity mechanism), then the hidden state is
+provably a low-dimensional projection of a powerful mathematical object called
+the signature of the input -- capturing non-linear interactions between tokens
+at distinct timescales. Our theory not only motivates the success of modern
+selective state-space models such as Mamba but also provides a solid framework
+to understand the expressive power of future SSM variants.},
+ arxiv_url = {https://arxiv.org/pdf/2402.19047v4.pdf},
+ author = {Nicola Muca Cirone and Antonio Orvieto and Benjamin Walker and Cristopher Salvi and Terry Lyons},
+ github_url = {https://github.com/Benjamin-Walker/selective-ssms-and-linear-cdes},
+ title = {Theoretical Foundations of Deep Selective State-Space Models},
+ year = {2024}
+}
+
+@article{dao_2024_transformers,
+ abstract = {While Transformers have been the main architecture behind deep learning's
+success in language modeling, state-space models (SSMs) such as Mamba have
+recently been shown to match or outperform Transformers at small to medium
+scale. We show that these families of models are actually quite closely
+related, and develop a rich framework of theoretical connections between SSMs
+and variants of attention, connected through various decompositions of a
+well-studied class of structured semiseparable matrices. Our state space
+duality (SSD) framework allows us to design a new architecture (Mamba-2) whose
+core layer is an a refinement of Mamba's selective SSM that is 2-8X faster,
+while continuing to be competitive with Transformers on language modeling.},
+ arxiv_url = {https://arxiv.org/pdf/2405.21060v1.pdf},
+ author = {Tri Dao and Albert Gu},
+ github_url = {https://github.com/state-spaces/mamba},
+ title = {Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality},
+ year = {2024}
+}
+
+@article{huynh_2019_multigrid,
+ abstract = {We introduce a novel approach to endowing neural networks with emergent,
+long-term, large-scale memory. Distinct from strategies that connect neural
+networks to external memory banks via intricately crafted controllers and
+hand-designed attentional mechanisms, our memory is internal, distributed,
+co-located alongside computation, and implicitly addressed, while being
+drastically simpler than prior efforts. Architecting networks with multigrid
+structure and connectivity, while distributing memory cells alongside
+computation throughout this topology, we observe the emergence of coherent
+memory subsystems. Our hierarchical spatial organization, parameterized
+convolutionally, permits efficient instantiation of large-capacity memories,
+while multigrid topology provides short internal routing pathways, allowing
+convolutional networks to efficiently approximate the behavior of fully
+connected networks. Such networks have an implicit capacity for internal
+attention; augmented with memory, they learn to read and write specific memory
+locations in a dynamic data-dependent manner. We demonstrate these capabilities
+on exploration and mapping tasks, where our network is able to self-organize
+and retain long-term memory for trajectories of thousands of time steps. On
+tasks decoupled from any notion of spatial geometry: sorting, associative
+recall, and question answering, our design functions as a truly generic memory
+and yields excellent results.},
+ arxiv_url = {https://arxiv.org/pdf/1906.05948v4.pdf},
+ author = {Tri Huynh and Michael Maire and Matthew R. Walter},
+ title = {Multigrid Neural Memory},
+ year = {2019}
+}
+
+@article{liang_2024_pointmamba,
+ abstract = {Transformers have become one of the foundational architectures in point cloud
+analysis tasks due to their excellent global modeling ability. However, the
+attention mechanism has quadratic complexity, making the design of a linear
+complexity method with global modeling appealing. In this paper, we propose
+PointMamba, transferring the success of Mamba, a recent representative state
+space model (SSM), from NLP to point cloud analysis tasks. Unlike traditional
+Transformers, PointMamba employs a linear complexity algorithm, presenting
+global modeling capacity while significantly reducing computational costs.
+Specifically, our method leverages space-filling curves for effective point
+tokenization and adopts an extremely simple, non-hierarchical Mamba encoder as
+the backbone. Comprehensive evaluations demonstrate that PointMamba achieves
+superior performance across multiple datasets while significantly reducing GPU
+memory usage and FLOPs. This work underscores the potential of SSMs in 3D
+vision-related tasks and presents a simple yet effective Mamba-based baseline
+for future research. The code will be made available at
+\url{https://github.com/LMD0311/PointMamba}.},
+ arxiv_url = {https://arxiv.org/pdf/2402.10739v5.pdf},
+ author = {Dingkang Liang and Xin Zhou and Wei Xu and Xingkui Zhu and Zhikang Zou and Xiaoqing Ye and Xiao Tan and Xiang Bai},
+ github_url = {https://github.com/LMD0311/PointMamba},
+ title = {PointMamba: A Simple State Space Model for Point Cloud Analysis},
+ year = {2024}
+}
+
+@article{liu_2024_vmamba,
+ abstract = {Designing computationally efficient network architectures remains an ongoing
+necessity in computer vision. In this paper, we adapt Mamba, a state-space
+language model, into VMamba, a vision backbone with linear time complexity. At
+the core of VMamba is a stack of Visual State-Space (VSS) blocks with the 2D
+Selective Scan (SS2D) module. By traversing along four scanning routes, SS2D
+bridges the gap between the ordered nature of 1D selective scan and the
+non-sequential structure of 2D vision data, which facilitates the collection of
+contextual information from various sources and perspectives. Based on the VSS
+blocks, we develop a family of VMamba architectures and accelerate them through
+a succession of architectural and implementation enhancements. Extensive
+experiments demonstrate VMamba's promising performance across diverse visual
+perception tasks, highlighting its superior input scaling efficiency compared
+to existing benchmark models. Source code is available at
+https://github.com/MzeroMiko/VMamba.},
+ arxiv_url = {https://arxiv.org/pdf/2401.10166v4.pdf},
+ author = {Yue Liu and Yunjie Tian and Yuzhong Zhao and Hongtian Yu and Lingxi Xie and Yaowei Wang and Qixiang Ye and Jianbin Jiao and Yunfan Liu},
+ github_url = {https://github.com/MzeroMiko/VMamba},
+ title = {VMamba: Visual State Space Model},
+ year = {2024}
+}
+
+@article{liu_2024_vmamba,
+ abstract = {Designing computationally efficient network architectures remains an ongoing
+necessity in computer vision. In this paper, we adapt Mamba, a state-space
+language model, into VMamba, a vision backbone with linear time complexity. At
+the core of VMamba is a stack of Visual State-Space (VSS) blocks with the 2D
+Selective Scan (SS2D) module. By traversing along four scanning routes, SS2D
+bridges the gap between the ordered nature of 1D selective scan and the
+non-sequential structure of 2D vision data, which facilitates the collection of
+contextual information from various sources and perspectives. Based on the VSS
+blocks, we develop a family of VMamba architectures and accelerate them through
+a succession of architectural and implementation enhancements. Extensive
+experiments demonstrate VMamba's promising performance across diverse visual
+perception tasks, highlighting its superior input scaling efficiency compared
+to existing benchmark models. Source code is available at
+https://github.com/MzeroMiko/VMamba.},
+ arxiv_url = {https://arxiv.org/pdf/2401.10166v4.pdf},
+ author = {Yue Liu and Yunjie Tian and Yuzhong Zhao and Hongtian Yu and Lingxi Xie and Yaowei Wang and Qixiang Ye and Jianbin Jiao and Yunfan Liu},
+ github_url = {https://github.com/MzeroMiko/VMamba},
+ title = {VMamba: Visual State Space Model},
+ year = {2024}
+}
+
+@article{liu_2024_vmamba,
+ abstract = {Designing computationally efficient network architectures remains an ongoing
+necessity in computer vision. In this paper, we adapt Mamba, a state-space
+language model, into VMamba, a vision backbone with linear time complexity. At
+the core of VMamba is a stack of Visual State-Space (VSS) blocks with the 2D
+Selective Scan (SS2D) module. By traversing along four scanning routes, SS2D
+bridges the gap between the ordered nature of 1D selective scan and the
+non-sequential structure of 2D vision data, which facilitates the collection of
+contextual information from various sources and perspectives. Based on the VSS
+blocks, we develop a family of VMamba architectures and accelerate them through
+a succession of architectural and implementation enhancements. Extensive
+experiments demonstrate VMamba's promising performance across diverse visual
+perception tasks, highlighting its superior input scaling efficiency compared
+to existing benchmark models. Source code is available at
+https://github.com/MzeroMiko/VMamba.},
+ arxiv_url = {https://arxiv.org/pdf/2401.10166v4.pdf},
+ author = {Yue Liu and Yunjie Tian and Yuzhong Zhao and Hongtian Yu and Lingxi Xie and Yaowei Wang and Qixiang Ye and Jianbin Jiao and Yunfan Liu},
+ github_url = {https://github.com/MzeroMiko/VMamba},
+ title = {VMamba: Visual State Space Model},
+ year = {2024}
+}
+
+@article{ramapuram_2021_kanerva,
+ abstract = {Episodic and semantic memory are critical components of the human memory
+model. The theory of complementary learning systems (McClelland et al., 1995)
+suggests that the compressed representation produced by a serial event
+(episodic memory) is later restructured to build a more generalized form of
+reusable knowledge (semantic memory). In this work we develop a new principled
+Bayesian memory allocation scheme that bridges the gap between episodic and
+semantic memory via a hierarchical latent variable model. We take inspiration
+from traditional heap allocation and extend the idea of locally contiguous
+memory to the Kanerva Machine, enabling a novel differentiable block allocated
+latent memory. In contrast to the Kanerva Machine, we simplify the process of
+memory writing by treating it as a fully feed forward deterministic process,
+relying on the stochasticity of the read key distribution to disperse
+information within the memory. We demonstrate that this allocation scheme
+improves performance in memory conditional image generation, resulting in new
+state-of-the-art conditional likelihood values on binarized MNIST (<=41.58
+nats/image) , binarized Omniglot (<=66.24 nats/image), as well as presenting
+competitive performance on CIFAR10, DMLab Mazes, Celeb-A and ImageNet32x32.},
+ arxiv_url = {https://arxiv.org/pdf/2103.03905v3.pdf},
+ author = {Jason Ramapuram and Yan Wu and Alexandros Kalousis},
+ journal = {ICLR 2021},
+ title = {Kanerva++: Extending the Kanerva Machine With Differentiable, Locally Block Allocated Latent Memory},
+ year = {2021}
+}
+
+@article{wang_2023_stablessm,
+ abstract = {In this paper, we investigate the long-term memory learning capabilities of
+state-space models (SSMs) from the perspective of parameterization. We prove
+that state-space models without any reparameterization exhibit a memory
+limitation similar to that of traditional RNNs: the target relationships that
+can be stably approximated by state-space models must have an exponential
+decaying memory. Our analysis identifies this "curse of memory" as a result of
+the recurrent weights converging to a stability boundary, suggesting that a
+reparameterization technique can be effective. To this end, we introduce a
+class of reparameterization techniques for SSMs that effectively lift its
+memory limitations. Besides improving approximation capabilities, we further
+illustrate that a principled choice of reparameterization scheme can also
+enhance optimization stability. We validate our findings using synthetic
+datasets, language models and image classifications.},
+ arxiv_url = {https://arxiv.org/pdf/2311.14495v4.pdf},
+ author = {Shida Wang and Qianxiao Li},
+ github_url = {https://github.com/state-spaces/mamba},
+ title = {StableSSM: Alleviating the Curse of Memory in State-space Models through Stable Reparameterization},
+ year = {2023}
+}
+
+@article{wang_2023_state,
+ abstract = {State-space models have gained popularity in sequence modelling due to their
+simple and efficient network structures. However, the absence of nonlinear
+activation along the temporal direction limits the model's capacity. In this
+paper, we prove that stacking state-space models with layer-wise nonlinear
+activation is sufficient to approximate any continuous sequence-to-sequence
+relationship. Our findings demonstrate that the addition of layer-wise
+nonlinear activation enhances the model's capacity to learn complex sequence
+patterns. Meanwhile, it can be seen both theoretically and empirically that the
+state-space models do not fundamentally resolve the issue of exponential
+decaying memory. Theoretical results are justified by numerical verifications.},
+ arxiv_url = {https://arxiv.org/pdf/2309.13414v3.pdf},
+ author = {Shida Wang and Beichen Xue},
+ title = {State-space models with layer-wise nonlinearity are universal approximators with exponential decaying memory},
+ year = {2023}
+}
+
+@article{zhu_2024_vision,
+ abstract = {Recently the state space models (SSMs) with efficient hardware-aware designs,
+i.e., the Mamba deep learning model, have shown great potential for long
+sequence modeling. Meanwhile building efficient and generic vision backbones
+purely upon SSMs is an appealing direction. However, representing visual data
+is challenging for SSMs due to the position-sensitivity of visual data and the
+requirement of global context for visual understanding. In this paper, we show
+that the reliance on self-attention for visual representation learning is not
+necessary and propose a new generic vision backbone with bidirectional Mamba
+blocks (Vim), which marks the image sequences with position embeddings and
+compresses the visual representation with bidirectional state space models. On
+ImageNet classification, COCO object detection, and ADE20k semantic
+segmentation tasks, Vim achieves higher performance compared to
+well-established vision transformers like DeiT, while also demonstrating
+significantly improved computation & memory efficiency. For example, Vim is
+2.8$\times$ faster than DeiT and saves 86.8% GPU memory when performing batch
+inference to extract features on images with a resolution of 1248$\times$1248.
+The results demonstrate that Vim is capable of overcoming the computation &
+memory constraints on performing Transformer-style understanding for
+high-resolution images and it has great potential to be the next-generation
+backbone for vision foundation models. Code is available at
+https://github.com/hustvl/Vim.},
+ arxiv_url = {https://arxiv.org/pdf/2401.09417v3.pdf},
+ author = {Lianghui Zhu and Bencheng Liao and Qian Zhang and Xinlong Wang and Wenyu Liu and Xinggang Wang},
+ github_url = {https://github.com/hustvl/Vim},
+ title = {Vision Mamba: Efficient Visual Representation Learning with Bidirectional State Space Model},
+ year = {2024}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{author_year_mmsegmentation,
+ title = {MMSegmentation: Openmmlab semantic segmentation toolbox and benchmark.}
+}
+
+@article{author_year_prefix,
+ title = {Prefix sums and their applications.}
+}
+
+@article{dao_2023_flashattention,
+ abstract = {Scaling Transformers to longer sequence lengths has been a major problem in
+the last several years, promising to improve performance in language modeling
+and high-resolution image understanding, as well as to unlock new applications
+in code, audio, and video generation. The attention layer is the main
+bottleneck in scaling to longer sequences, as its runtime and memory increase
+quadratically in the sequence length. FlashAttention exploits the asymmetric
+GPU memory hierarchy to bring significant memory saving (linear instead of
+quadratic) and runtime speedup (2-4$\times$ compared to optimized baselines),
+with no approximation. However, FlashAttention is still not nearly as fast as
+optimized matrix-multiply (GEMM) operations, reaching only 25-40\% of the
+theoretical maximum FLOPs/s. We observe that the inefficiency is due to
+suboptimal work partitioning between different thread blocks and warps on the
+GPU, causing either low-occupancy or unnecessary shared memory reads/writes. We
+propose FlashAttention-2, with better work partitioning to address these
+issues. In particular, we (1) tweak the algorithm to reduce the number of
+non-matmul FLOPs (2) parallelize the attention computation, even for a single
+head, across different thread blocks to increase occupancy, and (3) within each
+thread block, distribute the work between warps to reduce communication through
+shared memory. These yield around 2$\times$ speedup compared to FlashAttention,
+reaching 50-73\% of the theoretical maximum FLOPs/s on A100 and getting close
+to the efficiency of GEMM operations. We empirically validate that when used
+end-to-end to train GPT-style models, FlashAttention-2 reaches training speed
+of up to 225 TFLOPs/s per A100 GPU (72\% model FLOPs utilization).},
+ arxiv_url = {https://arxiv.org/pdf/2307.08691v1.pdf},
+ author = {Tri Dao},
+ title = {Flashattention-2: Faster attention with better parallelism and work partitioning.},
+ year = {2023}
+}

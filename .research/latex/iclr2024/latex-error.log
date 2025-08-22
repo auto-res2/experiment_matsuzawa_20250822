@@ -265,244 +265,107 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...et of tasks \cite{wu\_2020\_understanding}
-                                                  . The central idea is that...
+
+Package natbib Warning: Citation `wu2020understanding' on page 1 undefined on i
+nput line 55.
 
 
-Package natbib Warning: Citation `wu\T1\textunderscore2020\T1\textunderscoreund
-erstanding' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...em independently \cite{tiomoko\_2021\_pca}
-                                                  . This is frequently cause...
+Package natbib Warning: Citation `tiomoko2021pca' on page 1 undefined on input 
+line 55.
 
 
-Package natbib Warning: Citation `tiomoko\T1\textunderscore2021\T1\textundersco
-repca' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.57 ...hods like PCGrad \cite{yu\_2020\_gradient}
-                                                   and CAGrad \cite{liu\_202...
+Package natbib Warning: Citation `yu2020gradient' on page 1 undefined on input 
+line 57.
 
 
-Package natbib Warning: Citation `yu\T1\textunderscore2020\T1\textunderscoregra
-dient' on page 1 undefined on input line 57.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.57 ...ent} and CAGrad \cite{liu\_2021\_conflict}
-                                                   operate by projecting gra...
+Package natbib Warning: Citation `liu2021conflict' on page 1 undefined on input
+ line 57.
 
 
-Package natbib Warning: Citation `liu\T1\textunderscore2021\T1\textunderscoreco
-nflict' on page 1 undefined on input line 57.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...uped together \cite{standley\_2019\_which}
-                                                   and dynamic methods that ...
+Package natbib Warning: Citation `standley2019which' on page 1 undefined on inp
+ut line 59.
 
 
-Package natbib Warning: Citation `standley\T1\textunderscore2019\T1\textundersc
-orewhich' on page 1 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...ngan\_2023\_multi, jiang\_2023\_forkmerge}
-                                                  . These methods can be pow...
+Package natbib Warning: Citation `gurulingan2023multi' on page 1 undefined on i
+nput line 59.
 
 
-Package natbib Warning: Citation `gurulingan\T1\textunderscore2023\T1\textunder
-scoremulti' on page 1 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...ngan\_2023\_multi, jiang\_2023\_forkmerge}
-                                                  . These methods can be pow...
+Package natbib Warning: Citation `jiang2023forkmerge' on page 1 undefined on in
+put line 59.
 
 
-Package natbib Warning: Citation `jiang\T1\textunderscore2023\T1\textunderscore
-forkmerge' on page 1 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.61 ...importance \cite{jeong\_2024\_quantifying}
-                                                  , it has often relied on r...
-
-
-Package natbib Warning: Citation `jeong\T1\textunderscore2024\T1\textunderscore
-quantifying' on page 1 undefined on input line 61.
+Package natbib Warning: Citation `jeong2024quantifying' on page 1 undefined on 
+input line 61.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}]
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.75 ...s area is PCGrad \cite{yu\_2020\_gradient}
-                                                  , which identifies conflic...
+
+Package natbib Warning: Citation `yu2020gradient' on page 2 undefined on input 
+line 75.
 
 
-Package natbib Warning: Citation `yu\T1\textunderscore2020\T1\textunderscoregra
-dient' on page 2 undefined on input line 75.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.75 ...on this, CAGrad \cite{liu\_2021\_conflict}
-                                                   formulates the problem as...
+Package natbib Warning: Citation `liu2021conflict' on page 2 undefined on input
+ line 75.
 
 
-Package natbib Warning: Citation `liu\T1\textunderscore2021\T1\textunderscoreco
-nflict' on page 2 undefined on input line 75.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.77 ...re a backbone \cite{standley\_2019\_which}
-                                                  . More recent works have p...
+Package natbib Warning: Citation `standley2019which' on page 2 undefined on inp
+ut line 77.
 
 
-Package natbib Warning: Citation `standley\T1\textunderscore2019\T1\textundersc
-orewhich' on page 2 undefined on input line 77.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.77 ...tance, MTSL \cite{gurulingan\_2023\_multi}
-                                                   learns to group similar t...
+Package natbib Warning: Citation `gurulingan2023multi' on page 2 undefined on i
+nput line 77.
 
 
-Package natbib Warning: Citation `gurulingan\T1\textunderscore2023\T1\textunder
-scoremulti' on page 2 undefined on input line 77.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.77 ...le ForkMerge \cite{jiang\_2023\_forkmerge}
-                                                   periodically forks the mo...
+Package natbib Warning: Citation `jiang2023forkmerge' on page 2 undefined on in
+put line 77.
 
 
-Package natbib Warning: Citation `jiang\T1\textunderscore2023\T1\textunderscore
-forkmerge' on page 2 undefined on input line 77.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.77 ...oaches, like Recon \cite{shi\_2023\_recon}
-                                                  , identify layers with hig...
+Package natbib Warning: Citation `shi2023recon' on page 2 undefined on input li
+ne 77.
 
 
-Package natbib Warning: Citation `shi\T1\textunderscore2023\T1\textunderscorere
-con' on page 2 undefined on input line 77.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.79 ...ic grid searches \cite{xin\_2022\_current}
-                                                   to dynamic schemes based ...
+Package natbib Warning: Citation `xin2022current' on page 2 undefined on input 
+line 79.
 
 
-Package natbib Warning: Citation `xin\T1\textunderscore2022\T1\textunderscorecu
-rrent' on page 2 undefined on input line 79.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.79 ...on uncertainty \cite{chen\_2017\_gradnorm}
-                                                   or loss dynamics. More re...
+Package natbib Warning: Citation `chen2017gradnorm' on page 2 undefined on inpu
+t line 79.
 
 
-Package natbib Warning: Citation `chen\T1\textunderscore2017\T1\textunderscoreg
-radnorm' on page 2 undefined on input line 79.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.79 ...g and Yoon \cite{jeong\_2024\_quantifying}
-                                                   introduced the idea of 't...
-
-
-Package natbib Warning: Citation `jeong\T1\textunderscore2024\T1\textunderscore
-quantifying' on page 2 undefined on input line 79.
+Package natbib Warning: Citation `jeong2024quantifying' on page 2 undefined on 
+input line 79.
 
 [2]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.85 ...on accuracy \cite{wu\_2020\_understanding}
-                                                  .
 
-Package natbib Warning: Citation `wu\T1\textunderscore2020\T1\textunderscoreund
-erstanding' on page 3 undefined on input line 85.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.91 ...egative transfer \cite{tiomoko\_2021\_pca}
-                                                  , where gradients conflict...
+Package natbib Warning: Citation `wu2020understanding' on page 3 undefined on i
+nput line 85.
 
 
-Package natbib Warning: Citation `tiomoko\T1\textunderscore2021\T1\textundersco
-repca' on page 3 undefined on input line 91.
+Package natbib Warning: Citation `tiomoko2021pca' on page 3 undefined on input 
+line 91.
 
 [3] [4]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.135 ...\textbf{PCGrad} \cite{yu\_2020\_gradient}
-                                                  : A gradient surgery metho...
+
+Package natbib Warning: Citation `yu2020gradient' on page 5 undefined on input 
+line 135.
 
 
-Package natbib Warning: Citation `yu\T1\textunderscore2020\T1\textunderscoregra
-dient' on page 5 undefined on input line 135.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.136 ...textbf{CAGrad} \cite{liu\_2021\_conflict}
-                                                  : An optimization-based gr...
-
-
-Package natbib Warning: Citation `liu\T1\textunderscore2021\T1\textunderscoreco
-nflict' on page 5 undefined on input line 136.
+Package natbib Warning: Citation `liu2021conflict' on page 5 undefined on input
+ line 136.
 
 [5]
 
 LaTeX Warning: Reference `fig:pareto_front' on page 6 undefined on input line 1
 51.
 
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.151 ...aselines PCGrad \cite{yu\_2020\_gradient}
-                                                   and CAGrad \cite{liu\_202...
+
+Package natbib Warning: Citation `yu2020gradient' on page 6 undefined on input 
+line 151.
 
 
-Package natbib Warning: Citation `yu\T1\textunderscore2020\T1\textunderscoregra
-dient' on page 6 undefined on input line 151.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.151 ...nt} and CAGrad \cite{liu\_2021\_conflict}
-                                                  . For any given level of s...
-
-
-Package natbib Warning: Citation `liu\T1\textunderscore2021\T1\textunderscoreco
-nflict' on page 6 undefined on input line 151.
+Package natbib Warning: Citation `liu2021conflict' on page 6 undefined on input
+ line 151.
 
 
 LaTeX Warning: File `pareto_front_plot.png' not found on input line 161.
@@ -556,97 +419,20 @@ Output written on paper.pdf (7 pages, 156671 bytes).
 Transcript written on paper.log.
 This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
 The top-level auxiliary file: paper.aux
-White space in argument---line 5 of file paper.aux
- : \citation{wu\protect
- :                      \T1\textunderscore 2020\protect \T1\textunderscore understanding}
-I'm skipping whatever remains of this command
-White space in argument---line 6 of file paper.aux
- : \citation{tiomoko\protect
- :                           \T1\textunderscore 2021\protect \T1\textunderscore pca}
-I'm skipping whatever remains of this command
-White space in argument---line 7 of file paper.aux
- : \citation{yu\protect
- :                      \T1\textunderscore 2020\protect \T1\textunderscore gradient}
-I'm skipping whatever remains of this command
-White space in argument---line 8 of file paper.aux
- : \citation{liu\protect
- :                       \T1\textunderscore 2021\protect \T1\textunderscore conflict}
-I'm skipping whatever remains of this command
-White space in argument---line 9 of file paper.aux
- : \citation{standley\protect
- :                            \T1\textunderscore 2019\protect \T1\textunderscore which}
-I'm skipping whatever remains of this command
-White space in argument---line 10 of file paper.aux
- : \citation{gurulingan\protect
- :                              \T1\textunderscore 2023\protect \T1\textunderscore multi,jiang\protect \T1\textunderscore 2023\protect \T1\textunderscore forkmerge}
-I'm skipping whatever remains of this command
-White space in argument---line 11 of file paper.aux
- : \citation{jeong\protect
- :                         \T1\textunderscore 2024\protect \T1\textunderscore quantifying}
-I'm skipping whatever remains of this command
-White space in argument---line 15 of file paper.aux
- : \citation{yu\protect
- :                      \T1\textunderscore 2020\protect \T1\textunderscore gradient}
-I'm skipping whatever remains of this command
-White space in argument---line 16 of file paper.aux
- : \citation{liu\protect
- :                       \T1\textunderscore 2021\protect \T1\textunderscore conflict}
-I'm skipping whatever remains of this command
-White space in argument---line 17 of file paper.aux
- : \citation{standley\protect
- :                            \T1\textunderscore 2019\protect \T1\textunderscore which}
-I'm skipping whatever remains of this command
-White space in argument---line 18 of file paper.aux
- : \citation{gurulingan\protect
- :                              \T1\textunderscore 2023\protect \T1\textunderscore multi}
-I'm skipping whatever remains of this command
-White space in argument---line 19 of file paper.aux
- : \citation{jiang\protect
- :                         \T1\textunderscore 2023\protect \T1\textunderscore forkmerge}
-I'm skipping whatever remains of this command
-White space in argument---line 20 of file paper.aux
- : \citation{shi\protect
- :                       \T1\textunderscore 2023\protect \T1\textunderscore recon}
-I'm skipping whatever remains of this command
-White space in argument---line 21 of file paper.aux
- : \citation{xin\protect
- :                       \T1\textunderscore 2022\protect \T1\textunderscore current}
-I'm skipping whatever remains of this command
-White space in argument---line 22 of file paper.aux
- : \citation{chen\protect
- :                        \T1\textunderscore 2017\protect \T1\textunderscore gradnorm}
-I'm skipping whatever remains of this command
-White space in argument---line 23 of file paper.aux
- : \citation{jeong\protect
- :                         \T1\textunderscore 2024\protect \T1\textunderscore quantifying}
-I'm skipping whatever remains of this command
-White space in argument---line 30 of file paper.aux
- : \citation{wu\protect
- :                      \T1\textunderscore 2020\protect \T1\textunderscore understanding}
-I'm skipping whatever remains of this command
-White space in argument---line 31 of file paper.aux
- : \citation{tiomoko\protect
- :                           \T1\textunderscore 2021\protect \T1\textunderscore pca}
-I'm skipping whatever remains of this command
-White space in argument---line 46 of file paper.aux
- : \citation{yu\protect
- :                      \T1\textunderscore 2020\protect \T1\textunderscore gradient}
-I'm skipping whatever remains of this command
-White space in argument---line 47 of file paper.aux
- : \citation{liu\protect
- :                       \T1\textunderscore 2021\protect \T1\textunderscore conflict}
-I'm skipping whatever remains of this command
-White space in argument---line 55 of file paper.aux
- : \citation{yu\protect
- :                      \T1\textunderscore 2020\protect \T1\textunderscore gradient}
-I'm skipping whatever remains of this command
-White space in argument---line 56 of file paper.aux
- : \citation{liu\protect
- :                       \T1\textunderscore 2021\protect \T1\textunderscore conflict}
-I'm skipping whatever remains of this command
 The style file: iclr2024_conference.bst
 Database file #1: references.bib
-(There were 22 error messages)
+Warning--I didn't find a database entry for "wu2020understanding"
+Warning--I didn't find a database entry for "tiomoko2021pca"
+Warning--I didn't find a database entry for "yu2020gradient"
+Warning--I didn't find a database entry for "liu2021conflict"
+Warning--I didn't find a database entry for "standley2019which"
+Warning--I didn't find a database entry for "gurulingan2023multi"
+Warning--I didn't find a database entry for "jiang2023forkmerge"
+Warning--I didn't find a database entry for "jeong2024quantifying"
+Warning--I didn't find a database entry for "shi2023recon"
+Warning--I didn't find a database entry for "xin2022current"
+Warning--I didn't find a database entry for "chen2017gradnorm"
+(There were 11 warnings)
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
@@ -915,240 +701,103 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...et of tasks \cite{wu\_2020\_understanding}
-                                                  . The central idea is that...
+
+Package natbib Warning: Citation `wu2020understanding' on page 1 undefined on i
+nput line 55.
 
 
-Package natbib Warning: Citation `wu\T1\textunderscore2020\T1\textunderscoreund
-erstanding' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...em independently \cite{tiomoko\_2021\_pca}
-                                                  . This is frequently cause...
+Package natbib Warning: Citation `tiomoko2021pca' on page 1 undefined on input 
+line 55.
 
 
-Package natbib Warning: Citation `tiomoko\T1\textunderscore2021\T1\textundersco
-repca' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.57 ...hods like PCGrad \cite{yu\_2020\_gradient}
-                                                   and CAGrad \cite{liu\_202...
+Package natbib Warning: Citation `yu2020gradient' on page 1 undefined on input 
+line 57.
 
 
-Package natbib Warning: Citation `yu\T1\textunderscore2020\T1\textunderscoregra
-dient' on page 1 undefined on input line 57.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.57 ...ent} and CAGrad \cite{liu\_2021\_conflict}
-                                                   operate by projecting gra...
+Package natbib Warning: Citation `liu2021conflict' on page 1 undefined on input
+ line 57.
 
 
-Package natbib Warning: Citation `liu\T1\textunderscore2021\T1\textunderscoreco
-nflict' on page 1 undefined on input line 57.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...uped together \cite{standley\_2019\_which}
-                                                   and dynamic methods that ...
+Package natbib Warning: Citation `standley2019which' on page 1 undefined on inp
+ut line 59.
 
 
-Package natbib Warning: Citation `standley\T1\textunderscore2019\T1\textundersc
-orewhich' on page 1 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...ngan\_2023\_multi, jiang\_2023\_forkmerge}
-                                                  . These methods can be pow...
+Package natbib Warning: Citation `gurulingan2023multi' on page 1 undefined on i
+nput line 59.
 
 
-Package natbib Warning: Citation `gurulingan\T1\textunderscore2023\T1\textunder
-scoremulti' on page 1 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...ngan\_2023\_multi, jiang\_2023\_forkmerge}
-                                                  . These methods can be pow...
+Package natbib Warning: Citation `jiang2023forkmerge' on page 1 undefined on in
+put line 59.
 
 
-Package natbib Warning: Citation `jiang\T1\textunderscore2023\T1\textunderscore
-forkmerge' on page 1 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.61 ...importance \cite{jeong\_2024\_quantifying}
-                                                  , it has often relied on r...
-
-
-Package natbib Warning: Citation `jeong\T1\textunderscore2024\T1\textunderscore
-quantifying' on page 1 undefined on input line 61.
+Package natbib Warning: Citation `jeong2024quantifying' on page 1 undefined on 
+input line 61.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}]
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.75 ...s area is PCGrad \cite{yu\_2020\_gradient}
-                                                  , which identifies conflic...
+
+Package natbib Warning: Citation `yu2020gradient' on page 2 undefined on input 
+line 75.
 
 
-Package natbib Warning: Citation `yu\T1\textunderscore2020\T1\textunderscoregra
-dient' on page 2 undefined on input line 75.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.75 ...on this, CAGrad \cite{liu\_2021\_conflict}
-                                                   formulates the problem as...
+Package natbib Warning: Citation `liu2021conflict' on page 2 undefined on input
+ line 75.
 
 
-Package natbib Warning: Citation `liu\T1\textunderscore2021\T1\textunderscoreco
-nflict' on page 2 undefined on input line 75.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.77 ...re a backbone \cite{standley\_2019\_which}
-                                                  . More recent works have p...
+Package natbib Warning: Citation `standley2019which' on page 2 undefined on inp
+ut line 77.
 
 
-Package natbib Warning: Citation `standley\T1\textunderscore2019\T1\textundersc
-orewhich' on page 2 undefined on input line 77.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.77 ...tance, MTSL \cite{gurulingan\_2023\_multi}
-                                                   learns to group similar t...
+Package natbib Warning: Citation `gurulingan2023multi' on page 2 undefined on i
+nput line 77.
 
 
-Package natbib Warning: Citation `gurulingan\T1\textunderscore2023\T1\textunder
-scoremulti' on page 2 undefined on input line 77.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.77 ...le ForkMerge \cite{jiang\_2023\_forkmerge}
-                                                   periodically forks the mo...
+Package natbib Warning: Citation `jiang2023forkmerge' on page 2 undefined on in
+put line 77.
 
 
-Package natbib Warning: Citation `jiang\T1\textunderscore2023\T1\textunderscore
-forkmerge' on page 2 undefined on input line 77.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.77 ...oaches, like Recon \cite{shi\_2023\_recon}
-                                                  , identify layers with hig...
+Package natbib Warning: Citation `shi2023recon' on page 2 undefined on input li
+ne 77.
 
 
-Package natbib Warning: Citation `shi\T1\textunderscore2023\T1\textunderscorere
-con' on page 2 undefined on input line 77.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.79 ...ic grid searches \cite{xin\_2022\_current}
-                                                   to dynamic schemes based ...
+Package natbib Warning: Citation `xin2022current' on page 2 undefined on input 
+line 79.
 
 
-Package natbib Warning: Citation `xin\T1\textunderscore2022\T1\textunderscorecu
-rrent' on page 2 undefined on input line 79.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.79 ...on uncertainty \cite{chen\_2017\_gradnorm}
-                                                   or loss dynamics. More re...
+Package natbib Warning: Citation `chen2017gradnorm' on page 2 undefined on inpu
+t line 79.
 
 
-Package natbib Warning: Citation `chen\T1\textunderscore2017\T1\textunderscoreg
-radnorm' on page 2 undefined on input line 79.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.79 ...g and Yoon \cite{jeong\_2024\_quantifying}
-                                                   introduced the idea of 't...
-
-
-Package natbib Warning: Citation `jeong\T1\textunderscore2024\T1\textunderscore
-quantifying' on page 2 undefined on input line 79.
+Package natbib Warning: Citation `jeong2024quantifying' on page 2 undefined on 
+input line 79.
 
 [2]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.85 ...on accuracy \cite{wu\_2020\_understanding}
-                                                  .
 
-Package natbib Warning: Citation `wu\T1\textunderscore2020\T1\textunderscoreund
-erstanding' on page 3 undefined on input line 85.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.91 ...egative transfer \cite{tiomoko\_2021\_pca}
-                                                  , where gradients conflict...
+Package natbib Warning: Citation `wu2020understanding' on page 3 undefined on i
+nput line 85.
 
 
-Package natbib Warning: Citation `tiomoko\T1\textunderscore2021\T1\textundersco
-repca' on page 3 undefined on input line 91.
+Package natbib Warning: Citation `tiomoko2021pca' on page 3 undefined on input 
+line 91.
 
 [3] [4]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.135 ...\textbf{PCGrad} \cite{yu\_2020\_gradient}
-                                                  : A gradient surgery metho...
+
+Package natbib Warning: Citation `yu2020gradient' on page 5 undefined on input 
+line 135.
 
 
-Package natbib Warning: Citation `yu\T1\textunderscore2020\T1\textunderscoregra
-dient' on page 5 undefined on input line 135.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.136 ...textbf{CAGrad} \cite{liu\_2021\_conflict}
-                                                  : An optimization-based gr...
-
-
-Package natbib Warning: Citation `liu\T1\textunderscore2021\T1\textunderscoreco
-nflict' on page 5 undefined on input line 136.
+Package natbib Warning: Citation `liu2021conflict' on page 5 undefined on input
+ line 136.
 
 [5]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.151 ...aselines PCGrad \cite{yu\_2020\_gradient}
-                                                   and CAGrad \cite{liu\_202...
+
+Package natbib Warning: Citation `yu2020gradient' on page 6 undefined on input 
+line 151.
 
 
-Package natbib Warning: Citation `yu\T1\textunderscore2020\T1\textunderscoregra
-dient' on page 6 undefined on input line 151.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.151 ...nt} and CAGrad \cite{liu\_2021\_conflict}
-                                                  . For any given level of s...
-
-
-Package natbib Warning: Citation `liu\T1\textunderscore2021\T1\textunderscoreco
-nflict' on page 6 undefined on input line 151.
+Package natbib Warning: Citation `liu2021conflict' on page 6 undefined on input
+ line 151.
 
 
 LaTeX Warning: File `pareto_front_plot.png' not found on input line 161.
@@ -1462,240 +1111,103 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...et of tasks \cite{wu\_2020\_understanding}
-                                                  . The central idea is that...
+
+Package natbib Warning: Citation `wu2020understanding' on page 1 undefined on i
+nput line 55.
 
 
-Package natbib Warning: Citation `wu\T1\textunderscore2020\T1\textunderscoreund
-erstanding' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...em independently \cite{tiomoko\_2021\_pca}
-                                                  . This is frequently cause...
+Package natbib Warning: Citation `tiomoko2021pca' on page 1 undefined on input 
+line 55.
 
 
-Package natbib Warning: Citation `tiomoko\T1\textunderscore2021\T1\textundersco
-repca' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.57 ...hods like PCGrad \cite{yu\_2020\_gradient}
-                                                   and CAGrad \cite{liu\_202...
+Package natbib Warning: Citation `yu2020gradient' on page 1 undefined on input 
+line 57.
 
 
-Package natbib Warning: Citation `yu\T1\textunderscore2020\T1\textunderscoregra
-dient' on page 1 undefined on input line 57.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.57 ...ent} and CAGrad \cite{liu\_2021\_conflict}
-                                                   operate by projecting gra...
+Package natbib Warning: Citation `liu2021conflict' on page 1 undefined on input
+ line 57.
 
 
-Package natbib Warning: Citation `liu\T1\textunderscore2021\T1\textunderscoreco
-nflict' on page 1 undefined on input line 57.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...uped together \cite{standley\_2019\_which}
-                                                   and dynamic methods that ...
+Package natbib Warning: Citation `standley2019which' on page 1 undefined on inp
+ut line 59.
 
 
-Package natbib Warning: Citation `standley\T1\textunderscore2019\T1\textundersc
-orewhich' on page 1 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...ngan\_2023\_multi, jiang\_2023\_forkmerge}
-                                                  . These methods can be pow...
+Package natbib Warning: Citation `gurulingan2023multi' on page 1 undefined on i
+nput line 59.
 
 
-Package natbib Warning: Citation `gurulingan\T1\textunderscore2023\T1\textunder
-scoremulti' on page 1 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...ngan\_2023\_multi, jiang\_2023\_forkmerge}
-                                                  . These methods can be pow...
+Package natbib Warning: Citation `jiang2023forkmerge' on page 1 undefined on in
+put line 59.
 
 
-Package natbib Warning: Citation `jiang\T1\textunderscore2023\T1\textunderscore
-forkmerge' on page 1 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.61 ...importance \cite{jeong\_2024\_quantifying}
-                                                  , it has often relied on r...
-
-
-Package natbib Warning: Citation `jeong\T1\textunderscore2024\T1\textunderscore
-quantifying' on page 1 undefined on input line 61.
+Package natbib Warning: Citation `jeong2024quantifying' on page 1 undefined on 
+input line 61.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}]
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.75 ...s area is PCGrad \cite{yu\_2020\_gradient}
-                                                  , which identifies conflic...
+
+Package natbib Warning: Citation `yu2020gradient' on page 2 undefined on input 
+line 75.
 
 
-Package natbib Warning: Citation `yu\T1\textunderscore2020\T1\textunderscoregra
-dient' on page 2 undefined on input line 75.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.75 ...on this, CAGrad \cite{liu\_2021\_conflict}
-                                                   formulates the problem as...
+Package natbib Warning: Citation `liu2021conflict' on page 2 undefined on input
+ line 75.
 
 
-Package natbib Warning: Citation `liu\T1\textunderscore2021\T1\textunderscoreco
-nflict' on page 2 undefined on input line 75.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.77 ...re a backbone \cite{standley\_2019\_which}
-                                                  . More recent works have p...
+Package natbib Warning: Citation `standley2019which' on page 2 undefined on inp
+ut line 77.
 
 
-Package natbib Warning: Citation `standley\T1\textunderscore2019\T1\textundersc
-orewhich' on page 2 undefined on input line 77.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.77 ...tance, MTSL \cite{gurulingan\_2023\_multi}
-                                                   learns to group similar t...
+Package natbib Warning: Citation `gurulingan2023multi' on page 2 undefined on i
+nput line 77.
 
 
-Package natbib Warning: Citation `gurulingan\T1\textunderscore2023\T1\textunder
-scoremulti' on page 2 undefined on input line 77.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.77 ...le ForkMerge \cite{jiang\_2023\_forkmerge}
-                                                   periodically forks the mo...
+Package natbib Warning: Citation `jiang2023forkmerge' on page 2 undefined on in
+put line 77.
 
 
-Package natbib Warning: Citation `jiang\T1\textunderscore2023\T1\textunderscore
-forkmerge' on page 2 undefined on input line 77.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.77 ...oaches, like Recon \cite{shi\_2023\_recon}
-                                                  , identify layers with hig...
+Package natbib Warning: Citation `shi2023recon' on page 2 undefined on input li
+ne 77.
 
 
-Package natbib Warning: Citation `shi\T1\textunderscore2023\T1\textunderscorere
-con' on page 2 undefined on input line 77.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.79 ...ic grid searches \cite{xin\_2022\_current}
-                                                   to dynamic schemes based ...
+Package natbib Warning: Citation `xin2022current' on page 2 undefined on input 
+line 79.
 
 
-Package natbib Warning: Citation `xin\T1\textunderscore2022\T1\textunderscorecu
-rrent' on page 2 undefined on input line 79.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.79 ...on uncertainty \cite{chen\_2017\_gradnorm}
-                                                   or loss dynamics. More re...
+Package natbib Warning: Citation `chen2017gradnorm' on page 2 undefined on inpu
+t line 79.
 
 
-Package natbib Warning: Citation `chen\T1\textunderscore2017\T1\textunderscoreg
-radnorm' on page 2 undefined on input line 79.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.79 ...g and Yoon \cite{jeong\_2024\_quantifying}
-                                                   introduced the idea of 't...
-
-
-Package natbib Warning: Citation `jeong\T1\textunderscore2024\T1\textunderscore
-quantifying' on page 2 undefined on input line 79.
+Package natbib Warning: Citation `jeong2024quantifying' on page 2 undefined on 
+input line 79.
 
 [2]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.85 ...on accuracy \cite{wu\_2020\_understanding}
-                                                  .
 
-Package natbib Warning: Citation `wu\T1\textunderscore2020\T1\textunderscoreund
-erstanding' on page 3 undefined on input line 85.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.91 ...egative transfer \cite{tiomoko\_2021\_pca}
-                                                  , where gradients conflict...
+Package natbib Warning: Citation `wu2020understanding' on page 3 undefined on i
+nput line 85.
 
 
-Package natbib Warning: Citation `tiomoko\T1\textunderscore2021\T1\textundersco
-repca' on page 3 undefined on input line 91.
+Package natbib Warning: Citation `tiomoko2021pca' on page 3 undefined on input 
+line 91.
 
 [3] [4]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.135 ...\textbf{PCGrad} \cite{yu\_2020\_gradient}
-                                                  : A gradient surgery metho...
+
+Package natbib Warning: Citation `yu2020gradient' on page 5 undefined on input 
+line 135.
 
 
-Package natbib Warning: Citation `yu\T1\textunderscore2020\T1\textunderscoregra
-dient' on page 5 undefined on input line 135.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.136 ...textbf{CAGrad} \cite{liu\_2021\_conflict}
-                                                  : An optimization-based gr...
-
-
-Package natbib Warning: Citation `liu\T1\textunderscore2021\T1\textunderscoreco
-nflict' on page 5 undefined on input line 136.
+Package natbib Warning: Citation `liu2021conflict' on page 5 undefined on input
+ line 136.
 
 [5]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.151 ...aselines PCGrad \cite{yu\_2020\_gradient}
-                                                   and CAGrad \cite{liu\_202...
+
+Package natbib Warning: Citation `yu2020gradient' on page 6 undefined on input 
+line 151.
 
 
-Package natbib Warning: Citation `yu\T1\textunderscore2020\T1\textunderscoregra
-dient' on page 6 undefined on input line 151.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.151 ...nt} and CAGrad \cite{liu\_2021\_conflict}
-                                                  . For any given level of s...
-
-
-Package natbib Warning: Citation `liu\T1\textunderscore2021\T1\textunderscoreco
-nflict' on page 6 undefined on input line 151.
+Package natbib Warning: Citation `liu2021conflict' on page 6 undefined on input
+ line 151.
 
 
 LaTeX Warning: File `pareto_front_plot.png' not found on input line 161.

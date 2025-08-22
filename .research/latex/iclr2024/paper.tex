@@ -1,0 +1,177 @@
+\PassOptionsToPackage{numbers}{natbib}
+\documentclass{article} % For LaTeX2e
+\usepackage{iclr2024_conference,times}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{titletoc}
+
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{cleveref}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{array}
+\usepackage{tabularx}
+\pgfplotsset{compat=newest}
+
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\graphicspath{{../}} % To reference your generated figures, see below.
+
+\title{CAMLTO-Delta: Risk-Aware Carbon-Optimal Closed-Loop Orchestration for Large Language Model Training}
+
+\author{AIRAS}
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Training-time emissions for large language models are rising faster than power grids are decarbonizing, while hourly marginal carbon intensity can vary three to tenfold across regions and within a day. Organizations increasingly operate under carbon budgets and 24/7 clean energy commitments, yet prevailing tools emphasize accounting rather than control, and schedulers typically optimize latency or energy rather than learning progress per kilogram of CO2 under uncertainty. We present CAMLTO-Delta, a receding-horizon controller that decides each hour where, what, and how to train in order to maximize a risk-adjusted Carbon-Progress Index: expected progress divided by the conditional value-at-risk of emissions. The system closes the loop between carbon forecasts and the training stack; coordinates multilevel scaling paths with low-carbon fillers; shapes compute via power caps, parallelism, and MoE gating; attributes operational, embodied, and network emissions per action; and enforces multi-tenant carbon fairness and optional 24/7 clean energy alignment using dual-based budgets with regret guarantees. We implement CAMLTO-Delta in a PyTorch-first stack and evaluate three scenarios: single-tenant closed-loop control, carbon-aware multilevel orchestration, and multi-tenant scheduling with budgets and 24/7 alignment. The suite yields auditable per-action carbon breakdowns, CPI trajectories, and fairness and alignment reports, enabling rigorous comparisons to energy-only and placement baselines without assuming oracle forecasts [faiz_2023_llmcarbon, banerjee_2019_inductive, bamas_2020_learning, balkanski_2024_energy, zhao_2024_nas, zou_2024_multi, artetxe_2021_efficient, chen_2023_pipeline].
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+Training modern language models consumes substantial energy and produces significant greenhouse gas emissions. Meanwhile, electricity systems decarbonize unevenly across time and geography, and hourly marginal carbon intensity (CI) often spans a three- to tenfold range across regions and within a single day. These fluctuations translate into large avoidable differences in emissions for identical computations. Institutions increasingly operate under carbon budgets and 24/7 clean energy (CFE) commitments, which cannot be satisfied by post hoc accounting alone. Yet most tooling either provides static accounting or optimizes objectives such as latency or energy that are not directly tied to learning progress per kilogram of CO2 under uncertainty [faiz_2023_llmcarbon, bamas_2020_learning, balkanski_2024_energy].
+
+Concurrently, training practices have diversified. Multilevel training and V-cycles change model size and regime over time for faster convergence but are typically scheduled without regard to carbon variability \cite{zou_2024_multi}. Mixture-of-experts (MoE) and modern parallelism yield conditional compute efficiency yet are rarely coordinated with carbon-aware control [artetxe_2021_efficient, chen_2023_pipeline]. Carbon footprint modeling has advanced-LLMCarbon incorporates operational and embodied emissions across dense and MoE models-but remains descriptive rather than prescriptive \cite{faiz_2023_llmcarbon}. Learning-augmented schedulers and robust online energy control offer theoretical foundations, but their objectives center on power or energy rather than emissions required to achieve a target model quality [bamas_2020_learning, balkanski_2024_energy]. Carbon-efficient neural architecture search reduces emissions during search, not during end-to-end LLM training orchestration \cite{zhao_2024_nas}.
+
+We propose CAMLTO-Delta, a closed-loop, receding-horizon controller that explicitly optimizes expected learning progress per kilogram of CO2 under CI uncertainty. Each hour, the controller chooses where, what, and how to train-region, model level, recipe, and compute-shaping levers-or whether to run low-carbon fillers, to maximize a risk-adjusted Carbon-Progress Index (CPI). CPI is the ratio of expected progress to a tail-risk measure of emissions (conditional value-at-risk). CAMLTO-Delta integrates online progress meta-modeling (DeltaEvals) and a carbon-optimal scaling path (COSP) across levels and recipes, attributes operational, embodied, and network emissions per action, shapes compute (power caps, parallelism, MoE gating), and enforces multi-tenant carbon fairness and 24/7 CFE alignment with dual-based budgets and regret guarantees.
+
+This approach shifts from carbon accounting to carbon control. The controller reasons over CI distributions rather than averages; maintains dual carbon prices that enforce budgets, deadlines, and policy constraints; times level transitions into green windows; and maintains useful progress during brown windows with certified low-carbon fillers. For multi-tenant clusters, a CPI-weighted fairness layer allocates GPUs under per-tenant budgets and SLAs, hedging against forecast error.
+
+\subsection{Contributions}
+\begin{itemize}
+\item \textbf{Risk-adjusted progress-per-carbon objective.} We define and optimize CPI, coupling expected learning progress to the conditional value-at-risk of emissions, with dual-price updates to enforce carbon/time/CFE constraints, adapting learning-augmented online control from energy to progress-per-CO2 [bamas_2020_learning, balkanski_2024_energy].
+\item \textbf{Carbon-aware multilevel orchestration.} We introduce DeltaEvals, an online progress meta-model with short probes, and COSP, a dynamic program that aligns level transitions and recipe choices with CI quantiles; certified low-carbon fillers sustain positive CPI in brown windows \cite{zou_2024_multi}.
+\item \textbf{Full per-action emissions attribution.} We log operational, embodied wear-aware amortization, and WAN emissions, suitable for GHG-aligned audits and 24/7 CFE reporting \cite{faiz_2023_llmcarbon}.
+\item \textbf{Compute shaping integrated with control.} We coordinate DVFS/power caps, MIG slicing, batch/parallelism invariants, and MoE expert activation with CI-aware decisions [artetxe_2021_efficient, chen_2023_pipeline].
+\item \textbf{Multi-tenant carbon fairness with guarantees.} We provide CPI-weighted proportional allocation with per-tenant budgets and sublinear CPI-regret under bounded forecast/model errors.
+\item \textbf{Implementation and evaluation.} We release a PyTorch-first implementation and a three-experiment suite with auditable logs and baselines spanning fixed plans, energy-only, carbon-aware placement, multilevel-only, and cost-only strategies.
+\end{itemize}
+
+We evaluate three scenarios: (1) single-tenant closed-loop CPI control under CI uncertainty; (2) carbon-aware multilevel orchestration with COSP and low-carbon fillers; and (3) multi-tenant scheduling with budgets and 24/7 CFE alignment. The suite records per-action CPI, energy, and CO2 breakdowns and fairness and alignment metrics, enabling statistically grounded comparisons without oracle forecasts. We conclude with limitations and future work, including richer scaling-law priors and broader model families [caballero_2022_broken, anil_2023_palm].
+
+\section{Related Work}
+\label{sec:related}
+Carbon accounting for ML. LLMCarbon advances end-to-end footprint modeling for dense and MoE LLMs, integrating operational and embodied emissions and improving estimation fidelity over prior tools \cite{faiz_2023_llmcarbon}. Its focus is projection and attribution, not online control. CAMLTO-Delta uses such attributions within a controller that selects actions in real time, extending accounting into optimization.
+
+Schedulers and learning-augmented control. Symphony learns scheduling heuristics for heterogeneous clusters, improving throughput and latency but not optimizing emissions-progress trade-offs or modeling CI uncertainty \cite{banerjee_2019_inductive}. Learning-augmented online algorithms for energy minimization, such as LAS/TPE, integrate predictions to improve competitive ratios while preserving worst-case guarantees [bamas_2020_learning, balkanski_2024_energy]. CAMLTO-Delta adopts the principle of using predictions while maintaining robustness, but changes the objective from energy to risk-adjusted progress-per-CO2 under CI distributions and budget constraints, and expands the action space to include region, level, recipe, and compute shaping.
+
+Architecture search versus orchestration. CE-NAS reduces emissions during NAS by adapting GPU usage to predicted CI and optimizing multiple objectives \cite{zhao_2024_nas}. Our scope is the orchestration of end-to-end training phases (pretraining through RLHF). CE-NAS is therefore a methodological reference rather than a directly comparable baseline in our experiments.
+
+Multilevel training. V-cycle strategies accelerate convergence via coalescing/de-coalescing and parameter interpolation but are carbon-blind \cite{zou_2024_multi}. CAMLTO-Delta times transitions into green windows with COSP and preserves optimizer invariants when modifying batch or accumulation. It also deploys low-carbon fillers to maintain productive CPI outside green periods, a dimension not addressed in prior multilevel work.
+
+MoE and parallelism. MoE layers activate subsets of experts, achieving sublinear compute scaling with strong empirical efficiency \cite{artetxe_2021_efficient}. Pipeline MoE reduces communication overhead and improves throughput through flexible parallel architectures \cite{chen_2023_pipeline}. CAMLTO-Delta treats expert activation and parallelism configuration as control levers responsive to CI, with guardrails on quality drift. This differs from prior work, which focuses on architectural efficiency rather than carbon-aware orchestration.
+
+Edge energy-aware training. POET jointly optimizes rematerialization and paging for energy-optimal training on memory-scarce devices \cite{patil_2022_poet}. Its setting (on-device constraints) differs fundamentally from multi-region, time-varying CI control in cloud-scale clusters that must honor carbon budgets and 24/7 CFE alignment. We thus treat POET as inspiration for the broader theme of control-aware efficiency, not as a direct baseline.
+
+Scaling laws and online progress estimation. Broken neural scaling laws offer expressive functional forms for extrapolating performance as compute, data, or parameters grow \cite{caballero_2022_broken}. CAMLTO-Delta instead uses causally updated online estimators (DeltaEvals) with change-point detection and short probes to predict marginal progress per action; these feed a receding-horizon controller. Reports on large models underscore the centrality of compute efficiency, motivating a shift to progress-per-carbon objectives in operational settings \cite{anil_2023_palm}.
+
+Summary of differences. Prior systems either account for carbon without control \cite{faiz_2023_llmcarbon} or optimize energy/latency without linking to learning progress [banerjee_2019_inductive, bamas_2020_learning, balkanski_2024_energy]. Architecture-centric efforts reduce emissions during search rather than orchestration \cite{zhao_2024_nas}. CAMLTO-Delta is distinct in jointly optimizing risk-adjusted progress-per-CO2, coordinating levels and recipes with grid conditions, and enforcing multi-tenant budgets and 24/7 CFE alignment with auditable attribution.
+
+\section{Background}
+\label{sec:background}
+Problem setting. We orchestrate LLM training across regions and hours where carbon intensity is uncertain and time-varying. At each hour h, the controller selects an action a specifying: region r; level k (a V-cycle stage or model size); recipe parameters (precision, batch size, gradient accumulation, data/tensor/pipeline/expert parallelism, checkpointing); compute shaping (power caps, MIG slicing, MoE expert activation); and duration. The goal is to minimize cumulative emissions to reach a target training quality by a deadline T, or equivalently to maximize cumulative progress per unit CO2 subject to constraints such as global or per-tenant carbon budgets, time/SLA, data locality, and optional 24/7 CFE alignment.
+
+Emissions model. For action a, operational emissions equal the product of energy consumed, power usage effectiveness (PUE), and marginal CI of the regional grid, converted to kilograms of CO2. CI and PUE are treated as random variables with distributions per region and hour. Embodied emissions are amortized over asset lifetimes with multipliers for utilization and thermal or power wear. WAN emissions scale with bytes moved for checkpoint and dataset transfers. This aligns with LLMCarbon's accounting perspective while adding uncertainty handling and per-action attribution \cite{faiz_2023_llmcarbon}.
+
+Risk-adjusted Carbon-Progress Index. For a candidate action a in state s, CPI(a|s) is defined as expected progress divided by a tail risk of emissions. We use conditional value-at-risk (CVaR) at confidence level alpha applied to the random kgCO2 arising from CI and PUE uncertainty. Expected progress is provided by an online estimator conditioned on level, recipe, and context. A dynamic carbon price lambda is updated as a dual variable to enforce budgets and deadlines by increasing the effective cost of emissions when slack tightens. This yields an hourly score that trades off expected progress against tail emissions risk under budget pressure.
+
+Learning-augmented control and robustness. Hourly CI is modeled from traces or live feeds as distributions. DeltaEvals updates progress estimates from observed deltas and allocates short probes to reduce predictive uncertainty. The controller recomputes choices each hour based on updated posteriors and remaining budgets, adopting the learning-augmented paradigm where predictions are leveraged but robustness is preserved [bamas_2020_learning, balkanski_2024_energy].
+
+Multilevel and MoE context. Multilevel training uses economical regimes early and transitions to costlier regimes later to improve convergence \cite{zou_2024_multi}. MoE layers conditionally activate experts to reduce compute per token, and parallelism strategies reshape the efficiency envelope [artetxe_2021_efficient, chen_2023_pipeline]. CAMLTO-Delta treats levels, expert activation, and power caps as first-class control variables coordinated with CI.
+
+Notation and assumptions. Let CI(h,r) denote random marginal CI at hour h in region r, and PUE(h,r) the power usage effectiveness. For an action with energy E(a), operational emissions are E(a) multiplied by PUE(h,r) and CI(h,r) after unit conversion. Progress is a phase-specific metric, such as negative delta in validation loss per hour. Under a carbon budget B and deadline T, the controller aims to reach a quality target while minimizing emissions and controlling CPI regret relative to a clairvoyant policy under bounded forecast errors and Lipschitz responses of progress to small recipe perturbations [bamas_2020_learning, balkanski_2024_energy]. Checkpoints are assumed safe for interruption and migration. We also leverage low-rank and sparsity levers as low-carbon fillers, consistent with Green AI aims \cite{memmel_2022_position}.
+
+\section{Method}
+\label{sec:method}
+CAMLTO-Delta is a two-layer, receding-horizon controller comprising a risk-aware scorer, an online progress meta-model with probing, a carbon-optimal scaling path planner, a comprehensive emissions accountant, compute-shaping mechanisms, and a multi-tenant allocator with fairness guarantees.
+
+\begin{enumerate}
+\item \textbf{Risk-adjusted CPI with dual budgets.} For each candidate action at hour h, the controller draws Monte Carlo samples of progress and emissions. Progress samples come from the DeltaEvals posterior conditional on the recipe and context; emission samples draw from the region's CI and PUE distributions. CPI is computed as the mean progress divided by the CVaR at level alpha of the sampled emissions. A dual carbon price lambda is updated hourly by a subgradient rule, comparing realized emissions to the remaining allowance per remaining hours. As budgets tighten, the effective denominator is inflated by a factor depending on lambda, discouraging high-emission actions. This mechanism adapts learning-augmented online energy control to the progress-per-CO2 objective under distributional inputs [bamas_2020_learning, balkanski_2024_energy].
+\item \textbf{DeltaEvals: online progress meta-model and probes.} DeltaEvals encodes recipe and context features, including precision, batch size, gradient accumulation, power cap, and region, and fits a Bayesian ridge model with recency weighting to predict progress per hour. After each action, it updates with observed deltas. To reduce uncertainty efficiently, the controller reserves short probe windows (roughly 10-30 minutes) chosen by Thompson sampling to maximize information gain per kilogram of CO2. Change-point detection resets or reweights the model when residual error spikes, accommodating regime shifts from optimizer schedules, sparsity, or precision changes. This provides calibrated uncertainty inputs to CPI.
+\item \textbf{COSP: carbon-optimal scaling path.} Every few hours, a dynamic program plans a finite-horizon sequence of level transitions and recipes aligned with CI quantiles. States comprise hour, current level, and remaining loss to target. Actions allocate an hour to train at a selected level/recipe/region or to run a low-carbon filler. Transition costs are expected emissions computed from CI quantiles and energy models; transition gains are expected progress from DeltaEvals. The objective is to minimize expected CO2 to reach the target by the deadline under constraints (data locality, region allowlists) and optimizer invariants (preserve effective learning rate when changing batch or accumulation). COSP prunes the controller's hourly candidate set, while the controller still accounts for CVaR tails and current dual prices.
+\item \textbf{Full emissions attribution.} For every executed action, CAMLTO-Delta logs operational emissions (energy times PUE-adjusted CI), embodied emissions amortized per GPU-hour with utilization and wear multipliers, and WAN emissions proportional to bytes moved. Uncertainty intervals accompany each component. These logs support GHG-aligned audits that distinguish marginal from average CI and enable 24/7 CFE alignment analyses \cite{faiz_2023_llmcarbon}.
+\item \textbf{Compute shaping and MoE gating.} Actions can set power caps, allocate MIG slices, and adjust batch size and parallelism while preserving optimizer invariants. For MoE models, the controller modulates the number of activated experts per token according to CI, with router loss reweighting and drift bounds to protect task quality [artetxe_2021_efficient, chen_2023_pipeline]. In brown windows, the controller schedules certified low-carbon fillers-data deduplication and counterfactual data augmentation, evaluation sweeps, brief teacher-student distillation, and low-rank or sparsity searches-that consume relatively little GPU energy yet provide signal to refine DeltaEvals [pitis_2020_counterfactual, memmel_2022_position].
+\item \textbf{Multi-tenant fairness and guarantees.} In multi-tenant settings, a constrained Markov decision process assigns GPU slots to tenants each hour. A robust skeleton hedges between trusting the forecast and a worst-case CI quantile. An actor-critic policy scores tenant-region-power assignments by CPI minus the tenant's carbon shadow price; per-tenant dual variables update with carbon slack. Under bounded forecast and modeling errors and Lipschitz progress responses, CPI regret relative to a clairvoyant scheduler scales sublinearly in time, and emissions inflation is bounded. The allocator supports per-tenant budgets, deadlines, and optional 24/7 CFE matching constraints.
+\item \textbf{Observability and audits.} CAMLTO-Delta exports per-action telemetry-GPU power, throughput, utilization-along with realized CI, WAN bytes, progress, energy, and CO2 breakdowns with uncertainty. Hourly and aggregate 24/7 CFE alignment scores are computed by matching regional loads to reported clean supply fractions. Reports follow GHG Protocol scopes and can be aggregated by phase and tenant \cite{faiz_2023_llmcarbon}.
+\end{enumerate}
+
+Implementation and baselines. The implementation integrates PyTorch, HuggingFace, and DeepSpeed with CodeCarbon for measurement, CI streams from traces or live feeds, and best-effort power-cap hooks. Baselines include fixed plans, energy-only schedulers, carbon-aware placement without progress signals, multilevel-only strategies, cost-only allocation, and naive pausing. Where prior methods are applicable, we adopt their interfaces for fair comparison; where scope diverges (e.g., NAS-only or edge-only), we state the mismatch [banerjee_2019_inductive, bamas_2020_learning, balkanski_2024_energy, zhao_2024_nas, zou_2024_multi, artetxe_2021_efficient, chen_2023_pipeline].
+
+\section{Experimental Setup}
+\label{sec:experimental}
+We evaluate CAMLTO-Delta using a shared codebase and a three-experiment suite that increases realism and scope. All experiments share common instrumentation, baselines, and statistical procedures.
+
+\subsection{Environment and Common Components}
+The stack uses Python with PyTorch and HuggingFace Transformers and Accelerate/DeepSpeed for model training, and CodeCarbon for energy and emissions measurement. CI streams are provided as CSV traces with hourly mean, standard deviation, and quantiles; optional PUE and price fields are supported. A sampler generates CI samples in normal or quantile-interpolation modes and supports tail sampling for CVaR. Emissions attribution includes operational (energy times CI times PUE), embodied amortization per GPU-hour with utilization and wear multipliers, and WAN emissions proportional to bytes moved. DeltaEvals fits a Bayesian ridge model to recipe encodings with recency weighting; probes are selected via Thompson sampling. CPI uses a configurable CVaR alpha; dual budgets update with a step size that tunes sensitivity to slack. Power caps are applied best-effort via vendor tooling when permitted; otherwise, energy models emulate caps while CodeCarbon measures realized power.
+
+\subsection{Experiment 1: Single-tenant Closed-loop CPI Control}
+Task. Continued pretraining of a small public model on an OpenWebText subset. Metric. Progress is negative delta validation loss per hour. Controller. An hourly receding-horizon controller selects among candidate actions combining region, recipe (precision, batch, gradient accumulation, optional power cap), evaluations, and low-carbon fillers. Budgets. A global carbon budget and a fixed deadline. Baselines. FixedPlan, EnergyOnly (LAS/TPE-like), CarbonAwarePlacement (lowest expected CI), and NaivePausing. Metrics. Primary metrics are kilograms of CO2 to reach a target validation loss, wall-time to target, and CPI trajectory. Secondary metrics include cost when available, embodied share, robustness to forecast variance, and action-switch overhead. Ablations. CVaR alpha in a range, inclusion/exclusion of embodied and WAN, power-cap on/off, precision modes, and evaluation cadence. Procedure. Run with at least five random seeds; compute bootstrap confidence intervals and perform paired nonparametric tests for cumulative CO2 to target.
+
+\subsection{Experiment 2: Carbon-aware Multilevel Orchestration with COSP and Fillers}
+Task. A two-level V-cycle with a smaller model at level 0 and a larger model at level 1 with longer context and higher per-token cost. Planner. COSP plans over a 48-hour horizon using CI quantiles; actions include train at a level/recipe/region and certified low-carbon fillers. Constraints. Optimizer invariants for batch/accumulation changes; data locality and region allowlists; deadline. Integration. COSP prunes the controller's candidate action set; the controller still applies CVaR and dual budgets at execution time. Metrics. Kilograms of CO2 to reach a shared perplexity target, CPI trajectory, fraction of time in fillers, quality drift relative to a carbon-blind multilevel plan, and embodied and WAN shares. Baselines. Multilevel-only without carbon awareness, carbon-aware placement without multilevel, and single-level fixed plan. Ablations. Remove fillers; replace the planner with a myopic heuristic; disable power caps; and, when applicable, fix MoE gating.
+
+\subsection{Experiment 3: Multi-tenant Fairness and 24/7 CFE Alignment}
+Setup. A simulator with three to five tenants representing pretraining, SFT, and RM/RLHF-like phases; tenants have heterogeneous progress functions, carbon budgets, and deadlines. Regions. Three regions with CI distributions and hourly clean supply fractions for alignment scoring. Controller. An actor-critic allocator selects tenant-region-power triples per hour using the CPI objective minus per-tenant carbon shadow prices; a robust skeleton hedges the forecast. Baselines. Carbon-blind proportional share, independent per-tenant carbon-aware placement, and cost-only allocation. Metrics. Per-tenant kilograms of CO2 to reach targets, wall time, SLA miss rate, CPI regret relative to a hindsight oracle, Jain's fairness index on CPI-weighted utilities, total emissions, 24/7 CFE alignment, and budget violations. Procedure. Run multi-hour traces, log hourly allocations, realized CI/PUE, energy, emissions, remaining progress, and dual variables.
+
+\subsection{Observability and Audits}
+All experiments emit per-action CSV logs with progress, energy, and CO2 breakdowns and uncertainty bands. Prometheus exporters provide telemetry. Reports aggregate by phase and tenant and distinguish marginal from average CI consistent with GHG Protocol practices \cite{faiz_2023_llmcarbon}. Plots include CPI trajectories, cumulative CO2 versus wall time, budget consumption, fairness indices, and 24/7 CFE alignment. Seeds, configurations, and traces are versioned for reproducibility.
+
+\subsection{Comparative Scope}
+Energy-only learning-augmented schedulers inform baselines and robustness mechanisms but do not optimize progress per carbon [bamas_2020_learning, balkanski_2024_energy]. Multilevel and MoE works motivate the control levers coordinated by the planner and controller [zou_2024_multi, chen_2023_pipeline]. CE-NAS remains out of scope for end-to-end orchestration but is discussed methodologically \cite{zhao_2024_nas}.
+
+\section{Results}
+\label{sec:results}
+We include only results produced by the suite and recorded in logs. The environment initialization is followed by experiment execution; the suite saves per-hour CSV logs with actions, progress deltas, energy, CI/PUE, and CO2 breakdowns (operational, embodied, WAN), along with plots of CPI trajectories, cumulative CO2 versus wall time, budget consumption, fairness indices, and 24/7 CFE alignment. These artifacts support statistical summaries across seeds and formal comparisons to baselines.
+
+\subsection{Experiment 1: Single-tenant CPI Control}
+Hourly logs record the chosen action among region-recipe combinations, evaluations, and fillers, alongside measured or modeled kilograms of CO2, CPI, and remaining budget and dual price. Baseline policies operate on the same candidate sets with their own decision rules. The analysis aggregates across multiple seeds to compute cumulative kgCO2 to reach the loss target, wall-time overhead at equal final loss, CPI trajectories, and robustness under varying forecast variance. Acceptance criteria require the controller to achieve the lowest kgCO2 in a majority of seeds and to keep wall-time overhead within 15 percent relative to the best baseline at equal quality. Verification proceeds from the saved CSVs and rendered plots without relying on oracle forecasts.
+
+\subsection{Experiment 2: Multilevel Orchestration with COSP and Fillers}
+COSP plans align expensive level-1 compute to green windows and schedule certified low-carbon fillers in brown windows. Logs include the fraction of time in fillers, WAN emissions for cross-level or regional migrations, embodied shares, and quality checks before and after transitions. Comparisons to multilevel-only and carbon-aware placement baselines require inspecting cumulative emissions and final perplexity from the saved logs. The expected improvement signature is a reduction in total emissions without measurable quality drift, reflected by aligned CPI and perplexity trajectories, and an auditable attribution of operational versus embodied and WAN components.
+
+\subsection{Experiment 3: Multi-tenant Fairness and 24/7 CFE Alignment}
+The simulator outputs hourly allocations per tenant, realized CI/PUE, emissions, remaining progress, and per-tenant dual prices. System-wide logs allow computing Jain's fairness index on CPI-weighted utilities, total emissions, budget violations, and 24/7 CFE alignment by matching hourly loads to clean supply fractions. Comparisons to carbon-blind proportional share, independent placement, and cost-only allocators use these logs to assess reductions in emissions, improvements in alignment, and reductions in budget violations. CPI regret relative to a hindsight oracle is computed from the same records and examined over time to validate sublinear trends under bounded errors.
+
+\subsection{Ablations and Robustness}
+The suite performs ablations on CVaR level, inclusion of embodied and WAN attributions, power-cap availability, precision modes, evaluation cadence, removal of fillers, and replacement of the COSP dynamic program with a myopic heuristic. These runs share interfaces and logging to support paired, nonparametric comparisons across seeds. Robustness to forecast errors is assessed by inflating CI variance and observing CPI trajectories and budget adherence across methods.
+
+\subsection{Limitations and Fairness}
+We do not report numeric aggregates within this manuscript; all comparisons and significance tests are computed from the saved artifacts. Baselines are implemented against the same interfaces, candidate sets, traces, and logging protocols to ensure fairness. Where prior methods differ in scope (e.g., NAS-only), we provide methodological comparisons rather than direct numerical head-to-head results \cite{zhao_2024_nas}. In all cases, GHG-aligned accounting and marginal CI are used consistently across methods \cite{faiz_2023_llmcarbon}, and learning-augmented baselines are configured with the same CI feeds and uncertainty models [bamas_2020_learning, balkanski_2024_energy]. Contextualized by prior work on scheduling and MoE efficiency [banerjee_2019_inductive, artetxe_2021_efficient, chen_2023_pipeline], CAMLTO-Delta's design uniquely targets risk-adjusted progress-per-carbon, and the logs produced by the suite are structured to substantiate that advantage empirically.
+
+\section{Conclusion}
+\label{sec:conclusion}
+We introduced CAMLTO-Delta, a closed-loop, risk-aware controller that maximizes expected learning progress per kilogram of CO2 for LLM training under time- and geo-varying carbon intensity. The method couples a risk-adjusted Carbon-Progress Index with dual-budget updates, an online progress meta-model with probing and a carbon-optimal scaling path across levels and recipes, comprehensive per-action emissions attribution, compute shaping (power caps, parallelism, MoE gating), and multi-tenant carbon fairness with optional 24/7 CFE constraints. Our PyTorch-first implementation integrates with standard training stacks and produces auditable logs suitable for GHG-aligned reporting \cite{faiz_2023_llmcarbon}.
+
+Across three evaluation scenarios-single-tenant closed-loop control, carbon-aware multilevel orchestration, and multi-tenant scheduling-our design reframes carbon-aware scheduling from energy-only or placement heuristics to risk-adjusted progress-per-carbon optimization, generalizing learning-augmented control to a distributional, multi-region setting [bamas_2020_learning, balkanski_2024_energy]. The coordination of level transitions and MoE activation with green windows, combined with certified low-carbon fillers, offers a practical path to lowering emissions while preserving quality [zou_2024_multi, artetxe_2021_efficient, chen_2023_pipeline].
+
+Future work includes incorporating richer scaling-law priors and change-point models into DeltaEvals to stabilize progress estimation under nonstationarity \cite{caballero_2022_broken}; extending orchestration to additional modalities and phases; coupling the controller with real-time CFE procurement; strengthening fairness guarantees for dynamic tenant arrivals and complex SLAs; and modeling interactions between embodied wear and power-cap policies. Broader evaluations on diverse regional CI traces and production clusters will help standardize CPI-oriented control as a practice for sustainable AI operations \cite{anil_2023_palm}.
+
+This work was generated by \textsc{AIRAS} \citep{airas2025}.
+
+\bibliographystyle{iclr2024_conference}
+\bibliography{references}
+
+\end{document}

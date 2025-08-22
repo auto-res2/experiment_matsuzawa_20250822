@@ -6,5 +6,52 @@
     "cubature on Wiener space",
     "log-ODE method SDE",
     "weak Taylor Greeks"
+  ],
+  "research_study_list": [
+    {
+      "title": "Dimension-free Complexity Bounds for High-order  Nonconvex Finite-sum Optimization"
+    },
+    {
+      "title": "Dimension-free Complexity Bounds for High-order  Nonconvex Finite-sum Optimization"
+    },
+    {
+      "title": "High-dimensional limit theorems for SGD: Effective dynamics and critical scaling"
+    },
+    {
+      "title": "Robust SDE-Based Variational Formulations for Solving Linear PDEs via Deep Learning"
+    },
+    {
+      "title": "Robust SDE-Based Variational Formulations for Solving Linear PDEs via Deep Learning"
+    },
+    {
+      "title": "An Efficient High-dimensional Gradient Estimator for Stochastic Differential Equations"
+    },
+    {
+      "title": "Kernel Quadrature with Randomly Pivoted Cholesky"
+    },
+    {
+      "title": "An analysis of Ermakov-Zolotukhin quadrature using kernels"
+    },
+    {
+      "title": "Bayesian Quadrature on Riemannian Data Manifolds"
+    },
+    {
+      "title": "Log Neural Controlled Differential Equations: The Lie Brackets Make A Difference"
+    },
+    {
+      "title": "Scalable Inference in SDEs by Direct Matching of the Fokker–Planck–Kolmogorov Equation"
+    },
+    {
+      "title": "Neural SDEs as Infinite-Dimensional GANs"
+    },
+    {
+      "title": "Quantifying the Benefit of Using Differentiable Learning over Tangent Kernels"
+    },
+    {
+      "title": "Strength from Weakness: Fast Learning Using Weak Supervision"
+    },
+    {
+      "title": "Lower-Bounded Proper Losses for Weakly Supervised Classification"
+    }
   ]
 }

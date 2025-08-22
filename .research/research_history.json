@@ -1,0 +1,10 @@
+{
+  "research_topic": "自己デバッグLLMのエラー検出精度に関して改善したい",
+  "queries": [
+    "self-debugging LLM",
+    "LLM error detection",
+    "self-consistency LLM",
+    "chain-of-thought verification",
+    "uncertainty calibration LLM"
+  ]
+}

@@ -5,3 +5,466 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{author_year_test,
+ title = {Test Time Adaptation With Regularized Loss for Weakly Supervised Salient Object Detection}
+}
+
+@article{author_year_ttt,
+ title = {TTT++: When Does Self-Supervised Test-Time Training Fail or Thrive?}
+}
+
+@article{chen_2023_improved,
+ abstract = {The main challenge in domain generalization (DG) is to handle the
+distribution shift problem that lies between the training and test data. Recent
+studies suggest that test-time training (TTT), which adapts the learned model
+with test data, might be a promising solution to the problem. Generally, a TTT
+strategy hinges its performance on two main factors: selecting an appropriate
+auxiliary TTT task for updating and identifying reliable parameters to update
+during the test phase. Both previous arts and our experiments indicate that TTT
+may not improve but be detrimental to the learned model if those two factors
+are not properly considered. This work addresses those two factors by proposing
+an Improved Test-Time Adaptation (ITTA) method. First, instead of heuristically
+defining an auxiliary objective, we propose a learnable consistency loss for
+the TTT task, which contains learnable parameters that can be adjusted toward
+better alignment between our TTT task and the main prediction task. Second, we
+introduce additional adaptive parameters for the trained model, and we suggest
+only updating the adaptive parameters during the test phase. Through extensive
+experiments, we show that the proposed two strategies are beneficial for the
+learned model (see Figure 1), and ITTA could achieve superior performance to
+the current state-of-the-art methods on several DG benchmarks. Code is
+available at https://github.com/liangchen527/ITTA.},
+ arxiv_url = {https://arxiv.org/pdf/2304.04494v2.pdf},
+ author = {Liang Chen and Yong Zhang and Yibing Song and Ying Shan and Lingqiao Liu},
+ github_url = {https://github.com/liangchen527/ITTA},
+ title = {Improved Test-Time Adaptation for Domain Generalization},
+ year = {2023}
+}
+
+@article{chen_2023_improved,
+ abstract = {The main challenge in domain generalization (DG) is to handle the
+distribution shift problem that lies between the training and test data. Recent
+studies suggest that test-time training (TTT), which adapts the learned model
+with test data, might be a promising solution to the problem. Generally, a TTT
+strategy hinges its performance on two main factors: selecting an appropriate
+auxiliary TTT task for updating and identifying reliable parameters to update
+during the test phase. Both previous arts and our experiments indicate that TTT
+may not improve but be detrimental to the learned model if those two factors
+are not properly considered. This work addresses those two factors by proposing
+an Improved Test-Time Adaptation (ITTA) method. First, instead of heuristically
+defining an auxiliary objective, we propose a learnable consistency loss for
+the TTT task, which contains learnable parameters that can be adjusted toward
+better alignment between our TTT task and the main prediction task. Second, we
+introduce additional adaptive parameters for the trained model, and we suggest
+only updating the adaptive parameters during the test phase. Through extensive
+experiments, we show that the proposed two strategies are beneficial for the
+learned model (see Figure 1), and ITTA could achieve superior performance to
+the current state-of-the-art methods on several DG benchmarks. Code is
+available at https://github.com/liangchen527/ITTA.},
+ arxiv_url = {https://arxiv.org/pdf/2304.04494v2.pdf},
+ author = {Liang Chen and Yong Zhang and Yibing Song and Ying Shan and Lingqiao Liu},
+ github_url = {https://github.com/liangchen527/ITTA},
+ title = {Improved Test-Time Adaptation for Domain Generalization},
+ year = {2023}
+}
+
+@article{gui_2024_active,
+ abstract = {Test-time adaptation (TTA) addresses distribution shifts for streaming test
+data in unsupervised settings. Currently, most TTA methods can only deal with
+minor shifts and rely heavily on heuristic and empirical studies.
+  To advance TTA under domain shifts, we propose the novel problem setting of
+active test-time adaptation (ATTA) that integrates active learning within the
+fully TTA setting.
+  We provide a learning theory analysis, demonstrating that incorporating
+limited labeled test instances enhances overall performances across test
+domains with a theoretical guarantee. We also present a sample entropy
+balancing for implementing ATTA while avoiding catastrophic forgetting (CF). We
+introduce a simple yet effective ATTA algorithm, known as SimATTA, using
+real-time sample selection techniques. Extensive experimental results confirm
+consistency with our theoretical analyses and show that the proposed ATTA
+method yields substantial performance improvements over TTA methods while
+maintaining efficiency and shares similar effectiveness to the more demanding
+active domain adaptation (ADA) methods. Our code is available at
+https://github.com/divelab/ATTA},
+ arxiv_url = {https://arxiv.org/pdf/2404.05094v1.pdf},
+ author = {Shurui Gui and Xiner Li and Shuiwang Ji},
+ github_url = {https://github.com/DequanWang/tent},
+ title = {Active Test-Time Adaptation: Theoretical Analyses and An Algorithm},
+ year = {2024}
+}
+
+@article{gui_2024_active,
+ abstract = {Test-time adaptation (TTA) addresses distribution shifts for streaming test
+data in unsupervised settings. Currently, most TTA methods can only deal with
+minor shifts and rely heavily on heuristic and empirical studies.
+  To advance TTA under domain shifts, we propose the novel problem setting of
+active test-time adaptation (ATTA) that integrates active learning within the
+fully TTA setting.
+  We provide a learning theory analysis, demonstrating that incorporating
+limited labeled test instances enhances overall performances across test
+domains with a theoretical guarantee. We also present a sample entropy
+balancing for implementing ATTA while avoiding catastrophic forgetting (CF). We
+introduce a simple yet effective ATTA algorithm, known as SimATTA, using
+real-time sample selection techniques. Extensive experimental results confirm
+consistency with our theoretical analyses and show that the proposed ATTA
+method yields substantial performance improvements over TTA methods while
+maintaining efficiency and shares similar effectiveness to the more demanding
+active domain adaptation (ADA) methods. Our code is available at
+https://github.com/divelab/ATTA},
+ arxiv_url = {https://arxiv.org/pdf/2404.05094v1.pdf},
+ author = {Shurui Gui and Xiner Li and Shuiwang Ji},
+ github_url = {https://github.com/divelab/ATTA},
+ title = {Active Test-Time Adaptation: Theoretical Analyses and An Algorithm},
+ year = {2024}
+}
+
+@article{gui_2024_active,
+ abstract = {Test-time adaptation (TTA) addresses distribution shifts for streaming test
+data in unsupervised settings. Currently, most TTA methods can only deal with
+minor shifts and rely heavily on heuristic and empirical studies.
+  To advance TTA under domain shifts, we propose the novel problem setting of
+active test-time adaptation (ATTA) that integrates active learning within the
+fully TTA setting.
+  We provide a learning theory analysis, demonstrating that incorporating
+limited labeled test instances enhances overall performances across test
+domains with a theoretical guarantee. We also present a sample entropy
+balancing for implementing ATTA while avoiding catastrophic forgetting (CF). We
+introduce a simple yet effective ATTA algorithm, known as SimATTA, using
+real-time sample selection techniques. Extensive experimental results confirm
+consistency with our theoretical analyses and show that the proposed ATTA
+method yields substantial performance improvements over TTA methods while
+maintaining efficiency and shares similar effectiveness to the more demanding
+active domain adaptation (ADA) methods. Our code is available at
+https://github.com/divelab/ATTA},
+ arxiv_url = {https://arxiv.org/pdf/2404.05094v1.pdf},
+ author = {Shurui Gui and Xiner Li and Shuiwang Ji},
+ github_url = {https://github.com/divelab/ATTA},
+ title = {Active Test-Time Adaptation: Theoretical Analyses and An Algorithm},
+ year = {2024}
+}
+
+@article{hoang_2023_persistent,
+ abstract = {Current test-time adaptation (TTA) approaches aim to adapt a machine learning
+model to environments that change continuously. Yet, it is unclear whether TTA
+methods can maintain their adaptability over prolonged periods. To answer this
+question, we introduce a diagnostic setting - recurring TTA where environments
+not only change but also recur over time, creating an extensive data stream.
+This setting allows us to examine the error accumulation of TTA models, in the
+most basic scenario, when they are regularly exposed to previous testing
+environments. Furthermore, we simulate a TTA process on a simple yet
+representative $\epsilon$-perturbed Gaussian Mixture Model Classifier, deriving
+theoretical insights into the dataset- and algorithm-dependent factors
+contributing to gradual performance degradation. Our investigation leads us to
+propose persistent TTA (PeTTA), which senses when the model is diverging
+towards collapse and adjusts the adaptation strategy, striking a balance
+between the dual objectives of adaptation and model collapse prevention. The
+supreme stability of PeTTA over existing approaches, in the face of lifelong
+TTA scenarios, has been demonstrated over comprehensive experiments on various
+benchmarks. Our project page is available at https://hthieu166.github.io/petta.},
+ arxiv_url = {https://arxiv.org/pdf/2311.18193v4.pdf},
+ author = {Trung-Hieu Hoang and Duc Minh Vo and Minh N. Do},
+ github_url = {https://github.com/BIT-DA/RoTTA},
+ title = {Persistent Test-time Adaptation in Recurring Testing Scenarios},
+ year = {2023}
+}
+
+@article{lee_2024_aetta,
+ abstract = {Test-time adaptation (TTA) has emerged as a viable solution to adapt
+pre-trained models to domain shifts using unlabeled test data. However, TTA
+faces challenges of adaptation failures due to its reliance on blind adaptation
+to unknown test samples in dynamic scenarios. Traditional methods for
+out-of-distribution performance estimation are limited by unrealistic
+assumptions in the TTA context, such as requiring labeled data or re-training
+models. To address this issue, we propose AETTA, a label-free accuracy
+estimation algorithm for TTA. We propose the prediction disagreement as the
+accuracy estimate, calculated by comparing the target model prediction with
+dropout inferences. We then improve the prediction disagreement to extend the
+applicability of AETTA under adaptation failures. Our extensive evaluation with
+four baselines and six TTA methods demonstrates that AETTA shows an average of
+19.8%p more accurate estimation compared with the baselines. We further
+demonstrate the effectiveness of accuracy estimation with a model recovery case
+study, showcasing the practicality of our model recovery based on accuracy
+estimation. The source code is available at https://github.com/taeckyung/AETTA.},
+ arxiv_url = {https://arxiv.org/pdf/2404.01351v1.pdf},
+ author = {Taeckyung Lee and Sorn Chottananurak and Taesik Gong and Sung-Ju Lee},
+ github_url = {https://github.com/taeckyung/AETTA},
+ title = {AETTA: Label-Free Accuracy Estimation for Test-Time Adaptation},
+ year = {2024}
+}
+
+@article{li_2023_alternating,
+ abstract = {Tensor network (TN) is a powerful framework in machine learning, but
+selecting a good TN model, known as TN structure search (TN-SS), is a
+challenging and computationally intensive task. The recent approach
+TNLS~\cite{li2022permutation} showed promising results for this task, however,
+its computational efficiency is still unaffordable, requiring too many
+evaluations of the objective function. We propose TnALE, a new algorithm that
+updates each structure-related variable alternately by local enumeration,
+\emph{greatly} reducing the number of evaluations compared to TNLS. We
+theoretically investigate the descent steps for TNLS and TnALE, proving that
+both algorithms can achieve linear convergence up to a constant if a sufficient
+reduction of the objective is \emph{reached} in each neighborhood. We also
+compare the evaluation efficiency of TNLS and TnALE, revealing that
+$\Omega(2^N)$ evaluations are typically required in TNLS for \emph{reaching}
+the objective reduction in the neighborhood, while ideally $O(N^2R)$
+evaluations are sufficient in TnALE, where $N$ denotes the tensor order and $R$
+reflects the \emph{``low-rankness''} of the neighborhood. Experimental results
+verify that TnALE can find practically good TN-ranks and permutations with
+vastly fewer evaluations than the state-of-the-art algorithms.},
+ arxiv_url = {https://arxiv.org/pdf/2304.12875v3.pdf},
+ author = {Chao Li and Junhua Zeng and Chunmei Li and Cesar Caiafa and Qibin Zhao},
+ github_url = {https://github.com/oscarmickelin/tensor-ring-decomposition},
+ title = {Alternating Local Enumeration (TnALE): Solving Tensor Network Structure Search with Fewer Evaluations},
+ year = {2023}
+}
+
+@article{ren_2021_tensor,
+ abstract = {Despite the predominant use of first-order methods for training deep learning
+models, second-order methods, and in particular, natural gradient methods,
+remain of interest because of their potential for accelerating training through
+the use of curvature information. Several methods with non-diagonal
+preconditioning matrices, including KFAC, Shampoo, and K-BFGS, have been
+proposed and shown to be effective. Based on the so-called tensor normal (TN)
+distribution, we propose and analyze a brand new approximate natural gradient
+method, Tensor Normal Training (TNT), which like Shampoo, only requires
+knowledge of the shape of the training parameters. By approximating the
+probabilistically based Fisher matrix, as opposed to the empirical Fisher
+matrix, our method uses the block-wise covariance of the sampling based
+gradient as the pre-conditioning matrix. Moreover, the assumption that the
+sampling-based (tensor) gradient follows a TN distribution, ensures that its
+covariance has a Kronecker separable structure, which leads to a tractable
+approximation to the Fisher matrix. Consequently, TNT's memory requirements and
+per-iteration computational costs are only slightly higher than those for
+first-order methods. In our experiments, TNT exhibited superior optimization
+performance to state-of-the-art first-order methods, and comparable
+optimization performance to the state-of-the-art second-order methods KFAC and
+Shampoo. Moreover, TNT demonstrated its ability to generalize as well as
+first-order methods, while using fewer epochs.},
+ arxiv_url = {https://arxiv.org/pdf/2106.02925v3.pdf},
+ author = {Yi Ren and Donald Goldfarb},
+ github_url = {https://github.com/renyiryry/tnt_neurips_2021},
+ title = {Tensor Normal Training for Deep Learning Models},
+ year = {2021}
+}
+
+@article{ren_2021_tensor,
+ abstract = {Despite the predominant use of first-order methods for training deep learning
+models, second-order methods, and in particular, natural gradient methods,
+remain of interest because of their potential for accelerating training through
+the use of curvature information. Several methods with non-diagonal
+preconditioning matrices, including KFAC, Shampoo, and K-BFGS, have been
+proposed and shown to be effective. Based on the so-called tensor normal (TN)
+distribution, we propose and analyze a brand new approximate natural gradient
+method, Tensor Normal Training (TNT), which like Shampoo, only requires
+knowledge of the shape of the training parameters. By approximating the
+probabilistically based Fisher matrix, as opposed to the empirical Fisher
+matrix, our method uses the block-wise covariance of the sampling based
+gradient as the pre-conditioning matrix. Moreover, the assumption that the
+sampling-based (tensor) gradient follows a TN distribution, ensures that its
+covariance has a Kronecker separable structure, which leads to a tractable
+approximation to the Fisher matrix. Consequently, TNT's memory requirements and
+per-iteration computational costs are only slightly higher than those for
+first-order methods. In our experiments, TNT exhibited superior optimization
+performance to state-of-the-art first-order methods, and comparable
+optimization performance to the state-of-the-art second-order methods KFAC and
+Shampoo. Moreover, TNT demonstrated its ability to generalize as well as
+first-order methods, while using fewer epochs.},
+ arxiv_url = {https://arxiv.org/pdf/2106.02925v3.pdf},
+ author = {Yi Ren and Donald Goldfarb},
+ github_url = {https://github.com/renyiryry/tnt_neurips_2021},
+ title = {Tensor Normal Training for Deep Learning Models},
+ year = {2021}
+}
+
+@article{wang_2020_tent,
+ abstract = {A model must adapt itself to generalize to new and different data during
+testing. In this setting of fully test-time adaptation the model has only the
+test data and its own parameters. We propose to adapt by test entropy
+minimization (tent): we optimize the model for confidence as measured by the
+entropy of its predictions. Our method estimates normalization statistics and
+optimizes channel-wise affine transformations to update online on each batch.
+Tent reduces generalization error for image classification on corrupted
+ImageNet and CIFAR-10/100 and reaches a new state-of-the-art error on
+ImageNet-C. Tent handles source-free domain adaptation on digit recognition
+from SVHN to MNIST/MNIST-M/USPS, on semantic segmentation from GTA to
+Cityscapes, and on the VisDA-C benchmark. These results are achieved in one
+epoch of test-time optimization without altering training.},
+ arxiv_url = {https://arxiv.org/pdf/2006.10726v3.pdf},
+ author = {Dequan Wang and Evan Shelhamer and Shaoteng Liu and Bruno Olshausen and Trevor Darrell},
+ github_url = {https://github.com/DequanWang/tent},
+ title = {Tent: Fully Test-Time Adaptation by Entropy Minimization},
+ year = {2020}
+}
+
+@article{wang_2024_backpropagation,
+ abstract = {Real-world systems often encounter new data over time, which leads to
+experiencing target domain shifts. Existing Test-Time Adaptation (TTA) methods
+tend to apply computationally heavy and memory-intensive backpropagation-based
+approaches to handle this. Here, we propose a novel method that uses a
+backpropagation-free approach for TTA for the specific case of 3D data. Our
+model uses a two-stream architecture to maintain knowledge about the source
+domain as well as complementary target-domain-specific information. The
+backpropagation-free property of our model helps address the well-known
+forgetting problem and mitigates the error accumulation issue. The proposed
+method also eliminates the need for the usually noisy process of
+pseudo-labeling and reliance on costly self-supervised training. Moreover, our
+method leverages subspace learning, effectively reducing the distribution
+variance between the two domains. Furthermore, the source-domain-specific and
+the target-domain-specific streams are aligned using a novel entropy-based
+adaptive fusion strategy. Extensive experiments on popular benchmarks
+demonstrate the effectiveness of our method. The code will be available at
+\url{https://github.com/abie-e/BFTT3D}.},
+ arxiv_url = {https://arxiv.org/pdf/2403.18442v2.pdf},
+ author = {Yanshuo Wang and Ali Cheraghian and Zeeshan Hayder and Jie Hong and Sameera Ramasinghe and Shafin Rahman and David Ahmedt-Aristizabal and Xuesong Li and Lars Petersson and Mehrtash Harandi},
+ title = {Backpropagation-free Network for 3D Test-time Adaptation},
+ year = {2024}
+}
+
+@article{yoo_2023_what,
+ abstract = {It is a well-known fact that the performance of deep learning models
+deteriorates when they encounter a distribution shift at test time. Test-time
+adaptation (TTA) algorithms have been proposed to adapt the model online while
+inferring test data. However, existing research predominantly focuses on
+classification tasks through the optimization of batch normalization layers or
+classification heads, but this approach limits its applicability to various
+model architectures like Transformers and makes it challenging to apply to
+other tasks, such as object detection. In this paper, we propose a novel online
+adaption approach for object detection in continually changing test domains,
+considering which part of the model to update, how to update it, and when to
+perform the update. By introducing architecture-agnostic and lightweight
+adaptor modules and only updating these while leaving the pre-trained backbone
+unchanged, we can rapidly adapt to new test domains in an efficient way and
+prevent catastrophic forgetting. Furthermore, we present a practical and
+straightforward class-wise feature aligning method for object detection to
+resolve domain shifts. Additionally, we enhance efficiency by determining when
+the model is sufficiently adapted or when additional adaptation is needed due
+to changes in the test distribution. Our approach surpasses baselines on widely
+used benchmarks, achieving improvements of up to 4.9\%p and 7.9\%p in mAP for
+COCO $\rightarrow$ COCO-corrupted and SHIFT, respectively, while maintaining
+about 20 FPS or higher.},
+ arxiv_url = {https://arxiv.org/pdf/2312.08875v1.pdf},
+ author = {Jayeon Yoo and Dongkwan Lee and Inseop Chung and Donghyun Kim and Nojun Kwak},
+ title = {What How and When Should Object Detectors Update in Continually Changing Test Domains?},
+ year = {2023}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{aljundi_2019_gradient,
+ abstract = {A continual learning agent learns online with a non-stationary and
+never-ending stream of data. The key to such learning process is to overcome
+the catastrophic forgetting of previously seen data, which is a well known
+problem of neural networks. To prevent forgetting, a replay buffer is usually
+employed to store the previous data for the purpose of rehearsal. Previous
+works often depend on task boundary and i.i.d. assumptions to properly select
+samples for the replay buffer. In this work, we formulate sample selection as a
+constraint reduction problem based on the constrained optimization view of
+continual learning. The goal is to select a fixed subset of constraints that
+best approximate the feasible region defined by the original constraints. We
+show that it is equivalent to maximizing the diversity of samples in the replay
+buffer with parameters gradient as the feature. We further develop a greedy
+alternative that is cheap and efficient. The advantage of the proposed method
+is demonstrated by comparing to other alternatives under the continual learning
+setting. Further comparisons are made against state of the art methods that
+rely on task boundaries which show comparable or even better results for our
+method.},
+ arxiv_url = {https://arxiv.org/pdf/1903.08671v5.pdf},
+ author = {Rahaf Aljundi and Min Lin and Baptiste Goujaud and Yoshua Bengio},
+ title = {Gradient based sample selection for online continual learning.},
+ year = {2019}
+}
+
+@article{aljundi_2019_online,
+ abstract = {Continual learning, the setting where a learning agent is faced with a never
+ending stream of data, continues to be a great challenge for modern machine
+learning systems. In particular the online or "single-pass through the data"
+setting has gained attention recently as a natural setting that is difficult to
+tackle. Methods based on replay, either generative or from a stored memory,
+have been shown to be effective approaches for continual learning, matching or
+exceeding the state of the art in a number of standard benchmarks. These
+approaches typically rely on randomly selecting samples from the replay memory
+or from a generative model, which is suboptimal. In this work, we consider a
+controlled sampling of memories for replay. We retrieve the samples which are
+most interfered, i.e. whose prediction will be most negatively impacted by the
+foreseen parameters update. We show a formulation for this sampling criterion
+in both the generative replay and the experience replay setting, producing
+consistent gains in performance and greatly reduced forgetting. We release an
+implementation of our method at
+https://github.com/optimass/Maximally_Interfered_Retrieval.},
+ arxiv_url = {https://arxiv.org/pdf/1908.04742v3.pdf},
+ author = {Rahaf Aljundi and Lucas Caccia and Eugene Belilovsky and Massimo Caccia and Min Lin and Laurent Charlin and Tinne Tuytelaars},
+ journal = {NeurIPS 2019},
+ title = {Online continual learning with maximal interfered retrieval.},
+ year = {2019}
+}
+
+@article{author_year_elements,
+ title = {Elements of Information Theory (Wiley Series in Telecommunications and Signal Processing).}
+}
+
+@article{author_year_hypothesis,
+ title = {Hypothesis testing, type I and type II errors.}
+}
+
+@article{blaas_2024_considerations,
+ abstract = {We consider robustness to distribution shifts in the context of diagnostic
+models in healthcare, where the prediction target $Y$, e.g., the presence of a
+disease, is causally upstream of the observations $X$, e.g., a biomarker.
+Distribution shifts may occur, for instance, when the training data is
+collected in a domain with patients having particular demographic
+characteristics while the model is deployed on patients from a different
+demographic group. In the domain of applied ML for health, it is common to
+predict $Y$ from $X$ without considering further information about the patient.
+However, beyond the direct influence of the disease $Y$ on biomarker $X$, a
+predictive model may learn to exploit confounding dependencies (or shortcuts)
+between $X$ and $Y$ that are unstable under certain distribution shifts. In
+this work, we highlight a data generating mechanism common to healthcare
+settings and discuss how recent theoretical results from the causality
+literature can be applied to build robust predictive models. We theoretically
+show why ignoring covariates as well as common invariant learning approaches
+will in general not yield robust predictors in the studied setting, while
+including certain covariates into the prediction model will. In an extensive
+simulation study, we showcase the robustness (or lack thereof) of different
+predictors under various data generating processes. Lastly, we analyze the
+performance of the different approaches using the PTB-XL dataset, a public
+dataset of annotated ECG recordings.},
+ arxiv_url = {https://arxiv.org/pdf/2410.19575v1.pdf},
+ author = {Arno Blaas and Adam Goliński and Andrew Miller and Luca Zappella and Jörn-Henrik Jacobsen and Christina Heinze-Deml},
+ title = {Considerations for distribution shift robustness in health.},
+ year = {2024}
+}
+
+@article{boudiaf_2022_parameter,
+ abstract = {Training state-of-the-art vision models has become prohibitively expensive
+for researchers and practitioners. For the sake of accessibility and resource
+reuse, it is important to focus on adapting these models to a variety of
+downstream scenarios. An interesting and practical paradigm is online test-time
+adaptation, according to which training data is inaccessible, no labelled data
+from the test distribution is available, and adaptation can only happen at test
+time and on a handful of samples. In this paper, we investigate how test-time
+adaptation methods fare for a number of pre-trained models on a variety of
+real-world scenarios, significantly extending the way they have been originally
+evaluated. We show that they perform well only in narrowly-defined experimental
+setups and sometimes fail catastrophically when their hyperparameters are not
+selected for the same scenario in which they are being tested. Motivated by the
+inherent uncertainty around the conditions that will ultimately be encountered
+at test time, we propose a particularly "conservative" approach, which
+addresses the problem with a Laplacian Adjusted Maximum-likelihood Estimation
+(LAME) objective. By adapting the model's output (not its parameters), and
+solving our objective with an efficient concave-convex procedure, our approach
+exhibits a much higher average accuracy across scenarios than existing methods,
+while being notably faster and have a much lower memory footprint. The code is
+available at https://github.com/fiveai/LAME.},
+ arxiv_url = {https://arxiv.org/pdf/2201.05718v2.pdf},
+ author = {Malik Boudiaf and Romain Mueller and Ismail Ben Ayed and Luca Bertinetto},
+ title = {Parameter-free online test-time adaptation.},
+ year = {2022}
+}

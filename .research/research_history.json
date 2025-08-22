@@ -1,0 +1,10 @@
+{
+  "research_topic": "KVキャッシュ圧縮の適応性に関して改善したい",
+  "queries": [
+    "Adaptive KV Cache Compression",
+    "Dynamic KV Cache Quantization",
+    "LLM Inference KV Cache",
+    "Context-aware KV Cache",
+    "KV Cache Eviction Policy"
+  ]
+}

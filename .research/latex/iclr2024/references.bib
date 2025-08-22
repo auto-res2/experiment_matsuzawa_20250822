@@ -5,3 +5,433 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{ermis_2022_memory,
+ abstract = {In many real-world scenarios, data to train machine learning models becomes
+available over time. Unfortunately, these models struggle to continually learn
+new concepts without forgetting what has been learnt in the past. This
+phenomenon is known as catastrophic forgetting and it is difficult to prevent
+due to practical constraints. For instance, the amount of data that can be
+stored or the computational resources that can be used might be limited.
+Moreover, applications increasingly rely on large pre-trained neural networks,
+such as pre-trained Transformers, since the resources or data might not be
+available in sufficiently large quantities to practitioners to train the model
+from scratch. In this paper, we devise a method to incrementally train a model
+on a sequence of tasks using pre-trained Transformers and extending them with
+Adapters. Different than the existing approaches, our method is able to scale
+to a large number of tasks without significant overhead and allows sharing
+information across tasks. On both image and text classification tasks, we
+empirically demonstrate that our method maintains a good predictive performance
+without retraining the model or increasing the number of model parameters over
+time. The resulting model is also significantly faster at inference time
+compared to Adapter-based state-of-the-art methods.},
+ arxiv_url = {https://arxiv.org/pdf/2203.04640v2.pdf},
+ author = {Beyza Ermis and Giovanni Zappella and Martin Wistuba and Aditya Rawal and Cedric Archambeau},
+ github_url = {https://github.com/Adapter-Hub/adapter-transformers},
+ title = {Memory Efficient Continual Learning with Transformers},
+ year = {2022}
+}
+
+@article{gorbunov_2024_group,
+ abstract = {The increasing size of neural networks has led to a growing demand for
+methods of efficient fine-tuning. Recently, an orthogonal fine-tuning paradigm
+was introduced that uses orthogonal matrices for adapting the weights of a
+pretrained model. In this paper, we introduce a new class of structured
+matrices, which unifies and generalizes structured classes from previous works.
+We examine properties of this class and build a structured orthogonal
+parametrization upon it. We then use this parametrization to modify the
+orthogonal fine-tuning framework, improving parameter and computational
+efficiency. We empirically validate our method on different domains, including
+adapting of text-to-image diffusion models and downstream task fine-tuning in
+language modeling. Additionally, we adapt our construction for orthogonal
+convolutions and conduct experiments with 1-Lipschitz neural networks.},
+ arxiv_url = {https://arxiv.org/pdf/2406.10019v1.pdf},
+ author = {Mikhail Gorbunov and Nikolay Yudin and Vera Soboleva and Aibek Alanov and Alexey Naumov and Maxim Rakhuba},
+ title = {Group and Shuffle: Efficient Structured Orthogonal Parametrization},
+ year = {2024}
+}
+
+@article{hao_2024_flora,
+ abstract = {Despite large neural networks demonstrating remarkable abilities to complete
+different tasks, they require excessive memory usage to store the optimization
+states for training. To alleviate this, the low-rank adaptation (LoRA) is
+proposed to reduce the optimization states by training fewer parameters.
+However, LoRA restricts overall weight update matrices to be low-rank, limiting
+the model performance. In this work, we investigate the dynamics of LoRA and
+identify that it can be approximated by a random projection. Based on this
+observation, we propose Flora, which is able to achieve high-rank updates by
+resampling the projection matrices while enjoying the sublinear space
+complexity of optimization states. We conduct experiments across different
+tasks and model architectures to verify the effectiveness of our approach.},
+ arxiv_url = {https://arxiv.org/pdf/2402.03293v2.pdf},
+ author = {Yongchang Hao and Yanshuai Cao and Lili Mou},
+ github_url = {https://github.com/BorealisAI/flora-opt},
+ title = {Flora: Low-Rank Adapters Are Secretly Gradient Compressors},
+ year = {2024}
+}
+
+@article{jin_2024_what,
+ abstract = {Language models deployed in the wild make errors. However, simply updating
+the model with the corrected error instances causes catastrophic forgetting --
+the updated model makes errors on instances learned during the instruction
+tuning or upstream training phase. Randomly replaying upstream data yields
+unsatisfactory performance and often comes with high variance and poor
+controllability. To this end, we try to forecast upstream examples that will be
+forgotten due to a model update for improved controllability of the replay
+process and interpretability. We train forecasting models given a collection of
+online learned examples and corresponding forgotten upstream pre-training
+examples. We propose a partially interpretable forecasting model based on the
+observation that changes in pre-softmax logit scores of pretraining examples
+resemble that of online learned examples, which performs decently on BART but
+fails on T5 models. We further show a black-box classifier based on inner
+products of example representations achieves better forecasting performance
+over a series of setups. Finally, we show that we reduce forgetting of upstream
+pretraining examples by replaying examples that are forecasted to be forgotten,
+demonstrating the practical utility of forecasting example forgetting.},
+ arxiv_url = {https://arxiv.org/pdf/2402.01865v3.pdf},
+ author = {Xisen Jin and Xiang Ren},
+ title = {What Will My Model Forget? Forecasting Forgotten Examples in Language Model Refinement},
+ year = {2024}
+}
+
+@article{ke_2021_achieving,
+ abstract = {Continual learning (CL) learns a sequence of tasks incrementally with the
+goal of achieving two main objectives: overcoming catastrophic forgetting (CF)
+and encouraging knowledge transfer (KT) across tasks. However, most existing
+techniques focus only on overcoming CF and have no mechanism to encourage KT,
+and thus do not do well in KT. Although several papers have tried to deal with
+both CF and KT, our experiments show that they suffer from serious CF when the
+tasks do not have much shared knowledge. Another observation is that most
+current CL methods do not use pre-trained models, but it has been shown that
+such models can significantly improve the end task performance. For example, in
+natural language processing, fine-tuning a BERT-like pre-trained language model
+is one of the most effective approaches. However, for CL, this approach suffers
+from serious CF. An interesting question is how to make the best use of
+pre-trained models for CL. This paper proposes a novel model called CTR to
+solve these problems. Our experimental results demonstrate the effectiveness of
+CTR},
+ arxiv_url = {https://arxiv.org/pdf/2112.02706v1.pdf},
+ author = {Zixuan Ke and Bing Liu and Nianzu Ma and Hu Xu and Lei Shu},
+ github_url = {https://github.com/ZixuanKe/PyContinual},
+ journal = {NeurIPS 2021},
+ title = {Achieving Forgetting Prevention and Knowledge Transfer in Continual Learning},
+ year = {2021}
+}
+
+@article{liang_2024_inflora,
+ abstract = {Continual learning requires the model to learn multiple tasks sequentially.
+In continual learning, the model should possess the ability to maintain its
+performance on old tasks (stability) and the ability to adapt to new tasks
+continuously (plasticity). Recently, parameter-efficient fine-tuning (PEFT),
+which involves freezing a pre-trained model and injecting a small number of
+learnable parameters to adapt to downstream tasks, has gained increasing
+popularity in continual learning. Although existing continual learning methods
+based on PEFT have demonstrated superior performance compared to those not
+based on PEFT, most of them do not consider how to eliminate the interference
+of the new task on the old tasks, which inhibits the model from making a good
+trade-off between stability and plasticity. In this work, we propose a new PEFT
+method, called interference-free low-rank adaptation (InfLoRA), for continual
+learning. InfLoRA injects a small number of parameters to reparameterize the
+pre-trained weights and shows that fine-tuning these injected parameters is
+equivalent to fine-tuning the pre-trained weights within a subspace.
+Furthermore, InfLoRA designs this subspace to eliminate the interference of the
+new task on the old tasks, making a good trade-off between stability and
+plasticity. Experimental results show that InfLoRA outperforms existing
+state-of-the-art continual learning methods on multiple datasets.},
+ arxiv_url = {https://arxiv.org/pdf/2404.00228v3.pdf},
+ author = {Yan-Shuo Liang and Wu-Jun Li},
+ title = {InfLoRA: Interference-Free Low-Rank Adaptation for Continual Learning},
+ year = {2024}
+}
+
+@article{liu_2023_parameter,
+ abstract = {Large foundation models are becoming ubiquitous, but training them from
+scratch is prohibitively expensive. Thus, efficiently adapting these powerful
+models to downstream tasks is increasingly important. In this paper, we study a
+principled finetuning paradigm -- Orthogonal Finetuning (OFT) -- for downstream
+task adaptation. Despite demonstrating good generalizability, OFT still uses a
+fairly large number of trainable parameters due to the high dimensionality of
+orthogonal matrices. To address this, we start by examining OFT from an
+information transmission perspective, and then identify a few key desiderata
+that enable better parameter-efficiency. Inspired by how the Cooley-Tukey fast
+Fourier transform algorithm enables efficient information transmission, we
+propose an efficient orthogonal parameterization using butterfly structures. We
+apply this parameterization to OFT, creating a novel parameter-efficient
+finetuning method, called Orthogonal Butterfly (BOFT). By subsuming OFT as a
+special case, BOFT introduces a generalized orthogonal finetuning framework.
+Finally, we conduct an extensive empirical study of adapting large vision
+transformers, large language models, and text-to-image diffusion models to
+various downstream tasks in vision and language.},
+ arxiv_url = {https://arxiv.org/pdf/2311.06243v2.pdf},
+ author = {Weiyang Liu and Zeju Qiu and Yao Feng and Yuliang Xiu and Yuxuan Xue and Longhui Yu and Haiwen Feng and Zhen Liu and Juyeon Heo and Songyou Peng and Yandong Wen and Michael J. Black and Adrian Weller and Bernhard Schölkopf},
+ github_url = {https://github.com/huggingface/peft},
+ title = {Parameter-Efficient Orthogonal Finetuning via Butterfly Factorization},
+ year = {2023}
+}
+
+@article{ma_2024_parameter,
+ abstract = {With the increasingly powerful performances and enormous scales of pretrained
+models, promoting parameter efficiency in fine-tuning has become a crucial need
+for effective and efficient adaptation to various downstream tasks. One
+representative line of fine-tuning methods is Orthogonal Fine-tuning (OFT),
+which rigorously preserves the angular distances within the parameter space to
+preserve the pretrained knowledge. Despite the empirical effectiveness, OFT
+still suffers low parameter efficiency at $\mathcal{O}(d^2)$ and limited
+capability of downstream adaptation. Inspired by Givens rotation, in this
+paper, we proposed quasi-Givens Orthogonal Fine-Tuning (qGOFT) to address the
+problems. We first use $\mathcal{O}(d)$ Givens rotations to accomplish
+arbitrary orthogonal transformation in $SO(d)$ with provable equivalence,
+reducing parameter complexity from $\mathcal{O}(d^2)$ to $\mathcal{O}(d)$. Then
+we introduce flexible norm and relative angular adjustments under soft
+orthogonality regularization to enhance the adaptation capability of downstream
+semantic deviations. Extensive experiments on various tasks and pretrained
+models validate the effectiveness of our methods.},
+ arxiv_url = {https://arxiv.org/pdf/2404.04316v2.pdf},
+ author = {Xinyu Ma and Xu Chu and Zhibang Yang and Yang Lin and Xin Gao and Junfeng Zhao},
+ github_url = {https://github.com/ArthurLeoM/peft-givens},
+ title = {Parameter Efficient Quasi-Orthogonal Fine-Tuning via Givens Rotation},
+ year = {2024}
+}
+
+@article{pilault_2020_conditionally,
+ abstract = {Multi-Task Learning (MTL) networks have emerged as a promising method for
+transferring learned knowledge across different tasks. However, MTL must deal
+with challenges such as: overfitting to low resource tasks, catastrophic
+forgetting, and negative task transfer, or learning interference. Often, in
+Natural Language Processing (NLP), a separate model per task is needed to
+obtain the best performance. However, many fine-tuning approaches are both
+parameter inefficient, i.e., potentially involving one new model per task, and
+highly susceptible to losing knowledge acquired during pretraining. We propose
+a novel Transformer architecture consisting of a new conditional attention
+mechanism as well as a set of task-conditioned modules that facilitate weight
+sharing. Through this construction (a hypernetwork adapter), we achieve more
+efficient parameter sharing and mitigate forgetting by keeping half of the
+weights of a pretrained model fixed. We also use a new multi-task data sampling
+strategy to mitigate the negative effects of data imbalance across tasks. Using
+this approach, we are able to surpass single task fine-tuning methods while
+being parameter and data efficient (using around 66% of the data for weight
+updates). Compared to other BERT Large methods on GLUE, our 8-task model
+surpasses other Adapter methods by 2.8% and our 24-task model outperforms by
+0.7-1.0% models that use MTL and single task fine-tuning. We show that a larger
+variant of our single multi-task model approach performs competitively across
+26 NLP tasks and yields state-of-the-art results on a number of test and
+development sets. Our code is publicly available at
+https://github.com/CAMTL/CA-MTL.},
+ arxiv_url = {https://arxiv.org/pdf/2009.09139v3.pdf},
+ author = {Jonathan Pilault and Amine Elhattami and Christopher Pal},
+ github_url = {https://github.com/CAMTL/CA-MTL},
+ title = {Conditionally Adaptive Multi-Task Learning: Improving Transfer Learning in NLP Using Fewer Parameters & Less Data},
+ year = {2020}
+}
+
+@article{razdaibiedina_2023_progressive,
+ abstract = {We introduce Progressive Prompts - a simple and efficient approach for
+continual learning in language models. Our method allows forward transfer and
+resists catastrophic forgetting, without relying on data replay or a large
+number of task-specific parameters. Progressive Prompts learns a new soft
+prompt for each task and sequentially concatenates it with the previously
+learned prompts, while keeping the base model frozen. Experiments on standard
+continual learning benchmarks show that our approach outperforms
+state-of-the-art methods, with an improvement >20% in average test accuracy
+over the previous best-preforming method on T5 model. We also explore a more
+challenging continual learning setup with longer sequences of tasks and show
+that Progressive Prompts significantly outperforms prior methods.},
+ arxiv_url = {https://arxiv.org/pdf/2301.12314v1.pdf},
+ author = {Anastasia Razdaibiedina and Yuning Mao and Rui Hou and Madian Khabsa and Mike Lewis and Amjad Almahairi},
+ title = {Progressive Prompts: Continual Learning for Language Models},
+ year = {2023}
+}
+
+@article{tan_2024_semantically,
+ abstract = {Class-incremental learning (CIL) aims to enable models to continuously learn
+new classes while overcoming catastrophic forgetting. The introduction of
+pre-trained models has brought new tuning paradigms to CIL. In this paper, we
+revisit different parameter-efficient tuning (PET) methods within the context
+of continual learning. We observe that adapter tuning demonstrates superiority
+over prompt-based methods, even without parameter expansion in each learning
+session. Motivated by this, we propose incrementally tuning the shared adapter
+without imposing parameter update constraints, enhancing the learning capacity
+of the backbone. Additionally, we employ feature sampling from stored
+prototypes to retrain a unified classifier, further improving its performance.
+We estimate the semantic shift of old prototypes without access to past samples
+and update stored prototypes session by session. Our proposed method eliminates
+model expansion and avoids retaining any image samples. It surpasses previous
+pre-trained model-based CIL methods and demonstrates remarkable continual
+learning capabilities. Experimental results on five CIL benchmarks validate the
+effectiveness of our approach, achieving state-of-the-art (SOTA) performance.},
+ arxiv_url = {https://arxiv.org/pdf/2403.19979v1.pdf},
+ author = {Yuwen Tan and Qinhao Zhou and Xiang Xiang and Ke Wang and Yuchuan Wu and Yongbin Li},
+ title = {Semantically-Shifted Incremental Adapter-Tuning is A Continual ViTransformer},
+ year = {2024}
+}
+
+@article{tan_2024_semantically,
+ abstract = {Class-incremental learning (CIL) aims to enable models to continuously learn
+new classes while overcoming catastrophic forgetting. The introduction of
+pre-trained models has brought new tuning paradigms to CIL. In this paper, we
+revisit different parameter-efficient tuning (PET) methods within the context
+of continual learning. We observe that adapter tuning demonstrates superiority
+over prompt-based methods, even without parameter expansion in each learning
+session. Motivated by this, we propose incrementally tuning the shared adapter
+without imposing parameter update constraints, enhancing the learning capacity
+of the backbone. Additionally, we employ feature sampling from stored
+prototypes to retrain a unified classifier, further improving its performance.
+We estimate the semantic shift of old prototypes without access to past samples
+and update stored prototypes session by session. Our proposed method eliminates
+model expansion and avoids retaining any image samples. It surpasses previous
+pre-trained model-based CIL methods and demonstrates remarkable continual
+learning capabilities. Experimental results on five CIL benchmarks validate the
+effectiveness of our approach, achieving state-of-the-art (SOTA) performance.},
+ arxiv_url = {https://arxiv.org/pdf/2403.19979v1.pdf},
+ author = {Yuwen Tan and Qinhao Zhou and Xiang Xiang and Ke Wang and Yuchuan Wu and Yongbin Li},
+ title = {Semantically-Shifted Incremental Adapter-Tuning is A Continual ViTransformer},
+ year = {2024}
+}
+
+@article{woczyk_2024_fine,
+ abstract = {Fine-tuning is a widespread technique that allows practitioners to transfer
+pre-trained capabilities, as recently showcased by the successful applications
+of foundation models. However, fine-tuning reinforcement learning (RL) models
+remains a challenge. This work conceptualizes one specific cause of poor
+transfer, accentuated in the RL setting by the interplay between actions and
+observations: forgetting of pre-trained capabilities. Namely, a model
+deteriorates on the state subspace of the downstream task not visited in the
+initial phase of fine-tuning, on which the model behaved well due to
+pre-training. This way, we lose the anticipated transfer benefits. We identify
+conditions when this problem occurs, showing that it is common and, in many
+cases, catastrophic. Through a detailed empirical analysis of the challenging
+NetHack and Montezuma's Revenge environments, we show that standard knowledge
+retention techniques mitigate the problem and thus allow us to take full
+advantage of the pre-trained capabilities. In particular, in NetHack, we
+achieve a new state-of-the-art for neural models, improving the previous best
+score from $5$K to over $10$K points in the Human Monk scenario.},
+ arxiv_url = {https://arxiv.org/pdf/2402.02868v3.pdf},
+ author = {Maciej Wołczyk and Bartłomiej Cupiał and Mateusz Ostaszewski and Michał Bortkiewicz and Michał Zając and Razvan Pascanu and Łukasz Kuciński and Piotr Miłoś},
+ title = {Fine-tuning Reinforcement Learning Models is Secretly a Forgetting Mitigation Problem},
+ year = {2024}
+}
+
+@article{zhao_2024_continual,
+ abstract = {For privacy and security concerns, the need to erase unwanted information
+from pre-trained vision models is becoming evident nowadays. In real-world
+scenarios, erasure requests originate at any time from both users and model
+owners. These requests usually form a sequence. Therefore, under such a
+setting, selective information is expected to be continuously removed from a
+pre-trained model while maintaining the rest. We define this problem as
+continual forgetting and identify two key challenges. (i) For unwanted
+knowledge, efficient and effective deleting is crucial. (ii) For remaining
+knowledge, the impact brought by the forgetting procedure should be minimal. To
+address them, we propose Group Sparse LoRA (GS-LoRA). Specifically, towards
+(i), we use LoRA modules to fine-tune the FFN layers in Transformer blocks for
+each forgetting task independently, and towards (ii), a simple group sparse
+regularization is adopted, enabling automatic selection of specific LoRA groups
+and zeroing out the others. GS-LoRA is effective, parameter-efficient,
+data-efficient, and easy to implement. We conduct extensive experiments on face
+recognition, object detection and image classification and demonstrate that
+GS-LoRA manages to forget specific classes with minimal impact on other
+classes. Codes will be released on \url{https://github.com/bjzhb666/GS-LoRA}.},
+ arxiv_url = {https://arxiv.org/pdf/2403.11530v2.pdf},
+ author = {Hongbo Zhao and Bolin Ni and Haochen Wang and Junsong Fan and Fei Zhu and Yuxi Wang and Yuntao Chen and Gaofeng Meng and Zhaoxiang Zhang},
+ github_url = {https://github.com/bjzhb666/GS-LoRA},
+ title = {Continual Forgetting for Pre-trained Vision Models},
+ year = {2024}
+}
+
+@article{zhong_2023_seeking,
+ abstract = {Large Language Models (LLMs) inherently encode a wealth of knowledge within
+their parameters through pre-training on extensive corpora. While prior
+research has delved into operations on these parameters to manipulate the
+underlying implicit knowledge (encompassing detection, editing, and merging),
+there remains an ambiguous understanding regarding their transferability across
+models with varying scales. In this paper, we seek to empirically investigate
+knowledge transfer from larger to smaller models through a parametric
+perspective. To achieve this, we employ sensitivity-based techniques to extract
+and align knowledge-specific parameters between different LLMs. Moreover, the
+LoRA module is used as the intermediary mechanism for injecting the extracted
+knowledge into smaller models. Evaluations across four benchmarks validate the
+efficacy of our proposed method. Our findings highlight the critical factors
+contributing to the process of parametric knowledge transfer, underscoring the
+transferability of model parameters across LLMs of different scales. Project
+website: https://maszhongming.github.io/ParaKnowTransfer.},
+ arxiv_url = {https://arxiv.org/pdf/2310.11451v2.pdf},
+ author = {Ming Zhong and Chenxin An and Weizhu Chen and Jiawei Han and Pengcheng He},
+ title = {Seeking Neural Nuggets: Knowledge Transfer in Large Language Models from a Parametric Perspective},
+ year = {2023}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{author_year_model,
+ title = {Model compression.}
+}
+
+@article{bao_2022_information,
+ abstract = {Task transfer learning is a popular technique in image processing
+applications that uses pre-trained models to reduce the supervision cost of
+related tasks. An important question is to determine task transferability, i.e.
+given a common input domain, estimating to what extent representations learned
+from a source task can help in learning a target task. Typically,
+transferability is either measured experimentally or inferred through task
+relatedness, which is often defined without a clear operational meaning. In
+this paper, we present a novel metric, H-score, an easily-computable evaluation
+function that estimates the performance of transferred representations from one
+task to another in classification problems using statistical and information
+theoretic principles. Experiments on real image data show that our metric is
+not only consistent with the empirical transferability measurement, but also
+useful to practitioners in applications such as source model selection and task
+transfer curriculum learning.},
+ arxiv_url = {https://arxiv.org/pdf/2212.10082v1.pdf},
+ author = {Yajie Bao and Yang Li and Shao-Lun Huang and Lin Zhang and Lizhong Zheng and Amir Zamir and Leonidas Guibas},
+ journal = {2019 IEEE International Conference on Image Processing (ICIP) (pp.
+  2309-2313). IEEE},
+ title = {An information-theoretic approach to transferability in task transfer learning.},
+ year = {2022}
+}
+
+@article{buzzega_2020_dark,
+ abstract = {Continual Learning has inspired a plethora of approaches and evaluation
+settings; however, the majority of them overlooks the properties of a practical
+scenario, where the data stream cannot be shaped as a sequence of tasks and
+offline training is not viable. We work towards General Continual Learning
+(GCL), where task boundaries blur and the domain and class distributions shift
+either gradually or suddenly. We address it through mixing rehearsal with
+knowledge distillation and regularization; our simple baseline, Dark Experience
+Replay, matches the network's logits sampled throughout the optimization
+trajectory, thus promoting consistency with its past. By conducting an
+extensive analysis on both standard benchmarks and a novel GCL evaluation
+setting (MNIST-360), we show that such a seemingly simple baseline outperforms
+consolidated approaches and leverages limited resources. We further explore the
+generalization capabilities of our objective, showing its regularization being
+beneficial beyond mere performance.},
+ arxiv_url = {https://arxiv.org/pdf/2004.07211v2.pdf},
+ author = {Pietro Buzzega and Matteo Boschini and Angelo Porrello and Davide Abati and Simone Calderara},
+ title = {Dark experience for general continual learning: a strong, simple baseline.},
+ year = {2020}
+}
+
+@article{chuang_2020_lifelong,
+ abstract = {It is challenging to perform lifelong language learning (LLL) on a stream of
+different tasks without any performance degradation comparing to the multi-task
+counterparts. To address this issue, we present Lifelong Language Knowledge
+Distillation (L2KD), a simple but efficient method that can be easily applied
+to existing LLL architectures in order to mitigate the degradation.
+Specifically, when the LLL model is trained on a new task, we assign a teacher
+model to first learn the new task, and pass the knowledge to the LLL model via
+knowledge distillation. Therefore, the LLL model can better adapt to the new
+task while keeping the previously learned knowledge. Experiments show that the
+proposed L2KD consistently improves previous state-of-the-art models, and the
+degradation comparing to multi-task models in LLL tasks is well mitigated for
+both sequence generation and text classification tasks.},
+ arxiv_url = {https://arxiv.org/pdf/2010.02123v1.pdf},
+ author = {Yung-Sung Chuang and Shang-Yu Su and Yun-Nung Chen},
+ title = {Lifelong language knowledge distillation.},
+ year = {2020}
+}

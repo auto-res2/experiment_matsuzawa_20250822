@@ -1,0 +1,27 @@
+{
+  "experiment_name": "AOFM_FID_BENCHMARK_CIFAR10",
+  "dataset": "CIFAR10",
+  "model": {
+    "icnn_dim": 64,
+    "inverter_dim": 64,
+    "dim_mults": [1, 2, 4],
+    "channels": 3
+  },
+  "training": {
+    "batch_size": 32,
+    "num_iterations": 1000,
+    "lr": 1e-4,
+    "warmup_steps": 100,
+    "lambda_inv": 1.0,
+    "cg_iters": 10
+  },
+  "evaluation": {
+    "nfe_values": [1, 2, 4, 10, 20, 50],
+    "fid_samples": 50000,
+    "sample_batch_size": 64
+  },
+  "hardware": {
+    "device": "cuda",
+    "num_workers": 2
+  }
+}

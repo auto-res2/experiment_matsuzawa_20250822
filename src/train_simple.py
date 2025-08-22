@@ -20,107 +20,62 @@ class SinusoidalPosEmb(nn.Module):
         emb = torch.cat((emb.sin(), emb.cos()), dim=-1)
         return emb
 
-class SimpleUNet(nn.Module):
-    def __init__(self, dim=64, channels=3, out_dim=None):
+class MinimalUNet(nn.Module):
+    def __init__(self, dim=32, channels=3, out_dim=None):
         super().__init__()
         self.channels = channels
         self.out_dim = out_dim if out_dim is not None else channels
         
-        time_dim = dim * 4
+        time_dim = dim * 2
         self.time_mlp = nn.Sequential(
             SinusoidalPosEmb(dim),
             nn.Linear(dim, time_dim),
-            nn.GELU(),
+            nn.SiLU(),
             nn.Linear(time_dim, time_dim),
         )
         
-        self.conv1 = nn.Conv2d(channels, dim, 3, padding=1)
-        self.conv2 = nn.Conv2d(dim, dim*2, 3, padding=1)
-        self.conv3 = nn.Conv2d(dim*2, dim*4, 3, padding=1)
+        self.encoder = nn.Sequential(
+            nn.Conv2d(channels, dim, 3, padding=1),
+            nn.SiLU(),
+            nn.Conv2d(dim, dim*2, 3, padding=1),
+            nn.SiLU(),
+            nn.Conv2d(dim*2, dim*4, 3, padding=1),
+            nn.SiLU()
+        )
         
-        self.time_proj1 = nn.Linear(time_dim, dim)
-        self.time_proj2 = nn.Linear(time_dim, dim*2)
-        self.time_proj3 = nn.Linear(time_dim, dim*4)
+        self.time_proj = nn.Linear(time_dim, dim*4)
         
-        self.mid_conv = nn.Conv2d(dim*4, dim*4, 3, padding=1)
-        
-        self.up_conv3 = nn.ConvTranspose2d(dim*4, dim*2, 2, stride=2)
-        self.dec_conv3 = nn.Conv2d(dim*4, dim*2, 3, padding=1)
-        
-        self.up_conv2 = nn.ConvTranspose2d(dim*2, dim, 2, stride=2)
-        self.dec_conv2 = nn.Conv2d(dim*2, dim, 3, padding=1)
-        
-        self.up_conv1 = nn.ConvTranspose2d(dim, dim, 2, stride=2)
-        self.dec_conv1 = nn.Conv2d(dim*2, dim, 3, padding=1)
-        
-        self.final_conv = nn.Conv2d(dim, self.out_dim, 1)
-        
-        self.pool = nn.MaxPool2d(2)
-        self.act = nn.SiLU()
+        self.decoder = nn.Sequential(
+            nn.Conv2d(dim*4, dim*2, 3, padding=1),
+            nn.SiLU(),
+            nn.Conv2d(dim*2, dim, 3, padding=1),
+            nn.SiLU(),
+            nn.Conv2d(dim, self.out_dim, 3, padding=1)
+        )
         
     def forward(self, x, time):
         t = self.time_mlp(time.view(-1))
         
-        x1 = self.act(self.conv1(x) + self.time_proj1(t)[:, :, None, None])
-        x2 = self.act(self.conv2(self.pool(x1)) + self.time_proj2(t)[:, :, None, None])
-        x3 = self.act(self.conv3(self.pool(x2)) + self.time_proj3(t)[:, :, None, None])
+        x = self.encoder(x)
         
-        x_mid = self.act(self.mid_conv(self.pool(x3)))
+        x = x + self.time_proj(t)[:, :, None, None]
         
-        x = self.up_conv3(x_mid)
-        x = torch.cat([x, x3], dim=1)
-        x = self.act(self.dec_conv3(x))
+        x = self.decoder(x)
         
-        x = self.up_conv2(x)
-        x = torch.cat([x, x2], dim=1)
-        x = self.act(self.dec_conv2(x))
-        
-        x = self.up_conv1(x)
-        x = torch.cat([x, x1], dim=1)
-        x = self.act(self.dec_conv1(x))
-        
-        return self.final_conv(x)
+        return x
 
-class ICNNUNet(SimpleUNet):
+class ICNNUNet(MinimalUNet):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs, out_dim=1)
-        for module in self.modules():
-            if isinstance(module, (nn.Conv2d, nn.ConvTranspose2d)):
-                torch.nn.utils.spectral_norm(module)
         self.final_act = nn.Softplus()
 
     def forward(self, x, t):
         out = super().forward(x, t)
         return self.final_act(out).sum(dim=[1, 2, 3])
 
-class InverterUNet(SimpleUNet):
+class InverterUNet(MinimalUNet):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-
-def hessian_vector_product(f_out, x, v):
-    grad_f = torch.autograd.grad(f_out, x, create_graph=True, retain_graph=True)[0]
-    grad_f_vec = grad_f.reshape(grad_f.size(0), -1)
-    v_vec = v.reshape(v.size(0), -1)
-    hvp = torch.autograd.grad(grad_f_vec, x, grad_outputs=v_vec, retain_graph=True)[0]
-    return hvp
-
-def conjugate_gradient(A_hvp, b, n_iter=10):
-    x = torch.zeros_like(b)
-    r = b.clone()
-    p = r.clone()
-    rs_old = torch.sum(r * r, dim=[1, 2, 3], keepdim=True)
-
-    for _ in range(n_iter):
-        Ap = A_hvp(p)
-        alpha = rs_old / (torch.sum(p * Ap, dim=[1, 2, 3], keepdim=True) + 1e-8)
-        x += alpha * p
-        r -= alpha * Ap
-        rs_new = torch.sum(r * r, dim=[1, 2, 3], keepdim=True)
-        if torch.all(rs_new < 1e-8):
-            break
-        p = r + (rs_new / (rs_old + 1e-8)) * p
-        rs_old = rs_new
-    return x
 
 def get_cosine_schedule_with_warmup(optimizer, num_warmup_steps, num_training_steps, num_cycles=0.5, last_epoch=-1):
     def lr_lambda(current_step):
@@ -138,8 +93,8 @@ def train_aofm(config):
     
     os.makedirs(config.get('output_dir', './models'), exist_ok=True)
     
-    icnn = ICNNUNet(dim=64, channels=3).to(device)
-    inverter = InverterUNet(dim=64, channels=3).to(device)
+    icnn = ICNNUNet(dim=32, channels=3).to(device)
+    inverter = InverterUNet(dim=32, channels=3).to(device)
     
     print(f'[INFO] ICNN Parameters: {sum(p.numel() for p in icnn.parameters())/1e6:.2f}M')
     print(f'[INFO] Inverter Parameters: {sum(p.numel() for p in inverter.parameters())/1e6:.2f}M')
@@ -147,14 +102,14 @@ def train_aofm(config):
     opt_icnn = optim.AdamW(icnn.parameters(), lr=config.get('lr', 1e-4), betas=(0.9, 0.999))
     opt_inv = optim.AdamW(inverter.parameters(), lr=config.get('lr', 1e-4), betas=(0.9, 0.999))
     
-    num_iterations = config.get('num_iterations', 100)  # Very short for testing
-    warmup_steps = config.get('warmup_steps', 10)
+    num_iterations = config.get('num_iterations', 50)  # Very short for testing
+    warmup_steps = config.get('warmup_steps', 5)
     
     sched_icnn = get_cosine_schedule_with_warmup(opt_icnn, warmup_steps, num_iterations)
     sched_inv = get_cosine_schedule_with_warmup(opt_inv, warmup_steps, num_iterations)
     
     dataloader = get_dataloader(
-        batch_size=config.get('batch_size', 16),  # Further reduced for testing
+        batch_size=config.get('batch_size', 8),  # Very small for testing
         num_workers=config.get('num_workers', 2)
     )
     data_iter = iter(dataloader)
@@ -191,7 +146,6 @@ def train_aofm(config):
         grad_potential_xt = torch.autograd.grad(potential_at_xt_sum, xt, create_graph=True)[0]
         
         v_ofm = x1 - x0
-        # Simplified OFM loss without full Hessian computation for testing
         loss_ofm = torch.mean((grad_potential_xt - v_ofm).pow(2))
 
         total_loss = loss_ofm + config.get('lambda_inv', 1.0) * loss_inv

@@ -1,0 +1,17 @@
+experiment:
+  n_workers: 4
+  time_limit_secs: 180
+  n_seeds: 2
+  output_image_dir: ".research/iteration1/images"
+  results_csv_path: ".research/iteration1/results.csv"
+
+benchmarks:
+  - "CartpoleSwingShort-v0"
+  - "BNNOnProteinStructure-v0"
+
+optimizers:
+  RandomSearch: true
+  ASHA: true
+  BOHB: true
+  CAR-HPO: true
+  DyHPO: true

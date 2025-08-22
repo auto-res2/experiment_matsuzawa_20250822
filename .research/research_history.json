@@ -1,0 +1,10 @@
+{
+  "research_topic": "LLMの不確実性推定に関して改善したい",
+  "queries": [
+    "LLM Uncertainty Estimation",
+    "LLM Calibration",
+    "LLM Conformal Prediction",
+    "Bayesian LLM Uncertainty",
+    "LLM Hallucination Detection"
+  ]
+}

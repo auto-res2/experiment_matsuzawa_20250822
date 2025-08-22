@@ -1,0 +1,10 @@
+{
+  "research_topic": "知識蒸留における分布ミスマッチに関して改善したい",
+  "queries": [
+    "knowledge distillation distribution shift",
+    "domain adaptation knowledge distillation",
+    "importance weighting knowledge distillation",
+    "distribution alignment knowledge distillation",
+    "covariate shift knowledge distillation"
+  ]
+}

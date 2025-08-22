@@ -1,0 +1,36 @@
+Traceback (most recent call last):
+  File "/home/runner/work/experiment_matsuzawa_20250822/experiment_matsuzawa_20250822/src/main.py", line 37, in <module>
+    main(cfg_path)
+  File "/home/runner/work/experiment_matsuzawa_20250822/experiment_matsuzawa_20250822/src/main.py", line 27, in main
+    train_mod.run(config_path)
+  File "/home/runner/work/experiment_matsuzawa_20250822/experiment_matsuzawa_20250822/src/train.py", line 289, in run
+    model_tares, hist_tares = train_model(train_loader, val_loader, n_classes=2, device=device, epochs=epochs, lr=lr,
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/experiment_matsuzawa_20250822/experiment_matsuzawa_20250822/src/train.py", line 208, in train_model
+    pen = tares_penalty(model, xb, BT, sigma_T, sigma_N, K=8)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/experiment_matsuzawa_20250822/experiment_matsuzawa_20250822/src/train.py", line 155, in tares_penalty
+    logits_acc = logits_acc + model(y0_img + e)
+                              ^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/_tool/Python/3.11.13/x64/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/_tool/Python/3.11.13/x64/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/experiment_matsuzawa_20250822/experiment_matsuzawa_20250822/src/train.py", line 111, in forward
+    x = F.relu(self.conv1(x))
+               ^^^^^^^^^^^^^
+  File "/home/runner/work/_tool/Python/3.11.13/x64/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/_tool/Python/3.11.13/x64/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/_tool/Python/3.11.13/x64/lib/python3.11/site-packages/torch/nn/modules/conv.py", line 548, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/_tool/Python/3.11.13/x64/lib/python3.11/site-packages/torch/nn/modules/conv.py", line 543, in _conv_forward
+    return F.conv2d(
+           ^^^^^^^^^
+RuntimeError: Expected 3D (unbatched) or 4D (batched) input to conv2d, but got input of size: [8, 64, 1, 16, 16]

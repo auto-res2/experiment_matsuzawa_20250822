@@ -1,0 +1,36 @@
+experiment:
+  name: "Meta-BAPL Pareto Frontier Adherence"
+  figure_dir: ".research/iteration1/images"
+  device: "auto" # auto will pick cuda if available
+
+data:
+  num_samples: 1000
+  batch_size: 32
+
+models:
+  metabapl:
+    num_blocks: 5
+  confidence:
+    num_blocks: 5
+  model_zoo:
+    - name: "ResNet-18 (sim)"
+      active_blocks: 2
+    - name: "ResNet-50 (sim)"
+      active_blocks: 4
+  policy_zoo:
+    - name: "Policy lambda=0.1"
+      active_blocks: 1
+    - name: "Policy lambda=1.0"
+      active_blocks: 3
+    - name: "Policy lambda=10.0"
+      active_blocks: 5
+
+evaluation:
+  metabapl_budgets:
+    latency_grid: [10, 25, 40, 50]
+    gflops_grid: [0.5, 1.0, 2.0, 2.5]
+    interp_points: 5
+  confidence_thresholds:
+    start: 0.1
+    end: 0.9
+    num: 7

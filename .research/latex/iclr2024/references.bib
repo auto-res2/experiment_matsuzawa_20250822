@@ -5,3 +5,525 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{esser_2021_imagebart,
+ abstract = {Autoregressive models and their sequential factorization of the data
+likelihood have recently demonstrated great potential for image representation
+and synthesis. Nevertheless, they incorporate image context in a linear 1D
+order by attending only to previously synthesized image patches above or to the
+left. Not only is this unidirectional, sequential bias of attention unnatural
+for images as it disregards large parts of a scene until synthesis is almost
+complete. It also processes the entire image on a single scale, thus ignoring
+more global contextual information up to the gist of the entire scene. As a
+remedy we incorporate a coarse-to-fine hierarchy of context by combining the
+autoregressive formulation with a multinomial diffusion process: Whereas a
+multistage diffusion process successively removes information to coarsen an
+image, we train a (short) Markov chain to invert this process. In each stage,
+the resulting autoregressive ImageBART model progressively incorporates context
+from previous stages in a coarse-to-fine manner. Experiments show greatly
+improved image modification capabilities over autoregressive models while also
+providing high-fidelity image generation, both of which are enabled through
+efficient training in a compressed latent space. Specifically, our approach can
+take unrestricted, user-provided masks into account to perform local image
+editing. Thus, in contrast to pure autoregressive models, it can solve
+free-form image inpainting and, in the case of conditional models, local,
+text-guided image modification without requiring mask-specific training.},
+ arxiv_url = {https://arxiv.org/pdf/2108.08827v1.pdf},
+ author = {Patrick Esser and Robin Rombach and Andreas Blattmann and Björn Ommer},
+ title = {ImageBART: Bidirectional Context with Multinomial Diffusion for Autoregressive Image Synthesis},
+ year = {2021}
+}
+
+@article{esser_2021_imagebart,
+ abstract = {Autoregressive models and their sequential factorization of the data
+likelihood have recently demonstrated great potential for image representation
+and synthesis. Nevertheless, they incorporate image context in a linear 1D
+order by attending only to previously synthesized image patches above or to the
+left. Not only is this unidirectional, sequential bias of attention unnatural
+for images as it disregards large parts of a scene until synthesis is almost
+complete. It also processes the entire image on a single scale, thus ignoring
+more global contextual information up to the gist of the entire scene. As a
+remedy we incorporate a coarse-to-fine hierarchy of context by combining the
+autoregressive formulation with a multinomial diffusion process: Whereas a
+multistage diffusion process successively removes information to coarsen an
+image, we train a (short) Markov chain to invert this process. In each stage,
+the resulting autoregressive ImageBART model progressively incorporates context
+from previous stages in a coarse-to-fine manner. Experiments show greatly
+improved image modification capabilities over autoregressive models while also
+providing high-fidelity image generation, both of which are enabled through
+efficient training in a compressed latent space. Specifically, our approach can
+take unrestricted, user-provided masks into account to perform local image
+editing. Thus, in contrast to pure autoregressive models, it can solve
+free-form image inpainting and, in the case of conditional models, local,
+text-guided image modification without requiring mask-specific training.},
+ arxiv_url = {https://arxiv.org/pdf/2108.08827v1.pdf},
+ author = {Patrick Esser and Robin Rombach and Andreas Blattmann and Björn Ommer},
+ title = {ImageBART: Bidirectional Context with Multinomial Diffusion for Autoregressive Image Synthesis},
+ year = {2021}
+}
+
+@article{esser_2021_imagebart,
+ abstract = {Autoregressive models and their sequential factorization of the data
+likelihood have recently demonstrated great potential for image representation
+and synthesis. Nevertheless, they incorporate image context in a linear 1D
+order by attending only to previously synthesized image patches above or to the
+left. Not only is this unidirectional, sequential bias of attention unnatural
+for images as it disregards large parts of a scene until synthesis is almost
+complete. It also processes the entire image on a single scale, thus ignoring
+more global contextual information up to the gist of the entire scene. As a
+remedy we incorporate a coarse-to-fine hierarchy of context by combining the
+autoregressive formulation with a multinomial diffusion process: Whereas a
+multistage diffusion process successively removes information to coarsen an
+image, we train a (short) Markov chain to invert this process. In each stage,
+the resulting autoregressive ImageBART model progressively incorporates context
+from previous stages in a coarse-to-fine manner. Experiments show greatly
+improved image modification capabilities over autoregressive models while also
+providing high-fidelity image generation, both of which are enabled through
+efficient training in a compressed latent space. Specifically, our approach can
+take unrestricted, user-provided masks into account to perform local image
+editing. Thus, in contrast to pure autoregressive models, it can solve
+free-form image inpainting and, in the case of conditional models, local,
+text-guided image modification without requiring mask-specific training.},
+ arxiv_url = {https://arxiv.org/pdf/2108.08827v1.pdf},
+ author = {Patrick Esser and Robin Rombach and Andreas Blattmann and Björn Ommer},
+ title = {ImageBART: Bidirectional Context with Multinomial Diffusion for Autoregressive Image Synthesis},
+ year = {2021}
+}
+
+@article{jayaram_2021_parallel,
+ abstract = {This paper introduces an alternative approach to sampling from autoregressive
+models. Autoregressive models are typically sampled sequentially, according to
+the transition dynamics defined by the model. Instead, we propose a sampling
+procedure that initializes a sequence with white noise and follows a Markov
+chain defined by Langevin dynamics on the global log-likelihood of the
+sequence. This approach parallelizes the sampling process and generalizes to
+conditional sampling. Using an autoregressive model as a Bayesian prior, we can
+steer the output of a generative model using a conditional likelihood or
+constraints. We apply these techniques to autoregressive models in the visual
+and audio domains, with competitive results for audio source separation,
+super-resolution, and inpainting.},
+ arxiv_url = {https://arxiv.org/pdf/2105.08164v2.pdf},
+ author = {Vivek Jayaram and John Thickstun},
+ github_url = {https://github.com/pclucas14/pixel-cnn-pp},
+ title = {Parallel and Flexible Sampling from Autoregressive Models via Langevin Dynamics},
+ year = {2021}
+}
+
+@article{jayaram_2021_parallel,
+ abstract = {This paper introduces an alternative approach to sampling from autoregressive
+models. Autoregressive models are typically sampled sequentially, according to
+the transition dynamics defined by the model. Instead, we propose a sampling
+procedure that initializes a sequence with white noise and follows a Markov
+chain defined by Langevin dynamics on the global log-likelihood of the
+sequence. This approach parallelizes the sampling process and generalizes to
+conditional sampling. Using an autoregressive model as a Bayesian prior, we can
+steer the output of a generative model using a conditional likelihood or
+constraints. We apply these techniques to autoregressive models in the visual
+and audio domains, with competitive results for audio source separation,
+super-resolution, and inpainting.},
+ arxiv_url = {https://arxiv.org/pdf/2105.08164v2.pdf},
+ author = {Vivek Jayaram and John Thickstun},
+ github_url = {https://github.com/pclucas14/pixel-cnn-pp},
+ title = {Parallel and Flexible Sampling from Autoregressive Models via Langevin Dynamics},
+ year = {2021}
+}
+
+@article{jiang_2021_transgan,
+ abstract = {The recent explosive interest on transformers has suggested their potential
+to become powerful "universal" models for computer vision tasks, such as
+classification, detection, and segmentation. While those attempts mainly study
+the discriminative models, we explore transformers on some more notoriously
+difficult vision tasks, e.g., generative adversarial networks (GANs). Our goal
+is to conduct the first pilot study in building a GAN completely free of
+convolutions, using only pure transformer-based architectures. Our vanilla GAN
+architecture, dubbed TransGAN, consists of a memory-friendly transformer-based
+generator that progressively increases feature resolution, and correspondingly
+a multi-scale discriminator to capture simultaneously semantic contexts and
+low-level textures. On top of them, we introduce the new module of grid
+self-attention for alleviating the memory bottleneck further, in order to scale
+up TransGAN to high-resolution generation. We also develop a unique training
+recipe including a series of techniques that can mitigate the training
+instability issues of TransGAN, such as data augmentation, modified
+normalization, and relative position encoding. Our best architecture achieves
+highly competitive performance compared to current state-of-the-art GANs using
+convolutional backbones. Specifically, TransGAN sets new state-of-the-art
+inception score of 10.43 and FID of 18.28 on STL-10, outperforming StyleGAN-V2.
+When it comes to higher-resolution (e.g. 256 x 256) generation tasks, such as
+on CelebA-HQ and LSUN-Church, TransGAN continues to produce diverse visual
+examples with high fidelity and impressive texture details. In addition, we
+dive deep into the transformer-based generation models to understand how their
+behaviors differ from convolutional ones, by visualizing training dynamics. The
+code is available at https://github.com/VITA-Group/TransGAN.},
+ arxiv_url = {https://arxiv.org/pdf/2102.07074v4.pdf},
+ author = {Yifan Jiang and Shiyu Chang and Zhangyang Wang},
+ github_url = {https://github.com/VITA-Group/TransGAN},
+ title = {TransGAN: Two Pure Transformers Can Make One Strong GAN, and That Can Scale Up},
+ year = {2021}
+}
+
+@article{kim_2024_arbitrary,
+ abstract = {Super-resolution (SR) and image generation are important tasks in computer
+vision and are widely adopted in real-world applications. Most existing
+methods, however, generate images only at fixed-scale magnification and suffer
+from over-smoothing and artifacts. Additionally, they do not offer enough
+diversity of output images nor image consistency at different scales. Most
+relevant work applied Implicit Neural Representation (INR) to the denoising
+diffusion model to obtain continuous-resolution yet diverse and high-quality SR
+results. Since this model operates in the image space, the larger the
+resolution of image is produced, the more memory and inference time is
+required, and it also does not maintain scale-specific consistency. We propose
+a novel pipeline that can super-resolve an input image or generate from a
+random noise a novel image at arbitrary scales. The method consists of a
+pretrained auto-encoder, a latent diffusion model, and an implicit neural
+decoder, and their learning strategies. The proposed method adopts diffusion
+processes in a latent space, thus efficient, yet aligned with output image
+space decoded by MLPs at arbitrary scales. More specifically, our
+arbitrary-scale decoder is designed by the symmetric decoder w/o up-scaling
+from the pretrained auto-encoder, and Local Implicit Image Function (LIIF) in
+series. The latent diffusion process is learnt by the denoising and the
+alignment losses jointly. Errors in output images are backpropagated via the
+fixed decoder, improving the quality of output images. In the extensive
+experiments using multiple public benchmarks on the two tasks i.e. image
+super-resolution and novel image generation at arbitrary scales, the proposed
+method outperforms relevant methods in metrics of image quality, diversity and
+scale consistency. It is significantly better than the relevant prior-art in
+the inference speed and memory usage.},
+ arxiv_url = {https://arxiv.org/pdf/2403.10255v1.pdf},
+ author = {Jinseok Kim and Tae-Kyun Kim},
+ title = {Arbitrary-Scale Image Generation and Upsampling using Latent Diffusion Model and Implicit Neural Decoder},
+ year = {2024}
+}
+
+@article{li_2024_autoregressive,
+ abstract = {Conventional wisdom holds that autoregressive models for image generation are
+typically accompanied by vector-quantized tokens. We observe that while a
+discrete-valued space can facilitate representing a categorical distribution,
+it is not a necessity for autoregressive modeling. In this work, we propose to
+model the per-token probability distribution using a diffusion procedure, which
+allows us to apply autoregressive models in a continuous-valued space. Rather
+than using categorical cross-entropy loss, we define a Diffusion Loss function
+to model the per-token probability. This approach eliminates the need for
+discrete-valued tokenizers. We evaluate its effectiveness across a wide range
+of cases, including standard autoregressive models and generalized masked
+autoregressive (MAR) variants. By removing vector quantization, our image
+generator achieves strong results while enjoying the speed advantage of
+sequence modeling. We hope this work will motivate the use of autoregressive
+generation in other continuous-valued domains and applications. Code is
+available at: https://github.com/LTH14/mar.},
+ arxiv_url = {https://arxiv.org/pdf/2406.11838v3.pdf},
+ author = {Tianhong Li and Yonglong Tian and He Li and Mingyang Deng and Kaiming He},
+ github_url = {https://github.com/LTH14/mar},
+ title = {Autoregressive Image Generation without Vector Quantization},
+ year = {2024}
+}
+
+@article{meng_2021_improved,
+ abstract = {While autoregressive models excel at image compression, their sample quality
+is often lacking. Although not realistic, generated images often have high
+likelihood according to the model, resembling the case of adversarial examples.
+Inspired by a successful adversarial defense method, we incorporate randomized
+smoothing into autoregressive generative modeling. We first model a smoothed
+version of the data distribution, and then reverse the smoothing process to
+recover the original data distribution. This procedure drastically improves the
+sample quality of existing autoregressive models on several synthetic and
+real-world image datasets while obtaining competitive likelihoods on synthetic
+datasets.},
+ arxiv_url = {https://arxiv.org/pdf/2103.15089v1.pdf},
+ author = {Chenlin Meng and Jiaming Song and Yang Song and Shengjia Zhao and Stefano Ermon},
+ title = {Improved Autoregressive Modeling with Distribution Smoothing},
+ year = {2021}
+}
+
+@article{meng_2021_improved,
+ abstract = {While autoregressive models excel at image compression, their sample quality
+is often lacking. Although not realistic, generated images often have high
+likelihood according to the model, resembling the case of adversarial examples.
+Inspired by a successful adversarial defense method, we incorporate randomized
+smoothing into autoregressive generative modeling. We first model a smoothed
+version of the data distribution, and then reverse the smoothing process to
+recover the original data distribution. This procedure drastically improves the
+sample quality of existing autoregressive models on several synthetic and
+real-world image datasets while obtaining competitive likelihoods on synthetic
+datasets.},
+ arxiv_url = {https://arxiv.org/pdf/2103.15089v1.pdf},
+ author = {Chenlin Meng and Jiaming Song and Yang Song and Shengjia Zhao and Stefano Ermon},
+ title = {Improved Autoregressive Modeling with Distribution Smoothing},
+ year = {2021}
+}
+
+@article{nash_2021_generating,
+ abstract = {The high dimensionality of images presents architecture and
+sampling-efficiency challenges for likelihood-based generative models. Previous
+approaches such as VQ-VAE use deep autoencoders to obtain compact
+representations, which are more practical as inputs for likelihood-based
+models. We present an alternative approach, inspired by common image
+compression methods like JPEG, and convert images to quantized discrete cosine
+transform (DCT) blocks, which are represented sparsely as a sequence of DCT
+channel, spatial location, and DCT coefficient triples. We propose a
+Transformer-based autoregressive architecture, which is trained to sequentially
+predict the conditional distribution of the next element in such sequences, and
+which scales effectively to high resolution images. On a range of image
+datasets, we demonstrate that our approach can generate high quality, diverse
+images, with sample metric scores competitive with state of the art methods. We
+additionally show that simple modifications to our method yield effective image
+colorization and super-resolution models.},
+ arxiv_url = {https://arxiv.org/pdf/2103.03841v1.pdf},
+ author = {Charlie Nash and Jacob Menick and Sander Dieleman and Peter W. Battaglia},
+ title = {Generating images with sparse representations},
+ year = {2021}
+}
+
+@article{nash_2021_generating,
+ abstract = {The high dimensionality of images presents architecture and
+sampling-efficiency challenges for likelihood-based generative models. Previous
+approaches such as VQ-VAE use deep autoencoders to obtain compact
+representations, which are more practical as inputs for likelihood-based
+models. We present an alternative approach, inspired by common image
+compression methods like JPEG, and convert images to quantized discrete cosine
+transform (DCT) blocks, which are represented sparsely as a sequence of DCT
+channel, spatial location, and DCT coefficient triples. We propose a
+Transformer-based autoregressive architecture, which is trained to sequentially
+predict the conditional distribution of the next element in such sequences, and
+which scales effectively to high resolution images. On a range of image
+datasets, we demonstrate that our approach can generate high quality, diverse
+images, with sample metric scores competitive with state of the art methods. We
+additionally show that simple modifications to our method yield effective image
+colorization and super-resolution models.},
+ arxiv_url = {https://arxiv.org/pdf/2103.03841v1.pdf},
+ author = {Charlie Nash and Jacob Menick and Sander Dieleman and Peter W. Battaglia},
+ title = {Generating images with sparse representations},
+ year = {2021}
+}
+
+@article{tian_2024_visual,
+ abstract = {We present Visual AutoRegressive modeling (VAR), a new generation paradigm
+that redefines the autoregressive learning on images as coarse-to-fine
+"next-scale prediction" or "next-resolution prediction", diverging from the
+standard raster-scan "next-token prediction". This simple, intuitive
+methodology allows autoregressive (AR) transformers to learn visual
+distributions fast and generalize well: VAR, for the first time, makes GPT-like
+AR models surpass diffusion transformers in image generation. On ImageNet
+256x256 benchmark, VAR significantly improve AR baseline by improving Frechet
+inception distance (FID) from 18.65 to 1.73, inception score (IS) from 80.4 to
+350.2, with around 20x faster inference speed. It is also empirically verified
+that VAR outperforms the Diffusion Transformer (DiT) in multiple dimensions
+including image quality, inference speed, data efficiency, and scalability.
+Scaling up VAR models exhibits clear power-law scaling laws similar to those
+observed in LLMs, with linear correlation coefficients near -0.998 as solid
+evidence. VAR further showcases zero-shot generalization ability in downstream
+tasks including image in-painting, out-painting, and editing. These results
+suggest VAR has initially emulated the two important properties of LLMs:
+Scaling Laws and zero-shot task generalization. We have released all models and
+codes to promote the exploration of AR/VAR models for visual generation and
+unified learning.},
+ arxiv_url = {https://arxiv.org/pdf/2404.02905v2.pdf},
+ author = {Keyu Tian and Yi Jiang and Zehuan Yuan and Bingyue Peng and Liwei Wang},
+ github_url = {https://github.com/FoundationVision/VAR},
+ title = {Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction},
+ year = {2024}
+}
+
+@article{tian_2024_visual,
+ abstract = {We present Visual AutoRegressive modeling (VAR), a new generation paradigm
+that redefines the autoregressive learning on images as coarse-to-fine
+"next-scale prediction" or "next-resolution prediction", diverging from the
+standard raster-scan "next-token prediction". This simple, intuitive
+methodology allows autoregressive (AR) transformers to learn visual
+distributions fast and generalize well: VAR, for the first time, makes GPT-like
+AR models surpass diffusion transformers in image generation. On ImageNet
+256x256 benchmark, VAR significantly improve AR baseline by improving Frechet
+inception distance (FID) from 18.65 to 1.73, inception score (IS) from 80.4 to
+350.2, with around 20x faster inference speed. It is also empirically verified
+that VAR outperforms the Diffusion Transformer (DiT) in multiple dimensions
+including image quality, inference speed, data efficiency, and scalability.
+Scaling up VAR models exhibits clear power-law scaling laws similar to those
+observed in LLMs, with linear correlation coefficients near -0.998 as solid
+evidence. VAR further showcases zero-shot generalization ability in downstream
+tasks including image in-painting, out-painting, and editing. These results
+suggest VAR has initially emulated the two important properties of LLMs:
+Scaling Laws and zero-shot task generalization. We have released all models and
+codes to promote the exploration of AR/VAR models for visual generation and
+unified learning.},
+ arxiv_url = {https://arxiv.org/pdf/2404.02905v2.pdf},
+ author = {Keyu Tian and Yi Jiang and Zehuan Yuan and Bingyue Peng and Liwei Wang},
+ github_url = {https://github.com/FoundationVision/VAR},
+ title = {Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction},
+ year = {2024}
+}
+
+@article{wiggers_2020_predictive,
+ abstract = {Autoregressive models (ARMs) currently hold state-of-the-art performance in
+likelihood-based modeling of image and audio data. Generally, neural network
+based ARMs are designed to allow fast inference, but sampling from these models
+is impractically slow. In this paper, we introduce the predictive sampling
+algorithm: a procedure that exploits the fast inference property of ARMs in
+order to speed up sampling, while keeping the model intact. We propose two
+variations of predictive sampling, namely sampling with ARM fixed-point
+iteration and learned forecasting modules. Their effectiveness is demonstrated
+in two settings: i) explicit likelihood modeling on binary MNIST, SVHN and
+CIFAR10, and ii) discrete latent modeling in an autoencoder trained on SVHN,
+CIFAR10 and Imagenet32. Empirically, we show considerable improvements over
+baselines in number of ARM inference calls and sampling speed.},
+ arxiv_url = {https://arxiv.org/pdf/2002.09928v2.pdf},
+ author = {Auke Wiggers and Emiel Hoogeboom},
+ title = {Predictive Sampling with Forecasting Autoregressive Models},
+ year = {2020}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{alayrac_2022_flamingo,
+ abstract = {Building models that can be rapidly adapted to novel tasks using only a
+handful of annotated examples is an open challenge for multimodal machine
+learning research. We introduce Flamingo, a family of Visual Language Models
+(VLM) with this ability. We propose key architectural innovations to: (i)
+bridge powerful pretrained vision-only and language-only models, (ii) handle
+sequences of arbitrarily interleaved visual and textual data, and (iii)
+seamlessly ingest images or videos as inputs. Thanks to their flexibility,
+Flamingo models can be trained on large-scale multimodal web corpora containing
+arbitrarily interleaved text and images, which is key to endow them with
+in-context few-shot learning capabilities. We perform a thorough evaluation of
+our models, exploring and measuring their ability to rapidly adapt to a variety
+of image and video tasks. These include open-ended tasks such as visual
+question-answering, where the model is prompted with a question which it has to
+answer; captioning tasks, which evaluate the ability to describe a scene or an
+event; and close-ended tasks such as multiple-choice visual question-answering.
+For tasks lying anywhere on this spectrum, a single Flamingo model can achieve
+a new state of the art with few-shot learning, simply by prompting the model
+with task-specific examples. On numerous benchmarks, Flamingo outperforms
+models fine-tuned on thousands of times more task-specific data.},
+ arxiv_url = {https://arxiv.org/pdf/2204.14198v2.pdf},
+ author = {Jean-Baptiste Alayrac and Jeff Donahue and Pauline Luc and Antoine Miech and Iain Barr and Yana Hasson and Karel Lenc and Arthur Mensch and Katie Millican and Malcolm Reynolds and Roman Ring and Eliza Rutherford and Serkan Cabi and Tengda Han and Zhitao Gong and Sina Samangooei and Marianne Monteiro and Jacob Menick and Sebastian Borgeaud and Andrew Brock and Aida Nematzadeh and Sahand Sharifzadeh and Mikolaj Binkowski and Ricardo Barreira and Oriol Vinyals and Andrew Zisserman and Karen Simonyan},
+ title = {Flamingo: a visual language model for few-shot learning},
+ year = {2022}
+}
+
+@article{anil_2023_palm,
+ abstract = {We introduce PaLM 2, a new state-of-the-art language model that has better
+multilingual and reasoning capabilities and is more compute-efficient than its
+predecessor PaLM. PaLM 2 is a Transformer-based model trained using a mixture
+of objectives. Through extensive evaluations on English and multilingual
+language, and reasoning tasks, we demonstrate that PaLM 2 has significantly
+improved quality on downstream tasks across different model sizes, while
+simultaneously exhibiting faster and more efficient inference compared to PaLM.
+This improved efficiency enables broader deployment while also allowing the
+model to respond faster, for a more natural pace of interaction. PaLM 2
+demonstrates robust reasoning capabilities exemplified by large improvements
+over PaLM on BIG-Bench and other reasoning tasks. PaLM 2 exhibits stable
+performance on a suite of responsible AI evaluations, and enables
+inference-time control over toxicity without additional overhead or impact on
+other capabilities. Overall, PaLM 2 achieves state-of-the-art performance
+across a diverse set of tasks and capabilities.
+  When discussing the PaLM 2 family, it is important to distinguish between
+pre-trained models (of various sizes), fine-tuned variants of these models, and
+the user-facing products that use these models. In particular, user-facing
+products typically include additional pre- and post-processing steps.
+Additionally, the underlying models may evolve over time. Therefore, one should
+not expect the performance of user-facing products to exactly match the results
+reported in this report.},
+ arxiv_url = {https://arxiv.org/pdf/2305.10403v3.pdf},
+ author = {Rohan Anil and Andrew M. Dai and Orhan Firat and Melvin Johnson and Dmitry Lepikhin and Alexandre Passos and Siamak Shakeri and Emanuel Taropa and Paige Bailey and Zhifeng Chen and Eric Chu and Jonathan H. Clark and Laurent El Shafey and Yanping Huang and Kathy Meier-Hellstern and Gaurav Mishra and Erica Moreira and Mark Omernick and Kevin Robinson and Sebastian Ruder and Yi Tay and Kefan Xiao and Yuanzhong Xu and Yujing Zhang and Gustavo Hernandez Abrego and Junwhan Ahn and Jacob Austin and Paul Barham and Jan Botha and James Bradbury and Siddhartha Brahma and Kevin Brooks and Michele Catasta and Yong Cheng and Colin Cherry and Christopher A. Choquette-Choo and Aakanksha Chowdhery and Clément Crepy and Shachi Dave and Mostafa Dehghani and Sunipa Dev and Jacob Devlin and Mark Díaz and Nan Du and Ethan Dyer and Vlad Feinberg and Fangxiaoyu Feng and Vlad Fienber and Markus Freitag and Xavier Garcia and Sebastian Gehrmann and Lucas Gonzalez and Guy Gur-Ari and Steven Hand and Hadi Hashemi and Le Hou and Joshua Howland and Andrea Hu and Jeffrey Hui and Jeremy Hurwitz and Michael Isard and Abe Ittycheriah and Matthew Jagielski and Wenhao Jia and Kathleen Kenealy and Maxim Krikun and Sneha Kudugunta and Chang Lan and Katherine Lee and Benjamin Lee and Eric Li and Music Li and Wei Li and YaGuang Li and Jian Li and Hyeontaek Lim and Hanzhao Lin and Zhongtao Liu and Frederick Liu and Marcello Maggioni and Aroma Mahendru and Joshua Maynez and Vedant Misra and Maysam Moussalem and Zachary Nado and John Nham and Eric Ni and Andrew Nystrom and Alicia Parrish and Marie Pellat and Martin Polacek and Alex Polozov and Reiner Pope and Siyuan Qiao and Emily Reif and Bryan Richter and Parker Riley and Alex Castro Ros and Aurko Roy and Brennan Saeta and Rajkumar Samuel and Renee Shelby and Ambrose Slone and Daniel Smilkov and David R. So and Daniel Sohn and Simon Tokumine and Dasha Valter and Vijay Vasudevan and Kiran Vodrahalli and Xuezhi Wang and Pidong Wang and Zirui Wang and Tao Wang and John Wieting and Yuhuai Wu and Kelvin Xu and Yunhan Xu and Linting Xue and Pengcheng Yin and Jiahui Yu and Qiao Zhang and Steven Zheng and Ce Zheng and Weikang Zhou and Denny Zhou and Slav Petrov and Yonghui Wu},
+ title = {Palm 2 technical report},
+ year = {2023}
+}
+
+@article{author_year_large,
+ title = {Large-dit-imagenet}
+}
+
+@article{author_year_qwen,
+ title = {Qwen technical report}
+}
+
+@article{bao_2021_beit,
+ abstract = {We introduce a self-supervised vision representation model BEiT, which stands
+for Bidirectional Encoder representation from Image Transformers. Following
+BERT developed in the natural language processing area, we propose a masked
+image modeling task to pretrain vision Transformers. Specifically, each image
+has two views in our pre-training, i.e, image patches (such as 16x16 pixels),
+and visual tokens (i.e., discrete tokens). We first "tokenize" the original
+image into visual tokens. Then we randomly mask some image patches and fed them
+into the backbone Transformer. The pre-training objective is to recover the
+original visual tokens based on the corrupted image patches. After pre-training
+BEiT, we directly fine-tune the model parameters on downstream tasks by
+appending task layers upon the pretrained encoder. Experimental results on
+image classification and semantic segmentation show that our model achieves
+competitive results with previous pre-training methods. For example, base-size
+BEiT achieves 83.2% top-1 accuracy on ImageNet-1K, significantly outperforming
+from-scratch DeiT training (81.8%) with the same setup. Moreover, large-size
+BEiT obtains 86.3% only using ImageNet-1K, even outperforming ViT-L with
+supervised pre-training on ImageNet-22K (85.2%). The code and pretrained models
+are available at https://aka.ms/beit.},
+ arxiv_url = {https://arxiv.org/pdf/2106.08254v2.pdf},
+ author = {Hangbo Bao and Li Dong and Songhao Piao and Furu Wei},
+ title = {Beit: Bert pre-training of image transformers},
+ year = {2021}
+}
+
+@article{bao_2022_all,
+ abstract = {Vision transformers (ViT) have shown promise in various vision tasks while
+the U-Net based on a convolutional neural network (CNN) remains dominant in
+diffusion models. We design a simple and general ViT-based architecture (named
+U-ViT) for image generation with diffusion models. U-ViT is characterized by
+treating all inputs including the time, condition and noisy image patches as
+tokens and employing long skip connections between shallow and deep layers. We
+evaluate U-ViT in unconditional and class-conditional image generation, as well
+as text-to-image generation tasks, where U-ViT is comparable if not superior to
+a CNN-based U-Net of a similar size. In particular, latent diffusion models
+with U-ViT achieve record-breaking FID scores of 2.29 in class-conditional
+image generation on ImageNet 256x256, and 5.48 in text-to-image generation on
+MS-COCO, among methods without accessing large external datasets during the
+training of generative models. Our results suggest that, for diffusion-based
+image modeling, the long skip connection is crucial while the down-sampling and
+up-sampling operators in CNN-based U-Net are not always necessary. We believe
+that U-ViT can provide insights for future research on backbones in diffusion
+models and benefit generative modeling on large scale cross-modality datasets.},
+ arxiv_url = {https://arxiv.org/pdf/2209.12152v4.pdf},
+ author = {Fan Bao and Shen Nie and Kaiwen Xue and Yue Cao and Chongxuan Li and Hang Su and Jun Zhu},
+ title = {All are worth words: A vit backbone for diffusion models},
+ year = {2022}
+}
+
+@article{bao_2024_vidu,
+ abstract = {We introduce Vidu, a high-performance text-to-video generator that is capable
+of producing 1080p videos up to 16 seconds in a single generation. Vidu is a
+diffusion model with U-ViT as its backbone, which unlocks the scalability and
+the capability for handling long videos. Vidu exhibits strong coherence and
+dynamism, and is capable of generating both realistic and imaginative videos,
+as well as understanding some professional photography techniques, on par with
+Sora -- the most powerful reported text-to-video generator. Finally, we perform
+initial experiments on other controllable video generation, including
+canny-to-video generation, video prediction and subject-driven generation,
+which demonstrate promising results.},
+ arxiv_url = {https://arxiv.org/pdf/2405.04233v1.pdf},
+ author = {Fan Bao and Chendong Xiang and Gang Yue and Guande He and Hongzhou Zhu and Kaiwen Zheng and Min Zhao and Shilong Liu and Yaole Wang and Jun Zhu},
+ title = {Vidu: a highly consistent, dynamic and skilled text-to-video generator with diffusion models},
+ year = {2024}
+}
+
+@article{openai_2023_gpt,
+ abstract = {We report the development of GPT-4, a large-scale, multimodal model which can
+accept image and text inputs and produce text outputs. While less capable than
+humans in many real-world scenarios, GPT-4 exhibits human-level performance on
+various professional and academic benchmarks, including passing a simulated bar
+exam with a score around the top 10% of test takers. GPT-4 is a
+Transformer-based model pre-trained to predict the next token in a document.
+The post-training alignment process results in improved performance on measures
+of factuality and adherence to desired behavior. A core component of this
+project was developing infrastructure and optimization methods that behave
+predictably across a wide range of scales. This allowed us to accurately
+predict some aspects of GPT-4's performance based on models trained with no
+more than 1/1,000th the compute of GPT-4.},
+ arxiv_url = {https://arxiv.org/pdf/2303.08774v6.pdf},
+ author = {OpenAI and Josh Achiam and Steven Adler and Sandhini Agarwal and Lama Ahmad and Ilge Akkaya and Florencia Leoni Aleman and Diogo Almeida and Janko Altenschmidt and Sam Altman and Shyamal Anadkat and Red Avila and Igor Babuschkin and Suchir Balaji and Valerie Balcom and Paul Baltescu and Haiming Bao and Mohammad Bavarian and Jeff Belgum and Irwan Bello and Jake Berdine and Gabriel Bernadett-Shapiro and Christopher Berner and Lenny Bogdonoff and Oleg Boiko and Madelaine Boyd and Anna-Luisa Brakman and Greg Brockman and Tim Brooks and Miles Brundage and Kevin Button and Trevor Cai and Rosie Campbell and Andrew Cann and Brittany Carey and Chelsea Carlson and Rory Carmichael and Brooke Chan and Che Chang and Fotis Chantzis and Derek Chen and Sully Chen and Ruby Chen and Jason Chen and Mark Chen and Ben Chess and Chester Cho and Casey Chu and Hyung Won Chung and Dave Cummings and Jeremiah Currier and Yunxing Dai and Cory Decareaux and Thomas Degry and Noah Deutsch and Damien Deville and Arka Dhar and David Dohan and Steve Dowling and Sheila Dunning and Adrien Ecoffet and Atty Eleti and Tyna Eloundou and David Farhi and Liam Fedus and Niko Felix and Simón Posada Fishman and Juston Forte and Isabella Fulford and Leo Gao and Elie Georges and Christian Gibson and Vik Goel and Tarun Gogineni and Gabriel Goh and Rapha Gontijo-Lopes and Jonathan Gordon and Morgan Grafstein and Scott Gray and Ryan Greene and Joshua Gross and Shixiang Shane Gu and Yufei Guo and Chris Hallacy and Jesse Han and Jeff Harris and Yuchen He and Mike Heaton and Johannes Heidecke and Chris Hesse and Alan Hickey and Wade Hickey and Peter Hoeschele and Brandon Houghton and Kenny Hsu and Shengli Hu and Xin Hu and Joost Huizinga and Shantanu Jain and Shawn Jain and Joanne Jang and Angela Jiang and Roger Jiang and Haozhun Jin and Denny Jin and Shino Jomoto and Billie Jonn and Heewoo Jun and Tomer Kaftan and Łukasz Kaiser and Ali Kamali and Ingmar Kanitscheider and Nitish Shirish Keskar and Tabarak Khan and Logan Kilpatrick and Jong Wook Kim and Christina Kim and Yongjik Kim and Jan Hendrik Kirchner and Jamie Kiros and Matt Knight and Daniel Kokotajlo and Łukasz Kondraciuk and Andrew Kondrich and Aris Konstantinidis and Kyle Kosic and Gretchen Krueger and Vishal Kuo and Michael Lampe and Ikai Lan and Teddy Lee and Jan Leike and Jade Leung and Daniel Levy and Chak Ming Li and Rachel Lim and Molly Lin and Stephanie Lin and Mateusz Litwin and Theresa Lopez and Ryan Lowe and Patricia Lue and Anna Makanju and Kim Malfacini and Sam Manning and Todor Markov and Yaniv Markovski and Bianca Martin and Katie Mayer and Andrew Mayne and Bob McGrew and Scott Mayer McKinney and Christine McLeavey and Paul McMillan and Jake McNeil and David Medina and Aalok Mehta and Jacob Menick and Luke Metz and Andrey Mishchenko and Pamela Mishkin and Vinnie Monaco and Evan Morikawa and Daniel Mossing and Tong Mu and Mira Murati and Oleg Murk and David Mély and Ashvin Nair and Reiichiro Nakano and Rajeev Nayak and Arvind Neelakantan and Richard Ngo and Hyeonwoo Noh and Long Ouyang and Cullen O'Keefe and Jakub Pachocki and Alex Paino and Joe Palermo and Ashley Pantuliano and Giambattista Parascandolo and Joel Parish and Emy Parparita and Alex Passos and Mikhail Pavlov and Andrew Peng and Adam Perelman and Filipe de Avila Belbute Peres and Michael Petrov and Henrique Ponde de Oliveira Pinto and Michael and Pokorny and Michelle Pokrass and Vitchyr H. Pong and Tolly Powell and Alethea Power and Boris Power and Elizabeth Proehl and Raul Puri and Alec Radford and Jack Rae and Aditya Ramesh and Cameron Raymond and Francis Real and Kendra Rimbach and Carl Ross and Bob Rotsted and Henri Roussez and Nick Ryder and Mario Saltarelli and Ted Sanders and Shibani Santurkar and Girish Sastry and Heather Schmidt and David Schnurr and John Schulman and Daniel Selsam and Kyla Sheppard and Toki Sherbakov and Jessica Shieh and Sarah Shoker and Pranav Shyam and Szymon Sidor and Eric Sigler and Maddie Simens and Jordan Sitkin and Katarina Slama and Ian Sohl and Benjamin Sokolowsky and Yang Song and Natalie Staudacher and Felipe Petroski Such and Natalie Summers and Ilya Sutskever and Jie Tang and Nikolas Tezak and Madeleine B. Thompson and Phil Tillet and Amin Tootoonchian and Elizabeth Tseng and Preston Tuggle and Nick Turley and Jerry Tworek and Juan Felipe Cerón Uribe and Andrea Vallone and Arun Vijayvergiya and Chelsea Voss and Carroll Wainwright and Justin Jay Wang and Alvin Wang and Ben Wang and Jonathan Ward and Jason Wei and CJ Weinmann and Akila Welihinda and Peter Welinder and Jiayi Weng and Lilian Weng and Matt Wiethoff and Dave Willner and Clemens Winter and Samuel Wolrich and Hannah Wong and Lauren Workman and Sherwin Wu and Jeff Wu and Michael Wu and Kai Xiao and Tao Xu and Sarah Yoo and Kevin Yu and Qiming Yuan and Wojciech Zaremba and Rowan Zellers and Chong Zhang and Marvin Zhang and Shengjia Zhao and Tianhao Zheng and Juntang Zhuang and William Zhuk and Barret Zoph},
+ title = {Gpt-4 technical report},
+ year = {2023}
+}

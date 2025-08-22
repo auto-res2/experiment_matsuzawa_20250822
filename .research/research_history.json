@@ -6,5 +6,52 @@
     "top-k gating MoE",
     "Switch Transformer routing",
     "expert choice routing"
+  ],
+  "research_study_list": [
+    {
+      "title": "OpenMoE: An Early Effort on Open Mixture-of-Experts Language Models"
+    },
+    {
+      "title": "TA-MoE: Topology-Aware Large Scale Mixture-of-Expert Training"
+    },
+    {
+      "title": "Mixture-of-Experts with Expert Choice Routing"
+    },
+    {
+      "title": "Toward Efficient Inference for Mixture of Experts"
+    },
+    {
+      "title": "Scaling Beyond the GPU Memory Limit for Large Mixture-of-Experts Model Training"
+    },
+    {
+      "title": "TA-MoE: Topology-Aware Large Scale Mixture-of-Expert Training"
+    },
+    {
+      "title": "DSelect-k: Differentiable Selection in the Mixture of Experts with Applications to Multi-Task Learning"
+    },
+    {
+      "title": "Mixture-of-Experts with Expert Choice Routing"
+    },
+    {
+      "title": "Statistical Perspective of Top-K Sparse Softmax Gating Mixture of Experts"
+    },
+    {
+      "title": "Semantic Routing via Autoregressive Modeling"
+    },
+    {
+      "title": "Share or Not? Learning to Schedule Language-Specific Capacity for Multilingual Translation"
+    },
+    {
+      "title": "Share or Not? Learning to Schedule Language-Specific Capacity for Multilingual Translation"
+    },
+    {
+      "title": "Mixture-of-Experts with Expert Choice Routing"
+    },
+    {
+      "title": "MVMoE: Multi-Task Vehicle Routing Solver with Mixture-of-Experts"
+    },
+    {
+      "title": "Smoothie: Label Free Language Model Routing"
+    }
   ]
 }

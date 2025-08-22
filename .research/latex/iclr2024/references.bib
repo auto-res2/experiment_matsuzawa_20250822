@@ -5,3 +5,449 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{author_year_adversarial,
+ title = {Adversarial Training and Provable Defenses: Bridging the Gap}
+}
+
+@article{chen_2020_semialgebraic,
+ abstract = {The Lipschitz constant of a network plays an important role in many
+applications of deep learning, such as robustness certification and Wasserstein
+Generative Adversarial Network. We introduce a semidefinite programming
+hierarchy to estimate the global and local Lipschitz constant of a multiple
+layer deep neural network. The novelty is to combine a polynomial lifting for
+ReLU functions derivatives with a weak generalization of Putinar's positivity
+certificate. This idea could also apply to other, nearly sparse, polynomial
+optimization problems in machine learning. We empirically demonstrate that our
+method provides a trade-off with respect to state of the art linear programming
+approach, and in some cases we obtain better bounds in less time.},
+ arxiv_url = {https://arxiv.org/pdf/2002.03657v4.pdf},
+ author = {Tong Chen and Jean-Bernard Lasserre and Victor Magron and Edouard Pauwels},
+ title = {Semialgebraic Optimization for Lipschitz Constants of ReLU Networks},
+ year = {2020}
+}
+
+@article{cullen_2022_double,
+ abstract = {In response to subtle adversarial examples flipping classifications of neural
+network models, recent research has promoted certified robustness as a
+solution. There, invariance of predictions to all norm-bounded attacks is
+achieved through randomised smoothing of network inputs. Today's
+state-of-the-art certifications make optimal use of the class output scores at
+the input instance under test: no better radius of certification (under the
+$L_2$ norm) is possible given only these score. However, it is an open question
+as to whether such lower bounds can be improved using local information around
+the instance under test. In this work, we demonstrate how today's "optimal"
+certificates can be improved by exploiting both the transitivity of
+certifications, and the geometry of the input space, giving rise to what we
+term Geometrically-Informed Certified Robustness. By considering the smallest
+distance to points on the boundary of a set of certifications this approach
+improves certifications for more than $80\%$ of Tiny-Imagenet instances,
+yielding an on average $5 \%$ increase in the associated certification. When
+incorporating training time processes that enhance the certified radius, our
+technique shows even more promising results, with a uniform $4$ percentage
+point increase in the achieved certified radius.},
+ arxiv_url = {https://arxiv.org/pdf/2210.06077v1.pdf},
+ author = {Andrew C. Cullen and Paul Montague and Shijie Liu and Sarah M. Erfani and Benjamin I. P. Rubinstein},
+ github_url = {https://github.com/andrew-cullen/DoubleBubble},
+ title = {Double Bubble, Toil and Trouble: Enhancing Certified Robustness through Transitivity},
+ year = {2022}
+}
+
+@article{ghiasi_2020_breaking,
+ abstract = {To deflect adversarial attacks, a range of "certified" classifiers have been
+proposed. In addition to labeling an image, certified classifiers produce (when
+possible) a certificate guaranteeing that the input image is not an
+$\ell_p$-bounded adversarial example. We present a new attack that exploits not
+only the labelling function of a classifier, but also the certificate
+generator. The proposed method applies large perturbations that place images
+far from a class boundary while maintaining the imperceptibility property of
+adversarial examples. The proposed "Shadow Attack" causes certifiably robust
+networks to mislabel an image and simultaneously produce a "spoofed"
+certificate of robustness.},
+ arxiv_url = {https://arxiv.org/pdf/2003.08937v1.pdf},
+ author = {Amin Ghiasi and Ali Shafahi and Tom Goldstein},
+ github_url = {https://github.com/Hadisalman/smoothing-adversarial},
+ title = {Breaking  Certified  Defenses:  Semantic  Adversarial  Examples  With  Spoofed  Robustness  Certificates},
+ year = {2020}
+}
+
+@article{ibrahim_2021_crowdsourcing,
+ abstract = {Unsupervised learning of the Dawid-Skene (D&S) model from noisy, incomplete
+and crowdsourced annotations has been a long-standing challenge, and is a
+critical step towards reliably labeling massive data. A recent work takes a
+coupled nonnegative matrix factorization (CNMF) perspective, and shows
+appealing features: It ensures the identifiability of the D\&S model and enjoys
+low sample complexity, as only the estimates of the co-occurrences of annotator
+labels are involved. However, the identifiability holds only when certain
+somewhat restrictive conditions are met in the context of crowdsourcing.
+Optimizing the CNMF criterion is also costly -- and convergence assurances are
+elusive. This work recasts the pairwise co-occurrence based D&S model learning
+problem as a symmetric NMF (SymNMF) problem -- which offers enhanced
+identifiability relative to CNMF. In practice, the SymNMF model is often
+(largely) incomplete, due to the lack of co-labeled items by some annotators.
+Two lightweight algorithms are proposed for co-occurrence imputation. Then, a
+low-complexity shifted rectified linear unit (ReLU)-empowered SymNMF algorithm
+is proposed to identify the D&S model. Various performance characterizations
+(e.g., missing co-occurrence recoverability, stability, and convergence) and
+evaluations are also presented.},
+ arxiv_url = {https://arxiv.org/pdf/2106.07193v1.pdf},
+ author = {Shahana Ibrahim and Xiao Fu},
+ title = {Crowdsourcing via Annotator Co-occurrence Imputation and Provable Symmetric Nonnegative Matrix Factorization},
+ year = {2021}
+}
+
+@article{ibrahim_2021_crowdsourcing,
+ abstract = {Unsupervised learning of the Dawid-Skene (D&S) model from noisy, incomplete
+and crowdsourced annotations has been a long-standing challenge, and is a
+critical step towards reliably labeling massive data. A recent work takes a
+coupled nonnegative matrix factorization (CNMF) perspective, and shows
+appealing features: It ensures the identifiability of the D\&S model and enjoys
+low sample complexity, as only the estimates of the co-occurrences of annotator
+labels are involved. However, the identifiability holds only when certain
+somewhat restrictive conditions are met in the context of crowdsourcing.
+Optimizing the CNMF criterion is also costly -- and convergence assurances are
+elusive. This work recasts the pairwise co-occurrence based D&S model learning
+problem as a symmetric NMF (SymNMF) problem -- which offers enhanced
+identifiability relative to CNMF. In practice, the SymNMF model is often
+(largely) incomplete, due to the lack of co-labeled items by some annotators.
+Two lightweight algorithms are proposed for co-occurrence imputation. Then, a
+low-complexity shifted rectified linear unit (ReLU)-empowered SymNMF algorithm
+is proposed to identify the D&S model. Various performance characterizations
+(e.g., missing co-occurrence recoverability, stability, and convergence) and
+evaluations are also presented.},
+ arxiv_url = {https://arxiv.org/pdf/2106.07193v1.pdf},
+ author = {Shahana Ibrahim and Xiao Fu},
+ title = {Crowdsourcing via Annotator Co-occurrence Imputation and Provable Symmetric Nonnegative Matrix Factorization},
+ year = {2021}
+}
+
+@article{kumar_2020_curse,
+ abstract = {Randomized smoothing, using just a simple isotropic Gaussian distribution,
+has been shown to produce good robustness guarantees against $\ell_2$-norm
+bounded adversaries. In this work, we show that extending the smoothing
+technique to defend against other attack models can be challenging, especially
+in the high-dimensional regime. In particular, for a vast class of
+i.i.d.~smoothing distributions, we prove that the largest $\ell_p$-radius that
+can be certified decreases as $O(1/d^{\frac{1}{2} - \frac{1}{p}})$ with
+dimension $d$ for $p > 2$. Notably, for $p \geq 2$, this dependence on $d$ is
+no better than that of the $\ell_p$-radius that can be certified using
+isotropic Gaussian smoothing, essentially putting a matching lower bound on the
+robustness radius. When restricted to {\it generalized} Gaussian smoothing,
+these two bounds can be shown to be within a constant factor of each other in
+an asymptotic sense, establishing that Gaussian smoothing provides the best
+possible results, up to a constant factor, when $p \geq 2$. We present
+experimental results on CIFAR to validate our theory. For other smoothing
+distributions, such as, a uniform distribution within an $\ell_1$ or an
+$\ell_\infty$-norm ball, we show upper bounds of the form $O(1 / d)$ and $O(1 /
+d^{1 - \frac{1}{p}})$ respectively, which have an even worse dependence on $d$.},
+ arxiv_url = {https://arxiv.org/pdf/2002.03239v2.pdf},
+ author = {Aounon Kumar and Alexander Levine and Tom Goldstein and Soheil Feizi},
+ title = {Curse of Dimensionality on Randomized Smoothing for Certifiable Robustness},
+ year = {2020}
+}
+
+@article{latorre_2020_lipschitz,
+ abstract = {We introduce LiPopt, a polynomial optimization framework for computing
+increasingly tighter upper bounds on the Lipschitz constant of neural networks.
+The underlying optimization problems boil down to either linear (LP) or
+semidefinite (SDP) programming. We show how to use the sparse connectivity of a
+network, to significantly reduce the complexity of computation. This is
+specially useful for convolutional as well as pruned neural networks. We
+conduct experiments on networks with random weights as well as networks trained
+on MNIST, showing that in the particular case of the $\ell_\infty$-Lipschitz
+constant, our approach yields superior estimates, compared to baselines
+available in the literature.},
+ arxiv_url = {https://arxiv.org/pdf/2004.08688v1.pdf},
+ author = {Fabian Latorre and Paul Rolland and Volkan Cevher},
+ title = {Lipschitz constant estimation of Neural Networks via sparse polynomial optimization},
+ year = {2020}
+}
+
+@article{martins_2020_sparse,
+ abstract = {Exponential families are widely used in machine learning; they include many
+distributions in continuous and discrete domains (e.g., Gaussian, Dirichlet,
+Poisson, and categorical distributions via the softmax transformation).
+Distributions in each of these families have fixed support. In contrast, for
+finite domains, there has been recent work on sparse alternatives to softmax
+(e.g. sparsemax and alpha-entmax), which have varying support, being able to
+assign zero probability to irrelevant categories. This paper expands that work
+in two directions: first, we extend alpha-entmax to continuous domains,
+revealing a link with Tsallis statistics and deformed exponential families.
+Second, we introduce continuous-domain attention mechanisms, deriving efficient
+gradient backpropagation algorithms for alpha in {1,2}. Experiments on
+attention-based text classification, machine translation, and visual question
+answering illustrate the use of continuous attention in 1D and 2D, showing that
+it allows attending to time intervals and compact regions.},
+ arxiv_url = {https://arxiv.org/pdf/2006.07214v3.pdf},
+ author = {André F. T. Martins and António Farinhas and Marcos Treviso and Vlad Niculae and Pedro M. Q. Aguiar and Mário A. T. Figueiredo},
+ github_url = {https://github.com/deep-spin/mcan-vqa-continuous-attention},
+ title = {Sparse and Continuous Attention Mechanisms},
+ year = {2020}
+}
+
+@article{mohapatra_2020_higher,
+ abstract = {Randomized smoothing is a recently proposed defense against adversarial
+attacks that has achieved SOTA provable robustness against $\ell_2$
+perturbations. A number of publications have extended the guarantees to other
+metrics, such as $\ell_1$ or $\ell_\infty$, by using different smoothing
+measures. Although the current framework has been shown to yield near-optimal
+$\ell_p$ radii, the total safety region certified by the current framework can
+be arbitrarily small compared to the optimal. In this work, we propose a
+framework to improve the certified safety region for these smoothed classifiers
+without changing the underlying smoothing scheme. The theoretical contributions
+are as follows: 1) We generalize the certification for randomized smoothing by
+reformulating certified radius calculation as a nested optimization problem
+over a class of functions. 2) We provide a method to calculate the certified
+safety region using $0^{th}$-order and $1^{st}$-order information for
+Gaussian-smoothed classifiers. We also provide a framework that generalizes the
+calculation for certification using higher-order information. 3) We design
+efficient, high-confidence estimators for the relevant statistics of the
+first-order information. Combining the theoretical contribution 2) and 3)
+allows us to certify safety region that are significantly larger than the ones
+provided by the current methods. On CIFAR10 and Imagenet datasets, the new
+regions certified by our approach achieve significant improvements on general
+$\ell_1$ certified radii and on the $\ell_2$ certified radii for color-space
+attacks ($\ell_2$ restricted to 1 channel) while also achieving smaller
+improvements on the general $\ell_2$ certified radii. Our framework can also
+provide a way to circumvent the current impossibility results on achieving
+higher magnitude of certified radii without requiring the use of data-dependent
+smoothing techniques.},
+ arxiv_url = {https://arxiv.org/pdf/2010.06651v1.pdf},
+ author = {Jeet Mohapatra and Ching-Yun Ko and Tsui-Wei Weng and Pin-Yu Chen and Sijia Liu and Luca Daniel},
+ title = {Higher-Order Certification For Randomized Smoothing},
+ year = {2020}
+}
+
+@article{singla_2020_second,
+ abstract = {A robustness certificate is the minimum distance of a given input to the
+decision boundary of the classifier (or its lower bound). For {\it any} input
+perturbations with a magnitude smaller than the certificate value, the
+classification output will provably remain unchanged. Exactly computing the
+robustness certificates for neural networks is difficult since it requires
+solving a non-convex optimization. In this paper, we provide
+computationally-efficient robustness certificates for neural networks with
+differentiable activation functions in two steps. First, we show that if the
+eigenvalues of the Hessian of the network are bounded, we can compute a
+robustness certificate in the $l_2$ norm efficiently using convex optimization.
+Second, we derive a computationally-efficient differentiable upper bound on the
+curvature of a deep network. We also use the curvature bound as a
+regularization term during the training of the network to boost its certified
+robustness. Putting these results together leads to our proposed {\bf
+C}urvature-based {\bf R}obustness {\bf C}ertificate (CRC) and {\bf
+C}urvature-based {\bf R}obust {\bf T}raining (CRT). Our numerical results show
+that CRT leads to significantly higher certified robust accuracy compared to
+interval-bound propagation (IBP) based training. We achieve certified robust
+accuracy 69.79\%, 57.78\% and 53.19\% while IBP-based methods achieve 44.96\%,
+44.74\% and 44.66\% on 2,3 and 4 layer networks respectively on the
+MNIST-dataset.},
+ arxiv_url = {https://arxiv.org/pdf/2006.00731v1.pdf},
+ author = {Sahil Singla and Soheil Feizi},
+ journal = {Proceedings of the 37th International Conference on Machine
+  Learning, 2020},
+ title = {Second-Order Provable Defenses against Adversarial Attacks},
+ year = {2020}
+}
+
+@article{vaishnavi_2022_accelerating,
+ abstract = {Training deep neural network classifiers that are certifiably robust against
+adversarial attacks is critical to ensuring the security and reliability of
+AI-controlled systems. Although numerous state-of-the-art certified training
+methods have been developed, they are computationally expensive and scale
+poorly with respect to both dataset and network complexity. Widespread usage of
+certified training is further hindered by the fact that periodic retraining is
+necessary to incorporate new data and network improvements. In this paper, we
+propose Certified Robustness Transfer (CRT), a general-purpose framework for
+reducing the computational overhead of any certifiably robust training method
+through knowledge transfer. Given a robust teacher, our framework uses a novel
+training loss to transfer the teacher's robustness to the student. We provide
+theoretical and empirical validation of CRT. Our experiments on CIFAR-10 show
+that CRT speeds up certified robustness training by $8 \times$ on average
+across three different architecture generations while achieving comparable
+robustness to state-of-the-art methods. We also show that CRT can scale to
+large-scale datasets like ImageNet.},
+ arxiv_url = {https://arxiv.org/pdf/2210.14283v1.pdf},
+ author = {Pratik Vaishnavi and Kevin Eykholt and Amir Rahmati},
+ github_url = {https://github.com/RuntianZ/macer},
+ title = {Accelerating Certified Robustness Training via Knowledge Transfer},
+ year = {2022}
+}
+
+@article{vaishnavi_2022_accelerating,
+ abstract = {Training deep neural network classifiers that are certifiably robust against
+adversarial attacks is critical to ensuring the security and reliability of
+AI-controlled systems. Although numerous state-of-the-art certified training
+methods have been developed, they are computationally expensive and scale
+poorly with respect to both dataset and network complexity. Widespread usage of
+certified training is further hindered by the fact that periodic retraining is
+necessary to incorporate new data and network improvements. In this paper, we
+propose Certified Robustness Transfer (CRT), a general-purpose framework for
+reducing the computational overhead of any certifiably robust training method
+through knowledge transfer. Given a robust teacher, our framework uses a novel
+training loss to transfer the teacher's robustness to the student. We provide
+theoretical and empirical validation of CRT. Our experiments on CIFAR-10 show
+that CRT speeds up certified robustness training by $8 \times$ on average
+across three different architecture generations while achieving comparable
+robustness to state-of-the-art methods. We also show that CRT can scale to
+large-scale datasets like ImageNet.},
+ arxiv_url = {https://arxiv.org/pdf/2210.14283v1.pdf},
+ author = {Pratik Vaishnavi and Kevin Eykholt and Amir Rahmati},
+ github_url = {https://github.com/jh-jeong/smoothing-consistency},
+ title = {Accelerating Certified Robustness Training via Knowledge Transfer},
+ year = {2022}
+}
+
+@article{xu_2024_eclipse,
+ abstract = {The Lipschitz constant plays a crucial role in certifying the robustness of
+neural networks to input perturbations. Since calculating the exact Lipschitz
+constant is NP-hard, efforts have been made to obtain tight upper bounds on the
+Lipschitz constant. Typically, this involves solving a large matrix
+verification problem, the computational cost of which grows significantly for
+both deeper and wider networks. In this paper, we provide a compositional
+approach to estimate Lipschitz constants for deep feed-forward neural networks.
+We first obtain an exact decomposition of the large matrix verification problem
+into smaller sub-problems. Then, leveraging the underlying cascade structure of
+the network, we develop two algorithms. The first algorithm explores the
+geometric features of the problem and enables us to provide Lipschitz estimates
+that are comparable to existing methods by solving small semidefinite programs
+(SDPs) that are only as large as the size of each layer. The second algorithm
+relaxes these sub-problems and provides a closed-form solution to each
+sub-problem for extremely fast estimation, altogether eliminating the need to
+solve SDPs. The two algorithms represent different levels of trade-offs between
+efficiency and accuracy. Finally, we demonstrate that our approach provides a
+steep reduction in computation time (as much as several thousand times faster,
+depending on the algorithm for deeper networks) while yielding Lipschitz bounds
+that are very close to or even better than those achieved by state-of-the-art
+approaches in a broad range of experiments. In summary, our approach
+considerably advances the scalability and efficiency of certifying neural
+network robustness, making it particularly attractive for online learning
+tasks.},
+ arxiv_url = {https://arxiv.org/pdf/2404.04375v2.pdf},
+ author = {Yuezhu Xu and S. Sivaranjani},
+ github_url = {https://github.com/YuezhuXu/ECLipsE},
+ title = {ECLipsE: Efficient Compositional Lipschitz Constant Estimation for Deep Neural Networks},
+ year = {2024}
+}
+
+@article{yang_2020_randomized,
+ abstract = {Randomized smoothing is the current state-of-the-art defense with provable
+robustness against $\ell_2$ adversarial attacks. Many works have devised new
+randomized smoothing schemes for other metrics, such as $\ell_1$ or
+$\ell_\infty$; however, substantial effort was needed to derive such new
+guarantees. This begs the question: can we find a general theory for randomized
+smoothing?
+  We propose a novel framework for devising and analyzing randomized smoothing
+schemes, and validate its effectiveness in practice. Our theoretical
+contributions are: (1) we show that for an appropriate notion of "optimal", the
+optimal smoothing distributions for any "nice" norms have level sets given by
+the norm's *Wulff Crystal*; (2) we propose two novel and complementary methods
+for deriving provably robust radii for any smoothing distribution; and, (3) we
+show fundamental limits to current randomized smoothing techniques via the
+theory of *Banach space cotypes*. By combining (1) and (2), we significantly
+improve the state-of-the-art certified accuracy in $\ell_1$ on standard
+datasets. Meanwhile, we show using (3) that with only label statistics under
+random input perturbations, randomized smoothing cannot achieve nontrivial
+certified accuracy against perturbations of $\ell_p$-norm $\Omega(\min(1,
+d^{\frac{1}{p} - \frac{1}{2}}))$, when the input dimension $d$ is large. We
+provide code in github.com/tonyduan/rs4a.},
+ arxiv_url = {https://arxiv.org/pdf/2002.08118v5.pdf},
+ author = {Greg Yang and Tony Duan and J. Edward Hu and Hadi Salman and Ilya Razenshteyn and Jerry Li},
+ title = {Randomized Smoothing of All Shapes and Sizes},
+ year = {2020}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{author_year_generating,
+ title = {Generating realistic unrestricted adversarial inputs using dual-objective gan training}
+}
+
+@article{author_year_imagenet,
+ title = {ImageNet: A Large-Scale Hierarchical Image Database}
+}
+
+@article{carlini_2017_adversarial,
+ abstract = {Neural networks are known to be vulnerable to adversarial examples: inputs
+that are close to natural inputs but classified incorrectly. In order to better
+understand the space of adversarial examples, we survey ten recent proposals
+that are designed for detection and compare their efficacy. We show that all
+can be defeated by constructing new loss functions. We conclude that
+adversarial examples are significantly harder to detect than previously
+appreciated, and the properties believed to be intrinsic to adversarial
+examples are in fact not. Finally, we propose several simple guidelines for
+evaluating future proposed defenses.},
+ arxiv_url = {https://arxiv.org/pdf/1705.07263v2.pdf},
+ author = {Nicholas Carlini and David Wagner},
+ title = {Adversarial examples are not easily detected: Bypassing ten detection methods},
+ year = {2017}
+}
+
+@article{cohen_2019_certified,
+ abstract = {We show how to turn any classifier that classifies well under Gaussian noise
+into a new classifier that is certifiably robust to adversarial perturbations
+under the $\ell_2$ norm. This "randomized smoothing" technique has been
+proposed recently in the literature, but existing guarantees are loose. We
+prove a tight robustness guarantee in $\ell_2$ norm for smoothing with Gaussian
+noise. We use randomized smoothing to obtain an ImageNet classifier with e.g. a
+certified top-1 accuracy of 49% under adversarial perturbations with $\ell_2$
+norm less than 0.5 (=127/255). No certified defense has been shown feasible on
+ImageNet except for smoothing. On smaller-scale datasets where competing
+approaches to certified $\ell_2$ robustness are viable, smoothing delivers
+higher certified accuracies. Our strong empirical results suggest that
+randomized smoothing is a promising direction for future research into
+adversarially robust classification. Code and models are available at
+http://github.com/locuslab/smoothing.},
+ arxiv_url = {https://arxiv.org/pdf/1902.02918v2.pdf},
+ author = {Jeremy M Cohen and Elan Rosenfeld and J. Zico Kolter},
+ title = {Certified adversarial robustness via randomized smoothing},
+ year = {2019}
+}
+
+@article{engstrom_2017_rotation,
+ abstract = {The study of adversarial robustness has so far largely focused on
+perturbations bound in p-norms. However, state-of-the-art models turn out to be
+also vulnerable to other, more natural classes of perturbations such as
+translations and rotations. In this work, we thoroughly investigate the
+vulnerability of neural network--based classifiers to rotations and
+translations. While data augmentation offers relatively small robustness, we
+use ideas from robust optimization and test-time input aggregation to
+significantly improve robustness. Finally we find that, in contrast to the
+p-norm case, first-order methods cannot reliably find worst-case perturbations.
+This highlights spatial robustness as a fundamentally different setting
+requiring additional study. Code available at
+https://github.com/MadryLab/adversarial_spatial and
+https://github.com/MadryLab/spatial-pytorch.},
+ arxiv_url = {https://arxiv.org/pdf/1712.02779v4.pdf},
+ author = {Logan Engstrom and Brandon Tran and Dimitris Tsipras and Ludwig Schmidt and Aleksander Madry},
+ title = {A rotation and a translation suffice: Fooling cnns with simple transformations},
+ year = {2017}
+}
+
+@article{gowal_2018_the,
+ abstract = {Recent work has shown that it is possible to train deep neural networks that
+are provably robust to norm-bounded adversarial perturbations. Most of these
+methods are based on minimizing an upper bound on the worst-case loss over all
+possible adversarial perturbations. While these techniques show promise, they
+often result in difficult optimization procedures that remain hard to scale to
+larger networks. Through a comprehensive analysis, we show how a simple
+bounding technique, interval bound propagation (IBP), can be exploited to train
+large provably robust neural networks that beat the state-of-the-art in
+verified accuracy. While the upper bound computed by IBP can be quite weak for
+general networks, we demonstrate that an appropriate loss and clever
+hyper-parameter schedule allow the network to adapt such that the IBP bound is
+tight. This results in a fast and stable learning algorithm that outperforms
+more sophisticated methods and achieves state-of-the-art results on MNIST,
+CIFAR-10 and SVHN. It also allows us to train the largest model to be verified
+beyond vacuous bounds on a downscaled version of ImageNet.},
+ arxiv_url = {https://arxiv.org/pdf/1810.12715v4.pdf},
+ author = {Sven Gowal and Krishnamurthy Dvijotham and Robert Stanforth and Rudy Bunel and Chongli Qin and Jonathan Uesato and Relja Arandjelovic and Timothy Mann and Pushmeet Kohli},
+ title = {On the effectiveness of interval bound propagation for training verifiably robust models},
+ year = {2018}
+}

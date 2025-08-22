@@ -6,5 +6,52 @@
     "点群処理 省メモリ",
     "point cloud memory reduction",
     "点群 データ構造 メモリ"
+  ],
+  "research_study_list": [
+    {
+      "title": "MuSCLE: Multi Sweep Compression of LiDAR using Deep Entropy Models"
+    },
+    {
+      "title": "Efficient Hierarchical Entropy Model for Learned Point Cloud Compression"
+    },
+    {
+      "title": "Compressed 3D Gaussian Splatting for Accelerated Novel View Synthesis"
+    },
+    {
+      "title": "Kernel Methods Through the Roof: Handling Billions of Points Efficiently"
+    },
+    {
+      "title": "Kernel Methods Through the Roof: Handling Billions of Points Efficiently"
+    },
+    {
+      "title": "Layered Sampling for Robust Optimization Problems"
+    },
+    {
+      "title": "PointMamba: A Simple State Space Model for Point Cloud Analysis"
+    },
+    {
+      "title": "MuSCLE: Multi Sweep Compression of LiDAR using Deep Entropy Models"
+    },
+    {
+      "title": "Point Transformer V3: Simpler Faster Stronger"
+    },
+    {
+      "title": "MuSCLE: Multi Sweep Compression of LiDAR using Deep Entropy Models"
+    },
+    {
+      "title": "LightGaussian: Unbounded 3D Gaussian Compression with 15x Reduction and 200+ FPS"
+    },
+    {
+      "title": "CP3: Channel Pruning Plug-In for Point-Based Networks"
+    },
+    {
+      "title": "PointMamba: A Simple State Space Model for Point Cloud Analysis"
+    },
+    {
+      "title": "MuSCLE: Multi Sweep Compression of LiDAR using Deep Entropy Models"
+    },
+    {
+      "title": "Efficient Hierarchical Entropy Model for Learned Point Cloud Compression"
+    }
   ]
 }

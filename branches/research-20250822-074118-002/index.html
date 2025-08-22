@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Research Paper</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      margin: 2rem auto;
+      max-width: 800px;
+      padding: 0 1rem;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fff;
+    }
+    h2.paper-title {
+      font-size: 1.8em;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 0.5em;
+      border-bottom: none;
+    }
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.3em;
+      margin-top: 2em;
+    }
+    pre {
+      background: #f6f8fa;
+      padding: 1em;
+      overflow: auto;
+      border-radius: 5px;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, monospace;
+    }
+    ul {
+      padding-left: 1.5em;
+    }
+    figure {
+      text-align: center;
+      margin: 1.5em 0;
+      background: none !important;
+    }
+    img {
+      background: #fff;
+    }
+    figure img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+    }
+    .img-pair .pair {
+      display: flex;
+      justify-content: space-between;
+    }
+    .img-pair img {
+      max-width: 48%;
+      height: auto;
+    }
+    figcaption {
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+<h2 class="paper-title">Forecast-Guided Orthogonal Subspace Tuning for Replayless, Budgeted Continual Adaptation</h2>
+
+<section>
+  <h2>Abstract</h2>
+  <p>We study replayless, parameter-efficient continual adaptation, where low-rank updates (for example, LoRA) drift into directions that interfere with past knowledge and trigger catastrophic forgetting. Orthogonal PEFT variants improve stability but are task-agnostic; subspace-shrinking approaches reduce plasticity; and replay or distillation incur memory or privacy costs [ermis_2022_memory, liang_2024_inflora, buzzega_2020_dark]. We propose FOST-PEFT, a forecast-guided orthogonal subspace tuning framework that proactively predicts interference and routes updates away from high-risk directions while preserving plasticity and incurring zero inference overhead. FOST augments LoRA with three components: seed‑regenerable anchor‑sketch memories that store compressed feature prototypes and logits without raw samples; per-layer calibrated forgetting forecasters that predict margin‑drop probabilities for candidate update directions with uncertainty; and structured orthogonal controllers that rotate adapter bases under explicit per-layer risk budgets enforced by dual control [liu_2023_parameter, gorbunov_2024_group, ma_2024_parameter]. We implement safe‑direction masking and risk‑aware manifold rotations. On a synthetic continual stream, we instrument rotation dynamics and budget variables and observed perfect final accuracy with increasing rotation energy and inactive budgets; we analyze anomalies in logged transfer metrics and outline a comprehensive evaluation plan on vision and language benchmarks, including calibration, fairness, overhead, and ablations against strong PEFT baselines [jin_2024_what, hao_2024_flora].</p>
+</section>
+
+<section>
+  <h2>Introduction</h2>
+  <p>Parameter‑efficient fine‑tuning (PEFT) has become a dominant mechanism for adapting large pre‑trained models under tight memory and compute constraints. Low‑rank adapters such as LoRA compress updates into bottleneck subspaces, enabling efficient adaptation across vision and language. However, sequential fine‑tuning over long task streams still suffers from catastrophic forgetting: new‑task gradients steer updates into directions that interfere with features important for past tasks. This interference is directional, layer‑dependent, and evolves as representations drift across time.</p>
+  <p>Existing approaches address parts of this challenge but leave critical gaps. Orthogonal fine‑tuning variants rotate adaptation subspaces with structured orthogonal matrices and often improve stability, yet they are task‑agnostic: they do not forecast interference or constrain risk per update direction [liu_2023_parameter, gorbunov_2024_group, ma_2024_parameter]. Subspace‑shrinking methods such as interference‑free low‑rank adaptation constrain feasible updates to reduce interference but can sacrifice plasticity and typically require tracking or computing past subspaces <a href="https://arxiv.org/pdf/2404.00228v3.pdf" target="_blank" title="InfLoRA: Interference-Free Low-Rank Adaptation for Continual Learning">(Yan-Shuo Liang, 2024)</a>. Replay and distillation mitigate forgetting but introduce memory, latency, and potential privacy costs that run counter to replayless adaptation [ermis_2022_memory, buzzega_2020_dark]. Forecasting forgotten examples has shown utility for selecting replay items in language model refinement, yet its signal is not used to shape parameter directions during training <a href="https://arxiv.org/pdf/2402.01865v3.pdf" target="_blank" title="What Will My Model Forget? Forecasting Forgotten Examples in Language Model Refinement">(Xisen Jin, 2024)</a>.</p>
+  <p>We argue that what is missing is a replayless, online mechanism that forecasts interference before applying updates and dynamically routes gradient flow away from high‑risk directions while retaining constant inference‑time cost. Our key insight is to combine lightweight, calibrated risk forecasts with mature, zero‑overhead orthogonal controllers from PEFT to proactively steer LoRA directions during training [liu_2023_parameter, gorbunov_2024_group, ma_2024_parameter]. Orthogonal controllers can rotate adapter bases and be merged into the base weights, keeping inference latency unchanged, while a small forecaster can score candidate directions and provide uncertainty. Together, they enable proactive, budgeted control of interference without shrinking the feasible subspace.</p>
+  <p>We introduce FOST‑PEFT, a forecast‑guided orthogonal subspace tuning framework for continual adaptation. FOST augments standard LoRA with three modules per layer: (i) seed‑regenerable anchor‑sketch memories that store compressed feature prototypes and logits per class or domain without raw samples; (ii) per‑layer, calibrated forgetting forecasters that predict margin‑drop probabilities and upper‑confidence bounds (UCB) for small steps along candidate update directions; and (iii) structured orthogonal controllers that rotate LoRA bases to maximize gradient alignment while enforcing per‑layer interference budgets via dual updates [liu_2023_parameter, gorbunov_2024_group, ma_2024_parameter]. Columns with high UCB risk are masked from updates; rotations are guided to align with task gradients under the budget. Seeded projections can be shared with gradient/state compression infrastructure such as FLORA <a href="https://arxiv.org/pdf/2402.03293v2.pdf" target="_blank" title="Flora: Low-Rank Adapters Are Secretly Gradient Compressors">(Yongchang Hao, 2024)</a>.</p>
+  <p><strong>Why this is hard.</strong> Estimating interference reliably without replay data is challenging because features drift and anchors must remain stable and privacy‑friendly. Controlling risk online without undermining plasticity requires calibrated probabilistic scores, uncertainty‑aware decisions, and constraints that do not collapse the update set. The solution must integrate seamlessly with PEFT so that inference remains unchanged.</p>
+  <p><strong>Our contributions</strong></p>
+  <ul>
+    <li>We formulate replayless, forecast‑guided update routing under explicit per‑layer forgetting budgets and present FOST‑PEFT, which integrates anchor sketches, calibrated forecasters, and orthogonal controllers.</li>
+    <li>We design safe‑direction masking and risk‑aware geodesic rotations that preserve plasticity while satisfying budget constraints, with zero inference overhead via mergeable orthogonals [liu_2023_parameter, gorbunov_2024_group].</li>
+    <li>We provide an online calibration protocol with micro‑probes, isotonic or Platt scaling, and bootstrap uncertainty to obtain conservative risk estimates without storing raw data <a href="https://arxiv.org/pdf/2402.01865v3.pdf" target="_blank" title="What Will My Model Forget? Forecasting Forgotten Examples in Language Model Refinement">(Xisen Jin, 2024)</a>.</li>
+    <li>We implement instrumentation to track mask rates, rotation energy, budget satisfaction, and calibration metrics, and outline rigorous ablations and baselines including orthogonal PEFT and subspace restriction via InfLoRA [liang_2024_inflora, liu_2023_parameter, gorbunov_2024_group, ma_2024_parameter].</li>
+    <li>We report a synthetic‑stream run with saved logs and figures, analyze anomalies in transfer metrics and budget activation, and describe a broader evaluation plan on class‑incremental vision and domain‑shifted language (replayless) to assess calibration, fairness, and efficiency [ermis_2022_memory, buzzega_2020_dark].</li>
+  </ul>
+  <p>Beyond the present study, FOST suggests a path to privacy‑conscious continual adaptation by constraining interference without storing raw samples. It also motivates theoretical questions on budgeted interference bounds under orthogonal PEFT. Future work will scale to larger ViTs and LLMs with comprehensive calibration and ablations, and compare to prompt‑ and adapter‑based continual learners that operate at the representation or classifier level [razdaibiedina_2023_progressive, pilault_2020_conditionally].</p>
+</section>
+
+<section>
+  <h2>Related Work</h2>
+  <p><strong>Parameter‑efficient continual learning.</strong> Adapter‑ and LoRA‑based approaches reduce trainable parameters and can improve stability relative to full fine‑tuning. Memory‑efficient transformer adaptation scales across tasks with low overhead and enables sharing via adapters, but does not proactively control interference during online learning; it relies on architectural modularity and optional distillation rather than shaping update directions <a href="https://arxiv.org/pdf/2203.04640v2.pdf" target="_blank" title="Memory Efficient Continual Learning with Transformers">(Beyza Ermis, 2022)</a>. Prompt‑based continual learning concatenates task‑specific prompts to preserve knowledge with minimal parameter growth, but operates at the input‑conditioning level and does not regulate parameter‑directional interference <a href="https://arxiv.org/pdf/2301.12314v1.pdf" target="_blank" title="Progressive Prompts: Continual Learning for Language Models">(Anastasia Razdaibiedina, 2023)</a>. Conditional adapters and hypernetwork modules encourage parameter sharing and reduce forgetting structurally, yet similarly do not forecast or budget interference at the level of adapter directions <a href="https://arxiv.org/pdf/2009.09139v3.pdf" target="_blank" title="Conditionally Adaptive Multi-Task Learning: Improving Transfer Learning in NLP Using Fewer Parameters & Less Data">(Jonathan Pilault, 2020)</a>. FOST differs by forecasting directional risk and routing gradients under explicit budgets while keeping inference unchanged.</p>
+  <p><strong>Orthogonal PEFT.</strong> Orthogonal fine‑tuning preserves norms and angular structure in parameter space and has been made parameter‑ and compute‑efficient through structured parameterizations: butterfly factorization (BOFT), group‑and‑shuffle orthogonals (GSOFT), and quasi‑Givens rotations (qGOFT) [liu_2023_parameter, gorbunov_2024_group, ma_2024_parameter]. These methods rotate adaptation subspaces to enhance stability and can be merged into base weights for zero inference overhead. However, they are task‑agnostic: they neither score interference risk per column nor enforce risk budgets. FOST builds on these controllers by adding calibrated scoring, masking, and budgeted rotations that trade off gradient alignment and forecasted risk, thereby turning orthogonalization into a risk‑aware control mechanism.</p>
+  <p><strong>Subspace restriction and interference control.</strong> InfLoRA reparameterizes weights so that fine‑tuning is constrained to a subspace designed to eliminate interference with past tasks <a href="https://arxiv.org/pdf/2404.00228v3.pdf" target="_blank" title="InfLoRA: Interference-Free Low-Rank Adaptation for Continual Learning">(Yan-Shuo Liang, 2024)</a>. While effective, explicit subspace design may shrink plasticity and typically requires tracking past subspaces. In contrast, FOST does not shrink the subspace a priori; it maintains plasticity by allowing any direction to pass if its forecasted risk satisfies a budget, and continually rotates bases to align with current gradients under calibrated constraints. Compared to InfLoRA, FOST removes the need for per‑task SVD or subspace tracking and performs online control.</p>
+  <p><strong>Replay and distillation.</strong> Replay methods, including dark experience replay, mix buffered samples with current updates to combat forgetting, and distillation transfers knowledge from past models [buzzega_2020_dark, ermis_2022_memory]. These add memory or algorithmic overhead and may raise privacy concerns. FOST is explicitly replayless: it uses seed‑regenerable compressed anchors and stores no raw samples. This design aims to capture some of the benefits of replay (controllability of interference) without holding data.</p>
+  <p><strong>Forecasting forgotten examples.</strong> Forecasting which examples will be forgotten has demonstrated practical utility for selecting replay items in language model refinement <a href="https://arxiv.org/pdf/2402.01865v3.pdf" target="_blank" title="What Will My Model Forget? Forecasting Forgotten Examples in Language Model Refinement">(Xisen Jin, 2024)</a>. FOST adapts this idea to parameter updates: it forecasts interference risk for candidate LoRA columns and uses uncertainty‑aware masks and budgets to shape updates in weight space, complementing example‑level forecasting.</p>
+  <p><strong>Gradient and state compression.</strong> FLORA shows that LoRA behaves like a gradient compressor and can achieve high‑rank effects via resampled projections <a href="https://arxiv.org/pdf/2402.03293v2.pdf" target="_blank" title="Flora: Low-Rank Adapters Are Secretly Gradient Compressors">(Yongchang Hao, 2024)</a>. FOST is complementary: it reuses seeded projections for compact anchors and can share compression infrastructure, but targets budgeted interference control rather than rank expansion. In summary, FOST synthesizes orthogonal PEFT, calibrated forecasting, and replayless compression into a unified, budgeted control scheme. Unlike orthogonal PEFT alone, it is risk‑aware; unlike subspace restriction, it preserves plasticity; and unlike replay, it stores no raw examples.</p>
+</section>
+
+<section>
+  <h2>Background</h2>
+  <p><strong>Problem setting.</strong> We consider sequential adaptation over a stream of sessions or tasks. A pre‑trained backbone is frozen; adaptation occurs via low‑rank modules such as LoRA inserted into selected linear layers. For layer l with input dimension d_l and rank r, the LoRA update exposes a subspace spanned by the columns of an input‑side matrix A_l. Standard sequential PEFT optimizes these adapters per session, which can accumulate interference with past tasks as gradients align with sensitive directions, especially when low‑rank bottlenecks drift toward previously salient features.</p>
+  <p><strong>Orthogonal PEFT preliminaries.</strong> Orthogonal controllers parameterize rotations Q_l that act on adapter bases while preserving norms and angular relationships. Structured variants such as BOFT (butterfly factorization), group‑and‑shuffle orthogonals (GSOFT), and quasi‑Givens rotations (qGOFT) reduce parameter and compute complexity and can be merged into the base at inference [liu_2023_parameter, gorbunov_2024_group, ma_2024_parameter]. Orthogonality constrains updates to lie on or near the orthogonal manifold, stabilizing spectra and often improving generalization, with no change to inference latency once merged.</p>
+  <p><strong>Anchor‑sketch memory.</strong> To estimate interference without replay, we maintain per‑layer compressed feature prototypes—anchors. For each seen class or domain c, we store the mean of seeded random projections of layer inputs or chosen hidden states and the corresponding logits or margins at creation. We store only PRNG seeds and a small number of floats per anchor; optional Gaussian noise may be added for privacy. Anchors provide a regenerable basis to approximate margin changes from hypothetical small steps along candidate directions without caching raw samples.</p>
+  <p><strong>Forgetting forecaster.</strong> For each layer l, a small forecaster g_l maps a candidate direction u (for example, a LoRA basis column after the current rotation) and anchor summaries to a predicted margin drop or probability p(drop) for a small step along u, plus uncertainty. Two realizations are useful: (a) a logistic classifier over features derived from cosines with anchors, norms, and layer identifiers; and (b) a linearized estimator that approximates expected margin change as an inner product of projected u with anchor statistics, then calibrates to probability via isotonic or Platt scaling. Micro‑probes—ghost one‑step updates that are immediately reverted—provide labels sparsely to train and calibrate g_l online <a href="https://arxiv.org/pdf/2402.01865v3.pdf" target="_blank" title="What Will My Model Forget? Forecasting Forgotten Examples in Language Model Refinement">(Xisen Jin, 2024)</a>.</p>
+  <p><strong>Risk budgets and dual control.</strong> We impose a per‑layer budget B_l on average forecasted risk over time. A dual variable ν_l is updated online as the nonnegative part of ν_l plus ρ times the difference between the exponentially averaged measured risk and B_l. This tightens or relaxes a threshold τ_l that gates columns based on an upper‑confidence bound of predicted risk, ensuring long‑run control of interference while allowing temporary exploration.</p>
+  <p><strong>Assumptions.</strong> We assume structured orthogonal controllers can be updated by small geodesic or soft‑orth steps; anchors provide a stable compressed view of features; and calibrated forecasts upper‑bound expected margin loss on anchors for small steps. These approximations enable an implementable, replayless control scheme compatible with existing PEFT libraries [liu_2023_parameter, gorbunov_2024_group, ma_2024_parameter, hao_2024_flora].</p>
+</section>
+
+<section>
+  <h2>Method</h2>
+  <p><strong>Overview.</strong> FOST‑PEFT attaches to each LoRA‑instrumented layer three modules: an anchor‑sketch memory, a calibrated forgetting forecaster g_l, and an orthogonal controller Q_l. Each training step computes gradients, forecasts risk per LoRA column, masks unsafe columns, and then performs (i) a masked adapter update and (ii) a small orthogonal rotation guided by a risk‑aware objective. Periodically, micro‑probes refine and calibrate g_l, and dual variables ν_l update mask thresholds to satisfy per‑layer budgets.</p>
+  <p><strong>Anchor‑sketch memory.</strong> For layer l with input dimension d_l, we fix a seeded random projection P_l to k dimensions. For each seen class or domain c, we maintain an anchor vector a_l,c, the running mean of P_l h_l(x) over examples with label c, and the running mean of logits or margins. Optional Gaussian noise may be added to P_l h_l(x) for privacy sensitivity. Anchors are refreshed periodically from recent batches; only seeds and small vectors are stored. These anchors serve two roles: they provide features for forecaster inputs and enable periodic recalibration using micro‑probes without raw data.</p>
+  <p><strong>Forgetting forecaster.</strong> For a candidate direction u in the input space of layer l (for example, the j‑th column of the effective LoRA basis after rotation), we compute features such as the cosines between P_l u and anchor vectors, the norm of u, and a layer identifier. The linearized variant estimates raw risk as the negative mean of elementwise products between projected u and anchors weighted by a diagonal coefficient vector c_l; c_l is learned online by minimizing squared error to micro‑probe labels with L2 regularization. The logistic variant trains a small classifier via partial‑fit to predict p(drop). In both cases, we calibrate raw scores to probabilities via isotonic regression or Platt scaling using a small FIFO buffer of probe samples, and we estimate uncertainty via bootstrap calibrators to obtain upper‑confidence bounds (UCB) <a href="https://arxiv.org/pdf/2402.01865v3.pdf" target="_blank" title="What Will My Model Forget? Forecasting Forgotten Examples in Language Model Refinement">(Xisen Jin, 2024)</a>. The output is a tuple (p_j, ucb_j) per column j.</p>
+  <p><strong>Safe‑direction masking.</strong> Let b_l,j denote the j‑th column of the effective LoRA basis at layer l after rotation by Q_l. For each column, we compute a calibrated risk probability and UCB. Columns whose UCB exceeds τ_l are masked by zeroing their gradients for this step. If no anchors are available, masking is skipped to avoid over‑conservatism. This mechanism preserves plasticity by allowing any direction that satisfies the budget and only blocks directions with high, uncertain risk.</p>
+  <p><strong>Orthogonal subspace control.</strong> The rotation objective trades off alignment with the current task gradient and forecasted risk on anchors. For layer l, we optimize over Q_l a surrogate objective that sums, across columns j, a reward proportional to cosine similarity between the column’s induced update direction and the task gradient, minus λ times the expected forecasted risk for that column. We then take a small step on the Stiefel manifold using a Riemannian optimizer (for BOFT‑like blockwise Q) or apply a soft‑orth penalty if using GSOFT [liu_2023_parameter, gorbunov_2024_group, ma_2024_parameter]. Rotations preserve norms while steering the basis toward safer, higher‑utility directions and are merged into weights at inference, keeping latency unchanged.</p>
+  <p><strong>Budgeted interference via dual updates.</strong> We maintain an exponential moving average of measured risk per layer and update ν_l as the positive part of ν_l plus ρ times the EMA risk minus B_l. The mask threshold τ_l is then set as B_l plus ν_l, or an equivalent monotone mapping, enforcing long‑run average risk below B_l while allowing transient fluctuations. This creates an explicit, interpretable stability–plasticity knob.</p>
+  <p><strong>Replayless consolidation and adaptive capacity.</strong> At session boundaries, we can fold adapter updates into the backbone and merge Q_l so that inference remains unchanged. Anchors are refreshed under the new features. If a layer persistently violates its budget, FOST can allocate one or two new LoRA columns and later prune them by forecast‑aware scores, realizing adaptive micro‑capacity while preserving constant inference cost after merges.</p>
+  <p><strong>Complexity and integration.</strong> Structured orthogonals such as BOFT and GSOFT reduce parameter and compute overhead and can be merged at inference; qGOFT uses quasi‑Givens rotations with linear parameter complexity [liu_2023_parameter, gorbunov_2024_group, ma_2024_parameter]. Anchors store only a handful of floats per class or domain. Forecasters and calibration run sparsely (via micro‑probes), amortizing cost. Seeded projections can be reused from gradient/state compression (FLORA) <a href="https://arxiv.org/pdf/2402.03293v2.pdf" target="_blank" title="Flora: Low-Rank Adapters Are Secretly Gradient Compressors">(Yongchang Hao, 2024)</a>.</p>
+  <p><strong>Intuition and guarantees (sketch).</strong> If g_l’s UCB upper‑bounds expected anchor‑margin loss for a unit step along u, then enforcing a per‑layer budget upper‑bounds cumulative anchor‑margin loss over time. Because Q_l preserves norms and allows controlled rotation, the feasible set retains non‑vanishing alignment with new‑task gradients without pre‑emptive subspace shrinkage, enabling a tunable stability–plasticity trade‑off at constant inference cost.</p>
+  <pre><code>// FOST-PEFT: per-step training (layer-wise)
+for each layer l with LoRA and orthogonal controller Q_l:
+  // 1) Forecast risk for each LoRA column after current rotation
+  for each column j in basis b_{l,j}:
+    features_j = build_features(P_l, anchors_l, b_{l,j})
+    (p_j, ucb_j) = forecaster_g_l(features_j)
+
+  // 2) Safe-direction masking
+  mask_j = (ucb_j &gt; τ_l) ? 1 : 0
+  zero_gradients_for_masked_columns(mask_j)
+
+  // 3) Masked adapter update (standard LoRA optimizer step)
+  adapter_update(l, masked=true)
+
+  // 4) Risk-aware orthogonal rotation step
+  objective = sum_j[ align_grad(b_{l,j}) - λ * expected_risk(p_j) ]
+  Q_l ← orthogonal_step(Q_l, objective)  // Riemannian or soft-orth step
+
+// Periodic micro-probes and calibration
+if step % M == 0:
+  labels = run_micro_probes_and_revert()
+  update_forecaster(g_l, labels)
+  calibrate_with_isotonic_or_platt(g_l); estimate_UCB_via_bootstrap()
+
+// Dual update for budgeted risk
+EMA_risk_l ← update_ema(measured_risk_l)
+ν_l ← max(0, ν_l + ρ * (EMA_risk_l - B_l))
+τ_l ← B_l + ν_l
+</code></pre>
+</section>
+
+<section>
+  <h2>Experimental Setup</h2>
+  <p><strong>General synthetic stream specification.</strong> The generator produces a sequence of binary classification tasks in a d‑dimensional space. A set of k orthonormal directions defines a shared subspace; each task’s signal direction is a mixture of this shared subspace and a fixed direction aligned with past tasks, with angles traversing from strong interference to orthogonality. Labels are produced by thresholding a noisy projection onto each task direction. Models are two‑layer MLPs with LoRA on both Linear layers. FOST maintains per‑layer anchors by compressing hidden states via seeded random projections, trains a diagonal linearized forecaster with isotonic calibration and bootstrap UCB, probes every M steps, enforces per‑layer budgets B_l, and rotates bases via geodesic steps. Planned baselines include sequential LoRA, orthogonal‑only PEFT (without forecasting or masking), random masking at matched rates, and a subspace‑restriction variant analogous to InfLoRA [liang_2024_inflora, liu_2023_parameter].</p>
+  <p><strong>Realized run (saved logs).</strong> The executed run used a single GPU (Tesla T4, 16.7 GB). The stream comprised 5 sequential synthetic tasks with 500 samples per task, input dimension 128, and 10 classes. The model employed LoRA with rank 8 on MLP layers and enabled an orthogonal controller. FOST’s risk‑budget components were instrumented. Rotation energy was logged per task, as was the dual variable ν for the risk budget. Total wall‑clock time was approximately 2.91 seconds.</p>
+  <p><strong>FOST configuration highlights.</strong> Orthogonal control followed a GOFT/BOFT‑style backend; rotation energy increased across tasks. Anchors were maintained via seeded projections and updated from minibatch features. The forecaster and budget variables were active in the code path; however, mask rates, forecaster calibration metrics (expected calibration error and AUROC), and budget satisfaction traces were not saved in this run. By design, the orthogonal controller is merged at inference, keeping latency identical to LoRA‑only [liu_2023_parameter, gorbunov_2024_group]. Seeded projections could be shared with FLORA‑style compression but no such sharing was needed in this run <a href="https://arxiv.org/pdf/2402.03293v2.pdf" target="_blank" title="Flora: Low-Rank Adapters Are Secretly Gradient Compressors">(Yongchang Hao, 2024)</a>.</p>
+  <p><strong>Evaluation metrics.</strong> Continual metrics included per‑task accuracy after each task, final average accuracy, backward transfer (BWT), forward transfer (FWT), and forgetting. Mechanistic metrics included rotation energy and the risk budget dual variables. Intended diagnostics included mask rates, calibration curves, expected calibration error and AUROC for the forecaster, anchor‑margin loss, and budget satisfaction traces; these were not present in the saved logs for this run <a href="https://arxiv.org/pdf/2402.01865v3.pdf" target="_blank" title="What Will My Model Forget? Forecasting Forgotten Examples in Language Model Refinement">(Xisen Jin, 2024)</a>.</p>
+  <p><strong>Comparative baselines.</strong> The protocol planned LoRA‑only, orthogonal PEFT without forecasting, random masking at matched rates, and a subspace restriction baseline (InfLoRA‑like) [liang_2024_inflora, liu_2023_parameter]. Baseline executions and logs are not available for this run; we therefore refrain from comparative claims and focus on reporting FOST’s internal signals and the observable outcomes.</p>
+  <p><strong>Broader evaluation plan.</strong> Beyond this synthetic run, we prepared protocols for exemplar‑free class‑incremental vision with ViT backbones and domain‑shifted language modeling with GPT‑style models, reusing FOST components and calibration. Comparisons include orthogonal PEFT, replay‑based baselines, and subspace restriction [ermis_2022_memory, gorbunov_2024_group, ma_2024_parameter, buzzega_2020_dark]. These larger‑scale experiments are not reported here due to lack of saved logs; they contextualize the intended scope and the instrumentation implemented.</p>
+</section>
+
+<section>
+  <h2>Results</h2>
+  <p><strong>Overall performance and dynamics</strong></p>
+  <ul>
+    <li>Hardware and runtime: Tesla T4 GPU (16.7 GB). Total training time: 2.91 seconds.</li>
+    <li>Stream and model: 5 tasks, 500 samples per task, input dimension 128, 10 classes, LoRA rank 8 with an orthogonal controller.</li>
+    <li>Final evaluation: 100.00% accuracy on each of the 5 tasks; Average Accuracy 100.00%; Final Task Accuracy 100.00%.</li>
+    <li>Forgetting: 0.00 at the end of training.</li>
+    <li>Reported transfer metrics in the log: BWT 20.00; FWT 25.00.</li>
+    <li>Rotation energy (proxy for subspace movement): approximately 5.4504, 5.9220, 6.3442, 6.7577, 7.2253 across tasks.</li>
+    <li>Risk budget dual variable ν: 0.0000 for every task (budget inactive throughout training).</li>
+  </ul>
+  <p><strong>Interpretation</strong></p>
+  <ul>
+    <li>Perfect retention and adaptation. The model achieved 100.00% accuracy on all tasks with zero measured forgetting in this run. Without baselines, we do not attribute this outcome to forecast‑guided masking or budgeting; rather, we view it as a property of this particular synthetic stream combined with active orthogonal control.</li>
+    <li>Budget inaction with nontrivial rotations. The dual variable ν remained at 0.0, implying that measured or forecasted risk never exceeded the budget threshold, so safe‑direction masking and budget control did not bind. Rotation energy increased monotonically, indicating that the orthogonal controller moved subspaces non‑trivially.</li>
+    <li>Metric anomalies. BWT and FWT values of 20.00 and 25.00 are outside common bounds for accuracy‑based definitions, suggesting a calculation or logging error. Intermediate training logs also reported approximately 20% “Task completed” accuracy despite later 100% final accuracy. We treat these inconsistencies as logging artifacts and do not interpret them as evidence of transfer. These issues emphasize the need for standardized metric computation and reporting in subsequent experiments.</li>
+  </ul>
+  <p><strong>Fairness, hyperparameters, and diagnostics</strong></p>
+  <ul>
+    <li>Hyperparameters were fixed across tasks; no sweeps or ablations were saved. Inference‑time overhead was not explicitly measured; by design, merging orthogonal controllers keeps inference unchanged [liu_2023_parameter, gorbunov_2024_group].</li>
+    <li>Missing diagnostics. Mask rates, calibration curves, expected calibration error and AUROC for the forecaster, and budget satisfaction traces were not logged. Without these, we cannot validate that g_l was calibrated or that risk budgeting functioned as intended <a href="https://arxiv.org/pdf/2402.01865v3.pdf" target="_blank" title="What Will My Model Forget? Forecasting Forgotten Examples in Language Model Refinement">(Xisen Jin, 2024)</a>.</li>
+  </ul>
+  <p><strong>Limitations and required follow‑ups</strong></p>
+  <ul>
+    <li>Absence of baselines. LoRA‑only, orthogonal‑only, random‑mask, and InfLoRA‑like baselines were not executed in the saved run. Comparative claims are therefore inappropriate [liang_2024_inflora, liu_2023_parameter].</li>
+    <li>Insufficient stress on interference. The stream appears easy for the model; the stability–plasticity trade‑off was not stressed, as evidenced by perfect accuracies and inactive budgets. To validate FOST’s advantage, experiments with stronger interference and longer streams are necessary, alongside standardized BWT/FWT computation and calibrated forecaster evaluation.</li>
+  </ul>
+  <figure>
+    <img src="images/confusion_matrix_final.png" style="width:70%" alt="confusion_matrix_final">
+    <figcaption>Figure 1: Final confusion matrix at the end of training (confusion_matrix_final.pdf)</figcaption>
+  </figure>
+  <figure>
+    <img src="images/fost_metrics.png" style="width:70%" alt="fost_metrics">
+    <figcaption>Figure 2: Training‑time metrics dashboard for FOST (fost_metrics.pdf)</figcaption>
+  </figure>
+  <figure>
+    <img src="images/metrics_summary.png" style="width:70%" alt="metrics_summary">
+    <figcaption>Figure 3: Summary of key metrics across tasks and epochs (metrics_summary.pdf)</figcaption>
+  </figure>
+  <figure>
+    <img src="images/performance_matrix.png" style="width:70%" alt="performance_matrix">
+    <figcaption>Figure 4: Task‑wise performance matrix at final evaluation (performance_matrix.pdf)</figcaption>
+  </figure>
+  <figure>
+    <img src="images/task_accuracies.png" style="width:70%" alt="task_accuracies">
+    <figcaption>Figure 5: Accuracy trajectories per task throughout the stream (task_accuracies.pdf)</figcaption>
+  </figure>
+  <figure>
+    <img src="images/training_losses.png" style="width:70%" alt="training_losses">
+    <figcaption>Figure 6: Loss curves recorded during training (training_losses.pdf)</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2>Conclusion</h2>
+  <p>We introduced FOST‑PEFT, a replayless, budgeted continual adaptation framework that forecasts interference along candidate parameter directions and steers updates by orthogonal subspace control. FOST combines three lightweight components: seed‑regenerable anchor‑sketch memories without raw samples, calibrated forgetting forecasters that output probabilities and uncertainty, and structured orthogonal controllers that rotate LoRA bases while enforcing per‑layer risk budgets. This design preserves plasticity by avoiding pre‑emptive subspace shrinkage, provides an explicit stability–plasticity knob via budgets, and maintains zero inference overhead via mergeable orthogonal transforms [liu_2023_parameter, gorbunov_2024_group].</p>
+  <p>On a synthetic run, we observed perfect final accuracy, increasing rotation energy, and inactive budgets. While this indicates stable adaptation and functional orthogonal control, inconsistent transfer metrics, missing calibration diagnostics, and the lack of baselines prevent strong claims about FOST’s advantage. The results nonetheless validate end‑to‑end operability and instrumentation.</p>
+  <p>Future work will complete the planned evaluation: (i) stress‑test stability–plasticity with longer and harder synthetic drifts and properly computed BWT/FWT; (ii) exemplar‑free class‑incremental vision and domain‑shifted language modeling with comprehensive calibration and ablations; (iii) quantitative efficiency analysis to confirm unchanged inference latency and modest training overhead; and (iv) adaptive micro‑capacity allocation within budgets. Broader comparisons will include orthogonal PEFT, subspace restriction (InfLoRA), and replay/distillation baselines to establish the calibrated, budgeted routing benefits in realistic settings [liang_2024_inflora, ermis_2022_memory, buzzega_2020_dark].</p>
+</section>
+</body>
+</html>

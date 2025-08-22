@@ -6,5 +6,52 @@
     "symmetry-aware training NLP",
     "equivariant learning language models",
     "relational inductive biases NLP"
+  ],
+  "research_study_list": [
+    {
+      "title": "Towards a Theoretical Understanding of the 'Reversal Curse' via Training Dynamics"
+    },
+    {
+      "title": "The Reversal Curse: LLMs trained on “A is B” fail to learn “B is A”"
+    },
+    {
+      "title": "Delving into the Reversal Curse: How Far Can Large Language Models Generalize?"
+    },
+    {
+      "title": "DropEdge not Foolproof: Effective Augmentation Method for Signed Graph Neural Networks"
+    },
+    {
+      "title": "The Reversal Curse: LLMs trained on “A is B” fail to learn “B is A”"
+    },
+    {
+      "title": "Label-invariant Augmentation for Semi-Supervised Graph Classification"
+    },
+    {
+      "title": "SymILO: A Symmetry-Aware Learning Framework for Integer Linear Optimization"
+    },
+    {
+      "title": "LieGG: Studying Learned Lie Group Generators"
+    },
+    {
+      "title": "Symmetry Induces Structure and Constraint of Learning"
+    },
+    {
+      "title": "Permutation Equivariant Models for Compositional Generalization in Language"
+    },
+    {
+      "title": "Meta-learning Symmetries by Reparameterization"
+    },
+    {
+      "title": "Structuring Representations Using Group Invariants"
+    },
+    {
+      "title": "Linearity of Relation Decoding in Transformer Language Models"
+    },
+    {
+      "title": "Prototypical Representation Learning for Relation Extraction"
+    },
+    {
+      "title": "Inductive Relation Prediction by Subgraph Reasoning"
+    }
   ]
 }

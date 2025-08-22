@@ -370,6 +370,38 @@
       }
     }
   ],
+  "reference_research_study_list": [
+    {
+      "title": "Towards efficient post-training quantization of pre-trained language models"
+    },
+    {
+      "title": "Binarybert: Pushing the limit of bert quantization"
+    },
+    {
+      "title": "The second pascal recognising textual entailment challenge"
+    },
+    {
+      "title": "The fifth pascal recognizing textual entailment challenge"
+    },
+    {
+      "title": "SemEval-2017 task 1: Semantic textual similarity multilingual and crosslingual focused evaluation"
+    },
+    {
+      "title": "Training verifiers to solve math word problems"
+    },
+    {
+      "title": "The pascal recognising textual entailment challenge"
+    },
+    {
+      "title": "Llm. int8 (): 8-bit matrix multiplication for transformers at scale"
+    },
+    {
+      "title": "Qlora: E fficient finetuning of quantized llms"
+    },
+    {
+      "title": "Lmflow: An extensible toolkit for finetuning and inference of large foundation models"
+    }
+  ],
   "new_method": {
     "method": "Refined title: QELO — Activation-Weighted, Error-Shaping QLoRA (2–3bit安定化のための活性化重み付け＋誤差整形＋LUT学習)\n\nMotivation\n- 課題の核心: QLoRA/LoftQは ||W − Q − AB^T||_F を最小化するが、2–3bitでは実運用で重要な出力側の活性化MSE ||X(W−Q−AB^T)||_F^2（X^T Xの半ヘッセにより重み付け）が支配的。LoftQは活性化情報を目的に含めず、QLoRAはPEFTで補償しきれない。AQLMは活性化MSEに直接取り組むが、コード探索・大規模最適化で重い。\n- 2bitで顕著な不安定性: 量子化ビン境界付近のコード・スケールの振動（フリップ）がTransformerでも再現。Overcoming Oscillationsの知見はBN中心で、TransformerのPTQ+PEFTにそのまま適用しにくい。\n- 実装制約: PTQ+PEFTの軽量フローを維持し、整数コードを固定、推論オーバーヘッドはほぼゼロに抑えたい。\n- ねらい: 少量キャリブで層ごとの活性化感度を推定し、(1) LoRA自由度を“効く方向”に再配分、(2) 整数コードは固定のまま復元LUTのみ小規模学習、(3) 符号付き置換＋対角スケールなど推論ゼロオーバーヘッド変換で誤差の指向性を整形し、2–3bit域の振動と損失劣化を抑える。\n\nMethodology\n- 目的関数（層ごと、少量キャリブX使用）\n  - 活性化MSE最小化: min_{A,B,θ,Π,D} || Λ_out^{1/2} X (W − Π^T[dequant(M; θ) + AB^T] D Π) ||_F^2 + λ·R(θ)\n  - 設定: 初回量子化で整数コードMを確定し凍結。以降、復元側パラメタθ（LUT中心値v_k、スケールγ、オフセットα、クリップτなど）とAB、誤差整形(Π:符号付き置換, D:対角スケール)のみを最適化。\n  - 重み Λ_out, Λ_in: 出力分散やS=X^T X/Nの（列グループ対角）近似から導出。実装は対角/ブロック対角で安価に推定。\n\n- 要素1: Activation-Weighted SVD (AWSVD) によるLoRA空間選択\n  - 近似: 上位rで R=W−Q を S^{1/2} で右重み、Λ_out^{1/2} で左重みしてrSVD: top-r of Λ_out^{1/2} R S^{1/2}\n  - 実装: LoftQのSVDをR@S^{1/2}のrandomized SVDに置換（Sは列グループ対角/ブロック対角近似）。LoRAのDoFを高感度方向に集中。\n\n- 要素2: Learnable Dequantizer（整数コード固定の軽量LUT学習）\n  - 仕組み: dequant(M; θ)のθ=(v,γ,α,τ)を最小二乗で更新。コードMやブロック構造は固定のため、既存PTQ表現と完全互換。\n  - 安定化: (i) Bin-center正則化（頻出ビンほど強化）、(ii) θの弱EMAで急変を抑制、(iii) LUT単調性制約（差分softplusパラメタ化）で境界フリップを抑える。\n  - 計算: 数十step/層、バッチはキャリブXからサンプリング。追加演算はオフラインのみ、推論はLUT参照コスト据え置き。\n\n- 要素3: 推論オーバーヘッドゼロの誤差整形\n  - Π: ブロック内の符号付き置換（行/列の並べ替え＋符号反転）。並べ替えはメモリ再配置、符号はLUT再マッピングで吸収。\n  - D: ブロック対角スケール。列側はLUTのγに、行側は後段の線形/Normのゲインへ吸収（SmoothQuant的に吸収）。\n  - オプション: ペア限定2×2 Givensで尖度の高い対のみ整形し、最終重みへオフライン反映（コードは固定、LUTを対応付けて再パック）。\n  - 探索: 感度ヒューリスティクス（SやΛ_outに基づき高感度列を高分解能/安定側に送る）＋貪欲な局所交換。ブロック幅≲64で安価。\n\n- 交互最適化（各層独立・並列可）\n  1) キャリブ: 512–2048シーケンスでS=X^T X/NとΛ_outを推定。\n  2) 初回量子化: 任意のPTQ（NF/Uniform）でMを確定し凍結。\n  3) T=1–3反復:\n     a) AWSVDでAB更新（R=W−dequant(M;θ)）。\n     b) θ, Π, Dを活性化MSEで数十step微調整（bin-center＋EMA＋単調性）。\n  4) 推論: Π, DはLUT/後段ゲインに畳み込み済み。forwardは dequant(M; θ*) + A*B*^T のみ（追加計算ゼロ）。\n\n- 既存実装への最小パッチ\n  - LoftQのSVD呼び出しをAWSVDに差し替え。\n  - 量子化関数にlearnable LUT（v,γ,α,τ）と単調制約・bin-center正則化・弱EMAを追加。\n  - 誤差整形のAPI（符号付き置換・対角スケール・オプション2×2 Givens）とLUT再マッピング関数を提供。\n  - ロギング: 層出力MSE, 活性化RMSE, フリップ率, LUT更新量, 置換更新回数, スケール分布。\n\n- 新規性（LoftQ/QLoRA, AQLM, QA-LoRA, Overcoming Oscillationsとの違い）\n  - LoftQ: Frobenius最小化→活性化重み付け最小化(AWSVD)に変更し、さらに整数コード固定のLUT学習と符号付き置換＋対角スケールによる誤差整形を同時最適化。追加推論コストなし。\n  - AQLM: 活性化MSE最小化を共有しつつ、離散コード探索や大型コードブック学習を行わない。固定コード＋小LUT学習＋簡素な整形でPTQ+PEFTの軽量路線を維持。\n  - QA-LoRA: グループ化やDoF再配分ではなく、活性化重み付け空間選択＋LUT側の直接学習＋置換/スケール整形で2–3bitの活性化MSEを直接削減。LoRAは通常の合成（マージ不要）で互換。\n  - Overcoming Oscillations: BN非依存の振動抑制（bin-center, EMA, 単調LUT）をTransformer/LoRA/2–3bitに合わせて設計。整数コード固定のまま境界フリップを制御。\n\n- 複雑度/資源\n  - キャリブ: 512–2048シーケンス、勾配不要。\n  - 計算: rSVDはR@S^{1/2}のrandomized SVD（Sは対角/ブロック対角近似）で高速。LUT学習は数十step/層。Π探索はブロック内≲64列で貪欲に可能。\n  - 推論: 置換/符号/スケールはオフライン吸収。整数コード/LUT表現・演算は既存と同一。\n\nExpected impact\n- 精度・安定性: 2–3bitでの層出力MSEを10–30%低減、WikiText-2 ppl改善、MMLU/GSM8KでLoftQ/QLoRA比+1–3ptを期待。ビン境界フリップ率の有意な低下を定量化。\n- 実用性: 整数コード維持・追加演算ゼロで既存PTQ+PEFTフローに小パッチ導入可。NF/Uniform/ブロック量子化など量子化方式に非依存。\n- 拡張性: KV/活性化量子化やSmoothQuant的なスケール吸収と親和性が高い。混合精度や層別ランク自動化（Λ_out/Sに基づくr割当）にも発展可能。\n- 研究貢献: 「活性化重み付けLoRA空間選択」「整数コード固定のLUT微調整」「推論ゼロオーバーヘッド誤差整形」を組み合わせた軽量な2–3bit安定化手法として、LoftQ/AQLM/QA-LoRA/Overcoming Oscillationsに対する明確な新規性を提供。",
     "experimental_design": {

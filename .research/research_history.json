@@ -265,6 +265,38 @@
       }
     }
   ],
+  "reference_research_study_list": [
+    {
+      "title": "JAX: composable transformations of Python+NumPy programs"
+    },
+    {
+      "title": "GEP-PG: decoupling exploration and exploitation in deep reinforcement learning algorithms"
+    },
+    {
+      "title": "Scaling map-elites to deep neuroevolution"
+    },
+    {
+      "title": "Improving exploration in evolution strategies for deep reinforcement learning via a population of novelty-seeking agents"
+    },
+    {
+      "title": "Hierarchical behavioral repertoires with unsupervised descriptors"
+    },
+    {
+      "title": "Robots that can adapt like animals"
+    },
+    {
+      "title": "Fast population-based reinforcement learning on a single machine"
+    },
+    {
+      "title": "Differentiable quality diversity"
+    },
+    {
+      "title": "Covariance matrix adaptation for the rapid illumination of behavior space"
+    },
+    {
+      "title": "Brax–a differentiable physics engine for large scale rigid body simulation"
+    }
+  ],
   "new_method": {
     "method": "{\"Motivation\":\"Current autoguidance methods are fundamentally limited by their rigid assumptions about a problem's solution space. Quality Diversity (QD) approaches act as 'map-fillers,' efficiently populating a behavioral map whose dimensions and structure are predefined by a human expert. Conversely, hierarchical methods like HOLMES are 'map-fracturers,' dynamically building a tree by irreversibly splitting behavioral niches, which leads to permanent fragmentation and prevents the system from correcting or abstracting its understanding. This research introduces Dynamic Behavioral Cartography (DBC), a novel paradigm that treats discovery not as filling or fracturing a map, but as the continuous learning and refinement of the map itself. DBC introduces a crucial, missing operation—niche unification (merging)—enabling the system to revise its own structural hypotheses, correct early mischaracterizations, and form higher-level abstractions. It thus learns an emergent, data-driven ontology of the problem space, directly addressing the foundational rigidity of both static QD maps and append-only hierarchical structures.\",\"Methodology\":\"DBC is implemented as a novel Repertoire and Emitter pair, designed to directly replace the static grid and variation operators in modern QD frameworks like PBT-MAP-ELITES.\\n1. **Dynamic Graph Repertoire**: The static repertoire is replaced with a dynamic graph where nodes represent behavioral 'Niches.' Each Niche contains a population of elite solutions and trains a local Variational Autoencoder (VAE) to model its specific behavioral region. A 'Global Coordinator' VAE is trained on samples across all Niches, creating a unified latent space. The graph's weighted edges are dynamically computed based on the Wasserstein-1 distance between the latent distributions of Niches in this global space, capturing the learned topology of the solution landscape.\\n2. **Principled Niche Specialization (Splitting)**: A Niche splits only when a principled statistical test (e.g., Hartigan's Dip Test applied to the principal components of its local VAE's latent space) detects significant multi-modality. This provides a data-driven trigger indicating that the Niche has discovered distinct sub-behaviors that require specialized representation. This is a direct improvement over HOLMES's heuristic of splitting on loss plateaus.\\n3. **Adaptive Niche Unification (Merging)**: To overcome the permanent fragmentation of HOLMES, DBC introduces a merge operation. Two connected Niches are unified if their latent distributions become statistically indistinguishable in the Global Coordinator's space (i.e., their Wasserstein distance falls below a dynamic threshold). This self-correction mechanism is the core innovation, allowing the system to form higher-level abstractions by merging previously distinct behaviors (e.g., 'walking' and 'hopping') into a more general 'locomotion' category as its understanding matures.\\n4. **Topology-Aware Latent Emitter**: The emitter leverages the learned graph structure for intelligent exploration. It is a hybrid strategy that generates new candidates by:\\n    a) **Exploitation:** Improving elites via mutation within their home Niche.\\n    b) **Bridging:** Performing latent space interpolation between elites from highly-connected adjacent Niches using the Global Coordinator's decoder. This explicitly searches the learned boundaries between known behaviors, a more principled approach than simple parameter-space crossover.\\n    c) **Frontier Discovery:** Sampling from an archive of solutions that are poorly reconstructed by all local VAEs but well-reconstructed by the Global Coordinator, identifying them as coherent but fundamentally novel behaviors that can seed new Niches.\",\"Expected impact\":\"DBC represents a paradigm shift from solution archival to structural discovery in autoguidance. By introducing the ability to merge and unify behavioral niches, it overcomes the critical limitation of irreversible fragmentation found in HOLMES. By learning the map's structure dynamically, it transcends the static, human-defined nature of traditional QD. The primary outcome is that the resulting dynamic graph is not merely a container for diverse solutions but an emergent and interpretable scientific discovery in its own right—a learned taxonomy of the problem domain. For instance, in robotics, DBC could initially split gaits into 'walking' and 'crawling,' use its Bridging emitter to discover a transitional 'trotting' gait along the boundary, and ultimately merge all three into a unified 'locomotion' super-niche. This capacity for structural self-correction and abstraction makes DBC a powerful engine for generating novel hypotheses and insights in complex domains like robotics, drug discovery, and materials science.\"}",
     "experimental_design": {

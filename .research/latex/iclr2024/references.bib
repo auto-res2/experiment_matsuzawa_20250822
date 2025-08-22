@@ -5,3 +5,473 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{addanki_2020_efficient,
+ abstract = {We consider recovering a causal graph in presence of latent variables, where
+we seek to minimize the cost of interventions used in the recovery process. We
+consider two intervention cost models: (1) a linear cost model where the cost
+of an intervention on a subset of variables has a linear form, and (2) an
+identity cost model where the cost of an intervention is the same, regardless
+of what variables it is on, i.e., the goal is just to minimize the number of
+interventions. Under the linear cost model, we give an algorithm to identify
+the ancestral relations of the underlying causal graph, achieving within a
+$2$-factor of the optimal intervention cost. This approximation factor can be
+improved to $1+\epsilon$ for any $\epsilon > 0$ under some mild restrictions.
+Under the identity cost model, we bound the number of interventions needed to
+recover the entire causal graph, including the latent variables, using a
+parameterization of the causal graph through a special type of colliders. In
+particular, we introduce the notion of $p$-colliders, that are colliders
+between pair of nodes arising from a specific type of conditioning in the
+causal graph, and provide an upper bound on the number of interventions as a
+function of the maximum number of $p$-colliders between any two nodes in the
+causal graph.},
+ arxiv_url = {https://arxiv.org/pdf/2005.11736v2.pdf},
+ author = {Raghavendra Addanki and Shiva Prasad Kasiviswanathan and Andrew McGregor and Cameron Musco},
+ title = {Efficient Intervention Design for Causal Discovery with Latents},
+ year = {2020}
+}
+
+@article{ahmaditeshnizi_2020_lazyiter,
+ abstract = {The causal relationships among a set of random variables are commonly
+represented by a Directed Acyclic Graph (DAG), where there is a directed edge
+from variable $X$ to variable $Y$ if $X$ is a direct cause of $Y$. From the
+purely observational data, the true causal graph can be identified up to a
+Markov Equivalence Class (MEC), which is a set of DAGs with the same
+conditional independencies between the variables. The size of an MEC is a
+measure of complexity for recovering the true causal graph by performing
+interventions. We propose a method for efficient iteration over possible MECs
+given intervention results. We utilize the proposed method for computing MEC
+sizes and experiment design in active and passive learning settings. Compared
+to previous work for computing the size of MEC, our proposed algorithm reduces
+the time complexity by a factor of $O(n)$ for sparse graphs where $n$ is the
+number of variables in the system. Additionally, integrating our approach with
+dynamic programming, we design an optimal algorithm for passive experiment
+design. Experimental results show that our proposed algorithms for both
+computing the size of MEC and experiment design outperform the state of the
+art.},
+ arxiv_url = {https://arxiv.org/pdf/2006.09670v1.pdf},
+ author = {Ali AhmadiTeshnizi and Saber Salehkaleybar and Negar Kiyavash},
+ title = {LazyIter: A Fast Algorithm for Counting Markov Equivalent DAGs and Designing Experiments},
+ year = {2020}
+}
+
+@article{author_year_lazyiter,
+ title = {LazyIter: A Fast Algorithm for Counting Markov Equivalent DAGs and Designing Experiments}
+}
+
+@article{author_year_unified,
+ title = {Unified Covariate Adjustment for Causal Inference}
+}
+
+@article{bhattacharyya_2020_learning,
+ abstract = {We study the problem of efficiently estimating the effect of an intervention
+on a single variable (atomic interventions) using observational samples in a
+causal Bayesian network. Our goal is to give algorithms that are efficient in
+both time and sample complexity in a non-parametric setting.
+  Tian and Pearl (AAAI `02) have exactly characterized the class of causal
+graphs for which causal effects of atomic interventions can be identified from
+observational data. We make their result quantitative. Suppose P is a causal
+model on a set $\vec{V}$ of n observable variables with respect to a given
+causal graph G with observable distribution $P$. Let $P_x$ denote the
+interventional distribution over the observables with respect to an
+intervention of a designated variable X with x. Assuming that $G$ has bounded
+in-degree, bounded c-components ($k$), and that the observational distribution
+is identifiable and satisfies certain strong positivity condition, we give an
+algorithm that takes $m=\tilde{O}(n\epsilon^{-2})$ samples from $P$ and $O(mn)$
+time, and outputs with high probability a description of a distribution
+$\hat{P}$ such that $d_{\mathrm{TV}}(P_x, \hat{P}) \leq \epsilon$, and:
+  1. [Evaluation] the description can return in $O(n)$ time the probability
+$\hat{P}(\vec{v})$ for any assignment $\vec{v}$ to $\vec{V}$
+  2. [Generation] the description can return an iid sample from $\hat{P}$ in
+$O(n)$ time.
+  We also show lower bounds for the sample complexity showing that our sample
+complexity has an optimal dependence on the parameters $n$ and $\epsilon$, as
+well as if $k=1$ on the strong positivity parameter.},
+ arxiv_url = {https://arxiv.org/pdf/2002.04232v2.pdf},
+ author = {Arnab Bhattacharyya and Sutanu Gayen and Saravanan Kandasamy and Ashwin Maran and N. V. Vinodchandran},
+ github_url = {https://github.com/Microsoft/DoWhy},
+ title = {Learning and Sampling of Atomic Interventions from Observations},
+ year = {2020}
+}
+
+@article{bhattacharyya_2020_learning,
+ abstract = {We study the problem of efficiently estimating the effect of an intervention
+on a single variable (atomic interventions) using observational samples in a
+causal Bayesian network. Our goal is to give algorithms that are efficient in
+both time and sample complexity in a non-parametric setting.
+  Tian and Pearl (AAAI `02) have exactly characterized the class of causal
+graphs for which causal effects of atomic interventions can be identified from
+observational data. We make their result quantitative. Suppose P is a causal
+model on a set $\vec{V}$ of n observable variables with respect to a given
+causal graph G with observable distribution $P$. Let $P_x$ denote the
+interventional distribution over the observables with respect to an
+intervention of a designated variable X with x. Assuming that $G$ has bounded
+in-degree, bounded c-components ($k$), and that the observational distribution
+is identifiable and satisfies certain strong positivity condition, we give an
+algorithm that takes $m=\tilde{O}(n\epsilon^{-2})$ samples from $P$ and $O(mn)$
+time, and outputs with high probability a description of a distribution
+$\hat{P}$ such that $d_{\mathrm{TV}}(P_x, \hat{P}) \leq \epsilon$, and:
+  1. [Evaluation] the description can return in $O(n)$ time the probability
+$\hat{P}(\vec{v})$ for any assignment $\vec{v}$ to $\vec{V}$
+  2. [Generation] the description can return an iid sample from $\hat{P}$ in
+$O(n)$ time.
+  We also show lower bounds for the sample complexity showing that our sample
+complexity has an optimal dependence on the parameters $n$ and $\epsilon$, as
+well as if $k=1$ on the strong positivity parameter.},
+ arxiv_url = {https://arxiv.org/pdf/2002.04232v2.pdf},
+ author = {Arnab Bhattacharyya and Sutanu Gayen and Saravanan Kandasamy and Ashwin Maran and N. V. Vinodchandran},
+ github_url = {https://github.com/Microsoft/DoWhy},
+ title = {Learning and Sampling of Atomic Interventions from Observations},
+ year = {2020}
+}
+
+@article{drfler_2024_the,
+ abstract = {Learning the unknown causal parameters of a linear structural causal model is
+a fundamental task in causal analysis. The task, known as the problem of
+identification, asks to estimate the parameters of the model from a combination
+of assumptions on the graphical structure of the model and observational data,
+represented as a non-causal covariance matrix. In this paper, we give a new
+sound and complete algorithm for generic identification which runs in
+polynomial space. By standard simulation results, this algorithm has
+exponential running time which vastly improves the state-of-the-art double
+exponential time method using a Gr\"obner basis approach. The paper also
+presents evidence that parameter identification is computationally hard in
+general. In particular, we prove, that the task asking whether, for a given
+feasible correlation matrix, there are exactly one or two or more parameter
+sets explaining the observed matrix, is hard for $\forall R$, the co-class of
+the existential theory of the reals. In particular, this problem is
+$coNP$-hard. To our best knowledge, this is the first hardness result for some
+notion of identifiability.},
+ arxiv_url = {https://arxiv.org/pdf/2407.12528v1.pdf},
+ author = {Julian Dörfler and Benito van der Zander and Markus Bläser and Maciej Liskiewicz},
+ title = {On the Complexity of Identification in Linear Structural Causal Models},
+ year = {2024}
+}
+
+@article{elahi_2024_fast,
+ abstract = {Identifying causal effects is a key problem of interest across many
+disciplines. The two long-standing approaches to estimate causal effects are
+observational and experimental (randomized) studies. Observational studies can
+suffer from unmeasured confounding, which may render the causal effects
+unidentifiable. On the other hand, direct experiments on the target variable
+may be too costly or even infeasible to conduct. A middle ground between these
+two approaches is to estimate the causal effect of interest through proxy
+experiments, which are conducted on variables with a lower cost to intervene on
+compared to the main target. Akbari et al. [2022] studied this setting and
+demonstrated that the problem of designing the optimal (minimum-cost)
+experiment for causal effect identification is NP-complete and provided a naive
+algorithm that may require solving exponentially many NP-hard problems as a
+sub-routine in the worst case. In this work, we provide a few reformulations of
+the problem that allow for designing significantly more efficient algorithms to
+solve it as witnessed by our extensive simulations. Additionally, we study the
+closely-related problem of designing experiments that enable us to identify a
+given effect through valid adjustments sets.},
+ arxiv_url = {https://arxiv.org/pdf/2407.05330v1.pdf},
+ author = {Sepehr Elahi and Sina Akbari and Jalal Etesami and Negar Kiyavash and Patrick Thiran},
+ title = {Fast Proxy Experiment Design for Causal Effect Identification},
+ year = {2024}
+}
+
+@article{elahi_2024_fast,
+ abstract = {Identifying causal effects is a key problem of interest across many
+disciplines. The two long-standing approaches to estimate causal effects are
+observational and experimental (randomized) studies. Observational studies can
+suffer from unmeasured confounding, which may render the causal effects
+unidentifiable. On the other hand, direct experiments on the target variable
+may be too costly or even infeasible to conduct. A middle ground between these
+two approaches is to estimate the causal effect of interest through proxy
+experiments, which are conducted on variables with a lower cost to intervene on
+compared to the main target. Akbari et al. [2022] studied this setting and
+demonstrated that the problem of designing the optimal (minimum-cost)
+experiment for causal effect identification is NP-complete and provided a naive
+algorithm that may require solving exponentially many NP-hard problems as a
+sub-routine in the worst case. In this work, we provide a few reformulations of
+the problem that allow for designing significantly more efficient algorithms to
+solve it as witnessed by our extensive simulations. Additionally, we study the
+closely-related problem of designing experiments that enable us to identify a
+given effect through valid adjustments sets.},
+ arxiv_url = {https://arxiv.org/pdf/2407.05330v1.pdf},
+ author = {Sepehr Elahi and Sina Akbari and Jalal Etesami and Negar Kiyavash and Patrick Thiran},
+ title = {Fast Proxy Experiment Design for Causal Effect Identification},
+ year = {2024}
+}
+
+@article{fang_2024_causal,
+ abstract = {With the advancement of data science, the collection of increasingly complex
+datasets has become commonplace. In such datasets, the data dimension can be
+extremely high, and the underlying data generation process can be unknown and
+highly nonlinear. As a result, the task of making causal inference with
+high-dimensional complex data has become a fundamental problem in many
+disciplines, such as medicine, econometrics, and social science. However, the
+existing methods for causal inference are frequently developed under the
+assumption that the data dimension is low or that the underlying data
+generation process is linear or approximately linear. To address these
+challenges, this paper proposes a novel causal inference approach for dealing
+with high-dimensional complex data. The proposed approach is based on deep
+learning techniques, including sparse deep learning theory and stochastic
+neural networks, that have been developed in recent literature. By using these
+techniques, the proposed approach can address both the high dimensionality and
+unknown data generation process in a coherent way. Furthermore, the proposed
+approach can also be used when missing values are present in the datasets.
+Extensive numerical studies indicate that the proposed approach outperforms
+existing ones.},
+ arxiv_url = {https://arxiv.org/pdf/2403.18994v1.pdf},
+ author = {Yaxin Fang and Faming Liang},
+ github_url = {https://github.com/nixay/Causal-StoNet},
+ title = {Causal-StoNet: Causal Inference for High-Dimensional Complex Data},
+ year = {2024}
+}
+
+@article{huang_2022_latent,
+ abstract = {Most causal discovery procedures assume that there are no latent confounders
+in the system, which is often violated in real-world problems. In this paper,
+we consider a challenging scenario for causal structure identification, where
+some variables are latent and they form a hierarchical graph structure to
+generate the measured variables; the children of latent variables may still be
+latent and only leaf nodes are measured, and moreover, there can be multiple
+paths between every pair of variables (i.e., it is beyond tree structure). We
+propose an estimation procedure that can efficiently locate latent variables,
+determine their cardinalities, and identify the latent hierarchical structure,
+by leveraging rank deficiency constraints over the measured variables. We show
+that the proposed algorithm can find the correct Markov equivalence class of
+the whole graph asymptotically under proper restrictions on the graph
+structure.},
+ arxiv_url = {https://arxiv.org/pdf/2210.01798v1.pdf},
+ author = {Biwei Huang and Charles Jia Han Low and Feng Xie and Clark Glymour and Kun Zhang},
+ title = {Latent Hierarchical Causal Structure Discovery with Rank Constraints},
+ year = {2022}
+}
+
+@article{lopez_2022_large,
+ abstract = {A common theme in causal inference is learning causal relationships between
+observed variables, also known as causal discovery. This is usually a daunting
+task, given the large number of candidate causal graphs and the combinatorial
+nature of the search space. Perhaps for this reason, most research has so far
+focused on relatively small causal graphs, with up to hundreds of nodes.
+However, recent advances in fields like biology enable generating experimental
+data sets with thousands of interventions followed by rich profiling of
+thousands of variables, raising the opportunity and urgent need for large
+causal graph models. Here, we introduce the notion of factor directed acyclic
+graphs (f-DAGs) as a way to restrict the search space to non-linear low-rank
+causal interaction models. Combining this novel structural assumption with
+recent advances that bridge the gap between causal discovery and continuous
+optimization, we achieve causal discovery on thousands of variables.
+Additionally, as a model for the impact of statistical noise on this estimation
+procedure, we study a model of edge perturbations of the f-DAG skeleton based
+on random graphs and quantify the effect of such perturbations on the f-DAG
+rank. This theoretical analysis suggests that the set of candidate f-DAGs is
+much smaller than the whole DAG space and thus may be more suitable as a search
+space in the high-dimensional regime where the underlying skeleton is hard to
+assess. We propose Differentiable Causal Discovery of Factor Graphs (DCD-FG), a
+scalable implementation of -DAG constrained causal discovery for
+high-dimensional interventional data. DCD-FG uses a Gaussian non-linear
+low-rank structural equation model and shows significant improvements compared
+to state-of-the-art methods in both simulations as well as a recent large-scale
+single-cell RNA sequencing data set with hundreds of genetic interventions.},
+ arxiv_url = {https://arxiv.org/pdf/2206.07824v2.pdf},
+ author = {Romain Lopez and Jan-Christian Hütter and Jonathan K. Pritchard and Aviv Regev},
+ github_url = {https://github.com/Genentech/dcdfg},
+ journal = {Advances in Neural Information Processing Systems 35 (2022)},
+ title = {Large-Scale Differentiable Causal Discovery of Factor Graphs},
+ year = {2022}
+}
+
+@article{lopez_2022_large,
+ abstract = {A common theme in causal inference is learning causal relationships between
+observed variables, also known as causal discovery. This is usually a daunting
+task, given the large number of candidate causal graphs and the combinatorial
+nature of the search space. Perhaps for this reason, most research has so far
+focused on relatively small causal graphs, with up to hundreds of nodes.
+However, recent advances in fields like biology enable generating experimental
+data sets with thousands of interventions followed by rich profiling of
+thousands of variables, raising the opportunity and urgent need for large
+causal graph models. Here, we introduce the notion of factor directed acyclic
+graphs (f-DAGs) as a way to restrict the search space to non-linear low-rank
+causal interaction models. Combining this novel structural assumption with
+recent advances that bridge the gap between causal discovery and continuous
+optimization, we achieve causal discovery on thousands of variables.
+Additionally, as a model for the impact of statistical noise on this estimation
+procedure, we study a model of edge perturbations of the f-DAG skeleton based
+on random graphs and quantify the effect of such perturbations on the f-DAG
+rank. This theoretical analysis suggests that the set of candidate f-DAGs is
+much smaller than the whole DAG space and thus may be more suitable as a search
+space in the high-dimensional regime where the underlying skeleton is hard to
+assess. We propose Differentiable Causal Discovery of Factor Graphs (DCD-FG), a
+scalable implementation of -DAG constrained causal discovery for
+high-dimensional interventional data. DCD-FG uses a Gaussian non-linear
+low-rank structural equation model and shows significant improvements compared
+to state-of-the-art methods in both simulations as well as a recent large-scale
+single-cell RNA sequencing data set with hundreds of genetic interventions.},
+ arxiv_url = {https://arxiv.org/pdf/2206.07824v2.pdf},
+ author = {Romain Lopez and Jan-Christian Hütter and Jonathan K. Pritchard and Aviv Regev},
+ github_url = {https://github.com/Genentech/dcdfg},
+ journal = {Advances in Neural Information Processing Systems 35 (2022)},
+ title = {Large-Scale Differentiable Causal Discovery of Factor Graphs},
+ year = {2022}
+}
+
+@article{shahverdikondori_2024_qwo,
+ abstract = {Causal discovery is essential for understanding relationships among variables
+of interest in many scientific domains. In this paper, we focus on
+permutation-based methods for learning causal graphs in Linear Gaussian Acyclic
+Models (LiGAMs), where the permutation encodes a causal ordering of the
+variables. Existing methods in this setting are not scalable due to their high
+computational complexity. These methods are comprised of two main components:
+(i) constructing a specific DAG, $\mathcal{G}^\pi$, for a given permutation
+$\pi$, which represents the best structure that can be learned from the
+available data while adhering to $\pi$, and (ii) searching over the space of
+permutations (i.e., causal orders) to minimize the number of edges in
+$\mathcal{G}^\pi$. We introduce QWO, a novel approach that significantly
+enhances the efficiency of computing $\mathcal{G}^\pi$ for a given permutation
+$\pi$. QWO has a speed-up of $O(n^2)$ ($n$ is the number of variables) compared
+to the state-of-the-art BIC-based method, making it highly scalable. We show
+that our method is theoretically sound and can be integrated into existing
+search strategies such as GRASP and hill-climbing-based methods to improve
+their performance.},
+ arxiv_url = {https://arxiv.org/pdf/2410.23155v1.pdf},
+ author = {Mohammad Shahverdikondori and Ehsan Mokhtarian and Negar Kiyavash},
+ github_url = {https://github.com/ban-epfl/QWO},
+ title = {QWO: Speeding Up Permutation-Based Causal Discovery in LiGAMs},
+ year = {2024}
+}
+
+@article{shiragur_2024_causal,
+ abstract = {Many questions in science center around the fundamental problem of
+understanding causal relationships. However, most constraint-based causal
+discovery algorithms, including the well-celebrated PC algorithm, often incur
+an exponential number of conditional independence (CI) tests, posing
+limitations in various applications. Addressing this, our work focuses on
+characterizing what can be learned about the underlying causal graph with a
+reduced number of CI tests. We show that it is possible to a learn a coarser
+representation of the hidden causal graph with a polynomial number of tests.
+This coarser representation, named Causal Consistent Partition Graph (CCPG),
+comprises of a partition of the vertices and a directed graph defined over its
+components. CCPG satisfies consistency of orientations and additional
+constraints which favor finer partitions. Furthermore, it reduces to the
+underlying causal graph when the causal graph is identifiable. As a
+consequence, our results offer the first efficient algorithm for recovering the
+true causal graph with a polynomial number of tests, in special cases where the
+causal graph is fully identifiable through observational data and potentially
+additional interventions.},
+ arxiv_url = {https://arxiv.org/pdf/2406.01823v1.pdf},
+ author = {Kirankumar Shiragur and Jiaqi Zhang and Caroline Uhler},
+ github_url = {https://github.com/uhlerlab/CCPG},
+ title = {Causal Discovery with Fewer Conditional Independence Tests},
+ year = {2024}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{akbari_2022_minimum,
+ abstract = {Pearl's do calculus is a complete axiomatic approach to learn the
+identifiable causal effects from observational data. When such an effect is not
+identifiable, it is necessary to perform a collection of often costly
+interventions in the system to learn the causal effect. In this work, we
+consider the problem of designing the collection of interventions with the
+minimum cost to identify the desired effect. First, we prove that this problem
+is NP-hard, and subsequently propose an algorithm that can either find the
+optimal solution or a logarithmic-factor approximation of it. This is done by
+establishing a connection between our problem and the minimum hitting set
+problem. Additionally, we propose several polynomial-time heuristic algorithms
+to tackle the computational complexity of the problem. Although these
+algorithms could potentially stumble on sub-optimal solutions, our simulations
+show that they achieve small regrets on random graphs.},
+ arxiv_url = {https://arxiv.org/pdf/2205.02232v3.pdf},
+ author = {Sina Akbari and Jalal Etesami and Negar Kiyavash},
+ title = {Minimum cost intervention design for causal effect identification},
+ year = {2022}
+}
+
+@article{author_year_causality,
+ title = {Causality}
+}
+
+@article{author_year_estimating,
+ title = {Estimating causal effects from epidemiological data}
+}
+
+@article{author_year_estimating,
+ title = {Estimating causal effects of treatments in randomized and nonrandomized studies}
+}
+
+@article{author_year_general,
+ title = {General identifiability with arbitrary surrogate experiments}
+}
+
+@article{author_year_identification,
+ title = {Identification of joint interventional distributions in recursive semi-markovian causal models}
+}
+
+@article{author_year_markov,
+ title = {Markov properties for acyclic directed mixed graphs}
+}
+
+@article{huang_2012_pearl,
+ abstract = {This paper is concerned with graphical criteria that can be used to solve the
+problem of identifying casual effects from nonexperimental data in a causal
+Bayesian network structure, i.e., a directed acyclic graph that represents
+causal relationships. We first review Pearl's work on this topic [Pearl, 1995],
+in which several useful graphical criteria are presented. Then we present a
+complete algorithm [Huang and Valtorta, 2006b] for the identifiability problem.
+By exploiting the completeness of this algorithm, we prove that the three basic
+do-calculus rules that Pearl presents are complete, in the sense that, if a
+causal effect is identifiable, there exists a sequence of applications of the
+rules of the do-calculus that transforms the causal effect formula into a
+formula that only includes observational quantities.},
+ arxiv_url = {https://arxiv.org/pdf/1206.6831v1.pdf},
+ author = {Yimin Huang and Marco Valtorta},
+ title = {Pearl’s calculus of intervention is complete},
+ year = {2012}
+}
+
+@article{kivva_2022_revisiting,
+ abstract = {We revisit the problem of general identifiability originally introduced in
+[Lee et al., 2019] for causal inference and note that it is necessary to add
+positivity assumption of observational distribution to the original definition
+of the problem. We show that without such an assumption the rules of
+do-calculus and consequently the proposed algorithm in [Lee et al., 2019] are
+not sound. Moreover, adding the assumption will cause the completeness proof in
+[Lee et al., 2019] to fail. Under positivity assumption, we present a new
+algorithm that is provably both sound and complete. A nice property of this new
+algorithm is that it establishes a connection between general identifiability
+and classical identifiability by Pearl [1995] through decomposing the general
+identifiability problem into a series of classical identifiability
+sub-problems.},
+ arxiv_url = {https://arxiv.org/pdf/2206.01081v1.pdf},
+ author = {Yaroslav Kivva and Ehsan Mokhtarian and Jalal Etesami and Negar Kiyavash},
+ title = {Revisiting the general identifiability problem},
+ year = {2022}
+}
+
+@article{shpitser_2023_when,
+ abstract = {The ID algorithm solves the problem of identification of interventional
+distributions of the form p(Y | do(a)) in graphical causal models, and has been
+formulated in a number of ways [12, 9, 6]. The ID algorithm is sound (outputs
+the correct functional of the observed data distribution whenever p(Y | do(a))
+is identified in the causal model represented by the input graph), and complete
+(explicitly flags as a failure any input p(Y | do(a)) whenever this
+distribution is not identified in the causal model represented by the input
+graph).
+  The reference [9] provides a result, the so called "hedge criterion"
+(Corollary 3), which aims to give a graphical characterization of situations
+when the ID algorithm fails to identify its input in terms of a structure in
+the input graph called the hedge. While the ID algorithm is, indeed, a sound
+and complete algorithm, and the hedge structure does arise whenever the input
+distribution is not identified, Corollary 3 presented in [9] is incorrect as
+stated. In this note, I outline the modern presentation of the ID algorithm,
+discuss a simple counterexample to Corollary 3, and provide a number of
+graphical characterizations of the ID algorithm failing to identify its input
+distribution.},
+ arxiv_url = {https://arxiv.org/pdf/2307.03750v1.pdf},
+ author = {Ilya Shpitser},
+ title = {When does the id algorithm fail?},
+ year = {2023}
+}

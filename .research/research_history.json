@@ -6,5 +6,52 @@
     "accelerating meta-learning",
     "メタ学習 収束速度",
     "メタ学習 高速化"
+  ],
+  "research_study_list": [
+    {
+      "title": "Optimistic Meta-Gradients"
+    },
+    {
+      "title": "Convergence of Meta-Learning with Task-Specific Adaptation over Partial Parameters"
+    },
+    {
+      "title": "Meta-learning with negative learning rates"
+    },
+    {
+      "title": "Effective Meta-Regularization by Kernelized Proximal Regularization"
+    },
+    {
+      "title": "Large-Scale Meta-Learning with Continual Trajectory Shifting"
+    },
+    {
+      "title": "On Enforcing Better Conditioned Meta-Learning for Rapid Few-Shot Adaptation"
+    },
+    {
+      "title": "Principled Acceleration of Iterative Numerical Methods Using Machine Learning"
+    },
+    {
+      "title": "Large-Scale Meta-Learning with Continual Trajectory Shifting"
+    },
+    {
+      "title": "Subspace Learning for Effective Meta-Learning"
+    },
+    {
+      "title": "Optimistic Meta-Gradients"
+    },
+    {
+      "title": "Effective Meta-Regularization by Kernelized Proximal Regularization"
+    },
+    {
+      "title": "Convergence of Meta-Learning with Task-Specific Adaptation over Partial Parameters"
+    },
+    {
+      "title": "Making Scalable Meta Learning Practical"
+    },
+    {
+      "title": "Subspace Learning for Effective Meta-Learning"
+    },
+    {
+      "title": "Subspace Learning for Effective Meta-Learning"
+    }
   ]
 }

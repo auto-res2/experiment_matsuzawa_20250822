@@ -265,717 +265,115 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...models like GPT-4 \cite{openai\_2023\_gpt}
-                                                   to, more recently, high-r...
+
+Package natbib Warning: Citation `openai-2023-gpt' on page 1 undefined on input
+ line 55.
 
 
-Package natbib Warning: Citation `openai\T1\textunderscore2023\T1\textunderscor
-egpt' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...sive (VAR) model \cite{tian\_2024\_visual}
-                                                   represents a significant ...
+Package natbib Warning: Citation `tian-2024-visual' on page 1 undefined on inpu
+t line 55.
 
 
-Package natbib Warning: Citation `tian\T1\textunderscore2024\T1\textunderscorev
-isual' on page 1 undefined on input line 55.
-
-! Undefined control sequence.
-l.55 ...n real-time or interactive applications.\n
-                                                  \nThe core problem lies in...
-
-! Undefined control sequence.
-l.55 ...l-time or interactive applications.\n\nThe
-                                                   core problem lies in the ...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...rks like GANs \cite{jiang\_2021\_transgan}
-                                                   or diffusion models \cite...
+Package natbib Warning: Citation `jiang-2021-transgan' on page 1 undefined on i
+nput line 57.
 
 
-Package natbib Warning: Citation `jiang\T1\textunderscore2021\T1\textunderscore
-transgan' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...cite{bao\_2022\_all, kim\_2024\_arbitrary}
-                                                   can often generate images...
+Package natbib Warning: Citation `bao-2022-all' on page 1 undefined on input li
+ne 57.
 
 
-Package natbib Warning: Citation `bao\T1\textunderscore2022\T1\textunderscoreal
-l' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...cite{bao\_2022\_all, kim\_2024\_arbitrary}
-                                                   can often generate images...
+Package natbib Warning: Citation `kim-2024-arbitrary' on page 1 undefined on in
+put line 57.
 
 
-Package natbib Warning: Citation `kim\T1\textunderscore2024\T1\textunderscorear
-bitrary' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ... sampling \cite{wiggers\_2020\_predictive}
-                                                   or parallel sampling via ...
+Package natbib Warning: Citation `wiggers-2020-predictive' on page 1 undefined 
+on input line 57.
 
 
-Package natbib Warning: Citation `wiggers\T1\textunderscore2020\T1\textundersco
-repredictive' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...in dynamics \cite{jayaram\_2021\_parallel}
-                                                  . These methods, however, ...
-
-
-Package natbib Warning: Citation `jayaram\T1\textunderscore2021\T1\textundersco
-reparallel' on page 1 undefined on input line 55.
-
-! Undefined control sequence.
-l.55 ...g it difficult to guarantee performance.\n
-                                                  \nTo address this critical...
-
-! Undefined control sequence.
-l.55 ... difficult to guarantee performance.\n\nTo
-                                                   address this critical bot...
-
-! Undefined control sequence.
-l.55 ...e speed and computational cost per step.\n
-                                                  \nOur contributions can be...
-
-! Undefined control sequence.
-l.55 ...ed and computational cost per step.\n\nOur
-                                                   contributions can be summ...
-
-! Undefined control sequence.
-l.55 ...tributions can be summarized as follows:\n
-                                                  \n\begin{itemize}\n    \it...
-
-! Undefined control sequence.
-l.55 ...ibutions can be summarized as follows:\n\n
-                                                  \begin{itemize}\n    \item...
-
-! Undefined control sequence.
-l.55 ...ummarized as follows:\n\n\begin{itemize}\n
-                                                      \item \textbf{GASP Fra...
+Package natbib Warning: Citation `jayaram-2021-parallel' on page 1 undefined on
+ input line 57.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}]
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-! Undefined control sequence.
-l.55 ...e number of sequential generation steps.\n
-                                                      \item \textbf{Hierarch...
 
-! Undefined control sequence.
-l.55 ...within the target group being generated.\n
-                                                      \item \textbf{Group Co...
-
-! Undefined control sequence.
-l.55 ...ving context for multi-scale prediction.\n
-                                                      \item \textbf{Empirica...
-
-! Undefined control sequence.
-l.55 ...6x speedup over a standard VAR baseline.\n
-                                                  \end{itemize}\n\nThis pape...
-
-! Undefined control sequence.
-l.55 ... a standard VAR baseline.\n\end{itemize}\n
-                                                  \nThis paper is structured...
-
-! Undefined control sequence.
-l.55 ...ndard VAR baseline.\n\end{itemize}\n\nThis
-                                                   paper is structured as fo...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...ductive bias \cite{esser\_2021\_imagebart}
-                                                  . More recent work has exp...
+Package natbib Warning: Citation `esser-2021-imagebart' on page 2 undefined on 
+input line 74.
 
 
-Package natbib Warning: Citation `esser\T1\textunderscore2021\T1\textunderscore
-imagebart' on page 2 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...tion process \cite{nash\_2021\_generating}
-                                                  . A significant breakthrou...
+Package natbib Warning: Citation `nash-2021-generating' on page 2 undefined on 
+input line 74.
 
 
-Package natbib Warning: Citation `nash\T1\textunderscore2021\T1\textunderscoreg
-enerating' on page 2 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...e (VAR) modeling \cite{tian\_2024\_visual}
-                                                  , which frames image gener...
+Package natbib Warning: Citation `tian-2024-visual' on page 2 undefined on inpu
+t line 74.
 
 
-Package natbib Warning: Citation `tian\T1\textunderscore2024\T1\textunderscorev
-isual' on page 2 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...ke ImageBART \cite{esser\_2021\_imagebart}
-                                                   combine an autoregressive...
+Package natbib Warning: Citation `esser-2021-imagebart' on page 2 undefined on 
+input line 74.
 
 
-Package natbib Warning: Citation `esser\T1\textunderscore2021\T1\textunderscore
-imagebart' on page 2 undefined on input line 59.
-
-! Undefined control sequence.
-l.59 ...rallel prediction within defined groups.\n
-                                                  \n\textbf{Sampling Acceler...
-
-! Undefined control sequence.
-l.59 ...llel prediction within defined groups.\n\n
-                                                  \textbf{Sampling Accelerat...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...g methods \cite{wiggers\_2020\_predictive}
-                                                   attempt to forecast multi...
+Package natbib Warning: Citation `wiggers-2020-predictive' on page 2 undefined 
+on input line 76.
 
 
-Package natbib Warning: Citation `wiggers\T1\textunderscore2020\T1\textundersco
-repredictive' on page 2 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...or example, \cite{jayaram\_2021\_parallel}
-                                                   proposes using Langevin d...
+Package natbib Warning: Citation `jayaram-2021-parallel' on page 2 undefined on
+ input line 76.
 
 
-Package natbib Warning: Citation `jayaram\T1\textunderscore2021\T1\textundersco
-reparallel' on page 2 undefined on input line 59.
-
-! Undefined control sequence.
-l.59 ...rolled by the group size hyperparameter.\n
-                                                  \n\textbf{Parallel Generat...
-
-! Undefined control sequence.
-l.59 ...lled by the group size hyperparameter.\n\n
-                                                  \textbf{Parallel Generativ...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...like TransGAN \cite{jiang\_2021\_transgan}
-                                                  , typically generate image...
+Package natbib Warning: Citation `jiang-2021-transgan' on page 2 undefined on i
+nput line 78.
 
 
-Package natbib Warning: Citation `jiang\T1\textunderscore2021\T1\textunderscore
-transgan' on page 2 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...cite{bao\_2022\_all, kim\_2024\_arbitrary}
-                                                   are also highly paralleli...
+Package natbib Warning: Citation `bao-2022-all' on page 2 undefined on input li
+ne 78.
 
 
-Package natbib Warning: Citation `bao\T1\textunderscore2022\T1\textunderscoreal
-l' on page 2 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...cite{bao\_2022\_all, kim\_2024\_arbitrary}
-                                                   are also highly paralleli...
-
-
-Package natbib Warning: Citation `kim\T1\textunderscore2024\T1\textunderscorear
-bitrary' on page 2 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.63 ...re of images \cite{esser\_2021\_imagebart}
-                                                  . The nature of the tokens...
-
-
-Package natbib Warning: Citation `esser\T1\textunderscore2021\T1\textunderscore
-imagebart' on page 2 undefined on input line 63.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.63 ...n entirely \cite{li\_2024\_autoregressive}
-                                                  . Our work is orthogonal t...
-
-
-Package natbib Warning: Citation `li\T1\textunderscore2024\T1\textunderscoreaut
-oregressive' on page 2 undefined on input line 63.
-
-! Undefined control sequence.
-l.63 ...he sampling of any given token sequence.\n
-                                                  \n\textbf{Visual Autoregre...
-
-! Undefined control sequence.
-l.63 ... sampling of any given token sequence.\n\n
-                                                  \textbf{Visual Autoregress...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.63 ...he VAR framework \cite{tian\_2024\_visual}
-                                                   introduces a more natural...
-
-
-Package natbib Warning: Citation `tian\T1\textunderscore2024\T1\textunderscorev
-isual' on page 2 undefined on input line 63.
-
-! Undefined control sequence.
-l.63 ...ns the primary computational bottleneck.\n
-                                                  \n\textbf{Problem Setting ...
-
-! Undefined control sequence.
-l.63 ... the primary computational bottleneck.\n\n
-                                                  \textbf{Problem Setting an...
+Package natbib Warning: Citation `kim-2024-arbitrary' on page 2 undefined on in
+put line 78.
 
 [2]
-! Undefined control sequence.
-l.67 ...dule, and a modified sampling procedure.\n
-                                                  \n\textbf{1. Hierarchical ...
 
-! Undefined control sequence.
-l.67 ...le, and a modified sampling procedure.\n\n
-                                                  \textbf{1. Hierarchical Gr...
+Package natbib Warning: Citation `esser-2021-imagebart' on page 3 undefined on 
+input line 82.
 
-! Undefined control sequence.
-<recently read> \nTo 
-                     
-l.67 ...archical Group-Causal Attention Mask:}\nTo
-                                                   enable the simultaneous p...
 
-! Undefined control sequence.
-l.67 ...s: between groups and within groups. \nLet
-                                                   the full sequence of toke...
+Package natbib Warning: Citation `li-2024-autoregressive' on page 3 undefined o
+n input line 82.
 
-! Undefined control sequence.
-l.67 ...ion mechanism is constrained as follows:\n
-                                                  \begin{itemize}\n    \item...
 
-! Undefined control sequence.
-l.67 ...constrained as follows:\n\begin{itemize}\n
-                                                      \item \textbf{Between-...
+Package natbib Warning: Citation `tian-2024-visual' on page 3 undefined on inpu
+t line 84.
 
-! Undefined control sequence.
-l.67 ...utoregressive structure of the sequence.\n
-                                                      \item \textbf{Within-G...
 
-! Undefined control sequence.
-l.67 ...tituent tokens in a single forward pass.\n
-                                                  \end{itemize}\nThis hybrid...
+Underfull \vbox (badness 4096) has occurred while \output is active [3]
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd) [4]
 
-! Undefined control sequence.
-l.67 ... single forward pass.\n\end{itemize}\nThis
-                                                   hybrid causal/non-causal ...
+LaTeX Warning: Reference `fig:latency' on page 5 undefined on input line 157.
 
-! Undefined control sequence.
-l.67 ...e parallelism required for acceleration.\n
-                                                  \n\textbf{2. Group Conditi...
 
-! Undefined control sequence.
-l.67 ...parallelism required for acceleration.\n\n
-                                                  \textbf{2. Group Condition...
+LaTeX Warning: Reference `fig:speedup' on page 5 undefined on input line 160.
 
-! Undefined control sequence.
-<recently read> \nPredicting 
-                             
-l.67 ...p Conditioning Adapter (GCA):}\nPredicting
-                                                   an entire group of scales...
 
-! Undefined control sequence.
-l.67 ... a sophisticated context summarizer. \nThe
-                                                   GCA functions similarly t...
+LaTeX Warning: Reference `fig:efficiency' on page 5 undefined on input line 160
+.
 
-! Undefined control sequence.
-l.67 ...plexity of multi-scale group prediction.\n
-                                                  \n\textbf{3. Group-wise An...
+[5]
 
-! Undefined control sequence.
-l.67 ...exity of multi-scale group prediction.\n\n
-                                                  \textbf{3. Group-wise Ance...
+Package natbib Warning: Citation `meng-2021-improved' on page 6 undefined on in
+put line 163.
 
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.67 ...bf{3. Group-wise Ancestral Sampling:}\nThe
-                                                   inference process is a di...
-
-! Undefined control sequence.
-l.67 ...the groups. The procedure is as follows:\n
-                                                  \begin{enumerate}\n    \it...
-
-[3]
-! Undefined control sequence.
-l.67 ...cedure is as follows:\n\begin{enumerate}\n
-                                                      \item Use the GCA to p...
-
-! Undefined control sequence.
-l.67 ...nd produce a set of conditioning tokens.\n
-                                                      \item Feed these condi...
-
-! Undefined control sequence.
-l.67 ...s in the target group $g_j$ in parallel.\n
-                                                      \item Sample the token...
-
-! Undefined control sequence.
-l.67 ...g_j$ from their predicted distributions.\n
-                                                      \item Append the newly...
-
-! Undefined control sequence.
-l.67 ...tokens to the history for the next step.\n
-                                                  \end{enumerate}\nThis modi...
-
-! Undefined control sequence.
-l.67 ... for the next step.\n\end{enumerate}\nThis
-                                                   modified loop guarantees ...
-
-! Undefined control sequence.
-l.71 ...nd demonstrate its deterministic nature.\n
-                                                  \n\textbf{Objective and Hy...
-
-! Undefined control sequence.
-l.71 ... demonstrate its deterministic nature.\n\n
-                                                  \textbf{Objective and Hypo...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.71 ...n\n\textbf{Objective and Hypothesis:}\nThe
-                                                   experiment aimed to measu...
-
-! Undefined control sequence.
-l.71 ...nd parallel attention within each group.\n
-                                                  \n\textbf{Model Variants a...
-
-! Undefined control sequence.
-l.71 ... parallel attention within each group.\n\n
-                                                  \textbf{Model Variants and...
-
-! Undefined control sequence.
-<recently read> \nWe 
-                     
-l.71 ...\textbf{Model Variants and Baselines:}\nWe
-                                                   evaluated several GASP mo...
-
-! Undefined control sequence.
-l.71 ... dimension) to ensure a fair comparison.\n
-                                                  \n\textbf{Hardware and Sof...
-
-! Undefined control sequence.
-l.71 ...imension) to ensure a fair comparison.\n\n
-                                                  \textbf{Hardware and Softw...
-
-! Undefined control sequence.
-<recently read> \nAll 
-                      
-l.71 ...n.\n\n\textbf{Hardware and Software:}\nAll
-                                                   benchmarks were executed ...
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
-! Undefined control sequence.
-l.71 ... using \texttt{torch.cuda.amp.autocast}.\n
-                                                  \n\textbf{Generation Task:...
-
-! Undefined control sequence.
-l.71 ...sing \texttt{torch.cuda.amp.autocast}.\n\n
-                                                  \textbf{Generation Task:}\...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.71 ...tocast}.\n\n\textbf{Generation Task:}\nThe
-                                                   task was unconditional ge...
-
-! Undefined control sequence.
-l.71 ... was deterministically set to $256 / G$.\n
-                                                  \n\textbf{Benchmarking Pro...
-
-! Undefined control sequence.
-l.71 ...as deterministically set to $256 / G$.\n\n
-                                                  \textbf{Benchmarking Proto...
-
-! Undefined control sequence.
-<recently read> \nTo 
-                     
-l.71 ...G$.\n\n\textbf{Benchmarking Protocol:}\nTo
-                                                   ensure accurate and relia...
-
-! Undefined control sequence.
-l.71 ...strict protocol for each model variant. \n
-                                                  \begin{enumerate}\n    \it...
-
-! Undefined control sequence.
-l.71 ... each model variant. \n\begin{enumerate}\n
-                                                      \item \textbf{Isolatio...
-
-! Undefined control sequence.
-l.71 ...t scenario for interactive applications.\n
-                                                      \item \textbf{Warm-up:...
-
-! Undefined control sequence.
-l.71 ...ing the GPU to a stable operating state.\n
-                                                      \item \textbf{Synchron...
-
-! Undefined control sequence.
-l.71 ...er the end of the timed generation loop.\n
-                                                      \item \textbf{Measurem...
-
-! Undefined control sequence.
-l.71 ...of mean, standard deviation, and median.\n
-                                                  \end{enumerate}\n\n\textbf...
-
-[4]
-! Undefined control sequence.
-l.71 ... deviation, and median.\n\end{enumerate}\n
-                                                  \n\textbf{Evaluation Metri...
-
-! Undefined control sequence.
-l.71 ...eviation, and median.\n\end{enumerate}\n\n
-                                                  \textbf{Evaluation Metrics...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.71 ...rate}\n\n\textbf{Evaluation Metrics:}\nThe
-                                                   primary evaluation metric...
-
-! Undefined control sequence.
-l.75 ...idating the core hypothesis of our work.\n
-                                                  \n\textbf{Quantitative Lat...
-
-! Undefined control sequence.
-l.75 ...ating the core hypothesis of our work.\n\n
-                                                  \textbf{Quantitative Laten...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.75 ...tative Latency and Speedup Analysis:}\nThe
-                                                   baseline model ($G=1$), w...
-
-! Undefined control sequence.
-l.75 ...ailed results are summarized as follows:\n
-                                                  \begin{itemize}\n    \item...
-
-! Undefined control sequence.
-l.75 ... summarized as follows:\n\begin{itemize}\n
-                                                      \item $G=1$: 2.0420 s ...
-
-! Undefined control sequence.
-l.75 ...20 s (1.00x speedup, 100.0\% efficiency)\n
-                                                      \item $G=2$: 1.0156 s ...
-
-! Undefined control sequence.
-l.75 ...56 s (2.01x speedup, 100.5\% efficiency)\n
-                                                      \item $G=4$: 0.5045 s ...
-
-! Undefined control sequence.
-l.75 ...45 s (4.05x speedup, 101.2\% efficiency)\n
-                                                      \item $G=8$: 0.2514 s ...
-
-! Undefined control sequence.
-l.75 ...14 s (8.12x speedup, 101.5\% efficiency)\n
-                                                      \item $G=16$: 0.1255 s...
-
-! Undefined control sequence.
-l.75 ...5 s (16.27x speedup, 101.7\% efficiency)\n
-                                                      \item $G=32$: 0.0629 s...
-
-! Undefined control sequence.
-l.75 ...9 s (32.46x speedup, 101.4\% efficiency)\n
-                                                  \end{itemize}\nAs shown in...
-
-! Undefined control sequence.
-l.75 ...up, 101.4\% efficiency)\n\end{itemize}\nAs
-                                                   shown in Figure~\ref{fig:...
-
-
-LaTeX Warning: Reference `fig:latency' on page 5 undefined on input line 75.
-
-! Undefined control sequence.
-l.75 ...econds at the largest group size tested.\n
-                                                  \n\textbf{Speedup and Para...
-
-! Undefined control sequence.
-l.75 ...onds at the largest group size tested.\n\n
-                                                  \textbf{Speedup and Parall...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.75 ...tbf{Speedup and Parallel Efficiency:}\nThe
-                                                   measured speedup, visuali...
-
-
-LaTeX Warning: Reference `fig:speedup' on page 5 undefined on input line 75.
-
-
-LaTeX Warning: Reference `fig:efficiency' on page 5 undefined on input line 75.
-
-
-! Undefined control sequence.
-l.75 ...erhead and improving overall throughput.\n
-                                                  \n\textbf{Limitations:}\nT...
-
-! Undefined control sequence.
-l.75 ...head and improving overall throughput.\n\n
-                                                  \textbf{Limitations:}\nThe...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.75 ... throughput.\n\n\textbf{Limitations:}\nThe
-                                                   experiments in this study...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.75 ...sample quality \cite{meng\_2021\_improved}
-                                                   to provide practical guid...
-
-
-Package natbib Warning: Citation `meng\T1\textunderscore2021\T1\textunderscorei
-mproved' on page 5 undefined on input line 75.
-
-! Undefined control sequence.
-l.75 ...may vary on different GPU architectures.\n
-                                                  \n\begin{figure}[H]\n    \...
-
-! Undefined control sequence.
-l.75 ...y vary on different GPU architectures.\n\n
-                                                  \begin{figure}[H]\n    \ce...
-
-! Undefined control sequence.
-l.75 ... GPU architectures.\n\n\begin{figure}[H]\n
-                                                      \centering\n    \inclu...
-
-! Undefined control sequence.
-l.75 ...es.\n\n\begin{figure}[H]\n    \centering\n
-                                                      \includegraphics[width...
-
-! Undefined control sequence.
-l.75 ...inference\_latency\_vs\_group\_size.pdf}\n
-                                                      \caption{Inference Lat...
-
-! Undefined control sequence.
-l.75 ...in latency as the group size increases.}\n
-                                                      \label{fig:latency}\n\...
-
-! Undefined control sequence.
-l.75 ...ize increases.}\n    \label{fig:latency}\n
-                                                  \end{figure}\n\n\begin{fig...
-
-! Undefined control sequence.
-l.75 ...}\n    \label{fig:latency}\n\end{figure}\n
-                                                  \n\begin{figure}[H]\n    \...
-
-! Undefined control sequence.
-l.75 ...n    \label{fig:latency}\n\end{figure}\n\n
-                                                  \begin{figure}[H]\n    \ce...
-
-! Undefined control sequence.
-l.75 ...ency}\n\end{figure}\n\n\begin{figure}[H]\n
-                                                      \centering\n    \inclu...
-
-! Undefined control sequence.
-l.75 ...re}\n\n\begin{figure}[H]\n    \centering\n
-                                                      \includegraphics[width...
-
-! Undefined control sequence.
-l.75 ...inference\_speedup\_vs\_group\_size.pdf}\n
-                                                      \caption{Inference Spe...
-
-! Undefined control sequence.
-l.75 ...ating highly efficient parallelization.}\n
-                                                      \label{fig:speedup}\n\...
-
-! Undefined control sequence.
-l.75 ...rallelization.}\n    \label{fig:speedup}\n
-                                                  \end{figure}\n\n\begin{fig...
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active [5]
-! Undefined control sequence.
-l.75 ...}\n    \label{fig:speedup}\n\end{figure}\n
-                                                  \n\begin{figure}[H]\n    \...
-
-! Undefined control sequence.
-l.75 ...n    \label{fig:speedup}\n\end{figure}\n\n
-                                                  \begin{figure}[H]\n    \ce...
-
-! Undefined control sequence.
-l.75 ...edup}\n\end{figure}\n\n\begin{figure}[H]\n
-                                                      \centering\n    \inclu...
-
-! Undefined control sequence.
-l.75 ...re}\n\n\begin{figure}[H]\n    \centering\n
-                                                      \includegraphics[width...
-
-! Undefined control sequence.
-l.75 ...ages/parallel\_efficiency\_analysis.pdf}\n
-                                                      \caption{Parallel Effi...
-
-! Undefined control sequence.
-l.75 ...imal overhead of the GASP architecture.}\n
-                                                      \label{fig:efficiency}...
-
-! Undefined control sequence.
-l.75 ...chitecture.}\n    \label{fig:efficiency}\n
-                                                  \end{figure}
 
 Underfull \vbox (badness 10000) has occurred while \output is active [6 <./imag
 es/inference_latency_vs_group_size.pdf> <./images/inference_speedup_vs_group_si
 ze.pdf>]
-! Undefined control sequence.
-l.79 ...aining a valid autoregressive structure.\n
-                                                  \nOur empirical results pr...
 
-! Undefined control sequence.
-l.79 ...g a valid autoregressive structure.\n\nOur
-                                                   empirical results provide...
-
-! Undefined control sequence.
-l.79 ... interactive and large-scale deployment.\n
-                                                  \nFor future work, a cruci...
-
-! Undefined control sequence.
-l.79 ...ractive and large-scale deployment.\n\nFor
-                                                   future work, a crucial ne...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.79 ... new framework \cite{meng\_2021\_improved}
-                                                  . Further research could a...
-
-
-Package natbib Warning: Citation `meng\T1\textunderscore2021\T1\textunderscorei
-mproved' on page 7 undefined on input line 79.
+Package natbib Warning: Citation `meng-2021-improved' on page 7 undefined on in
+put line 192.
 
 
 Package natbib Warning: Citation `airas2025' on page 7 undefined on input line 
-81.
+194.
 
 No file paper.bbl.
 
@@ -1004,89 +402,24 @@ fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (7 pages, 189585 bytes).
+Output written on paper.pdf (7 pages, 189543 bytes).
 Transcript written on paper.log.
 This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
 The top-level auxiliary file: paper.aux
-White space in argument---line 5 of file paper.aux
- : \citation{openai\protect
- :                          \T1\textunderscore 2023\protect \T1\textunderscore gpt}
-I'm skipping whatever remains of this command
-White space in argument---line 6 of file paper.aux
- : \citation{tian\protect
- :                        \T1\textunderscore 2024\protect \T1\textunderscore visual}
-I'm skipping whatever remains of this command
-White space in argument---line 7 of file paper.aux
- : \citation{jiang\protect
- :                         \T1\textunderscore 2021\protect \T1\textunderscore transgan}
-I'm skipping whatever remains of this command
-White space in argument---line 8 of file paper.aux
- : \citation{bao\protect
- :                       \T1\textunderscore 2022\protect \T1\textunderscore all,kim\protect \T1\textunderscore 2024\protect \T1\textunderscore arbitrary}
-I'm skipping whatever remains of this command
-White space in argument---line 9 of file paper.aux
- : \citation{wiggers\protect
- :                           \T1\textunderscore 2020\protect \T1\textunderscore predictive}
-I'm skipping whatever remains of this command
-White space in argument---line 10 of file paper.aux
- : \citation{jayaram\protect
- :                           \T1\textunderscore 2021\protect \T1\textunderscore parallel}
-I'm skipping whatever remains of this command
-White space in argument---line 14 of file paper.aux
- : \citation{esser\protect
- :                         \T1\textunderscore 2021\protect \T1\textunderscore imagebart}
-I'm skipping whatever remains of this command
-White space in argument---line 15 of file paper.aux
- : \citation{nash\protect
- :                        \T1\textunderscore 2021\protect \T1\textunderscore generating}
-I'm skipping whatever remains of this command
-White space in argument---line 16 of file paper.aux
- : \citation{tian\protect
- :                        \T1\textunderscore 2024\protect \T1\textunderscore visual}
-I'm skipping whatever remains of this command
-White space in argument---line 17 of file paper.aux
- : \citation{esser\protect
- :                         \T1\textunderscore 2021\protect \T1\textunderscore imagebart}
-I'm skipping whatever remains of this command
-White space in argument---line 18 of file paper.aux
- : \citation{wiggers\protect
- :                           \T1\textunderscore 2020\protect \T1\textunderscore predictive}
-I'm skipping whatever remains of this command
-White space in argument---line 19 of file paper.aux
- : \citation{jayaram\protect
- :                           \T1\textunderscore 2021\protect \T1\textunderscore parallel}
-I'm skipping whatever remains of this command
-White space in argument---line 20 of file paper.aux
- : \citation{jiang\protect
- :                         \T1\textunderscore 2021\protect \T1\textunderscore transgan}
-I'm skipping whatever remains of this command
-White space in argument---line 21 of file paper.aux
- : \citation{bao\protect
- :                       \T1\textunderscore 2022\protect \T1\textunderscore all,kim\protect \T1\textunderscore 2024\protect \T1\textunderscore arbitrary}
-I'm skipping whatever remains of this command
-White space in argument---line 22 of file paper.aux
- : \citation{esser\protect
- :                         \T1\textunderscore 2021\protect \T1\textunderscore imagebart}
-I'm skipping whatever remains of this command
-White space in argument---line 23 of file paper.aux
- : \citation{li\protect
- :                      \T1\textunderscore 2024\protect \T1\textunderscore autoregressive}
-I'm skipping whatever remains of this command
-White space in argument---line 24 of file paper.aux
- : \citation{tian\protect
- :                        \T1\textunderscore 2024\protect \T1\textunderscore visual}
-I'm skipping whatever remains of this command
-White space in argument---line 37 of file paper.aux
- : \citation{meng\protect
- :                        \T1\textunderscore 2021\protect \T1\textunderscore improved}
-I'm skipping whatever remains of this command
-White space in argument---line 48 of file paper.aux
- : \citation{meng\protect
- :                        \T1\textunderscore 2021\protect \T1\textunderscore improved}
-I'm skipping whatever remains of this command
 The style file: iclr2024_conference.bst
 Database file #1: references.bib
-(There were 19 error messages)
+Warning--I didn't find a database entry for "openai-2023-gpt"
+Warning--I didn't find a database entry for "tian-2024-visual"
+Warning--I didn't find a database entry for "jiang-2021-transgan"
+Warning--I didn't find a database entry for "bao-2022-all"
+Warning--I didn't find a database entry for "kim-2024-arbitrary"
+Warning--I didn't find a database entry for "wiggers-2020-predictive"
+Warning--I didn't find a database entry for "jayaram-2021-parallel"
+Warning--I didn't find a database entry for "esser-2021-imagebart"
+Warning--I didn't find a database entry for "nash-2021-generating"
+Warning--I didn't find a database entry for "li-2024-autoregressive"
+Warning--I didn't find a database entry for "meng-2021-improved"
+(There were 11 warnings)
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
@@ -1355,707 +688,104 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...models like GPT-4 \cite{openai\_2023\_gpt}
-                                                   to, more recently, high-r...
+
+Package natbib Warning: Citation `openai-2023-gpt' on page 1 undefined on input
+ line 55.
 
 
-Package natbib Warning: Citation `openai\T1\textunderscore2023\T1\textunderscor
-egpt' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...sive (VAR) model \cite{tian\_2024\_visual}
-                                                   represents a significant ...
+Package natbib Warning: Citation `tian-2024-visual' on page 1 undefined on inpu
+t line 55.
 
 
-Package natbib Warning: Citation `tian\T1\textunderscore2024\T1\textunderscorev
-isual' on page 1 undefined on input line 55.
-
-! Undefined control sequence.
-l.55 ...n real-time or interactive applications.\n
-                                                  \nThe core problem lies in...
-
-! Undefined control sequence.
-l.55 ...l-time or interactive applications.\n\nThe
-                                                   core problem lies in the ...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...rks like GANs \cite{jiang\_2021\_transgan}
-                                                   or diffusion models \cite...
+Package natbib Warning: Citation `jiang-2021-transgan' on page 1 undefined on i
+nput line 57.
 
 
-Package natbib Warning: Citation `jiang\T1\textunderscore2021\T1\textunderscore
-transgan' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...cite{bao\_2022\_all, kim\_2024\_arbitrary}
-                                                   can often generate images...
+Package natbib Warning: Citation `bao-2022-all' on page 1 undefined on input li
+ne 57.
 
 
-Package natbib Warning: Citation `bao\T1\textunderscore2022\T1\textunderscoreal
-l' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...cite{bao\_2022\_all, kim\_2024\_arbitrary}
-                                                   can often generate images...
+Package natbib Warning: Citation `kim-2024-arbitrary' on page 1 undefined on in
+put line 57.
 
 
-Package natbib Warning: Citation `kim\T1\textunderscore2024\T1\textunderscorear
-bitrary' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ... sampling \cite{wiggers\_2020\_predictive}
-                                                   or parallel sampling via ...
+Package natbib Warning: Citation `wiggers-2020-predictive' on page 1 undefined 
+on input line 57.
 
 
-Package natbib Warning: Citation `wiggers\T1\textunderscore2020\T1\textundersco
-repredictive' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...in dynamics \cite{jayaram\_2021\_parallel}
-                                                  . These methods, however, ...
-
-
-Package natbib Warning: Citation `jayaram\T1\textunderscore2021\T1\textundersco
-reparallel' on page 1 undefined on input line 55.
-
-! Undefined control sequence.
-l.55 ...g it difficult to guarantee performance.\n
-                                                  \nTo address this critical...
-
-! Undefined control sequence.
-l.55 ... difficult to guarantee performance.\n\nTo
-                                                   address this critical bot...
-
-! Undefined control sequence.
-l.55 ...e speed and computational cost per step.\n
-                                                  \nOur contributions can be...
-
-! Undefined control sequence.
-l.55 ...ed and computational cost per step.\n\nOur
-                                                   contributions can be summ...
-
-! Undefined control sequence.
-l.55 ...tributions can be summarized as follows:\n
-                                                  \n\begin{itemize}\n    \it...
-
-! Undefined control sequence.
-l.55 ...ibutions can be summarized as follows:\n\n
-                                                  \begin{itemize}\n    \item...
-
-! Undefined control sequence.
-l.55 ...ummarized as follows:\n\n\begin{itemize}\n
-                                                      \item \textbf{GASP Fra...
+Package natbib Warning: Citation `jayaram-2021-parallel' on page 1 undefined on
+ input line 57.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}]
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-! Undefined control sequence.
-l.55 ...e number of sequential generation steps.\n
-                                                      \item \textbf{Hierarch...
 
-! Undefined control sequence.
-l.55 ...within the target group being generated.\n
-                                                      \item \textbf{Group Co...
-
-! Undefined control sequence.
-l.55 ...ving context for multi-scale prediction.\n
-                                                      \item \textbf{Empirica...
-
-! Undefined control sequence.
-l.55 ...6x speedup over a standard VAR baseline.\n
-                                                  \end{itemize}\n\nThis pape...
-
-! Undefined control sequence.
-l.55 ... a standard VAR baseline.\n\end{itemize}\n
-                                                  \nThis paper is structured...
-
-! Undefined control sequence.
-l.55 ...ndard VAR baseline.\n\end{itemize}\n\nThis
-                                                   paper is structured as fo...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...ductive bias \cite{esser\_2021\_imagebart}
-                                                  . More recent work has exp...
+Package natbib Warning: Citation `esser-2021-imagebart' on page 2 undefined on 
+input line 74.
 
 
-Package natbib Warning: Citation `esser\T1\textunderscore2021\T1\textunderscore
-imagebart' on page 2 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...tion process \cite{nash\_2021\_generating}
-                                                  . A significant breakthrou...
+Package natbib Warning: Citation `nash-2021-generating' on page 2 undefined on 
+input line 74.
 
 
-Package natbib Warning: Citation `nash\T1\textunderscore2021\T1\textunderscoreg
-enerating' on page 2 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...e (VAR) modeling \cite{tian\_2024\_visual}
-                                                  , which frames image gener...
+Package natbib Warning: Citation `tian-2024-visual' on page 2 undefined on inpu
+t line 74.
 
 
-Package natbib Warning: Citation `tian\T1\textunderscore2024\T1\textunderscorev
-isual' on page 2 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...ke ImageBART \cite{esser\_2021\_imagebart}
-                                                   combine an autoregressive...
+Package natbib Warning: Citation `esser-2021-imagebart' on page 2 undefined on 
+input line 74.
 
 
-Package natbib Warning: Citation `esser\T1\textunderscore2021\T1\textunderscore
-imagebart' on page 2 undefined on input line 59.
-
-! Undefined control sequence.
-l.59 ...rallel prediction within defined groups.\n
-                                                  \n\textbf{Sampling Acceler...
-
-! Undefined control sequence.
-l.59 ...llel prediction within defined groups.\n\n
-                                                  \textbf{Sampling Accelerat...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...g methods \cite{wiggers\_2020\_predictive}
-                                                   attempt to forecast multi...
+Package natbib Warning: Citation `wiggers-2020-predictive' on page 2 undefined 
+on input line 76.
 
 
-Package natbib Warning: Citation `wiggers\T1\textunderscore2020\T1\textundersco
-repredictive' on page 2 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...or example, \cite{jayaram\_2021\_parallel}
-                                                   proposes using Langevin d...
+Package natbib Warning: Citation `jayaram-2021-parallel' on page 2 undefined on
+ input line 76.
 
 
-Package natbib Warning: Citation `jayaram\T1\textunderscore2021\T1\textundersco
-reparallel' on page 2 undefined on input line 59.
-
-! Undefined control sequence.
-l.59 ...rolled by the group size hyperparameter.\n
-                                                  \n\textbf{Parallel Generat...
-
-! Undefined control sequence.
-l.59 ...lled by the group size hyperparameter.\n\n
-                                                  \textbf{Parallel Generativ...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...like TransGAN \cite{jiang\_2021\_transgan}
-                                                  , typically generate image...
+Package natbib Warning: Citation `jiang-2021-transgan' on page 2 undefined on i
+nput line 78.
 
 
-Package natbib Warning: Citation `jiang\T1\textunderscore2021\T1\textunderscore
-transgan' on page 2 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...cite{bao\_2022\_all, kim\_2024\_arbitrary}
-                                                   are also highly paralleli...
+Package natbib Warning: Citation `bao-2022-all' on page 2 undefined on input li
+ne 78.
 
 
-Package natbib Warning: Citation `bao\T1\textunderscore2022\T1\textunderscoreal
-l' on page 2 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...cite{bao\_2022\_all, kim\_2024\_arbitrary}
-                                                   are also highly paralleli...
-
-
-Package natbib Warning: Citation `kim\T1\textunderscore2024\T1\textunderscorear
-bitrary' on page 2 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.63 ...re of images \cite{esser\_2021\_imagebart}
-                                                  . The nature of the tokens...
-
-
-Package natbib Warning: Citation `esser\T1\textunderscore2021\T1\textunderscore
-imagebart' on page 2 undefined on input line 63.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.63 ...n entirely \cite{li\_2024\_autoregressive}
-                                                  . Our work is orthogonal t...
-
-
-Package natbib Warning: Citation `li\T1\textunderscore2024\T1\textunderscoreaut
-oregressive' on page 2 undefined on input line 63.
-
-! Undefined control sequence.
-l.63 ...he sampling of any given token sequence.\n
-                                                  \n\textbf{Visual Autoregre...
-
-! Undefined control sequence.
-l.63 ... sampling of any given token sequence.\n\n
-                                                  \textbf{Visual Autoregress...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.63 ...he VAR framework \cite{tian\_2024\_visual}
-                                                   introduces a more natural...
-
-
-Package natbib Warning: Citation `tian\T1\textunderscore2024\T1\textunderscorev
-isual' on page 2 undefined on input line 63.
-
-! Undefined control sequence.
-l.63 ...ns the primary computational bottleneck.\n
-                                                  \n\textbf{Problem Setting ...
-
-! Undefined control sequence.
-l.63 ... the primary computational bottleneck.\n\n
-                                                  \textbf{Problem Setting an...
+Package natbib Warning: Citation `kim-2024-arbitrary' on page 2 undefined on in
+put line 78.
 
 [2]
-! Undefined control sequence.
-l.67 ...dule, and a modified sampling procedure.\n
-                                                  \n\textbf{1. Hierarchical ...
 
-! Undefined control sequence.
-l.67 ...le, and a modified sampling procedure.\n\n
-                                                  \textbf{1. Hierarchical Gr...
+Package natbib Warning: Citation `esser-2021-imagebart' on page 3 undefined on 
+input line 82.
 
-! Undefined control sequence.
-<recently read> \nTo 
-                     
-l.67 ...archical Group-Causal Attention Mask:}\nTo
-                                                   enable the simultaneous p...
 
-! Undefined control sequence.
-l.67 ...s: between groups and within groups. \nLet
-                                                   the full sequence of toke...
+Package natbib Warning: Citation `li-2024-autoregressive' on page 3 undefined o
+n input line 82.
 
-! Undefined control sequence.
-l.67 ...ion mechanism is constrained as follows:\n
-                                                  \begin{itemize}\n    \item...
 
-! Undefined control sequence.
-l.67 ...constrained as follows:\n\begin{itemize}\n
-                                                      \item \textbf{Between-...
+Package natbib Warning: Citation `tian-2024-visual' on page 3 undefined on inpu
+t line 84.
 
-! Undefined control sequence.
-l.67 ...utoregressive structure of the sequence.\n
-                                                      \item \textbf{Within-G...
 
-! Undefined control sequence.
-l.67 ...tituent tokens in a single forward pass.\n
-                                                  \end{itemize}\nThis hybrid...
+Underfull \vbox (badness 4096) has occurred while \output is active [3]
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd) [4] [5]
 
-! Undefined control sequence.
-l.67 ... single forward pass.\n\end{itemize}\nThis
-                                                   hybrid causal/non-causal ...
+Package natbib Warning: Citation `meng-2021-improved' on page 6 undefined on in
+put line 163.
 
-! Undefined control sequence.
-l.67 ...e parallelism required for acceleration.\n
-                                                  \n\textbf{2. Group Conditi...
-
-! Undefined control sequence.
-l.67 ...parallelism required for acceleration.\n\n
-                                                  \textbf{2. Group Condition...
-
-! Undefined control sequence.
-<recently read> \nPredicting 
-                             
-l.67 ...p Conditioning Adapter (GCA):}\nPredicting
-                                                   an entire group of scales...
-
-! Undefined control sequence.
-l.67 ... a sophisticated context summarizer. \nThe
-                                                   GCA functions similarly t...
-
-! Undefined control sequence.
-l.67 ...plexity of multi-scale group prediction.\n
-                                                  \n\textbf{3. Group-wise An...
-
-! Undefined control sequence.
-l.67 ...exity of multi-scale group prediction.\n\n
-                                                  \textbf{3. Group-wise Ance...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.67 ...bf{3. Group-wise Ancestral Sampling:}\nThe
-                                                   inference process is a di...
-
-! Undefined control sequence.
-l.67 ...the groups. The procedure is as follows:\n
-                                                  \begin{enumerate}\n    \it...
-
-[3]
-! Undefined control sequence.
-l.67 ...cedure is as follows:\n\begin{enumerate}\n
-                                                      \item Use the GCA to p...
-
-! Undefined control sequence.
-l.67 ...nd produce a set of conditioning tokens.\n
-                                                      \item Feed these condi...
-
-! Undefined control sequence.
-l.67 ...s in the target group $g_j$ in parallel.\n
-                                                      \item Sample the token...
-
-! Undefined control sequence.
-l.67 ...g_j$ from their predicted distributions.\n
-                                                      \item Append the newly...
-
-! Undefined control sequence.
-l.67 ...tokens to the history for the next step.\n
-                                                  \end{enumerate}\nThis modi...
-
-! Undefined control sequence.
-l.67 ... for the next step.\n\end{enumerate}\nThis
-                                                   modified loop guarantees ...
-
-! Undefined control sequence.
-l.71 ...nd demonstrate its deterministic nature.\n
-                                                  \n\textbf{Objective and Hy...
-
-! Undefined control sequence.
-l.71 ... demonstrate its deterministic nature.\n\n
-                                                  \textbf{Objective and Hypo...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.71 ...n\n\textbf{Objective and Hypothesis:}\nThe
-                                                   experiment aimed to measu...
-
-! Undefined control sequence.
-l.71 ...nd parallel attention within each group.\n
-                                                  \n\textbf{Model Variants a...
-
-! Undefined control sequence.
-l.71 ... parallel attention within each group.\n\n
-                                                  \textbf{Model Variants and...
-
-! Undefined control sequence.
-<recently read> \nWe 
-                     
-l.71 ...\textbf{Model Variants and Baselines:}\nWe
-                                                   evaluated several GASP mo...
-
-! Undefined control sequence.
-l.71 ... dimension) to ensure a fair comparison.\n
-                                                  \n\textbf{Hardware and Sof...
-
-! Undefined control sequence.
-l.71 ...imension) to ensure a fair comparison.\n\n
-                                                  \textbf{Hardware and Softw...
-
-! Undefined control sequence.
-<recently read> \nAll 
-                      
-l.71 ...n.\n\n\textbf{Hardware and Software:}\nAll
-                                                   benchmarks were executed ...
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
-! Undefined control sequence.
-l.71 ... using \texttt{torch.cuda.amp.autocast}.\n
-                                                  \n\textbf{Generation Task:...
-
-! Undefined control sequence.
-l.71 ...sing \texttt{torch.cuda.amp.autocast}.\n\n
-                                                  \textbf{Generation Task:}\...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.71 ...tocast}.\n\n\textbf{Generation Task:}\nThe
-                                                   task was unconditional ge...
-
-! Undefined control sequence.
-l.71 ... was deterministically set to $256 / G$.\n
-                                                  \n\textbf{Benchmarking Pro...
-
-! Undefined control sequence.
-l.71 ...as deterministically set to $256 / G$.\n\n
-                                                  \textbf{Benchmarking Proto...
-
-! Undefined control sequence.
-<recently read> \nTo 
-                     
-l.71 ...G$.\n\n\textbf{Benchmarking Protocol:}\nTo
-                                                   ensure accurate and relia...
-
-! Undefined control sequence.
-l.71 ...strict protocol for each model variant. \n
-                                                  \begin{enumerate}\n    \it...
-
-! Undefined control sequence.
-l.71 ... each model variant. \n\begin{enumerate}\n
-                                                      \item \textbf{Isolatio...
-
-! Undefined control sequence.
-l.71 ...t scenario for interactive applications.\n
-                                                      \item \textbf{Warm-up:...
-
-! Undefined control sequence.
-l.71 ...ing the GPU to a stable operating state.\n
-                                                      \item \textbf{Synchron...
-
-! Undefined control sequence.
-l.71 ...er the end of the timed generation loop.\n
-                                                      \item \textbf{Measurem...
-
-! Undefined control sequence.
-l.71 ...of mean, standard deviation, and median.\n
-                                                  \end{enumerate}\n\n\textbf...
-
-[4]
-! Undefined control sequence.
-l.71 ... deviation, and median.\n\end{enumerate}\n
-                                                  \n\textbf{Evaluation Metri...
-
-! Undefined control sequence.
-l.71 ...eviation, and median.\n\end{enumerate}\n\n
-                                                  \textbf{Evaluation Metrics...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.71 ...rate}\n\n\textbf{Evaluation Metrics:}\nThe
-                                                   primary evaluation metric...
-
-! Undefined control sequence.
-l.75 ...idating the core hypothesis of our work.\n
-                                                  \n\textbf{Quantitative Lat...
-
-! Undefined control sequence.
-l.75 ...ating the core hypothesis of our work.\n\n
-                                                  \textbf{Quantitative Laten...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.75 ...tative Latency and Speedup Analysis:}\nThe
-                                                   baseline model ($G=1$), w...
-
-! Undefined control sequence.
-l.75 ...ailed results are summarized as follows:\n
-                                                  \begin{itemize}\n    \item...
-
-! Undefined control sequence.
-l.75 ... summarized as follows:\n\begin{itemize}\n
-                                                      \item $G=1$: 2.0420 s ...
-
-! Undefined control sequence.
-l.75 ...20 s (1.00x speedup, 100.0\% efficiency)\n
-                                                      \item $G=2$: 1.0156 s ...
-
-! Undefined control sequence.
-l.75 ...56 s (2.01x speedup, 100.5\% efficiency)\n
-                                                      \item $G=4$: 0.5045 s ...
-
-! Undefined control sequence.
-l.75 ...45 s (4.05x speedup, 101.2\% efficiency)\n
-                                                      \item $G=8$: 0.2514 s ...
-
-! Undefined control sequence.
-l.75 ...14 s (8.12x speedup, 101.5\% efficiency)\n
-                                                      \item $G=16$: 0.1255 s...
-
-! Undefined control sequence.
-l.75 ...5 s (16.27x speedup, 101.7\% efficiency)\n
-                                                      \item $G=32$: 0.0629 s...
-
-! Undefined control sequence.
-l.75 ...9 s (32.46x speedup, 101.4\% efficiency)\n
-                                                  \end{itemize}\nAs shown in...
-
-! Undefined control sequence.
-l.75 ...up, 101.4\% efficiency)\n\end{itemize}\nAs
-                                                   shown in Figure~\ref{fig:...
-
-! Undefined control sequence.
-l.75 ...econds at the largest group size tested.\n
-                                                  \n\textbf{Speedup and Para...
-
-! Undefined control sequence.
-l.75 ...onds at the largest group size tested.\n\n
-                                                  \textbf{Speedup and Parall...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.75 ...tbf{Speedup and Parallel Efficiency:}\nThe
-                                                   measured speedup, visuali...
-
-! Undefined control sequence.
-l.75 ...erhead and improving overall throughput.\n
-                                                  \n\textbf{Limitations:}\nT...
-
-! Undefined control sequence.
-l.75 ...head and improving overall throughput.\n\n
-                                                  \textbf{Limitations:}\nThe...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.75 ... throughput.\n\n\textbf{Limitations:}\nThe
-                                                   experiments in this study...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.75 ...sample quality \cite{meng\_2021\_improved}
-                                                   to provide practical guid...
-
-
-Package natbib Warning: Citation `meng\T1\textunderscore2021\T1\textunderscorei
-mproved' on page 5 undefined on input line 75.
-
-! Undefined control sequence.
-l.75 ...may vary on different GPU architectures.\n
-                                                  \n\begin{figure}[H]\n    \...
-
-! Undefined control sequence.
-l.75 ...y vary on different GPU architectures.\n\n
-                                                  \begin{figure}[H]\n    \ce...
-
-! Undefined control sequence.
-l.75 ... GPU architectures.\n\n\begin{figure}[H]\n
-                                                      \centering\n    \inclu...
-
-! Undefined control sequence.
-l.75 ...es.\n\n\begin{figure}[H]\n    \centering\n
-                                                      \includegraphics[width...
-
-! Undefined control sequence.
-l.75 ...inference\_latency\_vs\_group\_size.pdf}\n
-                                                      \caption{Inference Lat...
-
-! Undefined control sequence.
-l.75 ...in latency as the group size increases.}\n
-                                                      \label{fig:latency}\n\...
-
-! Undefined control sequence.
-l.75 ...ize increases.}\n    \label{fig:latency}\n
-                                                  \end{figure}\n\n\begin{fig...
-
-! Undefined control sequence.
-l.75 ...}\n    \label{fig:latency}\n\end{figure}\n
-                                                  \n\begin{figure}[H]\n    \...
-
-! Undefined control sequence.
-l.75 ...n    \label{fig:latency}\n\end{figure}\n\n
-                                                  \begin{figure}[H]\n    \ce...
-
-! Undefined control sequence.
-l.75 ...ency}\n\end{figure}\n\n\begin{figure}[H]\n
-                                                      \centering\n    \inclu...
-
-! Undefined control sequence.
-l.75 ...re}\n\n\begin{figure}[H]\n    \centering\n
-                                                      \includegraphics[width...
-
-! Undefined control sequence.
-l.75 ...inference\_speedup\_vs\_group\_size.pdf}\n
-                                                      \caption{Inference Spe...
-
-! Undefined control sequence.
-l.75 ...ating highly efficient parallelization.}\n
-                                                      \label{fig:speedup}\n\...
-
-! Undefined control sequence.
-l.75 ...rallelization.}\n    \label{fig:speedup}\n
-                                                  \end{figure}\n\n\begin{fig...
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active [5]
-! Undefined control sequence.
-l.75 ...}\n    \label{fig:speedup}\n\end{figure}\n
-                                                  \n\begin{figure}[H]\n    \...
-
-! Undefined control sequence.
-l.75 ...n    \label{fig:speedup}\n\end{figure}\n\n
-                                                  \begin{figure}[H]\n    \ce...
-
-! Undefined control sequence.
-l.75 ...edup}\n\end{figure}\n\n\begin{figure}[H]\n
-                                                      \centering\n    \inclu...
-
-! Undefined control sequence.
-l.75 ...re}\n\n\begin{figure}[H]\n    \centering\n
-                                                      \includegraphics[width...
-
-! Undefined control sequence.
-l.75 ...ages/parallel\_efficiency\_analysis.pdf}\n
-                                                      \caption{Parallel Effi...
-
-! Undefined control sequence.
-l.75 ...imal overhead of the GASP architecture.}\n
-                                                      \label{fig:efficiency}...
-
-! Undefined control sequence.
-l.75 ...chitecture.}\n    \label{fig:efficiency}\n
-                                                  \end{figure}
 
 Underfull \vbox (badness 10000) has occurred while \output is active [6 <./imag
 es/inference_latency_vs_group_size.pdf> <./images/inference_speedup_vs_group_si
 ze.pdf>]
-! Undefined control sequence.
-l.79 ...aining a valid autoregressive structure.\n
-                                                  \nOur empirical results pr...
 
-! Undefined control sequence.
-l.79 ...g a valid autoregressive structure.\n\nOur
-                                                   empirical results provide...
-
-! Undefined control sequence.
-l.79 ... interactive and large-scale deployment.\n
-                                                  \nFor future work, a cruci...
-
-! Undefined control sequence.
-l.79 ...ractive and large-scale deployment.\n\nFor
-                                                   future work, a crucial ne...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.79 ... new framework \cite{meng\_2021\_improved}
-                                                  . Further research could a...
-
-
-Package natbib Warning: Citation `meng\T1\textunderscore2021\T1\textunderscorei
-mproved' on page 7 undefined on input line 79.
+Package natbib Warning: Citation `meng-2021-improved' on page 7 undefined on in
+put line 192.
 
 
 Package natbib Warning: Citation `airas2025' on page 7 undefined on input line 
-81.
+194.
 
 (./paper.bbl)
 
@@ -2077,7 +807,7 @@ fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (7 pages, 191295 bytes).
+Output written on paper.pdf (7 pages, 191249 bytes).
 Transcript written on paper.log.
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
@@ -2347,703 +1077,100 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...models like GPT-4 \cite{openai\_2023\_gpt}
-                                                   to, more recently, high-r...
+
+Package natbib Warning: Citation `openai-2023-gpt' on page 1 undefined on input
+ line 55.
 
 
-Package natbib Warning: Citation `openai\T1\textunderscore2023\T1\textunderscor
-egpt' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...sive (VAR) model \cite{tian\_2024\_visual}
-                                                   represents a significant ...
+Package natbib Warning: Citation `tian-2024-visual' on page 1 undefined on inpu
+t line 55.
 
 
-Package natbib Warning: Citation `tian\T1\textunderscore2024\T1\textunderscorev
-isual' on page 1 undefined on input line 55.
-
-! Undefined control sequence.
-l.55 ...n real-time or interactive applications.\n
-                                                  \nThe core problem lies in...
-
-! Undefined control sequence.
-l.55 ...l-time or interactive applications.\n\nThe
-                                                   core problem lies in the ...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...rks like GANs \cite{jiang\_2021\_transgan}
-                                                   or diffusion models \cite...
+Package natbib Warning: Citation `jiang-2021-transgan' on page 1 undefined on i
+nput line 57.
 
 
-Package natbib Warning: Citation `jiang\T1\textunderscore2021\T1\textunderscore
-transgan' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...cite{bao\_2022\_all, kim\_2024\_arbitrary}
-                                                   can often generate images...
+Package natbib Warning: Citation `bao-2022-all' on page 1 undefined on input li
+ne 57.
 
 
-Package natbib Warning: Citation `bao\T1\textunderscore2022\T1\textunderscoreal
-l' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...cite{bao\_2022\_all, kim\_2024\_arbitrary}
-                                                   can often generate images...
+Package natbib Warning: Citation `kim-2024-arbitrary' on page 1 undefined on in
+put line 57.
 
 
-Package natbib Warning: Citation `kim\T1\textunderscore2024\T1\textunderscorear
-bitrary' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ... sampling \cite{wiggers\_2020\_predictive}
-                                                   or parallel sampling via ...
+Package natbib Warning: Citation `wiggers-2020-predictive' on page 1 undefined 
+on input line 57.
 
 
-Package natbib Warning: Citation `wiggers\T1\textunderscore2020\T1\textundersco
-repredictive' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...in dynamics \cite{jayaram\_2021\_parallel}
-                                                  . These methods, however, ...
-
-
-Package natbib Warning: Citation `jayaram\T1\textunderscore2021\T1\textundersco
-reparallel' on page 1 undefined on input line 55.
-
-! Undefined control sequence.
-l.55 ...g it difficult to guarantee performance.\n
-                                                  \nTo address this critical...
-
-! Undefined control sequence.
-l.55 ... difficult to guarantee performance.\n\nTo
-                                                   address this critical bot...
-
-! Undefined control sequence.
-l.55 ...e speed and computational cost per step.\n
-                                                  \nOur contributions can be...
-
-! Undefined control sequence.
-l.55 ...ed and computational cost per step.\n\nOur
-                                                   contributions can be summ...
-
-! Undefined control sequence.
-l.55 ...tributions can be summarized as follows:\n
-                                                  \n\begin{itemize}\n    \it...
-
-! Undefined control sequence.
-l.55 ...ibutions can be summarized as follows:\n\n
-                                                  \begin{itemize}\n    \item...
-
-! Undefined control sequence.
-l.55 ...ummarized as follows:\n\n\begin{itemize}\n
-                                                      \item \textbf{GASP Fra...
+Package natbib Warning: Citation `jayaram-2021-parallel' on page 1 undefined on
+ input line 57.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}]
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-! Undefined control sequence.
-l.55 ...e number of sequential generation steps.\n
-                                                      \item \textbf{Hierarch...
 
-! Undefined control sequence.
-l.55 ...within the target group being generated.\n
-                                                      \item \textbf{Group Co...
-
-! Undefined control sequence.
-l.55 ...ving context for multi-scale prediction.\n
-                                                      \item \textbf{Empirica...
-
-! Undefined control sequence.
-l.55 ...6x speedup over a standard VAR baseline.\n
-                                                  \end{itemize}\n\nThis pape...
-
-! Undefined control sequence.
-l.55 ... a standard VAR baseline.\n\end{itemize}\n
-                                                  \nThis paper is structured...
-
-! Undefined control sequence.
-l.55 ...ndard VAR baseline.\n\end{itemize}\n\nThis
-                                                   paper is structured as fo...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...ductive bias \cite{esser\_2021\_imagebart}
-                                                  . More recent work has exp...
+Package natbib Warning: Citation `esser-2021-imagebart' on page 2 undefined on 
+input line 74.
 
 
-Package natbib Warning: Citation `esser\T1\textunderscore2021\T1\textunderscore
-imagebart' on page 2 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...tion process \cite{nash\_2021\_generating}
-                                                  . A significant breakthrou...
+Package natbib Warning: Citation `nash-2021-generating' on page 2 undefined on 
+input line 74.
 
 
-Package natbib Warning: Citation `nash\T1\textunderscore2021\T1\textunderscoreg
-enerating' on page 2 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...e (VAR) modeling \cite{tian\_2024\_visual}
-                                                  , which frames image gener...
+Package natbib Warning: Citation `tian-2024-visual' on page 2 undefined on inpu
+t line 74.
 
 
-Package natbib Warning: Citation `tian\T1\textunderscore2024\T1\textunderscorev
-isual' on page 2 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...ke ImageBART \cite{esser\_2021\_imagebart}
-                                                   combine an autoregressive...
+Package natbib Warning: Citation `esser-2021-imagebart' on page 2 undefined on 
+input line 74.
 
 
-Package natbib Warning: Citation `esser\T1\textunderscore2021\T1\textunderscore
-imagebart' on page 2 undefined on input line 59.
-
-! Undefined control sequence.
-l.59 ...rallel prediction within defined groups.\n
-                                                  \n\textbf{Sampling Acceler...
-
-! Undefined control sequence.
-l.59 ...llel prediction within defined groups.\n\n
-                                                  \textbf{Sampling Accelerat...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...g methods \cite{wiggers\_2020\_predictive}
-                                                   attempt to forecast multi...
+Package natbib Warning: Citation `wiggers-2020-predictive' on page 2 undefined 
+on input line 76.
 
 
-Package natbib Warning: Citation `wiggers\T1\textunderscore2020\T1\textundersco
-repredictive' on page 2 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...or example, \cite{jayaram\_2021\_parallel}
-                                                   proposes using Langevin d...
+Package natbib Warning: Citation `jayaram-2021-parallel' on page 2 undefined on
+ input line 76.
 
 
-Package natbib Warning: Citation `jayaram\T1\textunderscore2021\T1\textundersco
-reparallel' on page 2 undefined on input line 59.
-
-! Undefined control sequence.
-l.59 ...rolled by the group size hyperparameter.\n
-                                                  \n\textbf{Parallel Generat...
-
-! Undefined control sequence.
-l.59 ...lled by the group size hyperparameter.\n\n
-                                                  \textbf{Parallel Generativ...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...like TransGAN \cite{jiang\_2021\_transgan}
-                                                  , typically generate image...
+Package natbib Warning: Citation `jiang-2021-transgan' on page 2 undefined on i
+nput line 78.
 
 
-Package natbib Warning: Citation `jiang\T1\textunderscore2021\T1\textunderscore
-transgan' on page 2 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...cite{bao\_2022\_all, kim\_2024\_arbitrary}
-                                                   are also highly paralleli...
+Package natbib Warning: Citation `bao-2022-all' on page 2 undefined on input li
+ne 78.
 
 
-Package natbib Warning: Citation `bao\T1\textunderscore2022\T1\textunderscoreal
-l' on page 2 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.59 ...cite{bao\_2022\_all, kim\_2024\_arbitrary}
-                                                   are also highly paralleli...
-
-
-Package natbib Warning: Citation `kim\T1\textunderscore2024\T1\textunderscorear
-bitrary' on page 2 undefined on input line 59.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.63 ...re of images \cite{esser\_2021\_imagebart}
-                                                  . The nature of the tokens...
-
-
-Package natbib Warning: Citation `esser\T1\textunderscore2021\T1\textunderscore
-imagebart' on page 2 undefined on input line 63.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.63 ...n entirely \cite{li\_2024\_autoregressive}
-                                                  . Our work is orthogonal t...
-
-
-Package natbib Warning: Citation `li\T1\textunderscore2024\T1\textunderscoreaut
-oregressive' on page 2 undefined on input line 63.
-
-! Undefined control sequence.
-l.63 ...he sampling of any given token sequence.\n
-                                                  \n\textbf{Visual Autoregre...
-
-! Undefined control sequence.
-l.63 ... sampling of any given token sequence.\n\n
-                                                  \textbf{Visual Autoregress...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.63 ...he VAR framework \cite{tian\_2024\_visual}
-                                                   introduces a more natural...
-
-
-Package natbib Warning: Citation `tian\T1\textunderscore2024\T1\textunderscorev
-isual' on page 2 undefined on input line 63.
-
-! Undefined control sequence.
-l.63 ...ns the primary computational bottleneck.\n
-                                                  \n\textbf{Problem Setting ...
-
-! Undefined control sequence.
-l.63 ... the primary computational bottleneck.\n\n
-                                                  \textbf{Problem Setting an...
+Package natbib Warning: Citation `kim-2024-arbitrary' on page 2 undefined on in
+put line 78.
 
 [2]
-! Undefined control sequence.
-l.67 ...dule, and a modified sampling procedure.\n
-                                                  \n\textbf{1. Hierarchical ...
 
-! Undefined control sequence.
-l.67 ...le, and a modified sampling procedure.\n\n
-                                                  \textbf{1. Hierarchical Gr...
+Package natbib Warning: Citation `esser-2021-imagebart' on page 3 undefined on 
+input line 82.
 
-! Undefined control sequence.
-<recently read> \nTo 
-                     
-l.67 ...archical Group-Causal Attention Mask:}\nTo
-                                                   enable the simultaneous p...
 
-! Undefined control sequence.
-l.67 ...s: between groups and within groups. \nLet
-                                                   the full sequence of toke...
+Package natbib Warning: Citation `li-2024-autoregressive' on page 3 undefined o
+n input line 82.
 
-! Undefined control sequence.
-l.67 ...ion mechanism is constrained as follows:\n
-                                                  \begin{itemize}\n    \item...
 
-! Undefined control sequence.
-l.67 ...constrained as follows:\n\begin{itemize}\n
-                                                      \item \textbf{Between-...
+Package natbib Warning: Citation `tian-2024-visual' on page 3 undefined on inpu
+t line 84.
 
-! Undefined control sequence.
-l.67 ...utoregressive structure of the sequence.\n
-                                                      \item \textbf{Within-G...
 
-! Undefined control sequence.
-l.67 ...tituent tokens in a single forward pass.\n
-                                                  \end{itemize}\nThis hybrid...
+Underfull \vbox (badness 4096) has occurred while \output is active [3]
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd) [4] [5]
 
-! Undefined control sequence.
-l.67 ... single forward pass.\n\end{itemize}\nThis
-                                                   hybrid causal/non-causal ...
+Package natbib Warning: Citation `meng-2021-improved' on page 6 undefined on in
+put line 163.
 
-! Undefined control sequence.
-l.67 ...e parallelism required for acceleration.\n
-                                                  \n\textbf{2. Group Conditi...
-
-! Undefined control sequence.
-l.67 ...parallelism required for acceleration.\n\n
-                                                  \textbf{2. Group Condition...
-
-! Undefined control sequence.
-<recently read> \nPredicting 
-                             
-l.67 ...p Conditioning Adapter (GCA):}\nPredicting
-                                                   an entire group of scales...
-
-! Undefined control sequence.
-l.67 ... a sophisticated context summarizer. \nThe
-                                                   GCA functions similarly t...
-
-! Undefined control sequence.
-l.67 ...plexity of multi-scale group prediction.\n
-                                                  \n\textbf{3. Group-wise An...
-
-! Undefined control sequence.
-l.67 ...exity of multi-scale group prediction.\n\n
-                                                  \textbf{3. Group-wise Ance...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.67 ...bf{3. Group-wise Ancestral Sampling:}\nThe
-                                                   inference process is a di...
-
-! Undefined control sequence.
-l.67 ...the groups. The procedure is as follows:\n
-                                                  \begin{enumerate}\n    \it...
-
-[3]
-! Undefined control sequence.
-l.67 ...cedure is as follows:\n\begin{enumerate}\n
-                                                      \item Use the GCA to p...
-
-! Undefined control sequence.
-l.67 ...nd produce a set of conditioning tokens.\n
-                                                      \item Feed these condi...
-
-! Undefined control sequence.
-l.67 ...s in the target group $g_j$ in parallel.\n
-                                                      \item Sample the token...
-
-! Undefined control sequence.
-l.67 ...g_j$ from their predicted distributions.\n
-                                                      \item Append the newly...
-
-! Undefined control sequence.
-l.67 ...tokens to the history for the next step.\n
-                                                  \end{enumerate}\nThis modi...
-
-! Undefined control sequence.
-l.67 ... for the next step.\n\end{enumerate}\nThis
-                                                   modified loop guarantees ...
-
-! Undefined control sequence.
-l.71 ...nd demonstrate its deterministic nature.\n
-                                                  \n\textbf{Objective and Hy...
-
-! Undefined control sequence.
-l.71 ... demonstrate its deterministic nature.\n\n
-                                                  \textbf{Objective and Hypo...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.71 ...n\n\textbf{Objective and Hypothesis:}\nThe
-                                                   experiment aimed to measu...
-
-! Undefined control sequence.
-l.71 ...nd parallel attention within each group.\n
-                                                  \n\textbf{Model Variants a...
-
-! Undefined control sequence.
-l.71 ... parallel attention within each group.\n\n
-                                                  \textbf{Model Variants and...
-
-! Undefined control sequence.
-<recently read> \nWe 
-                     
-l.71 ...\textbf{Model Variants and Baselines:}\nWe
-                                                   evaluated several GASP mo...
-
-! Undefined control sequence.
-l.71 ... dimension) to ensure a fair comparison.\n
-                                                  \n\textbf{Hardware and Sof...
-
-! Undefined control sequence.
-l.71 ...imension) to ensure a fair comparison.\n\n
-                                                  \textbf{Hardware and Softw...
-
-! Undefined control sequence.
-<recently read> \nAll 
-                      
-l.71 ...n.\n\n\textbf{Hardware and Software:}\nAll
-                                                   benchmarks were executed ...
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
-! Undefined control sequence.
-l.71 ... using \texttt{torch.cuda.amp.autocast}.\n
-                                                  \n\textbf{Generation Task:...
-
-! Undefined control sequence.
-l.71 ...sing \texttt{torch.cuda.amp.autocast}.\n\n
-                                                  \textbf{Generation Task:}\...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.71 ...tocast}.\n\n\textbf{Generation Task:}\nThe
-                                                   task was unconditional ge...
-
-! Undefined control sequence.
-l.71 ... was deterministically set to $256 / G$.\n
-                                                  \n\textbf{Benchmarking Pro...
-
-! Undefined control sequence.
-l.71 ...as deterministically set to $256 / G$.\n\n
-                                                  \textbf{Benchmarking Proto...
-
-! Undefined control sequence.
-<recently read> \nTo 
-                     
-l.71 ...G$.\n\n\textbf{Benchmarking Protocol:}\nTo
-                                                   ensure accurate and relia...
-
-! Undefined control sequence.
-l.71 ...strict protocol for each model variant. \n
-                                                  \begin{enumerate}\n    \it...
-
-! Undefined control sequence.
-l.71 ... each model variant. \n\begin{enumerate}\n
-                                                      \item \textbf{Isolatio...
-
-! Undefined control sequence.
-l.71 ...t scenario for interactive applications.\n
-                                                      \item \textbf{Warm-up:...
-
-! Undefined control sequence.
-l.71 ...ing the GPU to a stable operating state.\n
-                                                      \item \textbf{Synchron...
-
-! Undefined control sequence.
-l.71 ...er the end of the timed generation loop.\n
-                                                      \item \textbf{Measurem...
-
-! Undefined control sequence.
-l.71 ...of mean, standard deviation, and median.\n
-                                                  \end{enumerate}\n\n\textbf...
-
-[4]
-! Undefined control sequence.
-l.71 ... deviation, and median.\n\end{enumerate}\n
-                                                  \n\textbf{Evaluation Metri...
-
-! Undefined control sequence.
-l.71 ...eviation, and median.\n\end{enumerate}\n\n
-                                                  \textbf{Evaluation Metrics...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.71 ...rate}\n\n\textbf{Evaluation Metrics:}\nThe
-                                                   primary evaluation metric...
-
-! Undefined control sequence.
-l.75 ...idating the core hypothesis of our work.\n
-                                                  \n\textbf{Quantitative Lat...
-
-! Undefined control sequence.
-l.75 ...ating the core hypothesis of our work.\n\n
-                                                  \textbf{Quantitative Laten...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.75 ...tative Latency and Speedup Analysis:}\nThe
-                                                   baseline model ($G=1$), w...
-
-! Undefined control sequence.
-l.75 ...ailed results are summarized as follows:\n
-                                                  \begin{itemize}\n    \item...
-
-! Undefined control sequence.
-l.75 ... summarized as follows:\n\begin{itemize}\n
-                                                      \item $G=1$: 2.0420 s ...
-
-! Undefined control sequence.
-l.75 ...20 s (1.00x speedup, 100.0\% efficiency)\n
-                                                      \item $G=2$: 1.0156 s ...
-
-! Undefined control sequence.
-l.75 ...56 s (2.01x speedup, 100.5\% efficiency)\n
-                                                      \item $G=4$: 0.5045 s ...
-
-! Undefined control sequence.
-l.75 ...45 s (4.05x speedup, 101.2\% efficiency)\n
-                                                      \item $G=8$: 0.2514 s ...
-
-! Undefined control sequence.
-l.75 ...14 s (8.12x speedup, 101.5\% efficiency)\n
-                                                      \item $G=16$: 0.1255 s...
-
-! Undefined control sequence.
-l.75 ...5 s (16.27x speedup, 101.7\% efficiency)\n
-                                                      \item $G=32$: 0.0629 s...
-
-! Undefined control sequence.
-l.75 ...9 s (32.46x speedup, 101.4\% efficiency)\n
-                                                  \end{itemize}\nAs shown in...
-
-! Undefined control sequence.
-l.75 ...up, 101.4\% efficiency)\n\end{itemize}\nAs
-                                                   shown in Figure~\ref{fig:...
-
-! Undefined control sequence.
-l.75 ...econds at the largest group size tested.\n
-                                                  \n\textbf{Speedup and Para...
-
-! Undefined control sequence.
-l.75 ...onds at the largest group size tested.\n\n
-                                                  \textbf{Speedup and Parall...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.75 ...tbf{Speedup and Parallel Efficiency:}\nThe
-                                                   measured speedup, visuali...
-
-! Undefined control sequence.
-l.75 ...erhead and improving overall throughput.\n
-                                                  \n\textbf{Limitations:}\nT...
-
-! Undefined control sequence.
-l.75 ...head and improving overall throughput.\n\n
-                                                  \textbf{Limitations:}\nThe...
-
-! Undefined control sequence.
-<recently read> \nThe 
-                      
-l.75 ... throughput.\n\n\textbf{Limitations:}\nThe
-                                                   experiments in this study...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.75 ...sample quality \cite{meng\_2021\_improved}
-                                                   to provide practical guid...
-
-
-Package natbib Warning: Citation `meng\T1\textunderscore2021\T1\textunderscorei
-mproved' on page 5 undefined on input line 75.
-
-! Undefined control sequence.
-l.75 ...may vary on different GPU architectures.\n
-                                                  \n\begin{figure}[H]\n    \...
-
-! Undefined control sequence.
-l.75 ...y vary on different GPU architectures.\n\n
-                                                  \begin{figure}[H]\n    \ce...
-
-! Undefined control sequence.
-l.75 ... GPU architectures.\n\n\begin{figure}[H]\n
-                                                      \centering\n    \inclu...
-
-! Undefined control sequence.
-l.75 ...es.\n\n\begin{figure}[H]\n    \centering\n
-                                                      \includegraphics[width...
-
-! Undefined control sequence.
-l.75 ...inference\_latency\_vs\_group\_size.pdf}\n
-                                                      \caption{Inference Lat...
-
-! Undefined control sequence.
-l.75 ...in latency as the group size increases.}\n
-                                                      \label{fig:latency}\n\...
-
-! Undefined control sequence.
-l.75 ...ize increases.}\n    \label{fig:latency}\n
-                                                  \end{figure}\n\n\begin{fig...
-
-! Undefined control sequence.
-l.75 ...}\n    \label{fig:latency}\n\end{figure}\n
-                                                  \n\begin{figure}[H]\n    \...
-
-! Undefined control sequence.
-l.75 ...n    \label{fig:latency}\n\end{figure}\n\n
-                                                  \begin{figure}[H]\n    \ce...
-
-! Undefined control sequence.
-l.75 ...ency}\n\end{figure}\n\n\begin{figure}[H]\n
-                                                      \centering\n    \inclu...
-
-! Undefined control sequence.
-l.75 ...re}\n\n\begin{figure}[H]\n    \centering\n
-                                                      \includegraphics[width...
-
-! Undefined control sequence.
-l.75 ...inference\_speedup\_vs\_group\_size.pdf}\n
-                                                      \caption{Inference Spe...
-
-! Undefined control sequence.
-l.75 ...ating highly efficient parallelization.}\n
-                                                      \label{fig:speedup}\n\...
-
-! Undefined control sequence.
-l.75 ...rallelization.}\n    \label{fig:speedup}\n
-                                                  \end{figure}\n\n\begin{fig...
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active [5]
-! Undefined control sequence.
-l.75 ...}\n    \label{fig:speedup}\n\end{figure}\n
-                                                  \n\begin{figure}[H]\n    \...
-
-! Undefined control sequence.
-l.75 ...n    \label{fig:speedup}\n\end{figure}\n\n
-                                                  \begin{figure}[H]\n    \ce...
-
-! Undefined control sequence.
-l.75 ...edup}\n\end{figure}\n\n\begin{figure}[H]\n
-                                                      \centering\n    \inclu...
-
-! Undefined control sequence.
-l.75 ...re}\n\n\begin{figure}[H]\n    \centering\n
-                                                      \includegraphics[width...
-
-! Undefined control sequence.
-l.75 ...ages/parallel\_efficiency\_analysis.pdf}\n
-                                                      \caption{Parallel Effi...
-
-! Undefined control sequence.
-l.75 ...imal overhead of the GASP architecture.}\n
-                                                      \label{fig:efficiency}...
-
-! Undefined control sequence.
-l.75 ...chitecture.}\n    \label{fig:efficiency}\n
-                                                  \end{figure}
 
 Underfull \vbox (badness 10000) has occurred while \output is active [6 <./imag
 es/inference_latency_vs_group_size.pdf> <./images/inference_speedup_vs_group_si
 ze.pdf>]
-! Undefined control sequence.
-l.79 ...aining a valid autoregressive structure.\n
-                                                  \nOur empirical results pr...
 
-! Undefined control sequence.
-l.79 ...g a valid autoregressive structure.\n\nOur
-                                                   empirical results provide...
-
-! Undefined control sequence.
-l.79 ... interactive and large-scale deployment.\n
-                                                  \nFor future work, a cruci...
-
-! Undefined control sequence.
-l.79 ...ractive and large-scale deployment.\n\nFor
-                                                   future work, a crucial ne...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.79 ... new framework \cite{meng\_2021\_improved}
-                                                  . Further research could a...
-
-
-Package natbib Warning: Citation `meng\T1\textunderscore2021\T1\textunderscorei
-mproved' on page 7 undefined on input line 79.
+Package natbib Warning: Citation `meng-2021-improved' on page 7 undefined on in
+put line 192.
 
 (./paper.bbl)
 
@@ -3060,5 +1187,5 @@ fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (7 pages, 191352 bytes).
+Output written on paper.pdf (7 pages, 191300 bytes).
 Transcript written on paper.log.

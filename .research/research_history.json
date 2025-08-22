@@ -1,0 +1,10 @@
+{
+  "research_topic": "小規模データでのSSM事前学習に関して改善したい",
+  "queries": [
+    "SSM pretraining small data",
+    "data-efficient structured state space",
+    "Mamba pretraining low-resource",
+    "S4 pretraining low-data",
+    "self-supervised SSM"
+  ]
+}

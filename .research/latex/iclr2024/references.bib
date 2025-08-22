@@ -5,3 +5,449 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{author_year_elastic,
+ title = {Elastic Aggregation for Federated Optimization}
+}
+
+@article{bietti_2022_personalization,
+ abstract = {Large-scale machine learning systems often involve data distributed across a
+collection of users. Federated learning algorithms leverage this structure by
+communicating model updates to a central server, rather than entire datasets.
+In this paper, we study stochastic optimization algorithms for a personalized
+federated learning setting involving local and global models subject to
+user-level (joint) differential privacy. While learning a private global model
+induces a cost of privacy, local learning is perfectly private. We provide
+generalization guarantees showing that coordinating local learning with private
+centralized learning yields a generically useful and improved tradeoff between
+accuracy and privacy. We illustrate our theoretical results with experiments on
+synthetic and real-world datasets.},
+ arxiv_url = {https://arxiv.org/pdf/2202.05318v2.pdf},
+ author = {Alberto Bietti and Chen-Yu Wei and Miroslav Dudík and John Langford and Zhiwei Steven Wu},
+ github_url = {https://github.com/albietz/ppsgd},
+ title = {Personalization Improves Privacy-Accuracy Tradeoffs in Federated Learning},
+ year = {2022}
+}
+
+@article{bietti_2022_personalization,
+ abstract = {Large-scale machine learning systems often involve data distributed across a
+collection of users. Federated learning algorithms leverage this structure by
+communicating model updates to a central server, rather than entire datasets.
+In this paper, we study stochastic optimization algorithms for a personalized
+federated learning setting involving local and global models subject to
+user-level (joint) differential privacy. While learning a private global model
+induces a cost of privacy, local learning is perfectly private. We provide
+generalization guarantees showing that coordinating local learning with private
+centralized learning yields a generically useful and improved tradeoff between
+accuracy and privacy. We illustrate our theoretical results with experiments on
+synthetic and real-world datasets.},
+ arxiv_url = {https://arxiv.org/pdf/2202.05318v2.pdf},
+ author = {Alberto Bietti and Chen-Yu Wei and Miroslav Dudík and John Langford and Zhiwei Steven Wu},
+ github_url = {https://github.com/albietz/ppsgd},
+ title = {Personalization Improves Privacy-Accuracy Tradeoffs in Federated Learning},
+ year = {2022}
+}
+
+@article{bietti_2022_personalization,
+ abstract = {Large-scale machine learning systems often involve data distributed across a
+collection of users. Federated learning algorithms leverage this structure by
+communicating model updates to a central server, rather than entire datasets.
+In this paper, we study stochastic optimization algorithms for a personalized
+federated learning setting involving local and global models subject to
+user-level (joint) differential privacy. While learning a private global model
+induces a cost of privacy, local learning is perfectly private. We provide
+generalization guarantees showing that coordinating local learning with private
+centralized learning yields a generically useful and improved tradeoff between
+accuracy and privacy. We illustrate our theoretical results with experiments on
+synthetic and real-world datasets.},
+ arxiv_url = {https://arxiv.org/pdf/2202.05318v2.pdf},
+ author = {Alberto Bietti and Chen-Yu Wei and Miroslav Dudík and John Langford and Zhiwei Steven Wu},
+ github_url = {https://github.com/albietz/ppsgd},
+ title = {Personalization Improves Privacy-Accuracy Tradeoffs in Federated Learning},
+ year = {2022}
+}
+
+@article{bietti_2022_personalization,
+ abstract = {Large-scale machine learning systems often involve data distributed across a
+collection of users. Federated learning algorithms leverage this structure by
+communicating model updates to a central server, rather than entire datasets.
+In this paper, we study stochastic optimization algorithms for a personalized
+federated learning setting involving local and global models subject to
+user-level (joint) differential privacy. While learning a private global model
+induces a cost of privacy, local learning is perfectly private. We provide
+generalization guarantees showing that coordinating local learning with private
+centralized learning yields a generically useful and improved tradeoff between
+accuracy and privacy. We illustrate our theoretical results with experiments on
+synthetic and real-world datasets.},
+ arxiv_url = {https://arxiv.org/pdf/2202.05318v2.pdf},
+ author = {Alberto Bietti and Chen-Yu Wei and Miroslav Dudík and John Langford and Zhiwei Steven Wu},
+ github_url = {https://github.com/albietz/ppsgd},
+ title = {Personalization Improves Privacy-Accuracy Tradeoffs in Federated Learning},
+ year = {2022}
+}
+
+@article{birrell_2024_differentially,
+ abstract = {Differentially private stochastic gradient descent (DP-SGD) has been
+instrumental in privately training deep learning models by providing a
+framework to control and track the privacy loss incurred during training. At
+the core of this computation lies a subsampling method that uses a privacy
+amplification lemma to enhance the privacy guarantees provided by the additive
+noise. Fixed size subsampling is appealing for its constant memory usage,
+unlike the variable sized minibatches in Poisson subsampling. It is also of
+interest in addressing class imbalance and federated learning. However, the
+current computable guarantees for fixed-size subsampling are not tight and do
+not consider both add/remove and replace-one adjacency relationships. We
+present a new and holistic R{\'e}nyi differential privacy (RDP) accountant for
+DP-SGD with fixed-size subsampling without replacement (FSwoR) and with
+replacement (FSwR). For FSwoR we consider both add/remove and replace-one
+adjacency. Our FSwoR results improves on the best current computable bound by a
+factor of $4$. We also show for the first time that the widely-used Poisson
+subsampling and FSwoR with replace-one adjacency have the same privacy to
+leading order in the sampling probability. Accordingly, our work suggests that
+FSwoR is often preferable to Poisson subsampling due to constant memory usage.
+Our FSwR accountant includes explicit non-asymptotic upper and lower bounds
+and, to the authors' knowledge, is the first such analysis of fixed-size RDP
+with replacement for DP-SGD. We analytically and empirically compare fixed size
+and Poisson subsampling, and show that DP-SGD gradients in a fixed-size
+subsampling regime exhibit lower variance in practice in addition to memory
+usage benefits.},
+ arxiv_url = {https://arxiv.org/pdf/2408.10456v1.pdf},
+ author = {Jeremiah Birrell and Reza Ebrahimi and Rouzbeh Behnia and Jason Pacheco},
+ github_url = {https://github.com/star-ailab/FSRDP},
+ title = {Differentially Private Stochastic Gradient Descent with Fixed-Size Minibatches: Tighter RDP Guarantees with or without Replacement},
+ year = {2024}
+}
+
+@article{chen_2022_the,
+ abstract = {We consider the problem of training a $d$ dimensional model with distributed
+differential privacy (DP) where secure aggregation (SecAgg) is used to ensure
+that the server only sees the noisy sum of $n$ model updates in every training
+round. Taking into account the constraints imposed by SecAgg, we characterize
+the fundamental communication cost required to obtain the best accuracy
+achievable under $\varepsilon$ central DP (i.e. under a fully trusted server
+and no communication constraints). Our results show that $\tilde{O}\left(
+\min(n^2\varepsilon^2, d) \right)$ bits per client are both sufficient and
+necessary, and this fundamental limit can be achieved by a linear scheme based
+on sparse random projections. This provides a significant improvement relative
+to state-of-the-art SecAgg distributed DP schemes which use
+$\tilde{O}(d\log(d/\varepsilon^2))$ bits per client.
+  Empirically, we evaluate our proposed scheme on real-world federated learning
+tasks. We find that our theoretical analysis is well matched in practice. In
+particular, we show that we can reduce the communication cost significantly to
+under $1.2$ bits per parameter in realistic privacy settings without decreasing
+test-time performance. Our work hence theoretically and empirically specifies
+the fundamental price of using SecAgg.},
+ arxiv_url = {https://arxiv.org/pdf/2203.03761v1.pdf},
+ author = {Wei-Ning Chen and Christopher A. Choquette-Choo and Peter Kairouz and Ananda Theertha Suresh},
+ title = {The Fundamental Price of Secure Aggregation in Differentially Private Federated Learning},
+ year = {2022}
+}
+
+@article{girgis_2021_renyi,
+ abstract = {We study privacy in a distributed learning framework, where clients
+collaboratively build a learning model iteratively through interactions with a
+server from whom we need privacy. Motivated by stochastic optimization and the
+federated learning (FL) paradigm, we focus on the case where a small fraction
+of data samples are randomly sub-sampled in each round to participate in the
+learning process, which also enables privacy amplification. To obtain even
+stronger local privacy guarantees, we study this in the shuffle privacy model,
+where each client randomizes its response using a local differentially private
+(LDP) mechanism and the server only receives a random permutation (shuffle) of
+the clients' responses without their association to each client. The principal
+result of this paper is a privacy-optimization performance trade-off for
+discrete randomization mechanisms in this sub-sampled shuffle privacy model.
+This is enabled through a new theoretical technique to analyze the Renyi
+Differential Privacy (RDP) of the sub-sampled shuffle model. We numerically
+demonstrate that, for important regimes, with composition our bound yields
+significant improvement in privacy guarantee over the state-of-the-art
+approximate Differential Privacy (DP) guarantee (with strong composition) for
+sub-sampled shuffled models. We also demonstrate numerically significant
+improvement in privacy-learning performance operating point using real data
+sets.},
+ arxiv_url = {https://arxiv.org/pdf/2107.08763v1.pdf},
+ author = {Antonious M. Girgis and Deepesh Data and Suhas Diggavi},
+ title = {Renyi Differential Privacy of The Subsampled Shuffle Model In Distributed Learning},
+ year = {2021}
+}
+
+@article{kairouz_2021_practical,
+ abstract = {We consider training models with differential privacy (DP) using mini-batch
+gradients. The existing state-of-the-art, Differentially Private Stochastic
+Gradient Descent (DP-SGD), requires privacy amplification by sampling or
+shuffling to obtain the best privacy/accuracy/computation trade-offs.
+Unfortunately, the precise requirements on exact sampling and shuffling can be
+hard to obtain in important practical scenarios, particularly federated
+learning (FL). We design and analyze a DP variant of
+Follow-The-Regularized-Leader (DP-FTRL) that compares favorably (both
+theoretically and empirically) to amplified DP-SGD, while allowing for much
+more flexible data access patterns. DP-FTRL does not use any form of privacy
+amplification.
+  The code is available at
+https://github.com/google-research/federated/tree/master/dp_ftrl and
+https://github.com/google-research/DP-FTRL .},
+ arxiv_url = {https://arxiv.org/pdf/2103.00039v3.pdf},
+ author = {Peter Kairouz and Brendan McMahan and Shuang Song and Om Thakkar and Abhradeep Thakurta and Zheng Xu},
+ github_url = {https://github.com/tensorflow/privacy},
+ title = {Practical and Private (Deep) Learning Without Sampling or Shuffling},
+ year = {2021}
+}
+
+@article{li_2020_acceleration,
+ abstract = {Due to the high communication cost in distributed and federated learning
+problems, methods relying on compression of communicated messages are becoming
+increasingly popular. While in other contexts the best performing gradient-type
+methods invariably rely on some form of acceleration/momentum to reduce the
+number of iterations, there are no methods which combine the benefits of both
+gradient compression and acceleration. In this paper, we remedy this situation
+and propose the first accelerated compressed gradient descent (ACGD) methods.
+In the single machine regime, we prove that ACGD enjoys the rate
+$O\Big((1+\omega)\sqrt{\frac{L}{\mu}}\log \frac{1}{\epsilon}\Big)$ for
+$\mu$-strongly convex problems and
+$O\Big((1+\omega)\sqrt{\frac{L}{\epsilon}}\Big)$ for convex problems,
+respectively, where $\omega$ is the compression parameter. Our results improve
+upon the existing non-accelerated rates $O\Big((1+\omega)\frac{L}{\mu}\log
+\frac{1}{\epsilon}\Big)$ and $O\Big((1+\omega)\frac{L}{\epsilon}\Big)$,
+respectively, and recover the optimal rates of accelerated gradient descent as
+a special case when no compression ($\omega=0$) is applied. We further propose
+a distributed variant of ACGD (called ADIANA) and prove the convergence rate
+$\widetilde{O}\Big(\omega+\sqrt{\frac{L}{\mu}}+\sqrt{\big(\frac{\omega}{n}+\sqrt{\frac{\omega}{n}}\big)\frac{\omega
+L}{\mu}}\Big)$, where $n$ is the number of devices/workers and $\widetilde{O}$
+hides the logarithmic factor $\log \frac{1}{\epsilon}$. This improves upon the
+previous best result $\widetilde{O}\Big(\omega + \frac{L}{\mu}+\frac{\omega
+L}{n\mu} \Big)$ achieved by the DIANA method of Mishchenko et al. (2019).
+Finally, we conduct several experiments on real-world datasets which
+corroborate our theoretical results and confirm the practical superiority of
+our accelerated methods.},
+ arxiv_url = {https://arxiv.org/pdf/2002.11364v2.pdf},
+ author = {Zhize Li and Dmitry Kovalev and Xun Qian and Peter Richtárik},
+ title = {Acceleration for Compressed Gradient Descent in Distributed and Federated Optimization},
+ year = {2020}
+}
+
+@article{li_2022_soteriafl,
+ abstract = {To enable large-scale machine learning in bandwidth-hungry environments such
+as wireless networks, significant progress has been made recently in designing
+communication-efficient federated learning algorithms with the aid of
+communication compression. On the other end, privacy-preserving, especially at
+the client level, is another important desideratum that has not been addressed
+simultaneously in the presence of advanced communication compression techniques
+yet. In this paper, we propose a unified framework that enhances the
+communication efficiency of private federated learning with communication
+compression. Exploiting both general compression operators and local
+differential privacy, we first examine a simple algorithm that applies
+compression directly to differentially-private stochastic gradient descent, and
+identify its limitations. We then propose a unified framework SoteriaFL for
+private federated learning, which accommodates a general family of local
+gradient estimators including popular stochastic variance-reduced gradient
+methods and the state-of-the-art shifted compression scheme. We provide a
+comprehensive characterization of its performance trade-offs in terms of
+privacy, utility, and communication complexity, where SoteraFL is shown to
+achieve better communication complexity without sacrificing privacy nor utility
+than other private federated learning algorithms without communication
+compression.},
+ arxiv_url = {https://arxiv.org/pdf/2206.09888v2.pdf},
+ author = {Zhize Li and Haoyu Zhao and Boyue Li and Yuejie Chi},
+ title = {SoteriaFL: A Unified Framework for Private Federated Learning with Communication Compression},
+ year = {2022}
+}
+
+@article{mai_2024_rflpa,
+ abstract = {Federated learning (FL) allows multiple devices to train a model
+collaboratively without sharing their data. Despite its benefits, FL is
+vulnerable to privacy leakage and poisoning attacks. To address the privacy
+concern, secure aggregation (SecAgg) is often used to obtain the aggregation of
+gradients on sever without inspecting individual user updates. Unfortunately,
+existing defense strategies against poisoning attacks rely on the analysis of
+local updates in plaintext, making them incompatible with SecAgg. To reconcile
+the conflicts, we propose a robust federated learning framework against
+poisoning attacks (RFLPA) based on SecAgg protocol. Our framework computes the
+cosine similarity between local updates and server updates to conduct robust
+aggregation. Furthermore, we leverage verifiable packed Shamir secret sharing
+to achieve reduced communication cost of $O(M+N)$ per user, and design a novel
+dot product aggregation algorithm to resolve the issue of increased information
+leakage. Our experimental results show that RFLPA significantly reduces
+communication and computation overhead by over $75\%$ compared to the
+state-of-the-art secret sharing method, BREA, while maintaining competitive
+accuracy.},
+ arxiv_url = {https://arxiv.org/pdf/2405.15182v2.pdf},
+ author = {Peihua Mai and Ran Yan and Yan Pang},
+ github_url = {https://github.com/NusIoraPrivacy/RFLPA},
+ title = {RFLPA: A Robust Federated Learning Framework against Poisoning Attacks with Secure Aggregation},
+ year = {2024}
+}
+
+@article{shen_2023_share,
+ abstract = {Repeated parameter sharing in federated learning causes significant
+information leakage about private data, thus defeating its main purpose: data
+privacy. Mitigating the risk of this information leakage, using state of the
+art differentially private algorithms, also does not come for free. Randomized
+mechanisms can prevent convergence of models on learning even the useful
+representation functions, especially if there is more disagreement between
+local models on the classification functions (due to data heterogeneity). In
+this paper, we consider a representation federated learning objective that
+encourages various parties to collaboratively refine the consensus part of the
+model, with differential privacy guarantees, while separately allowing
+sufficient freedom for local personalization (without releasing it). We prove
+that in the linear representation setting, while the objective is non-convex,
+our proposed new algorithm \DPFEDREP\ converges to a ball centered around the
+\emph{global optimal} solution at a linear rate, and the radius of the ball is
+proportional to the reciprocal of the privacy budget. With this novel utility
+analysis, we improve the SOTA utility-privacy trade-off for this problem by a
+factor of $\sqrt{d}$, where $d$ is the input dimension. We empirically evaluate
+our method with the image classification task on CIFAR10, CIFAR100, and EMNIST,
+and observe a significant performance improvement over the prior work under the
+same small privacy budget. The code can be found in this link:
+https://github.com/shenzebang/CENTAUR-Privacy-Federated-Representation-Learning.},
+ arxiv_url = {https://arxiv.org/pdf/2309.05505v1.pdf},
+ author = {Zebang Shen and Jiayuan Ye and Anmin Kang and Hamed Hassani and Reza Shokri},
+ title = {Share Your Representation Only: Guaranteed Improvement of the Privacy-Utility Tradeoff in Federated Learning},
+ year = {2023}
+}
+
+@article{ullah_2023_private,
+ abstract = {We propose new techniques for reducing communication in private federated
+learning without the need for setting or tuning compression rates. Our
+on-the-fly methods automatically adjust the compression rate based on the error
+induced during training, while maintaining provable privacy guarantees through
+the use of secure aggregation and differential privacy. Our techniques are
+provably instance-optimal for mean estimation, meaning that they can adapt to
+the ``hardness of the problem" with minimal interactivity. We demonstrate the
+effectiveness of our approach on real-world datasets by achieving favorable
+compression rates without the need for tuning.},
+ arxiv_url = {https://arxiv.org/pdf/2307.10999v1.pdf},
+ author = {Enayat Ullah and Christopher A. Choquette-Choo and Peter Kairouz and Sewoong Oh},
+ title = {Private Federated Learning with Autotuned Compression},
+ year = {2023}
+}
+
+@article{zhao_2023_the,
+ abstract = {Secure aggregation promises a heightened level of privacy in federated
+learning, maintaining that a server only has access to a decrypted aggregate
+update. Within this setting, linear layer leakage methods are the only data
+reconstruction attacks able to scale and achieve a high leakage rate regardless
+of the number of clients or batch size. This is done through increasing the
+size of an injected fully-connected (FC) layer. However, this results in a
+resource overhead which grows larger with an increasing number of clients. We
+show that this resource overhead is caused by an incorrect perspective in all
+prior work that treats an attack on an aggregate update in the same way as an
+individual update with a larger batch size. Instead, by attacking the update
+from the perspective that aggregation is combining multiple individual updates,
+this allows the application of sparsity to alleviate resource overhead. We show
+that the use of sparsity can decrease the model size overhead by over
+327$\times$ and the computation time by 3.34$\times$ compared to SOTA while
+maintaining equivalent total leakage rate, 77% even with $1000$ clients in
+aggregation.},
+ arxiv_url = {https://arxiv.org/pdf/2303.14868v1.pdf},
+ author = {Joshua C. Zhao and Ahmed Roushdy Elkordy and Atul Sharma and Yahya H. Ezzeldin and Salman Avestimehr and Saurabh Bagchi},
+ title = {The Resource Problem of Using Linear Layer Leakage Attack in Federated Learning},
+ year = {2023}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{agarwal_2020_federated,
+ abstract = {We study a new form of federated learning where the clients train
+personalized local models and make predictions jointly with the server-side
+shared model. Using this new federated learning framework, the complexity of
+the central shared model can be minimized while still gaining all the
+performance benefits that joint training provides. Our framework is robust to
+data heterogeneity, addressing the slow convergence problem traditional
+federated learning methods face when the data is non-i.i.d. across clients. We
+test the theory empirically and find substantial performance gains over
+baselines.},
+ arxiv_url = {https://arxiv.org/pdf/2003.12880v1.pdf},
+ author = {Alekh Agarwal and John Langford and Chen-Yu Wei},
+ title = {Federated residual learning},
+ year = {2020}
+}
+
+@article{arivazhagan_2019_federated,
+ abstract = {The emerging paradigm of federated learning strives to enable collaborative
+training of machine learning models on the network edge without centrally
+aggregating raw data and hence, improving data privacy. This sharply deviates
+from traditional machine learning and necessitates the design of algorithms
+robust to various sources of heterogeneity. Specifically, statistical
+heterogeneity of data across user devices can severely degrade the performance
+of standard federated averaging for traditional machine learning applications
+like personalization with deep learning. This paper pro-posesFedPer, a base +
+personalization layer approach for federated training of deep feedforward
+neural networks, which can combat the ill-effects of statistical heterogeneity.
+We demonstrate effectiveness ofFedPerfor non-identical data partitions
+ofCIFARdatasetsand on a personalized image aesthetics dataset from Flickr.},
+ arxiv_url = {https://arxiv.org/pdf/1912.00818v1.pdf},
+ author = {Manoj Ghuhan Arivazhagan and Vinay Aggarwal and Aaditya Kumar Singh and Sunav Choudhary},
+ title = {Federated learning with personalization layers},
+ year = {2019}
+}
+
+@article{author_year_calibrating,
+ title = {Calibrating noise to sensitivity in private data analysis}
+}
+
+@article{dekel_2010_optimal,
+ abstract = {Online prediction methods are typically presented as serial algorithms
+running on a single processor. However, in the age of web-scale prediction
+problems, it is increasingly common to encounter situations where a single
+processor cannot keep up with the high rate at which inputs arrive. In this
+work, we present the \emph{distributed mini-batch} algorithm, a method of
+converting many serial gradient-based online prediction algorithms into
+distributed algorithms. We prove a regret bound for this method that is
+asymptotically optimal for smooth convex loss functions and stochastic inputs.
+Moreover, our analysis explicitly takes into account communication latencies
+between nodes in the distributed environment. We show how our method can be
+used to solve the closely-related distributed stochastic optimization problem,
+achieving an asymptotically linear speed-up over multiple processors. Finally,
+we demonstrate the merits of our approach on a web-scale online prediction
+problem.},
+ arxiv_url = {https://arxiv.org/pdf/1012.1367v2.pdf},
+ author = {Ofer Dekel and Ran Gilad-Bachrach and Ohad Shamir and Lin Xiao},
+ title = {Optimal distributed online prediction using mini-batches},
+ year = {2010}
+}
+
+@article{deng_2020_adaptive,
+ abstract = {Investigation of the degree of personalization in federated learning
+algorithms has shown that only maximizing the performance of the global model
+will confine the capacity of the local models to personalize. In this paper, we
+advocate an adaptive personalized federated learning (APFL) algorithm, where
+each client will train their local models while contributing to the global
+model. We derive the generalization bound of mixture of local and global
+models, and find the optimal mixing parameter. We also propose a
+communication-efficient optimization method to collaboratively learn the
+personalized models and analyze its convergence in both smooth strongly convex
+and nonconvex settings. The extensive experiments demonstrate the effectiveness
+of our personalization schema, as well as the correctness of established
+generalization theories.},
+ arxiv_url = {https://arxiv.org/pdf/2003.13461v3.pdf},
+ author = {Yuyang Deng and Mohammad Mahdi Kamani and Mehrdad Mahdavi},
+ title = {Adaptive personalized federated learning},
+ year = {2020}
+}
+
+@article{dinh_2020_personalized,
+ abstract = {Federated learning (FL) is a decentralized and privacy-preserving machine
+learning technique in which a group of clients collaborate with a server to
+learn a global model without sharing clients' data. One challenge associated
+with FL is statistical diversity among clients, which restricts the global
+model from delivering good performance on each client's task. To address this,
+we propose an algorithm for personalized FL (pFedMe) using Moreau envelopes as
+clients' regularized loss functions, which help decouple personalized model
+optimization from the global model learning in a bi-level problem stylized for
+personalized FL. Theoretically, we show that pFedMe's convergence rate is
+state-of-the-art: achieving quadratic speedup for strongly convex and sublinear
+speedup of order 2/3 for smooth nonconvex objectives. Experimentally, we verify
+that pFedMe excels at empirical performance compared with the vanilla FedAvg
+and Per-FedAvg, a meta-learning based personalized FL algorithm.},
+ arxiv_url = {https://arxiv.org/pdf/2006.08848v3.pdf},
+ author = {Canh T. Dinh and Nguyen H. Tran and Tuan Dung Nguyen},
+ title = {Personalized federated learning with moreau envelopes},
+ year = {2020}
+}

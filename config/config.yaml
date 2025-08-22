@@ -1,0 +1,24 @@
+# Experiment Configuration
+seed: 42
+dataset: 'cifar10'
+model: 'resnet18'
+batch_size: 128
+epochs: 20
+lr: 0.01
+
+# Output directory for results, models, and images
+output_dir: './.research/iteration1'
+
+# Attack Configuration
+attack:
+  name: 'BadNets' # Options: BadNets, Blended, WaNet, Sinusoidal
+  poison_rate: 0.05
+  params:
+    target_class: 0
+
+# Defenses to run. Options: Vanilla, FP, ULTRA-C+, EPIC
+defenses:
+  - 'Vanilla'
+  - 'FP'
+  - 'ULTRA-C+'
+  - 'EPIC'

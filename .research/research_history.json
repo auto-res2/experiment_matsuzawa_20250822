@@ -1,0 +1,10 @@
+{
+  "research_topic": "データ選択の効率性に関して改善したい",
+  "queries": [
+    "data subset selection",
+    "coreset selection",
+    "dataset distillation",
+    "training data pruning",
+    "active learning efficiency"
+  ]
+}

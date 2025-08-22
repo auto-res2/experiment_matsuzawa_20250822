@@ -24,7 +24,8 @@
           "Yang You"
         ],
         "published_date": "2024-01-29T12:05:02Z",
-        "pdf_url": "https://arxiv.org/pdf/2402.01739v2.pdf"
+        "pdf_url": "https://arxiv.org/pdf/2402.01739v2.pdf",
+        "github_url": "https://github.com/pjlab-sys4nlp/llama-moe"
       },
       "llm_extracted_info": {
         "main_contributions": "Introduces OpenMoE, a fully open and reproducible family of decoder-only Mixture-of-Experts (MoE) LLMs (650M/16E, 8B/32E with 1.1T tokens, 8B chat, 34B/32E with 200B tokens). Demonstrates MoE’s favorable cost-effectiveness versus dense LLMs. Provides in-depth routing analysis with three key findings: (1) Context-Independent Specialization (routing largely by token ID, weak context dependence), (2) Early Routing Learning (token-to-expert assignments fixed early in pretraining), and (3) Drop-towards-the-End (later tokens more likely dropped due to expert capacity limits, harming multi-turn). Releases intermediate checkpoints and offers practical design recommendations to mitigate observed issues.",
@@ -48,7 +49,8 @@
           "Chao Yang"
         ],
         "published_date": "2023-02-20T11:18:24Z",
-        "pdf_url": "https://arxiv.org/pdf/2302.09915v1.pdf"
+        "pdf_url": "https://arxiv.org/pdf/2302.09915v1.pdf",
+        "github_url": "https://github.com/Chen-Chang/TA-MoE"
       },
       "llm_extracted_info": {
         "main_contributions": "Introduces TA-MoE, a topology-aware routing strategy for large-scale Mixture-of-Experts (MoE) training that co-designs model and system to exploit heterogeneous interconnects. Formulates MoE dispatch as a min–max communication optimization using an α–β model, derives an approximate bandwidth-proportional dispatch pattern for common topologies (homogeneous, ring, symmetric/asymmetric trees), and proposes a topology-aware auxiliary loss that adapts routing without degrading accuracy. Integrates seamlessly with FastMoE and DeepSpeed-MoE, delivering 1.01x–1.61x (vs DeepSpeed-MoE), 1.01x–4.77x (vs FastMoE) throughput gains and 1.25x–1.54x faster time-to-convergence than FasterMoE, across diverse hardware and model scales.",
@@ -105,7 +107,8 @@
           "Yang You"
         ],
         "published_date": "2024-01-29T12:05:02Z",
-        "pdf_url": "https://arxiv.org/pdf/2402.01739v2.pdf"
+        "pdf_url": "https://arxiv.org/pdf/2402.01739v2.pdf",
+        "github_url": "https://github.com/pjlab-sys4nlp/llama-moe"
       },
       "llm_extracted_info": {
         "main_contributions": "1) Release of OpenMoE: a fully open-source, reproducible family of decoder-only MoE LLMs (0.65B/16E, 8B/32E with >1T tokens, 8B/32E-Chat, 34B/32E with 200B tokens), plus 5 intermediate checkpoints for the 8B model. 2) Empirical demonstration that MoE achieves a better cost-effectiveness trade-off than dense LLMs on several benchmarks (notably BigBench-Lite cost curves and MT-Bench single-turn coding). 3) In-depth routing analysis uncovering three key phenomena: Context-Independent Specialization (routing largely determined by token IDs), Early Routing Learning (routing preferences established early and remain stable), and Drop-towards-the-End (later tokens more likely dropped due to expert capacity, exacerbated on OOD data like instruction tuning). 4) Exploration of advanced training choices: code-heavy data mixtures and UL2 objective; documentation of pitfalls and adjustments. 5) Practical guidance and proposed strategies to mitigate identified MoE issues for future development.",
@@ -129,7 +132,8 @@
           "Chao Yang"
         ],
         "published_date": "2023-02-20T11:18:24Z",
-        "pdf_url": "https://arxiv.org/pdf/2302.09915v1.pdf"
+        "pdf_url": "https://arxiv.org/pdf/2302.09915v1.pdf",
+        "github_url": "https://github.com/Chen-Chang/TA-MoE"
       },
       "llm_extracted_info": {
         "main_contributions": "Addresses the mismatch between MoE dispatch patterns and heterogeneous network topologies by proposing TA-MoE, a topology-aware routing strategy. Contributions: (1) Formulates MoE dispatch as a min-max communication optimization using an α-β model; (2) Derives near-optimal dispatch patterns for homogeneous, ring, symmetric, and asymmetric tree topologies; (3) Introduces a topology-aware auxiliary loss that adapts routing without hurting convergence and integrates with existing MoE systems (DeepSpeed-MoE, FastMoE); (4) Demonstrates substantial end-to-end speedups (1.01x–1.61x over DeepSpeed-MoE, 1.01x–4.77x over FastMoE) and faster time-to-convergence than FasterMoE (1.25x–1.54x), while maintaining accuracy.",
@@ -182,7 +186,8 @@
           "Chao Yang"
         ],
         "published_date": "2023-02-20T11:18:24Z",
-        "pdf_url": "https://arxiv.org/pdf/2302.09915v1.pdf"
+        "pdf_url": "https://arxiv.org/pdf/2302.09915v1.pdf",
+        "github_url": "https://github.com/Chen-Chang/TA-MoE"
       },
       "llm_extracted_info": {
         "main_contributions": "Addresses inefficiency of MoE expert-parallel training on heterogeneous interconnects by making routing topology-aware. Contributions: (1) Formulates MoE token dispatch as a min–max communication optimization using an α–β model and derives near-optimal, topology-dependent dispatch patterns (homogeneous, ring, symmetric/asymmetric tree). (2) Proposes a topology-aware auxiliary routing loss that adapts token–expert assignment to match network bandwidth without hurting convergence. (3) Provides practical integrations for FastMoE and DeepSpeed-MoE (capacity and communication adjustments). (4) Demonstrates consistent speedups across clusters and scales: ~1.01x–1.61x over DeepSpeed-MoE, ~1.01x–4.77x over FastMoE, and 1.25x–1.54x faster time-to-convergence than FasterMoE, with no accuracy loss. (5) Releases code.",
@@ -209,7 +214,8 @@
           "Ed H. Chi"
         ],
         "published_date": "2021-06-07T16:25:27Z",
-        "pdf_url": "https://arxiv.org/pdf/2106.03760v3.pdf"
+        "pdf_url": "https://arxiv.org/pdf/2106.03760v3.pdf",
+        "github_url": "https://github.com/google-research/google-research"
       },
       "llm_extracted_info": {
         "main_contributions": "Introduces DSelect-k, a continuously differentiable sparse gate for Mixture-of-Experts (MoE) that deterministically selects at most k out of n experts with explicit sparsity control. Proposes a novel binary encoding formulation that transforms the cardinality-constrained selection into an equivalent unconstrained problem with O(k log n) parameters and closed-form gate outputs. Smoothed via a differentiable smooth-step function and entropy regularization, enabling end-to-end training with first-order methods. Supports both static and per-example gating. Empirically outperforms Top-k and other baselines on synthetic data, MovieLens, Multi-MNIST/Multi-Fashion, and a large-scale recommender system (up to 22% improvement over Top-k), improving both prediction and expert selection behavior; open-source implementation provided.",
@@ -271,7 +277,8 @@
           "Yuxiong He"
         ],
         "published_date": "2022-01-14T18:36:04Z",
-        "pdf_url": "https://arxiv.org/pdf/2201.05596v2.pdf"
+        "pdf_url": "https://arxiv.org/pdf/2201.05596v2.pdf",
+        "github_url": "https://github.com/microsoft/DeepSpeed"
       },
       "llm_extracted_info": {
         "main_contributions": "Introduces DeepSpeed-MoE, an end-to-end system advancing Mixture-of-Experts (MoE) training and inference for large autoregressive language models. Main contributions: (1) Extends MoE to GPT-style NLG with ~5x reduction in training compute to reach dense-model quality; (2) Proposes Pyramid-Residual MoE (PR-MoE), a hybrid dense+MoE design that improves parameter efficiency and reduces model size by up to 3x without quality loss; (3) Introduces Mixture-of-Students (MoS), a staged knowledge distillation method that further compresses PR-MoE by up to 3.7x while retaining accuracy; (4) Builds DeepSpeed-MoE inference with expert/tensor/data parallelism, hierarchical and coordinated all-to-all, and fused kernels, achieving up to 7.3x lower latency/cost vs existing MoE inference and up to 4.5x faster and 9x cheaper than quality-equivalent dense inference, enabling <25ms latency at trillion-parameter scale.",

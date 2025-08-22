@@ -5,3 +5,294 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{author_year_simigrad,
+ title = {SimiGrad: Fine-Grained Adaptive Batching for Large Scale Training using Gradient Similarity Measurement}
+}
+
+@article{author_year_simigrad,
+ title = {SimiGrad: Fine-Grained Adaptive Batching for Large Scale Training using Gradient Similarity Measurement}
+}
+
+@article{author_year_win,
+ title = {Win: Weight-Decay-Integrated Nesterov Acceleration for Adaptive Gradient Algorithms}
+}
+
+@article{author_year_zero,
+ title = {Zero Bubble (Almost) Pipeline Parallelism}
+}
+
+@article{blumenfeld_2024_towards,
+ abstract = {The majority of the research on the quantization of Deep Neural Networks
+(DNNs) is focused on reducing the precision of tensors visible by high-level
+frameworks (e.g., weights, activations, and gradients). However, current
+hardware still relies on high-accuracy core operations. Most significant is the
+operation of accumulating products. This high-precision accumulation operation
+is gradually becoming the main computational bottleneck. This is because, so
+far, the usage of low-precision accumulators led to a significant degradation
+in performance. In this work, we present a simple method to train and fine-tune
+high-end DNNs, to allow, for the first time, utilization of cheaper, $12$-bits
+accumulators, with no significant degradation in accuracy. Lastly, we show that
+as we decrease the accumulation precision further, using fine-grained gradient
+approximations can improve the DNN accuracy.},
+ arxiv_url = {https://arxiv.org/pdf/2401.14110v1.pdf},
+ author = {Yaniv Blumenfeld and Itay Hubara and Daniel Soudry},
+ title = {Towards Cheaper Inference in Deep Networks with Lower Bit-Width Accumulators},
+ year = {2024}
+}
+
+@article{blumenfeld_2024_towards,
+ abstract = {The majority of the research on the quantization of Deep Neural Networks
+(DNNs) is focused on reducing the precision of tensors visible by high-level
+frameworks (e.g., weights, activations, and gradients). However, current
+hardware still relies on high-accuracy core operations. Most significant is the
+operation of accumulating products. This high-precision accumulation operation
+is gradually becoming the main computational bottleneck. This is because, so
+far, the usage of low-precision accumulators led to a significant degradation
+in performance. In this work, we present a simple method to train and fine-tune
+high-end DNNs, to allow, for the first time, utilization of cheaper, $12$-bits
+accumulators, with no significant degradation in accuracy. Lastly, we show that
+as we decrease the accumulation precision further, using fine-grained gradient
+approximations can improve the DNN accuracy.},
+ arxiv_url = {https://arxiv.org/pdf/2401.14110v1.pdf},
+ author = {Yaniv Blumenfeld and Itay Hubara and Daniel Soudry},
+ title = {Towards Cheaper Inference in Deep Networks with Lower Bit-Width Accumulators},
+ year = {2024}
+}
+
+@article{chen_2023_batch,
+ abstract = {Batching has a fundamental influence on the efficiency of deep neural network
+(DNN) execution. However, for dynamic DNNs, efficient batching is particularly
+challenging as the dataflow graph varies per input instance. As a result,
+state-of-the-art frameworks use heuristics that result in suboptimal batching
+decisions. Further, batching puts strict restrictions on memory adjacency and
+can lead to high data movement costs. In this paper, we provide an approach for
+batching dynamic DNNs based on finite state machines, which enables the
+automatic discovery of batching policies specialized for each DNN via
+reinforcement learning. Moreover, we find that memory planning that is aware of
+the batching policy can save significant data movement overheads, which is
+automated by a PQ tree-based algorithm we introduce. Experimental results show
+that our framework speeds up state-of-the-art frameworks by on average 1.15x,
+1.39x, and 2.45x for chain-based, tree-based, and lattice-based DNNs across CPU
+and GPU.},
+ arxiv_url = {https://arxiv.org/pdf/2302.03851v1.pdf},
+ author = {Siyuan Chen and Pratik Fegade and Tianqi Chen and Phillip B. Gibbons and Todd C. Mowry},
+ title = {ED-Batch: Efficient Automatic Batching of  Dynamic Neural Networks via Learned Finite State Machines},
+ year = {2023}
+}
+
+@article{gray_2024_normalization,
+ abstract = {Per-example gradient norms are a vital ingredient for estimating gradient
+noise scale (GNS) with minimal variance. Observing the tensor contractions
+required to compute them, we propose a method with minimal FLOPs in 3D or
+greater tensor regimes by simultaneously computing the norms while computing
+the parameter gradients. Using this method we are able to observe the GNS of
+different layers at higher accuracy than previously possible. We find that the
+total GNS of contemporary transformer models is predicted well by the GNS of
+only the normalization layers. As a result, focusing only on the normalization
+layer, we develop a custom kernel to compute the per-example gradient norms
+while performing the LayerNorm backward pass with zero throughput overhead.
+Tracking GNS on only those layers, we are able to guide a practical batch size
+schedule that reduces training time by 18% on a Chinchilla-optimal language
+model.},
+ arxiv_url = {https://arxiv.org/pdf/2411.00999v1.pdf},
+ author = {Gavia Gray and Aman Tiwari and Shane Bergsma and Joel Hestness},
+ github_url = {https://github.com/CerebrasResearch/nanoGNS},
+ title = {Normalization Layer Per-Example Gradients are Sufficient to Predict Gradient Noise Scale in Transformers},
+ year = {2024}
+}
+
+@article{hilton_2021_batch,
+ abstract = {We say an algorithm is batch size-invariant if changes to the batch size can
+largely be compensated for by changes to other hyperparameters. Stochastic
+gradient descent is well-known to have this property at small batch sizes, via
+the learning rate. However, some policy optimization algorithms (such as PPO)
+do not have this property, because of how they control the size of policy
+updates. In this work we show how to make these algorithms batch
+size-invariant. Our key insight is to decouple the proximal policy (used for
+controlling policy updates) from the behavior policy (used for off-policy
+corrections). Our experiments help explain why these algorithms work, and
+additionally show how they can make more efficient use of stale data.},
+ arxiv_url = {https://arxiv.org/pdf/2110.00641v3.pdf},
+ author = {Jacob Hilton and Karl Cobbe and John Schulman},
+ journal = {Advances in Neural Information Processing Systems 35 (2022)
+  17086-17098},
+ title = {Batch size-invariance for policy optimization},
+ year = {2021}
+}
+
+@article{ji_2019_history,
+ abstract = {Variance-reduced algorithms, although achieve great theoretical performance,
+can run slowly in practice due to the periodic gradient estimation with a large
+batch of data. Batch-size adaptation thus arises as a promising approach to
+accelerate such algorithms. However, existing schemes either apply prescribed
+batch-size adaption rule or exploit the information along optimization path via
+additional backtracking and condition verification steps. In this paper, we
+propose a novel scheme, which eliminates backtracking line search but still
+exploits the information along optimization path by adapting the batch size via
+history stochastic gradients. We further theoretically show that such a scheme
+substantially reduces the overall complexity for popular variance-reduced
+algorithms SVRG and SARAH/SPIDER for both conventional nonconvex optimization
+and reinforcement learning problems. To this end, we develop a new convergence
+analysis framework to handle the dependence of the batch size on history
+stochastic gradients. Extensive experiments validate the effectiveness of the
+proposed batch-size adaptation scheme.},
+ arxiv_url = {https://arxiv.org/pdf/1910.09670v4.pdf},
+ author = {Kaiyi Ji and Zhe Wang and Bowen Weng and Yi Zhou and Wei Zhang and Yingbin Liang},
+ title = {History-Gradient Aided Batch Size Adaptation for Variance Reduced Algorithms},
+ year = {2019}
+}
+
+@article{johnson_2020_adascale,
+ abstract = {When using large-batch training to speed up stochastic gradient descent,
+learning rates must adapt to new batch sizes in order to maximize speed-ups and
+preserve model quality. Re-tuning learning rates is resource intensive, while
+fixed scaling rules often degrade model quality. We propose AdaScale SGD, an
+algorithm that reliably adapts learning rates to large-batch training. By
+continually adapting to the gradient's variance, AdaScale automatically
+achieves speed-ups for a wide range of batch sizes. We formally describe this
+quality with AdaScale's convergence bound, which maintains final objective
+values, even as batch sizes grow large and the number of iterations decreases.
+In empirical comparisons, AdaScale trains well beyond the batch size limits of
+popular "linear learning rate scaling" rules. This includes large-batch
+training with no model degradation for machine translation, image
+classification, object detection, and speech recognition tasks. AdaScale's
+qualitative behavior is similar to that of "warm-up" heuristics, but unlike
+warm-up, this behavior emerges naturally from a principled mechanism. The
+algorithm introduces negligible computational overhead and no new
+hyperparameters, making AdaScale an attractive choice for large-scale training
+in practice.},
+ arxiv_url = {https://arxiv.org/pdf/2007.05105v1.pdf},
+ author = {Tyler B. Johnson and Pulkit Agrawal and Haijie Gu and Carlos Guestrin},
+ title = {AdaScale SGD: A User-Friendly Algorithm for Distributed Training},
+ year = {2020}
+}
+
+@article{lin_2018_don,
+ abstract = {Mini-batch stochastic gradient methods (SGD) are state of the art for
+distributed training of deep neural networks. Drastic increases in the
+mini-batch sizes have lead to key efficiency and scalability gains in recent
+years. However, progress faces a major roadblock, as models trained with large
+batches often do not generalize well, i.e. they do not show good accuracy on
+new data. As a remedy, we propose a \emph{post-local} SGD and show that it
+significantly improves the generalization performance compared to large-batch
+training on standard benchmarks while enjoying the same efficiency
+(time-to-accuracy) and scalability. We further provide an extensive study of
+the communication efficiency vs. performance trade-offs associated with a host
+of \emph{local SGD} variants.},
+ arxiv_url = {https://arxiv.org/pdf/1808.07217v6.pdf},
+ author = {Tao Lin and Sebastian U. Stich and Kumar Kshitij Patel and Martin Jaggi},
+ github_url = {https://github.com/epfml/LocalSGD-Code},
+ title = {Don't Use Large Mini-batches, Use Local SGD},
+ year = {2018}
+}
+
+@article{liu_2019_towards,
+ abstract = {Adaptive gradient algorithms perform gradient-based updates using the history
+of gradients and are ubiquitous in training deep neural networks. While
+adaptive gradient methods theory is well understood for minimization problems,
+the underlying factors driving their empirical success in min-max problems such
+as GANs remain unclear. In this paper, we aim at bridging this gap from both
+theoretical and empirical perspectives. First, we analyze a variant of
+Optimistic Stochastic Gradient (OSG) proposed in~\citep{daskalakis2017training}
+for solving a class of non-convex non-concave min-max problem and establish
+$O(\epsilon^{-4})$ complexity for finding $\epsilon$-first-order stationary
+point, in which the algorithm only requires invoking one stochastic first-order
+oracle while enjoying state-of-the-art iteration complexity achieved by
+stochastic extragradient method by~\citep{iusem2017extragradient}. Then we
+propose an adaptive variant of OSG named Optimistic Adagrad (OAdagrad) and
+reveal an \emph{improved} adaptive complexity
+$O\left(\epsilon^{-\frac{2}{1-\alpha}}\right)$, where $\alpha$ characterizes
+the growth rate of the cumulative stochastic gradient and $0\leq \alpha\leq
+1/2$. To the best of our knowledge, this is the first work for establishing
+adaptive complexity in non-convex non-concave min-max optimization.
+Empirically, our experiments show that indeed adaptive gradient algorithms
+outperform their non-adaptive counterparts in GAN training. Moreover, this
+observation can be explained by the slow growth rate of the cumulative
+stochastic gradient, as observed empirically.},
+ arxiv_url = {https://arxiv.org/pdf/1912.11940v2.pdf},
+ author = {Mingrui Liu and Youssef Mroueh and Jerret Ross and Wei Zhang and Xiaodong Cui and Payel Das and Tianbao Yang},
+ title = {Towards Better Understanding of Adaptive Gradient Algorithms in Generative Adversarial Nets},
+ year = {2019}
+}
+
+@article{smith_2020_the,
+ abstract = {It has long been argued that minibatch stochastic gradient descent can
+generalize better than large batch gradient descent in deep neural networks.
+However recent papers have questioned this claim, arguing that this effect is
+simply a consequence of suboptimal hyperparameter tuning or insufficient
+compute budgets when the batch size is large. In this paper, we perform
+carefully designed experiments and rigorous hyperparameter sweeps on a range of
+popular models, which verify that small or moderately large batch sizes can
+substantially outperform very large batches on the test set. This occurs even
+when both models are trained for the same number of iterations and large
+batches achieve smaller training losses. Our results confirm that the noise in
+stochastic gradients can enhance generalization. We study how the optimal
+learning rate schedule changes as the epoch budget grows, and we provide a
+theoretical account of our observations based on the stochastic differential
+equation perspective of SGD dynamics.},
+ arxiv_url = {https://arxiv.org/pdf/2006.15081v1.pdf},
+ author = {Samuel L. Smith and Erich Elsen and Soham De},
+ title = {On the Generalization Benefit of Noise in Stochastic Gradient Descent},
+ year = {2020}
+}
+
+@article{woodworth_2021_even,
+ abstract = {We present and analyze an algorithm for optimizing smooth and convex or
+strongly convex objectives using minibatch stochastic gradient estimates. The
+algorithm is optimal with respect to its dependence on both the minibatch size
+and minimum expected loss simultaneously. This improves over the optimal method
+of Lan (2012), which is insensitive to the minimum expected loss; over the
+optimistic acceleration of Cotter et al. (2011), which has suboptimal
+dependence on the minibatch size; and over the algorithm of Liu and Belkin
+(2018), which is limited to least squares problems and is also similarly
+suboptimal with respect to the minibatch size. Applied to interpolation
+learning, the improvement over Cotter et al. and Liu and Belkin translates to a
+linear, rather than square-root, parallelization speedup.},
+ arxiv_url = {https://arxiv.org/pdf/2106.02720v2.pdf},
+ author = {Blake Woodworth and Nathan Srebro},
+ title = {An Even More Optimal Stochastic Optimization Algorithm: Minibatching and Interpolation Learning},
+ year = {2021}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{author_year_low,
+ title = {Low latency rnn inference with cellular batching.}
+}
+
+@article{author_year_using,
+ title = {Using pq trees for comparative genomics.}
+}
+
+@article{chen_2018_tvm,
+ abstract = {There is an increasing need to bring machine learning to a wide diversity of
+hardware devices. Current frameworks rely on vendor-specific operator libraries
+and optimize for a narrow range of server-class GPUs. Deploying workloads to
+new platforms -- such as mobile phones, embedded devices, and accelerators
+(e.g., FPGAs, ASICs) -- requires significant manual effort. We propose TVM, a
+compiler that exposes graph-level and operator-level optimizations to provide
+performance portability to deep learning workloads across diverse hardware
+back-ends. TVM solves optimization challenges specific to deep learning, such
+as high-level operator fusion, mapping to arbitrary hardware primitives, and
+memory latency hiding. It also automates optimization of low-level programs to
+hardware characteristics by employing a novel, learning-based cost modeling
+method for rapid exploration of code optimizations. Experimental results show
+that TVM delivers performance across hardware back-ends that are competitive
+with state-of-the-art, hand-tuned libraries for low-power CPU, mobile GPU, and
+server-class GPUs. We also demonstrate TVM's ability to target new accelerator
+back-ends, such as the FPGA-based generic deep learning accelerator. The system
+is open sourced and in production use inside several major companies.},
+ arxiv_url = {https://arxiv.org/pdf/1802.04799v3.pdf},
+ author = {Tianqi Chen and Thierry Moreau and Ziheng Jiang and Lianmin Zheng and Eddie Yan and Meghan Cowan and Haichen Shen and Leyuan Wang and Yuwei Hu and Luis Ceze and Carlos Guestrin and Arvind Krishnamurthy},
+ title = {Tvm: An automated end-to-end optimizing compiler for deep learning.},
+ year = {2018}
+}

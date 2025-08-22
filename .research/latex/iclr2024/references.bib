@@ -5,3 +5,482 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{campbell_2022_continuous,
+ abstract = {We provide the first complete continuous time framework for denoising
+diffusion models of discrete data. This is achieved by formulating the forward
+noising process and corresponding reverse time generative process as Continuous
+Time Markov Chains (CTMCs). The model can be efficiently trained using a
+continuous time version of the ELBO. We simulate the high dimensional CTMC
+using techniques developed in chemical physics and exploit our continuous time
+framework to derive high performance samplers that we show can outperform
+discrete time methods for discrete data. The continuous time treatment also
+enables us to derive a novel theoretical result bounding the error between the
+generated sample distribution and the true data distribution.},
+ arxiv_url = {https://arxiv.org/pdf/2205.14987v2.pdf},
+ author = {Andrew Campbell and Joe Benton and Valentin De Bortoli and Tom Rainforth and George Deligiannidis and Arnaud Doucet},
+ github_url = {https://github.com/andrew-cr/tauLDR},
+ title = {A Continuous Time Framework for Discrete Denoising Models},
+ year = {2022}
+}
+
+@article{campbell_2022_continuous,
+ abstract = {We provide the first complete continuous time framework for denoising
+diffusion models of discrete data. This is achieved by formulating the forward
+noising process and corresponding reverse time generative process as Continuous
+Time Markov Chains (CTMCs). The model can be efficiently trained using a
+continuous time version of the ELBO. We simulate the high dimensional CTMC
+using techniques developed in chemical physics and exploit our continuous time
+framework to derive high performance samplers that we show can outperform
+discrete time methods for discrete data. The continuous time treatment also
+enables us to derive a novel theoretical result bounding the error between the
+generated sample distribution and the true data distribution.},
+ arxiv_url = {https://arxiv.org/pdf/2205.14987v2.pdf},
+ author = {Andrew Campbell and Joe Benton and Valentin De Bortoli and Tom Rainforth and George Deligiannidis and Arnaud Doucet},
+ github_url = {https://github.com/andrew-cr/tauLDR},
+ title = {A Continuous Time Framework for Discrete Denoising Models},
+ year = {2022}
+}
+
+@article{chen_2023_fast,
+ abstract = {Discrete diffusion models have emerged as powerful tools for high-quality
+data generation. Despite their success in discrete spaces, such as text
+generation tasks, the acceleration of discrete diffusion models remains
+under-explored. In this paper, we propose discrete non-Markov diffusion models
+(DNDM), which naturally induce the predetermined transition time set. This
+enables a training-free sampling algorithm that significantly reduces the
+number of function evaluations (i.e., calls to the neural network), making the
+sampling process much faster. Furthermore, we study the transition from finite
+to infinite step sampling, offering new insights into bridging the gap between
+discrete and continuous-time processes for discrete diffusion models. Extensive
+experiments on natural language generation and machine translation tasks
+demonstrate the superior performance of our method in terms of both generation
+speed and sample quality compared to existing methods for discrete diffusion
+models.},
+ arxiv_url = {https://arxiv.org/pdf/2312.09193v3.pdf},
+ author = {Zixiang Chen and Huizhuo Yuan and Yongqian Li and Yiwen Kou and Junkai Zhang and Quanquan Gu},
+ title = {Fast Sampling via Discrete Non-Markov Diffusion Models with Predetermined Transition Time},
+ year = {2023}
+}
+
+@article{chen_2023_fast,
+ abstract = {Discrete diffusion models have emerged as powerful tools for high-quality
+data generation. Despite their success in discrete spaces, such as text
+generation tasks, the acceleration of discrete diffusion models remains
+under-explored. In this paper, we propose discrete non-Markov diffusion models
+(DNDM), which naturally induce the predetermined transition time set. This
+enables a training-free sampling algorithm that significantly reduces the
+number of function evaluations (i.e., calls to the neural network), making the
+sampling process much faster. Furthermore, we study the transition from finite
+to infinite step sampling, offering new insights into bridging the gap between
+discrete and continuous-time processes for discrete diffusion models. Extensive
+experiments on natural language generation and machine translation tasks
+demonstrate the superior performance of our method in terms of both generation
+speed and sample quality compared to existing methods for discrete diffusion
+models.},
+ arxiv_url = {https://arxiv.org/pdf/2312.09193v3.pdf},
+ author = {Zixiang Chen and Huizhuo Yuan and Yongqian Li and Yiwen Kou and Junkai Zhang and Quanquan Gu},
+ title = {Fast Sampling via Discrete Non-Markov Diffusion Models with Predetermined Transition Time},
+ year = {2023}
+}
+
+@article{cohen_2022_diffusion,
+ abstract = {Vector Quantized-Variational AutoEncoders (VQ-VAE) are generative models
+based on discrete latent representations of the data, where inputs are mapped
+to a finite set of learned embeddings.To generate new samples, an
+autoregressive prior distribution over the discrete states must be trained
+separately. This prior is generally very complex and leads to slow generation.
+In this work, we propose a new model to train the prior and the encoder/decoder
+networks simultaneously. We build a diffusion bridge between a continuous coded
+vector and a non-informative prior distribution. The latent discrete states are
+then given as random functions of these continuous vectors. We show that our
+model is competitive with the autoregressive prior on the mini-Imagenet and
+CIFAR dataset and is efficient in both optimization and sampling. Our framework
+also extends the standard VQ-VAE and enables end-to-end training.},
+ arxiv_url = {https://arxiv.org/pdf/2202.04895v2.pdf},
+ author = {Max Cohen and Guillaume Quispe and Sylvain Le Corff and Charles Ollion and Eric Moulines},
+ title = {Diffusion bridges vector quantized variational autoencoders},
+ year = {2022}
+}
+
+@article{cohen_2022_diffusion,
+ abstract = {Vector Quantized-Variational AutoEncoders (VQ-VAE) are generative models
+based on discrete latent representations of the data, where inputs are mapped
+to a finite set of learned embeddings.To generate new samples, an
+autoregressive prior distribution over the discrete states must be trained
+separately. This prior is generally very complex and leads to slow generation.
+In this work, we propose a new model to train the prior and the encoder/decoder
+networks simultaneously. We build a diffusion bridge between a continuous coded
+vector and a non-informative prior distribution. The latent discrete states are
+then given as random functions of these continuous vectors. We show that our
+model is competitive with the autoregressive prior on the mini-Imagenet and
+CIFAR dataset and is efficient in both optimization and sampling. Our framework
+also extends the standard VQ-VAE and enables end-to-end training.},
+ arxiv_url = {https://arxiv.org/pdf/2202.04895v2.pdf},
+ author = {Max Cohen and Guillaume Quispe and Sylvain Le Corff and Charles Ollion and Eric Moulines},
+ title = {Diffusion bridges vector quantized variational autoencoders},
+ year = {2022}
+}
+
+@article{liu_2023_unified,
+ abstract = {Recent years have witnessed the rapid progress and broad application of
+diffusion probabilistic models (DPMs). Sampling from DPMs can be viewed as
+solving an ordinary differential equation (ODE). Despite the promising
+performance, the generation of DPMs usually consumes much time due to the large
+number of function evaluations (NFE). Though recent works have accelerated the
+sampling to around 20 steps with high-order solvers, the sample quality with
+less than 10 NFE can still be improved. In this paper, we propose a unified
+sampling framework (USF) to study the optional strategies for solver. Under
+this framework, we further reveal that taking different solving strategies at
+different timesteps may help further decrease the truncation error, and a
+carefully designed \emph{solver schedule} has the potential to improve the
+sample quality by a large margin. Therefore, we propose a new sampling
+framework based on the exponential integral formulation that allows free
+choices of solver strategy at each step and design specific decisions for the
+framework. Moreover, we propose $S^3$, a predictor-based search method that
+automatically optimizes the solver schedule to get a better time-quality
+trade-off of sampling. We demonstrate that $S^3$ can find outstanding solver
+schedules which outperform the state-of-the-art sampling methods on CIFAR-10,
+CelebA, ImageNet, and LSUN-Bedroom datasets. Specifically, we achieve 2.69 FID
+with 10 NFE and 6.86 FID with 5 NFE on CIFAR-10 dataset, outperforming the SOTA
+method significantly. We further apply $S^3$ to Stable-Diffusion model and get
+an acceleration ratio of 2$\times$, showing the feasibility of sampling in very
+few steps without retraining the neural network.},
+ arxiv_url = {https://arxiv.org/pdf/2312.07243v1.pdf},
+ author = {Enshu Liu and Xuefei Ning and Huazhong Yang and Yu Wang},
+ github_url = {https://github.com/wl-zhao/UniPC},
+ title = {A Unified Sampling Framework for Solver Searching of Diffusion Probabilistic Models},
+ year = {2023}
+}
+
+@article{lu_2022_dpm,
+ abstract = {Diffusion probabilistic models (DPMs) are emerging powerful generative
+models. Despite their high-quality generation performance, DPMs still suffer
+from their slow sampling as they generally need hundreds or thousands of
+sequential function evaluations (steps) of large neural networks to draw a
+sample. Sampling from DPMs can be viewed alternatively as solving the
+corresponding diffusion ordinary differential equations (ODEs). In this work,
+we propose an exact formulation of the solution of diffusion ODEs. The
+formulation analytically computes the linear part of the solution, rather than
+leaving all terms to black-box ODE solvers as adopted in previous works. By
+applying change-of-variable, the solution can be equivalently simplified to an
+exponentially weighted integral of the neural network. Based on our
+formulation, we propose DPM-Solver, a fast dedicated high-order solver for
+diffusion ODEs with the convergence order guarantee. DPM-Solver is suitable for
+both discrete-time and continuous-time DPMs without any further training.
+Experimental results show that DPM-Solver can generate high-quality samples in
+only 10 to 20 function evaluations on various datasets. We achieve 4.70 FID in
+10 function evaluations and 2.87 FID in 20 function evaluations on the CIFAR10
+dataset, and a $4\sim 16\times$ speedup compared with previous state-of-the-art
+training-free samplers on various datasets.},
+ arxiv_url = {https://arxiv.org/pdf/2206.00927v3.pdf},
+ author = {Cheng Lu and Yuhao Zhou and Fan Bao and Jianfei Chen and Chongxuan Li and Jun Zhu},
+ github_url = {https://github.com/LuChengTHU/dpm-solver},
+ title = {DPM-Solver: A Fast ODE Solver for Diffusion Probabilistic Model Sampling in Around 10 Steps},
+ year = {2022}
+}
+
+@article{lu_2022_dpm,
+ abstract = {Diffusion probabilistic models (DPMs) are emerging powerful generative
+models. Despite their high-quality generation performance, DPMs still suffer
+from their slow sampling as they generally need hundreds or thousands of
+sequential function evaluations (steps) of large neural networks to draw a
+sample. Sampling from DPMs can be viewed alternatively as solving the
+corresponding diffusion ordinary differential equations (ODEs). In this work,
+we propose an exact formulation of the solution of diffusion ODEs. The
+formulation analytically computes the linear part of the solution, rather than
+leaving all terms to black-box ODE solvers as adopted in previous works. By
+applying change-of-variable, the solution can be equivalently simplified to an
+exponentially weighted integral of the neural network. Based on our
+formulation, we propose DPM-Solver, a fast dedicated high-order solver for
+diffusion ODEs with the convergence order guarantee. DPM-Solver is suitable for
+both discrete-time and continuous-time DPMs without any further training.
+Experimental results show that DPM-Solver can generate high-quality samples in
+only 10 to 20 function evaluations on various datasets. We achieve 4.70 FID in
+10 function evaluations and 2.87 FID in 20 function evaluations on the CIFAR10
+dataset, and a $4\sim 16\times$ speedup compared with previous state-of-the-art
+training-free samplers on various datasets.},
+ arxiv_url = {https://arxiv.org/pdf/2206.00927v3.pdf},
+ author = {Cheng Lu and Yuhao Zhou and Fan Bao and Jianfei Chen and Chongxuan Li and Jun Zhu},
+ github_url = {https://github.com/LuChengTHU/dpm-solver},
+ title = {DPM-Solver: A Fast ODE Solver for Diffusion Probabilistic Model Sampling in Around 10 Steps},
+ year = {2022}
+}
+
+@article{phung_2022_wavelet,
+ abstract = {Diffusion models are rising as a powerful solution for high-fidelity image
+generation, which exceeds GANs in quality in many circumstances. However, their
+slow training and inference speed is a huge bottleneck, blocking them from
+being used in real-time applications. A recent DiffusionGAN method
+significantly decreases the models' running time by reducing the number of
+sampling steps from thousands to several, but their speeds still largely lag
+behind the GAN counterparts. This paper aims to reduce the speed gap by
+proposing a novel wavelet-based diffusion scheme. We extract low-and-high
+frequency components from both image and feature levels via wavelet
+decomposition and adaptively handle these components for faster processing
+while maintaining good generation quality. Furthermore, we propose to use a
+reconstruction term, which effectively boosts the model training convergence.
+Experimental results on CelebA-HQ, CIFAR-10, LSUN-Church, and STL-10 datasets
+prove our solution is a stepping-stone to offering real-time and high-fidelity
+diffusion models. Our code and pre-trained checkpoints are available at
+\url{https://github.com/VinAIResearch/WaveDiff.git}.},
+ arxiv_url = {https://arxiv.org/pdf/2211.16152v2.pdf},
+ author = {Hao Phung and Quan Dao and Anh Tran},
+ title = {Wavelet Diffusion Models Are Fast and Scalable Image Generators},
+ year = {2022}
+}
+
+@article{salimans_2024_multistep,
+ abstract = {We present a new method for making diffusion models faster to sample. The
+method distills many-step diffusion models into few-step models by matching
+conditional expectations of the clean data given noisy data along the sampling
+trajectory. Our approach extends recently proposed one-step methods to the
+multi-step case, and provides a new perspective by interpreting these
+approaches in terms of moment matching. By using up to 8 sampling steps, we
+obtain distilled models that outperform not only their one-step versions but
+also their original many-step teacher models, obtaining new state-of-the-art
+results on the Imagenet dataset. We also show promising results on a large
+text-to-image model where we achieve fast generation of high resolution images
+directly in image space, without needing autoencoders or upsamplers.},
+ arxiv_url = {https://arxiv.org/pdf/2406.04103v1.pdf},
+ author = {Tim Salimans and Thomas Mensink and Jonathan Heek and Emiel Hoogeboom},
+ github_url = {https://github.com/google/jax},
+ title = {Multistep Distillation of Diffusion Models via Moment Matching},
+ year = {2024}
+}
+
+@article{salimans_2024_multistep,
+ abstract = {We present a new method for making diffusion models faster to sample. The
+method distills many-step diffusion models into few-step models by matching
+conditional expectations of the clean data given noisy data along the sampling
+trajectory. Our approach extends recently proposed one-step methods to the
+multi-step case, and provides a new perspective by interpreting these
+approaches in terms of moment matching. By using up to 8 sampling steps, we
+obtain distilled models that outperform not only their one-step versions but
+also their original many-step teacher models, obtaining new state-of-the-art
+results on the Imagenet dataset. We also show promising results on a large
+text-to-image model where we achieve fast generation of high resolution images
+directly in image space, without needing autoencoders or upsamplers.},
+ arxiv_url = {https://arxiv.org/pdf/2406.04103v1.pdf},
+ author = {Tim Salimans and Thomas Mensink and Jonathan Heek and Emiel Hoogeboom},
+ github_url = {https://github.com/google/jax},
+ title = {Multistep Distillation of Diffusion Models via Moment Matching},
+ year = {2024}
+}
+
+@article{salimans_2024_multistep,
+ abstract = {We present a new method for making diffusion models faster to sample. The
+method distills many-step diffusion models into few-step models by matching
+conditional expectations of the clean data given noisy data along the sampling
+trajectory. Our approach extends recently proposed one-step methods to the
+multi-step case, and provides a new perspective by interpreting these
+approaches in terms of moment matching. By using up to 8 sampling steps, we
+obtain distilled models that outperform not only their one-step versions but
+also their original many-step teacher models, obtaining new state-of-the-art
+results on the Imagenet dataset. We also show promising results on a large
+text-to-image model where we achieve fast generation of high resolution images
+directly in image space, without needing autoencoders or upsamplers.},
+ arxiv_url = {https://arxiv.org/pdf/2406.04103v1.pdf},
+ author = {Tim Salimans and Thomas Mensink and Jonathan Heek and Emiel Hoogeboom},
+ github_url = {https://github.com/google/jax},
+ title = {Multistep Distillation of Diffusion Models via Moment Matching},
+ year = {2024}
+}
+
+@article{santos_2023_blackout,
+ abstract = {Typical generative diffusion models rely on a Gaussian diffusion process for
+training the backward transformations, which can then be used to generate
+samples from Gaussian noise. However, real world data often takes place in
+discrete-state spaces, including many scientific applications. Here, we develop
+a theoretical formulation for arbitrary discrete-state Markov processes in the
+forward diffusion process using exact (as opposed to variational) analysis. We
+relate the theory to the existing continuous-state Gaussian diffusion as well
+as other approaches to discrete diffusion, and identify the corresponding
+reverse-time stochastic process and score function in the continuous-time
+setting, and the reverse-time mapping in the discrete-time setting. As an
+example of this framework, we introduce ``Blackout Diffusion'', which learns to
+produce samples from an empty image instead of from noise. Numerical
+experiments on the CIFAR-10, Binarized MNIST, and CelebA datasets confirm the
+feasibility of our approach. Generalizing from specific (Gaussian) forward
+processes to discrete-state processes without a variational approximation sheds
+light on how to interpret diffusion models, which we discuss.},
+ arxiv_url = {https://arxiv.org/pdf/2305.11089v1.pdf},
+ author = {Javier E Santos and Zachary R. Fox and Nicholas Lubbers and Yen Ting Lin},
+ title = {Blackout Diffusion: Generative Diffusion Models in Discrete-State Spaces},
+ year = {2023}
+}
+
+@article{wizadwongsa_2023_diffusion,
+ abstract = {Despite the remarkable success of diffusion models in image generation, slow
+sampling remains a persistent issue. To accelerate the sampling process, prior
+studies have reformulated diffusion sampling as an ODE/SDE and introduced
+higher-order numerical methods. However, these methods often produce divergence
+artifacts, especially with a low number of sampling steps, which limits the
+achievable acceleration. In this paper, we investigate the potential causes of
+these artifacts and suggest that the small stability regions of these methods
+could be the principal cause. To address this issue, we propose two novel
+techniques. The first technique involves the incorporation of Heavy Ball (HB)
+momentum, a well-known technique for improving optimization, into existing
+diffusion numerical methods to expand their stability regions. We also prove
+that the resulting methods have first-order convergence. The second technique,
+called Generalized Heavy Ball (GHVB), constructs a new high-order method that
+offers a variable trade-off between accuracy and artifact suppression.
+Experimental results show that our techniques are highly effective in reducing
+artifacts and improving image quality, surpassing state-of-the-art diffusion
+solvers on both pixel-based and latent-based diffusion models for low-step
+sampling. Our research provides novel insights into the design of numerical
+methods for future diffusion work.},
+ arxiv_url = {https://arxiv.org/pdf/2307.11118v1.pdf},
+ author = {Suttisak Wizadwongsa and Worameth Chinchuthakun and Pramook Khungurn and Amit Raj and Supasorn Suwajanakorn},
+ github_url = {https://github.com/LuChengTHU/dpm-solver},
+ title = {Diffusion Sampling with Momentum for Mitigating Divergence Artifacts},
+ year = {2023}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{austin_2021_structured,
+ abstract = {Denoising diffusion probabilistic models (DDPMs) (Ho et al. 2020) have shown
+impressive results on image and waveform generation in continuous state spaces.
+Here, we introduce Discrete Denoising Diffusion Probabilistic Models (D3PMs),
+diffusion-like generative models for discrete data that generalize the
+multinomial diffusion model of Hoogeboom et al. 2021, by going beyond
+corruption processes with uniform transition probabilities. This includes
+corruption with transition matrices that mimic Gaussian kernels in continuous
+space, matrices based on nearest neighbors in embedding space, and matrices
+that introduce absorbing states. The third allows us to draw a connection
+between diffusion models and autoregressive and mask-based generative models.
+We show that the choice of transition matrix is an important design decision
+that leads to improved results in image and text domains. We also introduce a
+new loss function that combines the variational lower bound with an auxiliary
+cross entropy loss. For text, this model class achieves strong results on
+character-level text generation while scaling to large vocabularies on LM1B. On
+the image dataset CIFAR-10, our models approach the sample quality and exceed
+the log-likelihood of the continuous-space DDPM model.},
+ arxiv_url = {https://arxiv.org/pdf/2107.03006v3.pdf},
+ author = {Jacob Austin and Daniel D. Johnson and Jonathan Ho and Daniel Tarlow and Rianne van den Berg},
+ title = {Structured denoising diffusion models in discrete state-spaces.},
+ year = {2021}
+}
+
+@article{dhariwal_2021_diffusion,
+ abstract = {We show that diffusion models can achieve image sample quality superior to
+the current state-of-the-art generative models. We achieve this on
+unconditional image synthesis by finding a better architecture through a series
+of ablations. For conditional image synthesis, we further improve sample
+quality with classifier guidance: a simple, compute-efficient method for
+trading off diversity for fidelity using gradients from a classifier. We
+achieve an FID of 2.97 on ImageNet 128$\times$128, 4.59 on ImageNet
+256$\times$256, and 7.72 on ImageNet 512$\times$512, and we match BigGAN-deep
+even with as few as 25 forward passes per sample, all while maintaining better
+coverage of the distribution. Finally, we find that classifier guidance
+combines well with upsampling diffusion models, further improving FID to 3.94
+on ImageNet 256$\times$256 and 3.85 on ImageNet 512$\times$512. We release our
+code at https://github.com/openai/guided-diffusion},
+ arxiv_url = {https://arxiv.org/pdf/2105.05233v4.pdf},
+ author = {Prafulla Dhariwal and Alex Nichol},
+ title = {Diffusion models beat GANs on image synthesis.},
+ year = {2021}
+}
+
+@article{ho_2020_denoising,
+ abstract = {We present high quality image synthesis results using diffusion probabilistic
+models, a class of latent variable models inspired by considerations from
+nonequilibrium thermodynamics. Our best results are obtained by training on a
+weighted variational bound designed according to a novel connection between
+diffusion probabilistic models and denoising score matching with Langevin
+dynamics, and our models naturally admit a progressive lossy decompression
+scheme that can be interpreted as a generalization of autoregressive decoding.
+On the unconditional CIFAR10 dataset, we obtain an Inception score of 9.46 and
+a state-of-the-art FID score of 3.17. On 256x256 LSUN, we obtain sample quality
+similar to ProgressiveGAN. Our implementation is available at
+https://github.com/hojonathanho/diffusion},
+ arxiv_url = {https://arxiv.org/pdf/2006.11239v2.pdf},
+ author = {Jonathan Ho and Ajay Jain and Pieter Abbeel},
+ title = {Denoising diffusion probabilistic models.},
+ year = {2020}
+}
+
+@article{hoogeboom_2021_autoregressive,
+ abstract = {We introduce Autoregressive Diffusion Models (ARDMs), a model class
+encompassing and generalizing order-agnostic autoregressive models (Uria et
+al., 2014) and absorbing discrete diffusion (Austin et al., 2021), which we
+show are special cases of ARDMs under mild assumptions. ARDMs are simple to
+implement and easy to train. Unlike standard ARMs, they do not require causal
+masking of model representations, and can be trained using an efficient
+objective similar to modern probabilistic diffusion models that scales
+favourably to highly-dimensional data. At test time, ARDMs support parallel
+generation which can be adapted to fit any given generation budget. We find
+that ARDMs require significantly fewer steps than discrete diffusion models to
+attain the same performance. Finally, we apply ARDMs to lossless compression,
+and show that they are uniquely suited to this task. Contrary to existing
+approaches based on bits-back coding, ARDMs obtain compelling results not only
+on complete datasets, but also on compressing single data points. Moreover,
+this can be done using a modest number of network calls for (de)compression due
+to the model's adaptable parallel generation.},
+ arxiv_url = {https://arxiv.org/pdf/2110.02037v2.pdf},
+ author = {Emiel Hoogeboom and Alexey A. Gritsenko and Jasmijn Bastings and Ben Poole and Rianne van den Berg and Tim Salimans},
+ title = {Autoregressive diffusion models.},
+ year = {2021}
+}
+
+@article{song_2019_generative,
+ abstract = {We introduce a new generative model where samples are produced via Langevin
+dynamics using gradients of the data distribution estimated with score
+matching. Because gradients can be ill-defined and hard to estimate when the
+data resides on low-dimensional manifolds, we perturb the data with different
+levels of Gaussian noise, and jointly estimate the corresponding scores, i.e.,
+the vector fields of gradients of the perturbed data distribution for all noise
+levels. For sampling, we propose an annealed Langevin dynamics where we use
+gradients corresponding to gradually decreasing noise levels as the sampling
+process gets closer to the data manifold. Our framework allows flexible model
+architectures, requires no sampling during training or the use of adversarial
+methods, and provides a learning objective that can be used for principled
+model comparisons. Our models produce samples comparable to GANs on MNIST,
+CelebA and CIFAR-10 datasets, achieving a new state-of-the-art inception score
+of 8.87 on CIFAR-10. Additionally, we demonstrate that our models learn
+effective representations via image inpainting experiments.},
+ arxiv_url = {https://arxiv.org/pdf/1907.05600v3.pdf},
+ author = {Yang Song and Stefano Ermon},
+ title = {Generative modeling by estimating gradients of the data distribution.},
+ year = {2019}
+}
+
+@article{song_2020_score,
+ abstract = {Creating noise from data is easy; creating data from noise is generative
+modeling. We present a stochastic differential equation (SDE) that smoothly
+transforms a complex data distribution to a known prior distribution by slowly
+injecting noise, and a corresponding reverse-time SDE that transforms the prior
+distribution back into the data distribution by slowly removing the noise.
+Crucially, the reverse-time SDE depends only on the time-dependent gradient
+field (\aka, score) of the perturbed data distribution. By leveraging advances
+in score-based generative modeling, we can accurately estimate these scores
+with neural networks, and use numerical SDE solvers to generate samples. We
+show that this framework encapsulates previous approaches in score-based
+generative modeling and diffusion probabilistic modeling, allowing for new
+sampling procedures and new modeling capabilities. In particular, we introduce
+a predictor-corrector framework to correct errors in the evolution of the
+discretized reverse-time SDE. We also derive an equivalent neural ODE that
+samples from the same distribution as the SDE, but additionally enables exact
+likelihood computation, and improved sampling efficiency. In addition, we
+provide a new way to solve inverse problems with score-based models, as
+demonstrated with experiments on class-conditional generation, image
+inpainting, and colorization. Combined with multiple architectural
+improvements, we achieve record-breaking performance for unconditional image
+generation on CIFAR-10 with an Inception score of 9.89 and FID of 2.20, a
+competitive likelihood of 2.99 bits/dim, and demonstrate high fidelity
+generation of 1024 x 1024 images for the first time from a score-based
+generative model.},
+ arxiv_url = {https://arxiv.org/pdf/2011.13456v2.pdf},
+ author = {Yang Song and Jascha Sohl-Dickstein and Diederik P. Kingma and Abhishek Kumar and Stefano Ermon and Ben Poole},
+ title = {Score-based generative modeling through stochastic differential equations.},
+ year = {2020}
+}

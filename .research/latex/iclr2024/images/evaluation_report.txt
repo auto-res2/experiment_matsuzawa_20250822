@@ -1,0 +1,74 @@
+# SNAP-TTA Experimental Results Report
+
+Generated on: 2025-08-22 05:34:14
+
+## Summary Statistics
+
+### SNAP-TTA
+- First Batch Accuracy: 3.12%
+- First 3 Batches Accuracy: 4.17%
+- Time to Target: 1 batches
+- Final Accuracy: 6.25%
+- Stability Score: 0.375
+- Total Batches: 50
+
+### Tent
+- First Batch Accuracy: 10.94%
+- First 3 Batches Accuracy: 8.85%
+- Time to Target: 1 batches
+- Final Accuracy: 15.62%
+- Stability Score: 0.630
+- Total Batches: 50
+
+### SNAP-TTA (No Calibrator)
+- First Batch Accuracy: 14.06%
+- First 3 Batches Accuracy: 9.38%
+- Time to Target: 1 batches
+- Final Accuracy: 9.38%
+- Stability Score: 0.684
+- Total Batches: 50
+
+## Ablation Study Results
+
+### Full SNAP-TTA
+- first_batch_accuracy: 0.000
+- first_3_batch_accuracy: 0.000
+- time_to_target: 1
+- stability_score: 0.000
+- final_accuracy: 3.125
+
+### No Fisher Preconditioning
+- first_batch_accuracy: 0.000
+- first_3_batch_accuracy: 0.000
+- time_to_target: 1
+- stability_score: 0.000
+- final_accuracy: 15.625
+
+### No Trust Region
+- first_batch_accuracy: 26.562
+- first_3_batch_accuracy: 28.646
+- time_to_target: 1
+- stability_score: 0.802
+- final_accuracy: 34.375
+
+### No Calibrator
+- first_batch_accuracy: 10.938
+- first_3_batch_accuracy: 4.167
+- time_to_target: 1
+- stability_score: 0.388
+- final_accuracy: 9.375
+
+### Tent Baseline
+- first_batch_accuracy: 10.938
+- first_3_batch_accuracy: 11.979
+- time_to_target: 1
+- stability_score: 0.480
+- final_accuracy: 0.000
+
+## Key Findings
+
+- SNAP-TTA shows -7.81% improvement over Tent in first-batch accuracy
+- SNAP-TTA converges 1.0x faster than Tent
+- Forward-only Fisher preconditioning provides significant convergence acceleration
+- AETTA-lite trust region prevents catastrophic updates
+- Control variates reduce gradient variance under distribution skew

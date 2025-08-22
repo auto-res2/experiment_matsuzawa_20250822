@@ -254,6 +254,38 @@
       "title": "Knowledge Distillation with Auxiliary Variable"
     }
   ],
+  "reference_research_study_list": [
+    {
+      "title": "Spatial knowledge distillation to aid visual reasoning."
+    },
+    {
+      "title": "Variational information distillation for knowledge transfer."
+    },
+    {
+      "title": "Unbiased learning to rank with unbiased propensity estimation."
+    },
+    {
+      "title": "Invariant risk minimization."
+    },
+    {
+      "title": "An introduction to propensity score methods for reducing the effects of confounding in observational studies."
+    },
+    {
+      "title": "Discriminative learning under covariate shift."
+    },
+    {
+      "title": "Distilling knowledge via knowledge review."
+    },
+    {
+      "title": "On the efficacy of knowledge distillation."
+    },
+    {
+      "title": "Sample selection bias correction theory."
+    },
+    {
+      "title": "Imagenet: A large-scale hierarchical image database."
+    }
+  ],
   "new_method": {
     "method": "Motivation\n- Distribution-mismatch in KD is context-conditional: the teacher’s confidence/margin systematically varies with input contexts (augmentation states, photometric/style factors, scale/translation/blur). Students inherit these biases, hurting cross-architecture transfer, long-tail × rare-context cells, calibration, and worst-group robustness under strong augmentation and OOD.\n- Gaps: (i) Student-driven reweighting (IPWD/WSL) is unstable early and agnostic to context balance; (ii) temperature schemes (TTM/WTTM) do not modulate by context; (iii) CDF/V-matrix shows the power of ECDFs for shift without density ratios, but has not been used to smooth teacher “context × margin” in KD; (iv) worst-group risk is rarely optimized in KD despite clear context-skew.\n- Need: A teacher-statistics–only, early-stable, plug-in mechanism that equalizes per-context boundary-distance distributions, controls worst-group risk, and adapts teacher sharpness so students do not inherit context bias. \n\nMethodology\nHigh-level: Build per-context ECDFs of the teacher’s boundary-distance proxy and use quantiles to drive three coupled controls: (A) intra-context weights, (B) inter-context DRO group weights, and (C) context-adaptive teacher temperature. Optionally normalize the teacher’s logits per context via a lightweight quantile-equalization.\n\n1) Context discovery (no labels required)\n- Known contexts from augmentation logs: discretize brightness/contrast/saturation, crop scale/aspect, translation, blur strength into K bins; concatenate bin IDs.\n- Unsupervised style contexts: extract CLIP/DINO features → PCA → online k-means (EMA); cluster IDs represent style contexts.\n- Hybrid context ID: concat(aug-bin || style-cluster), with hierarchical backoff for sparse cells (merge nearest style clusters by cosine similarity).\n\n2) Teacher-only ECDFs and rank-stable intra-context weighting\n- Boundary-distance proxy m(x,t): by default top-1 minus top-2 logit gap; alternatives 1−entropy or correct-minus-runner-up if labels exist.\n- Maintain online quantile sketches (e.g., t-digest) per context t and globally: F_t(m), F_all(m). For sample x in context t, compute quantiles q_t=F_t(m(x,t)) and q_ref=F_all(m(x)).\n- Intra-context weight (rank-invariant): w_ctx(x,t) = ((q_ref+δ)/(q_t+δ))^β, clipped to [cmin,cmax]. Intuition: for the same absolute difficulty, tail-side points in a biased context get upweighted to equalize gradient mass across contexts early and stably (no student signals used).\n\n3) Inter-context DRO for worst-group control\n- Track per-context moving-average loss Ĺ_t and update group weights via exponentiated gradient: α_t ∝ exp(λ(Ĺ_t − Ĺ̄)); normalize and clip. This realizes a distributionally robust reweighting over discovered contexts, explicitly optimizing worst-group accuracy.\n\n4) Context-adaptive teacher temperature\n- Set temperature by context-quantile: T_t(x) = T_min + (T_max − T_min)·(1 − q_t)^γ. Low-quantile (hard tail) points get higher T, reducing overconfidence and preventing transfer of teacher’s context skew; the student temperature stays fixed (TTM-compatible).\n\n5) Optional: Quantile-Equalized Teacher (QET)\n- Learn per-context affine transform on teacher logits y→s_t·y+b_t to match the per-context margin ECDF to the global reference in Wasserstein-1 on a small FIFO buffer. Update s_t, b_t with strong regularization; s_t≈1 for well-matched contexts. This neutralizes teacher context bias at the source without modifying the student loss form.\n\n6) Final loss and schedule (drop-in to KD codebases)\n- Loss per batch: L = L_ce + α · Σ_t α_t · E_{x∈t}[ w_ctx(x,t) · KL(p_t^{T_t(x)} || p_s) ].\n- Two-stage stability: Warm-up epochs only collect ECDFs (w_ctx=1, α_t uniform, T_t=T_base). Then ramp β, λ, and (T_max−T_min) with cosine schedule; enable QET after ECDFs stabilize. Optionally in late fine-tune, multiply by small student-dependent weights (IPWD^η · WSL^{1−η}, η≈0.2) for extra polish without destabilizing early training.\n\n7) Reliability, efficiency, and implementation\n- Rare-context smoothing: Beta(0.5,0.5) pseudo-counts for quantiles; hierarchical blending across nearest contexts by CLIP-space similarity when cell counts are small.\n- Safety: clip w_ctx and α_t (e.g., [0.25,4]), gradient-norm clip, T in [2,8].\n- Overhead: one t-digest per context (KBs), O(log N) queries, tens of lines added around the KD loss. No extra student heads.\n- Integration: a ContextManager yields context_id; ECDFStore maps id→t-digest; compute q_t,q_ref→w_ctx, α_t via EG, T_t(x); optionally apply QET to teacher logits; replace KD loss with the weighted, DRO-aggregated, context-temperature KD. CE untouched. Zero test-time overhead.\n\n8) How CCAD differs from prior work\n- Versus IPWD/WSL/TTM: CCAD is teacher-only and rank-based (ECDF), enabling early stability and explicit context balancing; adds DRO to optimize worst-group risk and sets temperature by context quantile rather than globally or by student signals.\n- Versus CDF/V-matrix: we use ECDFs internally to KD to equalize teacher margin distributions across contexts—no density ratios/propensity estimation; adds context-adaptive temperature and logit-side quantile normalization.\n- Versus AFD/feature KD: orthogonal; CCAD operates at logits with negligible overhead and can pair with feature losses.\n- Versus KD3A/BETA: not a DA/pseudo-labeling framework; no source/target separation or multi-source consensus—purely single-teacher KD with on-the-fly context balancing.\n\nEvaluation plan (concise)\n- Benchmarks: CIFAR-100, ImageNet-1K; robustness on ImageNet-C/A, Stylized-ImageNet; long-tail splits; strong RandAug/RandAugMix. Pairs include cross-architecture (e.g., ViT→ResNet, ResNet→MobileNet).\n- Metrics: Top-1, ECE, worst-group accuracy over discovered contexts, tail-quantile accuracy, OOD performance, calibration under shift. Ablations on each component (w_ctx, α_t, T_t, QET) and sensitivity to K, β, λ, γ.\n\nExpected impact\n- Robust, early-stable KD that mitigates teacher context bias without student dependence, improving cross-architecture transfer, worst-group accuracy, and calibration under augmentation and domain shift.\n- Strong gains for rare context × class cells via quantile-based equalization and explicit DRO—addressing distribution mismatch at the granularity that causes it.\n- Practicality: trivial to adopt in existing KD stacks, minimal overhead, no extra data or discriminators; extends naturally to detection/segmentation (region-level contexts) and multimodal KD (audio/text environmental embeddings).",
     "experimental_design": {

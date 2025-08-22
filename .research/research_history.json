@@ -383,6 +383,38 @@
       }
     }
   ],
+  "reference_research_study_list": [
+    {
+      "title": "Network Flows: Theory, Algorithms, and Applications."
+    },
+    {
+      "title": "Building normalizing flows with stochastic interpolants."
+    },
+    {
+      "title": "Analytic-DPM: an analytic estimate of the optimal reverse variance in diffusion probabilistic models."
+    },
+    {
+      "title": "Neural ordinary differential equations."
+    },
+    {
+      "title": "GANs trained by a two time-scale update rule converge to a local Nash equilibrium."
+    },
+    {
+      "title": "Denoising diffusion probabilistic models."
+    },
+    {
+      "title": "Progressive growing of GANs for improved quality, stability, and variation."
+    },
+    {
+      "title": "Elucidating the design space of diffusion-based generative models."
+    },
+    {
+      "title": "Learning multiple layers of features from tiny images."
+    },
+    {
+      "title": "Autodiffusion: Training-free optimization of time steps and architectures for automated diffusion model acceleration."
+    }
+  ],
   "new_method": {
     "method": "{\"Motivation\": \"Current research in geometrically efficient generative models is bifurcated between the practical but approximate multi-stage refinement of Rectified Flow (RF) and the theoretically exact but computationally infeasible single-stage Optimal Flow Matching (OFM). OFM's impracticality for high-dimensional data stems from two severe bottlenecks within each training step: an iterative convex solver for flow map inversion and a brute-force Hessian matrix inversion for gradient calculation. This research introduces Amortized Optimal Flow Matching (AOFM), a novel framework designed to achieve the theoretical exactness of OFM within a computationally tractable, single-stage training process. By replacing OFM's expensive iterative subroutines with jointly trained, amortized neural networks, AOFM aims to deliver a long-sought goal in this field: a model that learns the most geometrically efficient (straight Optimal Transport) paths in a single pass, completely obviating the error accumulation and high training costs of multi-stage reflowing.\", \"Methodology\": \"AOFM re-architects the OFM training procedure to be fully end-to-end by introducing two core innovations that eliminate its computational bottlenecks. The framework jointly trains the primary Input Convex Neural Network (ICNN), `Ψ_phi`, which parameterizes the OT potential, alongside a new 'Inverter Network', `I_theta`, which approximates the flow map inversion. 1. **Amortized Flow Map Inversion:** We replace OFM's costly per-step L-BFGS optimization with a single forward pass of the Inverter Network `I_theta(Xt, t)`. Crucially, `I_theta` is not trained on pre-computed targets but is optimized jointly with `Ψ_phi` via a self-consistency loss derived directly from the Karush-Kuhn-Tucker (KKT) optimality conditions of the original convex subproblem. This loss, `Loss_inv = E[ || t * ∇Ψ_phi(I_theta(Xt, t)) - Xt + (1-t)I_theta(Xt, t) ||^2 ]`, forces the Inverter Network to learn the solution manifold of the optimization problem, effectively transforming an iterative procedure into an efficient, differentiable component. This differs from all prior work by learning the solver's behavior rather than repeatedly executing it. 2. **Hessian-Free Gradient via Conjugate Gradient:** To circumvent the prohibitive O(D^3) cost of Hessian inversion required for the OFM loss gradient, we reframe the necessary inverse-Hessian-vector product (IHVP) computation as solving a system of linear equations. We employ the Conjugate Gradient (CG) algorithm, an iterative linear solver that only requires Hessian-vector products (HVPs). HVPs can be computed efficiently via automatic differentiation at a cost comparable to a single gradient evaluation (O(D)). By using a small, fixed number of CG iterations, we reduce the gradient complexity from cubic to nearly linear in the data dimension D, making the training of an exact OT model scalable for the first time.\", \"Expected impact\": \"1. **A New Performance Frontier for Single-Stage Generative Models:** By making the training of exact OT maps computationally feasible, AOFM is expected to establish a new state-of-the-art for few-step, and particularly one-step (NFE=1), generative modeling. By directly learning the theoretically shortest paths without the error accumulation of iterative methods like RF and 2-RF++, it should produce higher-fidelity samples from a single, non-distilled model. 2. **Bridging the Theory-Practice Gap in Scalable Optimal Transport:** AOFM will transition the powerful theoretical guarantees of OT from a specialized tool to a practical method for large-scale, high-dimensional applications previously out of reach, such as high-resolution image generation, computational biology, and physics simulations, where OFM's exactness is desirable but its cost was prohibitive. 3. **A Generalizable Blueprint for Amortized Optimization:** The core technique of replacing an internal, iterative optimization solver with a jointly trained, self-consistent neural network introduces a powerful and generalizable methodology. This 'amortized optimization' paradigm has the potential to accelerate a wide range of complex models in fields like bi-level optimization, inverse problems, and physics-informed machine learning that are currently bottlenecked by expensive iterative subroutines.\"}",
     "experimental_design": {

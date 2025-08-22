@@ -145,12 +145,12 @@ To ensure generalizability, our experimental design includes a diverse set of op
 \end{itemize}
 
 \textbf{Experimental Protocol}
-For each question in the datasets, we generate an ensemble of $k=10$ responses using nucleus sampling (`top_p=0.9`, `temperature=0.7`). During generation, we use PyTorch hooks on the final pre-layer-norm module to extract the hidden state for every generated token, forming $k$ latent trajectories.
+For each question in the datasets, we generate an ensemble of $k=10$ responses using nucleus sampling (\texttt{top\_p=0.9}, \texttt{temperature=0.7}). During generation, we use PyTorch hooks on the final pre-layer-norm module to extract the hidden state for every generated token, forming $k$ latent trajectories.
 
 We compute the following uncertainty scores for each generated ensemble:
 \begin{enumerate}
     \item \textbf{LTD Score (Ours):} Calculated as the average FastDTW distance (with cosine metric) between each trajectory and the ensemble's barycenter, computed using DTW Barycenter Averaging.
-    \item \textbf{Semantic Entropy (SE):} We embed each of the $k$ text responses using a sentence-transformer (`all-MiniLM-L6-v2`), perform k-means clustering (`k_se=3`), and compute the entropy of the cluster distribution.
+    \item \textbf{Semantic Entropy (SE):} We embed each of the $k$ text responses using a sentence-transformer (\texttt{all-MiniLM-L6-v2}), perform k-means clustering (\texttt{k\_se=3}), and compute the entropy of the cluster distribution.
     \item \textbf{Lexical Similarity:} Calculated as the average pairwise ROUGE-L F1 score among all $k$ generations, serving as a text-based diversity measure.
     \item \textbf{HaloScope \cite{du_2024_haloscope}:} To be included for models where a pre-computed knowledge graph is available.
 \end{enumerate}
@@ -165,17 +165,17 @@ Each of the $k$ individual generations is labeled as 'Correct' or 'Incorrect'. F
 We plan to use DeLong's test to assess the statistical significance of performance differences between LTD and the baselines.
 
 \textbf{Ablation Studies}
-To ensure robustness, we plan several ablation studies, including varying the ensemble size $k$ (\{3, 5, 10, 20\}), adjusting sampling parameters (`temperature`, `top_p`), and comparing the utility of hidden states from different layers of the model.
+To ensure robustness, we plan several ablation studies, including varying the ensemble size $k$ (\{3, 5, 10, 20\}), adjusting sampling parameters (\texttt{temperature}, \texttt{top\_p}), and comparing the utility of hidden states from different layers of the model.
 
 \section{Results}
 \label{sec:results}
-Due to computational constraints, we conducted a preliminary experiment to validate our methodology on a smaller scale before executing the full experimental plan described previously. This initial run used the `gpt2` model, a smaller and less complex architecture than the models in our main experimental design. For this test, we used a mock dataset consisting of two simple factual questions: "What is the capital of France?" and "Who wrote the novel '1984'?". For each question, an ensemble of $k=3$ responses was generated using stochastic sampling.
+Due to computational constraints, we conducted a preliminary experiment to validate our methodology on a smaller scale before executing the full experimental plan described previously. This initial run used the \texttt{gpt2} model, a smaller and less complex architecture than the models in our main experimental design. For this test, we used a mock dataset consisting of two simple factual questions: "What is the capital of France?" and "Who wrote the novel '1984'?". For each question, an ensemble of $k=3$ responses was generated using stochastic sampling.
 
 The results of this preliminary experiment, evaluating each UQ method's ability to distinguish correct from incorrect generations, are summarized in Table 1.
 
 \begin{table}[H]
 \centering
-\caption{Performance of UQ methods on error detection for the `gpt2` model. AUROC values below 0.5 indicate performance worse than random chance.}
+\caption{Performance of UQ methods on error detection for the \texttt{gpt2} model. AUROC values below 0.5 indicate performance worse than random chance.}
 \label{tab:gpt2_results}
 \begin{tabularx}{\textwidth}{lXXX}
 \hline
@@ -189,16 +189,16 @@ HaloScope (Mock) & 0.200 & 0.767 & 0.909 \\
 \end{tabularx}
 \end{table}
 
-*Table 1: Performance of UQ methods on error detection for the `gpt2` model. AUROC values below 0.5 indicate performance worse than random chance.*
+*Table 1: Performance of UQ methods on error detection for the \texttt{gpt2} model. AUROC values below 0.5 indicate performance worse than random chance.*
 
-Contrary to our central hypothesis, Latent Trajectory Divergence (LTD) performed extremely poorly in this setting, achieving an AUROC of 0.200. A score below 0.5 indicates a performance worse than random chance, suggesting that for the `gpt2` model on this task, generations with *lower* latent divergence were more likely to be incorrect. This result directly contradicts the foundational premise of our method. The mock HaloScope baseline performed equally poorly.
+Contrary to our central hypothesis, Latent Trajectory Divergence (LTD) performed extremely poorly in this setting, achieving an AUROC of 0.200. A score below 0.5 indicates a performance worse than random chance, suggesting that for the \texttt{gpt2} model on this task, generations with *lower* latent divergence were more likely to be incorrect. This result directly contradicts the foundational premise of our method. The mock HaloScope baseline performed equally poorly.
 
 Semantic Entropy performed at the level of random guessing, with an AUROC of 0.500. The most effective method in this limited experiment was Lexical Diversity, a simple text-based baseline measuring ROUGE-L dissimilarity, which achieved a strong AUROC of 0.800 and the highest AUPRC of 0.933. The Receiver Operating Characteristic (ROC) curves for all methods are shown in Figure 1.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\linewidth]{images/roc_curves_comparison_gpt2.pdf}
-\caption{ROC curves comparing the error detection performance of LTD and baseline methods on the preliminary `gpt2` experiment.}
+\caption{ROC curves comparing the error detection performance of LTD and baseline methods on the preliminary \texttt{gpt2} experiment.}
 \label{fig:roc_gpt2}
 \end{figure}
 
@@ -234,7 +234,7 @@ To further understand these results, we plotted the score distributions for corr
 
 \textbf{Limitations and Discussion}
 It is crucial to interpret these preliminary results with caution. This experiment was severely limited in several ways:
-1.  \textbf{Model Scale:} The `gpt2` model is orders of magnitude smaller and less capable than the modern models for which LTD was designed. The geometric properties of latent space and the stability of the generation process may differ fundamentally in larger models.
+1.  \textbf{Model Scale:} The \texttt{gpt2} model is orders of magnitude smaller and less capable than the modern models for which LTD was designed. The geometric properties of latent space and the stability of the generation process may differ fundamentally in larger models.
 2.  \textbf{Dataset Size:} The use of only two questions renders the results anecdotal and not statistically significant.
 3.  \textbf{Ensemble Size:} An ensemble size of $k=3$ is very small and may not be sufficient to obtain a stable estimate of trajectory divergence.
 
@@ -246,7 +246,7 @@ In this paper, we addressed the critical need for a robust, training-free, and l
 
 We presented a complete methodology for calculating LTD by generating an ensemble of latent trajectories and efficiently computing their average divergence from a central barycenter. We also outlined a comprehensive experimental plan to benchmark LTD against state-of-the-art UQ methods for error detection.
 
-A preliminary experiment conducted on the small-scale `gpt2` model yielded results that contradicted our hypothesis, with LTD performing worse than random chance and being significantly outperformed by a simple lexical diversity baseline. We stress that these findings are highly preliminary and constrained by the limited scale of the model and data used. They do not permit a conclusive judgment on the viability of LTD for modern, large-scale LLMs.
+A preliminary experiment conducted on the small-scale \texttt{gpt2} model yielded results that contradicted our hypothesis, with LTD performing worse than random chance and being significantly outperformed by a simple lexical diversity baseline. We stress that these findings are highly preliminary and constrained by the limited scale of the model and data used. They do not permit a conclusive judgment on the viability of LTD for modern, large-scale LLMs.
 
 The primary implication of our preliminary results is that the relationship between generative process stability and model uncertainty may be highly dependent on model scale and architecture. Future work must prioritize executing the full-scale experiment on capable models like Mistral-7B and Llama-2 across diverse benchmarks. This is the essential next step to determine whether the geometric properties of the generative process hold the key to a new class of powerful UQ metrics, or if this signal is too noisy to be reliable. Further research could also explore hybrid approaches that combine the internal, geometric signal of LTD with external, text-based signals to create an even more robust and universally applicable measure of uncertainty.
 

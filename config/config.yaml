@@ -1,0 +1,41 @@
+seed: 42
+
+# Where to save and load data/models
+data:
+  path: data/sbm_seed42.pt
+output:
+  model_name: migad_best.pt
+
+# Dataset (synthetic SBM)
+dataset:
+  N: 500
+  d: 16
+  K: 4
+  p_in: 0.10
+  p_out: 0.02
+  feat_snr: 2.0
+  train_ratio: 0.6
+  val_ratio: 0.2
+
+# Model
+model:
+  L: 4        # hops (0..L)
+  G: 8        # groups
+  hidden: 32
+  top_rho: 3
+  rank: 8
+
+# Training
+train:
+  lr: 0.003
+  weight_decay: 0.001
+  epochs: 120
+  warmup_epochs: 30
+  eval_every: 10
+  patience: 20
+  lambda_mix: 1.0
+  rho0: 0.2
+  rho_min: 0.0
+  rho_max: 0.4
+  hard_kappa_cool: 0.9
+  device: auto

@@ -1,1 +1,10 @@
-# Please list the required python packages.
+torch
+torchvision
+numpy
+pandas
+matplotlib
+seaborn
+tqdm
+higher
+torchmeta
+PyYAML

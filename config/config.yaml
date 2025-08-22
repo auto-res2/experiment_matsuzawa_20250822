@@ -1,0 +1,28 @@
+experiment:
+  dataset: 'miniimagenet'
+  data_path: './data'
+  n_way: 5
+  k_shot: 1
+  num_seeds: 3
+  run_algorithms: ['veloml', 'maml', 'fomaml', 'protonet']
+  results_dir: './.research/iteration1'
+  models_dir: './models'
+
+training:
+  num_epochs: 20
+  num_batches: 100
+  batch_size: 4
+  meta_lr: 0.001
+  inner_lr: 0.01
+  num_inner_steps: 10 # For baselines and evaluation trajectory length
+
+veloml:
+  k_max: 20
+  k_hybrid: 3
+
+evaluation:
+  num_test_tasks: 600
+
+system:
+  num_workers: 2
+  no_cuda: false

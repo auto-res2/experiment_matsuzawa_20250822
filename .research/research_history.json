@@ -6,5 +6,52 @@
     "federated learning personalization",
     "parameter-efficient fine-tuning edge",
     "quantization-aware training edge"
+  ],
+  "research_study_list": [
+    {
+      "title": "Distributed Distillation for On-Device Learning"
+    },
+    {
+      "title": "Accelerated On-Device Forward Neural Network Training with Module-Wise Descending Asynchronism"
+    },
+    {
+      "title": "TinyTL: Reduce Memory, Not Parameters for Efficient On-Device Learning"
+    },
+    {
+      "title": "Efficient Edge Inference by Selective Query"
+    },
+    {
+      "title": "Cloud-Device Collaborative Adaptation to Continual Changing Environments in the Real-World"
+    },
+    {
+      "title": "Resilient and Communication Efficient Learning for Heterogeneous Federated Systems"
+    },
+    {
+      "title": "Personalized Federated Learning with First Order Model Optimization"
+    },
+    {
+      "title": "Personalized Federated Learning with Theoretical Guarantees: A Model-Agnostic Meta-Learning Approach"
+    },
+    {
+      "title": "FedL2P: Federated Learning to Personalize"
+    },
+    {
+      "title": "SVFT: Parameter-Efficient Fine-Tuning with Singular Vectors"
+    },
+    {
+      "title": "Spectral Adapter: Fine-Tuning in Spectral Space"
+    },
+    {
+      "title": "Parameter-Efficient Fine-Tuning Design Spaces"
+    },
+    {
+      "title": "Qu-ANTI-zation: Exploiting Quantization Artifacts for Achieving Adversarial Outcomes"
+    },
+    {
+      "title": "Optimal Clipping and Magnitude-aware Differentiation for Improved Quantization-aware Training"
+    },
+    {
+      "title": "Optimal Clipping and Magnitude-aware Differentiation for Improved Quantization-aware Training"
+    }
   ]
 }

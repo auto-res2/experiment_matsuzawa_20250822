@@ -366,6 +366,38 @@
       }
     }
   ],
+  "reference_research_study_list": [
+    {
+      "title": "Massively multilingual neural machine translation in the wild: Findings and challenges"
+    },
+    {
+      "title": "mslam: Massively multilingual joint pre-training for speech and text"
+    },
+    {
+      "title": "Convex optimization"
+    },
+    {
+      "title": "Gradnorm: Gradient normalization for adaptive loss balancing in deep multitask networks"
+    },
+    {
+      "title": "Just pick a sign: Optimizing deep multitask models with gradient sign dropout"
+    },
+    {
+      "title": "The cityscapes dataset for semantic urban scene understanding"
+    },
+    {
+      "title": "Multiple-gradient descent algorithm (mgda) for multiobjective optimization"
+    },
+    {
+      "title": "50 years of data science"
+    },
+    {
+      "title": "Efﬁciently identifying task groupings for multi-task learning"
+    },
+    {
+      "title": "Automated curriculum learning for neural networks"
+    }
+  ],
   "new_method": {
     "method": "## Idea: Meta-Grad: Meta-Learning a Low-Rank Gating Policy for Fine-Grained Gradient Agreement\n\n**Motivation:**\n\nExisting strategies for mitigating negative transfer in multi-task learning (MTL) are caught between two extremes. Gradient surgery methods like PCGrad and CAGrad apply reactive, vector-level projections, which can discard useful, parameter-level information within a conflicting update. Conversely, architectural methods like MTSL or static task grouping impose a rigid structure, incurring high costs and failing to adapt to the dynamic needs of training. We identify a critical gap for a method that can arbitrate gradient conflicts dynamically, at the parameter level, and within a single training step. While 'Quantifying Task Priority' recognized that parameters have task-specific importance, it relied on a rigid, heuristic-based scheme. This proposal introduces Meta-Grad, a framework that recasts gradient aggregation as a meta-learned policy. We learn task-specific, low-rank matrices—analogous to LoRA adapters applied to gradients—that generate fine-grained gating masks. These gates are optimized via an efficient, single-batch meta-objective to proactively find a gradient update representing a consensus direction, bridging the gap between coarse-grained surgery and slow architectural adaptation.\n\n**Methodology:**\n\nThe core of Meta-Grad is to learn task-specific, low-rank gating masks that modulate the aggregation of per-task gradients. These mask-generating parameters are themselves trained via a meta-objective that maximizes gradient synergy.\n\n1.  **Low-Rank Gradient Parametrization for Scalability:** Instead of learning a full-sized gating mask of size `d_out x d_in` for each task `i` and shared weight matrix `W`, we employ a parameter-efficient, low-rank factorization. For each task `i`, we learn two small matrices, `A_i` (size `d_out x r`) and `B_i` (size `r x d_in`), where the rank `r` is a small hyperparameter (e.g., `r=8`). The full gating logit mask is implicitly constructed as `g_i = A_i B_i`. This drastically reduces the number of learnable policy parameters, ensuring scalability to large models like Transformers.\n\n2.  **Flexible Parameter-wise Gating:** After computing the raw per-task gradients `∇L_i(W)`, we aggregate them using a flexible, independent gating scheme. For each parameter `W_{jk}`, we compute the gating logits `[g_{1,jk}, g_{2,jk}, ..., g_{N,jk}]` from the low-rank masks. An independent sigmoid function is then applied to each logit: `s_{i,jk} = sigmoid(g_{i,jk})`. The final aggregated gradient for that parameter is a scaled sum: `∇L_s(W_{jk}) = Σ_i s_{i,jk} ⋅ ∇L_i(W_{jk})`. Unlike a softmax, this independent gating allows for more nuanced control: multiple tasks can contribute strongly to a parameter's update (synergy), or all tasks can contribute weakly (signaling the parameter is not critical at this step), providing a richer mechanism than forced competition.\n\n3.  **Efficient Meta-Optimization via a Worst-Case Improvement Objective:** The gate parameters (`A_i`, `B_i` for all tasks) are updated via a meta-objective within a single training batch, avoiding the high cost of bi-level optimization. We propose a **Worst-Case Improvement Objective**. The goal is to learn gates that produce an aggregated gradient `∇L_s` which represents a descent direction for all tasks, particularly the one that conflicts the most. The meta-loss, which is minimized with respect to the gate parameters, is `L_meta = -min_k <∇L_s, ∇L_k>`. By maximizing the inner product with the most conflicting task's gradient, the meta-gradient `∇_{A,B} L_meta` teaches the gating policy to produce weightings that actively resolve conflicts and seek consensus. This objective is more robust than simple cosine similarity alignment as it directly addresses negative transfer.\n\n**Novelty and Relation to Prior Work:**\n\n-   **vs. PCGrad/CAGrad:** Meta-Grad shifts from reactive, coarse, vector-level projections to a proactive, learned, parameter-level gating policy. While the meta-objective is philosophically similar to CAGrad's, it is used to train a fine-grained *policy* that constructs the gradient, rather than being used to directly find an optimal update vector `d` in the full parameter space.\n-   **vs. Quantifying Task Priority:** Replaces a heuristic-based, two-phase scheme with a fully learnable, end-to-end policy optimized via a single, robust meta-objective.\n-   **vs. MTSL/ForkMerge/Task Grouping:** Offers continuous, per-step dynamic adaptation ('soft' parameter specialization) via gradient routing within a static architecture, rather than relying on slow, discrete structural or parameter-space changes that occur over multiple epochs.\n-   **vs. Standard Meta-Learning:** Introduces an efficient, single-batch meta-objective (Worst-Case Improvement) that avoids the computational overhead of bi-level optimization with separate validation sets.\n\n**Expected Impact:**\n\n1.  **Superior Pareto-Optimal Solutions:** By learning a fine-grained policy that directly optimizes for worst-case task improvement, Meta-Grad is expected to navigate the loss landscape more effectively and discover superior Pareto fronts compared to existing methods.\n\n2.  **Dynamic Architectural Interpretability:** The learned low-rank matrices `A_i` and `B_i` offer unprecedented insights into MTL dynamics. We can interpret `B_i` as learning a task's preferred `r`-dimensional *input feature subspace* for a given layer, and `A_i` its preferred *output feature subspace*. By performing SVD on these learned matrices, we can analyze their principal directions. Comparing these learned subspaces between tasks (e.g., via Principal Angles or CKA) will provide a fine-grained, quantitative map of how tasks share, specialize, and compete for representational capacity at each layer, dynamically throughout training.\n\n3.  **Computationally Efficient Dynamic Specialization:** The method achieves 'soft' architectural specialization by dynamically routing gradient information within a static backbone. The combination of low-rank factorization and an efficient single-batch meta-objective makes this dynamic routing computationally feasible for large-scale models, a significant advantage over expensive neural architecture search or periodic model merging techniques.",
     "experimental_design": {

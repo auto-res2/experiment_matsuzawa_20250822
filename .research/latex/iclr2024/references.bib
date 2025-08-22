@@ -5,3 +5,390 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{author_year_deep,
+ title = {Deep-TROJ: An Inference Stage Trojan Insertion Algorithm through Efficient Weight Replacement Attack}
+}
+
+@article{author_year_defense,
+ title = {Defense against backdoor attacks via robust covariance estimation}
+}
+
+@article{author_year_dual,
+ title = {Dual-Path Distillation: A Unified Framework to Improve Black-Box Attacks}
+}
+
+@article{author_year_pre,
+ title = {Pre-activation Distributions Expose Backdoor Neurons}
+}
+
+@article{author_year_pre,
+ title = {Pre-activation Distributions Expose Backdoor Neurons}
+}
+
+@article{author_year_towards,
+ title = {Towards Efficient and Effective Adversarial Training}
+}
+
+@article{author_year_unified,
+ title = {A Unified Detection Framework for Inference-Stage Backdoor Defenses}
+}
+
+@article{author_year_unified,
+ title = {A Unified Detection Framework for Inference-Stage Backdoor Defenses}
+}
+
+@article{bhat_2024_puregen,
+ abstract = {Train-time data poisoning attacks threaten machine learning models by
+introducing adversarial examples during training, leading to misclassification.
+Current defense methods often reduce generalization performance, are
+attack-specific, and impose significant training overhead. To address this, we
+introduce a set of universal data purification methods using a stochastic
+transform, $\Psi(x)$, realized via iterative Langevin dynamics of Energy-Based
+Models (EBMs), Denoising Diffusion Probabilistic Models (DDPMs), or both. These
+approaches purify poisoned data with minimal impact on classifier
+generalization. Our specially trained EBMs and DDPMs provide state-of-the-art
+defense against various attacks (including Narcissus, Bullseye Polytope,
+Gradient Matching) on CIFAR-10, Tiny-ImageNet, and CINIC-10, without needing
+attack or classifier-specific information. We discuss performance trade-offs
+and show that our methods remain highly effective even with poisoned or
+distributionally shifted generative model training data.},
+ arxiv_url = {https://arxiv.org/pdf/2405.18627v2.pdf},
+ author = {Sunay Bhat and Jeffrey Jiang and Omead Pooladzandi and Alexander Branch and Gregory Pottie},
+ github_url = {https://github.com/SunayBhat1/PureGen_PoisonDefense},
+ title = {PureGen: Universal Data Purification for Train-Time Poison Defense via Generative Model Dynamics},
+ year = {2024}
+}
+
+@article{khaddaj_2023_rethinking,
+ abstract = {In a backdoor attack, an adversary inserts maliciously constructed backdoor
+examples into a training set to make the resulting model vulnerable to
+manipulation. Defending against such attacks typically involves viewing these
+inserted examples as outliers in the training set and using techniques from
+robust statistics to detect and remove them.
+  In this work, we present a different approach to the backdoor attack problem.
+Specifically, we show that without structural information about the training
+data distribution, backdoor attacks are indistinguishable from
+naturally-occurring features in the data--and thus impossible to "detect" in a
+general sense. Then, guided by this observation, we revisit existing defenses
+against backdoor attacks and characterize the (often latent) assumptions they
+make and on which they depend. Finally, we explore an alternative perspective
+on backdoor attacks: one that assumes these attacks correspond to the strongest
+feature in the training data. Under this assumption (which we make formal) we
+develop a new primitive for detecting backdoor attacks. Our primitive naturally
+gives rise to a detection algorithm that comes with theoretical guarantees and
+is effective in practice.},
+ arxiv_url = {https://arxiv.org/pdf/2307.10163v1.pdf},
+ author = {Alaa Khaddaj and Guillaume Leclerc and Aleksandar Makelov and Kristian Georgiev and Hadi Salman and Andrew Ilyas and Aleksander Madry},
+ github_url = {https://github.com/SewoongLab/spectre-defense},
+ title = {Rethinking Backdoor Attacks},
+ year = {2023}
+}
+
+@article{mirzaei_2025_scanning,
+ abstract = {Scanning for trojan (backdoor) in deep neural networks is crucial due to
+their significant real-world applications. There has been an increasing focus
+on developing effective general trojan scanning methods across various trojan
+attacks. Despite advancements, there remains a shortage of methods that perform
+effectively without preconceived assumptions about the backdoor attack method.
+Additionally, we have observed that current methods struggle to identify
+classifiers trojaned using adversarial training. Motivated by these challenges,
+our study introduces a novel scanning method named TRODO (TROjan scanning by
+Detection of adversarial shifts in Out-of-distribution samples). TRODO
+leverages the concept of "blind spots"--regions where trojaned classifiers
+erroneously identify out-of-distribution (OOD) samples as in-distribution (ID).
+We scan for these blind spots by adversarially shifting OOD samples towards
+in-distribution. The increased likelihood of perturbed OOD samples being
+classified as ID serves as a signature for trojan detection. TRODO is both
+trojan and label mapping agnostic, effective even against adversarially trained
+trojaned classifiers. It is applicable even in scenarios where training data is
+absent, demonstrating high accuracy and adaptability across various scenarios
+and datasets, highlighting its potential as a robust trojan scanning strategy.},
+ arxiv_url = {https://arxiv.org/pdf/2501.17151v1.pdf},
+ author = {Hossein Mirzaei and Ali Ansari and Bahar Dibaei Nia and Mojtaba Nafez and Moein Madadi and Sepehr Rezaee and Zeinab Sadat Taghavi and Arad Maleki and Kian Shamsaie and Mahdi Hajialilue and Jafar Habibi and Mohammad Sabokrou and Mohammad Hossein Rohban},
+ github_url = {https://github.com/rohban-lab/TRODO},
+ title = {Scanning Trojaned Models Using Out-of-Distribution Samples},
+ year = {2025}
+}
+
+@article{tramer_2020_adaptive,
+ abstract = {Adaptive attacks have (rightfully) become the de facto standard for
+evaluating defenses to adversarial examples. We find, however, that typical
+adaptive evaluations are incomplete. We demonstrate that thirteen defenses
+recently published at ICLR, ICML and NeurIPS---and chosen for illustrative and
+pedagogical purposes---can be circumvented despite attempting to perform
+evaluations using adaptive attacks. While prior evaluation papers focused
+mainly on the end result---showing that a defense was ineffective---this paper
+focuses on laying out the methodology and the approach necessary to perform an
+adaptive attack. We hope that these analyses will serve as guidance on how to
+properly perform adaptive attacks against defenses to adversarial examples, and
+thus will allow the community to make further progress in building more robust
+models.},
+ arxiv_url = {https://arxiv.org/pdf/2002.08347v2.pdf},
+ author = {Florian Tramer and Nicholas Carlini and Wieland Brendel and Aleksander Madry},
+ title = { On Adaptive Attacks to Adversarial Example Defenses},
+ year = {2020}
+}
+
+@article{xiang_2023_cbd,
+ abstract = {Backdoor attack is a common threat to deep neural networks. During testing,
+samples embedded with a backdoor trigger will be misclassified as an
+adversarial target by a backdoored model, while samples without the backdoor
+trigger will be correctly classified. In this paper, we present the first
+certified backdoor detector (CBD), which is based on a novel, adjustable
+conformal prediction scheme based on our proposed statistic local dominant
+probability. For any classifier under inspection, CBD provides 1) a detection
+inference, 2) the condition under which the attacks are guaranteed to be
+detectable for the same classification domain, and 3) a probabilistic upper
+bound for the false positive rate. Our theoretical results show that attacks
+with triggers that are more resilient to test-time noise and have smaller
+perturbation magnitudes are more likely to be detected with guarantees.
+Moreover, we conduct extensive experiments on four benchmark datasets
+considering various backdoor types, such as BadNet, CB, and Blend. CBD achieves
+comparable or even higher detection accuracy than state-of-the-art detectors,
+and it in addition provides detection certification. Notably, for backdoor
+attacks with random perturbation triggers bounded by $\ell_2\leq0.75$ which
+achieves more than 90\% attack success rate, CBD achieves 100\% (98\%), 100\%
+(84\%), 98\% (98\%), and 72\% (40\%) empirical (certified) detection true
+positive rates on the four benchmark datasets GTSRB, SVHN, CIFAR-10, and
+TinyImageNet, respectively, with low false positive rates.},
+ arxiv_url = {https://arxiv.org/pdf/2310.17498v2.pdf},
+ author = {Zhen Xiang and Zidi Xiong and Bo Li},
+ github_url = {https://github.com/zhenxianglance/CBD},
+ title = {CBD: A Certified Backdoor Detector Based on Local Dominant Probability},
+ year = {2023}
+}
+
+@article{yang_2022_not,
+ abstract = {Data poisoning causes misclassification of test time target examples by
+injecting maliciously crafted samples in the training data. Existing defenses
+are often effective only against a specific type of targeted attack,
+significantly degrade the generalization performance, or are prohibitive for
+standard deep learning pipelines.
+  In this work, we propose an efficient defense mechanism that significantly
+reduces the success rate of various data poisoning attacks, and provides
+theoretical guarantees for the performance of the model. Targeted attacks work
+by adding bounded perturbations to a randomly selected subset of training data
+to match the targets' gradient or representation. We show that: (i) under
+bounded perturbations, only a number of poisons can be optimized to have a
+gradient that is close enough to that of the target and make the attack
+successful; (ii) such effective poisons move away from their original class and
+get isolated in the gradient space; (iii) dropping examples in low-density
+gradient regions during training can successfully eliminate the effective
+poisons, and guarantees similar training dynamics to that of training on full
+data. Our extensive experiments show that our method significantly decreases
+the success rate of state-of-the-art targeted attacks, including Gradient
+Matching and Bullseye Polytope, and easily scales to large datasets.},
+ arxiv_url = {https://arxiv.org/pdf/2210.09671v1.pdf},
+ author = {Yu Yang and Tian Yu Liu and Baharan Mirzasoleiman},
+ github_url = {https://github.com/YuYang0901/Epic},
+ journal = {Proceedings of the 39th International Conference on Machine
+  Learning, PMLR 162:25154-25165, 2022},
+ title = {Not All Poisons are Created Equal: Robust Training against Data Poisoning},
+ year = {2022}
+}
+
+@article{zheng_2021_topological,
+ abstract = {Deep neural networks are known to have security issues. One particular threat
+is the Trojan attack. It occurs when the attackers stealthily manipulate the
+model's behavior through Trojaned training samples, which can later be
+exploited.
+  Guided by basic neuroscientific principles we discover subtle -- yet critical
+-- structural deviation characterizing Trojaned models. In our analysis we use
+topological tools. They allow us to model high-order dependencies in the
+networks, robustly compare different networks, and localize structural
+abnormalities. One interesting observation is that Trojaned models develop
+short-cuts from input to output layers.
+  Inspired by these observations, we devise a strategy for robust detection of
+Trojaned models. Compared to standard baselines it displays better performance
+on multiple benchmarks.},
+ arxiv_url = {https://arxiv.org/pdf/2106.06469v1.pdf},
+ author = {Songzhu Zheng and Yikai Zhang and Hubert Wagner and Mayank Goswami and Chao Chen},
+ github_url = {https://github.com/trojai/trojai},
+ title = {Topological Detection of Trojaned Neural Networks},
+ year = {2021}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{abadi_2016_deep,
+ abstract = {Machine learning techniques based on neural networks are achieving remarkable
+results in a wide variety of domains. Often, the training of models requires
+large, representative datasets, which may be crowdsourced and contain sensitive
+information. The models should not expose private information in these
+datasets. Addressing this goal, we develop new algorithmic techniques for
+learning and a refined analysis of privacy costs within the framework of
+differential privacy. Our implementation and experiments demonstrate that we
+can train deep neural networks with non-convex objectives, under a modest
+privacy budget, and at a manageable cost in software complexity, training
+efficiency, and model quality.},
+ arxiv_url = {https://arxiv.org/pdf/1607.00133v2.pdf},
+ author = {Martín Abadi and Andy Chu and Ian Goodfellow and H. Brendan McMahan and Ilya Mironov and Kunal Talwar and Li Zhang},
+ doi = {10.1145/2976749.2978318},
+ journal = {Proceedings of the 2016 ACM SIGSAC Conference on Computer and
+  Communications Security (ACM CCS), pp. 308-318, 2016},
+ title = {Deep learning with differential privacy},
+ year = {2016}
+}
+
+@article{aghakhani_2020_bullseye,
+ abstract = {A recent source of concern for the security of neural networks is the
+emergence of clean-label dataset poisoning attacks, wherein correctly labeled
+poison samples are injected into the training dataset. While these poison
+samples look legitimate to the human observer, they contain malicious
+characteristics that trigger a targeted misclassification during inference. We
+propose a scalable and transferable clean-label poisoning attack against
+transfer learning, which creates poison images with their center close to the
+target image in the feature space. Our attack, Bullseye Polytope, improves the
+attack success rate of the current state-of-the-art by 26.75% in end-to-end
+transfer learning, while increasing attack speed by a factor of 12. We further
+extend Bullseye Polytope to a more practical attack model by including multiple
+images of the same object (e.g., from different angles) when crafting the
+poison samples. We demonstrate that this extension improves attack
+transferability by over 16% to unseen images (of the same object) without using
+extra poison samples.},
+ arxiv_url = {https://arxiv.org/pdf/2005.00191v3.pdf},
+ author = {Hojjat Aghakhani and Dongyu Meng and Yu-Xiang Wang and Christopher Kruegel and Giovanni Vigna},
+ title = {Bullseye polytope: A scalable clean-label poisoning attack with improved transferability},
+ year = {2020}
+}
+
+@article{author_year_casting,
+ title = {Casting out demons: Sanitizing training data for anomaly sensors}
+}
+
+@article{borgnia_2020_strong,
+ abstract = {Data poisoning and backdoor attacks manipulate victim models by maliciously
+modifying training data. In light of this growing threat, a recent survey of
+industry professionals revealed heightened fear in the private sector regarding
+data poisoning. Many previous defenses against poisoning either fail in the
+face of increasingly strong attacks, or they significantly degrade performance.
+However, we find that strong data augmentations, such as mixup and CutMix, can
+significantly diminish the threat of poisoning and backdoor attacks without
+trading off performance. We further verify the effectiveness of this simple
+defense against adaptive poisoning methods, and we compare to baselines
+including the popular differentially private SGD (DP-SGD) defense. In the
+context of backdoors, CutMix greatly mitigates the attack while simultaneously
+increasing validation accuracy by 9%.},
+ arxiv_url = {https://arxiv.org/pdf/2011.09527v1.pdf},
+ author = {Eitan Borgnia and Valeriia Cherepanova and Liam Fowl and Amin Ghiasi and Jonas Geiping and Micah Goldblum and Tom Goldstein and Arjun Gupta},
+ title = {Strong data augmentation sanitizes poisoning and backdoor attacks without an accuracy tradeoff},
+ year = {2020}
+}
+
+@article{chen_2017_targeted,
+ abstract = {Deep learning models have achieved high performance on many tasks, and thus
+have been applied to many security-critical scenarios. For example, deep
+learning-based face recognition systems have been used to authenticate users to
+access many security-sensitive applications like payment apps. Such usages of
+deep learning systems provide the adversaries with sufficient incentives to
+perform attacks against these systems for their adversarial purposes. In this
+work, we consider a new type of attacks, called backdoor attacks, where the
+attacker's goal is to create a backdoor into a learning-based authentication
+system, so that he can easily circumvent the system by leveraging the backdoor.
+Specifically, the adversary aims at creating backdoor instances, so that the
+victim learning system will be misled to classify the backdoor instances as a
+target label specified by the adversary. In particular, we study backdoor
+poisoning attacks, which achieve backdoor attacks using poisoning strategies.
+Different from all existing work, our studied poisoning strategies can apply
+under a very weak threat model: (1) the adversary has no knowledge of the model
+and the training set used by the victim system; (2) the attacker is allowed to
+inject only a small amount of poisoning samples; (3) the backdoor key is hard
+to notice even by human beings to achieve stealthiness. We conduct evaluation
+to demonstrate that a backdoor adversary can inject only around 50 poisoning
+samples, while achieving an attack success rate of above 90%. We are also the
+first work to show that a data poisoning attack can create physically
+implementable backdoors without touching the training process. Our work
+demonstrates that backdoor poisoning attacks pose real threats to a learning
+system, and thus highlights the importance of further investigation and
+proposing defense strategies against them.},
+ arxiv_url = {https://arxiv.org/pdf/1712.05526v1.pdf},
+ author = {Xinyun Chen and Chang Liu and Bo Li and Kimberly Lu and Dawn Song},
+ title = {Targeted backdoor attacks on deep learning systems using data poisoning},
+ year = {2017}
+}
+
+@article{chen_2018_detecting,
+ abstract = {While machine learning (ML) models are being increasingly trusted to make
+decisions in different and varying areas, the safety of systems using such
+models has become an increasing concern. In particular, ML models are often
+trained on data from potentially untrustworthy sources, providing adversaries
+with the opportunity to manipulate them by inserting carefully crafted samples
+into the training set. Recent work has shown that this type of attack, called a
+poisoning attack, allows adversaries to insert backdoors or trojans into the
+model, enabling malicious behavior with simple external backdoor triggers at
+inference time and only a blackbox perspective of the model itself. Detecting
+this type of attack is challenging because the unexpected behavior occurs only
+when a backdoor trigger, which is known only to the adversary, is present.
+Model users, either direct users of training data or users of pre-trained model
+from a catalog, may not guarantee the safe operation of their ML-based system.
+In this paper, we propose a novel approach to backdoor detection and removal
+for neural networks. Through extensive experimental results, we demonstrate its
+effectiveness for neural networks classifying text and images. To the best of
+our knowledge, this is the first methodology capable of detecting poisonous
+data crafted to insert backdoors and repairing the model that does not require
+a verified and trusted dataset.},
+ arxiv_url = {https://arxiv.org/pdf/1811.03728v1.pdf},
+ author = {Bryant Chen and Wilka Carvalho and Nathalie Baracaldo and Heiko Ludwig and Benjamin Edwards and Taesung Lee and Ian Molloy and Biplav Srivastava},
+ title = {Detecting backdoor attacks on deep neural networks by activation clustering},
+ year = {2018}
+}
+
+@article{fort_2020_deep,
+ abstract = {In suitably initialized wide networks, small learning rates transform deep
+neural networks (DNNs) into neural tangent kernel (NTK) machines, whose
+training dynamics is well-approximated by a linear weight expansion of the
+network at initialization. Standard training, however, diverges from its
+linearization in ways that are poorly understood. We study the relationship
+between the training dynamics of nonlinear deep networks, the geometry of the
+loss landscape, and the time evolution of a data-dependent NTK. We do so
+through a large-scale phenomenological analysis of training, synthesizing
+diverse measures characterizing loss landscape geometry and NTK dynamics. In
+multiple neural architectures and datasets, we find these diverse measures
+evolve in a highly correlated manner, revealing a universal picture of the deep
+learning process. In this picture, deep network training exhibits a highly
+chaotic rapid initial transient that within 2 to 3 epochs determines the final
+linearly connected basin of low loss containing the end point of training.
+During this chaotic transient, the NTK changes rapidly, learning useful
+features from the training data that enables it to outperform the standard
+initial NTK by a factor of 3 in less than 3 to 4 epochs. After this rapid
+chaotic transient, the NTK changes at constant velocity, and its performance
+matches that of full network training in 15% to 45% of training time. Overall,
+our analysis reveals a striking correlation between a diverse set of metrics
+over training time, governed by a rapid chaotic to stable transition in the
+first few epochs, that together poses challenges and opportunities for the
+development of more accurate theories of deep learning.},
+ arxiv_url = {https://arxiv.org/pdf/2010.15110v1.pdf},
+ author = {Stanislav Fort and Gintare Karolina Dziugaite and Mansheej Paul and Sepideh Kharaghani and Daniel M. Roy and Surya Ganguli},
+ title = {Deep learning versus kernel learning: an empirical study of loss landscape geometry and the time evolution of the neural tangent kernel},
+ year = {2020}
+}
+
+@article{geiping_2021_what,
+ abstract = {Data poisoning is a threat model in which a malicious actor tampers with
+training data to manipulate outcomes at inference time. A variety of defenses
+against this threat model have been proposed, but each suffers from at least
+one of the following flaws: they are easily overcome by adaptive attacks, they
+severely reduce testing performance, or they cannot generalize to diverse data
+poisoning threat models. Adversarial training, and its variants, are currently
+considered the only empirically strong defense against (inference-time)
+adversarial attacks. In this work, we extend the adversarial training framework
+to defend against (training-time) data poisoning, including targeted and
+backdoor attacks. Our method desensitizes networks to the effects of such
+attacks by creating poisons during training and injecting them into training
+batches. We show that this defense withstands adaptive attacks, generalizes to
+diverse threat models, and incurs a better performance trade-off than previous
+defenses such as DP-SGD or (evasion) adversarial training.},
+ arxiv_url = {https://arxiv.org/pdf/2102.13624v2.pdf},
+ author = {Jonas Geiping and Liam Fowl and Gowthami Somepalli and Micah Goldblum and Michael Moeller and Tom Goldstein},
+ title = {What doesn’t kill you makes you robust (er): Adversarial training against poisons and backdoors},
+ year = {2021}
+}

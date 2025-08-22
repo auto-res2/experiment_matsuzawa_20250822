@@ -321,6 +321,38 @@
       }
     }
   ],
+  "reference_research_study_list": [
+    {
+      "title": "Compute and energy consumption trends in deep learning inference"
+    },
+    {
+      "title": "Binary neural networks: A survey"
+    },
+    {
+      "title": "A survey of quantization methods for efficient neural network inference"
+    },
+    {
+      "title": "Sparsity in deep learning: Pruning and growth for efficient inference and training in neural networks"
+    },
+    {
+      "title": "The unreasonable effectiveness of random pruning: Return of the most naive baseline for sparse training"
+    },
+    {
+      "title": "Pruning convolutional neural networks for resource efficient inference"
+    },
+    {
+      "title": "Deep Differentiable Logic Gate Networks"
+    },
+    {
+      "title": "Mnist handwritten digit database"
+    },
+    {
+      "title": "Learning multiple layers of features from tiny images"
+    },
+    {
+      "title": "Analyzing differentiable fuzzy logic operators"
+    }
+  ],
   "new_method": {
     "method": "{\"Motivation\": \"Current state-of-the-art deep Logic Gate Networks (LGNs), such as LogicTreeNet, rely on 'residual initializations' to enable training. This is a static, open-loop heuristic that only pre-conditions the network at `t=0`. As the network learns and its probabilistic gates evolve, these initial stability properties are lost, leaving the system vulnerable to gradient pathologies. This stands in stark contrast to modern recurrent networks, where principles from control theory provide dynamic, closed-loop stability guarantees throughout training. This reveals a critical gap: the absence of an adaptive mechanism to regulate information flow in deep LGNs as a function of their learned state. We are motivated to replace this brittle, one-shot heuristic with a robust, theoretically-grounded control strategy by re-framing the LGN as a discrete-time nonlinear dynamical system, enabling unprecedented depth and training stability.\", \"Methodology\": \"We propose 'Adaptive Jacobian Control for LGNs' (AJC-LGN), a framework that actively maintains dynamical isometry by regularizing the spectral properties of each layer's transformation throughout training. 1. **System Formulation and State-Dependent Jacobian:** We model the relaxed LGN's forward pass as `x_{l+1} = f(x_l, θ_l)`, where `f` is the weighted sum of 16 differentiable gate functions. The core technical step is deriving the analytical Jacobian `J_l = ∂f/∂x_l`, demonstrating that its structure is critically dependent on both the learned gate parameters `θ_l` and the current input `x_l`. This state-dependence is precisely why a dynamic controller is necessary. 2. **Efficient Spectral Regularization with Adaptive Control:** We introduce a regularization term `R = Σ_l λ_l ||J_l^T J_l - I||_F^2` to penalize deviations from isometry. To make this tractable, we use Hutchinson's method to efficiently estimate the Frobenius norm via Jacobian-vector products, reducing complexity from `O(N^2)` to nearly `O(N)`. Critically, departing from a simple scheduled `λ`, we will implement an adaptive controller where the regularization strength `λ_l` for each layer is dynamically adjusted based on a moving average of the estimated singular value spectrum of `J_l`. This creates a true closed-loop feedback mechanism that strengthens control only when stability is threatened. 3. **Comprehensive Validation:** We will implement AJC-LGN within the LogicTreeNet architecture and evaluate on CIFAR-100 and synthetic benchmarks requiring deep logical composition (e.g., visual Sudoku). We will compare against two baselines: a vanilla LGN and the SOTA using residual initializations. Metrics will include: (a) Maximum trainable depth before divergence; (b) Singular value spectra analysis of layer Jacobians throughout training; (c) Accuracy on classification and reasoning tasks; and (d) Loss landscape visualization to confirm improved conditioning.\", \"Expected impact\": \"This research will fundamentally shift the paradigm for training deep LGNs from static initialization heuristics to dynamic, adaptive control. By introducing a robust, theoretically-grounded, and computationally efficient regularization framework, our work will significantly improve model stability, unlock greater trainable depth, and enhance performance on complex reasoning tasks. More broadly, this framework serves as a powerful template for applying control-theoretic principles to other neuro-symbolic systems. By creating models with bounded and predictable signal propagation, this work is a crucial step towards developing more reliable and verifiable LGNs suitable for safety-critical applications where predictable behavior is paramount.\"}",
     "experimental_design": {

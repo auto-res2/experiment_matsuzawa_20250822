@@ -5,3 +5,566 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{bolya_2022_token,
+ abstract = {We introduce Token Merging (ToMe), a simple method to increase the throughput
+of existing ViT models without needing to train. ToMe gradually combines
+similar tokens in a transformer using a general and light-weight matching
+algorithm that is as fast as pruning while being more accurate. Off-the-shelf,
+ToMe can 2x the throughput of state-of-the-art ViT-L @ 512 and ViT-H @ 518
+models on images and 2.2x the throughput of ViT-L on video with only a 0.2-0.3%
+accuracy drop in each case. ToMe can also easily be applied during training,
+improving in practice training speed up to 2x for MAE fine-tuning on video.
+Training with ToMe further minimizes accuracy drop, leading to 2x the
+throughput of ViT-B on audio for only a 0.4% mAP drop. Qualitatively, we find
+that ToMe merges object parts into one token, even over multiple frames of
+video. Overall, ToMe's accuracy and speed are competitive with state-of-the-art
+on images, video, and audio.},
+ arxiv_url = {https://arxiv.org/pdf/2210.09461v3.pdf},
+ author = {Daniel Bolya and Cheng-Yang Fu and Xiaoliang Dai and Peizhao Zhang and Christoph Feichtenhofer and Judy Hoffman},
+ github_url = {https://github.com/facebookresearch/ToMe},
+ title = {Token Merging: Your ViT But Faster},
+ year = {2022}
+}
+
+@article{bolya_2022_token,
+ abstract = {We introduce Token Merging (ToMe), a simple method to increase the throughput
+of existing ViT models without needing to train. ToMe gradually combines
+similar tokens in a transformer using a general and light-weight matching
+algorithm that is as fast as pruning while being more accurate. Off-the-shelf,
+ToMe can 2x the throughput of state-of-the-art ViT-L @ 512 and ViT-H @ 518
+models on images and 2.2x the throughput of ViT-L on video with only a 0.2-0.3%
+accuracy drop in each case. ToMe can also easily be applied during training,
+improving in practice training speed up to 2x for MAE fine-tuning on video.
+Training with ToMe further minimizes accuracy drop, leading to 2x the
+throughput of ViT-B on audio for only a 0.4% mAP drop. Qualitatively, we find
+that ToMe merges object parts into one token, even over multiple frames of
+video. Overall, ToMe's accuracy and speed are competitive with state-of-the-art
+on images, video, and audio.},
+ arxiv_url = {https://arxiv.org/pdf/2210.09461v3.pdf},
+ author = {Daniel Bolya and Cheng-Yang Fu and Xiaoliang Dai and Peizhao Zhang and Christoph Feichtenhofer and Judy Hoffman},
+ github_url = {https://github.com/facebookresearch/ToMe},
+ title = {Token Merging: Your ViT But Faster},
+ year = {2022}
+}
+
+@article{chen_2021_chasing,
+ abstract = {Vision transformers (ViTs) have recently received explosive popularity, but
+their enormous model sizes and training costs remain daunting. Conventional
+post-training pruning often incurs higher training budgets. In contrast, this
+paper aims to trim down both the training memory overhead and the inference
+complexity, without sacrificing the achievable accuracy. We carry out the
+first-of-its-kind comprehensive exploration, on taking a unified approach of
+integrating sparsity in ViTs "from end to end". Specifically, instead of
+training full ViTs, we dynamically extract and train sparse subnetworks, while
+sticking to a fixed small parameter budget. Our approach jointly optimizes
+model parameters and explores connectivity throughout training, ending up with
+one sparse network as the final output. The approach is seamlessly extended
+from unstructured to structured sparsity, the latter by considering to guide
+the prune-and-grow of self-attention heads inside ViTs. We further co-explore
+data and architecture sparsity for additional efficiency gains by plugging in a
+novel learnable token selector to adaptively determine the currently most vital
+patches. Extensive results on ImageNet with diverse ViT backbones validate the
+effectiveness of our proposals which obtain significantly reduced computational
+cost and almost unimpaired generalization. Perhaps most surprisingly, we find
+that the proposed sparse (co-)training can sometimes improve the ViT accuracy
+rather than compromising it, making sparsity a tantalizing "free lunch". For
+example, our sparsified DeiT-Small at (5%, 50%) sparsity for (data,
+architecture), improves 0.28% top-1 accuracy, and meanwhile enjoys 49.32% FLOPs
+and 4.40% running time savings. Our codes are available at
+https://github.com/VITA-Group/SViTE.},
+ arxiv_url = {https://arxiv.org/pdf/2106.04533v3.pdf},
+ author = {Tianlong Chen and Yu Cheng and Zhe Gan and Lu Yuan and Lei Zhang and Zhangyang Wang},
+ github_url = {https://github.com/VITA-Group/SViTE},
+ title = {Chasing Sparsity in Vision Transformers: An End-to-End Exploration},
+ year = {2021}
+}
+
+@article{girdhar_2022_omnimae,
+ abstract = {Transformer-based architectures have become competitive across a variety of
+visual domains, most notably images and videos. While prior work studies these
+modalities in isolation, having a common architecture suggests that one can
+train a single unified model for multiple visual modalities. Prior attempts at
+unified modeling typically use architectures tailored for vision tasks, or
+obtain worse performance compared to single modality models. In this work, we
+show that masked autoencoding can be used to train a simple Vision Transformer
+on images and videos, without requiring any labeled data. This single model
+learns visual representations that are comparable to or better than
+single-modality representations on both image and video benchmarks, while using
+a much simpler architecture. Furthermore, this model can be learned by dropping
+90% of the image and 95% of the video patches, enabling extremely fast training
+of huge model architectures. In particular, we show that our single ViT-Huge
+model can be finetuned to achieve 86.6% on ImageNet and 75.5% on the
+challenging Something Something-v2 video benchmark, setting a new
+state-of-the-art.},
+ arxiv_url = {https://arxiv.org/pdf/2206.08356v2.pdf},
+ author = {Rohit Girdhar and Alaaeldin El-Nouby and Mannat Singh and Kalyan Vasudev Alwala and Armand Joulin and Ishan Misra},
+ github_url = {https://github.com/facebookresearch/omnivore},
+ title = {OmniMAE: Single Model Masked Pretraining on Images and Videos},
+ year = {2022}
+}
+
+@article{long_2022_beyond,
+ abstract = {Vision transformers have achieved significant improvements on various vision
+tasks but their quadratic interactions between tokens significantly reduce
+computational efficiency. Many pruning methods have been proposed to remove
+redundant tokens for efficient vision transformers recently. However, existing
+studies mainly focus on the token importance to preserve local attentive tokens
+but completely ignore the global token diversity. In this paper, we emphasize
+the cruciality of diverse global semantics and propose an efficient token
+decoupling and merging method that can jointly consider the token importance
+and diversity for token pruning. According to the class token attention, we
+decouple the attentive and inattentive tokens. In addition to preserving the
+most discriminative local tokens, we merge similar inattentive tokens and match
+homogeneous attentive tokens to maximize the token diversity. Despite its
+simplicity, our method obtains a promising trade-off between model complexity
+and classification accuracy. On DeiT-S, our method reduces the FLOPs by 35%
+with only a 0.2% accuracy drop. Notably, benefiting from maintaining the token
+diversity, our method can even improve the accuracy of DeiT-T by 0.1% after
+reducing its FLOPs by 40%.},
+ arxiv_url = {https://arxiv.org/pdf/2211.11315v1.pdf},
+ author = {Sifan Long and Zhen Zhao and Jimin Pi and Shengsheng Wang and Jingdong Wang},
+ title = {Beyond Attentive Tokens: Incorporating Token Importance and Diversity for Efficient Vision Transformers},
+ year = {2022}
+}
+
+@article{long_2022_beyond,
+ abstract = {Vision transformers have achieved significant improvements on various vision
+tasks but their quadratic interactions between tokens significantly reduce
+computational efficiency. Many pruning methods have been proposed to remove
+redundant tokens for efficient vision transformers recently. However, existing
+studies mainly focus on the token importance to preserve local attentive tokens
+but completely ignore the global token diversity. In this paper, we emphasize
+the cruciality of diverse global semantics and propose an efficient token
+decoupling and merging method that can jointly consider the token importance
+and diversity for token pruning. According to the class token attention, we
+decouple the attentive and inattentive tokens. In addition to preserving the
+most discriminative local tokens, we merge similar inattentive tokens and match
+homogeneous attentive tokens to maximize the token diversity. Despite its
+simplicity, our method obtains a promising trade-off between model complexity
+and classification accuracy. On DeiT-S, our method reduces the FLOPs by 35%
+with only a 0.2% accuracy drop. Notably, benefiting from maintaining the token
+diversity, our method can even improve the accuracy of DeiT-T by 0.1% after
+reducing its FLOPs by 40%.},
+ arxiv_url = {https://arxiv.org/pdf/2211.11315v1.pdf},
+ author = {Sifan Long and Zhen Zhao and Jimin Pi and Shengsheng Wang and Jingdong Wang},
+ title = {Beyond Attentive Tokens: Incorporating Token Importance and Diversity for Efficient Vision Transformers},
+ year = {2022}
+}
+
+@article{pan_2022_fast,
+ abstract = {Vision Transformers (ViTs) have triggered the most recent and significant
+breakthroughs in computer vision. Their efficient designs are mostly guided by
+the indirect metric of computational complexity, i.e., FLOPs, which however has
+a clear gap with the direct metric such as throughput. Thus, we propose to use
+the direct speed evaluation on the target platform as the design principle for
+efficient ViTs. Particularly, we introduce LITv2, a simple and effective ViT
+which performs favourably against the existing state-of-the-art methods across
+a spectrum of different model sizes with faster speed. At the core of LITv2 is
+a novel self-attention mechanism, which we dub HiLo. HiLo is inspired by the
+insight that high frequencies in an image capture local fine details and low
+frequencies focus on global structures, whereas a multi-head self-attention
+layer neglects the characteristic of different frequencies. Therefore, we
+propose to disentangle the high/low frequency patterns in an attention layer by
+separating the heads into two groups, where one group encodes high frequencies
+via self-attention within each local window, and another group encodes low
+frequencies by performing global attention between the average-pooled
+low-frequency keys and values from each window and each query position in the
+input feature map. Benefiting from the efficient design for both groups, we
+show that HiLo is superior to the existing attention mechanisms by
+comprehensively benchmarking FLOPs, speed and memory consumption on GPUs and
+CPUs. For example, HiLo is 1.4x faster than spatial reduction attention and
+1.6x faster than local window attention on CPUs. Powered by HiLo, LITv2 serves
+as a strong backbone for mainstream vision tasks including image
+classification, dense detection and segmentation. Code is available at
+https://github.com/ziplab/LITv2.},
+ arxiv_url = {https://arxiv.org/pdf/2205.13213v5.pdf},
+ author = {Zizheng Pan and Jianfei Cai and Bohan Zhuang},
+ github_url = {https://github.com/ziplab/LITv2},
+ title = {Fast Vision Transformers with HiLo Attention},
+ year = {2022}
+}
+
+@article{pan_2022_fast,
+ abstract = {Vision Transformers (ViTs) have triggered the most recent and significant
+breakthroughs in computer vision. Their efficient designs are mostly guided by
+the indirect metric of computational complexity, i.e., FLOPs, which however has
+a clear gap with the direct metric such as throughput. Thus, we propose to use
+the direct speed evaluation on the target platform as the design principle for
+efficient ViTs. Particularly, we introduce LITv2, a simple and effective ViT
+which performs favourably against the existing state-of-the-art methods across
+a spectrum of different model sizes with faster speed. At the core of LITv2 is
+a novel self-attention mechanism, which we dub HiLo. HiLo is inspired by the
+insight that high frequencies in an image capture local fine details and low
+frequencies focus on global structures, whereas a multi-head self-attention
+layer neglects the characteristic of different frequencies. Therefore, we
+propose to disentangle the high/low frequency patterns in an attention layer by
+separating the heads into two groups, where one group encodes high frequencies
+via self-attention within each local window, and another group encodes low
+frequencies by performing global attention between the average-pooled
+low-frequency keys and values from each window and each query position in the
+input feature map. Benefiting from the efficient design for both groups, we
+show that HiLo is superior to the existing attention mechanisms by
+comprehensively benchmarking FLOPs, speed and memory consumption on GPUs and
+CPUs. For example, HiLo is 1.4x faster than spatial reduction attention and
+1.6x faster than local window attention on CPUs. Powered by HiLo, LITv2 serves
+as a strong backbone for mainstream vision tasks including image
+classification, dense detection and segmentation. Code is available at
+https://github.com/ziplab/LITv2.},
+ arxiv_url = {https://arxiv.org/pdf/2205.13213v5.pdf},
+ author = {Zizheng Pan and Jianfei Cai and Bohan Zhuang},
+ github_url = {https://github.com/ziplab/LITv2},
+ title = {Fast Vision Transformers with HiLo Attention},
+ year = {2022}
+}
+
+@article{touvron_2020_training,
+ abstract = {Recently, neural networks purely based on attention were shown to address
+image understanding tasks such as image classification. However, these visual
+transformers are pre-trained with hundreds of millions of images using an
+expensive infrastructure, thereby limiting their adoption.
+  In this work, we produce a competitive convolution-free transformer by
+training on Imagenet only. We train them on a single computer in less than 3
+days. Our reference vision transformer (86M parameters) achieves top-1 accuracy
+of 83.1% (single-crop evaluation) on ImageNet with no external data.
+  More importantly, we introduce a teacher-student strategy specific to
+transformers. It relies on a distillation token ensuring that the student
+learns from the teacher through attention. We show the interest of this
+token-based distillation, especially when using a convnet as a teacher. This
+leads us to report results competitive with convnets for both Imagenet (where
+we obtain up to 85.2% accuracy) and when transferring to other tasks. We share
+our code and models.},
+ arxiv_url = {https://arxiv.org/pdf/2012.12877v2.pdf},
+ author = {Hugo Touvron and Matthieu Cord and Matthijs Douze and Francisco Massa and Alexandre Sablayrolles and Hervé Jégou},
+ github_url = {https://github.com/facebookresearch/deit},
+ title = {Training data-efficient image transformers & distillation through attention},
+ year = {2020}
+}
+
+@article{touvron_2020_training,
+ abstract = {Recently, neural networks purely based on attention were shown to address
+image understanding tasks such as image classification. However, these visual
+transformers are pre-trained with hundreds of millions of images using an
+expensive infrastructure, thereby limiting their adoption.
+  In this work, we produce a competitive convolution-free transformer by
+training on Imagenet only. We train them on a single computer in less than 3
+days. Our reference vision transformer (86M parameters) achieves top-1 accuracy
+of 83.1% (single-crop evaluation) on ImageNet with no external data.
+  More importantly, we introduce a teacher-student strategy specific to
+transformers. It relies on a distillation token ensuring that the student
+learns from the teacher through attention. We show the interest of this
+token-based distillation, especially when using a convnet as a teacher. This
+leads us to report results competitive with convnets for both Imagenet (where
+we obtain up to 85.2% accuracy) and when transferring to other tasks. We share
+our code and models.},
+ arxiv_url = {https://arxiv.org/pdf/2012.12877v2.pdf},
+ author = {Hugo Touvron and Matthieu Cord and Matthijs Douze and Francisco Massa and Alexandre Sablayrolles and Hervé Jégou},
+ github_url = {https://github.com/facebookresearch/deit},
+ title = {Training data-efficient image transformers & distillation through attention},
+ year = {2020}
+}
+
+@article{wang_2023_zero,
+ abstract = {Deployment of Transformer models on edge devices is becoming increasingly
+challenging due to the exponentially growing inference cost that scales
+quadratically with the number of tokens in the input sequence. Token pruning is
+an emerging solution to address this challenge due to its ease of deployment on
+various Transformer backbones. However, most token pruning methods require
+computationally expensive fine-tuning, which is undesirable in many edge
+deployment cases. In this work, we propose Zero-TPrune, the first zero-shot
+method that considers both the importance and similarity of tokens in
+performing token pruning. It leverages the attention graph of pre-trained
+Transformer models to produce an importance distribution for tokens via our
+proposed Weighted Page Rank (WPR) algorithm. This distribution further guides
+token partitioning for efficient similarity-based pruning. Due to the
+elimination of the fine-tuning overhead, Zero-TPrune can prune large models at
+negligible computational cost, switch between different pruning configurations
+at no computational cost, and perform hyperparameter tuning efficiently. We
+evaluate the performance of Zero-TPrune on vision tasks by applying it to
+various vision Transformer backbones and testing them on ImageNet. Without any
+fine-tuning, Zero-TPrune reduces the FLOPs cost of DeiT-S by 34.7% and improves
+its throughput by 45.3% with only 0.4% accuracy loss. Compared with
+state-of-the-art pruning methods that require fine-tuning, Zero-TPrune not only
+eliminates the need for fine-tuning after pruning but also does so with only
+0.1% accuracy loss. Compared with state-of-the-art fine-tuning-free pruning
+methods, Zero-TPrune reduces accuracy loss by up to 49% with similar FLOPs
+budgets. Project webpage: https://jha-lab.github.io/zerotprune.},
+ arxiv_url = {https://arxiv.org/pdf/2305.17328v3.pdf},
+ author = {Hongjie Wang and Bhishma Dedhia and Niraj K. Jha},
+ title = {Zero-TPrune: Zero-Shot Token Pruning through Leveraging of the Attention Graph in Pre-Trained Transformers},
+ year = {2023}
+}
+
+@article{wei_2023_joint,
+ abstract = {Although vision transformers (ViTs) have shown promising results in various
+computer vision tasks recently, their high computational cost limits their
+practical applications. Previous approaches that prune redundant tokens have
+demonstrated a good trade-off between performance and computation costs.
+Nevertheless, errors caused by pruning strategies can lead to significant
+information loss. Our quantitative experiments reveal that the impact of pruned
+tokens on performance should be noticeable. To address this issue, we propose a
+novel joint Token Pruning & Squeezing module (TPS) for compressing vision
+transformers with higher efficiency. Firstly, TPS adopts pruning to get the
+reserved and pruned subsets. Secondly, TPS squeezes the information of pruned
+tokens into partial reserved tokens via the unidirectional nearest-neighbor
+matching and similarity-based fusing steps. Compared to state-of-the-art
+methods, our approach outperforms them under all token pruning intensities.
+Especially while shrinking DeiT-tiny&small computational budgets to 35%, it
+improves the accuracy by 1%-6% compared with baselines on ImageNet
+classification. The proposed method can accelerate the throughput of DeiT-small
+beyond DeiT-tiny, while its accuracy surpasses DeiT-tiny by 4.78%. Experiments
+on various transformers demonstrate the effectiveness of our method, while
+analysis experiments prove our higher robustness to the errors of the token
+pruning policy. Code is available at
+https://github.com/megvii-research/TPS-CVPR2023.},
+ arxiv_url = {https://arxiv.org/pdf/2304.10716v1.pdf},
+ author = {Siyuan Wei and Tianzhu Ye and Shen Zhang and Yao Tang and Jiajun Liang},
+ github_url = {https://github.com/raoyongming/DynamicViT},
+ title = {Joint Token Pruning and Squeezing Towards More Aggressive Compression of Vision Transformers},
+ year = {2023}
+}
+
+@article{yun_2024_shvit,
+ abstract = {Recently, efficient Vision Transformers have shown great performance with low
+latency on resource-constrained devices. Conventionally, they use 4x4 patch
+embeddings and a 4-stage structure at the macro level, while utilizing
+sophisticated attention with multi-head configuration at the micro level. This
+paper aims to address computational redundancy at all design levels in a
+memory-efficient manner. We discover that using larger-stride patchify stem not
+only reduces memory access costs but also achieves competitive performance by
+leveraging token representations with reduced spatial redundancy from the early
+stages. Furthermore, our preliminary analyses suggest that attention layers in
+the early stages can be substituted with convolutions, and several attention
+heads in the latter stages are computationally redundant. To handle this, we
+introduce a single-head attention module that inherently prevents head
+redundancy and simultaneously boosts accuracy by parallelly combining global
+and local information. Building upon our solutions, we introduce SHViT, a
+Single-Head Vision Transformer that obtains the state-of-the-art speed-accuracy
+tradeoff. For example, on ImageNet-1k, our SHViT-S4 is 3.3x, 8.1x, and 2.4x
+faster than MobileViTv2 x1.0 on GPU, CPU, and iPhone12 mobile device,
+respectively, while being 1.3% more accurate. For object detection and instance
+segmentation on MS COCO using Mask-RCNN head, our model achieves performance
+comparable to FastViT-SA12 while exhibiting 3.8x and 2.0x lower backbone
+latency on GPU and mobile device, respectively.},
+ arxiv_url = {https://arxiv.org/pdf/2401.16456v2.pdf},
+ author = {Seokju Yun and Youngmin Ro},
+ github_url = {https://github.com/ysj9909/SHViT},
+ title = {SHViT: Single-Head Vision Transformer with Memory Efficient Macro Design},
+ year = {2024}
+}
+
+@article{yun_2024_shvit,
+ abstract = {Recently, efficient Vision Transformers have shown great performance with low
+latency on resource-constrained devices. Conventionally, they use 4x4 patch
+embeddings and a 4-stage structure at the macro level, while utilizing
+sophisticated attention with multi-head configuration at the micro level. This
+paper aims to address computational redundancy at all design levels in a
+memory-efficient manner. We discover that using larger-stride patchify stem not
+only reduces memory access costs but also achieves competitive performance by
+leveraging token representations with reduced spatial redundancy from the early
+stages. Furthermore, our preliminary analyses suggest that attention layers in
+the early stages can be substituted with convolutions, and several attention
+heads in the latter stages are computationally redundant. To handle this, we
+introduce a single-head attention module that inherently prevents head
+redundancy and simultaneously boosts accuracy by parallelly combining global
+and local information. Building upon our solutions, we introduce SHViT, a
+Single-Head Vision Transformer that obtains the state-of-the-art speed-accuracy
+tradeoff. For example, on ImageNet-1k, our SHViT-S4 is 3.3x, 8.1x, and 2.4x
+faster than MobileViTv2 x1.0 on GPU, CPU, and iPhone12 mobile device,
+respectively, while being 1.3% more accurate. For object detection and instance
+segmentation on MS COCO using Mask-RCNN head, our model achieves performance
+comparable to FastViT-SA12 while exhibiting 3.8x and 2.0x lower backbone
+latency on GPU and mobile device, respectively.},
+ arxiv_url = {https://arxiv.org/pdf/2401.16456v2.pdf},
+ author = {Seokju Yun and Youngmin Ro},
+ github_url = {https://github.com/ysj9909/SHViT},
+ title = {SHViT: Single-Head Vision Transformer with Memory Efficient Macro Design},
+ year = {2024}
+}
+
+@article{zhang_2024_you,
+ abstract = {The advent of Vision Transformers (ViTs) marks a substantial paradigm shift
+in the realm of computer vision. ViTs capture the global information of images
+through self-attention modules, which perform dot product computations among
+patchified image tokens. While self-attention modules empower ViTs to capture
+long-range dependencies, the computational complexity grows quadratically with
+the number of tokens, which is a major hindrance to the practical application
+of ViTs. Moreover, the self-attention mechanism in deep ViTs is also
+susceptible to the attention saturation issue. Accordingly, we argue against
+the necessity of computing the attention scores in every layer, and we propose
+the Less-Attention Vision Transformer (LaViT), which computes only a few
+attention operations at each stage and calculates the subsequent feature
+alignments in other layers via attention transformations that leverage the
+previously calculated attention scores. This novel approach can mitigate two
+primary issues plaguing traditional self-attention modules: the heavy
+computational burden and attention saturation. Our proposed architecture offers
+superior efficiency and ease of implementation, merely requiring matrix
+multiplications that are highly optimized in contemporary deep learning
+frameworks. Moreover, our architecture demonstrates exceptional performance
+across various vision tasks including classification, detection and
+segmentation.},
+ arxiv_url = {https://arxiv.org/pdf/2406.00427v1.pdf},
+ author = {Shuoxi Zhang and Hanpeng Liu and Stephen Lin and Kun He},
+ title = {You Only Need Less Attention at Each Stage in Vision Transformers},
+ year = {2024}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{carion_2020_end,
+ abstract = {We present a new method that views object detection as a direct set
+prediction problem. Our approach streamlines the detection pipeline,
+effectively removing the need for many hand-designed components like a
+non-maximum suppression procedure or anchor generation that explicitly encode
+our prior knowledge about the task. The main ingredients of the new framework,
+called DEtection TRansformer or DETR, are a set-based global loss that forces
+unique predictions via bipartite matching, and a transformer encoder-decoder
+architecture. Given a fixed small set of learned object queries, DETR reasons
+about the relations of the objects and the global image context to directly
+output the final set of predictions in parallel. The new model is conceptually
+simple and does not require a specialized library, unlike many other modern
+detectors. DETR demonstrates accuracy and run-time performance on par with the
+well-established and highly-optimized Faster RCNN baseline on the challenging
+COCO object detection dataset. Moreover, DETR can be easily generalized to
+produce panoptic segmentation in a unified manner. We show that it
+significantly outperforms competitive baselines. Training code and pretrained
+models are available at https://github.com/facebookresearch/detr.},
+ arxiv_url = {https://arxiv.org/pdf/2005.12872v3.pdf},
+ author = {Nicolas Carion and Francisco Massa and Gabriel Synnaeve and Nicolas Usunier and Alexander Kirillov and Sergey Zagoruyko},
+ title = {End-to-end object detection with transformers.},
+ year = {2020}
+}
+
+@article{cheng_2021_per,
+ abstract = {Modern approaches typically formulate semantic segmentation as a per-pixel
+classification task, while instance-level segmentation is handled with an
+alternative mask classification. Our key insight: mask classification is
+sufficiently general to solve both semantic- and instance-level segmentation
+tasks in a unified manner using the exact same model, loss, and training
+procedure. Following this observation, we propose MaskFormer, a simple mask
+classification model which predicts a set of binary masks, each associated with
+a single global class label prediction. Overall, the proposed mask
+classification-based method simplifies the landscape of effective approaches to
+semantic and panoptic segmentation tasks and shows excellent empirical results.
+In particular, we observe that MaskFormer outperforms per-pixel classification
+baselines when the number of classes is large. Our mask classification-based
+method outperforms both current state-of-the-art semantic (55.6 mIoU on ADE20K)
+and panoptic segmentation (52.7 PQ on COCO) models.},
+ arxiv_url = {https://arxiv.org/pdf/2107.06278v2.pdf},
+ author = {Bowen Cheng and Alexander G. Schwing and Alexander Kirillov},
+ title = {Per-pixel classification is not all you need for semantic segmentation.},
+ year = {2021}
+}
+
+@article{graham_2021_levit,
+ abstract = {We design a family of image classification architectures that optimize the
+trade-off between accuracy and efficiency in a high-speed regime. Our work
+exploits recent findings in attention-based architectures, which are
+competitive on highly parallel processing hardware. We revisit principles from
+the extensive literature on convolutional neural networks to apply them to
+transformers, in particular activation maps with decreasing resolutions. We
+also introduce the attention bias, a new way to integrate positional
+information in vision transformers. As a result, we propose LeVIT: a hybrid
+neural network for fast inference image classification. We consider different
+measures of efficiency on different hardware platforms, so as to best reflect a
+wide range of application scenarios. Our extensive experiments empirically
+validate our technical choices and show they are suitable to most
+architectures. Overall, LeViT significantly outperforms existing convnets and
+vision transformers with respect to the speed/accuracy tradeoff. For example,
+at 80% ImageNet top-1 accuracy, LeViT is 5 times faster than EfficientNet on
+CPU. We release the code at https://github.com/facebookresearch/LeViT},
+ arxiv_url = {https://arxiv.org/pdf/2104.01136v2.pdf},
+ author = {Ben Graham and Alaaeldin El-Nouby and Hugo Touvron and Pierre Stock and Armand Joulin and Hervé Jégou and Matthijs Douze},
+ title = {Levit: a vision transformer in convnet’s clothing for faster inference.},
+ year = {2021}
+}
+
+@article{li_2022_efficientformer,
+ abstract = {Vision Transformers (ViT) have shown rapid progress in computer vision tasks,
+achieving promising results on various benchmarks. However, due to the massive
+number of parameters and model design, \textit{e.g.}, attention mechanism,
+ViT-based models are generally times slower than lightweight convolutional
+networks. Therefore, the deployment of ViT for real-time applications is
+particularly challenging, especially on resource-constrained hardware such as
+mobile devices. Recent efforts try to reduce the computation complexity of ViT
+through network architecture search or hybrid design with MobileNet block, yet
+the inference speed is still unsatisfactory. This leads to an important
+question: can transformers run as fast as MobileNet while obtaining high
+performance? To answer this, we first revisit the network architecture and
+operators used in ViT-based models and identify inefficient designs. Then we
+introduce a dimension-consistent pure transformer (without MobileNet blocks) as
+a design paradigm. Finally, we perform latency-driven slimming to get a series
+of final models dubbed EfficientFormer. Extensive experiments show the
+superiority of EfficientFormer in performance and speed on mobile devices. Our
+fastest model, EfficientFormer-L1, achieves $79.2\%$ top-1 accuracy on
+ImageNet-1K with only $1.6$ ms inference latency on iPhone 12 (compiled with
+CoreML), which runs as fast as MobileNetV2$\times 1.4$ ($1.6$ ms, $74.7\%$
+top-1), and our largest model, EfficientFormer-L7, obtains $83.3\%$ accuracy
+with only $7.0$ ms latency. Our work proves that properly designed transformers
+can reach extremely low latency on mobile devices while maintaining high
+performance.},
+ arxiv_url = {https://arxiv.org/pdf/2206.01191v5.pdf},
+ author = {Yanyu Li and Geng Yuan and Yang Wen and Ju Hu and Georgios Evangelidis and Sergey Tulyakov and Yanzhi Wang and Jian Ren},
+ title = {Efficientformer: Vision transformers at mobilenet speed.},
+ year = {2022}
+}
+
+@article{li_2022_rethinking,
+ abstract = {With the success of Vision Transformers (ViTs) in computer vision tasks,
+recent arts try to optimize the performance and complexity of ViTs to enable
+efficient deployment on mobile devices. Multiple approaches are proposed to
+accelerate attention mechanism, improve inefficient designs, or incorporate
+mobile-friendly lightweight convolutions to form hybrid architectures. However,
+ViT and its variants still have higher latency or considerably more parameters
+than lightweight CNNs, even true for the years-old MobileNet. In practice,
+latency and size are both crucial for efficient deployment on
+resource-constraint hardware. In this work, we investigate a central question,
+can transformer models run as fast as MobileNet and maintain a similar size? We
+revisit the design choices of ViTs and propose a novel supernet with low
+latency and high parameter efficiency. We further introduce a novel
+fine-grained joint search strategy for transformer models that can find
+efficient architectures by optimizing latency and number of parameters
+simultaneously. The proposed models, EfficientFormerV2, achieve 3.5% higher
+top-1 accuracy than MobileNetV2 on ImageNet-1K with similar latency and
+parameters. This work demonstrate that properly designed and optimized vision
+transformers can achieve high performance even with MobileNet-level size and
+speed.},
+ arxiv_url = {https://arxiv.org/pdf/2212.08059v2.pdf},
+ author = {Yanyu Li and Ju Hu and Yang Wen and Georgios Evangelidis and Kamyar Salahi and Yanzhi Wang and Sergey Tulyakov and Jian Ren},
+ title = {Rethinking vision transformers for mobilenet size and speed.},
+ year = {2022}
+}
+
+@article{vasu_2023_fastvit,
+ abstract = {The recent amalgamation of transformer and convolutional designs has led to
+steady improvements in accuracy and efficiency of the models. In this work, we
+introduce FastViT, a hybrid vision transformer architecture that obtains the
+state-of-the-art latency-accuracy trade-off. To this end, we introduce a novel
+token mixing operator, RepMixer, a building block of FastViT, that uses
+structural reparameterization to lower the memory access cost by removing
+skip-connections in the network. We further apply train-time
+overparametrization and large kernel convolutions to boost accuracy and
+empirically show that these choices have minimal effect on latency. We show
+that - our model is 3.5x faster than CMT, a recent state-of-the-art hybrid
+transformer architecture, 4.9x faster than EfficientNet, and 1.9x faster than
+ConvNeXt on a mobile device for the same accuracy on the ImageNet dataset. At
+similar latency, our model obtains 4.2% better Top-1 accuracy on ImageNet than
+MobileOne. Our model consistently outperforms competing architectures across
+several tasks -- image classification, detection, segmentation and 3D mesh
+regression with significant improvement in latency on both a mobile device and
+a desktop GPU. Furthermore, our model is highly robust to out-of-distribution
+samples and corruptions, improving over competing robust models. Code and
+models are available at https://github.com/apple/ml-fastvit.},
+ arxiv_url = {https://arxiv.org/pdf/2303.14189v2.pdf},
+ author = {Pavan Kumar Anasosalu Vasu and James Gabriel and Jeff Zhu and Oncel Tuzel and Anurag Ranjan},
+ title = {Fastvit: A fast hybrid vision transformer using structural reparameterization.},
+ year = {2023}
+}

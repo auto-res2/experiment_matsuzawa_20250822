@@ -5,3 +5,478 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{author_year_bridging,
+ title = {C2KD: Bridging the Modality Gap for Cross-Modal Knowledge Distillation}
+}
+
+@article{author_year_exploring,
+ title = {Exploring Intrinsic Dimension for Vision-Language Model Pruning}
+}
+
+@article{bica_2024_improving,
+ abstract = {We introduce SPARse Fine-grained Contrastive Alignment (SPARC), a simple
+method for pretraining more fine-grained multimodal representations from
+image-text pairs. Given that multiple image patches often correspond to single
+words, we propose to learn a grouping of image patches for every token in the
+caption. To achieve this, we use a sparse similarity metric between image
+patches and language tokens and compute for each token a language-grouped
+vision embedding as the weighted average of patches. The token and
+language-grouped vision embeddings are then contrasted through a fine-grained
+sequence-wise loss that only depends on individual samples and does not require
+other batch samples as negatives. This enables more detailed information to be
+learned in a computationally inexpensive manner. SPARC combines this
+fine-grained loss with a contrastive loss between global image and text
+embeddings to learn representations that simultaneously encode global and local
+information. We thoroughly evaluate our proposed method and show improved
+performance over competing approaches both on image-level tasks relying on
+coarse-grained information, e.g. classification, as well as region-level tasks
+relying on fine-grained information, e.g. retrieval, object detection, and
+segmentation. Moreover, SPARC improves model faithfulness and captioning in
+foundational vision-language models.},
+ arxiv_url = {https://arxiv.org/pdf/2401.09865v1.pdf},
+ author = {Ioana Bica and Anastasija Ilić and Matthias Bauer and Goker Erdogan and Matko Bošnjak and Christos Kaplanis and Alexey A. Gritsenko and Matthias Minderer and Charles Blundell and Razvan Pascanu and Jovana Mitrović},
+ github_url = {https://github.com/HKU-MedAI/MGCA},
+ title = {Improving fine-grained understanding in image-text pre-training},
+ year = {2024}
+}
+
+@article{dib_2020_quantized,
+ abstract = {We present Quantized Variational Inference, a new algorithm for Evidence
+Lower Bound maximization. We show how Optimal Voronoi Tesselation produces
+variance free gradients for ELBO optimization at the cost of introducing
+asymptotically decaying bias. Subsequently, we propose a Richardson
+extrapolation type method to improve the asymptotic bound. We show that using
+the Quantized Variational Inference framework leads to fast convergence for
+both score function and the reparametrized gradient estimator at a comparable
+computational cost. Finally, we propose several experiments to assess the
+performance of our method and its limitations.},
+ arxiv_url = {https://arxiv.org/pdf/2011.02271v1.pdf},
+ author = {Amir Dib},
+ github_url = {https://github.com/amirdib/quantized-variational-inference},
+ journal = {34th Conference on Neural Information Processing Systems (NeurIPS
+  2020), Vancouver, Canada},
+ title = {Quantized Variational Inference},
+ year = {2020}
+}
+
+@article{farina_2024_multiflow,
+ abstract = {While excellent in transfer learning, Vision-Language models (VLMs) come with
+high computational costs due to their large number of parameters. To address
+this issue, removing parameters via model pruning is a viable solution.
+However, existing techniques for VLMs are task-specific, and thus require
+pruning the network from scratch for each new task of interest. In this work,
+we explore a new direction: Task-Agnostic Vision-Language Pruning (TA-VLP).
+Given a pretrained VLM, the goal is to find a unique pruned counterpart
+transferable to multiple unknown downstream tasks. In this challenging setting,
+the transferable representations already encoded in the pretrained model are a
+key aspect to preserve. Thus, we propose Multimodal Flow Pruning (MULTIFLOW), a
+first, gradient-free, pruning framework for TA-VLP where: (i) the importance of
+a parameter is expressed in terms of its magnitude and its information flow, by
+incorporating the saliency of the neurons it connects; and (ii) pruning is
+driven by the emergent (multimodal) distribution of the VLM parameters after
+pretraining. We benchmark eight state-of-the-art pruning algorithms in the
+context of TA-VLP, experimenting with two VLMs, three vision-language tasks,
+and three pruning ratios. Our experimental results show that MULTIFLOW
+outperforms recent sophisticated, combinatorial competitors in the vast
+majority of the cases, paving the way towards addressing TA-VLP. The code is
+publicly available at https://github.com/FarinaMatteo/multiflow.},
+ arxiv_url = {https://arxiv.org/pdf/2404.05621v1.pdf},
+ author = {Matteo Farina and Massimiliano Mancini and Elia Cunegatti and Gaowen Liu and Giovanni Iacca and Elisa Ricci},
+ github_url = {https://github.com/FarinaMatteo/multiflow},
+ title = {MULTIFLOW: Shifting Towards Task-Agnostic Vision-Language Pruning},
+ year = {2024}
+}
+
+@article{mustafa_2022_multimodal,
+ abstract = {Large sparsely-activated models have obtained excellent performance in
+multiple domains. However, such models are typically trained on a single
+modality at a time. We present the Language-Image MoE, LIMoE, a sparse mixture
+of experts model capable of multimodal learning. LIMoE accepts both images and
+text simultaneously, while being trained using a contrastive loss. MoEs are a
+natural fit for a multimodal backbone, since expert layers can learn an
+appropriate partitioning of modalities. However, new challenges arise; in
+particular, training stability and balanced expert utilization, for which we
+propose an entropy-based regularization scheme. Across multiple scales, we
+demonstrate remarkable performance improvement over dense models of equivalent
+computational cost. LIMoE-L/16 trained comparably to CLIP-L/14 achieves 78.6%
+zero-shot ImageNet accuracy (vs. 76.2%), and when further scaled to H/14 (with
+additional data) it achieves 84.1%, comparable to state-of-the-art methods
+which use larger custom per-modality backbones and pre-training schemes. We
+analyse the quantitative and qualitative behavior of LIMoE, and demonstrate
+phenomena such as differing treatment of the modalities and the organic
+emergence of modality-specific experts.},
+ arxiv_url = {https://arxiv.org/pdf/2206.02770v1.pdf},
+ author = {Basil Mustafa and Carlos Riquelme and Joan Puigcerver and Rodolphe Jenatton and Neil Houlsby},
+ title = {Multimodal Contrastive Learning with LIMoE: the Language-Image Mixture of Experts},
+ year = {2022}
+}
+
+@article{sheng_2023_towards,
+ abstract = {The rapid advancement of large language models (LLMs) has accelerated the
+emergence of in-context learning (ICL) as a cutting-edge approach in the
+natural language processing domain. Recently, ICL has been employed in visual
+understanding tasks, such as semantic segmentation and image captioning,
+yielding promising results. However, existing visual ICL framework can not
+enable producing content across multiple modalities, which limits their
+potential usage scenarios. To address this issue, we present a new ICL
+framework for visual understanding with multi-modal output enabled. First, we
+quantize and embed both text and visual prompt into a unified representational
+space, structured as interleaved in-context sequences. Then a decoder-only
+sparse transformer architecture is employed to perform generative modeling on
+them, facilitating in-context learning. Thanks to this design, the model is
+capable of handling in-context vision understanding tasks with multimodal
+output in a unified pipeline.Experimental results demonstrate that our model
+achieves competitive performance compared with specialized models and previous
+ICL baselines. Overall, our research takes a further step toward unified
+multimodal in-context learning.},
+ arxiv_url = {https://arxiv.org/pdf/2312.02520v2.pdf},
+ author = {Dianmo Sheng and Dongdong Chen and Zhentao Tan and Qiankun Liu and Qi Chu and Jianmin Bao and Tao Gong and Bin Liu and Shengwei Xu and Nenghai Yu},
+ title = {Towards More Unified In-context Visual Understanding},
+ year = {2023}
+}
+
+@article{sung_2023_ecoflap,
+ abstract = {Large Vision-Language Models (LVLMs) can understand the world comprehensively
+by integrating rich information from different modalities, achieving remarkable
+advancements on various multimodal downstream tasks. However, deploying LVLMs
+is often problematic due to their massive computational/energy costs and carbon
+consumption. Such issues make it infeasible to adopt conventional iterative
+global pruning, which is costly due to computing the Hessian matrix of the
+entire large model for sparsification. Alternatively, several studies have
+recently proposed layer-wise pruning approaches to avoid the expensive
+computation of global pruning and efficiently compress model weights according
+to their importance within a layer. However, they often suffer from suboptimal
+model compression due to their lack of a global perspective. To address this
+limitation in recent efficient pruning methods for large models, we propose
+Efficient Coarse-to-Fine LayerWise Pruning (ECoFLaP), a two-stage
+coarse-to-fine weight pruning approach for LVLMs. We first determine the
+sparsity ratios of different layers or blocks by leveraging the global
+importance score, which is efficiently computed based on the zeroth-order
+approximation of the global model gradients. Then, the model performs local
+layer-wise unstructured weight pruning based on globally-informed sparsity
+ratios. We validate our proposed method across various multimodal and unimodal
+models and datasets, demonstrating significant performance improvements over
+prevalent pruning techniques in the high-sparsity regime.},
+ arxiv_url = {https://arxiv.org/pdf/2310.02998v2.pdf},
+ author = {Yi-Lin Sung and Jaehong Yoon and Mohit Bansal},
+ title = {ECoFLaP: Efficient Coarse-to-Fine Layer-Wise Pruning for Vision-Language Models},
+ year = {2023}
+}
+
+@article{tang_2022_you,
+ abstract = {Large-scale Transformer models bring significant improvements for various
+downstream vision language tasks with a unified architecture. The performance
+improvements come with increasing model size, resulting in slow inference speed
+and increased cost for severing. While some certain predictions benefit from
+the full complexity of the large-scale model, not all of inputs need the same
+amount of computation to conduct, potentially leading to computation resource
+waste. To handle this challenge, early exiting is proposed to adaptively
+allocate computational power in term of input complexity to improve inference
+efficiency. The existing early exiting strategies usually adopt output
+confidence based on intermediate layers as a proxy of input complexity to incur
+the decision of skipping following layers. However, such strategies cannot
+apply to encoder in the widely-used unified architecture with both encoder and
+decoder due to difficulty of output confidence estimation in the encoder. It is
+suboptimal in term of saving computation power to ignore the early exiting in
+encoder component. To handle this challenge, we propose a novel early exiting
+strategy for unified visual language models, which allows dynamically skip the
+layers in encoder and decoder simultaneously in term of input layer-wise
+similarities with multiple times of early exiting, namely \textbf{MuE}. By
+decomposing the image and text modalities in the encoder, MuE is flexible and
+can skip different layers in term of modalities, advancing the inference
+efficiency while minimizing performance drop. Experiments on the SNLI-VE and MS
+COCO datasets show that the proposed approach MuE can reduce expected inference
+time by up to 50\% and 40\% while maintaining 99\% and 96\% performance
+respectively.},
+ arxiv_url = {https://arxiv.org/pdf/2211.11152v2.pdf},
+ author = {Shengkun Tang and Yaqing Wang and Zhenglun Kong and Tianchi Zhang and Yao Li and Caiwen Ding and Yanzhi Wang and Yi Liang and Dongkuan Xu},
+ github_url = {https://github.com/OFA-Sys/OFA},
+ title = {You Need Multiple Exiting: Dynamic Early Exiting for Accelerating Unified Vision Language Model},
+ year = {2022}
+}
+
+@article{wang_2023_accelerating,
+ abstract = {The state of the arts in vision-language pretraining (VLP) achieves exemplary
+performance but suffers from high training costs resulting from slow
+convergence and long training time, especially on large-scale web datasets. An
+essential obstacle to training efficiency lies in the entangled prediction rate
+(percentage of tokens for reconstruction) and corruption rate (percentage of
+corrupted tokens) in masked language modeling (MLM), that is, a proper
+corruption rate is achieved at the cost of a large portion of output tokens
+being excluded from prediction loss. To accelerate the convergence of VLP, we
+propose a new pretraining task, namely, free language modeling (FLM), that
+enables a 100% prediction rate with arbitrary corruption rates. FLM
+successfully frees the prediction rate from the tie-up with the corruption rate
+while allowing the corruption spans to be customized for each token to be
+predicted. FLM-trained models are encouraged to learn better and faster given
+the same GPU time by exploiting bidirectional contexts more flexibly. Extensive
+experiments show FLM could achieve an impressive 2.5x pretraining time
+reduction in comparison to the MLM-based methods, while keeping competitive
+performance on both vision-language understanding and generation tasks. Code
+will be public at https://github.com/TencentARC/FLM.},
+ arxiv_url = {https://arxiv.org/pdf/2303.14038v1.pdf},
+ author = {Teng Wang and Yixiao Ge and Feng Zheng and Ran Cheng and Ying Shan and Xiaohu Qie and Ping Luo},
+ github_url = {https://github.com/TencentARC/FLM},
+ title = {Accelerating Vision-Language Pretraining With Free Language Modeling},
+ year = {2023}
+}
+
+@article{wang_2024_vlm,
+ abstract = {In this paper, we propose a post-training quantization framework of large
+vision-language models (LVLMs) for efficient multi-modal inference.
+Conventional quantization methods sequentially search the layer-wise rounding
+functions by minimizing activation discretization errors, which fails to
+acquire optimal quantization strategy without considering cross-layer
+dependency. On the contrary, we mine the cross-layer dependency that
+significantly influences discretization errors of the entire vision-language
+model, and embed this dependency into optimal quantization strategy searching
+with low search cost. Specifically, we observe the strong correlation between
+the activation entropy and the cross-layer dependency concerning output
+discretization errors. Therefore, we employ the entropy as the proxy to
+partition blocks optimally, which aims to achieve satisfying trade-offs between
+discretization errors and the search cost. Moreover, we optimize the visual
+encoder to disentangle the cross-layer dependency for fine-grained
+decomposition of search space, so that the search cost is further reduced
+without harming the quantization accuracy. Experimental results demonstrate
+that our method compresses the memory by 2.78x and increase generate speed by
+1.44x about 13B LLaVA model without performance degradation on diverse
+multi-modal reasoning tasks. Code is available at
+https://github.com/ChangyuanWang17/QVLM.},
+ arxiv_url = {https://arxiv.org/pdf/2410.08119v3.pdf},
+ author = {Changyuan Wang and Ziwei Wang and Xiuwei Xu and Yansong Tang and Jie Zhou and Jiwen Lu},
+ github_url = {https://github.com/ChangyuanWang17/QVLM},
+ title = {Q-VLM: Post-training Quantization for Large Vision-Language Models},
+ year = {2024}
+}
+
+@article{xu_2024_transferable,
+ abstract = {Recent success of pre-trained foundation vision-language models makes
+Open-Vocabulary Segmentation (OVS) possible. Despite the promising performance,
+this approach introduces heavy computational overheads for two challenges: 1)
+large model sizes of the backbone; 2) expensive costs during the fine-tuning.
+These challenges hinder this OVS strategy from being widely applicable and
+affordable in real-world scenarios. Although traditional methods such as model
+compression and efficient fine-tuning can address these challenges, they often
+rely on heuristics. This means that their solutions cannot be easily
+transferred and necessitate re-training on different models, which comes at a
+cost. In the context of efficient OVS, we target achieving performance that is
+comparable to or even better than prior OVS works based on large
+vision-language foundation models, by utilizing smaller models that incur lower
+training costs. The core strategy is to make our efficiency principled and thus
+seamlessly transferable from one OVS framework to others without further
+customization. Comprehensive experiments on diverse OVS benchmarks demonstrate
+our superior trade-off between segmentation accuracy and computation costs over
+previous works. Our code is available on https://github.com/Xujxyang/OpenTrans},
+ arxiv_url = {https://arxiv.org/pdf/2404.07448v3.pdf},
+ author = {Jingxuan Xu and Wuyang Chen and Yao Zhao and Yunchao Wei},
+ title = {Transferable and Principled Efficiency for Open-Vocabulary Segmentation},
+ year = {2024}
+}
+
+@article{xue_2022_the,
+ abstract = {Crossmodal knowledge distillation (KD) extends traditional knowledge
+distillation to the area of multimodal learning and demonstrates great success
+in various applications. To achieve knowledge transfer across modalities, a
+pretrained network from one modality is adopted as the teacher to provide
+supervision signals to a student network learning from another modality. In
+contrast to the empirical success reported in prior works, the working
+mechanism of crossmodal KD remains a mystery. In this paper, we present a
+thorough understanding of crossmodal KD. We begin with two case studies and
+demonstrate that KD is not a universal cure in crossmodal knowledge transfer.
+We then present the modality Venn diagram to understand modality relationships
+and the modality focusing hypothesis revealing the decisive factor in the
+efficacy of crossmodal KD. Experimental results on 6 multimodal datasets help
+justify our hypothesis, diagnose failure cases, and point directions to improve
+crossmodal knowledge transfer in the future.},
+ arxiv_url = {https://arxiv.org/pdf/2206.06487v3.pdf},
+ author = {Zihui Xue and Zhengqi Gao and Sucheng Ren and Hang Zhao},
+ github_url = {https://github.com/zihuixue/MFH},
+ title = {The Modality Focusing Hypothesis: Towards Understanding Crossmodal Knowledge Distillation},
+ year = {2022}
+}
+
+@article{xue_2022_the,
+ abstract = {Crossmodal knowledge distillation (KD) extends traditional knowledge
+distillation to the area of multimodal learning and demonstrates great success
+in various applications. To achieve knowledge transfer across modalities, a
+pretrained network from one modality is adopted as the teacher to provide
+supervision signals to a student network learning from another modality. In
+contrast to the empirical success reported in prior works, the working
+mechanism of crossmodal KD remains a mystery. In this paper, we present a
+thorough understanding of crossmodal KD. We begin with two case studies and
+demonstrate that KD is not a universal cure in crossmodal knowledge transfer.
+We then present the modality Venn diagram to understand modality relationships
+and the modality focusing hypothesis revealing the decisive factor in the
+efficacy of crossmodal KD. Experimental results on 6 multimodal datasets help
+justify our hypothesis, diagnose failure cases, and point directions to improve
+crossmodal knowledge transfer in the future.},
+ arxiv_url = {https://arxiv.org/pdf/2206.06487v3.pdf},
+ author = {Zihui Xue and Zhengqi Gao and Sucheng Ren and Hang Zhao},
+ github_url = {https://github.com/zihuixue/MFH},
+ title = {The Modality Focusing Hypothesis: Towards Understanding Crossmodal Knowledge Distillation},
+ year = {2022}
+}
+
+@article{zhu_2024_scaling,
+ abstract = {In the realm of image quantization exemplified by VQGAN, the process encodes
+images into discrete tokens drawn from a codebook with a predefined size.
+Recent advancements, particularly with LLAMA 3, reveal that enlarging the
+codebook significantly enhances model performance. However, VQGAN and its
+derivatives, such as VQGAN-FC (Factorized Codes) and VQGAN-EMA, continue to
+grapple with challenges related to expanding the codebook size and enhancing
+codebook utilization. For instance, VQGAN-FC is restricted to learning a
+codebook with a maximum size of 16,384, maintaining a typically low utilization
+rate of less than 12% on ImageNet. In this work, we propose a novel image
+quantization model named VQGAN-LC (Large Codebook), which extends the codebook
+size to 100,000, achieving an utilization rate exceeding 99%. Unlike previous
+methods that optimize each codebook entry, our approach begins with a codebook
+initialized with 100,000 features extracted by a pre-trained vision encoder.
+Optimization then focuses on training a projector that aligns the entire
+codebook with the feature distributions of the encoder in VQGAN-LC. We
+demonstrate the superior performance of our model over its counterparts across
+a variety of tasks, including image reconstruction, image classification,
+auto-regressive image generation using GPT, and image creation with diffusion-
+and flow-based generative models. Code and models are available at
+https://github.com/zh460045050/VQGAN-LC.},
+ arxiv_url = {https://arxiv.org/pdf/2406.11837v1.pdf},
+ author = {Lei Zhu and Fangyun Wei and Yanye Lu and Dong Chen},
+ github_url = {https://github.com/zh460045050/VQGAN-LC},
+ title = {Scaling the Codebook Size of VQ-GAN to 100,000 with a Utilization Rate of 99%},
+ year = {2024}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{bao_2022_beit,
+ abstract = {We introduce a vision-language foundation model called VL-BEiT, which is a
+bidirectional multimodal Transformer learned by generative pretraining. Our
+minimalist solution conducts masked prediction on both monomodal and multimodal
+data with a shared Transformer. Specifically, we perform masked vision-language
+modeling on image-text pairs, masked language modeling on texts, and masked
+image modeling on images. VL-BEiT is learned from scratch with one unified
+pretraining task, one shared backbone, and one-stage training. Our method is
+conceptually simple and empirically effective. Experimental results show that
+VL-BEiT obtains strong results on various vision-language benchmarks, such as
+visual question answering, visual reasoning, and image-text retrieval.
+Moreover, our method learns transferable visual features, achieving competitive
+performance on image classification, and semantic segmentation.},
+ arxiv_url = {https://arxiv.org/pdf/2206.01127v2.pdf},
+ author = {Hangbo Bao and Wenhui Wang and Li Dong and Furu Wei},
+ title = {Vl- beit: Generative vision-language pretraining.},
+ year = {2022}
+}
+
+@article{bitton_2021_data,
+ abstract = {Masked language modeling (MLM) is one of the key sub-tasks in vision-language
+pretraining. In the cross-modal setting, tokens in the sentence are masked at
+random, and the model predicts the masked tokens given the image and the text.
+In this paper, we observe several key disadvantages of MLM in this setting.
+First, as captions tend to be short, in a third of the sentences no token is
+sampled. Second, the majority of masked tokens are stop-words and punctuation,
+leading to under-utilization of the image. We investigate a range of
+alternative masking strategies specific to the cross-modal setting that address
+these shortcomings, aiming for better fusion of text and image in the learned
+representation. When pre-training the LXMERT model, our alternative masking
+strategies consistently improve over the original masking strategy on three
+downstream tasks, especially in low resource settings. Further, our
+pre-training approach substantially outperforms the baseline model on a
+prompt-based probing task designed to elicit image objects. These results and
+our analysis indicate that our method allows for better utilization of the
+training data.},
+ arxiv_url = {https://arxiv.org/pdf/2109.02040v1.pdf},
+ author = {Yonatan Bitton and Gabriel Stanovsky and Michael Elhadad and Roy Schwartz},
+ title = {Data efficient masked language modeling for vision and language.},
+ year = {2021}
+}
+
+@article{byun_2022_grit,
+ abstract = {Most of the currently existing vision and language pre-training (VLP) methods
+have mainly focused on how to extract and align vision and text features. In
+contrast to the mainstream VLP methods, we highlight that two routinely applied
+steps during pre-training have crucial impact on the performance of the
+pre-trained model: in-batch hard negative sampling for image-text matching
+(ITM) and assigning the large masking probability for the masked language
+modeling (MLM). After empirically showing the unexpected effectiveness of above
+two steps, we systematically devise our GRIT-VLP, which adaptively samples
+mini-batches for more effective mining of hard negative samples for ITM while
+maintaining the computational cost for pre-training. Our method consists of
+three components: 1) GRouped mIni-baTch sampling (GRIT) strategy that collects
+similar examples in a mini-batch, 2) ITC consistency loss for improving the
+mining ability, and 3) enlarged masking probability for MLM. Consequently, we
+show our GRIT-VLP achieves a new state-of-the-art performance on various
+downstream tasks with much less computational cost. Furthermore, we demonstrate
+that our model is essentially in par with ALBEF, the previous state-of-the-art,
+only with one-third of training epochs on the same training data. Code is
+available at https://github.com/jaeseokbyun/GRIT-VLP.},
+ arxiv_url = {https://arxiv.org/pdf/2208.04060v1.pdf},
+ author = {Jaeseok Byun and Taebaek Hwang and Jianlong Fu and Taesup Moon},
+ title = {Grit-vlp: Grouped mini-batch sampling for ef- ficient vision and language pre-training.},
+ year = {2022}
+}
+
+@article{chen_2019_uniter,
+ abstract = {Joint image-text embedding is the bedrock for most Vision-and-Language (V+L)
+tasks, where multimodality inputs are simultaneously processed for joint visual
+and textual understanding. In this paper, we introduce UNITER, a UNiversal
+Image-TExt Representation, learned through large-scale pre-training over four
+image-text datasets (COCO, Visual Genome, Conceptual Captions, and SBU
+Captions), which can power heterogeneous downstream V+L tasks with joint
+multimodal embeddings. We design four pre-training tasks: Masked Language
+Modeling (MLM), Masked Region Modeling (MRM, with three variants), Image-Text
+Matching (ITM), and Word-Region Alignment (WRA). Different from previous work
+that applies joint random masking to both modalities, we use conditional
+masking on pre-training tasks (i.e., masked language/region modeling is
+conditioned on full observation of image/text). In addition to ITM for global
+image-text alignment, we also propose WRA via the use of Optimal Transport (OT)
+to explicitly encourage fine-grained alignment between words and image regions
+during pre-training. Comprehensive analysis shows that both conditional masking
+and OT-based WRA contribute to better pre-training. We also conduct a thorough
+ablation study to find an optimal combination of pre-training tasks. Extensive
+experiments show that UNITER achieves new state of the art across six V+L tasks
+(over nine datasets), including Visual Question Answering, Image-Text
+Retrieval, Referring Expression Comprehension, Visual Commonsense Reasoning,
+Visual Entailment, and NLVR$^2$. Code is available at
+https://github.com/ChenRocks/UNITER.},
+ arxiv_url = {https://arxiv.org/pdf/1909.11740v3.pdf},
+ author = {Yen-Chun Chen and Linjie Li and Licheng Yu and Ahmed El Kholy and Faisal Ahmed and Zhe Gan and Yu Cheng and Jingjing Liu},
+ title = {UNITER: Universal image-text representation learning.},
+ year = {2019}
+}
+
+@article{chowdhery_2022_palm,
+ abstract = {Large language models have been shown to achieve remarkable performance
+across a variety of natural language tasks using few-shot learning, which
+drastically reduces the number of task-specific training examples needed to
+adapt the model to a particular application. To further our understanding of
+the impact of scale on few-shot learning, we trained a 540-billion parameter,
+densely activated, Transformer language model, which we call Pathways Language
+Model PaLM. We trained PaLM on 6144 TPU v4 chips using Pathways, a new ML
+system which enables highly efficient training across multiple TPU Pods. We
+demonstrate continued benefits of scaling by achieving state-of-the-art
+few-shot learning results on hundreds of language understanding and generation
+benchmarks. On a number of these tasks, PaLM 540B achieves breakthrough
+performance, outperforming the finetuned state-of-the-art on a suite of
+multi-step reasoning tasks, and outperforming average human performance on the
+recently released BIG-bench benchmark. A significant number of BIG-bench tasks
+showed discontinuous improvements from model scale, meaning that performance
+steeply increased as we scaled to our largest model. PaLM also has strong
+capabilities in multilingual tasks and source code generation, which we
+demonstrate on a wide array of benchmarks. We additionally provide a
+comprehensive analysis on bias and toxicity, and study the extent of training
+data memorization with respect to model scale. Finally, we discuss the ethical
+considerations related to large language models and discuss potential
+mitigation strategies.},
+ arxiv_url = {https://arxiv.org/pdf/2204.02311v5.pdf},
+ author = {Aakanksha Chowdhery and Sharan Narang and Jacob Devlin and Maarten Bosma and Gaurav Mishra and Adam Roberts and Paul Barham and Hyung Won Chung and Charles Sutton and Sebastian Gehrmann and Parker Schuh and Kensen Shi and Sasha Tsvyashchenko and Joshua Maynez and Abhishek Rao and Parker Barnes and Yi Tay and Noam Shazeer and Vinodkumar Prabhakaran and Emily Reif and Nan Du and Ben Hutchinson and Reiner Pope and James Bradbury and Jacob Austin and Michael Isard and Guy Gur-Ari and Pengcheng Yin and Toju Duke and Anselm Levskaya and Sanjay Ghemawat and Sunipa Dev and Henryk Michalewski and Xavier Garcia and Vedant Misra and Kevin Robinson and Liam Fedus and Denny Zhou and Daphne Ippolito and David Luan and Hyeontaek Lim and Barret Zoph and Alexander Spiridonov and Ryan Sepassi and David Dohan and Shivani Agrawal and Mark Omernick and Andrew M. Dai and Thanumalayan Sankaranarayana Pillai and Marie Pellat and Aitor Lewkowycz and Erica Moreira and Rewon Child and Oleksandr Polozov and Katherine Lee and Zongwei Zhou and Xuezhi Wang and Brennan Saeta and Mark Diaz and Orhan Firat and Michele Catasta and Jason Wei and Kathy Meier-Hellstern and Douglas Eck and Jeff Dean and Slav Petrov and Noah Fiedel},
+ title = {Palm: Scaling language modeling with pathways.},
+ year = {2022}
+}

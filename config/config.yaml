@@ -1,0 +1,38 @@
+experiment:
+  seed: 13
+  device: auto
+  images_dir: .research/iteration1/images
+  budgets: [0.05, 0.1, 0.25, 0.5]
+  budgets_fair: [0.05, 0.1, 0.25]
+
+data:
+  image:
+    N_train: 1500
+    N_val: 300
+    N_test: 300
+    D: 64
+    C: 5
+  text:
+    N_train: 1200
+    N_val: 300
+    N_test: 300
+    D: 48
+    C: 2
+    G: 4
+
+model:
+  head_init_std: 0.1
+
+selection:
+  d_hat: 128
+  r_max: 32
+  forgetting: 0.98
+  gamma: 0.0005
+  tau_acc: -0.01
+  tau_cal: -0.005
+
+train:
+  batch_size: 256
+  epochs: 5
+  lr: 0.005
+  wd: 0.01

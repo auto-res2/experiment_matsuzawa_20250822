@@ -5,3 +5,406 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{ahmadian_2023_intriguing,
+ abstract = {Emergent properties have been widely adopted as a term to describe behavior
+not present in smaller models but observed in larger models. Recent work
+suggests that the trade-off incurred by quantization is also an emergent
+property, with sharp drops in performance in models over 6B parameters. In this
+work, we ask "are quantization cliffs in performance solely a factor of scale?"
+Against a backdrop of increased research focus on why certain emergent
+properties surface at scale, this work provides a useful counter-example. We
+posit that it is possible to optimize for a quantization friendly training
+recipe that suppresses large activation magnitude outliers. Here, we find that
+outlier dimensions are not an inherent product of scale, but rather sensitive
+to the optimization conditions present during pre-training. This both opens up
+directions for more efficient quantization, and poses the question of whether
+other emergent properties are inherent or can be altered and conditioned by
+optimization and architecture design choices. We successfully quantize models
+ranging in size from 410M to 52B with minimal degradation in performance.},
+ arxiv_url = {https://arxiv.org/pdf/2305.19268v1.pdf},
+ author = {Arash Ahmadian and Saurabh Dash and Hongyu Chen and Bharat Venkitesh and Stephen Gou and Phil Blunsom and Ahmet Üstün and Sara Hooker},
+ title = {Intriguing Properties of Quantization at Scale},
+ year = {2023}
+}
+
+@article{author_year_optq,
+ title = {OPTQ: Accurate Quantization for Generative Pre-trained Transformers}
+}
+
+@article{author_year_outlier,
+ title = {Outlier-aware Slicing for Post-Training Quantization in Vision Transformer}
+}
+
+@article{egiazarian_2024_extreme,
+ abstract = {The emergence of accurate open large language models (LLMs) has led to a race
+towards performant quantization techniques which can enable their execution on
+end-user devices. In this paper, we revisit the problem of "extreme" LLM
+compression-defined as targeting extremely low bit counts, such as 2 to 3 bits
+per parameter-from the point of view of classic methods in Multi-Codebook
+Quantization (MCQ). Our algorithm, called AQLM, generalizes the classic
+Additive Quantization (AQ) approach for information retrieval to advance the
+state-of-the-art in LLM compression, via two innovations: 1) learned additive
+quantization of weight matrices in input-adaptive fashion, and 2) joint
+optimization of codebook parameters across each transformer blocks. Broadly,
+AQLM is the first scheme that is Pareto optimal in terms of
+accuracy-vs-model-size when compressing to less than 3 bits per parameter, and
+significantly improves upon all known schemes in the extreme compression (2bit)
+regime. In addition, AQLM is practical: we provide fast GPU and CPU
+implementations of AQLM for token generation, which enable us to match or
+outperform optimized FP16 implementations for speed, while executing in a much
+smaller memory footprint.},
+ arxiv_url = {https://arxiv.org/pdf/2401.06118v4.pdf},
+ author = {Vage Egiazarian and Andrei Panferov and Denis Kuznedelev and Elias Frantar and Artem Babenko and Dan Alistarh},
+ github_url = {https://github.com/Vahe1994/AQLM},
+ title = {Extreme Compression of Large Language Models via Additive Quantization},
+ year = {2024}
+}
+
+@article{li_2023_loftq,
+ abstract = {Quantization is an indispensable technique for serving Large Language Models
+(LLMs) and has recently found its way into LoRA fine-tuning. In this work we
+focus on the scenario where quantization and LoRA fine-tuning are applied
+together on a pre-trained model. In such cases it is common to observe a
+consistent gap in the performance on downstream tasks between full fine-tuning
+and quantization plus LoRA fine-tuning approach. In response, we propose LoftQ
+(LoRA-Fine-Tuning-aware Quantization), a novel quantization framework that
+simultaneously quantizes an LLM and finds a proper low-rank initialization for
+LoRA fine-tuning. Such an initialization alleviates the discrepancy between the
+quantized and full-precision model and significantly improves generalization in
+downstream tasks. We evaluate our method on natural language understanding,
+question answering, summarization, and natural language generation tasks.
+Experiments show that our method is highly effective and outperforms existing
+quantization methods, especially in the challenging 2-bit and 2/4-bit mixed
+precision regimes. The code is available on https://github.com/yxli2123/LoftQ.},
+ arxiv_url = {https://arxiv.org/pdf/2310.08659v4.pdf},
+ author = {Yixiao Li and Yifan Yu and Chen Liang and Pengcheng He and Nikos Karampatziakis and Weizhu Chen and Tuo Zhao},
+ github_url = {https://github.com/yxli2123/LoftQ},
+ title = {LoftQ: LoRA-Fine-Tuning-aware Quantization for Large Language Models},
+ year = {2023}
+}
+
+@article{li_2023_loftq,
+ abstract = {Quantization is an indispensable technique for serving Large Language Models
+(LLMs) and has recently found its way into LoRA fine-tuning. In this work we
+focus on the scenario where quantization and LoRA fine-tuning are applied
+together on a pre-trained model. In such cases it is common to observe a
+consistent gap in the performance on downstream tasks between full fine-tuning
+and quantization plus LoRA fine-tuning approach. In response, we propose LoftQ
+(LoRA-Fine-Tuning-aware Quantization), a novel quantization framework that
+simultaneously quantizes an LLM and finds a proper low-rank initialization for
+LoRA fine-tuning. Such an initialization alleviates the discrepancy between the
+quantized and full-precision model and significantly improves generalization in
+downstream tasks. We evaluate our method on natural language understanding,
+question answering, summarization, and natural language generation tasks.
+Experiments show that our method is highly effective and outperforms existing
+quantization methods, especially in the challenging 2-bit and 2/4-bit mixed
+precision regimes. The code is available on https://github.com/yxli2123/LoftQ.},
+ arxiv_url = {https://arxiv.org/pdf/2310.08659v4.pdf},
+ author = {Yixiao Li and Yifan Yu and Chen Liang and Pengcheng He and Nikos Karampatziakis and Weizhu Chen and Tuo Zhao},
+ github_url = {https://github.com/yxli2123/LoftQ},
+ title = {LoftQ: LoRA-Fine-Tuning-aware Quantization for Large Language Models},
+ year = {2023}
+}
+
+@article{li_2023_loftq,
+ abstract = {Quantization is an indispensable technique for serving Large Language Models
+(LLMs) and has recently found its way into LoRA fine-tuning. In this work we
+focus on the scenario where quantization and LoRA fine-tuning are applied
+together on a pre-trained model. In such cases it is common to observe a
+consistent gap in the performance on downstream tasks between full fine-tuning
+and quantization plus LoRA fine-tuning approach. In response, we propose LoftQ
+(LoRA-Fine-Tuning-aware Quantization), a novel quantization framework that
+simultaneously quantizes an LLM and finds a proper low-rank initialization for
+LoRA fine-tuning. Such an initialization alleviates the discrepancy between the
+quantized and full-precision model and significantly improves generalization in
+downstream tasks. We evaluate our method on natural language understanding,
+question answering, summarization, and natural language generation tasks.
+Experiments show that our method is highly effective and outperforms existing
+quantization methods, especially in the challenging 2-bit and 2/4-bit mixed
+precision regimes. The code is available on https://github.com/yxli2123/LoftQ.},
+ arxiv_url = {https://arxiv.org/pdf/2310.08659v4.pdf},
+ author = {Yixiao Li and Yifan Yu and Chen Liang and Pengcheng He and Nikos Karampatziakis and Weizhu Chen and Tuo Zhao},
+ github_url = {https://github.com/yxli2123/LoftQ},
+ title = {LoftQ: LoRA-Fine-Tuning-aware Quantization for Large Language Models},
+ year = {2023}
+}
+
+@article{li_2023_loftq,
+ abstract = {Quantization is an indispensable technique for serving Large Language Models
+(LLMs) and has recently found its way into LoRA fine-tuning. In this work we
+focus on the scenario where quantization and LoRA fine-tuning are applied
+together on a pre-trained model. In such cases it is common to observe a
+consistent gap in the performance on downstream tasks between full fine-tuning
+and quantization plus LoRA fine-tuning approach. In response, we propose LoftQ
+(LoRA-Fine-Tuning-aware Quantization), a novel quantization framework that
+simultaneously quantizes an LLM and finds a proper low-rank initialization for
+LoRA fine-tuning. Such an initialization alleviates the discrepancy between the
+quantized and full-precision model and significantly improves generalization in
+downstream tasks. We evaluate our method on natural language understanding,
+question answering, summarization, and natural language generation tasks.
+Experiments show that our method is highly effective and outperforms existing
+quantization methods, especially in the challenging 2-bit and 2/4-bit mixed
+precision regimes. The code is available on https://github.com/yxli2123/LoftQ.},
+ arxiv_url = {https://arxiv.org/pdf/2310.08659v4.pdf},
+ author = {Yixiao Li and Yifan Yu and Chen Liang and Pengcheng He and Nikos Karampatziakis and Weizhu Chen and Tuo Zhao},
+ github_url = {https://github.com/yxli2123/LoftQ},
+ title = {LoftQ: LoRA-Fine-Tuning-aware Quantization for Large Language Models},
+ year = {2023}
+}
+
+@article{li_2023_loftq,
+ abstract = {Quantization is an indispensable technique for serving Large Language Models
+(LLMs) and has recently found its way into LoRA fine-tuning. In this work we
+focus on the scenario where quantization and LoRA fine-tuning are applied
+together on a pre-trained model. In such cases it is common to observe a
+consistent gap in the performance on downstream tasks between full fine-tuning
+and quantization plus LoRA fine-tuning approach. In response, we propose LoftQ
+(LoRA-Fine-Tuning-aware Quantization), a novel quantization framework that
+simultaneously quantizes an LLM and finds a proper low-rank initialization for
+LoRA fine-tuning. Such an initialization alleviates the discrepancy between the
+quantized and full-precision model and significantly improves generalization in
+downstream tasks. We evaluate our method on natural language understanding,
+question answering, summarization, and natural language generation tasks.
+Experiments show that our method is highly effective and outperforms existing
+quantization methods, especially in the challenging 2-bit and 2/4-bit mixed
+precision regimes. The code is available on https://github.com/yxli2123/LoftQ.},
+ arxiv_url = {https://arxiv.org/pdf/2310.08659v4.pdf},
+ author = {Yixiao Li and Yifan Yu and Chen Liang and Pengcheng He and Nikos Karampatziakis and Weizhu Chen and Tuo Zhao},
+ github_url = {https://github.com/yxli2123/LoftQ},
+ title = {LoftQ: LoRA-Fine-Tuning-aware Quantization for Large Language Models},
+ year = {2023}
+}
+
+@article{li_2023_loftq,
+ abstract = {Quantization is an indispensable technique for serving Large Language Models
+(LLMs) and has recently found its way into LoRA fine-tuning. In this work we
+focus on the scenario where quantization and LoRA fine-tuning are applied
+together on a pre-trained model. In such cases it is common to observe a
+consistent gap in the performance on downstream tasks between full fine-tuning
+and quantization plus LoRA fine-tuning approach. In response, we propose LoftQ
+(LoRA-Fine-Tuning-aware Quantization), a novel quantization framework that
+simultaneously quantizes an LLM and finds a proper low-rank initialization for
+LoRA fine-tuning. Such an initialization alleviates the discrepancy between the
+quantized and full-precision model and significantly improves generalization in
+downstream tasks. We evaluate our method on natural language understanding,
+question answering, summarization, and natural language generation tasks.
+Experiments show that our method is highly effective and outperforms existing
+quantization methods, especially in the challenging 2-bit and 2/4-bit mixed
+precision regimes. The code is available on https://github.com/yxli2123/LoftQ.},
+ arxiv_url = {https://arxiv.org/pdf/2310.08659v4.pdf},
+ author = {Yixiao Li and Yifan Yu and Chen Liang and Pengcheng He and Nikos Karampatziakis and Weizhu Chen and Tuo Zhao},
+ github_url = {https://github.com/yxli2123/LoftQ},
+ title = {LoftQ: LoRA-Fine-Tuning-aware Quantization for Large Language Models},
+ year = {2023}
+}
+
+@article{nagel_2022_overcoming,
+ abstract = {When training neural networks with simulated quantization, we observe that
+quantized weights can, rather unexpectedly, oscillate between two grid-points.
+The importance of this effect and its impact on quantization-aware training
+(QAT) are not well-understood or investigated in literature. In this paper, we
+delve deeper into the phenomenon of weight oscillations and show that it can
+lead to a significant accuracy degradation due to wrongly estimated
+batch-normalization statistics during inference and increased noise during
+training. These effects are particularly pronounced in low-bit ($\leq$ 4-bits)
+quantization of efficient networks with depth-wise separable layers, such as
+MobileNets and EfficientNets. In our analysis we investigate several previously
+proposed QAT algorithms and show that most of these are unable to overcome
+oscillations. Finally, we propose two novel QAT algorithms to overcome
+oscillations during training: oscillation dampening and iterative weight
+freezing. We demonstrate that our algorithms achieve state-of-the-art accuracy
+for low-bit (3 & 4 bits) weight and activation quantization of efficient
+architectures, such as MobileNetV2, MobileNetV3, and EfficentNet-lite on
+ImageNet. Our source code is available at
+{https://github.com/qualcomm-ai-research/oscillations-qat}.},
+ arxiv_url = {https://arxiv.org/pdf/2203.11086v2.pdf},
+ author = {Markus Nagel and Marios Fournarakis and Yelysei Bondarenko and Tijmen Blankevoort},
+ title = {Overcoming Oscillations in Quantization-Aware Training},
+ year = {2022}
+}
+
+@article{nagel_2022_overcoming,
+ abstract = {When training neural networks with simulated quantization, we observe that
+quantized weights can, rather unexpectedly, oscillate between two grid-points.
+The importance of this effect and its impact on quantization-aware training
+(QAT) are not well-understood or investigated in literature. In this paper, we
+delve deeper into the phenomenon of weight oscillations and show that it can
+lead to a significant accuracy degradation due to wrongly estimated
+batch-normalization statistics during inference and increased noise during
+training. These effects are particularly pronounced in low-bit ($\leq$ 4-bits)
+quantization of efficient networks with depth-wise separable layers, such as
+MobileNets and EfficientNets. In our analysis we investigate several previously
+proposed QAT algorithms and show that most of these are unable to overcome
+oscillations. Finally, we propose two novel QAT algorithms to overcome
+oscillations during training: oscillation dampening and iterative weight
+freezing. We demonstrate that our algorithms achieve state-of-the-art accuracy
+for low-bit (3 & 4 bits) weight and activation quantization of efficient
+architectures, such as MobileNetV2, MobileNetV3, and EfficentNet-lite on
+ImageNet. Our source code is available at
+{https://github.com/qualcomm-ai-research/oscillations-qat}.},
+ arxiv_url = {https://arxiv.org/pdf/2203.11086v2.pdf},
+ author = {Markus Nagel and Marios Fournarakis and Yelysei Bondarenko and Tijmen Blankevoort},
+ title = {Overcoming Oscillations in Quantization-Aware Training},
+ year = {2022}
+}
+
+@article{wei_2024_rethinking,
+ abstract = {Despite their sophisticated capabilities, large language models (LLMs)
+encounter a major hurdle in effective assessment. This paper first revisits the
+prevalent evaluation method-multiple choice question answering (MCQA), which
+allows for straightforward accuracy measurement. Through a comprehensive
+evaluation of 24 models across 11 benchmarks, we highlight several potential
+drawbacks of MCQA, for instance, the inconsistency between the MCQA evaluation
+and the generation of open-ended responses in practical scenarios. In response,
+we introduce an RWQ-Elo rating system, engaging 24 LLMs such as GPT-4, GPT-3.5,
+Google-Gemini-Pro and LLaMA-1/-2, in a two-player competitive format, with
+GPT-4 serving as the judge. Each LLM receives an Elo rating thereafter. This
+system is designed to mirror real-world usage, and for this purpose, we have
+compiled a new benchmark called ``Real-world questions'' (RWQ), comprising
+20,772 authentic user inquiries. Additionally, we thoroughly analyze the
+characteristics of our system and compare it with prior leaderboards like
+AlpacaEval and MT-Bench. Our analysis reveals the stability of our RWQ-Elo
+system, the feasibility of registering new models, and its potential to reshape
+LLM leaderboards.},
+ arxiv_url = {https://arxiv.org/pdf/2403.07872v1.pdf},
+ author = {Fangyun Wei and Xi Chen and Lin Luo},
+ title = {Rethinking Generative Large Language Model Evaluation for Semantic Comprehension},
+ year = {2024}
+}
+
+@article{wu_2023_bench,
+ abstract = {The rapid evolution of Multi-modality Large Language Models (MLLMs) has
+catalyzed a shift in computer vision from specialized models to general-purpose
+foundation models. Nevertheless, there is still an inadequacy in assessing the
+abilities of MLLMs on low-level visual perception and understanding. To address
+this gap, we present Q-Bench, a holistic benchmark crafted to systematically
+evaluate potential abilities of MLLMs on three realms: low-level visual
+perception, low-level visual description, and overall visual quality
+assessment. a) To evaluate the low-level perception ability, we construct the
+LLVisionQA dataset, consisting of 2,990 diverse-sourced images, each equipped
+with a human-asked question focusing on its low-level attributes. We then
+measure the correctness of MLLMs on answering these questions. b) To examine
+the description ability of MLLMs on low-level information, we propose the
+LLDescribe dataset consisting of long expert-labelled golden low-level text
+descriptions on 499 images, and a GPT-involved comparison pipeline between
+outputs of MLLMs and the golden descriptions. c) Besides these two tasks, we
+further measure their visual quality assessment ability to align with human
+opinion scores. Specifically, we design a softmax-based strategy that enables
+MLLMs to predict quantifiable quality scores, and evaluate them on various
+existing image quality assessment (IQA) datasets. Our evaluation across the
+three abilities confirms that MLLMs possess preliminary low-level visual
+skills. However, these skills are still unstable and relatively imprecise,
+indicating the need for specific enhancements on MLLMs towards these abilities.
+We hope that our benchmark can encourage the research community to delve deeper
+to discover and enhance these untapped potentials of MLLMs. Project Page:
+https://q-future.github.io/Q-Bench.},
+ arxiv_url = {https://arxiv.org/pdf/2309.14181v3.pdf},
+ author = {Haoning Wu and Zicheng Zhang and Erli Zhang and Chaofeng Chen and Liang Liao and Annan Wang and Chunyi Li and Wenxiu Sun and Qiong Yan and Guangtao Zhai and Weisi Lin},
+ title = {Q-Bench: A Benchmark for General-Purpose Foundation Models on Low-level Vision},
+ year = {2023}
+}
+
+@article{xu_2023_lora,
+ abstract = {Recently years have witnessed a rapid development of large language models
+(LLMs). Despite the strong ability in many language-understanding tasks, the
+heavy computational burden largely restricts the application of LLMs especially
+when one needs to deploy them onto edge devices. In this paper, we propose a
+quantization-aware low-rank adaptation (QA-LoRA) algorithm. The motivation lies
+in the imbalanced degrees of freedom of quantization and adaptation, and the
+solution is to use group-wise operators which increase the degree of freedom of
+quantization meanwhile decreasing that of adaptation. QA-LoRA is easily
+implemented with a few lines of code, and it equips the original LoRA with
+two-fold abilities: (i) during fine-tuning, the LLM's weights are quantized
+(e.g., into INT4) to reduce time and memory usage; (ii) after fine-tuning, the
+LLM and auxiliary weights are naturally integrated into a quantized model
+without loss of accuracy. We apply QA-LoRA to the LLaMA and LLaMA2 model
+families and validate its effectiveness in different fine-tuning datasets and
+downstream scenarios. Code will be made available at
+https://github.com/yuhuixu1993/qa-lora.},
+ arxiv_url = {https://arxiv.org/pdf/2309.14717v2.pdf},
+ author = {Yuhui Xu and Lingxi Xie and Xiaotao Gu and Xin Chen and Heng Chang and Hengheng Zhang and Zhengsu Chen and Xiaopeng Zhang and Qi Tian},
+ title = {QA-LoRA: Quantization-Aware Low-Rank Adaptation of Large Language Models},
+ year = {2023}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{author_year_the,
+ title = {The fifth pascal recognizing textual entailment challenge}
+}
+
+@article{bai_2020_binarybert,
+ abstract = {The rapid development of large pre-trained language models has greatly
+increased the demand for model compression techniques, among which quantization
+is a popular solution. In this paper, we propose BinaryBERT, which pushes BERT
+quantization to the limit by weight binarization. We find that a binary BERT is
+hard to be trained directly than a ternary counterpart due to its complex and
+irregular loss landscape. Therefore, we propose ternary weight splitting, which
+initializes BinaryBERT by equivalently splitting from a half-sized ternary
+network. The binary model thus inherits the good performance of the ternary
+one, and can be further enhanced by fine-tuning the new architecture after
+splitting. Empirical results show that our BinaryBERT has only a slight
+performance drop compared with the full-precision model while being 24x
+smaller, achieving the state-of-the-art compression results on the GLUE and
+SQuAD benchmarks.},
+ arxiv_url = {https://arxiv.org/pdf/2012.15701v2.pdf},
+ author = {Haoli Bai and Wei Zhang and Lu Hou and Lifeng Shang and Jing Jin and Xin Jiang and Qun Liu and Michael Lyu and Irwin King},
+ title = {Binarybert: Pushing the limit of bert quantization},
+ year = {2020}
+}
+
+@article{cer_2017_semeval,
+ abstract = {Semantic Textual Similarity (STS) measures the meaning similarity of
+sentences. Applications include machine translation (MT), summarization,
+generation, question answering (QA), short answer grading, semantic search,
+dialog and conversational systems. The STS shared task is a venue for assessing
+the current state-of-the-art. The 2017 task focuses on multilingual and
+cross-lingual pairs with one sub-track exploring MT quality estimation (MTQE)
+data. The task obtained strong participation from 31 teams, with 17
+participating in all language tracks. We summarize performance and review a
+selection of well performing methods. Analysis highlights common errors,
+providing insight into the limitations of existing models. To support ongoing
+work on semantic representations, the STS Benchmark is introduced as a new
+shared training and evaluation set carefully selected from the corpus of
+English STS shared task data (2012-2017).},
+ arxiv_url = {https://arxiv.org/pdf/1708.00055v1.pdf},
+ author = {Daniel Cer and Mona Diab and Eneko Agirre and Iñigo Lopez-Gazpio and Lucia Specia},
+ doi = {10.18653/v1/S17-2001},
+ title = {SemEval-2017 task 1: Semantic textual similarity multilingual and crosslingual focused evaluation},
+ year = {2017}
+}
+
+@article{diao_2023_lmflow,
+ abstract = {Foundation models have demonstrated a great ability to achieve general
+human-level intelligence far beyond traditional approaches. As the technique
+keeps attracting attention from the AI community, an increasing number of
+foundation models are becoming publicly accessible. However, a significant
+shortcoming of most of these models lies in their performance in
+specialized-domain and task-specific applications, necessitating domain- and
+task-aware fine-tuning to develop effective scientific language models. As the
+number of available foundation models and specialized tasks keeps growing, the
+job of training scientific language models becomes highly nontrivial. In this
+paper, we initiate steps to tackle this issue. We introduce an extensible and
+lightweight toolkit, LMFlow, which aims to simplify the domain- and task-aware
+finetuning of general foundation models. LMFlow offers a complete finetuning
+workflow for a foundation model to support specialized training with limited
+computing resources. Furthermore, it supports continuous pretraining,
+instruction tuning, parameter-efficient finetuning, alignment tuning, inference
+acceleration, long context generalization, model customization, and even
+multimodal finetuning, along with carefully designed and extensible APIs. This
+toolkit has been thoroughly tested and is available at
+https://github.com/OptimalScale/LMFlow.},
+ arxiv_url = {https://arxiv.org/pdf/2306.12420v2.pdf},
+ author = {Shizhe Diao and Rui Pan and Hanze Dong and Ka Shun Shum and Jipeng Zhang and Wei Xiong and Tong Zhang},
+ title = {Lmflow: An extensible toolkit for finetuning and inference of large foundation models},
+ year = {2023}
+}

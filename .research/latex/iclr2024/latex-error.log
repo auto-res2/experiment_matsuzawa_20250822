@@ -1,0 +1,2913 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./paper.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo))
+(./iclr2024_conference.sty
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)))
+(./fancyhdr.sty) (./natbib.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/units/nicefrac.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered
+.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex))
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
+.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_loader.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+)
+Package pgfplots: loading complementary utilities for your pgf version...
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgfutil-common-lists.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructure.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructureext.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
+x.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
+d.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.te
+x
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.co
+de.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
+fshading.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
+shading.pgfsys-pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.
+tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.t
+ex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.cod
+e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.
+tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
+e.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathmorphing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathmorphing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathreplacing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathreplacing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.co
+ntourlua.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryplotmarks.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.co
+de.tex))) (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+No file paper.aux.
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-ptm.cfg)
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+! Missing $ inserted.
+<inserted text> 
+                $
+l.50 ...n with modest recomputation overhead [dao_
+                                                  2024_transformers, wang_20...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.50 ...crobenchmark validates consistent $\approx
+                                                  2\times$ peak-memory savin...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.50 ...egime, guided by IO-aware principles [liu_
+                                                  2024_vmamba, zhu_2024_visi...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.51 \end{abstract}
+                   
+! Missing } inserted.
+<inserted text> 
+                }
+l.51 \end{abstract}
+                   
+
+Overfull \hbox (66.75844pt too wide) in paragraph at lines 50--51
+\T1/ptm/m/n/10 (-20) [dao$[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ransformers; 
+wang[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 tablessm\OT1/cmr/m/n/10 ]\OML/cmm/m
+/it/10 :Aunitmicrobenchmarkvalidatesconsistent$$\OMS/cmsy/m/n/10 ^^Y
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.51 \end{abstract}
+                   
+! Missing $ inserted.
+<inserted text> 
+                $
+l.55 ...ng throughput on modern accelerators [dao_
+                                                  2024_transformers]. In vis...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.56 
+     
+
+Overfull \hbox (7.7712pt too wide) in paragraph at lines 55--56
+\OML/cmm/m/it/10 dimensionalsignalsbyscanningfeaturemapsalongfourdirections\OT1
+/cmr/m/n/10 (\OML/cmm/m/it/10 SS\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 D\OT1/cmr/m/n
+/10 )\OML/cmm/m/it/10 ; achievinglinear \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (308.13635pt too wide) in paragraph at lines 55--56
+\OML/cmm/m/it/10 timescalingandcompetitiveaccuracyacrossclassification; detecti
+on; andsegmentation\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 liu[]\OT1/cmr/m/n/10 024[]
+\OML/cmm/m/it/10 mamba; zhu[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ision\OT1/cm
+r/m/n/10 ]\OML/cmm/m/it/10 :However; trainingathighresolution\OT1/cmr/m/n/10 (2
+\OML/cmm/m/it/10 K \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (1379.07487pt too wide) in paragraph at lines 55--56
+\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 remainscon
+strainedbypeakmemoryevenforlinear \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 timemod
+els:Thedominantcostsare\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 i\OT1/cmr/m/n/10 )\OML
+/cmm/m/it/10 savedactivationsacrossdeepstacksofVSSblocks; \OT1/cmr/m/n/10 (\OML
+/cmm/m/it/10 ii\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 duplicatedstatesandactivations
+acrossfourscanningdirections; and\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 iii\OT1/cmr/
+m/n/10 )\OML/cmm/m/it/10 boundarystatisticsandnormalizationcachesthatpersisteve
+nwithstandardcheckpointing:Moreover; atlargespatialsizes; thecostofmovingdatath
+roughthememoryhierarchybecomesafirst \OMS/cmsy/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
+\OML/cmm/m/it/10 orderbottleneck; reducingtheeffectivenessofnaiverecomputationa
+ndmotivatingIO \OMS/cmsy/m/n/10 ^^@
+! Missing $ inserted.
+<inserted text> 
+                $
+l.57 ...putation and streaming are employed [wang_
+                                                  2023_stablessm, wang_2023_...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.58 
+     
+! Missing $ inserted.
+<inserted text> 
+                $
+l.59 ... reversibility and direction sharing [dao_
+                                                  2024_transformers].
+! Missing $ inserted.
+<inserted text> 
+                $
+l.60 
+     
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
+dist/fonts/enc/dvips/base/8r.enc}]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.61 ...guided by IO-aware design principles [dao_
+                                                  2023_flashattention]. Beyo...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.62 
+     
+
+Overfull \hbox (169.28612pt too wide) in paragraph at lines 61--62
+\OML/cmm/m/it/10 scaleevaluationsforsegmentationandclassificationusingstandardi
+zedtoolchains\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 author[]ear[]msegmentation; liu[
+]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 mamba\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :
+$ 
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+! Missing $ inserted.
+<inserted text> 
+                $
+l.68 ...er size while maintaining stability [wang_
+                                                  2023_stablessm].
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 \item
+           \textbf{Prototype evidence and roadmap}: demonstrates $\approx2\t...
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 \item \textbf
+                  {Prototype evidence and roadmap}: demonstrates $\approx2\t...
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 \item \textbf
+                  {Prototype evidence and roadmap}: demonstrates $\approx2\t...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.69 ...idence and roadmap}: demonstrates $\approx
+                                                  2\times$ memory savings, p...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.69 ...ps toward correctness and efficiency [dao_
+                                                  2024_transformers, dao_202...
+
+
+! LaTeX Error: Command \end{itemize} invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 \end{itemize}
+                  
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 \end{itemize}
+                  
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 \end{itemize}
+                  
+! Missing $ inserted.
+<inserted text> 
+                $
+l.70 \end{itemize}
+                  
+! Missing $ inserted.
+<inserted text> 
+                $
+l.72 ...and hybrid Conv/Attention/SSM blocks [liu_
+                                                  2024_vmamba, zhu_2024_visi...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.73 
+     
+! Missing $ inserted.
+<inserted text> 
+                $
+l.77 ...etitive accuracy across vision tasks [liu_
+                                                  2024_vmamba, zhu_2024_visi...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.78 
+     
+
+Overfull \hbox (769.41095pt too wide) in paragraph at lines 77--78
+\T1/ptm/m/n/10 (-20) [liu$[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 mamba; zhu[]\
+OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ision\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Th
+eirdesignsuseindependentparameterizationsperdirectionanddonotintegratereversibl
+etraining; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 Dstreamingautograd; ordirectionalp
+arametersharing:Incontrast; ourapproachaddressesallthreesimultaneouslytoreducet
+raining \OMS/cmsy/m/n/10 ^^@
+! Missing $ inserted.
+<inserted text> 
+                $
+l.80 ...ovides high-throughput kernels in 1D [dao_
+                                                  2024_transformers]. While ...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.81 
+     
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+\T1/ptm/m/n/10 (+20) Mamba-2 for-mal-izes a du-al-ity be-tween at-ten-tion and 
+SSMs via
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+\T1/ptm/m/n/10 (+20) struc-tured state-space ma-tri-ces and pro-vides high-thro
+ughput ker-nels
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+\T1/ptm/m/n/10 (+20) in 1D [dao$[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ransfor
+mers\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Whilethisdeliversstronglanguage \OMS/cms
+y/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+\OML/cmm/m/it/10 modelingthroughput; itdoesnotprovide\OT1/cmr/m/n/10 2\OML/cmm/
+m/it/10 Dtile \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 basedstatehandoff; cross \O
+MS/cmsy/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+\OML/cmm/m/it/10 directionsharing; orreversiblebackpropagationforSS\OT1/cmr/m/n
+/10 2\OML/cmm/m/it/10 D:Rev \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (83.25542pt too wide) in paragraph at lines 80--81
+\OML/cmm/m/it/10 SS\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 Dconceptuallyextendsthesei
+nsightsto\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 Dtilesandintegratesreversibilityands
+tatesharingduringtraining:$ 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.83 ...-end speedups without approximations [dao_
+                                                  2023_flashattention]. Our ...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.84 
+     
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+\T1/ptm/m/n/10 (+20) FlashAttention demon-strates that IO-aware tiling and fuse
+d ker-nels can re-
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+\T1/ptm/m/n/10 (+20) duce HBM traf-fic and de-liver end-to-end speedups with-ou
+t ap-prox-i-ma-tions
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+\T1/ptm/m/n/10 (+20) [dao$[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 lashattention
+\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Ouroperatorsarerecurrentratherthanattention 
+\OMS/cmsy/m/n/10 ^^@
+[2]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.86 ...hat improve optimization robustness [wang_
+                                                  2023_stablessm]. Complemen...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.87 
+     
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+\T1/ptm/m/n/10 (+20) StableSSM an-a-lyzes the sta-bil-ity lim-i-ta-tions of SSM
+s and pro-
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+\T1/ptm/m/n/10 (+20) poses repa-ram-e-ter-i-za-tions that im-prove op-ti-miza-t
+ion ro-bust-ness
+
+Overfull \hbox (769.75969pt too wide) in paragraph at lines 86--87
+\T1/ptm/m/n/10 (-20) [wang$[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 tablessm\OT1
+/cmr/m/n/10 ]\OML/cmm/m/it/10 :Complementarytheorycharacterizestheexpressivepow
+erofstackedSSMswithnonlinearities; andshowsthatmemorypersistencedecaysexponenti
+allyunderstandardparameterizations\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 wang[]\OT1/
+cmr/m/n/10 023[]\OML/cmm/m/it/10 tate; cirone[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/
+it/10 heoretical\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :WeadoptStableSSM \OMS/cmsy/m
+/n/10 ^^@
+
+Overfull \hbox (18.99121pt too wide) in paragraph at lines 86--87
+\OML/cmm/m/it/10 inspiredreparameterizationtoimproveconditioningunderrecomputat
+ionandstatequantization:$ 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.89 ...tility of linear-complexity models [liang_
+                                                  2024_pointmamba]. Our work...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.90 
+     
+
+Underfull \hbox (badness 1199) in paragraph at lines 89--90
+\T1/ptm/m/n/10 (+20) PointMamba adapts SSMs to point clouds us-ing space-fillin
+g curves, il-lus-trat-ing the ver-
+
+Underfull \hbox (badness 5908) in paragraph at lines 89--90
+\T1/ptm/m/n/10 (+20) sa-til-ity of linear-complexity mod-els [liang$[]\OT1/cmr/
+m/n/10 024[]\OML/cmm/m/it/10 ointmamba\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Ourwor
+kremainsongrid \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (145.36688pt too wide) in paragraph at lines 89--90
+\OML/cmm/m/it/10 structuredinputsbutintroducesdirectionsharingandreversibility;
+ whichwerenotexploredinVMamba; Vim; orPointMamba:$ 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.92 ...enabling reproducible comparisons [author_
+                                                  year_mmsegmentation]. We t...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.93 
+     
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+\T1/ptm/m/n/10 (+20) OpenMMLab tool-boxes, such as MM-Seg-men-ta-tion, pro-vide
+ stan-dard-ized pipelines
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+\T1/ptm/m/n/10 (+20) and met-rics for high-resolution seg-men-ta-tion, en-ablin
+g re-pro-ducible com-par-isons
+
+Overfull \hbox (30.46596pt too wide) in paragraph at lines 92--93
+\T1/ptm/m/n/10 (-20) [author$[]\OML/cmm/m/it/10 ear[]msegmentation\OT1/cmr/m/n/
+10 ]\OML/cmm/m/it/10 :WetargetsuchstacksfordownstreamevaluationsagainstVMamba \
+OMS/cmsy/m/n/10 ^^@
+! Missing $ inserted.
+<inserted text> 
+                $
+l.95 ...ther focuses on efficient 1D kernels [dao_
+                                                  2024_transformers], SS2D a...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.96 
+     
+
+Overfull \hbox (334.19908pt too wide) in paragraph at lines 95--96
+\T1/ptm/m/n/10 (-20) Prior work ei-ther fo-cuses on ef-fi-cient 1D ker-nels [da
+o$[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ransformers\OT1/cmr/m/n/10 ]\OML/cmm/
+m/it/10 ; SS\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 Darchitectureswithoutreversibleor
+streamingtraining\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 liu[]\OT1/cmr/m/n/10 024[]\O
+ML/cmm/m/it/10 mamba; zhu[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ision\OT1/cmr/
+m/n/10 ]\OML/cmm/m/it/10 ; orIO \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (515.10088pt too wide) in paragraph at lines 95--96
+\OML/cmm/m/it/10 awareattention\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 dao[]\OT1/cmr/
+m/n/10 023[]\OML/cmm/m/it/10 lashattention\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Re
+v \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 SS\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 Dun
+iquelycombinesreversibility; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 Dstreamingautogr
+ad; directionalparametersharing; andstablereparameterizationwithquantizedstates
+toreducetraining \OMS/cmsy/m/n/10 ^^@
+! Missing $ inserted.
+<inserted text> 
+                $
+l.100 ...), and applies an output projection [liu_
+                                                  2024_vmamba, zhu_2024_visi...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.101 
+      
+
+Underfull \hbox (badness 4328) in paragraph at lines 100--101
+\T1/ptm/m/n/10 (+20) We con-sider SS2D-based vi-sual back-bones op-er-at-ing on
+ in-puts $\OML/cmm/m/it/10 X \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 R[]$\T1/ptm/m/n/1
+0 (+20) .
+
+Underfull \hbox (badness 3098) in paragraph at lines 100--101
+\T1/ptm/m/n/10 (+20) A stan-dard SS2D layer ap-plies $\OT1/cmr/m/n/10 1 \OMS/cm
+sy/m/n/10 ^^B \OT1/cmr/m/n/10 1$ \T1/ptm/m/n/10 (+20) pro-jec-tions, tra-verses
+ fea-ture maps along four
+
+Underfull \hbox (badness 5217) in paragraph at lines 100--101
+\T1/ptm/m/n/10 (+20) directions^^Vleft-to-right, right-to-left, top-to-bottom, 
+bottom-to-top^^Vusing sep-a-rate SSM
+
+Underfull \hbox (badness 6284) in paragraph at lines 100--101
+\T1/ptm/m/n/10 (+20) pa-ram-e-ter-i-za-tions per di-rec-tion, merges di-rec-tio
+nal out-puts (for ex-am-ple, by av-er-ag-
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+\T1/ptm/m/n/10 (+20) ing), and ap-plies an out-put pro-jec-tion [liu$[]\OT1/cmr
+/m/n/10 024[]\OML/cmm/m/it/10 mamba; zhu[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10
+ ision\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Training \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (180.22798pt too wide) in paragraph at lines 100--101
+\OML/cmm/m/it/10 timepeakmemoryathighresolutionisdominatedbysavedactivationsacr
+ossdeepstacksofsuchlayersandbyduplicateddirectionalstates:$ 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.103 ...e kernels to accelerate recurrences [dao_
+                                                  2024_transformers]. Stable...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.104 
+      
+
+Overfull \hbox (651.21701pt too wide) in paragraph at lines 103--104
+\T1/ptm/m/n/10 (-20) [dao$[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ransformers\O
+T1/cmr/m/n/10 ]\OML/cmm/m/it/10 :StableSSMproposesreparameterizationsthatkeep$\
+T1/ptm/m/n/10 (-20) A$\OML/cmm/m/it/10 withinstableregionsand$\T1/ptm/m/n/10 (-
+20) dt$\OML/cmm/m/it/10 positive; improvingoptimizationstabilityandnumericalrob
+ustness\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 wang[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/
+it/10 tablessm\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :TheexpressivepowerofstackedSSM
+swithlayer \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (172.58835pt too wide) in paragraph at lines 103--104
+\OML/cmm/m/it/10 wisenonlinearitiesandthepersistencelimitsofmemoryviaexponentia
+ldecayarewellstudied\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 wang[]\OT1/cmr/m/n/10 023
+[]\OML/cmm/m/it/10 tate; cirone[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 heoretic
+al\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :$ 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.106 ...educe high-bandwidth memory traffic [dao_
+                                                  2023_flashattention]. For ...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.107 
+      
+
+Underfull \hbox (badness 1436) in paragraph at lines 106--107
+\T1/ptm/m/n/10 (+20) Reversible blocks re-con-struct in-puts dur-ing back-prop-
+a-ga-tion, ob-vi-at-ing the need to store
+
+Underfull \hbox (badness 2368) in paragraph at lines 106--107
+\T1/ptm/m/n/10 (+20) ac-ti-va-tions. IO-aware tiling pro-cesses in-puts in tile
+s that fit on-chip mem-ory, sav-ing
+
+Underfull \hbox (badness 1917) in paragraph at lines 106--107
+\T1/ptm/m/n/10 (+20) only min-i-mal bound-ary in-for-ma-tion and re-com-put-ing
+ in-te-ri-ors to re-duce high-bandwidth
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+\T1/ptm/m/n/10 (+20) mem-ory traf-fic [dao$[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it
+/10 lashattention\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :ForSS\OT1/cmr/m/n/10 2\OML/
+cmm/m/it/10 D; combiningreversibilitywithtile \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (249.49608pt too wide) in paragraph at lines 106--107
+\OML/cmm/m/it/10 basedstreamingsuggestsatrainingregimewhereonlyboundarySSMstate
+sandminimalstatisticsarestored; whileallheavyactivationsarerecomputed:$ 
+[3]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.112 ...retaining representational capacity [liu_
+                                                  2024_vmamba, zhu_2024_visi...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.113 
+      
+
+Underfull \hbox (badness 2698) in paragraph at lines 112--113
+\T1/ptm/m/n/10 (+20) Our set-ting in-tro-duces three un-usual el-e-ments rel-a-
+tive to prior SS2D work: fully re-
+
+Underfull \hbox (badness 3803) in paragraph at lines 112--113
+\T1/ptm/m/n/10 (+20) versible VSS blocks span-ning four-direction scans, shared
+ di-rec-tional pa-ram-e-ters with
+! Missing $ inserted.
+<inserted text> 
+                $
+l.127 ...both parameter and state footprints [liu_
+                                                  2024_vmamba, zhu_2024_visi...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.128 
+      
+! Missing $ inserted.
+<inserted text> 
+                $
+l.130 ...on handoffs and reversible backprop [dao_
+                                                  2024_transformers].
+! Missing $ inserted.
+<inserted text> 
+                $
+l.131 
+      
+! Missing $ inserted.
+<inserted text> 
+                $
+l.133 ... to recomputation and quantization [wang_
+                                                  2023_stablessm]. Boundary ...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.133 ...2. Additional stabilizers include $\alpha
+                                                  $ scheduling, spectral nor...
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+\T1/ptm/m/n/10 (+20) We adopt StableSSM-inspired repa-ram-e-ter-i-za-tions, for
+ ex-am-ple $\OML/cmm/m/it/10 A$ \T1/ptm/m/n/10 (+20) in dis-
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+\T1/ptm/m/n/10 (+20) crete form $\OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10 ^^@ \OT1/cm
+r/m/n/10 1\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a \OMS/cmsy/m/n/1
+0 ^^A \OML/cmm/m/it/10 w[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 b\OT1/cmr/m/n/10 
+)$ \T1/ptm/m/n/10 (+20) and $\OML/cmm/m/it/10 dt$ \T1/ptm/m/n/10 (+20) via soft
+-plus, to bal-ance gra-
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+\T1/ptm/m/n/10 (+20) di-ent scales and im-prove ro-bust-ness to re-com-pu-ta-ti
+on and quan-ti-za-tion
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+\T1/ptm/m/n/10 (+20) [wang$[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 tablessm\OT1
+/cmr/m/n/10 ]\OML/cmm/m/it/10 :BoundarystatesarestoredinFP\OT1/cmr/m/n/10 8(\OM
+L/cmm/m/it/10 E\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 M\OT1/cmr/m/n/10 3\OML/cmm/m/i
+t/10 =E\OT1/cmr/m/n/10 5\OML/cmm/m/it/10 M\OT1/cmr/m/n/10 2)\OML/cmm/m/it/10 or
+INT\OT1/cmr/m/n/10 8\OML/cmm/m/it/10 withper \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (340.48978pt too wide) in paragraph at lines 133--134
+\OML/cmm/m/it/10 headorper \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 groupscalingan
+derrorfeedbacktocontrolquantizationbias\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 param
+eterandgradientcomputationsremaininFP\OT1/cmr/m/n/10 16\OML/cmm/m/it/10 =BF\OT1
+/cmr/m/n/10 16\OML/cmm/m/it/10 =FP\OT1/cmr/m/n/10 32\OML/cmm/m/it/10 :Additiona
+lstabilizersinclude$$$
+[4]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.136 ...%$ overhead at $\geq1$K resolutions [dao_
+                                                  2024_transformers].
+! Missing $ inserted.
+<inserted text> 
+                $
+l.137 
+      
+! Missing $ inserted.
+<inserted text> 
+                $
+l.139 ...patible with Mamba-2 SSD fast paths [dao_
+                                                  2024_transformers].
+! Missing $ inserted.
+<inserted text> 
+                $
+l.140 
+      
+
+Underfull \vbox (badness 3199) has occurred while \output is active [5]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.188 ...tion for training and evaluation [author_
+                                                  year_mmsegmentation, liu_2...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.189 
+      
+! Missing $ inserted.
+<inserted text> 
+                $
+l.198 ... grounded in established literature [dao_
+                                                  2023_flashattention, dao_2...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.199 
+      
+[6]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.248 ... reach the intended overhead regime [dao_
+                                                  2024_transformers, dao_202...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.249 
+      
+[7]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.276 ...dominant activation and state costs [dao_
+                                                  2024_transformers].
+! Missing $ inserted.
+<inserted text> 
+                $
+l.277 
+      
+! Missing $ inserted.
+<inserted text> 
+                $
+l.278 ...tation overhead in the 5-15\% range [dao_
+                                                  2023_flashattention].
+! Missing $ inserted.
+<inserted text> 
+                $
+l.279 
+      
+[8 <./images/memory_comparison.pdf> <./images/ablation_study.pdf> <./images/tra
+ining_curves.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.280 ...hybrid Conv/Attention/SSM blocks [author_
+                                                  year_mmsegmentation, liu_2...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.281 
+      
+
+Overfull \hbox (153.69992pt too wide) in paragraph at lines 280--281
+\T1/ptm/m/n/10 (-20) [author$[]\OML/cmm/m/it/10 ear[]msegmentation; liu[]\OT1/c
+mr/m/n/10 024[]\OML/cmm/m/it/10 mamba; zhu[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/
+10 ision; wang[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 tablessm; cirone[]\OT1/cm
+r/m/n/10 024[]\OML/cmm/m/it/10 heoretical\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Ifs
+uccessful; Rev \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (169.61627pt too wide) in paragraph at lines 280--281
+\OML/cmm/m/it/10 SS\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 Dcouldenablepracticalsingl
+e \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 GPUtrainingat\OT1/cmr/m/n/10 2\OML/cmm/
+m/it/10 K \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 4\OML/cmm/m/it/10 Kresolutionswi
+thcompetitiveaccuracy; loweringcomputecostsforhigh \OMS/cmsy/m/n/10 ^^@
+
+Package natbib Warning: Citation `airas2025' on page 9 undefined on input line 
+282.
+
+No file paper.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+[9] (./paper.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `paper.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)</usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on paper.pdf (9 pages, 202632 bytes).
+Transcript written on paper.log.
+This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+The top-level auxiliary file: paper.aux
+The style file: iclr2024_conference.bst
+Database file #1: references.bib
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./paper.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo))
+(./iclr2024_conference.sty
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)))
+(./fancyhdr.sty) (./natbib.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/units/nicefrac.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered
+.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex))
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
+.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_loader.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+)
+Package pgfplots: loading complementary utilities for your pgf version...
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgfutil-common-lists.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructure.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructureext.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
+x.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
+d.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.te
+x
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.co
+de.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
+fshading.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
+shading.pgfsys-pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.
+tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.t
+ex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.cod
+e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.
+tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
+e.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathmorphing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathmorphing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathreplacing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathreplacing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.co
+ntourlua.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryplotmarks.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.co
+de.tex))) (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./paper.aux)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(./paper.out) (./paper.out)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-ptm.cfg)
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+! Missing $ inserted.
+<inserted text> 
+                $
+l.50 ...n with modest recomputation overhead [dao_
+                                                  2024_transformers, wang_20...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.50 ...crobenchmark validates consistent $\approx
+                                                  2\times$ peak-memory savin...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.50 ...egime, guided by IO-aware principles [liu_
+                                                  2024_vmamba, zhu_2024_visi...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.51 \end{abstract}
+                   
+! Missing } inserted.
+<inserted text> 
+                }
+l.51 \end{abstract}
+                   
+
+Overfull \hbox (66.75844pt too wide) in paragraph at lines 50--51
+\T1/ptm/m/n/10 (-20) [dao$[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ransformers; 
+wang[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 tablessm\OT1/cmr/m/n/10 ]\OML/cmm/m
+/it/10 :Aunitmicrobenchmarkvalidatesconsistent$$\OMS/cmsy/m/n/10 ^^Y
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.51 \end{abstract}
+                   
+! Missing $ inserted.
+<inserted text> 
+                $
+l.55 ...ng throughput on modern accelerators [dao_
+                                                  2024_transformers]. In vis...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.56 
+     
+
+Overfull \hbox (7.7712pt too wide) in paragraph at lines 55--56
+\OML/cmm/m/it/10 dimensionalsignalsbyscanningfeaturemapsalongfourdirections\OT1
+/cmr/m/n/10 (\OML/cmm/m/it/10 SS\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 D\OT1/cmr/m/n
+/10 )\OML/cmm/m/it/10 ; achievinglinear \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (308.13635pt too wide) in paragraph at lines 55--56
+\OML/cmm/m/it/10 timescalingandcompetitiveaccuracyacrossclassification; detecti
+on; andsegmentation\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 liu[]\OT1/cmr/m/n/10 024[]
+\OML/cmm/m/it/10 mamba; zhu[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ision\OT1/cm
+r/m/n/10 ]\OML/cmm/m/it/10 :However; trainingathighresolution\OT1/cmr/m/n/10 (2
+\OML/cmm/m/it/10 K \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (1379.07487pt too wide) in paragraph at lines 55--56
+\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 remainscon
+strainedbypeakmemoryevenforlinear \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 timemod
+els:Thedominantcostsare\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 i\OT1/cmr/m/n/10 )\OML
+/cmm/m/it/10 savedactivationsacrossdeepstacksofVSSblocks; \OT1/cmr/m/n/10 (\OML
+/cmm/m/it/10 ii\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 duplicatedstatesandactivations
+acrossfourscanningdirections; and\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 iii\OT1/cmr/
+m/n/10 )\OML/cmm/m/it/10 boundarystatisticsandnormalizationcachesthatpersisteve
+nwithstandardcheckpointing:Moreover; atlargespatialsizes; thecostofmovingdatath
+roughthememoryhierarchybecomesafirst \OMS/cmsy/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
+\OML/cmm/m/it/10 orderbottleneck; reducingtheeffectivenessofnaiverecomputationa
+ndmotivatingIO \OMS/cmsy/m/n/10 ^^@
+! Missing $ inserted.
+<inserted text> 
+                $
+l.57 ...putation and streaming are employed [wang_
+                                                  2023_stablessm, wang_2023_...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.58 
+     
+! Missing $ inserted.
+<inserted text> 
+                $
+l.59 ... reversibility and direction sharing [dao_
+                                                  2024_transformers].
+! Missing $ inserted.
+<inserted text> 
+                $
+l.60 
+     
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
+dist/fonts/enc/dvips/base/8r.enc}]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.61 ...guided by IO-aware design principles [dao_
+                                                  2023_flashattention]. Beyo...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.62 
+     
+
+Overfull \hbox (169.28612pt too wide) in paragraph at lines 61--62
+\OML/cmm/m/it/10 scaleevaluationsforsegmentationandclassificationusingstandardi
+zedtoolchains\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 author[]ear[]msegmentation; liu[
+]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 mamba\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :
+$ 
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+! Missing $ inserted.
+<inserted text> 
+                $
+l.68 ...er size while maintaining stability [wang_
+                                                  2023_stablessm].
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 \item
+           \textbf{Prototype evidence and roadmap}: demonstrates $\approx2\t...
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 \item \textbf
+                  {Prototype evidence and roadmap}: demonstrates $\approx2\t...
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 \item \textbf
+                  {Prototype evidence and roadmap}: demonstrates $\approx2\t...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.69 ...idence and roadmap}: demonstrates $\approx
+                                                  2\times$ memory savings, p...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.69 ...ps toward correctness and efficiency [dao_
+                                                  2024_transformers, dao_202...
+
+
+! LaTeX Error: Command \end{itemize} invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 \end{itemize}
+                  
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 \end{itemize}
+                  
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 \end{itemize}
+                  
+! Missing $ inserted.
+<inserted text> 
+                $
+l.70 \end{itemize}
+                  
+! Missing $ inserted.
+<inserted text> 
+                $
+l.72 ...and hybrid Conv/Attention/SSM blocks [liu_
+                                                  2024_vmamba, zhu_2024_visi...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.73 
+     
+! Missing $ inserted.
+<inserted text> 
+                $
+l.77 ...etitive accuracy across vision tasks [liu_
+                                                  2024_vmamba, zhu_2024_visi...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.78 
+     
+
+Overfull \hbox (769.41095pt too wide) in paragraph at lines 77--78
+\T1/ptm/m/n/10 (-20) [liu$[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 mamba; zhu[]\
+OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ision\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Th
+eirdesignsuseindependentparameterizationsperdirectionanddonotintegratereversibl
+etraining; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 Dstreamingautograd; ordirectionalp
+arametersharing:Incontrast; ourapproachaddressesallthreesimultaneouslytoreducet
+raining \OMS/cmsy/m/n/10 ^^@
+! Missing $ inserted.
+<inserted text> 
+                $
+l.80 ...ovides high-throughput kernels in 1D [dao_
+                                                  2024_transformers]. While ...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.81 
+     
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+\T1/ptm/m/n/10 (+20) Mamba-2 for-mal-izes a du-al-ity be-tween at-ten-tion and 
+SSMs via
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+\T1/ptm/m/n/10 (+20) struc-tured state-space ma-tri-ces and pro-vides high-thro
+ughput ker-nels
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+\T1/ptm/m/n/10 (+20) in 1D [dao$[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ransfor
+mers\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Whilethisdeliversstronglanguage \OMS/cms
+y/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+\OML/cmm/m/it/10 modelingthroughput; itdoesnotprovide\OT1/cmr/m/n/10 2\OML/cmm/
+m/it/10 Dtile \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 basedstatehandoff; cross \O
+MS/cmsy/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+\OML/cmm/m/it/10 directionsharing; orreversiblebackpropagationforSS\OT1/cmr/m/n
+/10 2\OML/cmm/m/it/10 D:Rev \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (83.25542pt too wide) in paragraph at lines 80--81
+\OML/cmm/m/it/10 SS\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 Dconceptuallyextendsthesei
+nsightsto\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 Dtilesandintegratesreversibilityands
+tatesharingduringtraining:$ 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.83 ...-end speedups without approximations [dao_
+                                                  2023_flashattention]. Our ...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.84 
+     
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+\T1/ptm/m/n/10 (+20) FlashAttention demon-strates that IO-aware tiling and fuse
+d ker-nels can re-
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+\T1/ptm/m/n/10 (+20) duce HBM traf-fic and de-liver end-to-end speedups with-ou
+t ap-prox-i-ma-tions
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+\T1/ptm/m/n/10 (+20) [dao$[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 lashattention
+\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Ouroperatorsarerecurrentratherthanattention 
+\OMS/cmsy/m/n/10 ^^@
+[2]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.86 ...hat improve optimization robustness [wang_
+                                                  2023_stablessm]. Complemen...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.87 
+     
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+\T1/ptm/m/n/10 (+20) StableSSM an-a-lyzes the sta-bil-ity lim-i-ta-tions of SSM
+s and pro-
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+\T1/ptm/m/n/10 (+20) poses repa-ram-e-ter-i-za-tions that im-prove op-ti-miza-t
+ion ro-bust-ness
+
+Overfull \hbox (769.75969pt too wide) in paragraph at lines 86--87
+\T1/ptm/m/n/10 (-20) [wang$[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 tablessm\OT1
+/cmr/m/n/10 ]\OML/cmm/m/it/10 :Complementarytheorycharacterizestheexpressivepow
+erofstackedSSMswithnonlinearities; andshowsthatmemorypersistencedecaysexponenti
+allyunderstandardparameterizations\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 wang[]\OT1/
+cmr/m/n/10 023[]\OML/cmm/m/it/10 tate; cirone[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/
+it/10 heoretical\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :WeadoptStableSSM \OMS/cmsy/m
+/n/10 ^^@
+
+Overfull \hbox (18.99121pt too wide) in paragraph at lines 86--87
+\OML/cmm/m/it/10 inspiredreparameterizationtoimproveconditioningunderrecomputat
+ionandstatequantization:$ 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.89 ...tility of linear-complexity models [liang_
+                                                  2024_pointmamba]. Our work...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.90 
+     
+
+Underfull \hbox (badness 1199) in paragraph at lines 89--90
+\T1/ptm/m/n/10 (+20) PointMamba adapts SSMs to point clouds us-ing space-fillin
+g curves, il-lus-trat-ing the ver-
+
+Underfull \hbox (badness 5908) in paragraph at lines 89--90
+\T1/ptm/m/n/10 (+20) sa-til-ity of linear-complexity mod-els [liang$[]\OT1/cmr/
+m/n/10 024[]\OML/cmm/m/it/10 ointmamba\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Ourwor
+kremainsongrid \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (145.36688pt too wide) in paragraph at lines 89--90
+\OML/cmm/m/it/10 structuredinputsbutintroducesdirectionsharingandreversibility;
+ whichwerenotexploredinVMamba; Vim; orPointMamba:$ 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.92 ...enabling reproducible comparisons [author_
+                                                  year_mmsegmentation]. We t...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.93 
+     
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+\T1/ptm/m/n/10 (+20) OpenMMLab tool-boxes, such as MM-Seg-men-ta-tion, pro-vide
+ stan-dard-ized pipelines
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+\T1/ptm/m/n/10 (+20) and met-rics for high-resolution seg-men-ta-tion, en-ablin
+g re-pro-ducible com-par-isons
+
+Overfull \hbox (30.46596pt too wide) in paragraph at lines 92--93
+\T1/ptm/m/n/10 (-20) [author$[]\OML/cmm/m/it/10 ear[]msegmentation\OT1/cmr/m/n/
+10 ]\OML/cmm/m/it/10 :WetargetsuchstacksfordownstreamevaluationsagainstVMamba \
+OMS/cmsy/m/n/10 ^^@
+! Missing $ inserted.
+<inserted text> 
+                $
+l.95 ...ther focuses on efficient 1D kernels [dao_
+                                                  2024_transformers], SS2D a...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.96 
+     
+
+Overfull \hbox (334.19908pt too wide) in paragraph at lines 95--96
+\T1/ptm/m/n/10 (-20) Prior work ei-ther fo-cuses on ef-fi-cient 1D ker-nels [da
+o$[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ransformers\OT1/cmr/m/n/10 ]\OML/cmm/
+m/it/10 ; SS\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 Darchitectureswithoutreversibleor
+streamingtraining\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 liu[]\OT1/cmr/m/n/10 024[]\O
+ML/cmm/m/it/10 mamba; zhu[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ision\OT1/cmr/
+m/n/10 ]\OML/cmm/m/it/10 ; orIO \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (515.10088pt too wide) in paragraph at lines 95--96
+\OML/cmm/m/it/10 awareattention\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 dao[]\OT1/cmr/
+m/n/10 023[]\OML/cmm/m/it/10 lashattention\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Re
+v \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 SS\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 Dun
+iquelycombinesreversibility; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 Dstreamingautogr
+ad; directionalparametersharing; andstablereparameterizationwithquantizedstates
+toreducetraining \OMS/cmsy/m/n/10 ^^@
+! Missing $ inserted.
+<inserted text> 
+                $
+l.100 ...), and applies an output projection [liu_
+                                                  2024_vmamba, zhu_2024_visi...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.101 
+      
+
+Underfull \hbox (badness 4328) in paragraph at lines 100--101
+\T1/ptm/m/n/10 (+20) We con-sider SS2D-based vi-sual back-bones op-er-at-ing on
+ in-puts $\OML/cmm/m/it/10 X \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 R[]$\T1/ptm/m/n/1
+0 (+20) .
+
+Underfull \hbox (badness 3098) in paragraph at lines 100--101
+\T1/ptm/m/n/10 (+20) A stan-dard SS2D layer ap-plies $\OT1/cmr/m/n/10 1 \OMS/cm
+sy/m/n/10 ^^B \OT1/cmr/m/n/10 1$ \T1/ptm/m/n/10 (+20) pro-jec-tions, tra-verses
+ fea-ture maps along four
+
+Underfull \hbox (badness 5217) in paragraph at lines 100--101
+\T1/ptm/m/n/10 (+20) directions^^Vleft-to-right, right-to-left, top-to-bottom, 
+bottom-to-top^^Vusing sep-a-rate SSM
+
+Underfull \hbox (badness 6284) in paragraph at lines 100--101
+\T1/ptm/m/n/10 (+20) pa-ram-e-ter-i-za-tions per di-rec-tion, merges di-rec-tio
+nal out-puts (for ex-am-ple, by av-er-ag-
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+\T1/ptm/m/n/10 (+20) ing), and ap-plies an out-put pro-jec-tion [liu$[]\OT1/cmr
+/m/n/10 024[]\OML/cmm/m/it/10 mamba; zhu[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10
+ ision\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Training \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (180.22798pt too wide) in paragraph at lines 100--101
+\OML/cmm/m/it/10 timepeakmemoryathighresolutionisdominatedbysavedactivationsacr
+ossdeepstacksofsuchlayersandbyduplicateddirectionalstates:$ 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.103 ...e kernels to accelerate recurrences [dao_
+                                                  2024_transformers]. Stable...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.104 
+      
+
+Overfull \hbox (651.21701pt too wide) in paragraph at lines 103--104
+\T1/ptm/m/n/10 (-20) [dao$[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ransformers\O
+T1/cmr/m/n/10 ]\OML/cmm/m/it/10 :StableSSMproposesreparameterizationsthatkeep$\
+T1/ptm/m/n/10 (-20) A$\OML/cmm/m/it/10 withinstableregionsand$\T1/ptm/m/n/10 (-
+20) dt$\OML/cmm/m/it/10 positive; improvingoptimizationstabilityandnumericalrob
+ustness\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 wang[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/
+it/10 tablessm\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :TheexpressivepowerofstackedSSM
+swithlayer \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (172.58835pt too wide) in paragraph at lines 103--104
+\OML/cmm/m/it/10 wisenonlinearitiesandthepersistencelimitsofmemoryviaexponentia
+ldecayarewellstudied\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 wang[]\OT1/cmr/m/n/10 023
+[]\OML/cmm/m/it/10 tate; cirone[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 heoretic
+al\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :$ 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.106 ...educe high-bandwidth memory traffic [dao_
+                                                  2023_flashattention]. For ...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.107 
+      
+
+Underfull \hbox (badness 1436) in paragraph at lines 106--107
+\T1/ptm/m/n/10 (+20) Reversible blocks re-con-struct in-puts dur-ing back-prop-
+a-ga-tion, ob-vi-at-ing the need to store
+
+Underfull \hbox (badness 2368) in paragraph at lines 106--107
+\T1/ptm/m/n/10 (+20) ac-ti-va-tions. IO-aware tiling pro-cesses in-puts in tile
+s that fit on-chip mem-ory, sav-ing
+
+Underfull \hbox (badness 1917) in paragraph at lines 106--107
+\T1/ptm/m/n/10 (+20) only min-i-mal bound-ary in-for-ma-tion and re-com-put-ing
+ in-te-ri-ors to re-duce high-bandwidth
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+\T1/ptm/m/n/10 (+20) mem-ory traf-fic [dao$[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it
+/10 lashattention\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :ForSS\OT1/cmr/m/n/10 2\OML/
+cmm/m/it/10 D; combiningreversibilitywithtile \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (249.49608pt too wide) in paragraph at lines 106--107
+\OML/cmm/m/it/10 basedstreamingsuggestsatrainingregimewhereonlyboundarySSMstate
+sandminimalstatisticsarestored; whileallheavyactivationsarerecomputed:$ 
+[3]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.112 ...retaining representational capacity [liu_
+                                                  2024_vmamba, zhu_2024_visi...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.113 
+      
+
+Underfull \hbox (badness 2698) in paragraph at lines 112--113
+\T1/ptm/m/n/10 (+20) Our set-ting in-tro-duces three un-usual el-e-ments rel-a-
+tive to prior SS2D work: fully re-
+
+Underfull \hbox (badness 3803) in paragraph at lines 112--113
+\T1/ptm/m/n/10 (+20) versible VSS blocks span-ning four-direction scans, shared
+ di-rec-tional pa-ram-e-ters with
+! Missing $ inserted.
+<inserted text> 
+                $
+l.127 ...both parameter and state footprints [liu_
+                                                  2024_vmamba, zhu_2024_visi...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.128 
+      
+! Missing $ inserted.
+<inserted text> 
+                $
+l.130 ...on handoffs and reversible backprop [dao_
+                                                  2024_transformers].
+! Missing $ inserted.
+<inserted text> 
+                $
+l.131 
+      
+! Missing $ inserted.
+<inserted text> 
+                $
+l.133 ... to recomputation and quantization [wang_
+                                                  2023_stablessm]. Boundary ...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.133 ...2. Additional stabilizers include $\alpha
+                                                  $ scheduling, spectral nor...
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+\T1/ptm/m/n/10 (+20) We adopt StableSSM-inspired repa-ram-e-ter-i-za-tions, for
+ ex-am-ple $\OML/cmm/m/it/10 A$ \T1/ptm/m/n/10 (+20) in dis-
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+\T1/ptm/m/n/10 (+20) crete form $\OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10 ^^@ \OT1/cm
+r/m/n/10 1\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a \OMS/cmsy/m/n/1
+0 ^^A \OML/cmm/m/it/10 w[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 b\OT1/cmr/m/n/10 
+)$ \T1/ptm/m/n/10 (+20) and $\OML/cmm/m/it/10 dt$ \T1/ptm/m/n/10 (+20) via soft
+-plus, to bal-ance gra-
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+\T1/ptm/m/n/10 (+20) di-ent scales and im-prove ro-bust-ness to re-com-pu-ta-ti
+on and quan-ti-za-tion
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+\T1/ptm/m/n/10 (+20) [wang$[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 tablessm\OT1
+/cmr/m/n/10 ]\OML/cmm/m/it/10 :BoundarystatesarestoredinFP\OT1/cmr/m/n/10 8(\OM
+L/cmm/m/it/10 E\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 M\OT1/cmr/m/n/10 3\OML/cmm/m/i
+t/10 =E\OT1/cmr/m/n/10 5\OML/cmm/m/it/10 M\OT1/cmr/m/n/10 2)\OML/cmm/m/it/10 or
+INT\OT1/cmr/m/n/10 8\OML/cmm/m/it/10 withper \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (340.48978pt too wide) in paragraph at lines 133--134
+\OML/cmm/m/it/10 headorper \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 groupscalingan
+derrorfeedbacktocontrolquantizationbias\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 param
+eterandgradientcomputationsremaininFP\OT1/cmr/m/n/10 16\OML/cmm/m/it/10 =BF\OT1
+/cmr/m/n/10 16\OML/cmm/m/it/10 =FP\OT1/cmr/m/n/10 32\OML/cmm/m/it/10 :Additiona
+lstabilizersinclude$$$
+[4]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.136 ...%$ overhead at $\geq1$K resolutions [dao_
+                                                  2024_transformers].
+! Missing $ inserted.
+<inserted text> 
+                $
+l.137 
+      
+! Missing $ inserted.
+<inserted text> 
+                $
+l.139 ...patible with Mamba-2 SSD fast paths [dao_
+                                                  2024_transformers].
+! Missing $ inserted.
+<inserted text> 
+                $
+l.140 
+      
+
+Underfull \vbox (badness 3199) has occurred while \output is active [5]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.188 ...tion for training and evaluation [author_
+                                                  year_mmsegmentation, liu_2...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.189 
+      
+! Missing $ inserted.
+<inserted text> 
+                $
+l.198 ... grounded in established literature [dao_
+                                                  2023_flashattention, dao_2...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.199 
+      
+[6]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.248 ... reach the intended overhead regime [dao_
+                                                  2024_transformers, dao_202...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.249 
+      
+[7]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.276 ...dominant activation and state costs [dao_
+                                                  2024_transformers].
+! Missing $ inserted.
+<inserted text> 
+                $
+l.277 
+      
+! Missing $ inserted.
+<inserted text> 
+                $
+l.278 ...tation overhead in the 5-15\% range [dao_
+                                                  2023_flashattention].
+! Missing $ inserted.
+<inserted text> 
+                $
+l.279 
+      
+[8 <./images/memory_comparison.pdf> <./images/ablation_study.pdf> <./images/tra
+ining_curves.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.280 ...hybrid Conv/Attention/SSM blocks [author_
+                                                  year_mmsegmentation, liu_2...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.281 
+      
+
+Overfull \hbox (153.69992pt too wide) in paragraph at lines 280--281
+\T1/ptm/m/n/10 (-20) [author$[]\OML/cmm/m/it/10 ear[]msegmentation; liu[]\OT1/c
+mr/m/n/10 024[]\OML/cmm/m/it/10 mamba; zhu[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/
+10 ision; wang[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 tablessm; cirone[]\OT1/cm
+r/m/n/10 024[]\OML/cmm/m/it/10 heoretical\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Ifs
+uccessful; Rev \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (169.61627pt too wide) in paragraph at lines 280--281
+\OML/cmm/m/it/10 SS\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 Dcouldenablepracticalsingl
+e \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 GPUtrainingat\OT1/cmr/m/n/10 2\OML/cmm/
+m/it/10 K \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 4\OML/cmm/m/it/10 Kresolutionswi
+thcompetitiveaccuracy; loweringcomputecostsforhigh \OMS/cmsy/m/n/10 ^^@
+
+Package natbib Warning: Citation `airas2025' on page 9 undefined on input line 
+282.
+
+(./paper.bbl (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd))
+
+Package natbib Warning: There were undefined citations.
+
+[9] (./paper.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+) )
+(see the transcript file for additional information)</usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on paper.pdf (9 pages, 215365 bytes).
+Transcript written on paper.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./paper.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo))
+(./iclr2024_conference.sty
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)))
+(./fancyhdr.sty) (./natbib.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/units/nicefrac.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered
+.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex))
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
+.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_loader.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+)
+Package pgfplots: loading complementary utilities for your pgf version...
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgfutil-common-lists.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructure.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructureext.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
+x.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
+d.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.te
+x
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.co
+de.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
+fshading.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
+shading.pgfsys-pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.
+tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.t
+ex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.cod
+e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.
+tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
+e.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathmorphing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathmorphing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathreplacing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathreplacing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.co
+ntourlua.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryplotmarks.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.co
+de.tex))) (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./paper.aux)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(./paper.out) (./paper.out)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-ptm.cfg)
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+! Missing $ inserted.
+<inserted text> 
+                $
+l.50 ...n with modest recomputation overhead [dao_
+                                                  2024_transformers, wang_20...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.50 ...crobenchmark validates consistent $\approx
+                                                  2\times$ peak-memory savin...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.50 ...egime, guided by IO-aware principles [liu_
+                                                  2024_vmamba, zhu_2024_visi...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.51 \end{abstract}
+                   
+! Missing } inserted.
+<inserted text> 
+                }
+l.51 \end{abstract}
+                   
+
+Overfull \hbox (66.75844pt too wide) in paragraph at lines 50--51
+\T1/ptm/m/n/10 (-20) [dao$[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ransformers; 
+wang[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 tablessm\OT1/cmr/m/n/10 ]\OML/cmm/m
+/it/10 :Aunitmicrobenchmarkvalidatesconsistent$$\OMS/cmsy/m/n/10 ^^Y
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.51 \end{abstract}
+                   
+! Missing $ inserted.
+<inserted text> 
+                $
+l.55 ...ng throughput on modern accelerators [dao_
+                                                  2024_transformers]. In vis...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.56 
+     
+
+Overfull \hbox (7.7712pt too wide) in paragraph at lines 55--56
+\OML/cmm/m/it/10 dimensionalsignalsbyscanningfeaturemapsalongfourdirections\OT1
+/cmr/m/n/10 (\OML/cmm/m/it/10 SS\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 D\OT1/cmr/m/n
+/10 )\OML/cmm/m/it/10 ; achievinglinear \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (308.13635pt too wide) in paragraph at lines 55--56
+\OML/cmm/m/it/10 timescalingandcompetitiveaccuracyacrossclassification; detecti
+on; andsegmentation\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 liu[]\OT1/cmr/m/n/10 024[]
+\OML/cmm/m/it/10 mamba; zhu[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ision\OT1/cm
+r/m/n/10 ]\OML/cmm/m/it/10 :However; trainingathighresolution\OT1/cmr/m/n/10 (2
+\OML/cmm/m/it/10 K \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (1379.07487pt too wide) in paragraph at lines 55--56
+\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 K\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 remainscon
+strainedbypeakmemoryevenforlinear \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 timemod
+els:Thedominantcostsare\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 i\OT1/cmr/m/n/10 )\OML
+/cmm/m/it/10 savedactivationsacrossdeepstacksofVSSblocks; \OT1/cmr/m/n/10 (\OML
+/cmm/m/it/10 ii\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 duplicatedstatesandactivations
+acrossfourscanningdirections; and\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 iii\OT1/cmr/
+m/n/10 )\OML/cmm/m/it/10 boundarystatisticsandnormalizationcachesthatpersisteve
+nwithstandardcheckpointing:Moreover; atlargespatialsizes; thecostofmovingdatath
+roughthememoryhierarchybecomesafirst \OMS/cmsy/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
+\OML/cmm/m/it/10 orderbottleneck; reducingtheeffectivenessofnaiverecomputationa
+ndmotivatingIO \OMS/cmsy/m/n/10 ^^@
+! Missing $ inserted.
+<inserted text> 
+                $
+l.57 ...putation and streaming are employed [wang_
+                                                  2023_stablessm, wang_2023_...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.58 
+     
+! Missing $ inserted.
+<inserted text> 
+                $
+l.59 ... reversibility and direction sharing [dao_
+                                                  2024_transformers].
+! Missing $ inserted.
+<inserted text> 
+                $
+l.60 
+     
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
+dist/fonts/enc/dvips/base/8r.enc}]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.61 ...guided by IO-aware design principles [dao_
+                                                  2023_flashattention]. Beyo...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.62 
+     
+
+Overfull \hbox (169.28612pt too wide) in paragraph at lines 61--62
+\OML/cmm/m/it/10 scaleevaluationsforsegmentationandclassificationusingstandardi
+zedtoolchains\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 author[]ear[]msegmentation; liu[
+]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 mamba\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :
+$ 
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+! Missing $ inserted.
+<inserted text> 
+                $
+l.68 ...er size while maintaining stability [wang_
+                                                  2023_stablessm].
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 \item
+           \textbf{Prototype evidence and roadmap}: demonstrates $\approx2\t...
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 \item \textbf
+                  {Prototype evidence and roadmap}: demonstrates $\approx2\t...
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 \item \textbf
+                  {Prototype evidence and roadmap}: demonstrates $\approx2\t...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.69 ...idence and roadmap}: demonstrates $\approx
+                                                  2\times$ memory savings, p...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.69 ...ps toward correctness and efficiency [dao_
+                                                  2024_transformers, dao_202...
+
+
+! LaTeX Error: Command \end{itemize} invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 \end{itemize}
+                  
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 \end{itemize}
+                  
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 \end{itemize}
+                  
+! Missing $ inserted.
+<inserted text> 
+                $
+l.70 \end{itemize}
+                  
+! Missing $ inserted.
+<inserted text> 
+                $
+l.72 ...and hybrid Conv/Attention/SSM blocks [liu_
+                                                  2024_vmamba, zhu_2024_visi...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.73 
+     
+! Missing $ inserted.
+<inserted text> 
+                $
+l.77 ...etitive accuracy across vision tasks [liu_
+                                                  2024_vmamba, zhu_2024_visi...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.78 
+     
+
+Overfull \hbox (769.41095pt too wide) in paragraph at lines 77--78
+\T1/ptm/m/n/10 (-20) [liu$[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 mamba; zhu[]\
+OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ision\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Th
+eirdesignsuseindependentparameterizationsperdirectionanddonotintegratereversibl
+etraining; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 Dstreamingautograd; ordirectionalp
+arametersharing:Incontrast; ourapproachaddressesallthreesimultaneouslytoreducet
+raining \OMS/cmsy/m/n/10 ^^@
+! Missing $ inserted.
+<inserted text> 
+                $
+l.80 ...ovides high-throughput kernels in 1D [dao_
+                                                  2024_transformers]. While ...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.81 
+     
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+\T1/ptm/m/n/10 (+20) Mamba-2 for-mal-izes a du-al-ity be-tween at-ten-tion and 
+SSMs via
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+\T1/ptm/m/n/10 (+20) struc-tured state-space ma-tri-ces and pro-vides high-thro
+ughput ker-nels
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+\T1/ptm/m/n/10 (+20) in 1D [dao$[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ransfor
+mers\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Whilethisdeliversstronglanguage \OMS/cms
+y/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+\OML/cmm/m/it/10 modelingthroughput; itdoesnotprovide\OT1/cmr/m/n/10 2\OML/cmm/
+m/it/10 Dtile \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 basedstatehandoff; cross \O
+MS/cmsy/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+\OML/cmm/m/it/10 directionsharing; orreversiblebackpropagationforSS\OT1/cmr/m/n
+/10 2\OML/cmm/m/it/10 D:Rev \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (83.25542pt too wide) in paragraph at lines 80--81
+\OML/cmm/m/it/10 SS\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 Dconceptuallyextendsthesei
+nsightsto\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 Dtilesandintegratesreversibilityands
+tatesharingduringtraining:$ 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.83 ...-end speedups without approximations [dao_
+                                                  2023_flashattention]. Our ...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.84 
+     
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+\T1/ptm/m/n/10 (+20) FlashAttention demon-strates that IO-aware tiling and fuse
+d ker-nels can re-
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+\T1/ptm/m/n/10 (+20) duce HBM traf-fic and de-liver end-to-end speedups with-ou
+t ap-prox-i-ma-tions
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+\T1/ptm/m/n/10 (+20) [dao$[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 lashattention
+\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Ouroperatorsarerecurrentratherthanattention 
+\OMS/cmsy/m/n/10 ^^@
+[2]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.86 ...hat improve optimization robustness [wang_
+                                                  2023_stablessm]. Complemen...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.87 
+     
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+\T1/ptm/m/n/10 (+20) StableSSM an-a-lyzes the sta-bil-ity lim-i-ta-tions of SSM
+s and pro-
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+\T1/ptm/m/n/10 (+20) poses repa-ram-e-ter-i-za-tions that im-prove op-ti-miza-t
+ion ro-bust-ness
+
+Overfull \hbox (769.75969pt too wide) in paragraph at lines 86--87
+\T1/ptm/m/n/10 (-20) [wang$[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 tablessm\OT1
+/cmr/m/n/10 ]\OML/cmm/m/it/10 :Complementarytheorycharacterizestheexpressivepow
+erofstackedSSMswithnonlinearities; andshowsthatmemorypersistencedecaysexponenti
+allyunderstandardparameterizations\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 wang[]\OT1/
+cmr/m/n/10 023[]\OML/cmm/m/it/10 tate; cirone[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/
+it/10 heoretical\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :WeadoptStableSSM \OMS/cmsy/m
+/n/10 ^^@
+
+Overfull \hbox (18.99121pt too wide) in paragraph at lines 86--87
+\OML/cmm/m/it/10 inspiredreparameterizationtoimproveconditioningunderrecomputat
+ionandstatequantization:$ 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.89 ...tility of linear-complexity models [liang_
+                                                  2024_pointmamba]. Our work...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.90 
+     
+
+Underfull \hbox (badness 1199) in paragraph at lines 89--90
+\T1/ptm/m/n/10 (+20) PointMamba adapts SSMs to point clouds us-ing space-fillin
+g curves, il-lus-trat-ing the ver-
+
+Underfull \hbox (badness 5908) in paragraph at lines 89--90
+\T1/ptm/m/n/10 (+20) sa-til-ity of linear-complexity mod-els [liang$[]\OT1/cmr/
+m/n/10 024[]\OML/cmm/m/it/10 ointmamba\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Ourwor
+kremainsongrid \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (145.36688pt too wide) in paragraph at lines 89--90
+\OML/cmm/m/it/10 structuredinputsbutintroducesdirectionsharingandreversibility;
+ whichwerenotexploredinVMamba; Vim; orPointMamba:$ 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.92 ...enabling reproducible comparisons [author_
+                                                  year_mmsegmentation]. We t...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.93 
+     
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+\T1/ptm/m/n/10 (+20) OpenMMLab tool-boxes, such as MM-Seg-men-ta-tion, pro-vide
+ stan-dard-ized pipelines
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+\T1/ptm/m/n/10 (+20) and met-rics for high-resolution seg-men-ta-tion, en-ablin
+g re-pro-ducible com-par-isons
+
+Overfull \hbox (30.46596pt too wide) in paragraph at lines 92--93
+\T1/ptm/m/n/10 (-20) [author$[]\OML/cmm/m/it/10 ear[]msegmentation\OT1/cmr/m/n/
+10 ]\OML/cmm/m/it/10 :WetargetsuchstacksfordownstreamevaluationsagainstVMamba \
+OMS/cmsy/m/n/10 ^^@
+! Missing $ inserted.
+<inserted text> 
+                $
+l.95 ...ther focuses on efficient 1D kernels [dao_
+                                                  2024_transformers], SS2D a...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.96 
+     
+
+Overfull \hbox (334.19908pt too wide) in paragraph at lines 95--96
+\T1/ptm/m/n/10 (-20) Prior work ei-ther fo-cuses on ef-fi-cient 1D ker-nels [da
+o$[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ransformers\OT1/cmr/m/n/10 ]\OML/cmm/
+m/it/10 ; SS\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 Darchitectureswithoutreversibleor
+streamingtraining\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 liu[]\OT1/cmr/m/n/10 024[]\O
+ML/cmm/m/it/10 mamba; zhu[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ision\OT1/cmr/
+m/n/10 ]\OML/cmm/m/it/10 ; orIO \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (515.10088pt too wide) in paragraph at lines 95--96
+\OML/cmm/m/it/10 awareattention\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 dao[]\OT1/cmr/
+m/n/10 023[]\OML/cmm/m/it/10 lashattention\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Re
+v \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 SS\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 Dun
+iquelycombinesreversibility; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 Dstreamingautogr
+ad; directionalparametersharing; andstablereparameterizationwithquantizedstates
+toreducetraining \OMS/cmsy/m/n/10 ^^@
+! Missing $ inserted.
+<inserted text> 
+                $
+l.100 ...), and applies an output projection [liu_
+                                                  2024_vmamba, zhu_2024_visi...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.101 
+      
+
+Underfull \hbox (badness 4328) in paragraph at lines 100--101
+\T1/ptm/m/n/10 (+20) We con-sider SS2D-based vi-sual back-bones op-er-at-ing on
+ in-puts $\OML/cmm/m/it/10 X \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 R[]$\T1/ptm/m/n/1
+0 (+20) .
+
+Underfull \hbox (badness 3098) in paragraph at lines 100--101
+\T1/ptm/m/n/10 (+20) A stan-dard SS2D layer ap-plies $\OT1/cmr/m/n/10 1 \OMS/cm
+sy/m/n/10 ^^B \OT1/cmr/m/n/10 1$ \T1/ptm/m/n/10 (+20) pro-jec-tions, tra-verses
+ fea-ture maps along four
+
+Underfull \hbox (badness 5217) in paragraph at lines 100--101
+\T1/ptm/m/n/10 (+20) directions^^Vleft-to-right, right-to-left, top-to-bottom, 
+bottom-to-top^^Vusing sep-a-rate SSM
+
+Underfull \hbox (badness 6284) in paragraph at lines 100--101
+\T1/ptm/m/n/10 (+20) pa-ram-e-ter-i-za-tions per di-rec-tion, merges di-rec-tio
+nal out-puts (for ex-am-ple, by av-er-ag-
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+\T1/ptm/m/n/10 (+20) ing), and ap-plies an out-put pro-jec-tion [liu$[]\OT1/cmr
+/m/n/10 024[]\OML/cmm/m/it/10 mamba; zhu[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10
+ ision\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Training \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (180.22798pt too wide) in paragraph at lines 100--101
+\OML/cmm/m/it/10 timepeakmemoryathighresolutionisdominatedbysavedactivationsacr
+ossdeepstacksofsuchlayersandbyduplicateddirectionalstates:$ 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.103 ...e kernels to accelerate recurrences [dao_
+                                                  2024_transformers]. Stable...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.104 
+      
+
+Overfull \hbox (651.21701pt too wide) in paragraph at lines 103--104
+\T1/ptm/m/n/10 (-20) [dao$[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 ransformers\O
+T1/cmr/m/n/10 ]\OML/cmm/m/it/10 :StableSSMproposesreparameterizationsthatkeep$\
+T1/ptm/m/n/10 (-20) A$\OML/cmm/m/it/10 withinstableregionsand$\T1/ptm/m/n/10 (-
+20) dt$\OML/cmm/m/it/10 positive; improvingoptimizationstabilityandnumericalrob
+ustness\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 wang[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/
+it/10 tablessm\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :TheexpressivepowerofstackedSSM
+swithlayer \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (172.58835pt too wide) in paragraph at lines 103--104
+\OML/cmm/m/it/10 wisenonlinearitiesandthepersistencelimitsofmemoryviaexponentia
+ldecayarewellstudied\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 wang[]\OT1/cmr/m/n/10 023
+[]\OML/cmm/m/it/10 tate; cirone[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/10 heoretic
+al\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :$ 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.106 ...educe high-bandwidth memory traffic [dao_
+                                                  2023_flashattention]. For ...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.107 
+      
+
+Underfull \hbox (badness 1436) in paragraph at lines 106--107
+\T1/ptm/m/n/10 (+20) Reversible blocks re-con-struct in-puts dur-ing back-prop-
+a-ga-tion, ob-vi-at-ing the need to store
+
+Underfull \hbox (badness 2368) in paragraph at lines 106--107
+\T1/ptm/m/n/10 (+20) ac-ti-va-tions. IO-aware tiling pro-cesses in-puts in tile
+s that fit on-chip mem-ory, sav-ing
+
+Underfull \hbox (badness 1917) in paragraph at lines 106--107
+\T1/ptm/m/n/10 (+20) only min-i-mal bound-ary in-for-ma-tion and re-com-put-ing
+ in-te-ri-ors to re-duce high-bandwidth
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+\T1/ptm/m/n/10 (+20) mem-ory traf-fic [dao$[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it
+/10 lashattention\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :ForSS\OT1/cmr/m/n/10 2\OML/
+cmm/m/it/10 D; combiningreversibilitywithtile \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (249.49608pt too wide) in paragraph at lines 106--107
+\OML/cmm/m/it/10 basedstreamingsuggestsatrainingregimewhereonlyboundarySSMstate
+sandminimalstatisticsarestored; whileallheavyactivationsarerecomputed:$ 
+[3]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.112 ...retaining representational capacity [liu_
+                                                  2024_vmamba, zhu_2024_visi...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.113 
+      
+
+Underfull \hbox (badness 2698) in paragraph at lines 112--113
+\T1/ptm/m/n/10 (+20) Our set-ting in-tro-duces three un-usual el-e-ments rel-a-
+tive to prior SS2D work: fully re-
+
+Underfull \hbox (badness 3803) in paragraph at lines 112--113
+\T1/ptm/m/n/10 (+20) versible VSS blocks span-ning four-direction scans, shared
+ di-rec-tional pa-ram-e-ters with
+! Missing $ inserted.
+<inserted text> 
+                $
+l.127 ...both parameter and state footprints [liu_
+                                                  2024_vmamba, zhu_2024_visi...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.128 
+      
+! Missing $ inserted.
+<inserted text> 
+                $
+l.130 ...on handoffs and reversible backprop [dao_
+                                                  2024_transformers].
+! Missing $ inserted.
+<inserted text> 
+                $
+l.131 
+      
+! Missing $ inserted.
+<inserted text> 
+                $
+l.133 ... to recomputation and quantization [wang_
+                                                  2023_stablessm]. Boundary ...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.133 ...2. Additional stabilizers include $\alpha
+                                                  $ scheduling, spectral nor...
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+\T1/ptm/m/n/10 (+20) We adopt StableSSM-inspired repa-ram-e-ter-i-za-tions, for
+ ex-am-ple $\OML/cmm/m/it/10 A$ \T1/ptm/m/n/10 (+20) in dis-
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+\T1/ptm/m/n/10 (+20) crete form $\OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10 ^^@ \OT1/cm
+r/m/n/10 1\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a \OMS/cmsy/m/n/1
+0 ^^A \OML/cmm/m/it/10 w[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 b\OT1/cmr/m/n/10 
+)$ \T1/ptm/m/n/10 (+20) and $\OML/cmm/m/it/10 dt$ \T1/ptm/m/n/10 (+20) via soft
+-plus, to bal-ance gra-
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+\T1/ptm/m/n/10 (+20) di-ent scales and im-prove ro-bust-ness to re-com-pu-ta-ti
+on and quan-ti-za-tion
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+\T1/ptm/m/n/10 (+20) [wang$[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 tablessm\OT1
+/cmr/m/n/10 ]\OML/cmm/m/it/10 :BoundarystatesarestoredinFP\OT1/cmr/m/n/10 8(\OM
+L/cmm/m/it/10 E\OT1/cmr/m/n/10 4\OML/cmm/m/it/10 M\OT1/cmr/m/n/10 3\OML/cmm/m/i
+t/10 =E\OT1/cmr/m/n/10 5\OML/cmm/m/it/10 M\OT1/cmr/m/n/10 2)\OML/cmm/m/it/10 or
+INT\OT1/cmr/m/n/10 8\OML/cmm/m/it/10 withper \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (340.48978pt too wide) in paragraph at lines 133--134
+\OML/cmm/m/it/10 headorper \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 groupscalingan
+derrorfeedbacktocontrolquantizationbias\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 param
+eterandgradientcomputationsremaininFP\OT1/cmr/m/n/10 16\OML/cmm/m/it/10 =BF\OT1
+/cmr/m/n/10 16\OML/cmm/m/it/10 =FP\OT1/cmr/m/n/10 32\OML/cmm/m/it/10 :Additiona
+lstabilizersinclude$$$
+[4]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.136 ...%$ overhead at $\geq1$K resolutions [dao_
+                                                  2024_transformers].
+! Missing $ inserted.
+<inserted text> 
+                $
+l.137 
+      
+! Missing $ inserted.
+<inserted text> 
+                $
+l.139 ...patible with Mamba-2 SSD fast paths [dao_
+                                                  2024_transformers].
+! Missing $ inserted.
+<inserted text> 
+                $
+l.140 
+      
+
+Underfull \vbox (badness 3199) has occurred while \output is active [5]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.188 ...tion for training and evaluation [author_
+                                                  year_mmsegmentation, liu_2...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.189 
+      
+! Missing $ inserted.
+<inserted text> 
+                $
+l.198 ... grounded in established literature [dao_
+                                                  2023_flashattention, dao_2...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.199 
+      
+[6]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.248 ... reach the intended overhead regime [dao_
+                                                  2024_transformers, dao_202...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.249 
+      
+[7]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.276 ...dominant activation and state costs [dao_
+                                                  2024_transformers].
+! Missing $ inserted.
+<inserted text> 
+                $
+l.277 
+      
+! Missing $ inserted.
+<inserted text> 
+                $
+l.278 ...tation overhead in the 5-15\% range [dao_
+                                                  2023_flashattention].
+! Missing $ inserted.
+<inserted text> 
+                $
+l.279 
+      
+[8 <./images/memory_comparison.pdf> <./images/ablation_study.pdf> <./images/tra
+ining_curves.pdf>]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.280 ...hybrid Conv/Attention/SSM blocks [author_
+                                                  year_mmsegmentation, liu_2...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.281 
+      
+
+Overfull \hbox (153.69992pt too wide) in paragraph at lines 280--281
+\T1/ptm/m/n/10 (-20) [author$[]\OML/cmm/m/it/10 ear[]msegmentation; liu[]\OT1/c
+mr/m/n/10 024[]\OML/cmm/m/it/10 mamba; zhu[]\OT1/cmr/m/n/10 024[]\OML/cmm/m/it/
+10 ision; wang[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 tablessm; cirone[]\OT1/cm
+r/m/n/10 024[]\OML/cmm/m/it/10 heoretical\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Ifs
+uccessful; Rev \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (169.61627pt too wide) in paragraph at lines 280--281
+\OML/cmm/m/it/10 SS\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 Dcouldenablepracticalsingl
+e \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 GPUtrainingat\OT1/cmr/m/n/10 2\OML/cmm/
+m/it/10 K \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 4\OML/cmm/m/it/10 Kresolutionswi
+thcompetitiveaccuracy; loweringcomputecostsforhigh \OMS/cmsy/m/n/10 ^^@
+(./paper.bbl (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd))
+[9] (./paper.aux) )
+(see the transcript file for additional information)</usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on paper.pdf (9 pages, 214698 bytes).
+Transcript written on paper.log.

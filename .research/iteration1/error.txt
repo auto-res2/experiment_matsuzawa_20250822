@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/experiment_matsuzawa_20250822/experiment_matsuzawa_20250822/src/preprocess.py", line 5, in <module>
+    from train import (
+ModuleNotFoundError: No module named 'train'
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/experiment_matsuzawa_20250822/experiment_matsuzawa_20250822/src/evaluate.py", line 8, in <module>
+    from train import (
+ModuleNotFoundError: No module named 'train'

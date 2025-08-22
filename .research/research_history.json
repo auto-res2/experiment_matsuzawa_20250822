@@ -217,6 +217,38 @@
       "title": "Towards Efficient and Effective Adversarial Training"
     }
   ],
+  "reference_research_study_list": [
+    {
+      "title": "Deep learning with differential privacy"
+    },
+    {
+      "title": "Bullseye polytope: A scalable clean-label poisoning attack with improved transferability"
+    },
+    {
+      "title": "Strong data augmentation sanitizes poisoning and backdoor attacks without an accuracy tradeoff"
+    },
+    {
+      "title": "Convex optimization"
+    },
+    {
+      "title": "Detecting backdoor attacks on deep neural networks by activation clustering"
+    },
+    {
+      "title": "Targeted backdoor attacks on deep learning systems using data poisoning"
+    },
+    {
+      "title": "Casting out demons: Sanitizing training data for anomaly sensors"
+    },
+    {
+      "title": "Imagenet: A large-scale hierarchical image database"
+    },
+    {
+      "title": "Deep learning versus kernel learning: an empirical study of loss landscape geometry and the time evolution of the neural tangent kernel"
+    },
+    {
+      "title": "What doesn’t kill you makes you robust (er): Adversarial training against poisons and backdoors"
+    }
+  ],
   "new_method": {
     "method": "{\"Motivation\": \"While prior in-training defenses like EPIC improved efficiency over universal pre-processing, they rely on periodic, batch-level clustering in gradient space, which is computationally intensive and misses subtle, slow-brewing poison effects. We refine the concept of learning trajectory analysis by introducing 'ULTRA-C+' (Universal Learning Trajectory Analysis with Corrective Control), a continuous, per-sample defense. ULTRA-C+'s core hypothesis is that a poisoned sample's learning trajectory is not just simpler, but also exhibits a rigid, predictable response to model updates. By replacing discrete clustering and complex trajectory transforms with lightweight statistical analysis and a more robust mitigation strategy, ULTRA-C+ offers a highly efficient, continuous monitoring system that is more granular than periodic defenses and surgically precise in its correction, closing a critical gap in scalable, real-time backdoor mitigation.\", \"Methodology\": \"ULTRA-C+ integrates a continuous analysis and mitigation loop directly into the training process, replacing periodic, heavy computations with an efficient, history-aware scoring and correction mechanism for each sample. 1. **Trajectory Capture and Statistical Featurization:** For each training sample, we maintain a sliding window of its last K (e.g., K=16) loss values, normalized by the mini-batch mean loss trend to isolate idiosyncratic dynamics. Instead of computationally expensive transforms (DCT/FFT), we extract a concise set of statistical features from this trajectory vector: (a) **Stability (Variance):** The variance of the loss values, where poisoned samples are expected to have lower variance. (b) **Predictability (Linear Extrapolation Error):** The error from a simple linear model predicting the next loss value; poisoned samples are more predictable and thus have lower error. These lightweight features are fed into a small MLP 'Scoring Head' that outputs a single anomaly score for the sample. 2. **Robust Corrective Gradient Steering (CGS):** This novel mechanism replaces the flawed batch-dependent correction of the initial idea. We maintain an exponential moving average (EMA) of 'clean' gradients for each class, `G_clean_ema_c`. This EMA is updated only with gradients from samples whose anomaly scores are below a confidence threshold, creating a stable, historical representation of a benign update direction. For a suspect sample with a moderate score, its gradient `G_suspect` is steered towards this stable average: `G_corrected = G_suspect + α(score) * (G_clean_ema_c - G_suspect)`. The steering factor `α` is a function of the score. This CGS mechanism is a key novelty, as it decouples the correction from the noisy, unreliable mini-batch composition and avoids the circular logic of identifying clean samples within the batch to correct suspect ones. 3. **Minimalist Generative Purification:** For a tiny fraction of samples with exceptionally high anomaly scores (e.g., top 0.1%), we trigger a pre-trained DDPM for a minimal number of purification steps (e.g., 1-3) as a last-resort intervention, ensuring efficiency by using it far more sparingly than universal pre-processing defenses like PureGen.\", \"Expected Impact\": \"ULTRA-C+ is poised to set a new standard for the trade-off between backdoor defense robustness, model utility, and training efficiency. By simplifying trajectory analysis to lightweight statistical features, it becomes significantly more computationally efficient than the original proposal and far superior to periodic clustering methods like EPIC. The introduction of Corrective Gradient Steering (CGS) based on a stable gradient EMA represents a fundamental improvement in mitigation strategy; it provides a surgical tool that is more robust and theoretically sound than batch-dependent approaches, preserving valuable information from 'hard' clean samples without the disruption of data removal. This makes robust, in-training defense practical for large-scale systems, overcoming the high computational barriers of PureGen and providing a more responsive and principled alternative to existing in-training methods.\"}",
     "experimental_design": {

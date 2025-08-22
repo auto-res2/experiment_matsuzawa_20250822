@@ -5,3 +5,436 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{author_year_parameterless,
+ title = {Parameterless Transductive Feature Re-representation for Few-Shot Learning}
+}
+
+@article{author_year_revisiting,
+ title = {Revisiting Prototypical Network for Cross Domain Few-Shot Learning}
+}
+
+@article{cao_2019_theoretical,
+ abstract = {Few-shot classification is the task of predicting the category of an example
+from a set of few labeled examples. The number of labeled examples per category
+is called the number of shots (or shot number). Recent works tackle this task
+through meta-learning, where a meta-learner extracts information from observed
+tasks during meta-training to quickly adapt to new tasks during meta-testing.
+In this formulation, the number of shots exploited during meta-training has an
+impact on the recognition performance at meta-test time. Generally, the shot
+number used in meta-training should match the one used in meta-testing to
+obtain the best performance. We introduce a theoretical analysis of the impact
+of the shot number on Prototypical Networks, a state-of-the-art few-shot
+classification method. From our analysis, we propose a simple method that is
+robust to the choice of shot number used during meta-training, which is a
+crucial hyperparameter. The performance of our model trained for an arbitrary
+meta-training shot number shows great performance for different values of
+meta-testing shot numbers. We experimentally demonstrate our approach on
+different few-shot classification benchmarks.},
+ arxiv_url = {https://arxiv.org/pdf/1909.11722v2.pdf},
+ author = {Tianshi Cao and Marc Law and Sanja Fidler},
+ journal = {8th International Conference on Learning Representations 2020,
+  Addis Ababa, Ethiopia},
+ title = {A Theoretical Analysis of the Number of Shots in Few-Shot Learning},
+ year = {2019}
+}
+
+@article{cao_2019_theoretical,
+ abstract = {Few-shot classification is the task of predicting the category of an example
+from a set of few labeled examples. The number of labeled examples per category
+is called the number of shots (or shot number). Recent works tackle this task
+through meta-learning, where a meta-learner extracts information from observed
+tasks during meta-training to quickly adapt to new tasks during meta-testing.
+In this formulation, the number of shots exploited during meta-training has an
+impact on the recognition performance at meta-test time. Generally, the shot
+number used in meta-training should match the one used in meta-testing to
+obtain the best performance. We introduce a theoretical analysis of the impact
+of the shot number on Prototypical Networks, a state-of-the-art few-shot
+classification method. From our analysis, we propose a simple method that is
+robust to the choice of shot number used during meta-training, which is a
+crucial hyperparameter. The performance of our model trained for an arbitrary
+meta-training shot number shows great performance for different values of
+meta-testing shot numbers. We experimentally demonstrate our approach on
+different few-shot classification benchmarks.},
+ arxiv_url = {https://arxiv.org/pdf/1909.11722v2.pdf},
+ author = {Tianshi Cao and Marc Law and Sanja Fidler},
+ journal = {8th International Conference on Learning Representations 2020,
+  Addis Ababa, Ethiopia},
+ title = {A Theoretical Analysis of the Number of Shots in Few-Shot Learning},
+ year = {2019}
+}
+
+@article{goswami_2023_fecam,
+ abstract = {Exemplar-free class-incremental learning (CIL) poses several challenges since
+it prohibits the rehearsal of data from previous tasks and thus suffers from
+catastrophic forgetting. Recent approaches to incrementally learning the
+classifier by freezing the feature extractor after the first task have gained
+much attention. In this paper, we explore prototypical networks for CIL, which
+generate new class prototypes using the frozen feature extractor and classify
+the features based on the Euclidean distance to the prototypes. In an analysis
+of the feature distributions of classes, we show that classification based on
+Euclidean metrics is successful for jointly trained features. However, when
+learning from non-stationary data, we observe that the Euclidean metric is
+suboptimal and that feature distributions are heterogeneous. To address this
+challenge, we revisit the anisotropic Mahalanobis distance for CIL. In
+addition, we empirically show that modeling the feature covariance relations is
+better than previous attempts at sampling features from normal distributions
+and training a linear classifier. Unlike existing methods, our approach
+generalizes to both many- and few-shot CIL settings, as well as to
+domain-incremental settings. Interestingly, without updating the backbone
+network, our method obtains state-of-the-art results on several standard
+continual learning benchmarks. Code is available at
+https://github.com/dipamgoswami/FeCAM.},
+ arxiv_url = {https://arxiv.org/pdf/2309.14062v3.pdf},
+ author = {Dipam Goswami and Yuyang Liu and Bartłomiej Twardowski and Joost van de Weijer},
+ github_url = {https://github.com/dipamgoswami/FeCAM},
+ title = {FeCAM: Exploiting the Heterogeneity of Class Distributions in Exemplar-Free Continual Learning},
+ year = {2023}
+}
+
+@article{hofer_2020_topologically,
+ abstract = {We study regularization in the context of small sample-size learning with
+over-parameterized neural networks. Specifically, we shift focus from
+architectural properties, such as norms on the network weights, to properties
+of the internal representations before a linear classifier. Specifically, we
+impose a topological constraint on samples drawn from the probability measure
+induced in that space. This provably leads to mass concentration effects around
+the representations of training instances, i.e., a property beneficial for
+generalization. By leveraging previous work to impose topological constraints
+in a neural network setting, we provide empirical evidence (across various
+vision benchmarks) to support our claim for better generalization.},
+ arxiv_url = {https://arxiv.org/pdf/2002.04805v2.pdf},
+ author = {Christoph D. Hofer and Florian Graf and Marc Niethammer and Roland Kwitt},
+ title = {Topologically Densified Distributions},
+ year = {2020}
+}
+
+@article{hou_2021_closer,
+ abstract = {The prototypical network is a prototype classifier based on meta-learning and
+is widely used for few-shot learning because it classifies unseen examples by
+constructing class-specific prototypes without adjusting hyper-parameters
+during meta-testing. Interestingly, recent research has attracted a lot of
+attention, showing that training a new linear classifier, which does not use a
+meta-learning algorithm, performs comparably with the prototypical network.
+However, the training of a new linear classifier requires the retraining of the
+classifier every time a new class appears. In this paper, we analyze how a
+prototype classifier works equally well without training a new linear
+classifier or meta-learning. We experimentally find that directly using the
+feature vectors, which is extracted by using standard pre-trained models to
+construct a prototype classifier in meta-testing, does not perform as well as
+the prototypical network and training new linear classifiers on the feature
+vectors of pre-trained models. Thus, we derive a novel generalization bound for
+a prototypical classifier and show that the transformation of a feature vector
+can improve the performance of prototype classifiers. We experimentally
+investigate several normalization methods for minimizing the derived bound and
+find that the same performance can be obtained by using the L2 normalization
+and minimizing the ratio of the within-class variance to the between-class
+variance without training a new classifier or meta-learning.},
+ arxiv_url = {https://arxiv.org/pdf/2110.05076v5.pdf},
+ author = {Mingcheng Hou and Issei Sato},
+ title = {A Closer Look at Prototype Classifier for Few-shot Image Classification},
+ year = {2021}
+}
+
+@article{hou_2021_closer,
+ abstract = {The prototypical network is a prototype classifier based on meta-learning and
+is widely used for few-shot learning because it classifies unseen examples by
+constructing class-specific prototypes without adjusting hyper-parameters
+during meta-testing. Interestingly, recent research has attracted a lot of
+attention, showing that training a new linear classifier, which does not use a
+meta-learning algorithm, performs comparably with the prototypical network.
+However, the training of a new linear classifier requires the retraining of the
+classifier every time a new class appears. In this paper, we analyze how a
+prototype classifier works equally well without training a new linear
+classifier or meta-learning. We experimentally find that directly using the
+feature vectors, which is extracted by using standard pre-trained models to
+construct a prototype classifier in meta-testing, does not perform as well as
+the prototypical network and training new linear classifiers on the feature
+vectors of pre-trained models. Thus, we derive a novel generalization bound for
+a prototypical classifier and show that the transformation of a feature vector
+can improve the performance of prototype classifiers. We experimentally
+investigate several normalization methods for minimizing the derived bound and
+find that the same performance can be obtained by using the L2 normalization
+and minimizing the ratio of the within-class variance to the between-class
+variance without training a new classifier or meta-learning.},
+ arxiv_url = {https://arxiv.org/pdf/2110.05076v5.pdf},
+ author = {Mingcheng Hou and Issei Sato},
+ title = {A Closer Look at Prototype Classifier for Few-shot Image Classification},
+ year = {2021}
+}
+
+@article{ni_2020_data,
+ abstract = {Conventional image classifiers are trained by randomly sampling mini-batches
+of images. To achieve state-of-the-art performance, practitioners use
+sophisticated data augmentation schemes to expand the amount of training data
+available for sampling. In contrast, meta-learning algorithms sample support
+data, query data, and tasks on each training step. In this complex sampling
+scenario, data augmentation can be used not only to expand the number of images
+available per class, but also to generate entirely new classes/tasks. We
+systematically dissect the meta-learning pipeline and investigate the distinct
+ways in which data augmentation can be integrated at both the image and class
+levels. Our proposed meta-specific data augmentation significantly improves the
+performance of meta-learners on few-shot classification benchmarks.},
+ arxiv_url = {https://arxiv.org/pdf/2010.07092v2.pdf},
+ author = {Renkun Ni and Micah Goldblum and Amr Sharaf and Kezhi Kong and Tom Goldstein},
+ github_url = {https://github.com/RenkunNi/MetaAug},
+ title = {Data Augmentation for Meta-Learning},
+ year = {2020}
+}
+
+@article{wang_2024_semantic,
+ abstract = {Cross-domain retrieval (CDR), as a crucial tool for numerous technologies, is
+finding increasingly broad applications. However, existing efforts face several
+major issues, with the most critical being the need for accurate supervision,
+which often demands costly resources and efforts. Cutting-edge studies focus on
+achieving unsupervised CDR but typically assume that the category spaces across
+domains are identical, an assumption that is often unrealistic in real-world
+scenarios. This is because only through dedicated and comprehensive analysis
+can the category spaces of different domains be confirmed as identical, which
+contradicts the premise of unsupervised scenarios. Therefore, in this work, we
+introduce the problem of Universal Unsupervised Cross-Domain Retrieval (U^2CDR)
+for the first time and design a two-stage semantic feature learning framework
+to address it. In the first stage, a cross-domain unified prototypical
+structure is established under the guidance of an instance-prototype-mixed
+contrastive loss and a semantic-enhanced loss, to counteract category space
+differences. In the second stage, through a modified adversarial training
+mechanism, we ensure minimal changes for the established prototypical structure
+during domain alignment, enabling more accurate nearest-neighbor searching.
+Extensive experiments across multiple datasets and scenarios, including closet,
+partial, and open-set CDR, demonstrate that our approach significantly
+outperforms existing state-of-the-art CDR works and some potentially effective
+studies from other topics in solving U^2CDR challenges.},
+ arxiv_url = {https://arxiv.org/pdf/2403.05690v1.pdf},
+ author = {Lixu Wang and Xinyu Du and Qi Zhu},
+ title = {Semantic Feature Learning for Universal Unsupervised Cross-Domain Retrieval},
+ year = {2024}
+}
+
+@article{wen_2024_cross,
+ abstract = {In many real-world applications, test data may commonly exhibit categorical
+shifts, characterized by the emergence of novel classes, as well as
+distribution shifts arising from feature distributions different from the ones
+the model was trained on. However, existing methods either discover novel
+classes in the open-world setting or assume domain shifts without the ability
+to discover novel classes. In this work, we consider a cross-domain open-world
+discovery setting, where the goal is to assign samples to seen classes and
+discover unseen classes under a domain shift. To address this challenging
+problem, we present CROW, a prototype-based approach that introduces a
+cluster-then-match strategy enabled by a well-structured representation space
+of foundation models. In this way, CROW discovers novel classes by robustly
+matching clusters with previously seen classes, followed by fine-tuning the
+representation space using an objective designed for cross-domain open-world
+discovery. Extensive experimental results on image classification benchmark
+datasets demonstrate that CROW outperforms alternative baselines, achieving an
+8% average performance improvement across 75 experimental settings.},
+ arxiv_url = {https://arxiv.org/pdf/2406.11422v1.pdf},
+ author = {Shuo Wen and Maria Brbic},
+ github_url = {https://github.com/mlbio-epfl/crow},
+ title = {Cross-domain Open-world Discovery},
+ year = {2024}
+}
+
+@article{yang_2022_adversarial,
+ abstract = {Data augmentation is a critical contributing factor to the success of deep
+learning but heavily relies on prior domain knowledge which is not always
+available. Recent works on automatic data augmentation learn a policy to form a
+sequence of augmentation operations, which are still pre-defined and restricted
+to limited options. In this paper, we show that a prior-free autonomous data
+augmentation's objective can be derived from a representation learning
+principle that aims to preserve the minimum sufficient information of the
+labels. Given an example, the objective aims at creating a distant "hard
+positive example" as the augmentation, while still preserving the original
+label. We then propose a practical surrogate to the objective that can be
+optimized efficiently and integrated seamlessly into existing methods for a
+broad class of machine learning tasks, e.g., supervised, semi-supervised, and
+noisy-label learning. Unlike previous works, our method does not require
+training an extra generative model but instead leverages the intermediate layer
+representations of the end-task model for generating data augmentations. In
+experiments, we show that our method consistently brings non-trivial
+improvements to the three aforementioned learning tasks from both efficiency
+and final performance, either or not combined with strong pre-defined
+augmentations, e.g., on medical images when domain knowledge is unavailable and
+the existing augmentation techniques perform poorly. Code is available at:
+https://github.com/kai-wen-yang/LPA3}{https://github.com/kai-wen-yang/LPA3.},
+ arxiv_url = {https://arxiv.org/pdf/2211.00824v1.pdf},
+ author = {Kaiwen Yang and Yanchao Sun and Jiahao Su and Fengxiang He and Xinmei Tian and Furong Huang and Tianyi Zhou and Dacheng Tao},
+ github_url = {https://github.com/kai-wen-yang/LPA3},
+ title = {Adversarial Auto-Augment with Label Preservation: A Representation Learning Principle Guided Approach},
+ year = {2022}
+}
+
+@article{yang_2022_adversarial,
+ abstract = {Data augmentation is a critical contributing factor to the success of deep
+learning but heavily relies on prior domain knowledge which is not always
+available. Recent works on automatic data augmentation learn a policy to form a
+sequence of augmentation operations, which are still pre-defined and restricted
+to limited options. In this paper, we show that a prior-free autonomous data
+augmentation's objective can be derived from a representation learning
+principle that aims to preserve the minimum sufficient information of the
+labels. Given an example, the objective aims at creating a distant "hard
+positive example" as the augmentation, while still preserving the original
+label. We then propose a practical surrogate to the objective that can be
+optimized efficiently and integrated seamlessly into existing methods for a
+broad class of machine learning tasks, e.g., supervised, semi-supervised, and
+noisy-label learning. Unlike previous works, our method does not require
+training an extra generative model but instead leverages the intermediate layer
+representations of the end-task model for generating data augmentations. In
+experiments, we show that our method consistently brings non-trivial
+improvements to the three aforementioned learning tasks from both efficiency
+and final performance, either or not combined with strong pre-defined
+augmentations, e.g., on medical images when domain knowledge is unavailable and
+the existing augmentation techniques perform poorly. Code is available at:
+https://github.com/kai-wen-yang/LPA3}{https://github.com/kai-wen-yang/LPA3.},
+ arxiv_url = {https://arxiv.org/pdf/2211.00824v1.pdf},
+ author = {Kaiwen Yang and Yanchao Sun and Jiahao Su and Fengxiang He and Xinmei Tian and Furong Huang and Tianyi Zhou and Dacheng Tao},
+ github_url = {https://github.com/kai-wen-yang/LPA3},
+ title = {Adversarial Auto-Augment with Label Preservation: A Representation Learning Principle Guided Approach},
+ year = {2022}
+}
+
+@article{zhu_2023_transductive,
+ abstract = {Few-shot learning (FSL) is popular due to its ability to adapt to novel
+classes. Compared with inductive few-shot learning, transductive models
+typically perform better as they leverage all samples of the query set. The two
+existing classes of methods, prototype-based and graph-based, have the
+disadvantages of inaccurate prototype estimation and sub-optimal graph
+construction with kernel functions, respectively. In this paper, we propose a
+novel prototype-based label propagation to solve these issues. Specifically,
+our graph construction is based on the relation between prototypes and samples
+rather than between samples. As prototypes are being updated, the graph
+changes. We also estimate the label of each prototype instead of considering a
+prototype be the class centre. On mini-ImageNet, tiered-ImageNet, CIFAR-FS and
+CUB datasets, we show the proposed method outperforms other state-of-the-art
+methods in transductive FSL and semi-supervised FSL when some unlabeled data
+accompanies the novel few-shot task.},
+ arxiv_url = {https://arxiv.org/pdf/2304.11598v1.pdf},
+ author = {Hao Zhu and Piotr Koniusz},
+ github_url = {https://github.com/allenhaozhu/protoLP},
+ title = {Transductive Few-Shot Learning With Prototype-Based Label Propagation by Iterative Graph Refinement},
+ year = {2023}
+}
+
+@article{ziko_2020_laplacian,
+ abstract = {We propose a transductive Laplacian-regularized inference for few-shot tasks.
+Given any feature embedding learned from the base classes, we minimize a
+quadratic binary-assignment function containing two terms: (1) a unary term
+assigning query samples to the nearest class prototype, and (2) a pairwise
+Laplacian term encouraging nearby query samples to have consistent label
+assignments. Our transductive inference does not re-train the base model, and
+can be viewed as a graph clustering of the query set, subject to supervision
+constraints from the support set. We derive a computationally efficient bound
+optimizer of a relaxation of our function, which computes independent
+(parallel) updates for each query sample, while guaranteeing convergence.
+Following a simple cross-entropy training on the base classes, and without
+complex meta-learning strategies, we conducted comprehensive experiments over
+five few-shot learning benchmarks. Our LaplacianShot consistently outperforms
+state-of-the-art methods by significant margins across different models,
+settings, and data sets. Furthermore, our transductive inference is very fast,
+with computational times that are close to inductive inference, and can be used
+for large-scale few-shot tasks.},
+ arxiv_url = {https://arxiv.org/pdf/2006.15486v3.pdf},
+ author = {Imtiaz Masud Ziko and Jose Dolz and Eric Granger and Ismail Ben Ayed},
+ github_url = {https://github.com/imtiazziko/LaplacianShot},
+ title = {Laplacian Regularized Few-Shot Learning},
+ year = {2020}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{cao_2019_theoretical,
+ abstract = {Few-shot classification is the task of predicting the category of an example
+from a set of few labeled examples. The number of labeled examples per category
+is called the number of shots (or shot number). Recent works tackle this task
+through meta-learning, where a meta-learner extracts information from observed
+tasks during meta-training to quickly adapt to new tasks during meta-testing.
+In this formulation, the number of shots exploited during meta-training has an
+impact on the recognition performance at meta-test time. Generally, the shot
+number used in meta-training should match the one used in meta-testing to
+obtain the best performance. We introduce a theoretical analysis of the impact
+of the shot number on Prototypical Networks, a state-of-the-art few-shot
+classification method. From our analysis, we propose a simple method that is
+robust to the choice of shot number used during meta-training, which is a
+crucial hyperparameter. The performance of our model trained for an arbitrary
+meta-training shot number shows great performance for different values of
+meta-testing shot numbers. We experimentally demonstrate our approach on
+different few-shot classification benchmarks.},
+ arxiv_url = {https://arxiv.org/pdf/1909.11722v2.pdf},
+ author = {Tianshi Cao and Marc Law and Sanja Fidler},
+ journal = {8th International Conference on Learning Representations 2020,
+  Addis Ababa, Ethiopia},
+ title = {A theoretical analysis of the number of shots in few-shot learning.},
+ year = {2019}
+}
+
+@article{chen_2019_closer,
+ abstract = {Few-shot classification aims to learn a classifier to recognize unseen
+classes during training with limited labeled examples. While significant
+progress has been made, the growing complexity of network designs,
+meta-learning algorithms, and differences in implementation details make a fair
+comparison difficult. In this paper, we present 1) a consistent comparative
+analysis of several representative few-shot classification algorithms, with
+results showing that deeper backbones significantly reduce the performance
+differences among methods on datasets with limited domain differences, 2) a
+modified baseline method that surprisingly achieves competitive performance
+when compared with the state-of-the-art on both the \miniI and the CUB
+datasets, and 3) a new experimental setting for evaluating the cross-domain
+generalization ability for few-shot classification algorithms. Our results
+reveal that reducing intra-class variation is an important factor when the
+feature backbone is shallow, but not as critical when using deeper backbones.
+In a realistic cross-domain evaluation setting, we show that a baseline method
+with a standard fine-tuning practice compares favorably against other
+state-of-the-art few-shot learning algorithms.},
+ arxiv_url = {https://arxiv.org/pdf/1904.04232v2.pdf},
+ author = {Wei-Yu Chen and Yen-Cheng Liu and Zsolt Kira and Yu-Chiang Frank Wang and Jia-Bin Huang},
+ title = {A closer look at few-shot classiﬁcation.},
+ year = {2019}
+}
+
+@article{liu_2017_sphereface,
+ abstract = {This paper addresses deep face recognition (FR) problem under open-set
+protocol, where ideal face features are expected to have smaller maximal
+intra-class distance than minimal inter-class distance under a suitably chosen
+metric space. However, few existing algorithms can effectively achieve this
+criterion. To this end, we propose the angular softmax (A-Softmax) loss that
+enables convolutional neural networks (CNNs) to learn angularly discriminative
+features. Geometrically, A-Softmax loss can be viewed as imposing
+discriminative constraints on a hypersphere manifold, which intrinsically
+matches the prior that faces also lie on a manifold. Moreover, the size of
+angular margin can be quantitatively adjusted by a parameter $m$. We further
+derive specific $m$ to approximate the ideal feature criterion. Extensive
+analysis and experiments on Labeled Face in the Wild (LFW), Youtube Faces (YTF)
+and MegaFace Challenge show the superiority of A-Softmax loss in FR tasks. The
+code has also been made publicly available.},
+ arxiv_url = {https://arxiv.org/pdf/1704.08063v4.pdf},
+ author = {Weiyang Liu and Yandong Wen and Zhiding Yu and Ming Li and Bhiksha Raj and Le Song},
+ title = {Sphereface: Deep hypersphere embedding for face recognition.},
+ year = {2017}
+}
+
+@article{tian_2020_rethinking,
+ abstract = {The focus of recent meta-learning research has been on the development of
+learning algorithms that can quickly adapt to test time tasks with limited data
+and low computational cost. Few-shot learning is widely used as one of the
+standard benchmarks in meta-learning. In this work, we show that a simple
+baseline: learning a supervised or self-supervised representation on the
+meta-training set, followed by training a linear classifier on top of this
+representation, outperforms state-of-the-art few-shot learning methods. An
+additional boost can be achieved through the use of self-distillation. This
+demonstrates that using a good learned embedding model can be more effective
+than sophisticated meta-learning algorithms. We believe that our findings
+motivate a rethinking of few-shot image classification benchmarks and the
+associated role of meta-learning algorithms. Code is available at:
+http://github.com/WangYueFt/rfs/.},
+ arxiv_url = {https://arxiv.org/pdf/2003.11539v2.pdf},
+ author = {Yonglong Tian and Yue Wang and Dilip Krishnan and Joshua B. Tenenbaum and Phillip Isola},
+ title = {Rethinking few-shot image classiﬁcation: a good embedding is all you need?},
+ year = {2020}
+}

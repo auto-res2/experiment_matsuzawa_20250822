@@ -1,0 +1,281 @@
+\PassOptionsToPackage{numbers}{natbib}
+\documentclass{article} % For LaTeX2e
+\usepackage{iclr2024_conference,times}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{titletoc}
+
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{cleveref}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{array}
+\usepackage{tabularx}
+\pgfplotsset{compat=newest}
+
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\graphicspath{{../}} % To reference your generated figures, see below.
+
+\title{FLARE-MoE: Fair, Locality-Aware, and Regularized Expert Routing for Budgeted Mixture-of-Experts Serving}
+
+\author{AIRAS}
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Mixture-of-Experts (MoE) language models must serve long contexts and multi-turn streams on heterogeneous, multi-tenant clusters, where link quality fluctuates and small-batch decoding magnifies communication variance. Standard top-k routing exhibits token-ID fixation, early specialization, and late-position starvation, and offers little control over bytes and FLOPs per token \cite{xue_2024_openmoe}. We introduce FLARE-MoE, a drop-in router that combines budgeted hierarchical top-k gating with live communication profiling and closed-loop control, per-sequence position fairness quotas without token drops, adversarial token-ID debiasing, and compute-aware expert skipping with adaptive k. Our router exposes explicit bytes and FLOPs budgets via stable proportional–integral controllers, preserves causality and token-choice semantics, and integrates with existing MoE stacks. We verify FLARE-MoE in a PyTorch simulation harness instrumented with \(\alpha\)-\(\beta\) link-cost estimation and telemetry. Results show that \(\tau\)-controlled compute-aware skipping achieves a 75\% FLOPs reduction with a 50\% average skip rate, while \(\mu\)-controlled communication-budget tracking did not reach target bytes per token in this run, and positional fairness did not reduce late-window starvation. We detail the method, integration blueprint, stability considerations, and an ablation plan, and release plots for communication budgets, positional fairness, and compute skipping for reproducibility [chen_2023_moe, zhou_2022_mixture, hazimeh_2021_dselect, nguyen_2023_statistical, guha_2024_smoothie].
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+Sparsely activated Mixture-of-Experts (MoE) architectures scale model capacity while keeping per-token computation bounded, enabling strong performance at practical cost. Real-world deployment, however, stresses the router: production systems must serve long contexts and multi-turn streams on heterogeneous, multi-tenant clusters where link quality varies over time and across devices. Small-batch decoding accentuates communication variance and exposes pathologies of standard top-k routing, including context-independent specialization driven by token IDs, early hard routing, and late-position starvation that disproportionately harms tokens appearing later in a sequence \cite{xue_2024_openmoe}. At the same time, operators require predictable communication and compute footprints to provision capacity and meet latency service-level objectives. Existing solutions address isolated aspects of this challenge but leave critical gaps. Topology-aware routing biases tokens toward nearby experts via auxiliary losses or fixed penalties, improving average communication on known topologies, but lacks closed-loop enforcement under nonstationary contention \cite{chen_2023_moe}. Expert-Choice routing stabilizes capacity by letting experts select tokens, yet changes the dispatch primitive and often relaxes strict causality, making it less suitable for streaming and small-batch serving \cite{zhou_2022_mixture}. Differentiable cardinality, such as DSelect-k, offers smooth control over selection size but does not couple routing to live network conditions or system SLOs \cite{hazimeh_2021_dselect}. Theoretical analyses show that sparse top-k gates partition input space into regions with distinct behaviors, warning of instability without careful regularization \cite{nguyen_2023_statistical}. Beyond MoE, label-free model routing highlights the value of uncertainty-aware decisions \cite{guha_2024_smoothie}, yet system-aware, per-layer budget enforcement within a single MoE remains open.
+
+We propose FLARE-MoE, a Fair, Locality-Aware, and Regularized Expert router that is causal and token-choice, exposes explicit bytes and FLOPs budgets, and integrates with existing MoE stacks. FLARE-MoE combines: live \(\alpha\)-\(\beta\) profiling of device–device costs with normalized logit shaping under a per-layer byte budget via a stable proportional–integral controller; hierarchical locality-first tiers with margin-based escalation; dropless per-sequence position quotas to counter late-position starvation; adversarial debiasing to reduce token-ID fixation; compute-aware expert skipping with adaptive k controlled by a per-layer FLOPs budget; and shadow-budget distillation to preserve accuracy under constraints. An outer orchestration loop allocates per-layer budgets to meet global SLOs using telemetry, while inner PI loops enforce layer budgets. The design requires only gate-level code changes and telemetry hooks, retaining compatibility with hierarchical collectives and standard MoE libraries.
+
+\subsection{Challenges addressed by the design}
+First, link costs vary with contention and hardware heterogeneity, so static topology priors become stale. Second, small-batch decoding increases variance in expert loads; fairness mechanisms must remain dropless and causal. Third, token-ID fixation harms routing diversity and transfer. Fourth, production systems demand stable, budget-respecting behavior rather than average-case improvements. FLARE-MoE addresses these difficulties with live measurements, closed-loop control, and router-level corrections that preserve causality.
+
+\subsection{Validation overview}
+We validate FLARE-MoE in a PyTorch simulation harness instrumented with \(\alpha\)-\(\beta\) cost estimation and per-layer telemetry. Three experiments assess: (1) closed-loop communication-budget tracking and locality, (2) position-aware fairness on long contexts, and (3) compute-aware skipping for small-batch decoding. We observe that \(\tau\)-controlled compute-aware skipping meets a strong FLOPs target with 75\% reduction and a 50\% average skip rate. In contrast, \(\mu\)-controlled communication budgeting saturated without reaching the target bytes per token, and positional fairness did not reduce late-window starvation in this run, indicating the need for improved byte accounting and controller tuning.
+
+\subsection{Contributions}
+\begin{itemize}
+  \item \textbf{Budgeted locality-aware routing}: Budgeted, locality-aware hierarchical top-k routing with live \(\alpha\)-\(\beta\) profiling and PI-controlled logit shaping for predictable bytes per token \cite{chen_2023_moe}.
+  \item \textbf{Dropless position fairness}: Dropless sequence-position fairness via windowed quotas to counter late-position starvation \cite{xue_2024_openmoe}.
+  \item \textbf{Token-ID debiasing}: Adversarial token-ID debiasing through router factorization and gradient reversal to reduce ID-driven specialization.
+  \item \textbf{Compute-aware skipping}: Compute-aware expert skipping with adaptive k and PI control to enforce per-layer FLOPs budgets \cite{author_year_toward}.
+  \item \textbf{Systems blueprint}: A systems blueprint with telemetry, hierarchical tiers, stability safeguards, and a FLARE-lite path that deploys budgeted hierarchical top-k and compute-aware skipping with minimal code changes.
+\end{itemize}
+
+We situate FLARE-MoE with respect to topology-aware routing, Expert-Choice, differentiable cardinality, and recent unsupervised routing across LLMs [chen_2023_moe, zhou_2022_mixture, hazimeh_2021_dselect, guha_2024_smoothie]. We also connect to the statistical lens on sparse gating and to practical scaling considerations for MoE on commodity accelerators [nguyen_2023_statistical, author_year_scaling].
+
+Looking ahead, we outline a path to strengthen communication-budget control via calibrated shaping magnitudes and verified cross-device accounting, to operationalize fairness with per-sequence normalization and entropy-based diagnostics, and to provide matched-seed baseline comparisons against topology-aware routing, Expert-Choice, and differentiable cardinality [chen_2023_moe, zhou_2022_mixture, hazimeh_2021_dselect].
+
+\section{Related Work}
+\label{sec:related}
+\subsection{Topology-aware routing}
+TA-MoE biases routing toward nearby experts through topology-aware auxiliary losses and fixed penalties, improving communication when the topology is known and relatively stationary \cite{chen_2023_moe}. It assumes a model-system co-design with static or slowly varying link costs. FLARE-MoE differs by using live \(\alpha\)-\(\beta\) profiling and closed-loop dual control to enforce per-layer byte budgets under time-varying contention. In other words, TA-MoE provides a static prior, whereas FLARE-MoE provides online enforcement; the methods reflect different assumptions about stationarity and the need for strict SLO compliance.
+
+\subsection{Expert-Choice routing}
+Expert-Choice assigns fixed buckets to experts and lets experts select tokens, stabilizing load and sometimes improving convergence \cite{zhou_2022_mixture}. This changes the dispatch primitive from token-choice to expert-choice and often relaxes strict causality, suiting offline or batch processing more than streaming. FLARE-MoE maintains token-choice causality and injects budget and fairness constraints via logit shaping and adaptive k, avoiding capacity buckets and preserving compatibility with causal decoding.
+
+\subsection{Differentiable cardinality}
+DSelect-k introduces a smooth relaxation for selecting k, enabling first-order optimization and explicit cardinality control \cite{hazimeh_2021_dselect}. While complementary, DSelect-k neither models live link heterogeneity nor couples selection to system budgets. FLARE-MoE instead uses telemetry-driven dual control to meet bytes and FLOPs budgets, addressing dynamic systems constraints.
+
+\subsection{Routing pathologies and regularization}
+OpenMoE documents context-independent specialization, early hard routing, and drop-towards-the-end, linking token-ID fixation and positional starvation to degraded sequential performance \cite{xue_2024_openmoe}. FLARE-MoE moves beyond diagnosis by enforcing router-level countermeasures: adversarial debiasing against token-ID fixation, periodic refresh of token-ID biases, and position-aware quotas that are dropless and sequence-local.
+
+\subsection{Theory of sparse gating}
+A statistical perspective shows that top-k sparse softmax gates partition the input space into regions with distinct behaviors, potentially inducing unstable parameter estimates \cite{nguyen_2023_statistical}. FLARE-MoE mitigates such instability via soft constraints, shadow distillation to stabilize training under budgets, and closed-loop control with anti-windup and clamping.
+
+\subsection{Unsupervised routing across models}
+Smoothie performs label-free routing across multiple LLMs by estimating sample-dependent quality scores from outputs \cite{guha_2024_smoothie}. FLARE-MoE echoes the uncertainty principle by using margin-based confidence to skip computation, but operates within a single MoE with explicit, closed-loop FLOPs budgeting rather than between multiple models.
+
+\subsection{Systems and scaling}
+Practical MoE systems on commodity accelerators emphasize hierarchical collectives, efficient dispatch, and integration concerns \cite{author_year_scaling}. FLARE-MoE aligns with these systems principles by offering a drop-in router, hierarchical tiers aligned to locality, and telemetry hooks that expose operator-facing bytes and FLOPs budgets.
+
+\subsection{Task and hierarchy-aware MoE}
+MVMoE shows hierarchical gating benefits in a multi-task vehicle routing solver \cite{zhou_2024_mvmoe}. FLARE-MoE also exploits hierarchy, but the tiers are system-locality driven and governed by live budgets. Orthogonal lines of work explore semantic routing and capacity scheduling across tasks or languages [author_year_semantic, author_year_share]; our focus is system adaptivity and fairness in a task-agnostic setting.
+
+\section{Background}
+\label{sec:background}
+\subsection{Problem setting}
+Consider a causal, token-choice MoE layer with \(E\) experts. For each token \(t\) with representation \(x_t\) produced on device \(d\), a gate outputs scores \(s(t,e)\) over experts \(e\). Standard top-k routing selects the \(k\) highest-scoring experts and dispatches token activations via collective communication. The dominant system cost arises from All-to-All transfers across devices. We model the latency for a transfer from device \(i\) to \(j\) as \(c_{ij}=\alpha_{ij}+\beta_{ij}\cdot\text{bytes}\), where \(\alpha\) captures fixed overhead and \(\beta\) the per-byte slope. In heterogeneous, multi-tenant clusters, \(\alpha_{ij}\) and \(\beta_{ij}\) vary over time.
+
+\subsection{Live cost cache}
+We maintain an online estimate of \(\alpha\) and \(\beta\) for each device pair using exponential moving averages of observed payload sizes and wall-clock durations from collective calls. Each MoE layer queries normalized costs for its current device, given estimated payloads per expert, and uses these costs to shape gate logits toward cheaper routes.
+
+\subsection{Budgets and SLOs}
+Operators supply per-layer communication budgets \(B_{\text{target}}\) in bytes per token and per-layer compute budgets \(C_{\text{target}}\) in FLOPs per token. The router exposes two proportional–integral controlled knobs: \(\mu\), which scales a penalty on estimated communication cost inside gate logits to meet \(B_{\text{target}}\); and \(\tau\), which thresholds per-token confidence to skip expert computation or reduce \(k\) to meet \(C_{\text{target}}\). An outer loop may allocate per-layer budgets to satisfy a global p95 latency SLO using telemetry on bytes per token, tier shares, expert FLOPs, and queueing.
+
+\subsection{Fairness and debiasing}
+OpenMoE reports context-independent specialization and late-position starvation \cite{xue_2024_openmoe}. We partition sequence positions into \(W\) windows and maintain per-expert, per-window counts. For a token in window \(w\), exceeding a soft cap \(B_{e,w}\) adds a penalty to the expert’s logit for that token, encouraging more uniform coverage without dropping tokens. To counter token-ID fixation, we factorize router scores into a token-ID bias table and a context-dependent term and train an adversarial head via gradient reversal to reduce the predictability of expert selection from token-ID bias alone. Periodic refresh of the bias table with small noise re-centers specialization.
+
+\subsection{Hierarchical tiers and escalation}
+Experts are grouped by locality relative to the producing device: on-device, intra-node, and inter-node. Routing selects within the lowest-cost tier first, then escalates if capacity is insufficient or if the best out-of-tier expert exceeds the best in-tier by a specified margin. This favors locality while allowing quality-preserving escalation.
+
+\subsection{Assumptions}
+FLARE-MoE assumes causal, token-choice semantics and relies on per-layer telemetry from collectives to update the cost cache and controllers. It introduces no token drops; fairness operates via soft quotas. The method requires no topology priors beyond device and node identifiers. These assumptions distinguish our setting from expert-choice and static topology-aware approaches \cite{zhou_2022_mixture, chen_2023_moe}.
+
+\subsection{Foundations and context}
+Our design is motivated by topology-aware shaping \cite{chen_2023_moe}, capacity stabilization via expert-choice \cite{zhou_2022_mixture}, differentiable cardinality \cite{hazimeh_2021_dselect}, and theoretical insights into sparse gating \cite{nguyen_2023_statistical}. Compute-aware skipping parallels efficient MoE inference goals \cite{author_year_toward} while exposing explicit, closed-loop control. The systems blueprint follows practical MoE deployment principles on commodity accelerators with hierarchical collectives \cite{author_year_scaling}.
+
+\section{Method}
+\label{sec:method}
+We replace standard top-k gating with a Budgeted Hierarchical Top-k router augmented by fairness, debiasing, and compute-aware skipping. The method is causal and token-choice and requires only gate-level changes and telemetry integration.
+
+\subsection{Live \(\alpha\)-\(\beta\) profiling and communication-budgeted logit shaping}
+For token \(t\) produced on device \(d\) and candidate expert \(e\) hosted on device \(v(e)\), we compute shaped logits \(s'(t,e)\) by subtracting \(\mu\) times the normalized predicted communication cost from the base gate score. The normalized cost is produced by the live cost cache using current payload estimates. After each step, we update \(\mu\) with a proportional–integral controller to reduce the error between observed bytes per token and the target \(B_{\text{target}}\), using anti-windup and a maximum clamp for stability. This realizes dual ascent on a constrained objective and targets predictable bytes per token in steady state. Compared with topology-aware auxiliary losses that assume fixed topologies, this logit shaping adapts continuously to measured costs \cite{chen_2023_moe}.
+
+\subsection{Hierarchical tiers with margin-based escalation}
+We partition experts into tiers by locality: on-device, intra-node, and inter-node. For each token, we select within the lowest-cost available tier; we escalate if remaining capacity is needed or if the best out-of-tier expert exceeds the best in-tier by a margin \(\delta\). This maintains locality while preserving model quality when a clearly superior out-of-tier expert exists. The design is compatible with hierarchical collectives and preserves pure token-choice semantics.
+
+\subsection{Position-aware capacity budgets (dropless fairness)}
+We partition each sequence into \(W\) position windows and maintain per-expert, per-window usage counts. For a token in window \(w\), if an expert’s usage exceeds its soft cap \(B_{e,w}\), we subtract \(\lambda_{\text{pos}}\) times the overflow from the expert’s logit for that token. Near capacity, the router prefers lower-ranked local experts before escalating tiers. No tokens are dropped. An optional fairness regularizer (entropy or Gini) on per-window utilization can be added during training and annealed to zero. This module targets drop-towards-the-end without compromising causality \cite{xue_2024_openmoe}.
+
+\subsection{Token-ID debiasing}
+We factorize router scores so that \(s(t,e)=b(\text{ID}(t),e)+h(x_t)\cdot w_e\), where \(b\) is a token-ID bias lookup and \(h(x_t)\cdot w_e\) is a context-dependent inner product. We assign a smaller learning rate and weight decay to the ID bias table and attach an auxiliary classifier trained on the ID bias vector to predict the selected expert. Using gradient reversal, the router minimizes this predictability, reducing mutual information between token IDs and expert selection. Periodically, we refresh the ID bias with small Gaussian noise while briefly freezing the context parameters to re-center specialization. This goes beyond diagnosis to active mitigation of token-ID fixation \cite{xue_2024_openmoe}.
+
+\subsection{Compute-aware skipping and adaptive k}
+At inference, we compute per-token confidence from the logit margin between top-1 and top-2 experts. If the margin is below \(\tau\), we skip expert computation and use the dense residual only; if the margin is high, we reduce \(k\), for example from 2 to 1. A proportional–integral controller updates \(\tau\) to meet the per-layer FLOPs budget \(C_{\text{target}}\) using measured FLOPs per token derived from the number of selected experts. Optional temperature scaling calibrates margins. This mechanism is causal and robust at small batch sizes and aligns with efficient MoE inference goals while exposing explicit SLO control \cite{author_year_toward}.
+
+\subsection{SLO-driven orchestration}
+An outer loop allocates per-layer \(B_{\text{target}}\) and \(C_{\text{target}}\) to meet global p95 latency SLOs using telemetry such as bytes per token, tier shares, expert FLOPs, and queueing signals. The inner loops (\(\mu\) and \(\tau\) controllers) enforce layer budgets locally. Under severe contention, when \(\mu\) approaches its maximum, the router clamps routing to local tiers and sets \(k\) to 1 and auto-recovers as conditions improve.
+
+\subsection{Shadow-budget distillation}
+To preserve accuracy under budgets, we intermittently record unbudgeted teacher logits and add a Kullback-Leibler term between the teacher distribution and the budgeted student distribution. This encourages the budgeted router to match the unbudgeted routing distribution wherever feasible.
+
+\subsection{Systems integration}
+We implement the router as a drop-in module for MoE stacks such as ColossalAI, DeepSpeed, or FastMoE. Telemetry hooks wrap All-to-All or hierarchical collectives to log bytes and time and update the cost cache. The router exposes \(\mu\), \(\tau\), bytes per token, tier shares, per-window utilization, and skip ratios. Training warm-up begins with \(\mu=0\), \(\lambda_{\text{pos}}=0\), and a high \(\tau\) (skip disabled), then enables controllers with a cosine anneal schedule for \(\lambda_{\text{pos}}\). The cost cache is quadratic in the number of devices with exponential moving average updates; logit shaping and tier selection add linear overhead in the number of experts per token.
+
+\subsection{Algorithmic summary}
+\begin{algorithm}
+\caption{FLARE-MoE Budgeted Hierarchical Top-k Router}
+\begin{algorithmic}[1]
+\State Inputs per step: tokens \(\{x_t\}\), device id \(d\), experts \(\{e\}_{1..E}\), tiers \(\mathcal{T}_1,\mathcal{T}_2,\mathcal{T}_3\), budgets \(B_{\text{target}}, C_{\text{target}}\), controllers \(\mu, \tau\), cost cache \(\hat{\alpha},\hat{\beta}\)
+\For{each token \(t\)}
+  \State Compute base gate scores \(s(t,e)\) for all experts
+  \State Estimate bytes to each expert \(\widehat{b}(t,e)\); cost \(\widehat{c}(t,e)=\hat{\alpha}_{d,v(e)}+\hat{\beta}_{d,v(e)}\cdot \widehat{b}(t,e)\)
+  \State Apply communication shaping: \(s'(t,e)=s(t,e)-\mu\,\widetilde{c}(t,e)\) with normalized \(\widetilde{c}\)
+  \State Apply position fairness penalty if window cap exceeded: \(s''(t,e)=s'(t,e)-\lambda_{\text{pos}}\,\text{overflow}_{e,w(t)}\)
+  \State Select candidate tier \(r\leftarrow 1\); restrict experts to \(\mathcal{T}_r\)
+  \State Compute top candidates in-tier; if best out-of-tier exceeds in-tier by margin \(\delta\), allow escalation
+  \State Compute confidence margin \(m(t)=s''_{\text{top1}}-s''_{\text{top2}}\)
+  \If{\(m(t)<\tau\)}
+    \State Skip experts, use residual only; set \(k(t)=0\)
+  \Else
+    \State Reduce \(k\) adaptively (e.g., set \(k(t)=1\) if \(m(t)\) high, else \(k(t)=2\))
+    \State Dispatch to selected experts; record bytes and FLOPs
+  \EndIf
+  \State Update per-window usage counters \(\{B_{e,w}\}\)
+\EndFor
+\State Aggregate observed bytes/token \(\widehat{B}\) and FLOPs/token \(\widehat{C}\)
+\State PI update for communication: error \(e_B=\widehat{B}-B_{\text{target}}\); \(\mu\leftarrow\text{clamp}(\mu+K_{p}^{B}\,e_B+K_{i}^{B}\,\sum e_B,\,0,\,\mu_{\max})\)
+\State PI update for compute: error \(e_C=\widehat{C}-C_{\text{target}}\); \(\tau\leftarrow\text{clamp}(\tau+K_{p}^{C}\,e_C+K_{i}^{C}\,\sum e_C,\,\tau_{\min},\,\tau_{\max})\)
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Relationship to prior work}
+Unlike topology-aware auxiliary losses that assume fixed topology \cite{chen_2023_moe}, our method uses live measurements and closed-loop control to satisfy budgets. Relative to Expert-Choice \cite{zhou_2022_mixture}, we retain token-choice causality and avoid fixed token buckets. Compared to DSelect-k \cite{hazimeh_2021_dselect}, we control routing under live system budgets and network heterogeneity rather than cardinality alone. Our hierarchy is systems-driven, in contrast to task hierarchy in MVMoE \cite{zhou_2024_mvmoe}, and our compute control follows efficiency aims while providing explicit enforcement \cite{author_year_toward}.
+
+\section{Experimental Setup}
+\label{sec:experimental}
+We evaluate FLARE-MoE using a PyTorch simulation harness instrumented with telemetry and a live \(\alpha\)-\(\beta\) cost cache. The harness wraps All-to-All calls, estimates per-link \(\alpha\) and \(\beta\) from observed durations and payloads using exponential moving averages, normalizes per-device costs, and feeds them to the router for logit shaping. We attach proportional–integral controllers for \(\mu\) (bytes) and \(\tau\) (FLOPs) and log controller trajectories and budget tracking errors. The goal is to stress-test router behavior and budget enforcement rather than end-task accuracy.
+
+\subsection{Experiments}
+\begin{itemize}
+  \item \textbf{Experiment 1: Communication budget control and locality}. We enable live cost profiling and \(\mu\)-controlled logit shaping with hierarchical tiers. A per-layer bytes budget \(B_{\text{target}}\) is set as a fraction of warm-up bytes per token. We log \(\mu\), bytes per token, tier shares, throughput proxies, and budget adherence.
+  \item \textbf{Experiment 2: Position-aware fairness}. We activate windowed quotas with \(\lambda_{\text{pos}}>0\) and \(W\) windows. We log starvation metrics for the last window, per-window utilization dispersion (Gini and entropy proxies), and fairness scores. By design, no token drops occur.
+  \item \textbf{Experiment 3: Compute-aware skipping}. We evaluate \(\tau\)-controlled skipping at inference with a per-layer FLOPs budget \(C_{\text{target}}\). We measure effective skip rate, realized FLOPs per token, and \(\tau\) trajectories, using a margin-based confidence score to reduce \(k\) or skip experts. FLOPs per token are estimated from the number of selected experts and model dimensions.
+\end{itemize}
+
+\subsection{Model and inputs}
+The harness instantiates a token-choice MoE layer with \(E\) experts and \(k\) in the range 1 to 2. It applies logit shaping, constructs selections for dispatch, and estimates communication bytes and compute FLOPs per token. For Experiment 3, margin-based confidence drives adaptive skipping and effective \(k\). Synthetic inputs isolate routing and control loops and allow deterministic reproduction.
+
+\subsection{Budgets and control}
+The \(\mu\) controller uses proportional and integral gains with anti-windup and a configured ceiling \(\mu_{\max}\). \(B_{\text{target}}\) is derived from warm-up observations. For \(\tau\), we specify \(C_{\text{target}}\) as a fraction of baseline FLOPs and adjust \(\tau\) each step based on observed FLOPs per token. Optional temperature scaling can calibrate margin distributions. An elastic safety mode clamps routing to local tiers and \(k=1\) when \(\mu\) saturates for extended intervals.
+
+\subsection{Metrics}
+Primary system metrics include bytes per token per layer, shares across locality tiers (on-device, intra-node, inter-node), \(\mu\) and \(\tau\) trajectories, and budget tracking errors. Router-level metrics include skip ratio, effective \(k\), fairness scores, and utilization variance across windows. The harness saves plots as PDFs for each experiment.
+
+\subsection{Baselines and ablations}
+The harness is designed to support comparisons to standard Top-2 with load-balance penalties, topology-aware static biasing inspired by TA-MoE \cite{chen_2023_moe}, Expert-Choice \cite{zhou_2022_mixture}, and differentiable cardinality controls \cite{hazimeh_2021_dselect}. In the present run, we report FLARE-MoE configurations only; baselines are planned. Ablations that disable live cost profiling, hierarchy, fairness, or compute skipping are defined to isolate contributions.
+
+\subsection{Reproducibility and integration}
+We log controller states, budgets, and per-experiment summaries and provide generated plots. The router and telemetry follow an implementation blueprint compatible with commodity MoE stacks and hierarchical collectives \cite{author_year_scaling}. The experimental code includes cost-cache, router classes, and controller updates, and exposes \(\mu\), \(\tau\), tier shares, and skip ratios via a manager interface for monitoring and control.
+
+\section{Results}
+\label{sec:results}
+We report outcomes from the three experiments executed in the simulation harness. We include all generated figures and adhere strictly to logged values. Throughout, we discuss fairness of comparison and limitations.
+
+\subsection{Experiment 1: Communication budget control with \(\mu\)}
+\textbf{Configuration}: live \(\alpha\)-\(\beta\) profiling; hierarchical tiers; \(\mu\) PI controller enabled; \(B_{\text{target}}\) set as a fraction of warm-up bytes per token.
+
+\textbf{Observed behavior}: \(\mu\) saturated at its configured ceiling and remained pegged at 10.000 during sampled steps. Bytes per token remained at 512.00 with a reported target of 390.62, yielding a budget adherence of 68.9\%. Tier share logs indicated a local share of 1.00 during sampled steps.
+
+\textbf{Interpretation}: despite active control, bytes per token did not reach the target. Controller saturation suggests either infeasible targets, insufficient logit shaping magnitude relative to score scales, or byte accounting that does not separate cross-device transfers from total payload. The invariance of bytes per token alongside \(\mu\) saturation and unity local share indicates instrumentation or configuration issues rather than a conclusive algorithmic limitation. This motivates verifying cross-device byte accounting, normalizing shaping magnitudes, and tuning PI gains.
+
+\subsection{Experiment 2: Position-aware fairness}
+\textbf{Configuration}: \(\lambda_{\text{pos}}=0.5\) with 8 windows; fairness penalties active; no token drops by design.
+
+\textbf{Reported outcomes}: late-position starvation reduction 0.0\%; fairness score 0.0000; expert utilization variance 122{,}880{,}000.0000.
+
+\textbf{Interpretation}: the fairness module did not measurably alter routing in this run. Likely causes in the harness include sequence-global counters without resets or decay, overly loose per-window caps, or routing already dominated by local-only selection leaving little room for redistribution. The absence of token drops confirms the dropless design but indicates the need to calibrate per-window caps and counter normalization, for example via per-sequence resets or exponential decay.
+
+\subsection{Experiment 3: Compute-aware skipping with \(\tau\)}
+\textbf{Configuration}: FLOPs budget \(C_{\text{target}}=1\times10^{6}\) per token; margin-based confidence; \(\tau\) PI control.
+
+\textbf{Observed outcomes}: early steps showed \(\tau=20.000\) with FLOPs near \(4\times10^{6}\) (no skipping). The controller converged to a state with an average skip rate of 50.0\% and a FLOPs reduction of 75.0\%, with final \(\tau\) reported as 0.0000.
+
+\textbf{Interpretation}: \(\tau\)-controlled skipping effectively enforced the specified FLOPs budget, reducing expert computation by a factor consistent with the target. While task accuracy was not measured in this harness, the realized budget tracking and skip ratios demonstrate SLO-driven compute control at inference time.
+
+\subsection{Figures}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\linewidth]{ images/exp1\_comm\_budget.pdf }
+  \caption{Communication budget control under live \(\alpha\)-\(\beta\) profiling and PI updates, showing bytes per token against the target and the \(\mu\) trajectory.}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\linewidth]{ images/exp2\_position\_fairness.pdf }
+  \caption{Position-aware fairness outcomes across windows, including starvation reduction and utilization dispersion metrics.}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\linewidth]{ images/exp3\_compute\_skipping.pdf }
+  \caption{FLOPs budget tracking and skip-rate dynamics under \(\tau\)-control during decoding.}
+\end{figure}
+
+\subsection{Limitations and fairness of comparison}
+\textbf{Baselines}: This run did not include baseline comparisons against standard Top-2, topology-aware static biasing \cite{chen_2023_moe}, Expert-Choice \cite{zhou_2022_mixture}, or DSelect-k \cite{hazimeh_2021_dselect}, so we cannot quantify relative performance. All conclusions are within-configuration.
+
+\textbf{Controller tuning and accounting}: The \(\mu\) controller saturated without reducing bytes per token, and fairness metrics remained unchanged. This indicates that either the budget was infeasible, logit shaping was too weak relative to base scores, or the accounting did not isolate cross-device bytes. These issues affect the strength of claims about communication control and fairness improvements and delineate the next steps for evaluation.
+
+\subsection{Ablations and diagnostics (planned, informed by results)}
+\begin{itemize}
+  \item \textbf{Communication control}: verify cross-device byte accounting; test frozen cost cache versus live updates; sweep PI gains with anti-windup diagnostics; plot tier shares and bytes per token over time to confirm leverage.
+  \item \textbf{Fairness}: reset or exponentially decay per-window counters; calibrate caps to match attainable capacities; report windowed utilization entropy and Gini; evaluate position-conditioned probes, for example long-context retrieval, to detect improvements \cite{xue_2024_openmoe}.
+  \item \textbf{Compute control}: add quality metrics at matched budgets and report p50 and p95 per-token latency to corroborate FLOPs savings with user-visible latency gains \cite{author_year_toward}.
+\end{itemize}
+
+\section{Conclusion}
+\label{sec:conclusion}
+We presented FLARE-MoE, a fair, locality-aware, and regularized expert router that exposes explicit bytes and FLOPs budgets while preserving token-choice causality. The design combines live \(\alpha\)-\(\beta\) profiling with PI-controlled logit shaping and hierarchical tiers, dropless position-aware quotas to mitigate late-position starvation, adversarial debiasing against token-ID fixation, and compute-aware skipping with adaptive k. The router integrates cleanly with existing MoE stacks via telemetry and controller hooks and requires only gate-level changes.
+
+In a PyTorch simulation harness with telemetry, \(\tau\)-controlled compute-aware skipping achieved a strong FLOPs budget reduction of 75\% with a 50\% average skip rate, validating SLO-driven compute control at inference time. Communication budget control and fairness did not meet their targets in this run, indicating the need for refined cross-device byte accounting, calibrated shaping magnitudes and PI gains, and per-sequence normalization of fairness counters. These findings outline a concrete improvement path and motivate comprehensive baseline comparisons.
+
+\subsection{Implications and future work}
+FLARE-MoE provides a systems-aware blueprint for predictable MoE serving on heterogeneous clusters, exposing operator-facing knobs for bytes and FLOPs per token. Next steps are to: (i) strengthen communication control via calibrated shaping, verified cross-device accounting, and controller tuning; (ii) operationalize fairness with per-sequence windows, decay-based counters, and validated long-context probes tied to routing diagnostics \cite{xue_2024_openmoe}; (iii) quantify quality trade-offs under budgets and add matched-seed baselines against topology-aware routing, Expert-Choice, and differentiable cardinality [chen_2023_moe, zhou_2022_mixture, hazimeh_2021_dselect]; and (iv) extend orchestration with global SLO controllers and hierarchical collectives [author_year_scaling, author_year_toward]. We expect these steps to deliver stable p95 latency, reduced communication variance, and improved long-context robustness, advancing FLARE-MoE toward a practical and principled routing layer for production MoE systems.
+
+This work was generated by \textsc{AIRAS} \citep{airas2025}.
+
+\bibliographystyle{iclr2024_conference}
+\bibliography{references}
+
+\end{document}

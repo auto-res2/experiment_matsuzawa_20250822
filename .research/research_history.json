@@ -6,5 +6,52 @@
     "conditional computation transformers",
     "adaptive computation time",
     "early exiting transformers"
+  ],
+  "research_study_list": [
+    {
+      "title": "MixNeRF: Modeling a Ray With Mixture Density for Novel View Synthesis From Sparse Inputs"
+    },
+    {
+      "title": "MonoCD: Monocular 3D Object Detection with Complementary Depths"
+    },
+    {
+      "title": "WorDepth: Variational Language Prior for Monocular Depth Estimation"
+    },
+    {
+      "title": "DynamicStereo: Consistent Dynamic Depth From Stereo Videos"
+    },
+    {
+      "title": "HRDFuse: Monocular 360° Depth Estimation by Collaboratively Learning Holistic-With-Regional Depth Distributions"
+    },
+    {
+      "title": "DeCoTR: Enhancing Depth Completion with 2D and 3D Attentions"
+    },
+    {
+      "title": "Memorization Capacity of Neural Networks with Conditional Computation"
+    },
+    {
+      "title": "Depth-Adaptive Transformer"
+    },
+    {
+      "title": "Conditional Adapters: Parameter-efficient Transfer Learning with Fast Inference"
+    },
+    {
+      "title": "Navigating Scaling Laws: Compute Optimality in Adaptive Model Training"
+    },
+    {
+      "title": "AdaTune: Adaptive Tensor Program Compilation Made Efficient"
+    },
+    {
+      "title": "Depth-Adaptive Transformer"
+    },
+    {
+      "title": "Fast yet Safe: Early-Exiting with Risk Control"
+    },
+    {
+      "title": "You Need Multiple Exiting: Dynamic Early Exiting for Accelerating Unified Vision Language Model"
+    },
+    {
+      "title": "A Simple Romance Between Multi-Exit Vision Transformer and Token Reduction"
+    }
   ]
 }

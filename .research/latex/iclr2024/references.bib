@@ -5,3 +5,531 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{balkanski_2024_energy,
+ abstract = {An important goal of modern scheduling systems is to efficiently manage power
+usage. In energy-efficient scheduling, the operating system controls the speed
+at which a machine is processing jobs with the dual objective of minimizing
+energy consumption and optimizing the quality of service cost of the resulting
+schedule. Since machine-learned predictions about future requests can often be
+learned from historical data, a recent line of work on learning-augmented
+algorithms aims to achieve improved performance guarantees by leveraging
+predictions. In particular, for energy-efficient scheduling, Bamas et. al.
+[BamasMRS20] and Antoniadis et. al. [antoniadis2021novel] designed algorithms
+with predictions for the energy minimization with deadlines problem and
+achieved an improved competitive ratio when the prediction error is small while
+also maintaining worst-case bounds even when the prediction error is
+arbitrarily large.
+  In this paper, we consider a general setting for energy-efficient scheduling
+and provide a flexible learning-augmented algorithmic framework that takes as
+input an offline and an online algorithm for the desired energy-efficient
+scheduling problem. We show that, when the prediction error is small, this
+framework gives improved competitive ratios for many different energy-efficient
+scheduling problems, including energy minimization with deadlines, while also
+maintaining a bounded competitive ratio regardless of the prediction error.
+Finally, we empirically demonstrate that this framework achieves an improved
+performance on real and synthetic datasets.},
+ arxiv_url = {https://arxiv.org/pdf/2402.17143v1.pdf},
+ author = {Eric Balkanski and Noemie Perivier and Clifford Stein and Hao-Ting Wei},
+ title = {Energy-Efficient Scheduling with Predictions},
+ year = {2024}
+}
+
+@article{bamas_2020_learning,
+ abstract = {As power management has become a primary concern in modern data centers,
+computing resources are being scaled dynamically to minimize energy
+consumption. We initiate the study of a variant of the classic online speed
+scaling problem, in which machine learning predictions about the future can be
+integrated naturally. Inspired by recent work on learning-augmented online
+algorithms, we propose an algorithm which incorporates predictions in a
+black-box manner and outperforms any online algorithm if the accuracy is high,
+yet maintains provable guarantees if the prediction is very inaccurate. We
+provide both theoretical and experimental evidence to support our claims.},
+ arxiv_url = {https://arxiv.org/pdf/2010.11629v1.pdf},
+ author = {Étienne Bamas and Andreas Maggiori and Lars Rohwedder and Ola Svensson},
+ github_url = {https://github.com/andreasr27/LAS},
+ title = {Learning Augmented Energy Minimization via Speed Scaling},
+ year = {2020}
+}
+
+@article{banerjee_2019_inductive,
+ abstract = {The problem of scheduling of workloads onto heterogeneous processors (e.g.,
+CPUs, GPUs, FPGAs) is of fundamental importance in modern data centers. Current
+system schedulers rely on application/system-specific heuristics that have to
+be built on a case-by-case basis. Recent work has demonstrated ML techniques
+for automating the heuristic search by using black-box approaches which require
+significant training data and time, which make them challenging to use in
+practice. This paper presents Symphony, a scheduling framework that addresses
+the challenge in two ways: (i) a domain-driven Bayesian reinforcement learning
+(RL) model for scheduling, which inherently models the resource dependencies
+identified from the system architecture; and (ii) a sampling-based technique to
+compute the gradients of a Bayesian model without performing full probabilistic
+inference. Together, these techniques reduce both the amount of training data
+and the time required to produce scheduling policies that significantly
+outperform black-box approaches by up to 2.2x.},
+ arxiv_url = {https://arxiv.org/pdf/1909.02119v2.pdf},
+ author = {Subho S Banerjee and Saurabh Jha and Zbigniew T. Kalbarczyk and Ravishankar K. Iyer},
+ journal = {Proceedings of the 37th International Conference on Machine
+  Learning, Vienna, Austria, PMLR 119, 2020},
+ title = {Inductive-bias-driven Reinforcement Learning For Efficient Schedules in Heterogeneous Clusters},
+ year = {2019}
+}
+
+@article{chen_2024_identifying,
+ abstract = {We consider the linear causal representation learning setting where we
+observe a linear mixing of $d$ unknown latent factors, which follow a linear
+structural causal model. Recent work has shown that it is possible to recover
+the latent factors as well as the underlying structural causal model over them,
+up to permutation and scaling, provided that we have at least $d$ environments,
+each of which corresponds to perfect interventions on a single latent node
+(factor). After this powerful result, a key open problem faced by the community
+has been to relax these conditions: allow for coarser than perfect single-node
+interventions, and allow for fewer than $d$ of them, since the number of latent
+factors $d$ could be very large. In this work, we consider precisely such a
+setting, where we allow a smaller than $d$ number of environments, and also
+allow for very coarse interventions that can very coarsely \textit{change the
+entire causal graph over the latent factors}. On the flip side, we relax what
+we wish to extract to simply the \textit{list of nodes that have shifted
+between one or more environments}. We provide a surprising identifiability
+result that it is indeed possible, under some very mild standard assumptions,
+to identify the set of shifted nodes. Our identifiability proof moreover is a
+constructive one: we explicitly provide necessary and sufficient conditions for
+a node to be a shifted node, and show that we can check these conditions given
+observed data. Our algorithm lends itself very naturally to the sample setting
+where instead of just interventional distributions, we are provided datasets of
+samples from each of these distributions. We corroborate our results on both
+synthetic experiments as well as an interesting psychometric dataset. The code
+can be found at https://github.com/TianyuCodings/iLCS.},
+ arxiv_url = {https://arxiv.org/pdf/2410.24059v2.pdf},
+ author = {Tianyu Chen and Kevin Bello and Francesco Locatello and Bryon Aragam and Pradeep Ravikumar},
+ title = {Identifying General Mechanism Shifts in Linear Causal Representations},
+ year = {2024}
+}
+
+@article{faiz_2023_llmcarbon,
+ abstract = {The carbon footprint associated with large language models (LLMs) is a
+significant concern, encompassing emissions from their training, inference,
+experimentation, and storage processes, including operational and embodied
+carbon emissions. An essential aspect is accurately estimating the carbon
+impact of emerging LLMs even before their training, which heavily relies on GPU
+usage. Existing studies have reported the carbon footprint of LLM training, but
+only one tool, mlco2, can predict the carbon footprint of new neural networks
+prior to physical training. However, mlco2 has several serious limitations. It
+cannot extend its estimation to dense or mixture-of-experts (MoE) LLMs,
+disregards critical architectural parameters, focuses solely on GPUs, and
+cannot model embodied carbon footprints. Addressing these gaps, we introduce
+\textit{\carb}, an end-to-end carbon footprint projection model designed for
+both dense and MoE LLMs. Compared to mlco2, \carb~significantly enhances the
+accuracy of carbon footprint estimations for various LLMs. The source code is
+released at \url{https://github.com/SotaroKaneda/MLCarbon}.},
+ arxiv_url = {https://arxiv.org/pdf/2309.14393v2.pdf},
+ author = {Ahmad Faiz and Sotaro Kaneda and Ruhan Wang and Rita Osi and Prateek Sharma and Fan Chen and Lei Jiang},
+ github_url = {https://github.com/SotaroKaneda/MLCarbon},
+ journal = {published in ICLR2024},
+ title = {LLMCarbon: Modeling the End-to-End Carbon Footprint of Large Language Models},
+ year = {2023}
+}
+
+@article{faiz_2023_llmcarbon,
+ abstract = {The carbon footprint associated with large language models (LLMs) is a
+significant concern, encompassing emissions from their training, inference,
+experimentation, and storage processes, including operational and embodied
+carbon emissions. An essential aspect is accurately estimating the carbon
+impact of emerging LLMs even before their training, which heavily relies on GPU
+usage. Existing studies have reported the carbon footprint of LLM training, but
+only one tool, mlco2, can predict the carbon footprint of new neural networks
+prior to physical training. However, mlco2 has several serious limitations. It
+cannot extend its estimation to dense or mixture-of-experts (MoE) LLMs,
+disregards critical architectural parameters, focuses solely on GPUs, and
+cannot model embodied carbon footprints. Addressing these gaps, we introduce
+\textit{\carb}, an end-to-end carbon footprint projection model designed for
+both dense and MoE LLMs. Compared to mlco2, \carb~significantly enhances the
+accuracy of carbon footprint estimations for various LLMs. The source code is
+released at \url{https://github.com/SotaroKaneda/MLCarbon}.},
+ arxiv_url = {https://arxiv.org/pdf/2309.14393v2.pdf},
+ author = {Ahmad Faiz and Sotaro Kaneda and Ruhan Wang and Rita Osi and Prateek Sharma and Fan Chen and Lei Jiang},
+ github_url = {https://github.com/SotaroKaneda/MLCarbon},
+ journal = {published in ICLR2024},
+ title = {LLMCarbon: Modeling the End-to-End Carbon Footprint of Large Language Models},
+ year = {2023}
+}
+
+@article{faiz_2023_llmcarbon,
+ abstract = {The carbon footprint associated with large language models (LLMs) is a
+significant concern, encompassing emissions from their training, inference,
+experimentation, and storage processes, including operational and embodied
+carbon emissions. An essential aspect is accurately estimating the carbon
+impact of emerging LLMs even before their training, which heavily relies on GPU
+usage. Existing studies have reported the carbon footprint of LLM training, but
+only one tool, mlco2, can predict the carbon footprint of new neural networks
+prior to physical training. However, mlco2 has several serious limitations. It
+cannot extend its estimation to dense or mixture-of-experts (MoE) LLMs,
+disregards critical architectural parameters, focuses solely on GPUs, and
+cannot model embodied carbon footprints. Addressing these gaps, we introduce
+\textit{\carb}, an end-to-end carbon footprint projection model designed for
+both dense and MoE LLMs. Compared to mlco2, \carb~significantly enhances the
+accuracy of carbon footprint estimations for various LLMs. The source code is
+released at \url{https://github.com/SotaroKaneda/MLCarbon}.},
+ arxiv_url = {https://arxiv.org/pdf/2309.14393v2.pdf},
+ author = {Ahmad Faiz and Sotaro Kaneda and Ruhan Wang and Rita Osi and Prateek Sharma and Fan Chen and Lei Jiang},
+ github_url = {https://github.com/SotaroKaneda/MLCarbon},
+ journal = {published in ICLR2024},
+ title = {LLMCarbon: Modeling the End-to-End Carbon Footprint of Large Language Models},
+ year = {2023}
+}
+
+@article{faiz_2023_llmcarbon,
+ abstract = {The carbon footprint associated with large language models (LLMs) is a
+significant concern, encompassing emissions from their training, inference,
+experimentation, and storage processes, including operational and embodied
+carbon emissions. An essential aspect is accurately estimating the carbon
+impact of emerging LLMs even before their training, which heavily relies on GPU
+usage. Existing studies have reported the carbon footprint of LLM training, but
+only one tool, mlco2, can predict the carbon footprint of new neural networks
+prior to physical training. However, mlco2 has several serious limitations. It
+cannot extend its estimation to dense or mixture-of-experts (MoE) LLMs,
+disregards critical architectural parameters, focuses solely on GPUs, and
+cannot model embodied carbon footprints. Addressing these gaps, we introduce
+\textit{\carb}, an end-to-end carbon footprint projection model designed for
+both dense and MoE LLMs. Compared to mlco2, \carb~significantly enhances the
+accuracy of carbon footprint estimations for various LLMs. The source code is
+released at \url{https://github.com/SotaroKaneda/MLCarbon}.},
+ arxiv_url = {https://arxiv.org/pdf/2309.14393v2.pdf},
+ author = {Ahmad Faiz and Sotaro Kaneda and Ruhan Wang and Rita Osi and Prateek Sharma and Fan Chen and Lei Jiang},
+ github_url = {https://github.com/SotaroKaneda/MLCarbon},
+ journal = {published in ICLR2024},
+ title = {LLMCarbon: Modeling the End-to-End Carbon Footprint of Large Language Models},
+ year = {2023}
+}
+
+@article{memmel_2022_position,
+ abstract = {For the first time, this position paper introduces a fundamental link between
+tensor networks (TNs) and Green AI, highlighting their synergistic potential to
+enhance both the inclusivity and sustainability of AI research. We argue that
+TNs are valuable for Green AI due to their strong mathematical backbone and
+inherent logarithmic compression potential. We undertake a comprehensive review
+of the ongoing discussions on Green AI, emphasizing the importance of
+sustainability and inclusivity in AI research to demonstrate the significance
+of establishing the link between Green AI and TNs. To support our position, we
+first provide a comprehensive overview of efficiency metrics proposed in Green
+AI literature and then evaluate examples of TNs in the fields of kernel
+machines and deep learning using the proposed efficiency metrics. This position
+paper aims to incentivize meaningful, constructive discussions by bridging
+fundamental principles of Green AI and TNs. We advocate for researchers to
+seriously evaluate the integration of TNs into their research projects, and in
+alignment with the link established in this paper, we support prior calls
+encouraging researchers to treat Green AI principles as a research priority.},
+ arxiv_url = {https://arxiv.org/pdf/2205.12961v2.pdf},
+ author = {Eva Memmel and Clara Menzen and Jetze Schuurmans and Frederiek Wesel and Kim Batselier},
+ title = {Position: Tensor Networks are a Valuable Asset for Green AI},
+ year = {2022}
+}
+
+@article{patil_2022_poet,
+ abstract = {Fine-tuning models on edge devices like mobile phones would enable
+privacy-preserving personalization over sensitive data. However, edge training
+has historically been limited to relatively small models with simple
+architectures because training is both memory and energy intensive. We present
+POET, an algorithm to enable training large neural networks on memory-scarce
+battery-operated edge devices. POET jointly optimizes the integrated search
+search spaces of rematerialization and paging, two algorithms to reduce the
+memory consumption of backpropagation. Given a memory budget and a run-time
+constraint, we formulate a mixed-integer linear program (MILP) for
+energy-optimal training. Our approach enables training significantly larger
+models on embedded devices while reducing energy consumption while not
+modifying mathematical correctness of backpropagation. We demonstrate that it
+is possible to fine-tune both ResNet-18 and BERT within the memory constraints
+of a Cortex-M class embedded device while outperforming current edge training
+methods in energy efficiency. POET is an open-source project available at
+https://github.com/ShishirPatil/poet},
+ arxiv_url = {https://arxiv.org/pdf/2207.07697v1.pdf},
+ author = {Shishir G. Patil and Paras Jain and Prabal Dutta and Ion Stoica and Joseph E. Gonzalez},
+ title = {POET: Training Neural Networks on Tiny Devices with Integrated Rematerialization and Paging},
+ year = {2022}
+}
+
+@article{patil_2022_poet,
+ abstract = {Fine-tuning models on edge devices like mobile phones would enable
+privacy-preserving personalization over sensitive data. However, edge training
+has historically been limited to relatively small models with simple
+architectures because training is both memory and energy intensive. We present
+POET, an algorithm to enable training large neural networks on memory-scarce
+battery-operated edge devices. POET jointly optimizes the integrated search
+search spaces of rematerialization and paging, two algorithms to reduce the
+memory consumption of backpropagation. Given a memory budget and a run-time
+constraint, we formulate a mixed-integer linear program (MILP) for
+energy-optimal training. Our approach enables training significantly larger
+models on embedded devices while reducing energy consumption while not
+modifying mathematical correctness of backpropagation. We demonstrate that it
+is possible to fine-tune both ResNet-18 and BERT within the memory constraints
+of a Cortex-M class embedded device while outperforming current edge training
+methods in energy efficiency. POET is an open-source project available at
+https://github.com/ShishirPatil/poet},
+ arxiv_url = {https://arxiv.org/pdf/2207.07697v1.pdf},
+ author = {Shishir G. Patil and Paras Jain and Prabal Dutta and Ion Stoica and Joseph E. Gonzalez},
+ title = {POET: Training Neural Networks on Tiny Devices with Integrated Rematerialization and Paging},
+ year = {2022}
+}
+
+@article{pitis_2020_counterfactual,
+ abstract = {Many dynamic processes, including common scenarios in robotic control and
+reinforcement learning (RL), involve a set of interacting subprocesses. Though
+the subprocesses are not independent, their interactions are often sparse, and
+the dynamics at any given time step can often be decomposed into locally
+independent causal mechanisms. Such local causal structures can be leveraged to
+improve the sample efficiency of sequence prediction and off-policy
+reinforcement learning. We formalize this by introducing local causal models
+(LCMs), which are induced from a global causal model by conditioning on a
+subset of the state space. We propose an approach to inferring these structures
+given an object-oriented state representation, as well as a novel algorithm for
+Counterfactual Data Augmentation (CoDA). CoDA uses local structures and an
+experience replay to generate counterfactual experiences that are causally
+valid in the global model. We find that CoDA significantly improves the
+performance of RL agents in locally factored tasks, including the
+batch-constrained and goal-conditioned settings.},
+ arxiv_url = {https://arxiv.org/pdf/2007.02863v2.pdf},
+ author = {Silviu Pitis and Elliot Creager and Animesh Garg},
+ github_url = {https://github.com/spitis/mrl},
+ title = {Counterfactual Data Augmentation using Locally Factored Dynamics},
+ year = {2020}
+}
+
+@article{wendong_2023_causal,
+ abstract = {Independent Component Analysis (ICA) aims to recover independent latent
+variables from observed mixtures thereof. Causal Representation Learning (CRL)
+aims instead to infer causally related (thus often statistically dependent)
+latent variables, together with the unknown graph encoding their causal
+relationships. We introduce an intermediate problem termed Causal Component
+Analysis (CauCA). CauCA can be viewed as a generalization of ICA, modelling the
+causal dependence among the latent components, and as a special case of CRL. In
+contrast to CRL, it presupposes knowledge of the causal graph, focusing solely
+on learning the unmixing function and the causal mechanisms. Any impossibility
+results regarding the recovery of the ground truth in CauCA also apply for CRL,
+while possibility results may serve as a stepping stone for extensions to CRL.
+We characterize CauCA identifiability from multiple datasets generated through
+different types of interventions on the latent causal variables. As a
+corollary, this interventional perspective also leads to new identifiability
+results for nonlinear ICA -- a special case of CauCA with an empty graph --
+requiring strictly fewer datasets than previous results. We introduce a
+likelihood-based approach using normalizing flows to estimate both the unmixing
+function and the causal mechanisms, and demonstrate its effectiveness through
+extensive synthetic experiments in the CauCA and ICA setting.},
+ arxiv_url = {https://arxiv.org/pdf/2305.17225v3.pdf},
+ author = {Liang Wendong and Armin Kekić and Julius von Kügelgen and Simon Buchholz and Michel Besserve and Luigi Gresele and Bernhard Schölkopf},
+ github_url = {https://github.com/akekic/causal-component-analysis},
+ title = {Causal Component Analysis},
+ year = {2023}
+}
+
+@article{zhao_2024_nas,
+ abstract = {This work presents a novel approach to neural architecture search (NAS) that
+aims to increase carbon efficiency for the model design process. The proposed
+framework CE-NAS addresses the key challenge of high carbon cost associated
+with NAS by exploring the carbon emission variations of energy and energy
+differences of different NAS algorithms. At the high level, CE-NAS leverages a
+reinforcement-learning agent to dynamically adjust GPU resources based on
+carbon intensity, predicted by a time-series transformer, to balance
+energy-efficient sampling and energy-intensive evaluation tasks. Furthermore,
+CE-NAS leverages a recently proposed multi-objective optimizer to effectively
+reduce the NAS search space. We demonstrate the efficacy of CE-NAS in lowering
+carbon emissions while achieving SOTA results for both NAS datasets and
+open-domain NAS tasks. For example, on the HW-NasBench dataset, CE-NAS reduces
+carbon emissions by up to 7.22X while maintaining a search efficiency
+comparable to vanilla NAS. For open-domain NAS tasks, CE-NAS achieves SOTA
+results with 97.35% top-1 accuracy on CIFAR-10 with only 1.68M parameters and a
+carbon consumption of 38.53 lbs of CO2. On ImageNet, our searched model
+achieves 80.6% top-1 accuracy with a 0.78 ms TensorRT latency using FP16 on
+NVIDIA V100, consuming only 909.86 lbs of CO2, making it comparable to other
+one-shot-based NAS baselines.},
+ arxiv_url = {https://arxiv.org/pdf/2406.01414v2.pdf},
+ author = {Yiyang Zhao and Yunzhuo Liu and Bo Jiang and Tian Guo},
+ title = {CE-NAS: An End-to-End Carbon-Efficient Neural Architecture Search Framework},
+ year = {2024}
+}
+
+@article{zou_2024_multi,
+ abstract = {The fast growing capabilities of large-scale deep learning models, such as
+Bert, GPT and ViT, are revolutionizing the landscape of NLP, CV and many other
+domains. Training such models, however, poses an unprecedented demand for
+computing power, which incurs exponentially increasing energy cost and carbon
+dioxide emissions. It is thus critical to develop efficient training solutions
+to reduce the training costs. Motivated by a set of key observations of inter-
+and intra-layer similarities among feature maps and attentions that can be
+identified from typical training processes, we propose a multi-level framework
+for training acceleration. Specifically, the framework is based on three basic
+operators, Coalescing, De-coalescing and Interpolation, which can be
+orchestrated to build a multi-level training framework. The framework consists
+of a V-cycle training process, which progressively down- and up-scales the
+model size and projects the parameters between adjacent levels of models via
+coalescing and de-coalescing. The key idea is that a smaller model that can be
+trained for fast convergence and the trained parameters provides high-qualities
+intermediate solutions for the next level larger network. The interpolation
+operator is designed to break the symmetry of neurons incurred by de-coalescing
+for better convergence performance. Our experiments on transformer-based
+language models (e.g. Bert, GPT) as well as a vision model (e.g. DeiT) prove
+that the proposed framework reduces the computational cost by about 20% on
+training BERT/GPT-Base models and up to 51.6% on training the BERT-Large model
+while preserving the performance.},
+ arxiv_url = {https://arxiv.org/pdf/2404.07999v1.pdf},
+ author = {Longwei Zou and Han Zhang and Yangdong Deng},
+ github_url = {https://github.com/Photooon/Multi-Level-Training-Framework},
+ title = {A Multi-Level Framework for Accelerating Training Transformer Models},
+ year = {2024}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{anil_2023_palm,
+ abstract = {We introduce PaLM 2, a new state-of-the-art language model that has better
+multilingual and reasoning capabilities and is more compute-efficient than its
+predecessor PaLM. PaLM 2 is a Transformer-based model trained using a mixture
+of objectives. Through extensive evaluations on English and multilingual
+language, and reasoning tasks, we demonstrate that PaLM 2 has significantly
+improved quality on downstream tasks across different model sizes, while
+simultaneously exhibiting faster and more efficient inference compared to PaLM.
+This improved efficiency enables broader deployment while also allowing the
+model to respond faster, for a more natural pace of interaction. PaLM 2
+demonstrates robust reasoning capabilities exemplified by large improvements
+over PaLM on BIG-Bench and other reasoning tasks. PaLM 2 exhibits stable
+performance on a suite of responsible AI evaluations, and enables
+inference-time control over toxicity without additional overhead or impact on
+other capabilities. Overall, PaLM 2 achieves state-of-the-art performance
+across a diverse set of tasks and capabilities.
+  When discussing the PaLM 2 family, it is important to distinguish between
+pre-trained models (of various sizes), fine-tuned variants of these models, and
+the user-facing products that use these models. In particular, user-facing
+products typically include additional pre- and post-processing steps.
+Additionally, the underlying models may evolve over time. Therefore, one should
+not expect the performance of user-facing products to exactly match the results
+reported in this report.},
+ arxiv_url = {https://arxiv.org/pdf/2305.10403v3.pdf},
+ author = {Rohan Anil and Andrew M. Dai and Orhan Firat and Melvin Johnson and Dmitry Lepikhin and Alexandre Passos and Siamak Shakeri and Emanuel Taropa and Paige Bailey and Zhifeng Chen and Eric Chu and Jonathan H. Clark and Laurent El Shafey and Yanping Huang and Kathy Meier-Hellstern and Gaurav Mishra and Erica Moreira and Mark Omernick and Kevin Robinson and Sebastian Ruder and Yi Tay and Kefan Xiao and Yuanzhong Xu and Yujing Zhang and Gustavo Hernandez Abrego and Junwhan Ahn and Jacob Austin and Paul Barham and Jan Botha and James Bradbury and Siddhartha Brahma and Kevin Brooks and Michele Catasta and Yong Cheng and Colin Cherry and Christopher A. Choquette-Choo and Aakanksha Chowdhery and Clément Crepy and Shachi Dave and Mostafa Dehghani and Sunipa Dev and Jacob Devlin and Mark Díaz and Nan Du and Ethan Dyer and Vlad Feinberg and Fangxiaoyu Feng and Vlad Fienber and Markus Freitag and Xavier Garcia and Sebastian Gehrmann and Lucas Gonzalez and Guy Gur-Ari and Steven Hand and Hadi Hashemi and Le Hou and Joshua Howland and Andrea Hu and Jeffrey Hui and Jeremy Hurwitz and Michael Isard and Abe Ittycheriah and Matthew Jagielski and Wenhao Jia and Kathleen Kenealy and Maxim Krikun and Sneha Kudugunta and Chang Lan and Katherine Lee and Benjamin Lee and Eric Li and Music Li and Wei Li and YaGuang Li and Jian Li and Hyeontaek Lim and Hanzhao Lin and Zhongtao Liu and Frederick Liu and Marcello Maggioni and Aroma Mahendru and Joshua Maynez and Vedant Misra and Maysam Moussalem and Zachary Nado and John Nham and Eric Ni and Andrew Nystrom and Alicia Parrish and Marie Pellat and Martin Polacek and Alex Polozov and Reiner Pope and Siyuan Qiao and Emily Reif and Bryan Richter and Parker Riley and Alex Castro Ros and Aurko Roy and Brennan Saeta and Rajkumar Samuel and Renee Shelby and Ambrose Slone and Daniel Smilkov and David R. So and Daniel Sohn and Simon Tokumine and Dasha Valter and Vijay Vasudevan and Kiran Vodrahalli and Xuezhi Wang and Pidong Wang and Zirui Wang and Tao Wang and John Wieting and Yuhuai Wu and Kelvin Xu and Yunhan Xu and Linting Xue and Pengcheng Yin and Jiahui Yu and Qiao Zhang and Steven Zheng and Ce Zheng and Weikang Zhou and Denny Zhou and Slav Petrov and Yonghui Wu},
+ title = {Palm 2 technical report.},
+ year = {2023}
+}
+
+@article{artetxe_2021_efficient,
+ abstract = {Mixture of Experts layers (MoEs) enable efficient scaling of language models
+through conditional computation. This paper presents a detailed empirical study
+of how autoregressive MoE language models scale in comparison with dense models
+in a wide range of settings: in- and out-of-domain language modeling, zero- and
+few-shot priming, and full-shot fine-tuning. With the exception of fine-tuning,
+we find MoEs to be substantially more compute efficient. At more modest
+training budgets, MoEs can match the performance of dense models using $\sim$4
+times less compute. This gap narrows at scale, but our largest MoE model (1.1T
+parameters) consistently outperforms a compute-equivalent dense model (6.7B
+parameters). Overall, this performance gap varies greatly across tasks and
+domains, suggesting that MoE and dense models generalize differently in ways
+that are worthy of future study. We make our code and models publicly available
+for research use.},
+ arxiv_url = {https://arxiv.org/pdf/2112.10684v2.pdf},
+ author = {Mikel Artetxe and Shruti Bhosale and Naman Goyal and Todor Mihaylov and Myle Ott and Sam Shleifer and Xi Victoria Lin and Jingfei Du and Srinivasan Iyer and Ramakanth Pasunuru and Giri Anantharaman and Xian Li and Shuohui Chen and Halil Akin and Mandeep Baines and Louis Martin and Xing Zhou and Punit Singh Koura and Brian O'Horo and Jeff Wang and Luke Zettlemoyer and Mona Diab and Zornitsa Kozareva and Ves Stoyanov},
+ title = {Efficient large scale language modeling with mixtures of experts.},
+ year = {2021}
+}
+
+@article{author_year_are,
+ title = {Are the new ais smart enough to steal your job? iq scores for chatgpt, microsoft bing, google bard and quora poe.}
+}
+
+@article{author_year_green,
+ title = {Green cloud computing: Balancing energy in processing, storage, and transport.}
+}
+
+@article{brown_2020_language,
+ abstract = {Recent work has demonstrated substantial gains on many NLP tasks and
+benchmarks by pre-training on a large corpus of text followed by fine-tuning on
+a specific task. While typically task-agnostic in architecture, this method
+still requires task-specific fine-tuning datasets of thousands or tens of
+thousands of examples. By contrast, humans can generally perform a new language
+task from only a few examples or from simple instructions - something which
+current NLP systems still largely struggle to do. Here we show that scaling up
+language models greatly improves task-agnostic, few-shot performance, sometimes
+even reaching competitiveness with prior state-of-the-art fine-tuning
+approaches. Specifically, we train GPT-3, an autoregressive language model with
+175 billion parameters, 10x more than any previous non-sparse language model,
+and test its performance in the few-shot setting. For all tasks, GPT-3 is
+applied without any gradient updates or fine-tuning, with tasks and few-shot
+demonstrations specified purely via text interaction with the model. GPT-3
+achieves strong performance on many NLP datasets, including translation,
+question-answering, and cloze tasks, as well as several tasks that require
+on-the-fly reasoning or domain adaptation, such as unscrambling words, using a
+novel word in a sentence, or performing 3-digit arithmetic. At the same time,
+we also identify some datasets where GPT-3's few-shot learning still struggles,
+as well as some datasets where GPT-3 faces methodological issues related to
+training on large web corpora. Finally, we find that GPT-3 can generate samples
+of news articles which human evaluators have difficulty distinguishing from
+articles written by humans. We discuss broader societal impacts of this finding
+and of GPT-3 in general.},
+ arxiv_url = {https://arxiv.org/pdf/2005.14165v4.pdf},
+ author = {Tom B. Brown and Benjamin Mann and Nick Ryder and Melanie Subbiah and Jared Kaplan and Prafulla Dhariwal and Arvind Neelakantan and Pranav Shyam and Girish Sastry and Amanda Askell and Sandhini Agarwal and Ariel Herbert-Voss and Gretchen Krueger and Tom Henighan and Rewon Child and Aditya Ramesh and Daniel M. Ziegler and Jeffrey Wu and Clemens Winter and Christopher Hesse and Mark Chen and Eric Sigler and Mateusz Litwin and Scott Gray and Benjamin Chess and Jack Clark and Christopher Berner and Sam McCandlish and Alec Radford and Ilya Sutskever and Dario Amodei},
+ title = {Language models are few-shot learners.},
+ year = {2020}
+}
+
+@article{caballero_2022_broken,
+ abstract = {We present a smoothly broken power law functional form (that we refer to as a
+Broken Neural Scaling Law (BNSL)) that accurately models & extrapolates the
+scaling behaviors of deep neural networks (i.e. how the evaluation metric of
+interest varies as amount of compute used for training (or inference), number
+of model parameters, training dataset size, model input size, number of
+training steps, or upstream performance varies) for various architectures & for
+each of various tasks within a large & diverse set of upstream & downstream
+tasks, in zero-shot, prompted, & finetuned settings. This set includes
+large-scale vision, language, audio, video, diffusion, generative modeling,
+multimodal learning, contrastive learning, AI alignment, AI capabilities,
+robotics, out-of-distribution (OOD) generalization, continual learning,
+transfer learning, uncertainty estimation / calibration, OOD detection,
+adversarial robustness, distillation, sparsity, retrieval, quantization,
+pruning, fairness, molecules, computer programming/coding, math word problems,
+"emergent phase transitions", arithmetic, supervised learning,
+unsupervised/self-supervised learning, & reinforcement learning (single agent &
+multi-agent). When compared to other functional forms for neural scaling, this
+functional form yields extrapolations of scaling behavior that are considerably
+more accurate on this set. Moreover, this functional form accurately models &
+extrapolates scaling behavior that other functional forms are incapable of
+expressing such as the nonmonotonic transitions present in the scaling behavior
+of phenomena such as double descent & the delayed, sharp inflection points
+present in the scaling behavior of tasks such as arithmetic. Lastly, we use
+this functional form to glean insights about the limit of the predictability of
+scaling behavior. Code is available at
+https://github.com/ethancaballero/broken_neural_scaling_laws},
+ arxiv_url = {https://arxiv.org/pdf/2210.14891v17.pdf},
+ author = {Ethan Caballero and Kshitij Gupta and Irina Rish and David Krueger},
+ journal = {International Conference on Learning Representations (ICLR), 2023},
+ title = {Broken neural scaling laws.},
+ year = {2022}
+}
+
+@article{chen_2023_pipeline,
+ abstract = {The Mixture of Experts (MoE) model becomes an important choice of large
+language models nowadays because of its scalability with sublinear
+computational complexity for training and inference. However, existing MoE
+models suffer from two critical drawbacks, 1) tremendous inner-node and
+inter-node communication overhead introduced by all-to-all dispatching and
+gathering, and 2) limited scalability for the backbone because of the bound
+data parallel and expert parallel to scale in the expert dimension. In this
+paper, we systematically analyze these drawbacks in terms of training
+efficiency in the parallel framework view and propose a novel MoE architecture
+called Pipeline MoE (PPMoE) to tackle them. PPMoE builds expert parallel
+incorporating with tensor parallel and replaces communication-intensive
+all-to-all dispatching and gathering with a simple tensor index slicing and
+inner-node all-reduce. Besides, it is convenient for PPMoE to integrate
+pipeline parallel to further scale the backbone due to its flexible parallel
+architecture. Extensive experiments show that PPMoE not only achieves a more
+than $1.75\times$ speed up compared to existing MoE architectures but also
+reaches $90\%$ throughput of its corresponding backbone model that is
+$20\times$ smaller.},
+ arxiv_url = {https://arxiv.org/pdf/2304.11414v1.pdf},
+ author = {Xin Chen and Hengheng Zhang and Xiaotao Gu and Kaifeng Bi and Lingxi Xie and Qi Tian},
+ title = {Pipeline moe: A flexible moe implementation with pipeline parallelism.},
+ year = {2023}
+}

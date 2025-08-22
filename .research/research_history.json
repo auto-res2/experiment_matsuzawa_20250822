@@ -1,0 +1,10 @@
+{
+  "research_topic": "Few-shot Prototypical Networksの汎化性能に関して改善したい",
+  "queries": [
+    "Prototypical Networks generalization",
+    "Prototypical Networks regularization",
+    "cross-domain prototypical networks",
+    "transductive prototypical networks",
+    "data augmentation prototypical networks"
+  ]
+}

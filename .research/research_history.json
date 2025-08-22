@@ -1,0 +1,10 @@
+{
+  "research_topic": "MoE-Mambaのエキスパート選択効率に関して改善したい",
+  "queries": [
+    "Mamba MoE routing",
+    "MoE routing efficiency",
+    "top-k expert routing",
+    "MoE load balancing",
+    "optimal transport MoE"
+  ]
+}

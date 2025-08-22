@@ -1,41 +1,78 @@
 {
   "permuted_mnist": {
     "SOCA": {
-      "average_accuracy": 83.63799999999999,
-      "backward_transfer": -16.322500000000005,
+      "average_accuracy": 85.318,
+      "backward_transfer": -14.352499999999996,
       "forward_transfer": -20.0,
       "final_accuracies": [
-        73.6,
-        73.72,
-        84.3,
-        89.66,
-        96.91
+        75.07,
+        74.59,
+        87.15,
+        92.76,
+        97.02
       ]
     },
     "Experience_Replay": {
-      "average_accuracy": 63.85,
-      "backward_transfer": -41.89999999999999,
+      "average_accuracy": 64.292,
+      "backward_transfer": -41.182500000000005,
       "forward_transfer": -20.0,
       "final_accuracies": [
-        31.09,
-        35.52,
-        69.79,
-        85.45,
-        97.4
+        36.43,
+        49.02,
+        57.23,
+        81.74,
+        97.04
       ]
     },
     "Finetune": {
-      "average_accuracy": 62.412,
-      "backward_transfer": -43.712500000000006,
+      "average_accuracy": 59.160000000000004,
+      "backward_transfer": -47.605,
       "forward_transfer": -20.0,
       "final_accuracies": [
-        25.41,
-        39.41,
-        67.32,
-        82.9,
-        97.02
+        32.24,
+        40.91,
+        40.17,
+        85.29,
+        97.19
       ]
     }
   },
-  "split_cifar100": {}
+  "split_cifar100": {
+    "SOCA": {
+      "average_accuracy": 11.18,
+      "backward_transfer": -33.162499999999994,
+      "forward_transfer": -20.0,
+      "final_accuracies": [
+        2.75,
+        5.25,
+        4.55,
+        7.1,
+        36.25
+      ]
+    },
+    "Experience_Replay": {
+      "average_accuracy": 10.959999999999999,
+      "backward_transfer": -35.1,
+      "forward_transfer": -20.0,
+      "final_accuracies": [
+        1.95,
+        4.95,
+        4.95,
+        6.8,
+        36.15
+      ]
+    },
+    "Finetune": {
+      "average_accuracy": 10.069999999999999,
+      "backward_transfer": -33.275,
+      "forward_transfer": -20.0,
+      "final_accuracies": [
+        1.9,
+        4.0,
+        5.2,
+        5.7,
+        33.55
+      ]
+    }
+  }
 }

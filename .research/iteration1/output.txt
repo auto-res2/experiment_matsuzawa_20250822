@@ -1,0 +1,527 @@
+=== pip install start Fri Aug 22 05:32:24 UTC 2025 ===
+Collecting torch>=2.0.0 (from -r requirements.txt (line 1))
+  Downloading torch-2.8.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (30 kB)
+Collecting torchvision>=0.15.0 (from -r requirements.txt (line 2))
+  Downloading torchvision-0.23.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (6.1 kB)
+Collecting numpy>=1.21.0 (from -r requirements.txt (line 3))
+  Downloading numpy-2.3.2-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+Collecting matplotlib>=3.5.0 (from -r requirements.txt (line 4))
+  Downloading matplotlib-3.10.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+Collecting seaborn>=0.11.0 (from -r requirements.txt (line 5))
+  Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting scikit-learn>=1.0.0 (from -r requirements.txt (line 6))
+  Downloading scikit_learn-1.7.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+Collecting tqdm>=4.62.0 (from -r requirements.txt (line 7))
+  Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+Collecting pandas>=1.3.0 (from -r requirements.txt (line 8))
+  Downloading pandas-2.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
+Collecting scipy>=1.7.0 (from -r requirements.txt (line 9))
+  Downloading scipy-1.16.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (61 kB)
+Collecting tensorboard>=2.8.0 (from -r requirements.txt (line 10))
+  Downloading tensorboard-2.20.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting filelock (from torch>=2.0.0->-r requirements.txt (line 1))
+  Downloading filelock-3.19.1-py3-none-any.whl.metadata (2.1 kB)
+Collecting typing-extensions>=4.10.0 (from torch>=2.0.0->-r requirements.txt (line 1))
+  Downloading typing_extensions-4.14.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting sympy>=1.13.3 (from torch>=2.0.0->-r requirements.txt (line 1))
+  Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Collecting networkx (from torch>=2.0.0->-r requirements.txt (line 1))
+  Downloading networkx-3.5-py3-none-any.whl.metadata (6.3 kB)
+Collecting jinja2 (from torch>=2.0.0->-r requirements.txt (line 1))
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting fsspec (from torch>=2.0.0->-r requirements.txt (line 1))
+  Downloading fsspec-2025.7.0-py3-none-any.whl.metadata (12 kB)
+Collecting nvidia-cuda-nvrtc-cu12==12.8.93 (from torch>=2.0.0->-r requirements.txt (line 1))
+  Downloading nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cuda-runtime-cu12==12.8.90 (from torch>=2.0.0->-r requirements.txt (line 1))
+  Downloading nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cuda-cupti-cu12==12.8.90 (from torch>=2.0.0->-r requirements.txt (line 1))
+  Downloading nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cudnn-cu12==9.10.2.21 (from torch>=2.0.0->-r requirements.txt (line 1))
+  Downloading nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cublas-cu12==12.8.4.1 (from torch>=2.0.0->-r requirements.txt (line 1))
+  Downloading nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cufft-cu12==11.3.3.83 (from torch>=2.0.0->-r requirements.txt (line 1))
+  Downloading nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-curand-cu12==10.3.9.90 (from torch>=2.0.0->-r requirements.txt (line 1))
+  Downloading nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cusolver-cu12==11.7.3.90 (from torch>=2.0.0->-r requirements.txt (line 1))
+  Downloading nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cusparse-cu12==12.5.8.93 (from torch>=2.0.0->-r requirements.txt (line 1))
+  Downloading nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cusparselt-cu12==0.7.1 (from torch>=2.0.0->-r requirements.txt (line 1))
+  Downloading nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl.metadata (7.0 kB)
+Collecting nvidia-nccl-cu12==2.27.3 (from torch>=2.0.0->-r requirements.txt (line 1))
+  Downloading nvidia_nccl_cu12-2.27.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.0 kB)
+Collecting nvidia-nvtx-cu12==12.8.90 (from torch>=2.0.0->-r requirements.txt (line 1))
+  Downloading nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-nvjitlink-cu12==12.8.93 (from torch>=2.0.0->-r requirements.txt (line 1))
+  Downloading nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cufile-cu12==1.13.1.3 (from torch>=2.0.0->-r requirements.txt (line 1))
+  Downloading nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting triton==3.4.0 (from torch>=2.0.0->-r requirements.txt (line 1))
+  Downloading triton-3.4.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (1.7 kB)
+Requirement already satisfied: setuptools>=40.8.0 in /home/runner/work/_tool/Python/3.11.13/x64/lib/python3.11/site-packages (from triton==3.4.0->torch>=2.0.0->-r requirements.txt (line 1)) (65.5.0)
+Collecting pillow!=8.3.*,>=5.3.0 (from torchvision>=0.15.0->-r requirements.txt (line 2))
+  Downloading pillow-11.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.0 kB)
+Collecting contourpy>=1.0.1 (from matplotlib>=3.5.0->-r requirements.txt (line 4))
+  Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib>=3.5.0->-r requirements.txt (line 4))
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib>=3.5.0->-r requirements.txt (line 4))
+  Downloading fonttools-4.59.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (108 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib>=3.5.0->-r requirements.txt (line 4))
+  Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+Collecting packaging>=20.0 (from matplotlib>=3.5.0->-r requirements.txt (line 4))
+  Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pyparsing>=2.3.1 (from matplotlib>=3.5.0->-r requirements.txt (line 4))
+  Downloading pyparsing-3.2.3-py3-none-any.whl.metadata (5.0 kB)
+Collecting python-dateutil>=2.7 (from matplotlib>=3.5.0->-r requirements.txt (line 4))
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting joblib>=1.2.0 (from scikit-learn>=1.0.0->-r requirements.txt (line 6))
+  Downloading joblib-1.5.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting threadpoolctl>=3.1.0 (from scikit-learn>=1.0.0->-r requirements.txt (line 6))
+  Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+Collecting pytz>=2020.1 (from pandas>=1.3.0->-r requirements.txt (line 8))
+  Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas>=1.3.0->-r requirements.txt (line 8))
+  Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting absl-py>=0.4 (from tensorboard>=2.8.0->-r requirements.txt (line 10))
+  Downloading absl_py-2.3.1-py3-none-any.whl.metadata (3.3 kB)
+Collecting grpcio>=1.48.2 (from tensorboard>=2.8.0->-r requirements.txt (line 10))
+  Downloading grpcio-1.74.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)
+Collecting markdown>=2.6.8 (from tensorboard>=2.8.0->-r requirements.txt (line 10))
+  Downloading markdown-3.8.2-py3-none-any.whl.metadata (5.1 kB)
+Collecting protobuf!=4.24.0,>=3.19.6 (from tensorboard>=2.8.0->-r requirements.txt (line 10))
+  Downloading protobuf-6.32.0-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
+Collecting tensorboard-data-server<0.8.0,>=0.7.0 (from tensorboard>=2.8.0->-r requirements.txt (line 10))
+  Downloading tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl.metadata (1.1 kB)
+Collecting werkzeug>=1.0.1 (from tensorboard>=2.8.0->-r requirements.txt (line 10))
+  Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB)
+Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib>=3.5.0->-r requirements.txt (line 4))
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch>=2.0.0->-r requirements.txt (line 1))
+  Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting MarkupSafe>=2.1.1 (from werkzeug>=1.0.1->tensorboard>=2.8.0->-r requirements.txt (line 10))
+  Downloading MarkupSafe-3.0.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+Downloading torch-2.8.0-cp311-cp311-manylinux_2_28_x86_64.whl (888.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 888.1/888.1 MB 37.9 MB/s  0:00:09
+Downloading nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl (594.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 594.3/594.3 MB 48.8 MB/s  0:00:06
+Downloading nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 10.0 MB/s  0:00:01
+Downloading nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (88.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.0/88.0 MB 145.9 MB/s  0:00:00
+Downloading nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (954 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 954.8/954.8 kB 127.8 MB/s  0:00:00
+Downloading nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl (706.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 706.8/706.8 MB 33.3 MB/s  0:00:09
+Downloading nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (193.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 193.1/193.1 MB 99.6 MB/s  0:00:01
+Downloading nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 131.2 MB/s  0:00:00
+Downloading nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl (63.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.6/63.6 MB 136.8 MB/s  0:00:00
+Downloading nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl (267.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 267.5/267.5 MB 77.8 MB/s  0:00:03
+Downloading nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (288.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 288.2/288.2 MB 97.4 MB/s  0:00:02
+Downloading nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl (287.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 287.2/287.2 MB 70.5 MB/s  0:00:03
+Downloading nvidia_nccl_cu12-2.27.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (322.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 322.4/322.4 MB 49.0 MB/s  0:00:05
+Downloading nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (39.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 39.3/39.3 MB 26.9 MB/s  0:00:01
+Downloading nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (89 kB)
+Downloading triton-3.4.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (155.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.5/155.5 MB 116.7 MB/s  0:00:01
+Downloading torchvision-0.23.0-cp311-cp311-manylinux_2_28_x86_64.whl (8.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.6/8.6 MB 155.6 MB/s  0:00:00
+Downloading numpy-2.3.2-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 158.9 MB/s  0:00:00
+Downloading matplotlib-3.10.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 150.8 MB/s  0:00:00
+Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+Downloading scikit_learn-1.7.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 155.0 MB/s  0:00:00
+Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+Downloading pandas-2.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 154.2 MB/s  0:00:00
+Downloading scipy-1.16.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.4/35.4 MB 160.9 MB/s  0:00:00
+Downloading tensorboard-2.20.0-py3-none-any.whl (5.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 155.0 MB/s  0:00:00
+Downloading tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl (6.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 158.9 MB/s  0:00:00
+Downloading absl_py-2.3.1-py3-none-any.whl (135 kB)
+Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.59.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 149.8 MB/s  0:00:00
+Downloading grpcio-1.74.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (6.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.2/6.2 MB 155.1 MB/s  0:00:00
+Downloading joblib-1.5.1-py3-none-any.whl (307 kB)
+Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 153.0 MB/s  0:00:00
+Downloading markdown-3.8.2-py3-none-any.whl (106 kB)
+Downloading packaging-25.0-py3-none-any.whl (66 kB)
+Downloading pillow-11.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 156.8 MB/s  0:00:00
+Downloading protobuf-6.32.0-cp39-abi3-manylinux2014_x86_64.whl (322 kB)
+Downloading pyparsing-3.2.3-py3-none-any.whl (111 kB)
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 156.1 MB/s  0:00:00
+Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 83.8 MB/s  0:00:00
+Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Downloading typing_extensions-4.14.1-py3-none-any.whl (43 kB)
+Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB)
+Downloading MarkupSafe-3.0.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (23 kB)
+Downloading filelock-3.19.1-py3-none-any.whl (15 kB)
+Downloading fsspec-2025.7.0-py3-none-any.whl (199 kB)
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading networkx-3.5-py3-none-any.whl (2.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 154.1 MB/s  0:00:00
+Installing collected packages: pytz, nvidia-cusparselt-cu12, mpmath, tzdata, typing-extensions, triton, tqdm, threadpoolctl, tensorboard-data-server, sympy, six, pyparsing, protobuf, pillow, packaging, nvidia-nvtx-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufile-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, numpy, networkx, MarkupSafe, markdown, kiwisolver, joblib, grpcio, fsspec, fonttools, filelock, cycler, absl-py, werkzeug, scipy, python-dateutil, nvidia-cusparse-cu12, nvidia-cufft-cu12, nvidia-cudnn-cu12, jinja2, contourpy, tensorboard, scikit-learn, pandas, nvidia-cusolver-cu12, matplotlib, torch, seaborn, torchvision
+
+Successfully installed MarkupSafe-3.0.2 absl-py-2.3.1 contourpy-1.3.3 cycler-0.12.1 filelock-3.19.1 fonttools-4.59.1 fsspec-2025.7.0 grpcio-1.74.0 jinja2-3.1.6 joblib-1.5.1 kiwisolver-1.4.9 markdown-3.8.2 matplotlib-3.10.5 mpmath-1.3.0 networkx-3.5 numpy-2.3.2 nvidia-cublas-cu12-12.8.4.1 nvidia-cuda-cupti-cu12-12.8.90 nvidia-cuda-nvrtc-cu12-12.8.93 nvidia-cuda-runtime-cu12-12.8.90 nvidia-cudnn-cu12-9.10.2.21 nvidia-cufft-cu12-11.3.3.83 nvidia-cufile-cu12-1.13.1.3 nvidia-curand-cu12-10.3.9.90 nvidia-cusolver-cu12-11.7.3.90 nvidia-cusparse-cu12-12.5.8.93 nvidia-cusparselt-cu12-0.7.1 nvidia-nccl-cu12-2.27.3 nvidia-nvjitlink-cu12-12.8.93 nvidia-nvtx-cu12-12.8.90 packaging-25.0 pandas-2.3.2 pillow-11.3.0 protobuf-6.32.0 pyparsing-3.2.3 python-dateutil-2.9.0.post0 pytz-2025.2 scikit-learn-1.7.1 scipy-1.16.1 seaborn-0.13.2 six-1.17.0 sympy-1.14.0 tensorboard-2.20.0 tensorboard-data-server-0.7.2 threadpoolctl-3.6.0 torch-2.8.0 torchvision-0.23.0 tqdm-4.67.1 triton-3.4.0 typing-extensions-4.14.1 tzdata-2025.2 werkzeug-3.1.3
+=== pip install end Fri Aug 22 05:34:41 UTC 2025 ===
+=== experiment start Fri Aug 22 05:34:41 UTC 2025 ===
+Starting SOCA Continual Learning Experiments
+==================================================
+Using device: cuda
+GPU Memory: 16.7 GB
+
+============================================================
+DATASET: PERMUTED_MNIST
+============================================================
+
+=== Running SOCA on permuted_mnist ===
+
+Training on Task 1/5
+  Epoch 1: Loss = 0.2266
+  Epoch 2: Loss = 0.1152
+  Task 1 Accuracy: 96.57%
+
+Training on Task 2/5
+  Epoch 1: Loss = 0.2838
+  Epoch 2: Loss = 0.1289
+  Task 1 Accuracy: 94.76%
+  Task 2 Accuracy: 96.89%
+
+Training on Task 3/5
+  Epoch 1: Loss = 0.2886
+  Epoch 2: Loss = 0.1279
+  Task 1 Accuracy: 92.69%
+  Task 2 Accuracy: 93.72%
+  Task 3 Accuracy: 96.78%
+
+Training on Task 4/5
+  Epoch 1: Loss = 0.2675
+  Epoch 2: Loss = 0.1249
+  Task 1 Accuracy: 79.68%
+  Task 2 Accuracy: 85.67%
+  Task 3 Accuracy: 93.78%
+  Task 4 Accuracy: 96.74%
+
+Training on Task 5/5
+  Epoch 1: Loss = 0.2722
+  Epoch 2: Loss = 0.1226
+  Task 1 Accuracy: 75.07%
+  Task 2 Accuracy: 74.59%
+  Task 3 Accuracy: 87.15%
+  Task 4 Accuracy: 92.76%
+  Task 5 Accuracy: 97.02%
+Results for SOCA:
+  Average Accuracy: 85.32%
+  Backward Transfer: -14.35%
+  Forward Transfer: -20.00%
+
+SOCA Results:
+  Average Accuracy: 85.32%
+  Backward Transfer: -14.35%
+  Forward Transfer: -20.00%
+
+=== Running Experience_Replay on permuted_mnist ===
+
+Training on Task 1/5
+  Epoch 1: Loss = 0.2561
+  Epoch 2: Loss = 0.0956
+  Task 1 Accuracy: 97.49%
+
+Training on Task 2/5
+  Epoch 1: Loss = 0.2502
+  Epoch 2: Loss = 0.0891
+  Task 1 Accuracy: 81.43%
+  Task 2 Accuracy: 97.14%
+
+Training on Task 3/5
+  Epoch 1: Loss = 0.2490
+  Epoch 2: Loss = 0.0888
+  Task 1 Accuracy: 60.25%
+  Task 2 Accuracy: 77.06%
+  Task 3 Accuracy: 97.58%
+
+Training on Task 4/5
+  Epoch 1: Loss = 0.2625
+  Epoch 2: Loss = 0.0904
+  Task 1 Accuracy: 39.89%
+  Task 2 Accuracy: 67.74%
+  Task 3 Accuracy: 80.05%
+  Task 4 Accuracy: 96.94%
+
+Training on Task 5/5
+  Epoch 1: Loss = 0.2828
+  Epoch 2: Loss = 0.0959
+  Task 1 Accuracy: 36.43%
+  Task 2 Accuracy: 49.02%
+  Task 3 Accuracy: 57.23%
+  Task 4 Accuracy: 81.74%
+  Task 5 Accuracy: 97.04%
+Results for Experience_Replay:
+  Average Accuracy: 64.29%
+  Backward Transfer: -41.18%
+  Forward Transfer: -20.00%
+
+Experience_Replay Results:
+  Average Accuracy: 64.29%
+  Backward Transfer: -41.18%
+  Forward Transfer: -20.00%
+
+=== Running Finetune on permuted_mnist ===
+
+Training on Task 1/5
+  Epoch 1: Loss = 0.2287
+  Epoch 2: Loss = 0.0935
+  Task 1 Accuracy: 97.49%
+
+Training on Task 2/5
+  Epoch 1: Loss = 0.2212
+  Epoch 2: Loss = 0.0892
+  Task 1 Accuracy: 72.36%
+  Task 2 Accuracy: 97.20%
+
+Training on Task 3/5
+  Epoch 1: Loss = 0.2177
+  Epoch 2: Loss = 0.0877
+  Task 1 Accuracy: 58.26%
+  Task 2 Accuracy: 81.09%
+  Task 3 Accuracy: 97.26%
+
+Training on Task 4/5
+  Epoch 1: Loss = 0.2210
+  Epoch 2: Loss = 0.0917
+  Task 1 Accuracy: 38.10%
+  Task 2 Accuracy: 57.58%
+  Task 3 Accuracy: 77.15%
+  Task 4 Accuracy: 97.08%
+
+Training on Task 5/5
+  Epoch 1: Loss = 0.2336
+  Epoch 2: Loss = 0.0917
+  Task 1 Accuracy: 32.24%
+  Task 2 Accuracy: 40.91%
+  Task 3 Accuracy: 40.17%
+  Task 4 Accuracy: 85.29%
+  Task 5 Accuracy: 97.19%
+Results for Finetune:
+  Average Accuracy: 59.16%
+  Backward Transfer: -47.60%
+  Forward Transfer: -20.00%
+
+Finetune Results:
+  Average Accuracy: 59.16%
+  Backward Transfer: -47.60%
+  Forward Transfer: -20.00%
+
+============================================================
+DATASET: SPLIT_CIFAR100
+============================================================
+
+=== Running SOCA on split_cifar100 ===
+
+Training on Task 1/5
+  Epoch 1: Loss = 2.3792
+  Epoch 2: Loss = 2.0979
+  Task 1 Accuracy: 36.50%
+
+Training on Task 2/5
+  Epoch 1: Loss = 2.3993
+  Epoch 2: Loss = 2.0466
+  Task 1 Accuracy: 9.10%
+  Task 2 Accuracy: 39.55%
+
+Training on Task 3/5
+  Epoch 1: Loss = 2.3897
+  Epoch 2: Loss = 1.9699
+  Task 1 Accuracy: 3.85%
+  Task 2 Accuracy: 4.75%
+  Task 3 Accuracy: 38.35%
+
+Training on Task 4/5
+  Epoch 1: Loss = 2.3881
+  Epoch 2: Loss = 1.9689
+  Task 1 Accuracy: 5.80%
+  Task 2 Accuracy: 2.40%
+  Task 3 Accuracy: 7.85%
+  Task 4 Accuracy: 37.90%
+
+Training on Task 5/5
+  Epoch 1: Loss = 2.5255
+  Epoch 2: Loss = 2.0588
+  Task 1 Accuracy: 2.75%
+  Task 2 Accuracy: 5.25%
+  Task 3 Accuracy: 4.55%
+  Task 4 Accuracy: 7.10%
+  Task 5 Accuracy: 36.25%
+Results for SOCA:
+  Average Accuracy: 11.18%
+  Backward Transfer: -33.16%
+  Forward Transfer: -20.00%
+
+SOCA Results:
+  Average Accuracy: 11.18%
+  Backward Transfer: -33.16%
+  Forward Transfer: -20.00%
+
+=== Running Experience_Replay on split_cifar100 ===
+
+Training on Task 1/5
+  Epoch 1: Loss = 3.0690
+  Epoch 2: Loss = 2.4014
+  Task 1 Accuracy: 38.40%
+
+Training on Task 2/5
+  Epoch 1: Loss = 3.0298
+  Epoch 2: Loss = 2.3134
+  Task 1 Accuracy: 9.45%
+  Task 2 Accuracy: 40.65%
+
+Training on Task 3/5
+  Epoch 1: Loss = 3.0212
+  Epoch 2: Loss = 2.2161
+  Task 1 Accuracy: 3.35%
+  Task 2 Accuracy: 3.15%
+  Task 3 Accuracy: 40.15%
+
+Training on Task 4/5
+  Epoch 1: Loss = 3.1503
+  Epoch 2: Loss = 2.3825
+  Task 1 Accuracy: 6.95%
+  Task 2 Accuracy: 3.30%
+  Task 3 Accuracy: 9.20%
+  Task 4 Accuracy: 39.85%
+
+Training on Task 5/5
+  Epoch 1: Loss = 3.3855
+  Epoch 2: Loss = 2.5101
+  Task 1 Accuracy: 1.95%
+  Task 2 Accuracy: 4.95%
+  Task 3 Accuracy: 4.95%
+  Task 4 Accuracy: 6.80%
+  Task 5 Accuracy: 36.15%
+Results for Experience_Replay:
+  Average Accuracy: 10.96%
+  Backward Transfer: -35.10%
+  Forward Transfer: -20.00%
+
+Experience_Replay Results:
+  Average Accuracy: 10.96%
+  Backward Transfer: -35.10%
+  Forward Transfer: -20.00%
+
+=== Running Finetune on split_cifar100 ===
+
+Training on Task 1/5
+  Epoch 1: Loss = 2.3787
+  Epoch 2: Loss = 2.0619
+  Task 1 Accuracy: 34.40%
+
+Training on Task 2/5
+  Epoch 1: Loss = 2.3339
+  Epoch 2: Loss = 1.9919
+  Task 1 Accuracy: 9.85%
+  Task 2 Accuracy: 39.80%
+
+Training on Task 3/5
+  Epoch 1: Loss = 2.3446
+  Epoch 2: Loss = 1.9405
+  Task 1 Accuracy: 3.50%
+  Task 2 Accuracy: 3.80%
+  Task 3 Accuracy: 38.95%
+
+Training on Task 4/5
+  Epoch 1: Loss = 2.4026
+  Epoch 2: Loss = 1.9422
+  Task 1 Accuracy: 5.90%
+  Task 2 Accuracy: 2.15%
+  Task 3 Accuracy: 7.50%
+  Task 4 Accuracy: 36.75%
+
+Training on Task 5/5
+  Epoch 1: Loss = 2.5284
+  Epoch 2: Loss = 2.0918
+  Task 1 Accuracy: 1.90%
+  Task 2 Accuracy: 4.00%
+  Task 3 Accuracy: 5.20%
+  Task 4 Accuracy: 5.70%
+  Task 5 Accuracy: 33.55%
+Results for Finetune:
+  Average Accuracy: 10.07%
+  Backward Transfer: -33.27%
+  Forward Transfer: -20.00%
+
+Finetune Results:
+  Average Accuracy: 10.07%
+  Backward Transfer: -33.27%
+  Forward Transfer: -20.00%
+
+============================================================
+FINAL SUMMARY
+============================================================
+
+PERMUTED_MNIST:
+  SOCA:
+    Avg Acc: 85.32%
+    BWT: -14.35%
+    FWT: -20.00%
+  Experience_Replay:
+    Avg Acc: 64.29%
+    BWT: -41.18%
+    FWT: -20.00%
+  Finetune:
+    Avg Acc: 59.16%
+    BWT: -47.60%
+    FWT: -20.00%
+
+SPLIT_CIFAR100:
+  SOCA:
+    Avg Acc: 11.18%
+    BWT: -33.16%
+    FWT: -20.00%
+  Experience_Replay:
+    Avg Acc: 10.96%
+    BWT: -35.10%
+    FWT: -20.00%
+  Finetune:
+    Avg Acc: 10.07%
+    BWT: -33.27%
+    FWT: -20.00%
+
+Experiment completed! Results saved to .research/iteration1/images
+Generated PDF plots:
+  - accuracy_heatmap_experience_replay.pdf
+  - accuracy_heatmap_finetune.pdf
+  - accuracy_heatmap_soca.pdf
+  - forgetting_analysis_experience_replay.pdf
+  - forgetting_analysis_finetune.pdf
+  - forgetting_analysis_soca.pdf
+  - metrics_comparison_permuted_mnist.pdf
+  - metrics_comparison_split_cifar100.pdf
+
+Status set to 'stopped' in experiment_status.json
+=== experiment end Fri Aug 22 05:42:51 UTC 2025 ===

@@ -1,20 +1,20 @@
 {
   "backend_compatibility": {
     "baseline": {
-      "torchscript_export": true,
-      "model_size_mb": 0
+      "torchscript_export": false,
+      "error": "Input type (torch.FloatTensor) and weight type (torch.cuda.FloatTensor) should be the same or input should be a MKLDNN tensor and weight is a dense tensor"
     },
     "dash": {
-      "torchscript_export": true,
-      "model_size_mb": 0
+      "torchscript_export": false,
+      "error": "Input type (torch.FloatTensor) and weight type (torch.cuda.FloatTensor) should be the same or input should be a MKLDNN tensor and weight is a dense tensor"
     },
     "hilo": {
-      "torchscript_export": true,
-      "model_size_mb": 0
+      "torchscript_export": false,
+      "error": "Input type (torch.FloatTensor) and weight type (torch.cuda.FloatTensor) should be the same or input should be a MKLDNN tensor and weight is a dense tensor"
     },
     "full": {
-      "torchscript_export": true,
-      "model_size_mb": 0
+      "torchscript_export": false,
+      "error": "Input type (torch.FloatTensor) and weight type (torch.cuda.FloatTensor) should be the same or input should be a MKLDNN tensor and weight is a dense tensor"
     }
   },
   "index_stability": {

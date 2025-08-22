@@ -1,0 +1,402 @@
+=== pip install start Fri Aug 22 06:52:23 UTC 2025 ===
+Collecting torch>=2.1.0 (from -r requirements.txt (line 2))
+  Downloading torch-2.8.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (30 kB)
+Collecting torchvision>=0.16.0 (from -r requirements.txt (line 3))
+  Downloading torchvision-0.23.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (6.1 kB)
+Collecting timm>=0.9.0 (from -r requirements.txt (line 4))
+  Downloading timm-1.0.19-py3-none-any.whl.metadata (60 kB)
+Collecting numpy>=1.24.0 (from -r requirements.txt (line 5))
+  Downloading numpy-2.3.2-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+Collecting matplotlib>=3.7.0 (from -r requirements.txt (line 6))
+  Downloading matplotlib-3.10.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+Collecting seaborn>=0.12.0 (from -r requirements.txt (line 7))
+  Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting pandas>=2.0.0 (from -r requirements.txt (line 8))
+  Downloading pandas-2.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
+Collecting scipy>=1.10.0 (from -r requirements.txt (line 9))
+  Downloading scipy-1.16.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (61 kB)
+Collecting einops>=0.7.0 (from -r requirements.txt (line 10))
+  Downloading einops-0.8.1-py3-none-any.whl.metadata (13 kB)
+Collecting Pillow>=10.0.0 (from -r requirements.txt (line 11))
+  Downloading pillow-11.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.0 kB)
+Collecting tqdm>=4.65.0 (from -r requirements.txt (line 12))
+  Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+Collecting scikit-learn>=1.3.0 (from -r requirements.txt (line 13))
+  Downloading scikit_learn-1.7.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+Collecting filelock (from torch>=2.1.0->-r requirements.txt (line 2))
+  Downloading filelock-3.19.1-py3-none-any.whl.metadata (2.1 kB)
+Collecting typing-extensions>=4.10.0 (from torch>=2.1.0->-r requirements.txt (line 2))
+  Downloading typing_extensions-4.14.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting sympy>=1.13.3 (from torch>=2.1.0->-r requirements.txt (line 2))
+  Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Collecting networkx (from torch>=2.1.0->-r requirements.txt (line 2))
+  Downloading networkx-3.5-py3-none-any.whl.metadata (6.3 kB)
+Collecting jinja2 (from torch>=2.1.0->-r requirements.txt (line 2))
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting fsspec (from torch>=2.1.0->-r requirements.txt (line 2))
+  Downloading fsspec-2025.7.0-py3-none-any.whl.metadata (12 kB)
+Collecting nvidia-cuda-nvrtc-cu12==12.8.93 (from torch>=2.1.0->-r requirements.txt (line 2))
+  Downloading nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cuda-runtime-cu12==12.8.90 (from torch>=2.1.0->-r requirements.txt (line 2))
+  Downloading nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cuda-cupti-cu12==12.8.90 (from torch>=2.1.0->-r requirements.txt (line 2))
+  Downloading nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cudnn-cu12==9.10.2.21 (from torch>=2.1.0->-r requirements.txt (line 2))
+  Downloading nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cublas-cu12==12.8.4.1 (from torch>=2.1.0->-r requirements.txt (line 2))
+  Downloading nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cufft-cu12==11.3.3.83 (from torch>=2.1.0->-r requirements.txt (line 2))
+  Downloading nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-curand-cu12==10.3.9.90 (from torch>=2.1.0->-r requirements.txt (line 2))
+  Downloading nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cusolver-cu12==11.7.3.90 (from torch>=2.1.0->-r requirements.txt (line 2))
+  Downloading nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cusparse-cu12==12.5.8.93 (from torch>=2.1.0->-r requirements.txt (line 2))
+  Downloading nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cusparselt-cu12==0.7.1 (from torch>=2.1.0->-r requirements.txt (line 2))
+  Downloading nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl.metadata (7.0 kB)
+Collecting nvidia-nccl-cu12==2.27.3 (from torch>=2.1.0->-r requirements.txt (line 2))
+  Downloading nvidia_nccl_cu12-2.27.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.0 kB)
+Collecting nvidia-nvtx-cu12==12.8.90 (from torch>=2.1.0->-r requirements.txt (line 2))
+  Downloading nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-nvjitlink-cu12==12.8.93 (from torch>=2.1.0->-r requirements.txt (line 2))
+  Downloading nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cufile-cu12==1.13.1.3 (from torch>=2.1.0->-r requirements.txt (line 2))
+  Downloading nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting triton==3.4.0 (from torch>=2.1.0->-r requirements.txt (line 2))
+  Downloading triton-3.4.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (1.7 kB)
+Requirement already satisfied: setuptools>=40.8.0 in /home/runner/work/_tool/Python/3.11.13/x64/lib/python3.11/site-packages (from triton==3.4.0->torch>=2.1.0->-r requirements.txt (line 2)) (65.5.0)
+Collecting pyyaml (from timm>=0.9.0->-r requirements.txt (line 4))
+  Downloading PyYAML-6.0.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.1 kB)
+Collecting huggingface_hub (from timm>=0.9.0->-r requirements.txt (line 4))
+  Downloading huggingface_hub-0.34.4-py3-none-any.whl.metadata (14 kB)
+Collecting safetensors (from timm>=0.9.0->-r requirements.txt (line 4))
+  Downloading safetensors-0.6.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Collecting contourpy>=1.0.1 (from matplotlib>=3.7.0->-r requirements.txt (line 6))
+  Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib>=3.7.0->-r requirements.txt (line 6))
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib>=3.7.0->-r requirements.txt (line 6))
+  Downloading fonttools-4.59.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (108 kB)
+Collecting kiwisolver>=1.3.1 (from matplotlib>=3.7.0->-r requirements.txt (line 6))
+  Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+Collecting packaging>=20.0 (from matplotlib>=3.7.0->-r requirements.txt (line 6))
+  Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pyparsing>=2.3.1 (from matplotlib>=3.7.0->-r requirements.txt (line 6))
+  Downloading pyparsing-3.2.3-py3-none-any.whl.metadata (5.0 kB)
+Collecting python-dateutil>=2.7 (from matplotlib>=3.7.0->-r requirements.txt (line 6))
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz>=2020.1 (from pandas>=2.0.0->-r requirements.txt (line 8))
+  Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.7 (from pandas>=2.0.0->-r requirements.txt (line 8))
+  Downloading tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting joblib>=1.2.0 (from scikit-learn>=1.3.0->-r requirements.txt (line 13))
+  Downloading joblib-1.5.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting threadpoolctl>=3.1.0 (from scikit-learn>=1.3.0->-r requirements.txt (line 13))
+  Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib>=3.7.0->-r requirements.txt (line 6))
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch>=2.1.0->-r requirements.txt (line 2))
+  Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting requests (from huggingface_hub->timm>=0.9.0->-r requirements.txt (line 4))
+  Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+Collecting hf-xet<2.0.0,>=1.1.3 (from huggingface_hub->timm>=0.9.0->-r requirements.txt (line 4))
+  Downloading hf_xet-1.1.8-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (703 bytes)
+Collecting MarkupSafe>=2.0 (from jinja2->torch>=2.1.0->-r requirements.txt (line 2))
+  Downloading MarkupSafe-3.0.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.0 kB)
+Collecting charset_normalizer<4,>=2 (from requests->huggingface_hub->timm>=0.9.0->-r requirements.txt (line 4))
+  Downloading charset_normalizer-3.4.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (36 kB)
+Collecting idna<4,>=2.5 (from requests->huggingface_hub->timm>=0.9.0->-r requirements.txt (line 4))
+  Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+Collecting urllib3<3,>=1.21.1 (from requests->huggingface_hub->timm>=0.9.0->-r requirements.txt (line 4))
+  Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting certifi>=2017.4.17 (from requests->huggingface_hub->timm>=0.9.0->-r requirements.txt (line 4))
+  Downloading certifi-2025.8.3-py3-none-any.whl.metadata (2.4 kB)
+Downloading torch-2.8.0-cp311-cp311-manylinux_2_28_x86_64.whl (888.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 888.1/888.1 MB 36.8 MB/s  0:00:09
+Downloading nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl (594.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 594.3/594.3 MB 51.2 MB/s  0:00:06
+Downloading nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 10.3 MB/s  0:00:00
+Downloading nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (88.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.0/88.0 MB 174.0 MB/s  0:00:00
+Downloading nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (954 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 954.8/954.8 kB 113.8 MB/s  0:00:00
+Downloading nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl (706.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 706.8/706.8 MB 34.1 MB/s  0:00:09
+Downloading nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (193.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 193.1/193.1 MB 133.9 MB/s  0:00:01
+Downloading nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 122.2 MB/s  0:00:00
+Downloading nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl (63.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.6/63.6 MB 194.2 MB/s  0:00:00
+Downloading nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl (267.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 267.5/267.5 MB 107.9 MB/s  0:00:02
+Downloading nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (288.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 288.2/288.2 MB 113.6 MB/s  0:00:02
+Downloading nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl (287.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 287.2/287.2 MB 71.1 MB/s  0:00:03
+Downloading nvidia_nccl_cu12-2.27.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (322.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 322.4/322.4 MB 52.8 MB/s  0:00:05
+Downloading nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (39.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 39.3/39.3 MB 86.0 MB/s  0:00:00
+Downloading nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (89 kB)
+Downloading triton-3.4.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (155.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.5/155.5 MB 140.9 MB/s  0:00:01
+Downloading torchvision-0.23.0-cp311-cp311-manylinux_2_28_x86_64.whl (8.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.6/8.6 MB 196.2 MB/s  0:00:00
+Downloading timm-1.0.19-py3-none-any.whl (2.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 179.3 MB/s  0:00:00
+Downloading numpy-2.3.2-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 215.8 MB/s  0:00:00
+Downloading matplotlib-3.10.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 184.8 MB/s  0:00:00
+Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+Downloading pandas-2.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 176.0 MB/s  0:00:00
+Downloading scipy-1.16.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.4/35.4 MB 211.8 MB/s  0:00:00
+Downloading einops-0.8.1-py3-none-any.whl (64 kB)
+Downloading pillow-11.3.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 199.3 MB/s  0:00:00
+Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+Downloading scikit_learn-1.7.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.7/9.7 MB 183.5 MB/s  0:00:00
+Downloading contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.59.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 196.0 MB/s  0:00:00
+Downloading joblib-1.5.1-py3-none-any.whl (307 kB)
+Downloading kiwisolver-1.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 152.9 MB/s  0:00:00
+Downloading packaging-25.0-py3-none-any.whl (66 kB)
+Downloading pyparsing-3.2.3-py3-none-any.whl (111 kB)
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 193.9 MB/s  0:00:00
+Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 87.6 MB/s  0:00:00
+Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Downloading typing_extensions-4.14.1-py3-none-any.whl (43 kB)
+Downloading tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+Downloading filelock-3.19.1-py3-none-any.whl (15 kB)
+Downloading fsspec-2025.7.0-py3-none-any.whl (199 kB)
+Downloading huggingface_hub-0.34.4-py3-none-any.whl (561 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 561.5/561.5 kB 87.8 MB/s  0:00:00
+Downloading hf_xet-1.1.8-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 192.6 MB/s  0:00:00
+Downloading PyYAML-6.0.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (762 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 763.0/763.0 kB 118.1 MB/s  0:00:00
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading MarkupSafe-3.0.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (23 kB)
+Downloading networkx-3.5-py3-none-any.whl (2.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 186.7 MB/s  0:00:00
+Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+Downloading charset_normalizer-3.4.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (150 kB)
+Downloading idna-3.10-py3-none-any.whl (70 kB)
+Downloading urllib3-2.5.0-py3-none-any.whl (129 kB)
+Downloading certifi-2025.8.3-py3-none-any.whl (161 kB)
+Downloading safetensors-0.6.2-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (485 kB)
+Installing collected packages: pytz, nvidia-cusparselt-cu12, mpmath, urllib3, tzdata, typing-extensions, triton, tqdm, threadpoolctl, sympy, six, safetensors, pyyaml, pyparsing, Pillow, packaging, nvidia-nvtx-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufile-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, numpy, networkx, MarkupSafe, kiwisolver, joblib, idna, hf-xet, fsspec, fonttools, filelock, einops, cycler, charset_normalizer, certifi, scipy, requests, python-dateutil, nvidia-cusparse-cu12, nvidia-cufft-cu12, nvidia-cudnn-cu12, jinja2, contourpy, scikit-learn, pandas, nvidia-cusolver-cu12, matplotlib, huggingface_hub, torch, seaborn, torchvision, timm
+
+Successfully installed MarkupSafe-3.0.2 Pillow-11.3.0 certifi-2025.8.3 charset_normalizer-3.4.3 contourpy-1.3.3 cycler-0.12.1 einops-0.8.1 filelock-3.19.1 fonttools-4.59.1 fsspec-2025.7.0 hf-xet-1.1.8 huggingface_hub-0.34.4 idna-3.10 jinja2-3.1.6 joblib-1.5.1 kiwisolver-1.4.9 matplotlib-3.10.5 mpmath-1.3.0 networkx-3.5 numpy-2.3.2 nvidia-cublas-cu12-12.8.4.1 nvidia-cuda-cupti-cu12-12.8.90 nvidia-cuda-nvrtc-cu12-12.8.93 nvidia-cuda-runtime-cu12-12.8.90 nvidia-cudnn-cu12-9.10.2.21 nvidia-cufft-cu12-11.3.3.83 nvidia-cufile-cu12-1.13.1.3 nvidia-curand-cu12-10.3.9.90 nvidia-cusolver-cu12-11.7.3.90 nvidia-cusparse-cu12-12.5.8.93 nvidia-cusparselt-cu12-0.7.1 nvidia-nccl-cu12-2.27.3 nvidia-nvjitlink-cu12-12.8.93 nvidia-nvtx-cu12-12.8.90 packaging-25.0 pandas-2.3.2 pyparsing-3.2.3 python-dateutil-2.9.0.post0 pytz-2025.2 pyyaml-6.0.2 requests-2.32.5 safetensors-0.6.2 scikit-learn-1.7.1 scipy-1.16.1 seaborn-0.13.2 six-1.17.0 sympy-1.14.0 threadpoolctl-3.6.0 timm-1.0.19 torch-2.8.0 torchvision-0.23.0 tqdm-4.67.1 triton-3.4.0 typing-extensions-4.14.1 tzdata-2025.2 urllib3-2.5.0
+=== pip install end Fri Aug 22 06:54:30 UTC 2025 ===
+=== experiment start Fri Aug 22 06:54:30 UTC 2025 ===
+================================================================================
+DASH-HiLo-Anchor for SHViT Experimental Framework
+================================================================================
+Using device: cuda
+GPU: Tesla T4
+GPU Memory: 16.7 GB
+Configuration: {'image_size': 96, 'num_classes': 4, 'batch_size': 32, 'num_epochs': 20, 'learning_rate': 0.001, 'device': device(type='cuda'), 'save_dir': 'models', 'results_dir': '.research/iteration1/images'}
+
+Step 1: Data Preprocessing
+----------------------------------------
+Created datasets - Train: 2048, Val: 512, Test: 512
+
+Step 2: Model Training
+----------------------------------------
+Training Baseline SHViT...
+Training baseline model...
+Epoch 1: Train Acc: 91.60%, Val Acc: 86.72%
+Epoch 2: Train Acc: 99.22%, Val Acc: 97.46%
+Epoch 3: Train Acc: 99.27%, Val Acc: 95.51%
+Epoch 4: Train Acc: 99.76%, Val Acc: 90.23%
+Epoch 5: Train Acc: 100.00%, Val Acc: 95.31%
+Epoch 6: Train Acc: 99.56%, Val Acc: 83.20%
+Epoch 7: Train Acc: 97.31%, Val Acc: 91.21%
+Epoch 8: Train Acc: 100.00%, Val Acc: 98.44%
+Epoch 9: Train Acc: 99.95%, Val Acc: 99.02%
+Epoch 10: Train Acc: 99.51%, Val Acc: 85.94%
+Epoch 11: Train Acc: 100.00%, Val Acc: 93.95%
+Epoch 12: Train Acc: 100.00%, Val Acc: 92.77%
+Epoch 13: Train Acc: 99.95%, Val Acc: 99.41%
+Epoch 14: Train Acc: 100.00%, Val Acc: 90.23%
+Epoch 15: Train Acc: 100.00%, Val Acc: 94.73%
+Epoch 16: Train Acc: 100.00%, Val Acc: 92.97%
+Epoch 17: Train Acc: 100.00%, Val Acc: 95.51%
+Epoch 18: Train Acc: 99.95%, Val Acc: 94.92%
+Epoch 19: Train Acc: 100.00%, Val Acc: 93.95%
+Epoch 20: Train Acc: 100.00%, Val Acc: 92.77%
+Best validation accuracy: 99.41%
+Training DASH variant...
+Training dash model...
+Epoch 1: Train Acc: 82.23%, Val Acc: 92.19%
+Epoch 2: Train Acc: 96.68%, Val Acc: 90.62%
+Epoch 3: Train Acc: 97.31%, Val Acc: 88.67%
+Epoch 4: Train Acc: 97.46%, Val Acc: 95.90%
+Epoch 5: Train Acc: 97.66%, Val Acc: 86.52%
+Epoch 6: Train Acc: 98.19%, Val Acc: 98.24%
+Epoch 7: Train Acc: 99.27%, Val Acc: 39.45%
+Epoch 8: Train Acc: 99.32%, Val Acc: 61.72%
+Epoch 9: Train Acc: 98.88%, Val Acc: 98.63%
+Epoch 10: Train Acc: 99.90%, Val Acc: 96.88%
+Epoch 11: Train Acc: 99.66%, Val Acc: 99.02%
+Epoch 12: Train Acc: 99.90%, Val Acc: 97.46%
+Epoch 13: Train Acc: 99.95%, Val Acc: 98.05%
+Epoch 14: Train Acc: 99.71%, Val Acc: 99.61%
+Epoch 15: Train Acc: 100.00%, Val Acc: 98.44%
+Epoch 16: Train Acc: 99.95%, Val Acc: 98.83%
+Epoch 17: Train Acc: 99.95%, Val Acc: 97.85%
+Epoch 18: Train Acc: 99.95%, Val Acc: 98.44%
+Epoch 19: Train Acc: 99.95%, Val Acc: 96.68%
+Epoch 20: Train Acc: 99.95%, Val Acc: 96.88%
+Best validation accuracy: 99.61%
+Training HiLo variant...
+Training hilo model...
+Epoch 1: Train Acc: 88.62%, Val Acc: 42.77%
+Epoch 2: Train Acc: 97.80%, Val Acc: 66.41%
+Epoch 3: Train Acc: 98.88%, Val Acc: 60.55%
+Epoch 4: Train Acc: 98.97%, Val Acc: 70.31%
+Epoch 5: Train Acc: 99.07%, Val Acc: 61.72%
+Epoch 6: Train Acc: 99.76%, Val Acc: 73.83%
+Epoch 7: Train Acc: 100.00%, Val Acc: 62.11%
+Epoch 8: Train Acc: 100.00%, Val Acc: 94.73%
+Epoch 9: Train Acc: 99.76%, Val Acc: 92.97%
+Epoch 10: Train Acc: 99.41%, Val Acc: 31.05%
+Epoch 11: Train Acc: 100.00%, Val Acc: 87.89%
+Epoch 12: Train Acc: 99.95%, Val Acc: 95.51%
+Epoch 13: Train Acc: 100.00%, Val Acc: 93.36%
+Epoch 14: Train Acc: 100.00%, Val Acc: 92.38%
+Epoch 15: Train Acc: 100.00%, Val Acc: 94.14%
+Epoch 16: Train Acc: 100.00%, Val Acc: 94.34%
+Epoch 17: Train Acc: 100.00%, Val Acc: 96.09%
+Epoch 18: Train Acc: 100.00%, Val Acc: 92.19%
+Epoch 19: Train Acc: 100.00%, Val Acc: 93.16%
+Epoch 20: Train Acc: 100.00%, Val Acc: 91.80%
+Best validation accuracy: 96.09%
+Training Full DASH-HiLo-Anchor...
+Training full model...
+Epoch 1: Train Acc: 89.45%, Val Acc: 61.13%
+Epoch 2: Train Acc: 96.83%, Val Acc: 55.86%
+Epoch 3: Train Acc: 98.24%, Val Acc: 91.21%
+Epoch 4: Train Acc: 99.02%, Val Acc: 94.53%
+Epoch 5: Train Acc: 96.34%, Val Acc: 89.45%
+Epoch 6: Train Acc: 99.76%, Val Acc: 93.16%
+Epoch 7: Train Acc: 99.32%, Val Acc: 90.23%
+Epoch 8: Train Acc: 99.46%, Val Acc: 87.11%
+Epoch 9: Train Acc: 99.76%, Val Acc: 95.70%
+Epoch 10: Train Acc: 99.17%, Val Acc: 28.71%
+Epoch 11: Train Acc: 99.37%, Val Acc: 92.19%
+Epoch 12: Train Acc: 99.90%, Val Acc: 95.90%
+Epoch 13: Train Acc: 100.00%, Val Acc: 97.46%
+Epoch 14: Train Acc: 99.76%, Val Acc: 99.22%
+Epoch 15: Train Acc: 99.85%, Val Acc: 98.24%
+Epoch 16: Train Acc: 99.56%, Val Acc: 96.09%
+Epoch 17: Train Acc: 99.90%, Val Acc: 98.24%
+Epoch 18: Train Acc: 100.00%, Val Acc: 97.66%
+Epoch 19: Train Acc: 99.80%, Val Acc: 97.46%
+Epoch 20: Train Acc: 100.00%, Val Acc: 97.85%
+Best validation accuracy: 99.22%
+
+Step 3: Evaluation and Experiments
+----------------------------------------
+Running comprehensive experimental evaluation...
+============================================================
+
+Experiment 1: Pareto Analysis and Ablations
+----------------------------------------
+Evaluating baseline...
+  Accuracy: 100.00%
+  Parameters: 9,068,356
+  FLOPs: 18,136,712
+  Inference time: 3.95 ms
+Evaluating dash...
+  Accuracy: 91.80%
+  Parameters: 9,766,596
+  FLOPs: 19,533,192
+  Inference time: 12.54 ms
+Evaluating hilo...
+  Accuracy: 71.29%
+  Parameters: 9,068,356
+  FLOPs: 18,136,712
+  Inference time: 5.12 ms
+Evaluating full...
+  Accuracy: 99.02%
+  Parameters: 9,798,532
+  FLOPs: 19,597,064
+  Inference time: 13.95 ms
+Pareto analysis saved to: .research/iteration1/images/pareto_analysis.pdf
+Confusion matrix saved to: .research/iteration1/images/confusion_matrix_baseline.pdf
+Confusion matrix saved to: .research/iteration1/images/confusion_matrix_dash.pdf
+Confusion matrix saved to: .research/iteration1/images/confusion_matrix_hilo.pdf
+Confusion matrix saved to: .research/iteration1/images/confusion_matrix_full.pdf
+Training curves saved to: .research/iteration1/images/training_curves.pdf
+
+Experiment 2: Small Object Sensitivity
+----------------------------------------
+Running ShrinkPad analysis for baseline...
+  Shrink ratio 1.0: 100.00%
+  Shrink ratio 0.8: 41.02%
+  Shrink ratio 0.6: 41.80%
+  Shrink ratio 0.4: 30.08%
+  Shrink ratio 0.2: 29.30%
+Running ShrinkPad analysis for dash...
+  Shrink ratio 1.0: 100.00%
+  Shrink ratio 0.8: 25.78%
+  Shrink ratio 0.6: 25.39%
+  Shrink ratio 0.4: 25.39%
+  Shrink ratio 0.2: 25.39%
+Running ShrinkPad analysis for hilo...
+  Shrink ratio 1.0: 100.00%
+  Shrink ratio 0.8: 29.69%
+  Shrink ratio 0.6: 26.17%
+  Shrink ratio 0.4: 26.17%
+  Shrink ratio 0.2: 26.17%
+Running ShrinkPad analysis for full...
+  Shrink ratio 1.0: 100.00%
+  Shrink ratio 0.8: 20.70%
+  Shrink ratio 0.6: 20.70%
+  Shrink ratio 0.4: 20.70%
+  Shrink ratio 0.2: 20.70%
+ShrinkPad sensitivity curves saved to: .research/iteration1/images/shrinkpad_sensitivity.pdf
+
+Experiment 3: Portability and Robustness
+----------------------------------------
+Running portability tests...
+Testing baseline portability...
+Testing dash portability...
+Testing hilo portability...
+Testing full portability...
+Testing index stability...
+Testing index stability for dash...
+  Average Jaccard similarity: 1.000
+Portability results saved to: .research/iteration1/images/portability_results.json
+
+Experimental evaluation complete!
+============================================================
+Results saved to: .research/iteration1/images/experimental_results.json
+
+Step 4: Setting Status
+----------------------------------------
+Status set to 'stopped' and saved to: .research/iteration1/images/experiment_status.json
+
+================================================================================
+DASH-HiLo-Anchor Experimental Framework Complete!
+================================================================================
+All results and plots saved to: .research/iteration1/images
+Key findings:
+
+=== experiment end Fri Aug 22 06:59:41 UTC 2025 ===

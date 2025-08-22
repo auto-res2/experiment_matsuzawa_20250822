@@ -381,5 +381,6 @@
     "devin_url": "https://app.devin.ai/sessions/c70e64f6ff2a4ec689ed662cd76dce16"
   },
   "push_completion": true,
-  "experiment_iteration": 1
+  "experiment_iteration": 1,
+  "status_enum": "stopped"
 }

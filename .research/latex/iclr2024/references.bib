@@ -5,3 +5,382 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{author_year_scaling,
+ title = {Scaling Beyond the GPU Memory Limit for Large Mixture-of-Experts Model Training}
+}
+
+@article{author_year_toward,
+ title = {Toward Efficient Inference for Mixture of Experts}
+}
+
+@article{chen_2023_moe,
+ abstract = {Sparsely gated Mixture-of-Expert (MoE) has demonstrated its effectiveness in
+scaling up deep neural networks to an extreme scale. Despite that numerous
+efforts have been made to improve the performance of MoE from the model design
+or system optimization perspective, existing MoE dispatch patterns are still
+not able to fully exploit the underlying heterogeneous network environments. In
+this paper, we propose TA-MoE, a topology-aware routing strategy for
+large-scale MoE trainging, from a model-system co-design perspective, which can
+dynamically adjust the MoE dispatch pattern according to the network topology.
+Based on communication modeling, we abstract the dispatch problem into an
+optimization objective and obtain the approximate dispatch pattern under
+different topologies. On top of that, we design a topology-aware auxiliary
+loss, which can adaptively route the data to fit in the underlying topology
+without sacrificing the model accuracy. Experiments show that TA-MoE can
+substantially outperform its counterparts on various hardware and model
+configurations, with roughly 1.01x-1.61x, 1.01x-4.77x, 1.25x-1.54x improvements
+over the popular DeepSpeed-MoE, FastMoE and FasterMoE.},
+ arxiv_url = {https://arxiv.org/pdf/2302.09915v1.pdf},
+ author = {Chang Chen and Min Li and Zhihua Wu and Dianhai Yu and Chao Yang},
+ github_url = {https://github.com/Chen-Chang/TA-MoE},
+ title = {TA-MoE: Topology-Aware Large Scale Mixture-of-Expert Training},
+ year = {2023}
+}
+
+@article{chen_2023_moe,
+ abstract = {Sparsely gated Mixture-of-Expert (MoE) has demonstrated its effectiveness in
+scaling up deep neural networks to an extreme scale. Despite that numerous
+efforts have been made to improve the performance of MoE from the model design
+or system optimization perspective, existing MoE dispatch patterns are still
+not able to fully exploit the underlying heterogeneous network environments. In
+this paper, we propose TA-MoE, a topology-aware routing strategy for
+large-scale MoE trainging, from a model-system co-design perspective, which can
+dynamically adjust the MoE dispatch pattern according to the network topology.
+Based on communication modeling, we abstract the dispatch problem into an
+optimization objective and obtain the approximate dispatch pattern under
+different topologies. On top of that, we design a topology-aware auxiliary
+loss, which can adaptively route the data to fit in the underlying topology
+without sacrificing the model accuracy. Experiments show that TA-MoE can
+substantially outperform its counterparts on various hardware and model
+configurations, with roughly 1.01x-1.61x, 1.01x-4.77x, 1.25x-1.54x improvements
+over the popular DeepSpeed-MoE, FastMoE and FasterMoE.},
+ arxiv_url = {https://arxiv.org/pdf/2302.09915v1.pdf},
+ author = {Chang Chen and Min Li and Zhihua Wu and Dianhai Yu and Chao Yang},
+ github_url = {https://github.com/Chen-Chang/TA-MoE},
+ title = {TA-MoE: Topology-Aware Large Scale Mixture-of-Expert Training},
+ year = {2023}
+}
+
+@article{chen_2023_moe,
+ abstract = {Sparsely gated Mixture-of-Expert (MoE) has demonstrated its effectiveness in
+scaling up deep neural networks to an extreme scale. Despite that numerous
+efforts have been made to improve the performance of MoE from the model design
+or system optimization perspective, existing MoE dispatch patterns are still
+not able to fully exploit the underlying heterogeneous network environments. In
+this paper, we propose TA-MoE, a topology-aware routing strategy for
+large-scale MoE trainging, from a model-system co-design perspective, which can
+dynamically adjust the MoE dispatch pattern according to the network topology.
+Based on communication modeling, we abstract the dispatch problem into an
+optimization objective and obtain the approximate dispatch pattern under
+different topologies. On top of that, we design a topology-aware auxiliary
+loss, which can adaptively route the data to fit in the underlying topology
+without sacrificing the model accuracy. Experiments show that TA-MoE can
+substantially outperform its counterparts on various hardware and model
+configurations, with roughly 1.01x-1.61x, 1.01x-4.77x, 1.25x-1.54x improvements
+over the popular DeepSpeed-MoE, FastMoE and FasterMoE.},
+ arxiv_url = {https://arxiv.org/pdf/2302.09915v1.pdf},
+ author = {Chang Chen and Min Li and Zhihua Wu and Dianhai Yu and Chao Yang},
+ github_url = {https://github.com/Chen-Chang/TA-MoE},
+ title = {TA-MoE: Topology-Aware Large Scale Mixture-of-Expert Training},
+ year = {2023}
+}
+
+@article{chi_2022_the,
+ abstract = {Sparse mixture of experts provides larger model capacity while requiring a
+constant computational overhead. It employs the routing mechanism to distribute
+input tokens to the best-matched experts according to their hidden
+representations. However, learning such a routing mechanism encourages token
+clustering around expert centroids, implying a trend toward representation
+collapse. In this work, we propose to estimate the routing scores between
+tokens and experts on a low-dimensional hypersphere. We conduct extensive
+experiments on cross-lingual language model pre-training and fine-tuning on
+downstream tasks. Experimental results across seven multilingual benchmarks
+show that our method achieves consistent gains. We also present a comprehensive
+analysis on the representation and routing behaviors of our models. Our method
+alleviates the representation collapse issue and achieves more consistent
+routing than the baseline mixture-of-experts methods.},
+ arxiv_url = {https://arxiv.org/pdf/2204.09179v3.pdf},
+ author = {Zewen Chi and Li Dong and Shaohan Huang and Damai Dai and Shuming Ma and Barun Patra and Saksham Singhal and Payal Bajaj and Xia Song and Xian-Ling Mao and Heyan Huang and Furu Wei},
+ title = {On the Representation Collapse of Sparse Mixture of Experts},
+ year = {2022}
+}
+
+@article{hazimeh_2021_dselect,
+ abstract = {The Mixture-of-Experts (MoE) architecture is showing promising results in
+improving parameter sharing in multi-task learning (MTL) and in scaling
+high-capacity neural networks. State-of-the-art MoE models use a trainable
+sparse gate to select a subset of the experts for each input example. While
+conceptually appealing, existing sparse gates, such as Top-k, are not smooth.
+The lack of smoothness can lead to convergence and statistical performance
+issues when training with gradient-based methods. In this paper, we develop
+DSelect-k: a continuously differentiable and sparse gate for MoE, based on a
+novel binary encoding formulation. The gate can be trained using first-order
+methods, such as stochastic gradient descent, and offers explicit control over
+the number of experts to select. We demonstrate the effectiveness of DSelect-k
+on both synthetic and real MTL datasets with up to $128$ tasks. Our experiments
+indicate that DSelect-k can achieve statistically significant improvements in
+prediction and expert selection over popular MoE gates. Notably, on a
+real-world, large-scale recommender system, DSelect-k achieves over $22\%$
+improvement in predictive performance compared to Top-k. We provide an
+open-source implementation of DSelect-k.},
+ arxiv_url = {https://arxiv.org/pdf/2106.03760v3.pdf},
+ author = {Hussein Hazimeh and Zhe Zhao and Aakanksha Chowdhery and Maheswaran Sathiamoorthy and Yihua Chen and Rahul Mazumder and Lichan Hong and Ed H. Chi},
+ github_url = {https://github.com/google-research/google-research},
+ title = {DSelect-k: Differentiable Selection in the Mixture of Experts with Applications to Multi-Task Learning},
+ year = {2021}
+}
+
+@article{liu_2022_sparsity,
+ abstract = {Regularized optimal transport (OT) is now increasingly used as a loss or as a
+matching layer in neural networks. Entropy-regularized OT can be computed using
+the Sinkhorn algorithm but it leads to fully-dense transportation plans,
+meaning that all sources are (fractionally) matched with all targets. To
+address this issue, several works have investigated quadratic regularization
+instead. This regularization preserves sparsity and leads to unconstrained and
+smooth (semi) dual objectives, that can be solved with off-the-shelf gradient
+methods. Unfortunately, quadratic regularization does not give direct control
+over the cardinality (number of nonzeros) of the transportation plan. We
+propose in this paper a new approach for OT with explicit cardinality
+constraints on the transportation plan. Our work is motivated by an application
+to sparse mixture of experts, where OT can be used to match input tokens such
+as image patches with expert models such as neural networks. Cardinality
+constraints ensure that at most $k$ tokens are matched with an expert, which is
+crucial for computational performance reasons. Despite the nonconvexity of
+cardinality constraints, we show that the corresponding (semi) dual problems
+are tractable and can be solved with first-order gradient methods. Our method
+can be thought as a middle ground between unregularized OT (recovered in the
+limit case $k=1$) and quadratically-regularized OT (recovered when $k$ is large
+enough). The smoothness of the objectives increases as $k$ increases, giving
+rise to a trade-off between convergence speed and sparsity of the optimal plan.},
+ arxiv_url = {https://arxiv.org/pdf/2209.15466v2.pdf},
+ author = {Tianlin Liu and Joan Puigcerver and Mathieu Blondel},
+ title = {Sparsity-Constrained Optimal Transport},
+ year = {2022}
+}
+
+@article{liu_2022_sparsity,
+ abstract = {Regularized optimal transport (OT) is now increasingly used as a loss or as a
+matching layer in neural networks. Entropy-regularized OT can be computed using
+the Sinkhorn algorithm but it leads to fully-dense transportation plans,
+meaning that all sources are (fractionally) matched with all targets. To
+address this issue, several works have investigated quadratic regularization
+instead. This regularization preserves sparsity and leads to unconstrained and
+smooth (semi) dual objectives, that can be solved with off-the-shelf gradient
+methods. Unfortunately, quadratic regularization does not give direct control
+over the cardinality (number of nonzeros) of the transportation plan. We
+propose in this paper a new approach for OT with explicit cardinality
+constraints on the transportation plan. Our work is motivated by an application
+to sparse mixture of experts, where OT can be used to match input tokens such
+as image patches with expert models such as neural networks. Cardinality
+constraints ensure that at most $k$ tokens are matched with an expert, which is
+crucial for computational performance reasons. Despite the nonconvexity of
+cardinality constraints, we show that the corresponding (semi) dual problems
+are tractable and can be solved with first-order gradient methods. Our method
+can be thought as a middle ground between unregularized OT (recovered in the
+limit case $k=1$) and quadratically-regularized OT (recovered when $k$ is large
+enough). The smoothness of the objectives increases as $k$ increases, giving
+rise to a trade-off between convergence speed and sparsity of the optimal plan.},
+ arxiv_url = {https://arxiv.org/pdf/2209.15466v2.pdf},
+ author = {Tianlin Liu and Joan Puigcerver and Mathieu Blondel},
+ title = {Sparsity-Constrained Optimal Transport},
+ year = {2022}
+}
+
+@article{rajbhandari_2022_deepspeed,
+ abstract = {As the training of giant dense models hits the boundary on the availability
+and capability of the hardware resources today, Mixture-of-Experts (MoE) models
+become one of the most promising model architectures due to their significant
+training cost reduction compared to a quality-equivalent dense model. Its
+training cost saving is demonstrated from encoder-decoder models (prior works)
+to a 5x saving for auto-aggressive language models (this work along with
+parallel explorations). However, due to the much larger model size and unique
+architecture, how to provide fast MoE model inference remains challenging and
+unsolved, limiting its practical usage. To tackle this, we present
+DeepSpeed-MoE, an end-to-end MoE training and inference solution as part of the
+DeepSpeed library, including novel MoE architecture designs and model
+compression techniques that reduce MoE model size by up to 3.7x, and a highly
+optimized inference system that provides 7.3x better latency and cost compared
+to existing MoE inference solutions. DeepSpeed-MoE offers an unprecedented
+scale and efficiency to serve massive MoE models with up to 4.5x faster and 9x
+cheaper inference compared to quality-equivalent dense models. We hope our
+innovations and systems help open a promising path to new directions in the
+large model landscape, a shift from dense to sparse MoE models, where training
+and deploying higher-quality models with fewer resources becomes more widely
+possible.},
+ arxiv_url = {https://arxiv.org/pdf/2201.05596v2.pdf},
+ author = {Samyam Rajbhandari and Conglong Li and Zhewei Yao and Minjia Zhang and Reza Yazdani Aminabadi and Ammar Ahmad Awan and Jeff Rasley and Yuxiong He},
+ github_url = {https://github.com/microsoft/DeepSpeed},
+ title = {DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale},
+ year = {2022}
+}
+
+@article{xue_2024_openmoe,
+ abstract = {To help the open-source community have a better understanding of
+Mixture-of-Experts (MoE) based large language models (LLMs), we train and
+release OpenMoE, a series of fully open-sourced and reproducible decoder-only
+MoE LLMs, ranging from 650M to 34B parameters and trained on up to over 1T
+tokens. Our investigation confirms that MoE-based LLMs can offer a more
+favorable cost-effectiveness trade-off than dense LLMs, highlighting the
+potential effectiveness for future LLM development.
+  One more important contribution of this study is an in-depth analysis of the
+routing mechanisms within our OpenMoE models, leading to three significant
+findings: Context-Independent Specialization, Early Routing Learning, and
+Drop-towards-the-End. We discovered that routing decisions in MoE models are
+predominantly based on token IDs, with minimal context relevance. The
+token-to-expert assignments are determined early in the pre-training phase and
+remain largely unchanged. This imperfect routing can result in performance
+degradation, particularly in sequential tasks like multi-turn conversations,
+where tokens appearing later in a sequence are more likely to be dropped.
+Finally, we rethink our design based on the above-mentioned observations and
+analysis. To facilitate future MoE LLM development, we propose potential
+strategies for mitigating the issues we found and further improving
+off-the-shelf MoE LLM designs.},
+ arxiv_url = {https://arxiv.org/pdf/2402.01739v2.pdf},
+ author = {Fuzhao Xue and Zian Zheng and Yao Fu and Jinjie Ni and Zangwei Zheng and Wangchunshu Zhou and Yang You},
+ github_url = {https://github.com/pjlab-sys4nlp/llama-moe},
+ title = {OpenMoE: An Early Effort on Open Mixture-of-Experts Language Models},
+ year = {2024}
+}
+
+@article{xue_2024_openmoe,
+ abstract = {To help the open-source community have a better understanding of
+Mixture-of-Experts (MoE) based large language models (LLMs), we train and
+release OpenMoE, a series of fully open-sourced and reproducible decoder-only
+MoE LLMs, ranging from 650M to 34B parameters and trained on up to over 1T
+tokens. Our investigation confirms that MoE-based LLMs can offer a more
+favorable cost-effectiveness trade-off than dense LLMs, highlighting the
+potential effectiveness for future LLM development.
+  One more important contribution of this study is an in-depth analysis of the
+routing mechanisms within our OpenMoE models, leading to three significant
+findings: Context-Independent Specialization, Early Routing Learning, and
+Drop-towards-the-End. We discovered that routing decisions in MoE models are
+predominantly based on token IDs, with minimal context relevance. The
+token-to-expert assignments are determined early in the pre-training phase and
+remain largely unchanged. This imperfect routing can result in performance
+degradation, particularly in sequential tasks like multi-turn conversations,
+where tokens appearing later in a sequence are more likely to be dropped.
+Finally, we rethink our design based on the above-mentioned observations and
+analysis. To facilitate future MoE LLM development, we propose potential
+strategies for mitigating the issues we found and further improving
+off-the-shelf MoE LLM designs.},
+ arxiv_url = {https://arxiv.org/pdf/2402.01739v2.pdf},
+ author = {Fuzhao Xue and Zian Zheng and Yao Fu and Jinjie Ni and Zangwei Zheng and Wangchunshu Zhou and Yang You},
+ github_url = {https://github.com/pjlab-sys4nlp/llama-moe},
+ title = {OpenMoE: An Early Effort on Open Mixture-of-Experts Language Models},
+ year = {2024}
+}
+
+@article{zhao_2020_neural,
+ abstract = {Recently, Neural Topic Models (NTMs) inspired by variational autoencoders
+have obtained increasingly research interest due to their promising results on
+text analysis. However, it is usually hard for existing NTMs to achieve good
+document representation and coherent/diverse topics at the same time. Moreover,
+they often degrade their performance severely on short documents. The
+requirement of reparameterisation could also comprise their training quality
+and model flexibility. To address these shortcomings, we present a new neural
+topic model via the theory of optimal transport (OT). Specifically, we propose
+to learn the topic distribution of a document by directly minimising its OT
+distance to the document's word distributions. Importantly, the cost matrix of
+the OT distance models the weights between topics and words, which is
+constructed by the distances between topics and words in an embedding space.
+Our proposed model can be trained efficiently with a differentiable loss.
+Extensive experiments show that our framework significantly outperforms the
+state-of-the-art NTMs on discovering more coherent and diverse topics and
+deriving better document representations for both regular and short texts.},
+ arxiv_url = {https://arxiv.org/pdf/2008.13537v3.pdf},
+ author = {He Zhao and Dinh Phung and Viet Huynh and Trung Le and Wray Buntine},
+ title = {Neural Topic Model via Optimal Transport},
+ year = {2020}
+}
+
+@article{zhou_2022_mixture,
+ abstract = {Sparsely-activated Mixture-of-experts (MoE) models allow the number of
+parameters to greatly increase while keeping the amount of computation for a
+given token or a given sample unchanged. However, a poor expert routing
+strategy (e.g. one resulting in load imbalance) can cause certain experts to be
+under-trained, leading to an expert being under or over-specialized. Prior work
+allocates a fixed number of experts to each token using a top-k function
+regardless of the relative importance of different tokens. To address this, we
+propose a heterogeneous mixture-of-experts employing an expert choice method.
+Instead of letting tokens select the top-k experts, we have experts selecting
+the top-k tokens. As a result, each token can be routed to a variable number of
+experts and each expert can have a fixed bucket size. We systematically study
+pre-training speedups using the same computational resources of the Switch
+Transformer top-1 and GShard top-2 gating of prior work and find that our
+method improves training convergence time by more than 2x. For the same
+computational cost, our method demonstrates higher performance in fine-tuning
+11 selected tasks in the GLUE and SuperGLUE benchmarks. For a smaller
+activation cost, our method outperforms the T5 dense model in 7 out of the 11
+tasks.},
+ arxiv_url = {https://arxiv.org/pdf/2202.09368v2.pdf},
+ author = {Yanqi Zhou and Tao Lei and Hanxiao Liu and Nan Du and Yanping Huang and Vincent Zhao and Andrew Dai and Zhifeng Chen and Quoc Le and James Laudon},
+ title = {Mixture-of-Experts with Expert Choice Routing},
+ year = {2022}
+}
+
+@article{zhou_2022_mixture,
+ abstract = {Sparsely-activated Mixture-of-experts (MoE) models allow the number of
+parameters to greatly increase while keeping the amount of computation for a
+given token or a given sample unchanged. However, a poor expert routing
+strategy (e.g. one resulting in load imbalance) can cause certain experts to be
+under-trained, leading to an expert being under or over-specialized. Prior work
+allocates a fixed number of experts to each token using a top-k function
+regardless of the relative importance of different tokens. To address this, we
+propose a heterogeneous mixture-of-experts employing an expert choice method.
+Instead of letting tokens select the top-k experts, we have experts selecting
+the top-k tokens. As a result, each token can be routed to a variable number of
+experts and each expert can have a fixed bucket size. We systematically study
+pre-training speedups using the same computational resources of the Switch
+Transformer top-1 and GShard top-2 gating of prior work and find that our
+method improves training convergence time by more than 2x. For the same
+computational cost, our method demonstrates higher performance in fine-tuning
+11 selected tasks in the GLUE and SuperGLUE benchmarks. For a smaller
+activation cost, our method outperforms the T5 dense model in 7 out of the 11
+tasks.},
+ arxiv_url = {https://arxiv.org/pdf/2202.09368v2.pdf},
+ author = {Yanqi Zhou and Tao Lei and Hanxiao Liu and Nan Du and Yanping Huang and Vincent Zhao and Andrew Dai and Zhifeng Chen and Quoc Le and James Laudon},
+ title = {Mixture-of-Experts with Expert Choice Routing},
+ year = {2022}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{brown_2020_language,
+ abstract = {Recent work has demonstrated substantial gains on many NLP tasks and
+benchmarks by pre-training on a large corpus of text followed by fine-tuning on
+a specific task. While typically task-agnostic in architecture, this method
+still requires task-specific fine-tuning datasets of thousands or tens of
+thousands of examples. By contrast, humans can generally perform a new language
+task from only a few examples or from simple instructions - something which
+current NLP systems still largely struggle to do. Here we show that scaling up
+language models greatly improves task-agnostic, few-shot performance, sometimes
+even reaching competitiveness with prior state-of-the-art fine-tuning
+approaches. Specifically, we train GPT-3, an autoregressive language model with
+175 billion parameters, 10x more than any previous non-sparse language model,
+and test its performance in the few-shot setting. For all tasks, GPT-3 is
+applied without any gradient updates or fine-tuning, with tasks and few-shot
+demonstrations specified purely via text interaction with the model. GPT-3
+achieves strong performance on many NLP datasets, including translation,
+question-answering, and cloze tasks, as well as several tasks that require
+on-the-fly reasoning or domain adaptation, such as unscrambling words, using a
+novel word in a sentence, or performing 3-digit arithmetic. At the same time,
+we also identify some datasets where GPT-3's few-shot learning still struggles,
+as well as some datasets where GPT-3 faces methodological issues related to
+training on large web corpora. Finally, we find that GPT-3 can generate samples
+of news articles which human evaluators have difficulty distinguishing from
+articles written by humans. We discuss broader societal impacts of this finding
+and of GPT-3 in general.},
+ arxiv_url = {https://arxiv.org/pdf/2005.14165v4.pdf},
+ author = {Tom B. Brown and Benjamin Mann and Nick Ryder and Melanie Subbiah and Jared Kaplan and Prafulla Dhariwal and Arvind Neelakantan and Pranav Shyam and Girish Sastry and Amanda Askell and Sandhini Agarwal and Ariel Herbert-Voss and Gretchen Krueger and Tom Henighan and Rewon Child and Aditya Ramesh and Daniel M. Ziegler and Jeffrey Wu and Clemens Winter and Christopher Hesse and Mark Chen and Eric Sigler and Mateusz Litwin and Scott Gray and Benjamin Chess and Jack Clark and Christopher Berner and Sam McCandlish and Alec Radford and Ilya Sutskever and Dario Amodei},
+ title = {Language models are few-shot learners.},
+ year = {2020}
+}

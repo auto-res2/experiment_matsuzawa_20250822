@@ -1,0 +1,30 @@
+seed: 42
+
+model:
+  d_model: 64
+  n_heads: 4
+
+data:
+  n_classes: 3
+  n_train: 200
+  n_val: 80
+  n_test: 200
+  text_len_range: [24, 64]
+  img_len_range: [32, 96]
+  dataset_json: qshift_dataset_v1.json
+
+train:
+  pretrain_epochs: 2
+  pretrain_lr: 0.002
+
+oracle:
+  hidden: 64
+  n_tuples: 120
+  lr: 0.005
+  steps: 400
+
+planner:
+  lr: 0.001
+  epochs: 3
+  budgets_ms: [2.5, 2.0, 1.6, 1.3]
+  lambda_budget: 1.0

@@ -1,0 +1,268 @@
+\PassOptionsToPackage{numbers}{natbib}
+\documentclass{article} % For LaTeX2e
+\usepackage{iclr2024_conference,times}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{titletoc}
+
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{cleveref}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{array}
+\usepackage{tabularx}
+\pgfplotsset{compat=newest}
+
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\graphicspath{{../}} % To reference your generated figures, see below.
+
+\title{RQ-Stream: Causal Time-Chunked Routing for Streaming Mixture-of-Experts}
+
+\author{AIRAS}
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We study routing for Mixture-of-Experts (MoE) under autoregressive, long-context streaming, where token-level top-k gating is context-insensitive, learns early-fixed assignments, and increases drops toward sequence ends; moreover, token-granular All-to-All makes communication highly fragmented, inflating tail latency \cite{xue_2024_openmoe}. Transport and topology advances help but do not provide causal, time-aware mechanisms to jointly reduce fragmentation and drops [rajbhandari_2022_deepspeed, chen_2023_moe, hazimeh_2021_dselect, liu_2022_sparsity, zhou_2022_mixture, author_year_toward]. We propose RQ-Stream, an online router for MoE with state-space backbones that: (i) forms low-dimensional, state-quantized routing codes from token features and SSM states, stabilized with TTL/HMM priors; (ii) gates within a compact code-conditioned shortlist to cut gate FLOPs; and (iii) predicts next-window code demand with a causal Router-SSM to pre-allocate per-expert capacity, using queue-and-shift and local fallback to minimize drops. Codes act as chunking keys that coarsen All-to-All messaging. In a synthetic streaming microbenchmark, RQ-Stream reduces message count by 2.07×, grows average message size by 2.19×, and lowers latency by 48.2%, while decreasing route-switch frequency. A tiny end-to-end LM attains perplexity parity with a standard top-2 gate. A capacity-scheduling study shows the predictor learns bursty demand but achieves limited overflow reduction in this iteration due to uniform capacity assignment in the simulator. The design integrates with PyTorch MoE stacks and is complementary to topology- and transport-level optimizations [rajbhandari_2022_deepspeed, chen_2023_moe, author_year_scaling].
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+Sparse Mixture-of-Experts (MoE) makes it possible to scale parameters while keeping per-token compute approximately constant, enabling large capacity at manageable cost \cite{author_year_scaling}. However, when MoE is deployed for autoregressive, long-context streaming, failures in routing become the dominant bottleneck. Empirically, token-level top-k gates often specialize on token identity, become insensitive to context early in training, and induce drop-towards-the-end during sequential generation \cite{xue_2024_openmoe}. At the systems layer, dispatching one token at a time fragments All-to-All into many small messages, amplifying per-message overhead and hurting tail latency. While optimized transport and topology-aware routing improve utilization and reduce communication cost, they do not provide the router with causal awareness of temporal demand or a mechanism to aggregate tokens into time-coherent chunks [rajbhandari_2022_deepspeed, chen_2023_moe, author_year_toward].
+
+We target streaming, low-batch inference where the router must act online under causality and respect per-window capacities. Approaches such as expert-choice routing \cite{zhou_2022_mixture}, differentiable sparse selection \cite{hazimeh_2021_dselect}, or optimal-transport-based dispatch \cite{liu_2022_sparsity} offer alternative control knobs for load or smooth optimization, yet they either introduce noncausal or heavier global computation that is mismatched to low-latency streaming, or they do not directly address token-level communication fragmentation. Additionally, sparse MoE training can encourage clustering around expert centroids, risking representation collapse and unstable routing; this motivates routing in a low-dimensional, normalized space decoupled from the main representations \cite{chi_2022_the}.
+
+We introduce RQ-Stream, a causal router designed for MoE layers with state-space backbones. The key idea is to use the SSM carry state to cheaply encode recent temporal context and quantize it into short-horizon stable, discrete routing codes. These codes serve a dual purpose: they drive code-conditioned shortlist gating that reduces gate FLOPs and they act as chunking keys that group tokens into coarser messages for All-to-All within a window. A lightweight Router-SSM forecasts the next-window distribution of codes, enabling proactive, causal capacity scheduling with slack. A queue-and-shift policy and a local fallback ensure that transient overflows do not translate into drops.
+
+Concretely, the router computes a low-dimensional vector \(z_t\) by projecting the token hidden state and the SSM state, L2-normalizes them, and sums the results. A residual vector-quantization module (small codebooks, EMA updates, straight-through gradients) produces a discrete code \(c_t\) per token. To stabilize runs, we apply TTL smoothing and optionally an HMM-style prior encouraging self-transitions. Each code indexes a small shortlist of \(r\) experts; only these candidates are scored using low-dimensional prototypes, and top-1 or top-2 experts are selected. A bandit-style update (optional) adapts the code-to-shortlist mapping using latency, bandwidth, and drop feedback. The Router-SSM consumes recent code sequences or histograms to predict the next-window code histogram, which is mapped to per-expert demand to assign capacities with slack. During execution, tokens are grouped by (code × selected expert) and transmitted in thresholded chunks; excess demand is rerouted to the secondary shortlist member or served by a local fallback.
+
+We validate RQ-Stream with three experiments. A streaming microbenchmark shows that state-quantized codes plus shortlist gating and window grouping substantially reduce message fragmentation and end-to-end latency and lower route-switch frequency. A tiny end-to-end LM on synthetic streaming text achieves perplexity parity with a conventional top-2 gate at comparable compute. A capacity-scheduling study isolates the Router-SSM predictor; it learns bursty patterns and yields a small overflow reduction in this iteration because the simulator still assigns uniform per-expert capacities, leaving the predictive signal underutilized.
+
+\begin{itemize}
+\item \textbf{Causal routing with state codes:} A framework that converts token and SSM state into short-horizon stable routing codes, enabling time-chunked dispatch without noncausal global solves.
+\item \textbf{Shortlist gating:} Code-conditioned shortlist gating that reduces gating complexity from \(\mathcal{O}(E)\) to \(\mathcal{O}(r)\), provides topology-friendly constraints, and stabilizes routing.
+\item \textbf{Predictive scheduling:} Causal capacity scheduling with a lightweight Router-SSM, slack adaptation, and queue-and-shift plus fallback to mitigate tail drops.
+\item \textbf{Open tooling:} An open simulator and integration skeleton that measure fragmentation, latency, route-switch frequency, forecast MAE, and enforce per-expert window capacities in a streaming setting.
+\item \textbf{Empirical gains:} Evidence of 2.07× fewer messages, 2.19× larger average message size, and 48.2% lower latency, with perplexity parity on a tiny LM.
+\end{itemize}
+
+This work complements system-level advances such as DeepSpeed-MoE \cite{rajbhandari_2022_deepspeed} and topology-aware routing \cite{chen_2023_moe} by operating one level above the transport to coarsen message granularity and reduce message count before the All-to-All primitive. It aligns with concerns about routing stability and representation collapse \cite{chi_2022_the} while avoiding noncausal or heavy optimization used by differentiable selection or OT-based routing [hazimeh_2021_dselect, liu_2022_sparsity]. Future work includes fully wiring non-uniform capacities derived from Router-SSM forecasts, enabling topology-adaptive shortlist bandits, and validating on multi-node clusters and long-context tasks \cite{author_year_toward}.
+
+\section{Related Work}
+\label{sec:related}
+Routing pathologies in MoE. OpenMoE documents that standard token-level top-k gating becomes context-insensitive, learns early-fixed routing patterns, and increases drop rates toward sequence ends, all of which degrade sequential performance \cite{xue_2024_openmoe}. Our method addresses these issues by using the SSM state to encode temporal context and by stabilizing routing through vector quantization and TTL/HMM priors, thereby forming short-horizon code runs that are better aligned with streaming.
+
+Topology- and transport-aware systems. TA-MoE models hardware heterogeneity and adds topology-aware auxiliary losses to adapt dispatch patterns to network structure \cite{chen_2023_moe}. DeepSpeed-MoE provides highly optimized training and inference pipelines and communication primitives for large MoE models \cite{rajbhandari_2022_deepspeed}. Both are system-level or topology-level interventions. RQ-Stream is complementary: instead of focusing on transport or static topology adaptation, it reduces the number of messages and increases their granularity by time-chunking via routing codes and by proactive capacity scheduling, ultimately improving communication before it reaches the All-to-All layer [author_year_toward].
+
+Alternative gating formulations. Expert-choice routing flips selection so that experts choose tokens, enforcing fixed buckets and often improving load balance \cite{zhou_2022_mixture}. However, in streaming settings, dispatch remains at token granularity and does not inherently reduce communication fragmentation. DSelect-k provides a differentiable sparse gate that controls the number of selected experts \cite{hazimeh_2021_dselect}, and sparsity-constrained OT formulates dispatch as a cardinality-constrained transport problem with smooth duals \cite{liu_2022_sparsity}. These methods offer elegant optimization views but are less aligned with strict causality and low-batch latency constraints, as they often require global solves or dense computations that add overhead during streaming. RQ-Stream replaces them with a discrete, causally predicted code, shortlist gating in \(\mathcal{O}(r)\), and window-level chunking that directly attacks fragmentation.
+
+Representation stability. Sparse MoE can induce representation clustering and collapse near expert prototypes, harming stability; normalizing a low-dimensional routing space alleviates this problem \cite{chi_2022_the}. We follow this guidance by computing \(z_t\) in a normalized, low-dimensional space and containing instability within the router via vector quantization and auxiliary regularizers, thereby preserving the capacity of the main model while making routing robust.
+
+Discussion and contrast. Prior work addresses either topology/transport, load balance, or training stability. RQ-Stream differs in coupling a causal, state-conditioned discrete code with predictive capacity scheduling and explicit time-chunked communication. Where methods are applicable to streaming small-batch settings, we compare qualitatively; quantitative comparisons focus on our simulator baselines due to scope and the absence of noncausal global solvers in our setting [rajbhandari_2022_deepspeed, chen_2023_moe, zhou_2022_mixture, hazimeh_2021_dselect, liu_2022_sparsity, chi_2022_the, xue_2024_openmoe, author_year_scaling, author_year_toward].
+
+\section{Background}
+\label{sec:background}
+Problem setting. We consider an autoregressive streaming decoder with MoE feed-forward sublayers. At time \(t\), the model exposes a token representation \(h_t\) (dimension \(d\_{\text{model}}\)) and a state-space carry state \(s_t\) (dimension \(d\_{\text{state}}\)). A router selects up to \(k\) experts from \(E\) total experts subject to per-window capacity constraints. The system executes All-to-All to dispatch tokens to experts across devices. In streaming, decisions must be causal, operating on tokens as they arrive without future peeking or noncausal global optimization \cite{author_year_toward}.
+
+System pathologies. Two bottlenecks dominate. First, token-level dispatch fragments communication into many small messages, suffering high per-message overhead and poor p95 latency. Second, fixed per-expert capacities without anticipation cause overflows near sequence ends; under bursty demand this leads to drops or forced fallbacks. These effects have been linked to context-insensitive and early-fixed routing that ignores temporal structure \cite{xue_2024_openmoe}. Transport-layer optimizations reduce costs but cannot, alone, recover temporal coherence in routing \cite{rajbhandari_2022_deepspeed}.
+
+Metrics. We monitor: fragmentation (messages per token within a window), message counts and size distributions, end-to-end latency modeled as the sum over messages of a per-message overhead plus a per-token communication and compute cost, drop and fallback rates under capacity constraints, route-switch frequency per 100 tokens as a stability proxy, and queue overflow relative to assigned capacities.
+
+Causality constraints. All routing and scheduling must be driven by observed history. This rules out noncausal, global balancing solves commonly used during large-batch training and motivates lightweight, online predictors suitable for streaming windows [hazimeh_2021_dselect, liu_2022_sparsity].
+
+Notation. \(E\) is the number of experts; \(k \in \{1,2\}\) is the number of selected experts; \(r\) is the shortlist size with \(r \ll E\); \(K\) is the codebook size. The router computes a low-dimensional \(z_t \in \mathbb{R}^{d_r}\) where \(d_r\) is small (32-64). A vector quantizer maps \(z_t\) to a discrete code \(c_t \in \{1,\dots,K\}\). A mapping \(T \in \mathbb{R}^{K\times r}\) assigns to each code a shortlist of \(r\) experts. A Router-SSM predicts the next-window code histogram \(\hat{h}\), which is mapped to per-expert capacities \(\{C_e\}\).
+
+Foundations. Our design responds to evidence of context-insensitive routing and end-of-sequence drops \cite{xue_2024_openmoe}, recognizes the role of communication and capacity in MoE systems \cite{rajbhandari_2022_deepspeed}, and borrows the insight that low-dimensional, normalized routing spaces help avoid collapse \cite{chi_2022_the}. We contrast with expert-choice \cite{zhou_2022_mixture}, differentiable gates \cite{hazimeh_2021_dselect}, and OT-based dispatch \cite{liu_2022_sparsity}, which are less compatible with strict causality and low-latency streaming. Assumptions include access to an SSM state that summarizes recent context and a practical window size \(W\) within which both capacity scheduling and code×expert grouping can be performed online \cite{author_year_scaling}.
+
+\section{Method}
+\label{sec:method}
+\subsection{State-quantized routing codes}
+We embed temporal context by combining token and SSM state into a compact representation that is discretized and stabilized over short horizons.
+
+Low-dimensional routing space: compute \(z_t = \mathrm{norm}(P h_t) + \mathrm{norm}(Q s_t) \in \mathbb{R}^{d_r}\), where \(P\) and \(Q\) are learned projections and \(\mathrm{norm}(\cdot)\) denotes L2-normalization. Normalization whitens scale and localizes routing instability away from the main model \cite{chi_2022_the}.
+
+Residual vector quantization: apply one or more small EMA-updated codebooks (\(K=64\)-128 per level). In our demonstration we use a single-level VQ-EMA with straight-through gradients to produce a discrete code \(c_t\). Auxiliary losses include a commitment penalty, a diversity term encouraging high code perplexity, a short-horizon consistency penalty discouraging frequent code flips, and a load-balance regularizer.
+
+Temporal stabilization: TTL smoothing maintains the current code unless sufficient evidence persists, thereby controlling run-lengths; an optional HMM-style prior favors self-transitions. These mechanisms form runs that can be treated as communication chunks.
+
+\subsection{Code-to-expert shortlist gating}
+Each code \(c_t\) indexes a small candidate set of experts; routing chooses from this shortlist only.
+
+Mapping \(T\): a \(K\times r\) matrix assigns \(r\) experts to each code. Initialization can incorporate mild topology bias (e.g., same node or nearby link). An online bandit update (optional) refines \(T\) using latency, bandwidth, and drop rate as rewards, with a small quality term, and updates only at TTL boundaries to prevent flapping.
+
+Lightweight scoring: each expert \(e\) has a low-dimensional prototype \(p_e \in \mathbb{R}^{d_r}\). The router scores only candidates \(\mathrm{cand} = T[c_t]\) via inner products \(p_e^{\top} z_t\) and selects top-1 or top-2 within this shortlist, reducing scoring complexity from \(\mathcal{O}(E)\) to \(\mathcal{O}(r)\).
+
+\subsection{Causal capacity scheduling}
+We proactively assign per-expert window capacities using causal forecasts and reactively handle residual bursts.
+
+Router-SSM: a small causal model ingests recent code sequences or histograms over the last few windows and predicts the next-window code histogram \(\hat{h}\) using teacher forcing with scheduled sampling.
+
+Capacity assignment: map \(\hat{h}\) through \(T\) to a per-expert demand estimate and broadcast per-expert capacities \(C_e\) with slack \(\sigma\) (e.g., 5-10\%). At runtime, queue-and-shift reroutes overflow to the secondary shortlist expert. As a last resort, a local small FFN fallback minimizes drops.
+
+Error adaptation: adjust slack \(\sigma\) via an EWMA of forecast error; increase \(\sigma\) when underestimation is detected, and cap within a small range for stability.
+
+\subsection{Communication chunking and prefetch}
+Within each window, group tokens by the pair (code, chosen expert) and transmit run-length encoded chunks. Use thresholded emission to reduce the number of small messages; if a chunk remains below threshold, either merge with the next emission or serve locally via fallback. The forecast \(\hat{h}\) triggers prefetch of expert weights for anticipated heavy codes, overlapping with the SSM scan.
+
+\subsection{Training schedule and regularization}
+S0 warmup: train with a standard top-2 gate to stabilize the backbone and log routing statistics. S1 VQ + shortlist: enable VQ and shortlist gating; distill from the S0 teacher via a KL term; activate commitment, diversity, run-length, load-balance, and mild topology penalties; apply stop-gradient on parts of the \(z_t\) path to protect backbone representations. S2 scheduling: enable the Router-SSM and capacity scheduling; jointly train with queue-and-shift and fallback active.
+
+\subsection{Implementation and overhead}
+Implemented modules include \(z_t\) computation, residual VQ, shortlist gating, capacity-aware queue-and-shift, Router-SSM, capacity aggregation, in-window token grouping, and a prefetch scheduler. Tokens carry metadata (codeID, shortlistID, windowID, TTL). Additional parameters scale with \(K\cdot d_r + E\cdot d_r\) plus the small Router-SSM. Gate FLOPs drop from \(\mathcal{O}(E)\) to \(\mathcal{O}(r)\), and memory overhead for \(T\) and codebooks is a few megabytes. The design is orthogonal and complementary to transport optimizations such as DeepSpeed-MoE \cite{rajbhandari_2022_deepspeed} and topology-aware objectives \cite{chen_2023_moe}.
+
+\subsection{Novelty and contrast}
+Unlike diagnostic analyses such as OpenMoE \cite{xue_2024_openmoe}, RQ-Stream introduces a causal, state-conditioned, discrete routing code, time-chunked dispatch, and capacity forecasting. Unlike topology-aware penalties \cite{chen_2023_moe} or inference-centric systems [author_year_toward], it attacks fragmentation by coarsening dispatch granularity and anticipating bursts. Compared to expert-choice \cite{zhou_2022_mixture}, differentiable selection \cite{hazimeh_2021_dselect}, and OT-based routing \cite{liu_2022_sparsity}, it avoids noncausal global solves and maintains streaming-time \(\mathcal{O}(1)\) routing with shortlist gating.
+
+\subsection{Pseudocode: routing and scheduling}
+\begin{algorithm}[H]
+\caption{Per-token causal routing with state-quantized codes and shortlist gating}
+\begin{algorithmic}
+\State \textbf{Inputs:} token state \(h_t\), SSM state \(s_t\), projections \(P,Q\), codebook \(\mathcal{C}\), prototypes \(\{p_e\}\), mapping \(T\), TTL state (\(\text{code\_prev},\text{ttl\_ctr}\))
+\State \(z_t \leftarrow \mathrm{norm}(P h_t) + \mathrm{norm}(Q s_t)\)
+\State \(c^* \leftarrow \arg\min\limits_{c \in \mathcal{C}} \lVert z_t - e_c \rVert^2\) \Comment{nearest code; straight-through in training}
+\If{\(c^* = \text{code\_prev}\)}
+  \State \(\text{ttl\_ctr} \leftarrow \min(\text{ttl\_ctr}+1,\,\text{TTL\_max})\)
+  \State \(c_t \leftarrow c^*\)
+\ElsIf{\(\text{ttl\_ctr} \geq \text{TTL\_threshold}\)}
+  \State \(c_t \leftarrow c^*\); \(\text{ttl\_ctr} \leftarrow 0\)
+\Else
+  \State \(c_t \leftarrow \text{code\_prev}\); \(\text{ttl\_ctr} \leftarrow \text{ttl\_ctr}+1\)
+\EndIf
+\State \(\text{cand} \leftarrow T[c_t]\) \Comment{shortlist of \(r\) experts}
+\State For \(e \in \text{cand}\), compute score \(u_e \leftarrow p_e^{\top} z_t\)
+\State Select top-\(k\) experts from \(\text{cand}\) by \(u_e\); emit route decision and (code, expert) key for chunking
+\State Update \(\text{code\_prev} \leftarrow c_t\)
+\end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}[H]
+\caption{Causal capacity scheduling and queue-and-shift per window}
+\begin{algorithmic}
+\State \textbf{Inputs:} last-\(L\) code histograms \(\{h^{(w-i)}\}_{i=1}^L\), Router-SSM, mapping \(T\), slack \(\sigma\)
+\State \(\hat{h} \leftarrow \text{Router-SSM}(\{h^{(w-i)}\})\) \Comment{predict next-window code histogram}
+\State For expert \(e\): \(\hat{D}_e \leftarrow \sum_{c} \hat{h}_c \cdot \mathbb{1}\{e \in T[c]\} / \lvert T[c]\rvert\)
+\State Assign capacity \(C_e \leftarrow (1+\sigma)\cdot \text{baseline\_cap}\) \Comment{uniform in this iteration}
+\For{arriving tokens in window}
+  \State Attempt enqueue to primary expert; if queue length \(> C_e\), shift to secondary shortlist expert
+  \If{secondary also over capacity}
+    \State serve via local fallback; increment drop/fallback counters accordingly
+  \EndIf
+\EndFor
+\State Update \(\sigma\) via EWMA based on realized underestimation error
+\end{algorithmic}
+\end{algorithm}
+
+\section{Experimental Setup}
+\label{sec:experimental}
+We evaluate three aspects of RQ-Stream using a CPU-based PyTorch simulator and end-to-end stubs that exercise the router components.
+
+\subsection{Streaming MoE routing microbenchmark (latency and fragmentation)}
+\begin{itemize}
+\item \textbf{Goal:} demonstrate that state-quantized routing with shortlist gating and window grouping reduces All-to-All fragmentation and latency versus token-level top-k.
+\item \textbf{Traffic:} synthetic streaming tokens with bursty topical switches modeled by Markovian codes with high self-transition probability (0.95-0.98). Fixed seeds keep identical streams across routers.
+\item \textbf{Experts and routing:} \(E \in \{16, 32\}\) (reported runs with \(E=16\)), top-2 dispatch. Baseline router is token-level top-2 without state or grouping and uses token-level sends. RQ-Stream computes \(z_t\) from \(h_t\) and \(s_t\), applies VQ-EMA (single level in the demo), TTL smoothing, code\(\to\)shortlist mapping with \(r=4\), top-2 selection within the shortlist, grouping by (code × expert) within each window, and queue-and-shift overflow control.
+\item \textbf{Windows and capacity:} window sizes \(W \in \{64, 128, 256\}\). Per-expert capacity per window is constant (e.g., 16-64); RQ-Stream may add slack (e.g., 10\%), baseline uses none.
+\item \textbf{Communication model:} end-to-end latency per window equals the sum over messages of \(\alpha\) plus \(\beta\) times message size, plus \(\gamma\) times the number of tokens. The demo uses \(\alpha = 50\) microseconds, \(\beta = 0.6\) microseconds per token, and \(\gamma = 1.0\) microseconds per token.
+\item \textbf{Metrics:} p50 and p95 window latency (when summarized), messages per window, fragmentation index (messages per token), average and maximum message size, drop rate, fallback rate, route-switch frequency per 100 tokens computed from smoothed codes, and average queue overflow per expert.
+\item \textbf{Procedure:} process 10-50K tokens; sweep \(W \in \{64, 128, 256\}\) and TTL \(\in \{8, 16, 32\}\); run multiple seeds where applicable; ablations include disabling TTL, varying \(K\), and disabling queue-and-shift.
+\end{itemize}
+
+\subsection{End-to-end LM quality and streaming stability}
+\begin{itemize}
+\item \textbf{Goal:} test whether routing changes preserve modeling quality while enabling efficiency gains.
+\item \textbf{Model:} a tiny GRU+MoE backbone with \(E=8\), top-2 routing, streaming sequence length up to 128. Two variants are trained: baseline top-2 vs RQ-Stream (state-quantized codes, shortlist gating; scheduling optional at this scale).
+\item \textbf{Data:} synthetic topic-Markov sequences. Training follows an S0\(\to\)S1\(\to\)S2 schedule at small scale.
+\item \textbf{Metrics:} validation perplexity (ppl). The framework also supports latency proxies, drop/fallback rates, gate FLOPs, code perplexity, and route flip frequency, but only ppl is reported in this run.
+\end{itemize}
+
+\subsection{Causal capacity scheduling under bursty demand}
+\begin{itemize}
+\item \textbf{Goal:} isolate the benefit of the Router-SSM predictor under bursty code histograms.
+\item \textbf{Setup:} \(K = 64\) codes, \(E = 16\) experts, \(r = 4\) shortlist size. Each window \(W = 128\) draws tokens from a synthetic bursty histogram with heavy-tailed run-lengths. The shortlist \(T\) maps each code to \(r\) experts with overlap.
+\item \textbf{Compared schedulers:} a reactive baseline with uniform per-expert capacities (no slack) versus a predictive scheduler with a GRU-based Router-SSM trained online on the last four windows to predict the next-window code histogram. Slack \(\sigma \in \{0, 0.1, 0.2\}\) is tested. In this iteration, capacity assignment remains uniform with slack; non-uniform per-expert caps are not yet applied, which constrains potential gains.
+\item \textbf{Metrics:} forecast mean absolute error (MAE) in expert-demand space, overflow proxy (attempts minus capacity), drop and fallback rates, p50/p95 latency, and average queue depth.
+\end{itemize}
+
+Implementation and fairness notes. The simulator applies per-expert capacities, queue-and-shift, forecast MAE measurement, and provides a token-level baseline. Both routers process identical synthetic streams with fixed seeds for comparability. Gate FLOPs reduction arises from scoring \(\mathcal{O}(r)\) candidates instead of \(\mathcal{O}(E)\). Integration with PyTorch MoE layers follows the provided adapter logic and is compatible with DeepSpeed-MoE or FairScale \cite{rajbhandari_2022_deepspeed} [author_year_toward].
+
+\section{Results}
+\label{sec:results}
+We report results recorded by the provided runs and include all figures by filename.
+
+Experiment 1: Streaming microbenchmark. Representative configurations illustrate consistent gains when TTL and windowing permit code runs:
+\begin{itemize}
+\item \(W = 64\), TTL = 16: messages 46 \(\to\) 12 (3.8× fewer), average message size 1.4 \(\to\) 5.3, latency 2402 \(\to\) 702 microseconds.
+\item \(W = 128\), TTL = 32: messages 55 \(\to\) 16 (3.4× fewer), average message size 2.3 \(\to\) 8.0, latency 2955 \(\to\) 1005 microseconds.
+\item \(W = 256\), TTL = 16: messages 139 \(\to\) 39 (3.6× fewer), average message size 1.8 \(\to\) 6.6, latency 7360 \(\to\) 2360 microseconds.
+\end{itemize}
+A stress case (\(W = 128\), TTL = 8) shows parity with 53 messages and equal latency for both routers, indicating that too-small TTL undermines chunking benefits. Aggregating the sweep, RQ-Stream yields 2.07× fewer messages, 2.19× larger average message size, and 48.2\% lower latency, with approximately 22.5\% fewer route switches per 100 tokens. These trends match the mechanism: TTL-stabilized codes produce time-chunks, enabling code×expert grouping and amortizing per-message overhead.
+
+Experiment 2: Tiny end-to-end LM. Final validation perplexity indicates parity: baseline 1118.64 versus RQ-Stream 1117.68 (\(-0.1\%\)). This suggests that routing modifications preserve model quality in this small setup. Although the framework supports latency, drop, and gate FLOPs logging, this run reports only perplexity.
+
+Experiment 3: Causal capacity scheduling. The Router-SSM predictor achieves a mean MAE of 4.112 in expert-demand space on synthetic bursts. The overflow proxy decreases from 73.7 under reactive uniform caps to 73.0 with the predictive scheduler, a 0.9\% reduction. The limited improvement is expected because this iteration assigns per-expert capacities uniformly (with slack) even under prediction; non-uniform caps are necessary to realize the full benefit of predictive scheduling.
+
+Hyperparameters and fairness.
+\begin{itemize}
+\item Communication model parameters: \(\alpha = 50\) microseconds, \(\beta = 0.6\) microseconds per token, \(\gamma = 1.0\) microseconds per token.
+\item Baseline: token-level top-2 routing with token-level sends. RQ-Stream: code×expert grouping, TTL smoothing, shortlist size \(r = 4\), queue-and-shift with fallback, slack \(= 0.1\) in Experiment 1; \(\sigma \in \{0, 0.1, 0.2\}\) in Experiment 3.
+\item VQ in the demo uses a single EMA codebook. Seeds are fixed and identical streams are used across routers to ensure comparability.
+\end{itemize}
+
+Ablations and sensitivities. The stress case with small TTL shows sensitivity of chunking to temporal smoothing. Larger \(W\) and moderate TTL substantially improve chunking. Disabling queue-and-shift or grouping would be expected to worsen fragmentation; these ablations are supported but not printed in the run logs.
+
+Limitations. All results are from a CPU simulator with synthetic traffic; absolute numbers will differ on real clusters. The predictive scheduler was not fully wired to non-uniform capacities. Bandit updates for code\(\to\)shortlist \(T\) and topology biases were not activated.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{ images/experiment1\_streaming\_microbenchmark.pdf }
+\caption{Streaming microbenchmark across window sizes and TTL settings, showing message fragmentation and latency reductions for RQ-Stream.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{ images/experiment2\_lm\_quality.pdf }
+\caption{End-to-end tiny LM validation perplexity for baseline and RQ-Stream.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{ images/experiment3\_capacity\_scheduling.pdf }
+\caption{Capacity scheduling under bursty demand: forecast MAE and overflow proxy contrasting reactive vs predictive schedulers.}
+\end{figure}
+
+\section{Conclusion}
+\label{sec:conclusion}
+We presented RQ-Stream, a causal, time-chunked routing framework for streaming MoE. By converting token and SSM state into short-horizon stable routing codes, gating within compact code-conditioned shortlists, and forecasting next-window demand with a lightweight Router-SSM to assign capacities with slack, RQ-Stream directly addresses communication fragmentation and tail drops. Codes act as chunking keys that coarsen All-to-All messages and enable prefetch and queue-and-shift policies. On synthetic streaming microbenchmarks, RQ-Stream reduces message count by 2.07×, increases average message size by 2.19×, and lowers latency by 48.2\%, while a tiny end-to-end LM matches baseline perplexity. A scheduling study shows the predictor learns bursty demand, though benefits were muted because per-expert capacities were uniform in this iteration.
+
+RQ-Stream complements transport- and topology-level advances by improving router temporal coherence upstream of communication [rajbhandari_2022_deepspeed, chen_2023_moe, author_year_toward], and it reflects best practices for stable sparse routing via low-dimensional, normalized spaces \cite{chi_2022_the}. It avoids noncausal and heavy global solves used in differentiable or OT-based gates [hazimeh_2021_dselect, liu_2022_sparsity], making it suitable for low-batch streaming. Future work includes wiring non-uniform per-expert capacities from Router-SSM forecasts, enabling topology-aware shortlist bandits, large-scale multi-node evaluations, and scaling to longer contexts and larger SSM backbones. We anticipate that causal time-chunked routing with predictive scheduling will serve as a foundation for dropless, dynamic-capacity MoE serving in latency-sensitive regimes \cite{author_year_scaling}.
+
+This work was generated by \textsc{AIRAS} \citep{airas2025}.
+
+\bibliographystyle{iclr2024_conference}
+\bibliography{references}
+
+\end{document}

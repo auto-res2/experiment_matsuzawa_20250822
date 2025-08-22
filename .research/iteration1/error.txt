@@ -1,0 +1,4 @@
+/home/runner/work/_tool/Python/3.11.13/x64/lib/python3.11/site-packages/tslearn/bases/bases.py:15: UserWarning: h5py not installed, hdf5 features will not be supported.
+Install h5py to use hdf5 features: http://docs.h5py.org/
+  warn(h5py_msg)
+Processing questions:   0%|          | 0/2 [00:00<?, ?it/s]Processing questions:  50%|█████     | 1/2 [00:03<00:03,  3.56s/it]Processing questions: 100%|██████████| 2/2 [00:05<00:00,  2.46s/it]Processing questions: 100%|██████████| 2/2 [00:05<00:00,  2.62s/it]

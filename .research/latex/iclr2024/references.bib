@@ -5,3 +5,377 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{arous_2022_high,
+ abstract = {We study the scaling limits of stochastic gradient descent (SGD) with
+constant step-size in the high-dimensional regime. We prove limit theorems for
+the trajectories of summary statistics (i.e., finite-dimensional functions) of
+SGD as the dimension goes to infinity. Our approach allows one to choose the
+summary statistics that are tracked, the initialization, and the step-size. It
+yields both ballistic (ODE) and diffusive (SDE) limits, with the limit
+depending dramatically on the former choices. We show a critical scaling regime
+for the step-size, below which the effective ballistic dynamics matches
+gradient flow for the population loss, but at which, a new correction term
+appears which changes the phase diagram. About the fixed points of this
+effective dynamics, the corresponding diffusive limits can be quite complex and
+even degenerate. We demonstrate our approach on popular examples including
+estimation for spiked matrix and tensor models and classification via two-layer
+networks for binary and XOR-type Gaussian mixture models. These examples
+exhibit surprising phenomena including multimodal timescales to convergence as
+well as convergence to sub-optimal solutions with probability bounded away from
+zero from random (e.g., Gaussian) initializations. At the same time, we
+demonstrate the benefit of overparametrization by showing that the latter
+probability goes to zero as the second layer width grows.},
+ arxiv_url = {https://arxiv.org/pdf/2206.04030v4.pdf},
+ author = {Gerard Ben Arous and Reza Gheissari and Aukosh Jagannath},
+ title = {High-dimensional limit theorems for SGD: Effective dynamics and critical scaling},
+ year = {2022}
+}
+
+@article{author_year_dimension,
+ title = {Dimension-free Complexity Bounds for High-order  Nonconvex Finite-sum Optimization}
+}
+
+@article{author_year_dimension,
+ title = {Dimension-free Complexity Bounds for High-order  Nonconvex Finite-sum Optimization}
+}
+
+@article{belhadji_2023_analysis,
+ abstract = {We study a quadrature, proposed by Ermakov and Zolotukhin in the sixties,
+through the lens of kernel methods. The nodes of this quadrature rule follow
+the distribution of a determinantal point process, while the weights are
+defined through a linear system, similarly to the optimal kernel quadrature. In
+this work, we show how these two classes of quadrature are related, and we
+prove a tractable formula of the expected value of the squared worst-case
+integration error on the unit ball of an RKHS of the former quadrature. In
+particular, this formula involves the eigenvalues of the corresponding kernel
+and leads to improving on the existing theoretical guarantees of the optimal
+kernel quadrature with determinantal point processes.},
+ arxiv_url = {https://arxiv.org/pdf/2309.01200v1.pdf},
+ author = {Ayoub Belhadji},
+ journal = {Advances in Neural Information Processing Systems 34 (2021):
+  27278-27289},
+ title = {An analysis of Ermakov-Zolotukhin quadrature using kernels},
+ year = {2023}
+}
+
+@article{epperly_2023_kernel,
+ abstract = {This paper presents new quadrature rules for functions in a reproducing
+kernel Hilbert space using nodes drawn by a sampling algorithm known as
+randomly pivoted Cholesky. The resulting computational procedure compares
+favorably to previous kernel quadrature methods, which either achieve low
+accuracy or require solving a computationally challenging sampling problem.
+Theoretical and numerical results show that randomly pivoted Cholesky is fast
+and achieves comparable quadrature error rates to more computationally
+expensive quadrature schemes based on continuous volume sampling, thinning, and
+recombination. Randomly pivoted Cholesky is easily adapted to complicated
+geometries with arbitrary kernels, unlocking new potential for kernel
+quadrature.},
+ arxiv_url = {https://arxiv.org/pdf/2306.03955v3.pdf},
+ author = {Ethan N. Epperly and Elvira Moreno},
+ github_url = {https://github.com/eepperly/RPCholesky-Kernel-Quadrature},
+ title = {Kernel Quadrature with Randomly Pivoted Cholesky},
+ year = {2023}
+}
+
+@article{frhlich_2021_bayesian,
+ abstract = {Riemannian manifolds provide a principled way to model nonlinear geometric
+structure inherent in data. A Riemannian metric on said manifolds determines
+geometry-aware shortest paths and provides the means to define statistical
+models accordingly. However, these operations are typically computationally
+demanding. To ease this computational burden, we advocate probabilistic
+numerical methods for Riemannian statistics. In particular, we focus on
+Bayesian quadrature (BQ) to numerically compute integrals over normal laws on
+Riemannian manifolds learned from data. In this task, each function evaluation
+relies on the solution of an expensive initial value problem. We show that by
+leveraging both prior knowledge and an active exploration scheme, BQ
+significantly reduces the number of required evaluations and thus outperforms
+Monte Carlo methods on a wide range of integration problems. As a concrete
+application, we highlight the merits of adopting Riemannian geometry with our
+proposed framework on a nonlinear dataset from molecular dynamics.},
+ arxiv_url = {https://arxiv.org/pdf/2102.06645v2.pdf},
+ author = {Christian Fröhlich and Alexandra Gessner and Philipp Hennig and Bernhard Schölkopf and Georgios Arvanitidis},
+ github_url = {https://github.com/OxfordML/bayesquad},
+ title = {Bayesian Quadrature on Riemannian Data Manifolds},
+ year = {2021}
+}
+
+@article{kidger_2021_neural,
+ abstract = {Stochastic differential equations (SDEs) are a staple of mathematical
+modelling of temporal dynamics. However, a fundamental limitation has been that
+such models have typically been relatively inflexible, which recent work
+introducing Neural SDEs has sought to solve. Here, we show that the current
+classical approach to fitting SDEs may be approached as a special case of
+(Wasserstein) GANs, and in doing so the neural and classical regimes may be
+brought together. The input noise is Brownian motion, the output samples are
+time-evolving paths produced by a numerical solver, and by parameterising a
+discriminator as a Neural Controlled Differential Equation (CDE), we obtain
+Neural SDEs as (in modern machine learning parlance) continuous-time generative
+time series models. Unlike previous work on this problem, this is a direct
+extension of the classical approach without reference to either prespecified
+statistics or density functions. Arbitrary drift and diffusions are admissible,
+so as the Wasserstein loss has a unique global minima, in the infinite data
+limit any SDE may be learnt. Example code has been made available as part of
+the \texttt{torchsde} repository.},
+ arxiv_url = {https://arxiv.org/pdf/2102.03657v2.pdf},
+ author = {Patrick Kidger and James Foster and Xuechen Li and Harald Oberhauser and Terry Lyons},
+ github_url = {https://github.com/rtqichen/torchdiffeq},
+ title = {Neural SDEs as Infinite-Dimensional GANs},
+ year = {2021}
+}
+
+@article{malach_2021_quantifying,
+ abstract = {We study the relative power of learning with gradient descent on
+differentiable models, such as neural networks, versus using the corresponding
+tangent kernels. We show that under certain conditions, gradient descent
+achieves small error only if a related tangent kernel method achieves a
+non-trivial advantage over random guessing (a.k.a. weak learning), though this
+advantage might be very small even when gradient descent can achieve
+arbitrarily high accuracy. Complementing this, we show that without these
+conditions, gradient descent can in fact learn with small error even when no
+kernel method, in particular using the tangent kernel, can achieve a
+non-trivial advantage over random guessing.},
+ arxiv_url = {https://arxiv.org/pdf/2103.01210v1.pdf},
+ author = {Eran Malach and Pritish Kamath and Emmanuel Abbe and Nathan Srebro},
+ title = {Quantifying the Benefit of Using Differentiable Learning over Tangent Kernels},
+ year = {2021}
+}
+
+@article{richter_2022_robust,
+ abstract = {The combination of Monte Carlo methods and deep learning has recently led to
+efficient algorithms for solving partial differential equations (PDEs) in high
+dimensions. Related learning problems are often stated as variational
+formulations based on associated stochastic differential equations (SDEs),
+which allow the minimization of corresponding losses using gradient-based
+optimization methods. In respective numerical implementations it is therefore
+crucial to rely on adequate gradient estimators that exhibit low variance in
+order to reach convergence accurately and swiftly. In this article, we
+rigorously investigate corresponding numerical aspects that appear in the
+context of linear Kolmogorov PDEs. In particular, we systematically compare
+existing deep learning approaches and provide theoretical explanations for
+their performances. Subsequently, we suggest novel methods that can be shown to
+be more robust both theoretically and numerically, leading to substantial
+performance improvements.},
+ arxiv_url = {https://arxiv.org/pdf/2206.10588v2.pdf},
+ author = {Lorenz Richter and Julius Berner},
+ journal = {Proceedings of the 39th International Conference on Machine
+  Learning, 2022, pp. 18649-18666},
+ title = {Robust SDE-Based Variational Formulations for Solving Linear PDEs via Deep Learning},
+ year = {2022}
+}
+
+@article{richter_2022_robust,
+ abstract = {The combination of Monte Carlo methods and deep learning has recently led to
+efficient algorithms for solving partial differential equations (PDEs) in high
+dimensions. Related learning problems are often stated as variational
+formulations based on associated stochastic differential equations (SDEs),
+which allow the minimization of corresponding losses using gradient-based
+optimization methods. In respective numerical implementations it is therefore
+crucial to rely on adequate gradient estimators that exhibit low variance in
+order to reach convergence accurately and swiftly. In this article, we
+rigorously investigate corresponding numerical aspects that appear in the
+context of linear Kolmogorov PDEs. In particular, we systematically compare
+existing deep learning approaches and provide theoretical explanations for
+their performances. Subsequently, we suggest novel methods that can be shown to
+be more robust both theoretically and numerically, leading to substantial
+performance improvements.},
+ arxiv_url = {https://arxiv.org/pdf/2206.10588v2.pdf},
+ author = {Lorenz Richter and Julius Berner},
+ journal = {Proceedings of the 39th International Conference on Machine
+  Learning, 2022, pp. 18649-18666},
+ title = {Robust SDE-Based Variational Formulations for Solving Linear PDEs via Deep Learning},
+ year = {2022}
+}
+
+@article{robinson_2020_strength,
+ abstract = {We study generalization properties of weakly supervised learning. That is,
+learning where only a few "strong" labels (the actual target of our prediction)
+are present but many more "weak" labels are available. In particular, we show
+that having access to weak labels can significantly accelerate the learning
+rate for the strong task to the fast rate of $\mathcal{O}(\nicefrac1n)$, where
+$n$ denotes the number of strongly labeled data points. This acceleration can
+happen even if by itself the strongly labeled data admits only the slower
+$\mathcal{O}(\nicefrac{1}{\sqrt{n}})$ rate. The actual acceleration depends
+continuously on the number of weak labels available, and on the relation
+between the two tasks. Our theoretical results are reflected empirically across
+a range of tasks and illustrate how weak labels speed up learning on the strong
+task.},
+ arxiv_url = {https://arxiv.org/pdf/2002.08483v1.pdf},
+ author = {Joshua Robinson and Stefanie Jegelka and Suvrit Sra},
+ title = {Strength from Weakness: Fast Learning Using Weak Supervision},
+ year = {2020}
+}
+
+@article{solin_2021_scalable,
+ abstract = {Simulation-based techniques such as variants of stochastic Runge-Kutta are
+the de facto approach for inference with stochastic differential equations
+(SDEs) in machine learning. These methods are general-purpose and used with
+parametric and non-parametric models, and neural SDEs. Stochastic Runge-Kutta
+relies on the use of sampling schemes that can be inefficient in high
+dimensions. We address this issue by revisiting the classical SDE literature
+and derive direct approximations to the (typically intractable)
+Fokker-Planck-Kolmogorov equation by matching moments. We show how this
+workflow is fast, scales to high-dimensional latent spaces, and is applicable
+to scarce-data applications, where a non-parametric SDE with a driving Gaussian
+process velocity field specifies the model.},
+ arxiv_url = {https://arxiv.org/pdf/2110.15739v1.pdf},
+ author = {Arno Solin and Ella Tamir and Prakhar Verma},
+ title = {Scalable Inference in SDEs by Direct Matching of the Fokker–Planck–Kolmogorov Equation},
+ year = {2021}
+}
+
+@article{walker_2024_log,
+ abstract = {The vector field of a controlled differential equation (CDE) describes the
+relationship between a control path and the evolution of a solution path.
+Neural CDEs (NCDEs) treat time series data as observations from a control path,
+parameterise a CDE's vector field using a neural network, and use the solution
+path as a continuously evolving hidden state. As their formulation makes them
+robust to irregular sampling rates, NCDEs are a powerful approach for modelling
+real-world data. Building on neural rough differential equations (NRDEs), we
+introduce Log-NCDEs, a novel, effective, and efficient method for training
+NCDEs. The core component of Log-NCDEs is the Log-ODE method, a tool from the
+study of rough paths for approximating a CDE's solution. Log-NCDEs are shown to
+outperform NCDEs, NRDEs, the linear recurrent unit, S5, and MAMBA on a range of
+multivariate time series datasets with up to $50{,}000$ observations.},
+ arxiv_url = {https://arxiv.org/pdf/2402.18512v3.pdf},
+ author = {Benjamin Walker and Andrew D. McLeod and Tiexin Qin and Yichuan Cheng and Haoliang Li and Terry Lyons},
+ github_url = {https://github.com/google/jax},
+ journal = {Proceedings of the 41st International Conference on Machine
+  Learning, 2024},
+ title = {Log Neural Controlled Differential Equations: The Lie Brackets Make A Difference},
+ year = {2024}
+}
+
+@article{wang_2024_efficient,
+ abstract = {Overparameterized stochastic differential equation (SDE) models have achieved
+remarkable success in various complex environments, such as PDE-constrained
+optimization, stochastic control and reinforcement learning, financial
+engineering, and neural SDEs. These models often feature system evolution
+coefficients that are parameterized by a high-dimensional vector $\theta \in
+\mathbb{R}^n$, aiming to optimize expectations of the SDE, such as a value
+function, through stochastic gradient ascent. Consequently, designing efficient
+gradient estimators for which the computational complexity scales well with $n$
+is of significant interest. This paper introduces a novel unbiased stochastic
+gradient estimator--the generator gradient estimator--for which the computation
+time remains stable in $n$. In addition to establishing the validity of our
+methodology for general SDEs with jumps, we also perform numerical experiments
+that test our estimator in linear-quadratic control problems parameterized by
+high-dimensional neural networks. The results show a significant improvement in
+efficiency compared to the widely used pathwise differentiation method: Our
+estimator achieves near-constant computation times, increasingly outperforms
+its counterpart as $n$ increases, and does so without compromising estimation
+variance. These empirical findings highlight the potential of our proposed
+methodology for optimizing SDEs in contemporary applications.},
+ arxiv_url = {https://arxiv.org/pdf/2407.10065v2.pdf},
+ author = {Shengbo Wang and Jose Blanchet and Peter Glynn},
+ title = {An Efficient High-dimensional Gradient Estimator for Stochastic Differential Equations},
+ year = {2024}
+}
+
+@article{yoshida_2021_lower,
+ abstract = {This paper discusses the problem of weakly supervised classification, in
+which instances are given weak labels that are produced by some
+label-corruption process. The goal is to derive conditions under which loss
+functions for weak-label learning are proper and lower-bounded -- two essential
+requirements for the losses used in class-probability estimation. To this end,
+we derive a representation theorem for proper losses in supervised learning,
+which dualizes the Savage representation. We use this theorem to characterize
+proper weak-label losses and find a condition for them to be lower-bounded.
+From these theoretical findings, we derive a novel regularization scheme called
+generalized logit squeezing, which makes any proper weak-label loss bounded
+from below, without losing properness. Furthermore, we experimentally
+demonstrate the effectiveness of our proposed approach, as compared to improper
+or unbounded losses. The results highlight the importance of properness and
+lower-boundedness.},
+ arxiv_url = {https://arxiv.org/pdf/2103.02893v2.pdf},
+ author = {Shuhei M. Yoshida and Takashi Takenouchi and Masashi Sugiyama},
+ title = {Lower-Bounded Proper Losses for Weakly Supervised Classification},
+ year = {2021}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{beck_2018_solving,
+ abstract = {Stochastic differential equations (SDEs) and the Kolmogorov partial
+differential equations (PDEs) associated to them have been widely used in
+models from engineering, finance, and the natural sciences. In particular, SDEs
+and Kolmogorov PDEs, respectively, are highly employed in models for the
+approximative pricing of financial derivatives. Kolmogorov PDEs and SDEs,
+respectively, can typically not be solved explicitly and it has been and still
+is an active topic of research to design and analyze numerical methods which
+are able to approximately solve Kolmogorov PDEs and SDEs, respectively. Nearly
+all approximation methods for Kolmogorov PDEs in the literature suffer under
+the curse of dimensionality or only provide approximations of the solution of
+the PDE at a single fixed space-time point. In this paper we derive and propose
+a numerical approximation method which aims to overcome both of the above
+mentioned drawbacks and intends to deliver a numerical approximation of the
+Kolmogorov PDE on an entire region $[a,b]^d$ without suffering from the curse
+of dimensionality. Numerical results on examples including the heat equation,
+the Black-Scholes model, the stochastic Lorenz equation, and the Heston model
+suggest that the proposed approximation algorithm is quite effective in high
+dimensions in terms of both accuracy and speed.},
+ arxiv_url = {https://arxiv.org/pdf/1806.00421v2.pdf},
+ author = {Christian Beck and Sebastian Becker and Philipp Grohs and Nor Jaafari and Arnulf Jentzen},
+ doi = {10.1007/s10915-021-01590-0},
+ journal = {J. Sci. Comput. 88 (2021), no. 3, Paper No. 73, 28 pp},
+ title = {Solving the Kolmogorov PDE by means of deep learning},
+ year = {2018}
+}
+
+@article{berner_2018_analysis,
+ abstract = {The development of new classification and regression algorithms based on
+empirical risk minimization (ERM) over deep neural network hypothesis classes,
+coined deep learning, revolutionized the area of artificial intelligence,
+machine learning, and data analysis. In particular, these methods have been
+applied to the numerical solution of high-dimensional partial differential
+equations with great success. Recent simulations indicate that deep
+learning-based algorithms are capable of overcoming the curse of dimensionality
+for the numerical solution of Kolmogorov equations, which are widely used in
+models from engineering, finance, and the natural sciences. The present paper
+considers under which conditions ERM over a deep neural network hypothesis
+class approximates the solution of a $d$-dimensional Kolmogorov equation with
+affine drift and diffusion coefficients and typical initial values arising from
+problems in computational finance up to error $\varepsilon$. We establish that,
+with high probability over draws of training samples, such an approximation can
+be achieved with both the size of the hypothesis class and the number of
+training samples scaling only polynomially in $d$ and $\varepsilon^{-1}$. It
+can be concluded that ERM over deep neural network hypothesis classes overcomes
+the curse of dimensionality for the numerical solution of linear Kolmogorov
+equations with affine coefficients.},
+ arxiv_url = {https://arxiv.org/pdf/1809.03062v3.pdf},
+ author = {Julius Berner and Philipp Grohs and Arnulf Jentzen},
+ doi = {10.1137/19M125649X},
+ journal = {SIAM Journal on Mathematics of Data Science 2(3), 2020, pp.
+  631-657},
+ title = {Analysis of the generalization error: Empirical risk minimization over deep artificial neural networks overcomes the curse of dimensionality in the numerical approximation of Black–Scholes partial differential equations},
+ year = {2018}
+}
+
+@article{berner_2019_towards,
+ abstract = {Although for neural networks with locally Lipschitz continuous activation
+functions the classical derivative exists almost everywhere, the standard chain
+rule is in general not applicable. We will consider a way of introducing a
+derivative for neural networks that admits a chain rule, which is both rigorous
+and easy to work with. In addition we will present a method of converting
+approximation results on bounded domains to global (pointwise) estimates. This
+can be used to extend known neural network approximation theory to include the
+study of regularity properties. Of particular interest is the application to
+neural networks with ReLU activation function, where it contributes to the
+understanding of the success of deep learning methods for high-dimensional
+partial differential equations.},
+ arxiv_url = {https://arxiv.org/pdf/1905.04992v1.pdf},
+ author = {Julius Berner and Dennis Elbrächter and Philipp Grohs and Arnulf Jentzen},
+ doi = {10.1109/SampTA45681.2019.9031005},
+ journal = {13th International conference on Sampling Theory and Applications
+  (SampTA), 2019, pp. 1-5},
+ title = {Towards a regularity theory for ReLU networks–chain rule and global error estimates},
+ year = {2019}
+}

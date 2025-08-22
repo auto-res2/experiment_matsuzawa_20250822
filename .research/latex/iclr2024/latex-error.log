@@ -1,0 +1,2478 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./paper.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo))
+(./iclr2024_conference.sty
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)))
+(./fancyhdr.sty) (./natbib.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/units/nicefrac.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered
+.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex))
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
+.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_loader.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+)
+Package pgfplots: loading complementary utilities for your pgf version...
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgfutil-common-lists.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructure.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructureext.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
+x.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
+d.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.te
+x
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.co
+de.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
+fshading.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
+shading.pgfsys-pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.
+tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.t
+ex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.cod
+e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.
+tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
+e.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathmorphing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathmorphing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathreplacing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathreplacing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.co
+ntourlua.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryplotmarks.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.co
+de.tex))) (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+No file paper.aux.
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-ptm.cfg)
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
+
+Underfull \hbox (badness 1472) in paragraph at lines 48--48
+[]\T1/ptm/m/sc/17.28 (+20) SURGE-Prompt: Surrogate-Guided, Ro-bust,
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+
+Package natbib Warning: Citation `yang_2023_large' on page 1 undefined on input
+ line 61.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.61 ...utable fragments or risk calibration [guo_
+                                                  2023_connecting, fernando_...
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 ...rated reliability \cite{hu_2024_localized}
+                                                  . RL-based discrete optimi...
+
+
+Package natbib Warning: Citation `hu_2024_localized' on page 1 undefined on inp
+ut line 61.
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 ...ormal guarantees \cite{deng_2022_rlprompt}
+                                                  . Continuous or soft-promp...
+
+
+Package natbib Warning: Citation `deng_2022_rlprompt' on page 1 undefined on in
+put line 61.
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 ...ility and governance \cite{sun_2022_black}
+                                                  . Instruction discovery (A...
+
+
+Package natbib Warning: Citation `sun_2022_black' on page 1 undefined on input 
+line 61.
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 ...on white-box settings \cite{wen_2023_hard}
+                                                  , and prompt adaptation fo...
+
+
+Package natbib Warning: Citation `wen_2023_hard' on page 1 undefined on input l
+ine 61.
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 ...y for NLP tasks \cite{hao_2022_optimizing}
+                                                  . Related advances for VLM...
+
+
+Package natbib Warning: Citation `hao_2022_optimizing' on page 1 undefined on i
+nput line 61.
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 ...backed governance \cite{liu_2023_language}
+                                                  .
+
+Package natbib Warning: Citation `liu_2023_language' on page 1 undefined on inp
+ut line 61.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.62 
+     
+
+Underfull \hbox (badness 3343) in paragraph at lines 61--62
+\T1/ptm/m/n/10 (+20) works such as OPRO it-er-a-tively gen-er-ate so-lu-tions w
+ith tex-tual feed-back but do not
+
+Underfull \hbox (badness 3281) in paragraph at lines 61--62
+\T1/ptm/m/n/10 (+20) fur-nish cal-i-brated un-cer-tainty, validator-backed safe
+ty, or ro-bust-ness to para-phrase and
+
+Underfull \hbox (badness 4266) in paragraph at lines 61--62
+\T1/ptm/m/n/10 (+20) ver-sion drift \T1/ptm/b/n/10 (+20) ?\T1/ptm/m/n/10 (+20) 
+. Evo-lu-tion-ary meth-ods like Evo-Prompt and Prompt-breeder au-to-mate
+
+Underfull \hbox (badness 1546) in paragraph at lines 61--62
+\T1/ptm/m/n/10 (+20) mu-ta-tion and se-lec-tion, yet op-er-ate on free-form str
+ings with-out typed, im-mutable frag-
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+\T1/ptm/m/n/10 (+20) ments or risk cal-i-bra-tion [guo$[]\OT1/cmr/m/n/10 023[]\
+OML/cmm/m/it/10 onnecting; fernando[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 romp
+tbreeder\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Pool \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (168.2944pt too wide) in paragraph at lines 61--62
+\OML/cmm/m/it/10 basedlocaloptimization\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 e:g:; 
+ZOPO\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 improvesqueryefficiencyviakernelizedsurro
+gates; buttypicallycannotsynthesizenewhigh \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (240.2732pt too wide) in paragraph at lines 61--62
+\OML/cmm/m/it/10 qualitypromptsandlackscalibratedreliability[]:RL \OMS/cmsy/m/n
+/10 ^^@ \OML/cmm/m/it/10 baseddiscreteoptimization\OT1/cmr/m/n/10 (\OML/cmm/m/i
+t/10 RLPrompt\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 explorespromptspacesbutgenerally
+forgoesvalidator \OMS/cmsy/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+\OML/cmm/m/it/10 backedsafetyandconformalguarantees[]:Continuousorsoft \OMS/cms
+y/m/n/10 ^^@
+
+Overfull \hbox (878.62016pt too wide) in paragraph at lines 61--62
+\OML/cmm/m/it/10 prompttuninginLMaaSrequiresinternalaccessandcompromisesinterpr
+etabilityandgovernance[]:Instructiondiscovery\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 
+APE\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 andtoolkits\OT1/cmr/m/n/10 (\OML/cmm/m/it/
+10 OpenPrompt\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 broadenaccess; yetdonotdeliverdi
+stributionallyrobustselectionwithstatisticalguarantees\OT1/cmr/m/n/10 [\OML/cmm
+/m/it/10 zhou[]\OT1/cmr/m/n/10 022[]\OML/cmm/m/it/10 arge; ding[]\OT1/cmr/m/n/1
+0 021[]\OML/cmm/m/it/10 penprompt\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Gradient \O
+MS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (11.99257pt too wide) in paragraph at lines 61--62
+\OML/cmm/m/it/10 baseddiscretepromptdiscoveryfocusesonwhite \OMS/cmsy/m/n/10 ^^
+@ \OML/cmm/m/it/10 boxsettings[]; andpromptadaptationfortext \OMS/cmsy/m/n/10 ^
+^@
+
+Overfull \hbox (168.49152pt too wide) in paragraph at lines 61--62
+\OML/cmm/m/it/10 to \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 imageismodality \OMS/
+cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 specificandlackscalibratedreliabilityforNLPtas
+ks[]:RelatedadvancesforVLMssimilarlyoptimizeblack \OMS/cmsy/m/n/10 ^^@
+
+Underfull \vbox (badness 2469) has occurred while \output is active [1{/var/lib
+/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/
+enc/dvips/base/8r.enc}]
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+! Missing $ inserted.
+<inserted text> 
+                $
+l.72 ...nto OPRO/EvoPrompt/ZOPO-style loops [yang_
+                                                  2023_large, guo_2023_conne...
+
+
+! LaTeX Error: Command \end{itemize} invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 \end{itemize}
+                  
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 \end{itemize}
+                  
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 \end{itemize}
+                  
+! Missing $ inserted.
+<inserted text> 
+                $
+l.73 \end{itemize}
+                  
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--74
+[]\T1/ptm/b/n/10 (+20) Drop-in in-te-gra-tion API\T1/ptm/m/n/10 (+20) : A min-i
+-mal pro-pose()/learn() in-ter-face that plugs into
+
+Package natbib Warning: Citation `yang_2023_large' on page 2 undefined on input
+ line 80.
+
+
+Package natbib Warning: Citation `guo_2023_connecting' on page 2 undefined on i
+nput line 83.
+
+
+Package natbib Warning: Citation `fernando_2023_promptbreeder' on page 2 undefi
+ned on input line 83.
+
+
+Package natbib Warning: Citation `hu_2024_localized' on page 2 undefined on inp
+ut line 86.
+
+[2]
+
+Package natbib Warning: Citation `deng_2022_rlprompt' on page 3 undefined on in
+put line 89.
+
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.89 ...ration \cite{deng_2022_rlprompt}. SURGE^^Y
+                                                  s active learning and rout...
+
+
+Package natbib Warning: Citation `zhou_2022_large' on page 3 undefined on input
+ line 92.
+
+
+Package natbib Warning: Citation `ding_2021_openprompt' on page 3 undefined on 
+input line 92.
+
+
+Package natbib Warning: Citation `sun_2022_black' on page 3 undefined on input 
+line 95.
+
+
+Package natbib Warning: Citation `wen_2023_hard' on page 3 undefined on input l
+ine 95.
+
+
+Package natbib Warning: Citation `liu_2023_language' on page 3 undefined on inp
+ut line 98.
+
+
+Package natbib Warning: Citation `hao_2022_optimizing' on page 3 undefined on i
+nput line 98.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.100 ...ee-form strings without guarantees [yang_
+                                                  2023_large, guo_2023_conne...
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.100 ...s or calibration \cite{hu_2024_localized}
+                                                  , or rely on internal acce...
+
+
+Package natbib Warning: Citation `hu_2024_localized' on page 3 undefined on inp
+ut line 100.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.101 
+      
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+[]\T1/ptm/m/n/10 (+20) In sum-mary, prior meth-ods ei-ther op-ti-mize free-form
+ strings with-out guar-an-tees
+
+Overfull \hbox (958.00824pt too wide) in paragraph at lines 100--101
+\T1/ptm/m/n/10 (-20) [yang$[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 arge; guo[]\
+OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 onnecting; fernando[]\OT1/cmr/m/n/10 023[]
+\OML/cmm/m/it/10 romptbreeder\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ; focusonlocalpo
+olswithoutsynthesisorcalibration[]; orrelyoninternalaccess\OT1/cmr/m/n/10 [\OML
+/cmm/m/it/10 sun[]\OT1/cmr/m/n/10 022[]\OML/cmm/m/it/10 lack; wen[]\OT1/cmr/m/n
+/10 023[]\OML/cmm/m/it/10 ard\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :SURGEdiffersbyc
+ombiningatyped; validatedPIRwithacalibratedsurrogateanddistributionallyrobustac
+quisition; andbyprovidingadrop \OMS/cmsy/m/n/10 ^^@
+[3]
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.117 SURGE^^Y
+              s learner prioritizes high-uncertainty or high-surprise candid...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.120 ... discovery and evolutionary search [zhou_
+                                                  2022_large, guo_2023_conne...
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.120 ...sed optimization \cite{hu_2024_localized}
+                                                  , and RL-style adaptivity ...
+
+
+Package natbib Warning: Citation `hu_2024_localized' on page 4 undefined on inp
+ut line 120.
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.120 ...tyle adaptivity \cite{deng_2022_rlprompt}
+                                                   while addressing black-bo...
+
+
+Package natbib Warning: Citation `deng_2022_rlprompt' on page 4 undefined on in
+put line 120.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.121 
+      
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
+\T1/ptm/m/n/10 (+20) This setup uni-fies ad-van-tages of in-struc-tion dis-cov-
+ery and evo-lu-tion-ary search
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
+\T1/ptm/m/n/10 (+20) [zhou$[]\OT1/cmr/m/n/10 022[]\OML/cmm/m/it/10 arge; guo[]\
+OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 onnecting; fernando[]\OT1/cmr/m/n/10 023[]
+\OML/cmm/m/it/10 romptbreeder\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ; localizedpool 
+\OMS/cmsy/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
+\OML/cmm/m/it/10 basedoptimization[]; andRL \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/
+10 styleadaptivity[]whileaddressingblack \OMS/cmsy/m/n/10 ^^@
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.128 ...put-difficulty features. Each fragment^^Y
+                                                  s content is embedded with...
+
+[4]
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.131 ...ntegrated gradients over the surrogate^^Y
+                                                  s success head identify sa...
+
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.134 ...ping when it falls below the candidate^^Y
+                                                  s predicted LCB or a dynam...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.148 ...in OPRO/EvoPrompt/ZOPO-style loops [yang_
+                                                  2023_large, guo_2023_conne...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.149 
+      
+! Undefined control sequence.
+l.158 ...rejects $c$} \State discard $c$ \Continue
+                                                   \EndIf
+
+Underfull \vbox (badness 2103) has occurred while \output is active [5]
+
+Package natbib Warning: Citation `yang_2023_large' on page 6 undefined on input
+ line 181.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.181 ...evolutionary mutation and selection [guo_
+                                                  2023_connecting, fernando_...
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.181 ...e-based GP proxy \cite{hu_2024_localized}
+                                                  ; and (iv) random or beam ...
+
+
+Package natbib Warning: Citation `hu_2024_localized' on page 6 undefined on inp
+ut line 181.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.182 
+      
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+\T1/ptm/m/n/10 (+20) Baselines in-clude: (i) OPRO-like free-form ed-its eval-u-
+ated on dev with se-lec-
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+\T1/ptm/m/n/10 (+20) tion by dev score \T1/ptm/b/n/10 (+20) ?\T1/ptm/m/n/10 (+2
+0) ; (ii) EvoPrompt/Promptbreeder-style evo-lu-tion-ary mu-ta-tion
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+\T1/ptm/m/n/10 (+20) and se-lec-tion [guo$[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/
+10 onnecting; fernando[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 romptbreeder\OT1/
+cmr/m/n/10 ]; (\OML/cmm/m/it/10 iii\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ZOPO \OMS/
+cmsy/m/n/10 ^^@
+
+Overfull \hbox (97.67725pt too wide) in paragraph at lines 181--182
+\OML/cmm/m/it/10 likelocalsearchoveraninitialpoolwithNTK \OMS/cmsy/m/n/10 ^^@ \
+OML/cmm/m/it/10 orcosine \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 basedGPproxy[]\O
+T1/cmr/m/n/10 ; \OML/cmm/m/it/10 and\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 iv\OT1/cm
+r/m/n/10 )\OML/cmm/m/it/10 randomorbeamsearchoverfree \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (203.76108pt too wide) in paragraph at lines 181--182
+\OML/cmm/m/it/10 formprompts:AblationsincludeSURGEwithoutcalibration\OT1/cmr/m/
+n/10 (\OML/cmm/m/it/10 notemperaturescalingorconformalbounds\OT1/cmr/m/n/10 )\O
+ML/cmm/m/it/10 andSURGEwithoutthevalidator:$ 
+[6]
+
+! LaTeX Error: Unicode character ^^B (U+0002)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.187 ...-ID panel includes embeddings for A, A^^B
+                                                  7, and B^^B7. Robust objec...
+
+
+! LaTeX Error: Unicode character ^^B (U+0002)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.187 ...ncludes embeddings for A, A^^B7, and B^^B
+                                                  7. Robust objectives inclu...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.200 ...selines under matched call budgets [yang_
+                                                  2023_large, guo_2023_conne...
+
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.200 ...s without quality gains. The surrogate^^Y
+                                                  s predicted success probab...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.201 
+      
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+\T1/ptm/m/n/10 (+20) matched call bud-gets [yang$[]\OT1/cmr/m/n/10 023[]\OML/cm
+m/m/it/10 arge; guo[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 onnecting; hu[]\OT1/
+cmr/m/n/10 024[]\OML/cmm/m/it/10 ocalized\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Wil
+son \OMS/cmsy/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+\OML/cmm/m/it/10 basedearlystoppingprunedlow \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it
+/10 promisecandidateswithoutharmingbest \OMS/cmsy/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+\OML/cmm/m/it/10 of \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 roundprogress; reduci
+ngthenumberoftargetevaluations:Thepre \OMS/cmsy/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+\OML/cmm/m/it/10 callvalidatorsubstantiallyreducedschemaandsafetyviolationsrela
+tivetofree \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (1090.02931pt too wide) in paragraph at lines 200--201
+\OML/cmm/m/it/10 formmutation; whiletheablationwithoutthevalidatorshowedincreas
+edviolationswithoutqualitygains:Thesurrogatespredictedsuccessprobabilitiesexhib
+itedlowexpectedcalibrationerror; andempiricalcoverageofconformalLCBsmatchedtarg
+etlevelsondevelopmentdataandheldontest:RemovingcalibrationdegradedECEandweakene
+dLCB \OMS/cmsy/m/n/10 ^^@
+[7]
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.211 ...budgets, batch sizes, and seeds. SURGE^^Y
+                                                  s improvements were attrib...
+
+
+Package natbib Warning: Citation `hu_2024_localized' on page 8 undefined on inp
+ut line 211.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.211 ... to phrasing and lacked guardrails [yang_
+                                                  2023_large, guo_2023_conne...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.212 
+      
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.218 align with SURGE^^Y
+                         s design goals.
+[8]
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.226 ...en ZOPO-style kernel proxies and SURGE^^Y
+                                                  s calibrated surrogate dur...
+
+
+Package natbib Warning: Citation `hu_2024_localized' on page 9 undefined on inp
+ut line 226.
+
+
+Package natbib Warning: Citation `airas2025' on page 9 undefined on input line 
+228.
+
+No file paper.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+[9] (./paper.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `paper.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)</usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on paper.pdf (9 pages, 124492 bytes).
+Transcript written on paper.log.
+This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+The top-level auxiliary file: paper.aux
+The style file: iclr2024_conference.bst
+Database file #1: references.bib
+Repeated entry---line 184 of file references.bib
+ : @article{sun_2022_black
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 205 of file references.bib
+ : @article{sun_2022_black
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 247 of file references.bib
+ : @article{wen_2023_hard
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 290 of file references.bib
+ : @article{yang_2023_large
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 312 of file references.bib
+ : @article{yang_2023_large
+ :                         ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in deng_2022_rlprompt
+Warning--empty journal in ding_2021_openprompt
+Warning--empty journal in fernando_2023_promptbreeder
+Warning--empty journal in guo_2023_connecting
+Warning--empty journal in hao_2022_optimizing
+Warning--empty journal in hu_2024_localized
+Warning--empty journal in liu_2023_language
+Warning--empty journal in sun_2022_black
+Warning--empty journal in wen_2023_hard
+Warning--empty journal in yang_2023_large
+Warning--empty journal in zhou_2022_large
+(There were 5 error messages)
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./paper.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo))
+(./iclr2024_conference.sty
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)))
+(./fancyhdr.sty) (./natbib.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/units/nicefrac.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered
+.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex))
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
+.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_loader.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+)
+Package pgfplots: loading complementary utilities for your pgf version...
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgfutil-common-lists.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructure.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructureext.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
+x.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
+d.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.te
+x
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.co
+de.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
+fshading.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
+shading.pgfsys-pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.
+tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.t
+ex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.cod
+e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.
+tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
+e.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathmorphing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathmorphing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathreplacing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathreplacing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.co
+ntourlua.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryplotmarks.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.co
+de.tex))) (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./paper.aux)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(./paper.out) (./paper.out)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-ptm.cfg)
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
+
+Underfull \hbox (badness 1472) in paragraph at lines 48--48
+[]\T1/ptm/m/sc/17.28 (+20) SURGE-Prompt: Surrogate-Guided, Ro-bust,
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+
+Package natbib Warning: Citation `yang_2023_large' on page 1 undefined on input
+ line 61.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.61 ...utable fragments or risk calibration [guo_
+                                                  2023_connecting, fernando_...
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 ...rated reliability \cite{hu_2024_localized}
+                                                  . RL-based discrete optimi...
+
+
+Package natbib Warning: Citation `hu_2024_localized' on page 1 undefined on inp
+ut line 61.
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 ...ormal guarantees \cite{deng_2022_rlprompt}
+                                                  . Continuous or soft-promp...
+
+
+Package natbib Warning: Citation `deng_2022_rlprompt' on page 1 undefined on in
+put line 61.
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 ...ility and governance \cite{sun_2022_black}
+                                                  . Instruction discovery (A...
+
+
+Package natbib Warning: Citation `sun_2022_black' on page 1 undefined on input 
+line 61.
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 ...on white-box settings \cite{wen_2023_hard}
+                                                  , and prompt adaptation fo...
+
+
+Package natbib Warning: Citation `wen_2023_hard' on page 1 undefined on input l
+ine 61.
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 ...y for NLP tasks \cite{hao_2022_optimizing}
+                                                  . Related advances for VLM...
+
+
+Package natbib Warning: Citation `hao_2022_optimizing' on page 1 undefined on i
+nput line 61.
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 ...backed governance \cite{liu_2023_language}
+                                                  .
+
+Package natbib Warning: Citation `liu_2023_language' on page 1 undefined on inp
+ut line 61.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.62 
+     
+
+Underfull \hbox (badness 3343) in paragraph at lines 61--62
+\T1/ptm/m/n/10 (+20) works such as OPRO it-er-a-tively gen-er-ate so-lu-tions w
+ith tex-tual feed-back but do not
+
+Underfull \hbox (badness 3281) in paragraph at lines 61--62
+\T1/ptm/m/n/10 (+20) fur-nish cal-i-brated un-cer-tainty, validator-backed safe
+ty, or ro-bust-ness to para-phrase and
+
+Underfull \hbox (badness 4266) in paragraph at lines 61--62
+\T1/ptm/m/n/10 (+20) ver-sion drift \T1/ptm/b/n/10 (+20) ?\T1/ptm/m/n/10 (+20) 
+. Evo-lu-tion-ary meth-ods like Evo-Prompt and Prompt-breeder au-to-mate
+
+Underfull \hbox (badness 1546) in paragraph at lines 61--62
+\T1/ptm/m/n/10 (+20) mu-ta-tion and se-lec-tion, yet op-er-ate on free-form str
+ings with-out typed, im-mutable frag-
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+\T1/ptm/m/n/10 (+20) ments or risk cal-i-bra-tion [guo$[]\OT1/cmr/m/n/10 023[]\
+OML/cmm/m/it/10 onnecting; fernando[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 romp
+tbreeder\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Pool \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (168.2944pt too wide) in paragraph at lines 61--62
+\OML/cmm/m/it/10 basedlocaloptimization\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 e:g:; 
+ZOPO\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 improvesqueryefficiencyviakernelizedsurro
+gates; buttypicallycannotsynthesizenewhigh \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (240.2732pt too wide) in paragraph at lines 61--62
+\OML/cmm/m/it/10 qualitypromptsandlackscalibratedreliability[]:RL \OMS/cmsy/m/n
+/10 ^^@ \OML/cmm/m/it/10 baseddiscreteoptimization\OT1/cmr/m/n/10 (\OML/cmm/m/i
+t/10 RLPrompt\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 explorespromptspacesbutgenerally
+forgoesvalidator \OMS/cmsy/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+\OML/cmm/m/it/10 backedsafetyandconformalguarantees[]:Continuousorsoft \OMS/cms
+y/m/n/10 ^^@
+
+Overfull \hbox (878.62016pt too wide) in paragraph at lines 61--62
+\OML/cmm/m/it/10 prompttuninginLMaaSrequiresinternalaccessandcompromisesinterpr
+etabilityandgovernance[]:Instructiondiscovery\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 
+APE\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 andtoolkits\OT1/cmr/m/n/10 (\OML/cmm/m/it/
+10 OpenPrompt\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 broadenaccess; yetdonotdeliverdi
+stributionallyrobustselectionwithstatisticalguarantees\OT1/cmr/m/n/10 [\OML/cmm
+/m/it/10 zhou[]\OT1/cmr/m/n/10 022[]\OML/cmm/m/it/10 arge; ding[]\OT1/cmr/m/n/1
+0 021[]\OML/cmm/m/it/10 penprompt\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Gradient \O
+MS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (11.99257pt too wide) in paragraph at lines 61--62
+\OML/cmm/m/it/10 baseddiscretepromptdiscoveryfocusesonwhite \OMS/cmsy/m/n/10 ^^
+@ \OML/cmm/m/it/10 boxsettings[]; andpromptadaptationfortext \OMS/cmsy/m/n/10 ^
+^@
+
+Overfull \hbox (168.49152pt too wide) in paragraph at lines 61--62
+\OML/cmm/m/it/10 to \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 imageismodality \OMS/
+cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 specificandlackscalibratedreliabilityforNLPtas
+ks[]:RelatedadvancesforVLMssimilarlyoptimizeblack \OMS/cmsy/m/n/10 ^^@
+
+Underfull \vbox (badness 2469) has occurred while \output is active [1{/var/lib
+/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/
+enc/dvips/base/8r.enc}]
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+! Missing $ inserted.
+<inserted text> 
+                $
+l.72 ...nto OPRO/EvoPrompt/ZOPO-style loops [yang_
+                                                  2023_large, guo_2023_conne...
+
+
+! LaTeX Error: Command \end{itemize} invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 \end{itemize}
+                  
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 \end{itemize}
+                  
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 \end{itemize}
+                  
+! Missing $ inserted.
+<inserted text> 
+                $
+l.73 \end{itemize}
+                  
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--74
+[]\T1/ptm/b/n/10 (+20) Drop-in in-te-gra-tion API\T1/ptm/m/n/10 (+20) : A min-i
+-mal pro-pose()/learn() in-ter-face that plugs into
+
+Package natbib Warning: Citation `yang_2023_large' on page 2 undefined on input
+ line 80.
+
+
+Package natbib Warning: Citation `guo_2023_connecting' on page 2 undefined on i
+nput line 83.
+
+
+Package natbib Warning: Citation `fernando_2023_promptbreeder' on page 2 undefi
+ned on input line 83.
+
+
+Package natbib Warning: Citation `hu_2024_localized' on page 2 undefined on inp
+ut line 86.
+
+[2]
+
+Package natbib Warning: Citation `deng_2022_rlprompt' on page 3 undefined on in
+put line 89.
+
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.89 ...ration \cite{deng_2022_rlprompt}. SURGE^^Y
+                                                  s active learning and rout...
+
+
+Package natbib Warning: Citation `zhou_2022_large' on page 3 undefined on input
+ line 92.
+
+
+Package natbib Warning: Citation `ding_2021_openprompt' on page 3 undefined on 
+input line 92.
+
+
+Package natbib Warning: Citation `sun_2022_black' on page 3 undefined on input 
+line 95.
+
+
+Package natbib Warning: Citation `wen_2023_hard' on page 3 undefined on input l
+ine 95.
+
+
+Package natbib Warning: Citation `liu_2023_language' on page 3 undefined on inp
+ut line 98.
+
+
+Package natbib Warning: Citation `hao_2022_optimizing' on page 3 undefined on i
+nput line 98.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.100 ...ee-form strings without guarantees [yang_
+                                                  2023_large, guo_2023_conne...
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.100 ...s or calibration \cite{hu_2024_localized}
+                                                  , or rely on internal acce...
+
+
+Package natbib Warning: Citation `hu_2024_localized' on page 3 undefined on inp
+ut line 100.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.101 
+      
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+[]\T1/ptm/m/n/10 (+20) In sum-mary, prior meth-ods ei-ther op-ti-mize free-form
+ strings with-out guar-an-tees
+
+Overfull \hbox (958.00824pt too wide) in paragraph at lines 100--101
+\T1/ptm/m/n/10 (-20) [yang$[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 arge; guo[]\
+OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 onnecting; fernando[]\OT1/cmr/m/n/10 023[]
+\OML/cmm/m/it/10 romptbreeder\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ; focusonlocalpo
+olswithoutsynthesisorcalibration[]; orrelyoninternalaccess\OT1/cmr/m/n/10 [\OML
+/cmm/m/it/10 sun[]\OT1/cmr/m/n/10 022[]\OML/cmm/m/it/10 lack; wen[]\OT1/cmr/m/n
+/10 023[]\OML/cmm/m/it/10 ard\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :SURGEdiffersbyc
+ombiningatyped; validatedPIRwithacalibratedsurrogateanddistributionallyrobustac
+quisition; andbyprovidingadrop \OMS/cmsy/m/n/10 ^^@
+[3]
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.117 SURGE^^Y
+              s learner prioritizes high-uncertainty or high-surprise candid...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.120 ... discovery and evolutionary search [zhou_
+                                                  2022_large, guo_2023_conne...
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.120 ...sed optimization \cite{hu_2024_localized}
+                                                  , and RL-style adaptivity ...
+
+
+Package natbib Warning: Citation `hu_2024_localized' on page 4 undefined on inp
+ut line 120.
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.120 ...tyle adaptivity \cite{deng_2022_rlprompt}
+                                                   while addressing black-bo...
+
+
+Package natbib Warning: Citation `deng_2022_rlprompt' on page 4 undefined on in
+put line 120.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.121 
+      
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
+\T1/ptm/m/n/10 (+20) This setup uni-fies ad-van-tages of in-struc-tion dis-cov-
+ery and evo-lu-tion-ary search
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
+\T1/ptm/m/n/10 (+20) [zhou$[]\OT1/cmr/m/n/10 022[]\OML/cmm/m/it/10 arge; guo[]\
+OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 onnecting; fernando[]\OT1/cmr/m/n/10 023[]
+\OML/cmm/m/it/10 romptbreeder\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ; localizedpool 
+\OMS/cmsy/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
+\OML/cmm/m/it/10 basedoptimization[]; andRL \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/
+10 styleadaptivity[]whileaddressingblack \OMS/cmsy/m/n/10 ^^@
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.128 ...put-difficulty features. Each fragment^^Y
+                                                  s content is embedded with...
+
+[4]
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.131 ...ntegrated gradients over the surrogate^^Y
+                                                  s success head identify sa...
+
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.134 ...ping when it falls below the candidate^^Y
+                                                  s predicted LCB or a dynam...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.148 ...in OPRO/EvoPrompt/ZOPO-style loops [yang_
+                                                  2023_large, guo_2023_conne...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.149 
+      
+! Undefined control sequence.
+l.158 ...rejects $c$} \State discard $c$ \Continue
+                                                   \EndIf
+
+Underfull \vbox (badness 2103) has occurred while \output is active [5]
+
+Package natbib Warning: Citation `yang_2023_large' on page 6 undefined on input
+ line 181.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.181 ...evolutionary mutation and selection [guo_
+                                                  2023_connecting, fernando_...
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.181 ...e-based GP proxy \cite{hu_2024_localized}
+                                                  ; and (iv) random or beam ...
+
+
+Package natbib Warning: Citation `hu_2024_localized' on page 6 undefined on inp
+ut line 181.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.182 
+      
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+\T1/ptm/m/n/10 (+20) Baselines in-clude: (i) OPRO-like free-form ed-its eval-u-
+ated on dev with se-lec-
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+\T1/ptm/m/n/10 (+20) tion by dev score \T1/ptm/b/n/10 (+20) ?\T1/ptm/m/n/10 (+2
+0) ; (ii) EvoPrompt/Promptbreeder-style evo-lu-tion-ary mu-ta-tion
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+\T1/ptm/m/n/10 (+20) and se-lec-tion [guo$[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/
+10 onnecting; fernando[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 romptbreeder\OT1/
+cmr/m/n/10 ]; (\OML/cmm/m/it/10 iii\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ZOPO \OMS/
+cmsy/m/n/10 ^^@
+
+Overfull \hbox (97.67725pt too wide) in paragraph at lines 181--182
+\OML/cmm/m/it/10 likelocalsearchoveraninitialpoolwithNTK \OMS/cmsy/m/n/10 ^^@ \
+OML/cmm/m/it/10 orcosine \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 basedGPproxy[]\O
+T1/cmr/m/n/10 ; \OML/cmm/m/it/10 and\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 iv\OT1/cm
+r/m/n/10 )\OML/cmm/m/it/10 randomorbeamsearchoverfree \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (203.76108pt too wide) in paragraph at lines 181--182
+\OML/cmm/m/it/10 formprompts:AblationsincludeSURGEwithoutcalibration\OT1/cmr/m/
+n/10 (\OML/cmm/m/it/10 notemperaturescalingorconformalbounds\OT1/cmr/m/n/10 )\O
+ML/cmm/m/it/10 andSURGEwithoutthevalidator:$ 
+[6]
+
+! LaTeX Error: Unicode character ^^B (U+0002)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.187 ...-ID panel includes embeddings for A, A^^B
+                                                  7, and B^^B7. Robust objec...
+
+
+! LaTeX Error: Unicode character ^^B (U+0002)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.187 ...ncludes embeddings for A, A^^B7, and B^^B
+                                                  7. Robust objectives inclu...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.200 ...selines under matched call budgets [yang_
+                                                  2023_large, guo_2023_conne...
+
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.200 ...s without quality gains. The surrogate^^Y
+                                                  s predicted success probab...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.201 
+      
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+\T1/ptm/m/n/10 (+20) matched call bud-gets [yang$[]\OT1/cmr/m/n/10 023[]\OML/cm
+m/m/it/10 arge; guo[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 onnecting; hu[]\OT1/
+cmr/m/n/10 024[]\OML/cmm/m/it/10 ocalized\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Wil
+son \OMS/cmsy/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+\OML/cmm/m/it/10 basedearlystoppingprunedlow \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it
+/10 promisecandidateswithoutharmingbest \OMS/cmsy/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+\OML/cmm/m/it/10 of \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 roundprogress; reduci
+ngthenumberoftargetevaluations:Thepre \OMS/cmsy/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+\OML/cmm/m/it/10 callvalidatorsubstantiallyreducedschemaandsafetyviolationsrela
+tivetofree \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (1090.02931pt too wide) in paragraph at lines 200--201
+\OML/cmm/m/it/10 formmutation; whiletheablationwithoutthevalidatorshowedincreas
+edviolationswithoutqualitygains:Thesurrogatespredictedsuccessprobabilitiesexhib
+itedlowexpectedcalibrationerror; andempiricalcoverageofconformalLCBsmatchedtarg
+etlevelsondevelopmentdataandheldontest:RemovingcalibrationdegradedECEandweakene
+dLCB \OMS/cmsy/m/n/10 ^^@
+[7]
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.211 ...budgets, batch sizes, and seeds. SURGE^^Y
+                                                  s improvements were attrib...
+
+
+Package natbib Warning: Citation `hu_2024_localized' on page 8 undefined on inp
+ut line 211.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.211 ... to phrasing and lacked guardrails [yang_
+                                                  2023_large, guo_2023_conne...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.212 
+      
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.218 align with SURGE^^Y
+                         s design goals.
+[8]
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.226 ...en ZOPO-style kernel proxies and SURGE^^Y
+                                                  s calibrated surrogate dur...
+
+
+Package natbib Warning: Citation `hu_2024_localized' on page 9 undefined on inp
+ut line 226.
+
+
+Package natbib Warning: Citation `airas2025' on page 9 undefined on input line 
+228.
+
+(./paper.bbl (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd))
+
+Package natbib Warning: There were undefined citations.
+
+[9] (./paper.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+) )
+(see the transcript file for additional information)</usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on paper.pdf (9 pages, 139584 bytes).
+Transcript written on paper.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./paper.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo))
+(./iclr2024_conference.sty
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)))
+(./fancyhdr.sty) (./natbib.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/units/nicefrac.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered
+.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex))
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
+.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_loader.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+)
+Package pgfplots: loading complementary utilities for your pgf version...
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgfutil-common-lists.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructure.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructureext.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
+x.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
+d.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.te
+x
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.co
+de.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
+fshading.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
+shading.pgfsys-pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.
+tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.t
+ex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.cod
+e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.
+tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
+e.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathmorphing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathmorphing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathreplacing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathreplacing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.co
+ntourlua.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryplotmarks.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.co
+de.tex))) (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./paper.aux)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(./paper.out) (./paper.out)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-ptm.cfg)
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
+
+Underfull \hbox (badness 1472) in paragraph at lines 48--48
+[]\T1/ptm/m/sc/17.28 (+20) SURGE-Prompt: Surrogate-Guided, Ro-bust,
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+! Missing $ inserted.
+<inserted text> 
+                $
+l.61 ...utable fragments or risk calibration [guo_
+                                                  2023_connecting, fernando_...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.62 
+     
+
+Underfull \hbox (badness 3068) in paragraph at lines 61--62
+\T1/ptm/m/n/10 (+20) cal-i-brated un-cer-tainty, validator-backed safety, or ro
+-bust-ness to para-phrase and ver-sion
+
+Underfull \hbox (badness 1377) in paragraph at lines 61--62
+\T1/ptm/m/n/10 (+20) mate mu-ta-tion and se-lec-tion, yet op-er-ate on free-for
+m strings with-out typed, im-mutable
+
+Underfull \hbox (badness 4518) in paragraph at lines 61--62
+\T1/ptm/m/n/10 (+20) frag-ments or risk cal-i-bra-tion [guo$[]\OT1/cmr/m/n/10 0
+23[]\OML/cmm/m/it/10 onnecting; fernando[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10
+ romptbreeder\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Pool \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (168.2944pt too wide) in paragraph at lines 61--62
+\OML/cmm/m/it/10 basedlocaloptimization\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 e:g:; 
+ZOPO\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 improvesqueryefficiencyviakernelizedsurro
+gates; buttypicallycannotsynthesizenewhigh \OMS/cmsy/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+\OML/cmm/m/it/10 qualitypromptsandlackscalibratedreliability[][][] \OT1/cmr/m/n
+/10 ([]2024[])\OML/cmm/m/it/10 :RL \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (14.24382pt too wide) in paragraph at lines 61--62
+\OML/cmm/m/it/10 baseddiscreteoptimization\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 RLP
+rompt\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 explorespromptspacesbutgenerallyforgoesv
+alidator \OMS/cmsy/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+\OML/cmm/m/it/10 backedsafetyandconformalguarantees[][][] \OT1/cmr/m/n/10 ([]20
+22[])\OML/cmm/m/it/10 :Continuousorsoft \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (944.02269pt too wide) in paragraph at lines 61--62
+\OML/cmm/m/it/10 prompttuninginLMaaSrequiresinternalaccessandcompromisesinterpr
+etabilityandgovernance[][][] \OT1/cmr/m/n/10 ([]2022[])\OML/cmm/m/it/10 :Instru
+ctiondiscovery\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 APE\OT1/cmr/m/n/10 )\OML/cmm/m/
+it/10 andtoolkits\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 OpenPrompt\OT1/cmr/m/n/10 )\
+OML/cmm/m/it/10 broadenaccess; yetdonotdeliverdistributionallyrobustselectionwi
+thstatisticalguarantees\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 zhou[]\OT1/cmr/m/n/10 
+022[]\OML/cmm/m/it/10 arge; ding[]\OT1/cmr/m/n/10 021[]\OML/cmm/m/it/10 penprom
+pt\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Gradient \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (80.45181pt too wide) in paragraph at lines 61--62
+\OML/cmm/m/it/10 baseddiscretepromptdiscoveryfocusesonwhite \OMS/cmsy/m/n/10 ^^
+@ \OML/cmm/m/it/10 boxsettings[][][] \OT1/cmr/m/n/10 ([]2023[])\OML/cmm/m/it/10
+ ; andpromptadaptationfortext \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (234.71689pt too wide) in paragraph at lines 61--62
+\OML/cmm/m/it/10 to \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 imageismodality \OMS/
+cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 specificandlackscalibratedreliabilityforNLPtas
+ks[][][] \OT1/cmr/m/n/10 ([]2022[])\OML/cmm/m/it/10 :RelatedadvancesforVLMssimi
+larlyoptimizeblack \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (7.90086pt too wide) in paragraph at lines 61--62
+\OML/cmm/m/it/10 boxpromptsbutwithoutcalibrateduncertaintyorvalidator \OMS/cmsy
+/m/n/10 ^^@ \OML/cmm/m/it/10 backedgovernance[][][] \OT1/cmr/m/n/10 ([]2023[])\
+OML/cmm/m/it/10 :$ 
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
+dist/fonts/enc/dvips/base/8r.enc}]
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+! Missing $ inserted.
+<inserted text> 
+                $
+l.72 ...nto OPRO/EvoPrompt/ZOPO-style loops [yang_
+                                                  2023_large, guo_2023_conne...
+
+
+! LaTeX Error: Command \end{itemize} invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 \end{itemize}
+                  
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 \end{itemize}
+                  
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 \end{itemize}
+                  
+! Missing $ inserted.
+<inserted text> 
+                $
+l.73 \end{itemize}
+                  
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--74
+[]\T1/ptm/b/n/10 (+20) Drop-in in-te-gra-tion API\T1/ptm/m/n/10 (+20) : A min-i
+-mal pro-pose()/learn() in-ter-face that plugs into
+[2]
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.89 ...ration \cite{deng_2022_rlprompt}. SURGE^^Y
+                                                  s active learning and rout...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.100 ...ee-form strings without guarantees [yang_
+                                                  2023_large, guo_2023_conne...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.101 
+      
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+[]\T1/ptm/m/n/10 (+20) In sum-mary, prior meth-ods ei-ther op-ti-mize free-form
+ strings with-out guar-an-tees
+
+Overfull \hbox (1019.82507pt too wide) in paragraph at lines 100--101
+\T1/ptm/m/n/10 (-20) [yang$[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 arge; guo[]\
+OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 onnecting; fernando[]\OT1/cmr/m/n/10 023[]
+\OML/cmm/m/it/10 romptbreeder\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ; focusonlocalpo
+olswithoutsynthesisorcalibration[][][] \OT1/cmr/m/n/10 ([]2024[])\OML/cmm/m/it/
+10 ; orrelyoninternalaccess\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 sun[]\OT1/cmr/m/n/
+10 022[]\OML/cmm/m/it/10 lack; wen[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 ard\O
+T1/cmr/m/n/10 ]\OML/cmm/m/it/10 :SURGEdiffersbycombiningatyped; validatedPIRwit
+hacalibratedsurrogateanddistributionallyrobustacquisition; andbyprovidingadrop 
+\OMS/cmsy/m/n/10 ^^@
+[3]
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.117 SURGE^^Y
+              s learner prioritizes high-uncertainty or high-surprise candid...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.120 ... discovery and evolutionary search [zhou_
+                                                  2022_large, guo_2023_conne...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.121 
+      
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
+\T1/ptm/m/n/10 (+20) This setup uni-fies ad-van-tages of in-struc-tion dis-cov-
+ery and evo-lu-tion-ary search
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
+\T1/ptm/m/n/10 (+20) [zhou$[]\OT1/cmr/m/n/10 022[]\OML/cmm/m/it/10 arge; guo[]\
+OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 onnecting; fernando[]\OT1/cmr/m/n/10 023[]
+\OML/cmm/m/it/10 romptbreeder\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ; localizedpool 
+\OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (40.58018pt too wide) in paragraph at lines 120--121
+\OML/cmm/m/it/10 basedoptimization[][][] \OT1/cmr/m/n/10 ([]2024[])\OML/cmm/m/i
+t/10 ; andRL \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 styleadaptivity[][][] \OT1/c
+mr/m/n/10 ([]2022[])\OML/cmm/m/it/10 whileaddressingblack \OMS/cmsy/m/n/10 ^^@
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.128 ...put-difficulty features. Each fragment^^Y
+                                                  s content is embedded with...
+
+[4]
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.131 ...ntegrated gradients over the surrogate^^Y
+                                                  s success head identify sa...
+
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.134 ...ping when it falls below the candidate^^Y
+                                                  s predicted LCB or a dynam...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.148 ...in OPRO/EvoPrompt/ZOPO-style loops [yang_
+                                                  2023_large, guo_2023_conne...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.149 
+      
+! Undefined control sequence.
+l.158 ...rejects $c$} \State discard $c$ \Continue
+                                                   \EndIf
+
+Underfull \vbox (badness 2103) has occurred while \output is active [5]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.181 ...evolutionary mutation and selection [guo_
+                                                  2023_connecting, fernando_...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.182 
+      
+
+Underfull \hbox (badness 3088) in paragraph at lines 181--182
+\T1/ptm/m/n/10 (+20) Baselines in-clude: (i) OPRO-like free-form ed-its eval-u-
+ated on dev with se-lec-tion by
+
+Underfull \hbox (badness 5050) in paragraph at lines 181--182
+\T1/ptm/m/n/10 (+20) dev score []Yang et al.[] ([]2023[]); (ii) EvoPrompt/Promp
+tbreeder-style evo-lu-tion-ary mu-ta-
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+\T1/ptm/m/n/10 (+20) tion and se-lec-tion [guo$[]\OT1/cmr/m/n/10 023[]\OML/cmm/
+m/it/10 onnecting; fernando[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 romptbreeder
+\OT1/cmr/m/n/10 ]; (\OML/cmm/m/it/10 iii\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ZOPO 
+\OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (159.49408pt too wide) in paragraph at lines 181--182
+\OML/cmm/m/it/10 likelocalsearchoveraninitialpoolwithNTK \OMS/cmsy/m/n/10 ^^@ \
+OML/cmm/m/it/10 orcosine \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 basedGPproxy[][]
+[] \OT1/cmr/m/n/10 ([]2024[]); \OML/cmm/m/it/10 and\OT1/cmr/m/n/10 (\OML/cmm/m/
+it/10 iv\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 randomorbeamsearchoverfree \OMS/cmsy/
+m/n/10 ^^@
+
+Overfull \hbox (203.76108pt too wide) in paragraph at lines 181--182
+\OML/cmm/m/it/10 formprompts:AblationsincludeSURGEwithoutcalibration\OT1/cmr/m/
+n/10 (\OML/cmm/m/it/10 notemperaturescalingorconformalbounds\OT1/cmr/m/n/10 )\O
+ML/cmm/m/it/10 andSURGEwithoutthevalidator:$ 
+[6]
+
+! LaTeX Error: Unicode character ^^B (U+0002)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.187 ...-ID panel includes embeddings for A, A^^B
+                                                  7, and B^^B7. Robust objec...
+
+
+! LaTeX Error: Unicode character ^^B (U+0002)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.187 ...ncludes embeddings for A, A^^B7, and B^^B
+                                                  7. Robust objectives inclu...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.200 ...selines under matched call budgets [yang_
+                                                  2023_large, guo_2023_conne...
+
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.200 ...s without quality gains. The surrogate^^Y
+                                                  s predicted success probab...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.201 
+      
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+\T1/ptm/m/n/10 (+20) matched call bud-gets [yang$[]\OT1/cmr/m/n/10 023[]\OML/cm
+m/m/it/10 arge; guo[]\OT1/cmr/m/n/10 023[]\OML/cmm/m/it/10 onnecting; hu[]\OT1/
+cmr/m/n/10 024[]\OML/cmm/m/it/10 ocalized\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 :Wil
+son \OMS/cmsy/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+\OML/cmm/m/it/10 basedearlystoppingprunedlow \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it
+/10 promisecandidateswithoutharmingbest \OMS/cmsy/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+\OML/cmm/m/it/10 of \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 roundprogress; reduci
+ngthenumberoftargetevaluations:Thepre \OMS/cmsy/m/n/10 ^^@
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+\OML/cmm/m/it/10 callvalidatorsubstantiallyreducedschemaandsafetyviolationsrela
+tivetofree \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (1090.02931pt too wide) in paragraph at lines 200--201
+\OML/cmm/m/it/10 formmutation; whiletheablationwithoutthevalidatorshowedincreas
+edviolationswithoutqualitygains:Thesurrogatespredictedsuccessprobabilitiesexhib
+itedlowexpectedcalibrationerror; andempiricalcoverageofconformalLCBsmatchedtarg
+etlevelsondevelopmentdataandheldontest:RemovingcalibrationdegradedECEandweakene
+dLCB \OMS/cmsy/m/n/10 ^^@
+[7]
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.211 ...budgets, batch sizes, and seeds. SURGE^^Y
+                                                  s improvements were attrib...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.211 ... to phrasing and lacked guardrails [yang_
+                                                  2023_large, guo_2023_conne...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.212 
+      
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.218 align with SURGE^^Y
+                         s design goals.
+[8]
+
+! LaTeX Error: Unicode character ^^Y (U+0019)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.226 ...en ZOPO-style kernel proxies and SURGE^^Y
+                                                  s calibrated surrogate dur...
+
+(./paper.bbl (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd))
+[9] (./paper.aux) )
+(see the transcript file for additional information)</usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on paper.pdf (9 pages, 141606 bytes).
+Transcript written on paper.log.

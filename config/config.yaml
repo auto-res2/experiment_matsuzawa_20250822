@@ -1,0 +1,14 @@
+# Experimental Parameters for src/main.py
+# These values are the defaults and can be overridden by command-line arguments.
+
+# Training configuration
+epochs: 10
+batch_size: 64
+lr: 0.001
+
+# SNN configuration
+T: 16  # Number of simulation time steps for the SNN
+
+# Experiment setup
+num_seeds: 2  # Number of times to run each experiment with a different random seed
+gpu: 0  # Default GPU ID to use for training

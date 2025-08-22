@@ -1,1 +1,8 @@
-# Please list the required python packages.
+torch>=1.9.0
+torchvision>=0.10.0
+spiking-jelly>=0.0.0.0.15
+matplotlib
+seaborn
+numpy
+pandas
+tqdm

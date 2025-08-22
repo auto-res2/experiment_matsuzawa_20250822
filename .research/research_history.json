@@ -6,5 +6,52 @@
     "微分可能 論理ネットワーク",
     "Logic Gate Network Optimization",
     "ニューラル論理マシン 安定性"
+  ],
+  "research_study_list": [
+    {
+      "title": "Deep Differentiable Logic Gate Networks"
+    },
+    {
+      "title": "Convolutional Differentiable Logic Gate Networks"
+    },
+    {
+      "title": "Convolutional Differentiable Logic Gate Networks"
+    },
+    {
+      "title": "Towards Next-Generation Logic Synthesis: A Scalable Neural Circuit Generation Framework"
+    },
+    {
+      "title": "Deep Differentiable Logic Gate Networks"
+    },
+    {
+      "title": "Convolutional Differentiable Logic Gate Networks"
+    },
+    {
+      "title": "Deep Differentiable Logic Gate Networks"
+    },
+    {
+      "title": "Differentiable Neuro-Symbolic Reasoning on Large-Scale Knowledge Graphs"
+    },
+    {
+      "title": "Learning Reliable Logical Rules with SATNet"
+    },
+    {
+      "title": "Convolutional Differentiable Logic Gate Networks"
+    },
+    {
+      "title": "Convolutional Differentiable Logic Gate Networks"
+    },
+    {
+      "title": "Deep Differentiable Logic Gate Networks"
+    },
+    {
+      "title": "Unconditional stability of a recurrent neural circuit implementing divisive normalization"
+    },
+    {
+      "title": "Robust Stable Spiking Neural Networks"
+    },
+    {
+      "title": "RNNs of RNNs: Recursive Construction of Stable Assemblies of Recurrent Neural Networks"
+    }
   ]
 }

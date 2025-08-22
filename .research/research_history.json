@@ -6,5 +6,52 @@
     "LLM Conformal Prediction",
     "Bayesian LLM Uncertainty",
     "LLM Hallucination Detection"
+  ],
+  "research_study_list": [
+    {
+      "title": "Benchmarking LLMs via Uncertainty Quantification"
+    },
+    {
+      "title": "Large Language Models Must Be Taught to Know What They Don’t Know"
+    },
+    {
+      "title": "Distinguishing the Knowable from the Unknowable with Language Models"
+    },
+    {
+      "title": "Thermometer: Towards Universal Calibration for Large Language Models"
+    },
+    {
+      "title": "LitCab: Lightweight Language Model Calibration over Short- and Long-form Responses"
+    },
+    {
+      "title": "Linguistic Calibration of Long-Form Generations"
+    },
+    {
+      "title": "Large language model validity via enhanced conformal prediction methods"
+    },
+    {
+      "title": "Language Models with Conformal Factuality Guarantees"
+    },
+    {
+      "title": "Conformal Language Modeling"
+    },
+    {
+      "title": "BLoB: Bayesian Low-Rank Adaptation by Backpropagation for Large Language Models"
+    },
+    {
+      "title": "Decomposing Uncertainty for Large Language Models through Input Clarification Ensembling"
+    },
+    {
+      "title": "Decomposing Uncertainty for Large Language Models through Input Clarification Ensembling"
+    },
+    {
+      "title": "LLM-Check: Investigating Detection of Hallucinations in Large Language Models"
+    },
+    {
+      "title": "HaloScope: Harnessing Unlabeled LLM Generations for Hallucination Detection"
+    },
+    {
+      "title": "ANAH-v2: Scaling Analytical Hallucination Annotation of Large Language Models"
+    }
   ]
 }

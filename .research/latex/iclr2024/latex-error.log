@@ -265,379 +265,72 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...e loss landscape \cite{author\_year\_meta}
-                                                  . By approximating the Hes...
+
+Package natbib Warning: Citation `author-year-meta' on page 1 undefined on inpu
+t line 55.
 
 
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-emeta' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...s like ELLA \cite{deng\_2022\_accelerated}
-                                                   or Laplace Redux \cite{da...
+Package natbib Warning: Citation `deng-2022-accelerated' on page 1 undefined on
+ input line 55.
 
 
-Package natbib Warning: Citation `deng\T1\textunderscore2022\T1\textunderscorea
-ccelerated' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...lace Redux \cite{daxberger\_2021\_laplace}
-                                                   are inherently offline, r...
+Package natbib Warning: Citation `daxberger-2021-laplace' on page 1 undefined o
+n input line 55.
 
 
-Package natbib Warning: Citation `daxberger\T1\textunderscore2021\T1\textunders
-corelaplace' on page 1 undefined on input line 55.
+Package natbib Warning: Citation `hiratani-2024-disentangling' on page 1 undefi
+ned on input line 57.
 
-! Undefined control sequence.
-l.55 ...able for true lifelong learning streams.\n
-                                                  \nThis division creates a ...
-
-! Undefined control sequence.
-l.55 ...or true lifelong learning streams.\n\nThis
-                                                   division creates a critic...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...lemma \cite{hiratani\_2024\_disentangling}
-                                                  .\n\nTo address these chal...
-
-
-Package natbib Warning: Citation `hiratani\T1\textunderscore2024\T1\textundersc
-oredisentangling' on page 1 undefined on input line 55.
-
-! Undefined control sequence.
-l.55 ...ma \cite{hiratani\_2024\_disentangling}.\n
-                                                  \nTo address these challen...
-
-! Undefined control sequence.
-l.55 ...cite{hiratani\_2024\_disentangling}.\n\nTo
-                                                   address these challenges,...
-
-! Undefined control sequence.
-l.55 ...arning along novel geometric directions.\n
-                                                  \nOur primary contribution...
-
-! Undefined control sequence.
-l.55 ...g along novel geometric directions.\n\nOur
-                                                   primary contributions are...
-
-! Undefined control sequence.
-l.55 ...ur primary contributions are as follows:\n
-                                                  \begin{itemize}
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}]
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-! Undefined control sequence.
-l.60 \nWe
-          validate SOCA on the Permuted MNIST and Split CIFAR-100 continual ...
 
-! Undefined control sequence.
-l.64 ... contrasting it with existing paradigms.\n
-                                                  \n\subsection{Streaming an...
-
-! Undefined control sequence.
-l.64 ...ontrasting it with existing paradigms.\n\n
-                                                  \subsection{Streaming and ...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ... during training \cite{author\_year\_long}
-                                                  . Methods like Averaged Gr...
+Package natbib Warning: Citation `author-year-long' on page 2 undefined on inpu
+t line 75.
 
 
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-elong' on page 2 undefined on input line 65.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...n be biased \cite{sun\_2023\_regularizing}
-                                                  . In contrast, SOCA replac...
+Package natbib Warning: Citation `sun-2023-regularizing' on page 2 undefined on
+ input line 75.
 
 
-Package natbib Warning: Citation `sun\T1\textunderscore2023\T1\textunderscorere
-gularizing' on page 2 undefined on input line 65.
-
-! Undefined control sequence.
-l.65 ...led approach to knowledge consolidation.\n
-                                                  \n\subsection{Second-Order...
-
-! Undefined control sequence.
-l.65 ...d approach to knowledge consolidation.\n\n
-                                                  \subsection{Second-Order a...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.66 ...importance \cite{daxberger\_2021\_laplace}
-                                                  . ELLA \cite{deng\_2022\_a...
+Package natbib Warning: Citation `daxberger-2021-laplace' on page 2 undefined o
+n input line 78.
 
 
-Package natbib Warning: Citation `daxberger\T1\textunderscore2021\T1\textunders
-corelaplace' on page 2 undefined on input line 66.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.66 ...lace}. ELLA \cite{deng\_2022\_accelerated}
-                                                   provides an efficient way...
-
-
-Package natbib Warning: Citation `deng\T1\textunderscore2022\T1\textunderscorea
-ccelerated' on page 2 undefined on input line 66.
-
-! Undefined control sequence.
-l.66 ...ethods to a scalable, streaming context.\n
-                                                  \n\subsection{Meta-Continu...
-
-! Undefined control sequence.
-l.66 ...hods to a scalable, streaming context.\n\n
-                                                  \subsection{Meta-Continual...
+Package natbib Warning: Citation `deng-2022-accelerated' on page 2 undefined on
+ input line 78.
 
 [2]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.67 ...orithms like MAML \cite{finn\_2017\_model}
-                                                   to an online setting, aim...
+
+Package natbib Warning: Citation `finn-2017-model' on page 3 undefined on input
+ line 81.
 
 
-Package natbib Warning: Citation `finn\T1\textunderscore2017\T1\textunderscorem
-odel' on page 3 undefined on input line 67.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.67 ...mization process \cite{author\_year\_meta}
-                                                  . SOCA contributes to this...
+Package natbib Warning: Citation `author-year-meta' on page 3 undefined on inpu
+t line 81.
 
 
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-emeta' on page 3 undefined on input line 67.
-
-! Undefined control sequence.
-l.71 ...r optimization upon which SOCA is built.\n
-                                                  \n\subsection{Continual Le...
-
-! Undefined control sequence.
-l.71 ...optimization upon which SOCA is built.\n\n
-                                                  \subsection{Continual Lear...
-
-! Undefined control sequence.
-l.72 ...ting parameters important for old tasks.\n
-                                                  \n\subsection{Curvature an...
-
-! Undefined control sequence.
-l.72 ...ng parameters important for old tasks.\n\n
-                                                  \subsection{Curvature and ...
-
-! Undefined control sequence.
-l.73 ...task's solution and should be preserved.\n
-                                                  \n\subsection{Low-Rank Hes...
-
-! Undefined control sequence.
-l.73 ...sk's solution and should be preserved.\n\n
-                                                  \subsection{Low-Rank Hessi...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.74 ...A framework \cite{deng\_2022\_accelerated}
-                                                   provides an efficient met...
-
-
-Package natbib Warning: Citation `deng\T1\textunderscore2022\T1\textunderscorea
-ccelerated' on page 3 undefined on input line 74.
-
-! Undefined control sequence.
-l.74 ...g the explicit formation of the Hessian.\n
-                                                  \n\subsection{Problem Sett...
-
-! Undefined control sequence.
-l.74 ...the explicit formation of the Hessian.\n\n
-                                                  \subsection{Problem Settin...
+Package natbib Warning: Citation `deng-2022-accelerated' on page 3 undefined on
+ input line 94.
 
 [3]
-! Undefined control sequence.
-l.79 ...three key stages for each incoming task.\n
-                                                  \n\textbf{1. Task-Local Cu...
 
-! Undefined control sequence.
-l.79 ...ree key stages for each incoming task.\n\n
-                                                  \textbf{1. Task-Local Curv...
+Package natbib Warning: Citation `deng-2022-accelerated' on page 4 undefined on
+ input line 104.
 
-! Undefined control sequence.
-<recently read> \nFor 
-                      
-l.79 ...f{1. Task-Local Curvature Estimation}\nFor
-                                                   each new task $T_t$, we b...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.79 ...e from ELLA \cite{deng\_2022\_accelerated}
-                                                  , which uses a Nyström ap...
-
-
-Package natbib Warning: Citation `deng\T1\textunderscore2022\T1\textunderscorea
-ccelerated' on page 4 undefined on input line 79.
-
-! Undefined control sequence.
-l.79 ...NTK) to extract this low-rank structure.\n
-                                                  \n\textbf{2. Streaming Ort...
-
-! Undefined control sequence.
-l.79 ...K) to extract this low-rank structure.\n\n
-                                                  \textbf{2. Streaming Ortho...
-
-! Undefined control sequence.
-<recently read> \nThis 
-                       
-l.79 ...nal Curvature Fusion (Core Novelty)}\nThis
-                                                   stage is the core of SOCA...
-
-! Undefined control sequence.
-l.85 \n
-       \textbf{3. Dual-Use Meta-Curvature for Stability and Plasticity}\nOnc...
-
-! Undefined control sequence.
-<recently read> \nOnce 
-                       
-l.85 ...vature for Stability and Plasticity}\nOnce
-                                                   updated, the global model...
-
-[4]
-! Undefined control sequence.
-l.93 ...reaming Meta-Continual Learning setting.\n
-                                                  \n\textbf{Datasets and Tas...
-
-! Undefined control sequence.
-l.93 ...aming Meta-Continual Learning setting.\n\n
-                                                  \textbf{Datasets and Task ...
-
-! Undefined control sequence.
-<recently read> \nWe 
-                     
-l.93 ...textbf{Datasets and Task Formulation:}\nWe
-                                                   utilized two standard con...
-
-! Undefined control sequence.
-l.93 ...sess performance in different scenarios:\n
-                                                  \begin{itemize}
-! Undefined control sequence.
-l.98 \n
-       \textbf{Baselines for Comparison:}\nWe compared SOCA against a set of...
-
-! Undefined control sequence.
-<recently read> \nWe 
-                     
-l.98 \n\textbf{Baselines for Comparison:}\nWe
-                                              compared SOCA against a set of...
-
-! Undefined control sequence.
-l.98 ...ainst a set of representative baselines:\n
-                                                  \begin{itemize}
-! Undefined control sequence.
-l.104 \n
-        \textbf{Evaluation Metrics:}\nWe employed a suite of standard metric...
-
-! Undefined control sequence.
-<recently read> \nWe 
-                     
-l.104 \n\textbf{Evaluation Metrics:}\nWe
-                                         employed a suite of standard metric...
-
-! Undefined control sequence.
-l.104 ...trics to provide a holistic evaluation:\n
-                                                  \begin{itemize}
-! Undefined control sequence.
-l.110 \n
-        \textbf{Implementation Details:}\nAll experiments were implemented i...
-
-! Undefined control sequence.
-<recently read> \nAll 
-                      
-l.110 \n\textbf{Implementation Details:}\nAll
-                                              experiments were implemented i...
-
-[5]
-! Undefined control sequence.
-l.114 ...different continual learning scenarios.\n
-                                                  \n\subsection{Performance ...
-
-! Undefined control sequence.
-l.114 ...fferent continual learning scenarios.\n\n
-                                                  \subsection{Performance on...
-
-! Undefined control sequence.
-l.115 ...hese metrics is visualized in Figure 1.\n
-                                                  \nFurthermore, SOCA proved...
-
-! Undefined control sequence.
-l.115 ...is visualized in Figure 1.\n\nFurthermore
-                                                  , SOCA proved highly effec...
-
-! Undefined control sequence.
-l.115 ...urther illustrate this performance gap.\n
-                                                  \n\subsection{Performance ...
-
-! Undefined control sequence.
-l.115 ...ther illustrate this performance gap.\n\n
-                                                  \subsection{Performance on...
-
-! Undefined control sequence.
-l.116 ...hallenge in class-incremental learning.\n
-                                                  \n\subsection{Analysis of ...
-
-! Undefined control sequence.
-l.116 ...llenge in class-incremental learning.\n\n
-                                                  \subsection{Analysis of Tr...
-
-! Undefined control sequence.
-l.117 ...n this difficult but important setting.\n
-                                                  \n\begin{figure}[H]
-! Undefined control sequence.
-l.117 ...this difficult but important setting.\n\n
-                                                  \begin{figure}[H]
-
-Underfull \vbox (badness 10000) has occurred while \output is active [6]
-Underfull \vbox (badness 10000) has occurred while \output is active [7 <./imag
-es/metrics_comparison_permuted_mnist.pdf> <./images/metrics_comparison_split_ci
-far100.pdf> <./images/accuracy_heatmap_soca.pdf>]
+[4] [5] [6]
+Underfull \vbox (badness 2326) has occurred while \output is active [7 <./image
+s/metrics_comparison_permuted_mnist.pdf> <./images/metrics_comparison_split_cif
+ar100.pdf> <./images/accuracy_heatmap_soca.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active [8 <./imag
 es/accuracy_heatmap_experience_replay.pdf> <./images/accuracy_heatmap_finetune.
 pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active [9 <./imag
 es/forgetting_analysis_soca.pdf> <./images/forgetting_analysis_experience_repla
 y.pdf>]
-! Undefined control sequence.
-l.167 ...pre-conditioning to promote plasticity.\n
-                                                  \nOur experimental evaluat...
-
-! Undefined control sequence.
-l.167 ...onditioning to promote plasticity.\n\nOur
-                                                   experimental evaluation d...
-
-! Undefined control sequence.
-l.167 ...nce involves an expanding output space.\n
-                                                  \nSOCA represents a signif...
-
-! Undefined control sequence.
-l.167 ...volves an expanding output space.\n\nSOCA
-                                                   represents a significant ...
-
 
 Package natbib Warning: Citation `airas2025' on page 10 undefined on input line
- 169.
+ 225.
 
 No file paper.bbl.
 
@@ -662,61 +355,20 @@ nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
 sbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (10 pages, 249338 bytes).
+Output written on paper.pdf (10 pages, 249479 bytes).
 Transcript written on paper.log.
 This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
 The top-level auxiliary file: paper.aux
-White space in argument---line 5 of file paper.aux
- : \citation{author\protect
- :                          \T1\textunderscore year\protect \T1\textunderscore meta}
-I'm skipping whatever remains of this command
-White space in argument---line 6 of file paper.aux
- : \citation{deng\protect
- :                        \T1\textunderscore 2022\protect \T1\textunderscore accelerated}
-I'm skipping whatever remains of this command
-White space in argument---line 7 of file paper.aux
- : \citation{daxberger\protect
- :                             \T1\textunderscore 2021\protect \T1\textunderscore laplace}
-I'm skipping whatever remains of this command
-White space in argument---line 8 of file paper.aux
- : \citation{hiratani\protect
- :                            \T1\textunderscore 2024\protect \T1\textunderscore disentangling}
-I'm skipping whatever remains of this command
-White space in argument---line 12 of file paper.aux
- : \citation{author\protect
- :                          \T1\textunderscore year\protect \T1\textunderscore long}
-I'm skipping whatever remains of this command
-White space in argument---line 13 of file paper.aux
- : \citation{sun\protect
- :                       \T1\textunderscore 2023\protect \T1\textunderscore regularizing}
-I'm skipping whatever remains of this command
-White space in argument---line 14 of file paper.aux
- : \citation{daxberger\protect
- :                             \T1\textunderscore 2021\protect \T1\textunderscore laplace}
-I'm skipping whatever remains of this command
-White space in argument---line 15 of file paper.aux
- : \citation{deng\protect
- :                        \T1\textunderscore 2022\protect \T1\textunderscore accelerated}
-I'm skipping whatever remains of this command
-White space in argument---line 21 of file paper.aux
- : \citation{finn\protect
- :                        \T1\textunderscore 2017\protect \T1\textunderscore model}
-I'm skipping whatever remains of this command
-White space in argument---line 22 of file paper.aux
- : \citation{author\protect
- :                          \T1\textunderscore year\protect \T1\textunderscore meta}
-I'm skipping whatever remains of this command
-White space in argument---line 23 of file paper.aux
- : \citation{deng\protect
- :                        \T1\textunderscore 2022\protect \T1\textunderscore accelerated}
-I'm skipping whatever remains of this command
-White space in argument---line 31 of file paper.aux
- : \citation{deng\protect
- :                        \T1\textunderscore 2022\protect \T1\textunderscore accelerated}
-I'm skipping whatever remains of this command
 The style file: iclr2024_conference.bst
 Database file #1: references.bib
-(There were 12 error messages)
+Warning--I didn't find a database entry for "author-year-meta"
+Warning--I didn't find a database entry for "deng-2022-accelerated"
+Warning--I didn't find a database entry for "daxberger-2021-laplace"
+Warning--I didn't find a database entry for "hiratani-2024-disentangling"
+Warning--I didn't find a database entry for "author-year-long"
+Warning--I didn't find a database entry for "sun-2023-regularizing"
+Warning--I didn't find a database entry for "finn-2017-model"
+(There were 7 warnings)
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
@@ -985,379 +637,72 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...e loss landscape \cite{author\_year\_meta}
-                                                  . By approximating the Hes...
+
+Package natbib Warning: Citation `author-year-meta' on page 1 undefined on inpu
+t line 55.
 
 
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-emeta' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...s like ELLA \cite{deng\_2022\_accelerated}
-                                                   or Laplace Redux \cite{da...
+Package natbib Warning: Citation `deng-2022-accelerated' on page 1 undefined on
+ input line 55.
 
 
-Package natbib Warning: Citation `deng\T1\textunderscore2022\T1\textunderscorea
-ccelerated' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...lace Redux \cite{daxberger\_2021\_laplace}
-                                                   are inherently offline, r...
+Package natbib Warning: Citation `daxberger-2021-laplace' on page 1 undefined o
+n input line 55.
 
 
-Package natbib Warning: Citation `daxberger\T1\textunderscore2021\T1\textunders
-corelaplace' on page 1 undefined on input line 55.
+Package natbib Warning: Citation `hiratani-2024-disentangling' on page 1 undefi
+ned on input line 57.
 
-! Undefined control sequence.
-l.55 ...able for true lifelong learning streams.\n
-                                                  \nThis division creates a ...
-
-! Undefined control sequence.
-l.55 ...or true lifelong learning streams.\n\nThis
-                                                   division creates a critic...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...lemma \cite{hiratani\_2024\_disentangling}
-                                                  .\n\nTo address these chal...
-
-
-Package natbib Warning: Citation `hiratani\T1\textunderscore2024\T1\textundersc
-oredisentangling' on page 1 undefined on input line 55.
-
-! Undefined control sequence.
-l.55 ...ma \cite{hiratani\_2024\_disentangling}.\n
-                                                  \nTo address these challen...
-
-! Undefined control sequence.
-l.55 ...cite{hiratani\_2024\_disentangling}.\n\nTo
-                                                   address these challenges,...
-
-! Undefined control sequence.
-l.55 ...arning along novel geometric directions.\n
-                                                  \nOur primary contribution...
-
-! Undefined control sequence.
-l.55 ...g along novel geometric directions.\n\nOur
-                                                   primary contributions are...
-
-! Undefined control sequence.
-l.55 ...ur primary contributions are as follows:\n
-                                                  \begin{itemize}
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}]
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-! Undefined control sequence.
-l.60 \nWe
-          validate SOCA on the Permuted MNIST and Split CIFAR-100 continual ...
 
-! Undefined control sequence.
-l.64 ... contrasting it with existing paradigms.\n
-                                                  \n\subsection{Streaming an...
-
-! Undefined control sequence.
-l.64 ...ontrasting it with existing paradigms.\n\n
-                                                  \subsection{Streaming and ...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ... during training \cite{author\_year\_long}
-                                                  . Methods like Averaged Gr...
+Package natbib Warning: Citation `author-year-long' on page 2 undefined on inpu
+t line 75.
 
 
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-elong' on page 2 undefined on input line 65.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...n be biased \cite{sun\_2023\_regularizing}
-                                                  . In contrast, SOCA replac...
+Package natbib Warning: Citation `sun-2023-regularizing' on page 2 undefined on
+ input line 75.
 
 
-Package natbib Warning: Citation `sun\T1\textunderscore2023\T1\textunderscorere
-gularizing' on page 2 undefined on input line 65.
-
-! Undefined control sequence.
-l.65 ...led approach to knowledge consolidation.\n
-                                                  \n\subsection{Second-Order...
-
-! Undefined control sequence.
-l.65 ...d approach to knowledge consolidation.\n\n
-                                                  \subsection{Second-Order a...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.66 ...importance \cite{daxberger\_2021\_laplace}
-                                                  . ELLA \cite{deng\_2022\_a...
+Package natbib Warning: Citation `daxberger-2021-laplace' on page 2 undefined o
+n input line 78.
 
 
-Package natbib Warning: Citation `daxberger\T1\textunderscore2021\T1\textunders
-corelaplace' on page 2 undefined on input line 66.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.66 ...lace}. ELLA \cite{deng\_2022\_accelerated}
-                                                   provides an efficient way...
-
-
-Package natbib Warning: Citation `deng\T1\textunderscore2022\T1\textunderscorea
-ccelerated' on page 2 undefined on input line 66.
-
-! Undefined control sequence.
-l.66 ...ethods to a scalable, streaming context.\n
-                                                  \n\subsection{Meta-Continu...
-
-! Undefined control sequence.
-l.66 ...hods to a scalable, streaming context.\n\n
-                                                  \subsection{Meta-Continual...
+Package natbib Warning: Citation `deng-2022-accelerated' on page 2 undefined on
+ input line 78.
 
 [2]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.67 ...orithms like MAML \cite{finn\_2017\_model}
-                                                   to an online setting, aim...
+
+Package natbib Warning: Citation `finn-2017-model' on page 3 undefined on input
+ line 81.
 
 
-Package natbib Warning: Citation `finn\T1\textunderscore2017\T1\textunderscorem
-odel' on page 3 undefined on input line 67.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.67 ...mization process \cite{author\_year\_meta}
-                                                  . SOCA contributes to this...
+Package natbib Warning: Citation `author-year-meta' on page 3 undefined on inpu
+t line 81.
 
 
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-emeta' on page 3 undefined on input line 67.
-
-! Undefined control sequence.
-l.71 ...r optimization upon which SOCA is built.\n
-                                                  \n\subsection{Continual Le...
-
-! Undefined control sequence.
-l.71 ...optimization upon which SOCA is built.\n\n
-                                                  \subsection{Continual Lear...
-
-! Undefined control sequence.
-l.72 ...ting parameters important for old tasks.\n
-                                                  \n\subsection{Curvature an...
-
-! Undefined control sequence.
-l.72 ...ng parameters important for old tasks.\n\n
-                                                  \subsection{Curvature and ...
-
-! Undefined control sequence.
-l.73 ...task's solution and should be preserved.\n
-                                                  \n\subsection{Low-Rank Hes...
-
-! Undefined control sequence.
-l.73 ...sk's solution and should be preserved.\n\n
-                                                  \subsection{Low-Rank Hessi...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.74 ...A framework \cite{deng\_2022\_accelerated}
-                                                   provides an efficient met...
-
-
-Package natbib Warning: Citation `deng\T1\textunderscore2022\T1\textunderscorea
-ccelerated' on page 3 undefined on input line 74.
-
-! Undefined control sequence.
-l.74 ...g the explicit formation of the Hessian.\n
-                                                  \n\subsection{Problem Sett...
-
-! Undefined control sequence.
-l.74 ...the explicit formation of the Hessian.\n\n
-                                                  \subsection{Problem Settin...
+Package natbib Warning: Citation `deng-2022-accelerated' on page 3 undefined on
+ input line 94.
 
 [3]
-! Undefined control sequence.
-l.79 ...three key stages for each incoming task.\n
-                                                  \n\textbf{1. Task-Local Cu...
 
-! Undefined control sequence.
-l.79 ...ree key stages for each incoming task.\n\n
-                                                  \textbf{1. Task-Local Curv...
+Package natbib Warning: Citation `deng-2022-accelerated' on page 4 undefined on
+ input line 104.
 
-! Undefined control sequence.
-<recently read> \nFor 
-                      
-l.79 ...f{1. Task-Local Curvature Estimation}\nFor
-                                                   each new task $T_t$, we b...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.79 ...e from ELLA \cite{deng\_2022\_accelerated}
-                                                  , which uses a Nyström ap...
-
-
-Package natbib Warning: Citation `deng\T1\textunderscore2022\T1\textunderscorea
-ccelerated' on page 4 undefined on input line 79.
-
-! Undefined control sequence.
-l.79 ...NTK) to extract this low-rank structure.\n
-                                                  \n\textbf{2. Streaming Ort...
-
-! Undefined control sequence.
-l.79 ...K) to extract this low-rank structure.\n\n
-                                                  \textbf{2. Streaming Ortho...
-
-! Undefined control sequence.
-<recently read> \nThis 
-                       
-l.79 ...nal Curvature Fusion (Core Novelty)}\nThis
-                                                   stage is the core of SOCA...
-
-! Undefined control sequence.
-l.85 \n
-       \textbf{3. Dual-Use Meta-Curvature for Stability and Plasticity}\nOnc...
-
-! Undefined control sequence.
-<recently read> \nOnce 
-                       
-l.85 ...vature for Stability and Plasticity}\nOnce
-                                                   updated, the global model...
-
-[4]
-! Undefined control sequence.
-l.93 ...reaming Meta-Continual Learning setting.\n
-                                                  \n\textbf{Datasets and Tas...
-
-! Undefined control sequence.
-l.93 ...aming Meta-Continual Learning setting.\n\n
-                                                  \textbf{Datasets and Task ...
-
-! Undefined control sequence.
-<recently read> \nWe 
-                     
-l.93 ...textbf{Datasets and Task Formulation:}\nWe
-                                                   utilized two standard con...
-
-! Undefined control sequence.
-l.93 ...sess performance in different scenarios:\n
-                                                  \begin{itemize}
-! Undefined control sequence.
-l.98 \n
-       \textbf{Baselines for Comparison:}\nWe compared SOCA against a set of...
-
-! Undefined control sequence.
-<recently read> \nWe 
-                     
-l.98 \n\textbf{Baselines for Comparison:}\nWe
-                                              compared SOCA against a set of...
-
-! Undefined control sequence.
-l.98 ...ainst a set of representative baselines:\n
-                                                  \begin{itemize}
-! Undefined control sequence.
-l.104 \n
-        \textbf{Evaluation Metrics:}\nWe employed a suite of standard metric...
-
-! Undefined control sequence.
-<recently read> \nWe 
-                     
-l.104 \n\textbf{Evaluation Metrics:}\nWe
-                                         employed a suite of standard metric...
-
-! Undefined control sequence.
-l.104 ...trics to provide a holistic evaluation:\n
-                                                  \begin{itemize}
-! Undefined control sequence.
-l.110 \n
-        \textbf{Implementation Details:}\nAll experiments were implemented i...
-
-! Undefined control sequence.
-<recently read> \nAll 
-                      
-l.110 \n\textbf{Implementation Details:}\nAll
-                                              experiments were implemented i...
-
-[5]
-! Undefined control sequence.
-l.114 ...different continual learning scenarios.\n
-                                                  \n\subsection{Performance ...
-
-! Undefined control sequence.
-l.114 ...fferent continual learning scenarios.\n\n
-                                                  \subsection{Performance on...
-
-! Undefined control sequence.
-l.115 ...hese metrics is visualized in Figure 1.\n
-                                                  \nFurthermore, SOCA proved...
-
-! Undefined control sequence.
-l.115 ...is visualized in Figure 1.\n\nFurthermore
-                                                  , SOCA proved highly effec...
-
-! Undefined control sequence.
-l.115 ...urther illustrate this performance gap.\n
-                                                  \n\subsection{Performance ...
-
-! Undefined control sequence.
-l.115 ...ther illustrate this performance gap.\n\n
-                                                  \subsection{Performance on...
-
-! Undefined control sequence.
-l.116 ...hallenge in class-incremental learning.\n
-                                                  \n\subsection{Analysis of ...
-
-! Undefined control sequence.
-l.116 ...llenge in class-incremental learning.\n\n
-                                                  \subsection{Analysis of Tr...
-
-! Undefined control sequence.
-l.117 ...n this difficult but important setting.\n
-                                                  \n\begin{figure}[H]
-! Undefined control sequence.
-l.117 ...this difficult but important setting.\n\n
-                                                  \begin{figure}[H]
-
-Underfull \vbox (badness 10000) has occurred while \output is active [6]
-Underfull \vbox (badness 10000) has occurred while \output is active [7 <./imag
-es/metrics_comparison_permuted_mnist.pdf> <./images/metrics_comparison_split_ci
-far100.pdf> <./images/accuracy_heatmap_soca.pdf>]
+[4] [5] [6]
+Underfull \vbox (badness 2326) has occurred while \output is active [7 <./image
+s/metrics_comparison_permuted_mnist.pdf> <./images/metrics_comparison_split_cif
+ar100.pdf> <./images/accuracy_heatmap_soca.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active [8 <./imag
 es/accuracy_heatmap_experience_replay.pdf> <./images/accuracy_heatmap_finetune.
 pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active [9 <./imag
 es/forgetting_analysis_soca.pdf> <./images/forgetting_analysis_experience_repla
 y.pdf>]
-! Undefined control sequence.
-l.167 ...pre-conditioning to promote plasticity.\n
-                                                  \nOur experimental evaluat...
-
-! Undefined control sequence.
-l.167 ...onditioning to promote plasticity.\n\nOur
-                                                   experimental evaluation d...
-
-! Undefined control sequence.
-l.167 ...nce involves an expanding output space.\n
-                                                  \nSOCA represents a signif...
-
-! Undefined control sequence.
-l.167 ...volves an expanding output space.\n\nSOCA
-                                                   represents a significant ...
-
 
 Package natbib Warning: Citation `airas2025' on page 10 undefined on input line
- 169.
+ 225.
 
 (./paper.bbl (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd))
 
@@ -1379,7 +724,7 @@ nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 sbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (10 pages, 261732 bytes).
+Output written on paper.pdf (10 pages, 261901 bytes).
 Transcript written on paper.log.
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
@@ -1649,377 +994,70 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...e loss landscape \cite{author\_year\_meta}
-                                                  . By approximating the Hes...
+
+Package natbib Warning: Citation `author-year-meta' on page 1 undefined on inpu
+t line 55.
 
 
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-emeta' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...s like ELLA \cite{deng\_2022\_accelerated}
-                                                   or Laplace Redux \cite{da...
+Package natbib Warning: Citation `deng-2022-accelerated' on page 1 undefined on
+ input line 55.
 
 
-Package natbib Warning: Citation `deng\T1\textunderscore2022\T1\textunderscorea
-ccelerated' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...lace Redux \cite{daxberger\_2021\_laplace}
-                                                   are inherently offline, r...
+Package natbib Warning: Citation `daxberger-2021-laplace' on page 1 undefined o
+n input line 55.
 
 
-Package natbib Warning: Citation `daxberger\T1\textunderscore2021\T1\textunders
-corelaplace' on page 1 undefined on input line 55.
+Package natbib Warning: Citation `hiratani-2024-disentangling' on page 1 undefi
+ned on input line 57.
 
-! Undefined control sequence.
-l.55 ...able for true lifelong learning streams.\n
-                                                  \nThis division creates a ...
-
-! Undefined control sequence.
-l.55 ...or true lifelong learning streams.\n\nThis
-                                                   division creates a critic...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...lemma \cite{hiratani\_2024\_disentangling}
-                                                  .\n\nTo address these chal...
-
-
-Package natbib Warning: Citation `hiratani\T1\textunderscore2024\T1\textundersc
-oredisentangling' on page 1 undefined on input line 55.
-
-! Undefined control sequence.
-l.55 ...ma \cite{hiratani\_2024\_disentangling}.\n
-                                                  \nTo address these challen...
-
-! Undefined control sequence.
-l.55 ...cite{hiratani\_2024\_disentangling}.\n\nTo
-                                                   address these challenges,...
-
-! Undefined control sequence.
-l.55 ...arning along novel geometric directions.\n
-                                                  \nOur primary contribution...
-
-! Undefined control sequence.
-l.55 ...g along novel geometric directions.\n\nOur
-                                                   primary contributions are...
-
-! Undefined control sequence.
-l.55 ...ur primary contributions are as follows:\n
-                                                  \begin{itemize}
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}]
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-! Undefined control sequence.
-l.60 \nWe
-          validate SOCA on the Permuted MNIST and Split CIFAR-100 continual ...
 
-! Undefined control sequence.
-l.64 ... contrasting it with existing paradigms.\n
-                                                  \n\subsection{Streaming an...
-
-! Undefined control sequence.
-l.64 ...ontrasting it with existing paradigms.\n\n
-                                                  \subsection{Streaming and ...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ... during training \cite{author\_year\_long}
-                                                  . Methods like Averaged Gr...
+Package natbib Warning: Citation `author-year-long' on page 2 undefined on inpu
+t line 75.
 
 
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-elong' on page 2 undefined on input line 65.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.65 ...n be biased \cite{sun\_2023\_regularizing}
-                                                  . In contrast, SOCA replac...
+Package natbib Warning: Citation `sun-2023-regularizing' on page 2 undefined on
+ input line 75.
 
 
-Package natbib Warning: Citation `sun\T1\textunderscore2023\T1\textunderscorere
-gularizing' on page 2 undefined on input line 65.
-
-! Undefined control sequence.
-l.65 ...led approach to knowledge consolidation.\n
-                                                  \n\subsection{Second-Order...
-
-! Undefined control sequence.
-l.65 ...d approach to knowledge consolidation.\n\n
-                                                  \subsection{Second-Order a...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.66 ...importance \cite{daxberger\_2021\_laplace}
-                                                  . ELLA \cite{deng\_2022\_a...
+Package natbib Warning: Citation `daxberger-2021-laplace' on page 2 undefined o
+n input line 78.
 
 
-Package natbib Warning: Citation `daxberger\T1\textunderscore2021\T1\textunders
-corelaplace' on page 2 undefined on input line 66.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.66 ...lace}. ELLA \cite{deng\_2022\_accelerated}
-                                                   provides an efficient way...
-
-
-Package natbib Warning: Citation `deng\T1\textunderscore2022\T1\textunderscorea
-ccelerated' on page 2 undefined on input line 66.
-
-! Undefined control sequence.
-l.66 ...ethods to a scalable, streaming context.\n
-                                                  \n\subsection{Meta-Continu...
-
-! Undefined control sequence.
-l.66 ...hods to a scalable, streaming context.\n\n
-                                                  \subsection{Meta-Continual...
+Package natbib Warning: Citation `deng-2022-accelerated' on page 2 undefined on
+ input line 78.
 
 [2]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.67 ...orithms like MAML \cite{finn\_2017\_model}
-                                                   to an online setting, aim...
+
+Package natbib Warning: Citation `finn-2017-model' on page 3 undefined on input
+ line 81.
 
 
-Package natbib Warning: Citation `finn\T1\textunderscore2017\T1\textunderscorem
-odel' on page 3 undefined on input line 67.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.67 ...mization process \cite{author\_year\_meta}
-                                                  . SOCA contributes to this...
+Package natbib Warning: Citation `author-year-meta' on page 3 undefined on inpu
+t line 81.
 
 
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-emeta' on page 3 undefined on input line 67.
-
-! Undefined control sequence.
-l.71 ...r optimization upon which SOCA is built.\n
-                                                  \n\subsection{Continual Le...
-
-! Undefined control sequence.
-l.71 ...optimization upon which SOCA is built.\n\n
-                                                  \subsection{Continual Lear...
-
-! Undefined control sequence.
-l.72 ...ting parameters important for old tasks.\n
-                                                  \n\subsection{Curvature an...
-
-! Undefined control sequence.
-l.72 ...ng parameters important for old tasks.\n\n
-                                                  \subsection{Curvature and ...
-
-! Undefined control sequence.
-l.73 ...task's solution and should be preserved.\n
-                                                  \n\subsection{Low-Rank Hes...
-
-! Undefined control sequence.
-l.73 ...sk's solution and should be preserved.\n\n
-                                                  \subsection{Low-Rank Hessi...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.74 ...A framework \cite{deng\_2022\_accelerated}
-                                                   provides an efficient met...
-
-
-Package natbib Warning: Citation `deng\T1\textunderscore2022\T1\textunderscorea
-ccelerated' on page 3 undefined on input line 74.
-
-! Undefined control sequence.
-l.74 ...g the explicit formation of the Hessian.\n
-                                                  \n\subsection{Problem Sett...
-
-! Undefined control sequence.
-l.74 ...the explicit formation of the Hessian.\n\n
-                                                  \subsection{Problem Settin...
+Package natbib Warning: Citation `deng-2022-accelerated' on page 3 undefined on
+ input line 94.
 
 [3]
-! Undefined control sequence.
-l.79 ...three key stages for each incoming task.\n
-                                                  \n\textbf{1. Task-Local Cu...
 
-! Undefined control sequence.
-l.79 ...ree key stages for each incoming task.\n\n
-                                                  \textbf{1. Task-Local Curv...
+Package natbib Warning: Citation `deng-2022-accelerated' on page 4 undefined on
+ input line 104.
 
-! Undefined control sequence.
-<recently read> \nFor 
-                      
-l.79 ...f{1. Task-Local Curvature Estimation}\nFor
-                                                   each new task $T_t$, we b...
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.79 ...e from ELLA \cite{deng\_2022\_accelerated}
-                                                  , which uses a Nyström ap...
-
-
-Package natbib Warning: Citation `deng\T1\textunderscore2022\T1\textunderscorea
-ccelerated' on page 4 undefined on input line 79.
-
-! Undefined control sequence.
-l.79 ...NTK) to extract this low-rank structure.\n
-                                                  \n\textbf{2. Streaming Ort...
-
-! Undefined control sequence.
-l.79 ...K) to extract this low-rank structure.\n\n
-                                                  \textbf{2. Streaming Ortho...
-
-! Undefined control sequence.
-<recently read> \nThis 
-                       
-l.79 ...nal Curvature Fusion (Core Novelty)}\nThis
-                                                   stage is the core of SOCA...
-
-! Undefined control sequence.
-l.85 \n
-       \textbf{3. Dual-Use Meta-Curvature for Stability and Plasticity}\nOnc...
-
-! Undefined control sequence.
-<recently read> \nOnce 
-                       
-l.85 ...vature for Stability and Plasticity}\nOnce
-                                                   updated, the global model...
-
-[4]
-! Undefined control sequence.
-l.93 ...reaming Meta-Continual Learning setting.\n
-                                                  \n\textbf{Datasets and Tas...
-
-! Undefined control sequence.
-l.93 ...aming Meta-Continual Learning setting.\n\n
-                                                  \textbf{Datasets and Task ...
-
-! Undefined control sequence.
-<recently read> \nWe 
-                     
-l.93 ...textbf{Datasets and Task Formulation:}\nWe
-                                                   utilized two standard con...
-
-! Undefined control sequence.
-l.93 ...sess performance in different scenarios:\n
-                                                  \begin{itemize}
-! Undefined control sequence.
-l.98 \n
-       \textbf{Baselines for Comparison:}\nWe compared SOCA against a set of...
-
-! Undefined control sequence.
-<recently read> \nWe 
-                     
-l.98 \n\textbf{Baselines for Comparison:}\nWe
-                                              compared SOCA against a set of...
-
-! Undefined control sequence.
-l.98 ...ainst a set of representative baselines:\n
-                                                  \begin{itemize}
-! Undefined control sequence.
-l.104 \n
-        \textbf{Evaluation Metrics:}\nWe employed a suite of standard metric...
-
-! Undefined control sequence.
-<recently read> \nWe 
-                     
-l.104 \n\textbf{Evaluation Metrics:}\nWe
-                                         employed a suite of standard metric...
-
-! Undefined control sequence.
-l.104 ...trics to provide a holistic evaluation:\n
-                                                  \begin{itemize}
-! Undefined control sequence.
-l.110 \n
-        \textbf{Implementation Details:}\nAll experiments were implemented i...
-
-! Undefined control sequence.
-<recently read> \nAll 
-                      
-l.110 \n\textbf{Implementation Details:}\nAll
-                                              experiments were implemented i...
-
-[5]
-! Undefined control sequence.
-l.114 ...different continual learning scenarios.\n
-                                                  \n\subsection{Performance ...
-
-! Undefined control sequence.
-l.114 ...fferent continual learning scenarios.\n\n
-                                                  \subsection{Performance on...
-
-! Undefined control sequence.
-l.115 ...hese metrics is visualized in Figure 1.\n
-                                                  \nFurthermore, SOCA proved...
-
-! Undefined control sequence.
-l.115 ...is visualized in Figure 1.\n\nFurthermore
-                                                  , SOCA proved highly effec...
-
-! Undefined control sequence.
-l.115 ...urther illustrate this performance gap.\n
-                                                  \n\subsection{Performance ...
-
-! Undefined control sequence.
-l.115 ...ther illustrate this performance gap.\n\n
-                                                  \subsection{Performance on...
-
-! Undefined control sequence.
-l.116 ...hallenge in class-incremental learning.\n
-                                                  \n\subsection{Analysis of ...
-
-! Undefined control sequence.
-l.116 ...llenge in class-incremental learning.\n\n
-                                                  \subsection{Analysis of Tr...
-
-! Undefined control sequence.
-l.117 ...n this difficult but important setting.\n
-                                                  \n\begin{figure}[H]
-! Undefined control sequence.
-l.117 ...this difficult but important setting.\n\n
-                                                  \begin{figure}[H]
-
-Underfull \vbox (badness 10000) has occurred while \output is active [6]
-Underfull \vbox (badness 10000) has occurred while \output is active [7 <./imag
-es/metrics_comparison_permuted_mnist.pdf> <./images/metrics_comparison_split_ci
-far100.pdf> <./images/accuracy_heatmap_soca.pdf>]
+[4] [5] [6]
+Underfull \vbox (badness 2326) has occurred while \output is active [7 <./image
+s/metrics_comparison_permuted_mnist.pdf> <./images/metrics_comparison_split_cif
+ar100.pdf> <./images/accuracy_heatmap_soca.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active [8 <./imag
 es/accuracy_heatmap_experience_replay.pdf> <./images/accuracy_heatmap_finetune.
 pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active [9 <./imag
 es/forgetting_analysis_soca.pdf> <./images/forgetting_analysis_experience_repla
-y.pdf>]
-! Undefined control sequence.
-l.167 ...pre-conditioning to promote plasticity.\n
-                                                  \nOur experimental evaluat...
+y.pdf>] (./paper.bbl (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd))
 
-! Undefined control sequence.
-l.167 ...onditioning to promote plasticity.\n\nOur
-                                                   experimental evaluation d...
-
-! Undefined control sequence.
-l.167 ...nce involves an expanding output space.\n
-                                                  \nSOCA represents a signif...
-
-! Undefined control sequence.
-l.167 ...volves an expanding output space.\n\nSOCA
-                                                   represents a significant ...
-
-(./paper.bbl (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd))
 
 Package natbib Warning: There were undefined citations.
 
@@ -2034,5 +1072,5 @@ nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 sbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (10 pages, 261793 bytes).
+Output written on paper.pdf (10 pages, 261961 bytes).
 Transcript written on paper.log.

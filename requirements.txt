@@ -1,1 +1,11 @@
-# Please list the required python packages.
+torch>=2.0
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+matplotlib>=3.7
+seaborn>=0.12
+tqdm>=4.65
+regex>=2023.6.3
+jsonschema>=4.17
+scikit-learn>=1.2
+PyYAML>=6.0

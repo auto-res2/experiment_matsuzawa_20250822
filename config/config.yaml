@@ -1,0 +1,16 @@
+# config/config.yaml
+seed: 0
+paths:
+  images_dir: .research/iteration1/images
+  data_dir: data
+  models_dir: models
+experiments:
+  run_exp1: true
+  run_exp2: true
+  run_exp3: true
+  quick_mode: true
+budgets:
+  exp1_calls: 160
+  exp2_calls: 120
+  exp3_pretrain_steps: 12
+device: auto

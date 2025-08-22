@@ -1,0 +1,10 @@
+{
+  "research_topic": "グラフ対比学習の表現散乱に関して改善したい",
+  "queries": [
+    "Graph Contrastive Learning Collapse",
+    "Graph Contrastive Learning Uniformity",
+    "GCL Representation Degeneration",
+    "Graph InfoNCE Collapse",
+    "Preventing Collapse GCL"
+  ]
+}

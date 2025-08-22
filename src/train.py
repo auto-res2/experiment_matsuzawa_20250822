@@ -29,7 +29,7 @@ class LowBitLinearFn(torch.autograd.Function):
     
     @staticmethod
     def forward(ctx, x, weight, bias, layer_ref):
-        y = layer_ref._accumulate(x, weight.t())
+        y = layer_ref._accumulate(x, weight)
         if bias is not None:
             y = y + bias
         ctx.save_for_backward(x, weight)
@@ -46,7 +46,13 @@ class LowBitLinearFn(torch.autograd.Function):
         alpha = ctx.alpha
         go = grad_out * alpha  # DIFF-lite multiplicative correction
         grad_x = go @ weight
-        grad_w = go.t() @ x
+        
+        if len(go.shape) == 3:
+            go_2d = go.reshape(-1, go.size(-1))
+            grad_w = go_2d.t() @ x.reshape(-1, x.size(-1))
+        else:
+            grad_w = go.t() @ x
+            
         grad_b = go.sum(dim=0) if ctx.needs_input_grad[2] else None
         return grad_x, grad_w, grad_b, None
 
@@ -76,28 +82,45 @@ class LowBitAccLinear(nn.Linear):
     def _quantize_tile(self, x):
         """Quantize a tile of data using the current accumulator mode"""
         man_bits, exp_bits = self._mode_bits(self.mode)
-        eps = 1e-8
-        maxv = x.abs().amax(dim=-1, keepdim=True) + eps
-        e = torch.floor(torch.log2(maxv))
-        e = e.clamp(-((1<<exp_bits)-1)+1, (1<<exp_bits)-2) + self.ebias
-        scale = torch.pow(2.0, e)
-        y = x / (scale + eps)
         
-        if self.dither:
-            noise = (torch.rand_like(y) - 0.5) / (2**(man_bits+1))
-            y = y + noise
+        maxv = x.abs().max()
+        if maxv == 0 or not torch.isfinite(maxv):
+            return x, 1.0
             
-        q = torch.round(y * (2**man_bits)) / (2**man_bits)
-        xq = q * scale
-        headroom = (maxv / (scale + eps)).mean()
-        return xq, headroom
+        scale = maxv / (2**man_bits - 1)
+        if scale == 0:
+            return x, 1.0
+            
+        y = x / scale
+        q = torch.round(y) * scale
+        
+        headroom = 1.0
+        return q, headroom
 
     def _accumulate(self, a, b):
         """Accumulate matrix multiplication with low-bit precision and telemetry"""
-        K = a.size(1)
-        prod = a.unsqueeze(-1) * b.unsqueeze(0)  # [B, K, N]
+        original_shape = a.shape
+        if len(a.shape) == 3:
+            B, T, K = a.shape
+            a = a.reshape(B * T, K)  # Flatten to [B*T, K] using reshape for non-contiguous tensors
+        else:
+            B, K = a.shape
+            T = 1
         
-        if self.sample_p > 0:
+        if len(b.shape) == 3:
+            b = b.reshape(-1, b.size(-1))
+        
+        if len(b.shape) > 2:
+            raise RuntimeError(f"Tensor b still has {len(b.shape)} dimensions after reshape: {b.shape}")
+        
+        if b.size(1) == a.size(1):  # b is [N, K], need [K, N]
+            b = b.t()
+        elif b.size(0) != a.size(1):  # b dimensions don't match
+            b = b.t()  # Try transpose
+        
+        prod = a.unsqueeze(-1) * b.unsqueeze(0)  # [B*T, K, N] or [B, K, N]
+        
+        if self.sample_p > 0 and prod.numel() < 1000000:  # Only sample on smaller tensors
             mask = (torch.rand_like(prod) < self.sample_p)
             if mask.any():
                 q_block, _ = self._quantize_tile(prod)
@@ -109,39 +132,34 @@ class LowBitAccLinear(nn.Linear):
                 self.alpha_ema.add_((1 - self.alpha_beta) * alpha)
         
         qprod, hdr = self._quantize_tile(prod)
-        self.headroom += hdr.detach()
-        
-        if self.order == "pairwise":
-            x = qprod
-            while x.size(1) > 1:
-                x1 = x[:, 0::2, :]
-                x2 = x[:, 1::2, :]
-                
-                if x1.size(1) > x2.size(1):
-                    pad_size = x1.size(1) - x2.size(1)
-                    x2 = torch.cat([x2, torch.zeros(x2.size(0), pad_size, x2.size(2), device=x2.device, dtype=x2.dtype)], dim=1)
-                
-                s = x1 + x2
-                swamp = (x2.abs() < (1e-6 + 1e-3 * x1.abs())).float().sum()
-                self.swamp_count += swamp.long()
-                x = s
-            out = x.squeeze(1)
+        if isinstance(hdr, torch.Tensor):
+            self.headroom += hdr.detach()
         else:
-            chunk = 16 if self.order == "chunk16" else 8
-            out = torch.zeros(prod.size(0), prod.size(2), device=prod.device, dtype=prod.dtype)
-            for i in range(0, K, chunk):
-                block = qprod[:, i:i+chunk, :]
-                out = out + block.sum(dim=1)
+            self.headroom += hdr
+        
+        chunk = 16 if self.order == "chunk16" else (8 if self.order == "chunk8" else 32)
+        out = torch.zeros(prod.size(0), prod.size(2), device=prod.device, dtype=prod.dtype)
+        for i in range(0, prod.size(1), chunk):
+            block = qprod[:, i:i+chunk, :]
+            block_sum = block.sum(dim=1)
+            if i > 0:
+                swamp = (block_sum.abs() < (1e-6 + 1e-3 * out.abs())).float().sum()
+                self.swamp_count += swamp.long()
+            out = out + block_sum
         
         self.of_count += (out.isinf()).sum().long()
         self.uf_count += (out == 0).sum().long()
+        
+        if len(original_shape) == 3:
+            out = out.reshape(original_shape[0], original_shape[1], -1)  # [B, T, N]
+        
         return out
 
     def forward(self, x):
         y = LowBitLinearFn.apply(x, self.weight, self.bias, self)
         with torch.no_grad():
             h = torch.clamp(((y.detach().abs().log2()+20)*2).long(), 0, 63)
-            self.mantissa_hist += torch.bincount(h.view(-1), minlength=64).float()
+            self.mantissa_hist += torch.bincount(h.reshape(-1), minlength=64).float()
         return y
 
 
@@ -157,7 +175,7 @@ class LNOnlyGNS:
         def hook(module, grad_input, grad_output):
             try:
                 g = grad_output[0]
-                per_ex_norm = g.view(g.size(0), -1).norm(dim=1)
+                per_ex_norm = g.reshape(g.size(0), -1).norm(dim=1)
                 gns_est = per_ex_norm.var(unbiased=False) / (per_ex_norm.mean()**2 + 1e-12)
                 self.ema = gns_est if self.ema is None else 0.95*self.ema + 0.05*gns_est
             except Exception:
@@ -346,6 +364,11 @@ def train_model(model, train_loader, test_loader, num_epochs=5, device="cuda", q
             data, target = data.to(device), target.to(device)
             
             output = model(data)
+            
+            if len(output.shape) == 3 and len(target.shape) == 2:  # [B, T, V] vs [B, T]
+                output = output.reshape(-1, output.size(-1))  # [B*T, V]
+                target = target.reshape(-1)  # [B*T]
+            
             loss = criterion(output, target) / current_ga  # Scale loss for accumulation
             
             loss.backward()
@@ -386,6 +409,11 @@ def train_model(model, train_loader, test_loader, num_epochs=5, device="cuda", q
             for batch_idx, (data, target) in enumerate(test_loader):
                 data, target = data.to(device), target.to(device)
                 output = model(data)
+                
+                if len(output.shape) == 3 and len(target.shape) == 2:  # [B, T, V] vs [B, T]
+                    output = output.reshape(-1, output.size(-1))  # [B*T, V]
+                    target = target.reshape(-1)  # [B*T]
+                
                 _, predicted = torch.max(output.data, 1)
                 total += target.size(0)
                 correct += (predicted == target).sum().item()

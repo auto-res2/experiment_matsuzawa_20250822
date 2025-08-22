@@ -46,15 +46,30 @@ def evaluate_model(model, test_loader, device="cuda", criterion=None, quick_test
             data, target = data.to(device), target.to(device)
             
             output = model(data)
-            loss = criterion(output, target)
+            
+            if output.dim() == 3:  # Language modeling: [batch, seq_len, vocab_size]
+                output_flat = output.view(-1, output.size(-1))  # [batch*seq_len, vocab_size]
+                target_flat = target.view(-1)  # [batch*seq_len]
+                loss = criterion(output_flat, target_flat)
+                
+                _, predicted = torch.max(output[:, -1, :], 1)  # [batch]
+                target_last = target[:, -1]  # [batch]
+                total += target_last.size(0)
+                correct += (predicted == target_last).sum().item()
+                
+                all_predictions.extend(predicted.cpu().numpy())
+                all_targets.extend(target_last.cpu().numpy())
+            else:  # Standard classification: [batch, num_classes]
+                loss = criterion(output, target)
+                
+                _, predicted = torch.max(output.data, 1)
+                total += target.size(0)
+                correct += (predicted == target).sum().item()
+                
+                all_predictions.extend(predicted.cpu().numpy())
+                all_targets.extend(target.cpu().numpy())
             
             total_loss += loss.item()
-            _, predicted = torch.max(output.data, 1)
-            total += target.size(0)
-            correct += (predicted == target).sum().item()
-            
-            all_predictions.extend(predicted.cpu().numpy())
-            all_targets.extend(target.cpu().numpy())
             
             if quick_test and batch_idx >= 20:  # Early stop for quick test
                 break

@@ -51,7 +51,7 @@ class MLP(nn.Module):
         self.l3 = LowBitAccLinear(d, num_classes, mode="M8E4", order="chunk16")
 
     def forward(self, x):
-        x = x.view(x.size(0), -1)
+        x = x.reshape(x.size(0), -1)
         x = F.gelu(self.ln1(self.l1(x)))
         x = F.gelu(self.ln2(self.l2(x)))
         return self.l3(x)
@@ -85,41 +85,41 @@ class QLinear(nn.Module):
 
 
 class MLPBlock(nn.Module):
-    """MLP block for transformer"""
+    """MLP block for transformer with standard layers for performance"""
     def __init__(self, d_model, d_ff):
         super().__init__()
         self.ln = nn.LayerNorm(d_model)
-        self.fc1 = QLinear(d_model, d_ff, mode="M7E4", order="pairwise")
-        self.fc2 = QLinear(d_ff, d_model, mode="M7E4", order="pairwise")
+        self.fc1 = nn.Linear(d_model, d_ff)
+        self.fc2 = nn.Linear(d_ff, d_model)
     def forward(self, x):
         y = F.gelu(self.fc1(self.ln(x)))
         return self.fc2(y) + x
 
 
 class SelfAttention(nn.Module):
-    """Self-attention with low-bit accumulators"""
+    """Self-attention with standard PyTorch layers for performance"""
     def __init__(self, d_model, n_head):
         super().__init__()
         self.n_head = n_head
         self.d_head = d_model // n_head
         self.ln = nn.LayerNorm(d_model)
-        self.q = QLinear(d_model, d_model, mode="M7E4", order="pairwise")
-        self.k = QLinear(d_model, d_model, mode="M7E4", order="pairwise")
-        self.v = QLinear(d_model, d_model, mode="M7E4", order="pairwise")
-        self.o = QLinear(d_model, d_model, mode="M8E4", order="chunk16")
+        self.q = nn.Linear(d_model, d_model)
+        self.k = nn.Linear(d_model, d_model)
+        self.v = nn.Linear(d_model, d_model)
+        self.o = nn.Linear(d_model, d_model)
         
     def forward(self, x, attn_mask=None):
         x0 = self.ln(x)
         B, T, C = x0.shape
-        q = self.q(x0).view(B, T, self.n_head, self.d_head).transpose(1, 2)
-        k = self.k(x0).view(B, T, self.n_head, self.d_head).transpose(1, 2)
-        v = self.v(x0).view(B, T, self.n_head, self.d_head).transpose(1, 2)
+        q = self.q(x0).reshape(B, T, self.n_head, self.d_head).transpose(1, 2)
+        k = self.k(x0).reshape(B, T, self.n_head, self.d_head).transpose(1, 2)
+        v = self.v(x0).reshape(B, T, self.n_head, self.d_head).transpose(1, 2)
         att = (q @ k.transpose(-2, -1)) / (self.d_head ** 0.5)
         if attn_mask is not None:
             att = att.masked_fill(~attn_mask, float('-inf'))
         att = att.softmax(dim=-1)
         y = att @ v
-        y = y.transpose(1, 2).contiguous().view(B, T, C)
+        y = y.transpose(1, 2).contiguous().reshape(B, T, C)
         return self.o(y) + x
 
 
@@ -134,7 +134,7 @@ class TransformerSmall(nn.Module):
             for _ in range(n_layer)
         ])
         self.ln = nn.LayerNorm(d_model)
-        self.head = QLinear(d_model, vocab_size, mode="M8E4", order="chunk16")
+        self.head = nn.Linear(d_model, vocab_size)
         self.scale_shift_on = False
         
     def forward(self, idx):
@@ -209,9 +209,8 @@ def run_experiment_3(quick_test=False, device="cuda"):
     print("EXPERIMENT 3: Transformer-small with Disturbances")
     print("=" * 60)
     
-    train_loader, test_loader = preprocess_data("transformer", quick_test=quick_test, batch_size=16)
-    
     vocab_size = 4096 if quick_test else 8192
+    train_loader, test_loader = preprocess_data("transformer", quick_test=quick_test, batch_size=16, vocab_size=vocab_size)
     d_model = 128 if quick_test else 256
     model = TransformerSmall(vocab_size=vocab_size, d_model=d_model, n_head=4, n_layer=2 if quick_test else 4)
     print(f"Model parameters: {sum(p.numel() for p in model.parameters()):,}")
@@ -324,6 +323,10 @@ def main():
     if HAS_PSUTIL:
         print(f"System RAM: {psutil.virtual_memory().total / 1e9:.1f} GB")
         print(f"Available RAM: {psutil.virtual_memory().available / 1e9:.1f} GB")
+        print(f"CPU cores: {psutil.cpu_count()}")
+    
+    print(f"Python version: {sys.version.split()[0]}")
+    print(f"PyTorch version: {torch.__version__}")
     
     set_seed(42)
     

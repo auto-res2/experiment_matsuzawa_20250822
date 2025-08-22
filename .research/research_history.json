@@ -6,5 +6,52 @@
     "Rectified Flow",
     "Flow Matching geometry",
     "generative model path straightness"
+  ],
+  "research_study_list": [
+    {
+      "title": "Bellman Optimal Stepsize Straightening of Flow-Matching Models"
+    },
+    {
+      "title": "Efficient LoFTR: Semi-Dense Local Feature Matching with Sparse-Like Speed"
+    },
+    {
+      "title": "Optimal Flow Matching: Learning Straight Trajectories in Just One Step"
+    },
+    {
+      "title": "Optimal Flow Matching: Learning Straight Trajectories in Just One Step"
+    },
+    {
+      "title": "Flow Matching for Generative Modeling"
+    },
+    {
+      "title": "GENOT: Entropic (Gromov) Wasserstein Flow Matching with Applications to Single-Cell Genomics"
+    },
+    {
+      "title": "Flow Straight and Fast: Learning to Generate and Transfer Data with Rectified Flow"
+    },
+    {
+      "title": "Flow Straight and Fast: Learning to Generate and Transfer Data with Rectified Flow"
+    },
+    {
+      "title": "Improving the Training of Rectified Flows"
+    },
+    {
+      "title": "Optimal Flow Matching: Learning Straight Trajectories in Just One Step"
+    },
+    {
+      "title": "Flow Matching on General Geometries"
+    },
+    {
+      "title": "Flow Matching on General Geometries"
+    },
+    {
+      "title": "Shadows Don't Lie and Lines Can't Bend! Generative Models don't know Projective Geometry...for now"
+    },
+    {
+      "title": "On Kinetic Optimal Probability Paths for Generative Models"
+    },
+    {
+      "title": "Optimal Flow Matching: Learning Straight Trajectories in Just One Step"
+    }
   ]
 }

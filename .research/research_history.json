@@ -6,5 +6,52 @@
     "SNN オンライン学習 高速化",
     "スパイクベース学習 エネルギー効率",
     "ニューロモーフィック バックプロパゲーション"
+  ],
+  "research_study_list": [
+    {
+      "title": "How gradient estimator variance and bias impact learning in neural networks"
+    },
+    {
+      "title": "Flexible Phase Dynamics for Bio-Plausible Contrastive Learning"
+    },
+    {
+      "title": "Dynamics of Supervised and Reinforcement Learning in the Non-Linear Perceptron"
+    },
+    {
+      "title": "A meta-learning approach to (re)discover plasticity rules that carve a desired function into a neural network"
+    },
+    {
+      "title": "Neuronal Competition Groups with Supervised STDP for Spike-Based Classification"
+    },
+    {
+      "title": "Towards Scaling Difference Target Propagation by Learning Backprop Targets"
+    },
+    {
+      "title": "Online Stabilization of Spiking Neural Networks"
+    },
+    {
+      "title": "Online Training Through Time for Spiking Neural Networks"
+    },
+    {
+      "title": "Online Training Through Time for Spiking Neural Networks"
+    },
+    {
+      "title": "Sparse Spiking Gradient Descent"
+    },
+    {
+      "title": "Towards Energy Efficient Spiking Neural Networks: An Unstructured Pruning Framework"
+    },
+    {
+      "title": "SpikeGrad: An ANN-equivalent Computation Model for Implementing Backpropagation with Spikes"
+    },
+    {
+      "title": "Can the Brain Do Backpropagation? --- Exact Implementation of Backpropagation in Predictive Coding Networks"
+    },
+    {
+      "title": "Biologically-plausible backpropagation through arbitrary timespans via local neuromodulators"
+    },
+    {
+      "title": "A Theoretical Framework for Target Propagation"
+    }
   ]
 }

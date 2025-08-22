@@ -1,0 +1,41 @@
+{
+  "permuted_mnist": {
+    "SOCA": {
+      "average_accuracy": 83.63799999999999,
+      "backward_transfer": -16.322500000000005,
+      "forward_transfer": -20.0,
+      "final_accuracies": [
+        73.6,
+        73.72,
+        84.3,
+        89.66,
+        96.91
+      ]
+    },
+    "Experience_Replay": {
+      "average_accuracy": 63.85,
+      "backward_transfer": -41.89999999999999,
+      "forward_transfer": -20.0,
+      "final_accuracies": [
+        31.09,
+        35.52,
+        69.79,
+        85.45,
+        97.4
+      ]
+    },
+    "Finetune": {
+      "average_accuracy": 62.412,
+      "backward_transfer": -43.712500000000006,
+      "forward_transfer": -20.0,
+      "final_accuracies": [
+        25.41,
+        39.41,
+        67.32,
+        82.9,
+        97.02
+      ]
+    }
+  },
+  "split_cifar100": {}
+}

@@ -5,3 +5,470 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{author_year_differentiable,
+ title = {Differentiable Neuro-Symbolic Reasoning on Large-Scale Knowledge Graphs}
+}
+
+@article{author_year_towards,
+ title = {Towards Next-Generation Logic Synthesis: A Scalable Neural Circuit Generation Framework}
+}
+
+@article{ding_2024_robust,
+ abstract = {Spiking neural networks (SNNs) are gaining popularity in deep learning due to
+their low energy budget on neuromorphic hardware. However, they still face
+challenges in lacking sufficient robustness to guard safety-critical
+applications such as autonomous driving. Many studies have been conducted to
+defend SNNs from the threat of adversarial attacks. This paper aims to uncover
+the robustness of SNN through the lens of the stability of nonlinear systems.
+We are inspired by the fact that searching for parameters altering the leaky
+integrate-and-fire dynamics can enhance their robustness. Thus, we dive into
+the dynamics of membrane potential perturbation and simplify the formulation of
+the dynamics. We present that membrane potential perturbation dynamics can
+reliably convey the intensity of perturbation. Our theoretical analyses imply
+that the simplified perturbation dynamics satisfy input-output stability. Thus,
+we propose a training framework with modified SNN neurons and to reduce the
+mean square of membrane potential perturbation aiming at enhancing the
+robustness of SNN. Finally, we experimentally verify the effectiveness of the
+framework in the setting of Gaussian noise training and adversarial training on
+the image classification task.},
+ arxiv_url = {https://arxiv.org/pdf/2405.20694v1.pdf},
+ author = {Jianhao Ding and Zhiyu Pan and Yujia Liu and Zhaofei Yu and Tiejun Huang},
+ title = {Robust Stable Spiking Neural Networks},
+ year = {2024}
+}
+
+@article{kozachkov_2021_rnns,
+ abstract = {Recurrent neural networks (RNNs) are widely used throughout neuroscience as
+models of local neural activity. Many properties of single RNNs are well
+characterized theoretically, but experimental neuroscience has moved in the
+direction of studying multiple interacting areas, and RNN theory needs to be
+likewise extended. We take a constructive approach towards this problem,
+leveraging tools from nonlinear control theory and machine learning to
+characterize when combinations of stable RNNs will themselves be stable.
+Importantly, we derive conditions which allow for massive feedback connections
+between interacting RNNs. We parameterize these conditions for easy
+optimization using gradient-based techniques, and show that
+stability-constrained "networks of networks" can perform well on challenging
+sequential-processing benchmark tasks. Altogether, our results provide a
+principled approach towards understanding distributed, modular function in the
+brain.},
+ arxiv_url = {https://arxiv.org/pdf/2106.08928v6.pdf},
+ author = {Leo Kozachkov and Michaela Ennis and Jean-Jacques Slotine},
+ title = {RNNs of RNNs: Recursive Construction of Stable Assemblies of Recurrent Neural Networks},
+ year = {2021}
+}
+
+@article{li_2023_learning,
+ abstract = {Bridging logical reasoning and deep learning is crucial for advanced AI
+systems. In this work, we present a new framework that addresses this goal by
+generating interpretable and verifiable logical rules through differentiable
+learning, without relying on pre-specified logical structures. Our approach
+builds upon SATNet, a differentiable MaxSAT solver that learns the underlying
+rules from input-output examples. Despite its efficacy, the learned weights in
+SATNet are not straightforwardly interpretable, failing to produce
+human-readable rules. To address this, we propose a novel specification method
+called "maximum equality", which enables the interchangeability between the
+learned weights of SATNet and a set of propositional logical rules in weighted
+MaxSAT form. With the decoded weighted MaxSAT formula, we further introduce
+several effective verification techniques to validate it against the ground
+truth rules. Experiments on stream transformations and Sudoku problems show
+that our decoded rules are highly reliable: using exact solvers on them could
+achieve 100% accuracy, whereas the original SATNet fails to give correct
+solutions in many cases. Furthermore, we formally verify that our decoded
+logical rules are functionally equivalent to the ground truth ones.},
+ arxiv_url = {https://arxiv.org/pdf/2310.02133v1.pdf},
+ author = {Zhaoyu Li and Jinpei Guo and Yuhe Jiang and Xujie Si},
+ title = {Learning Reliable Logical Rules with SATNet},
+ year = {2023}
+}
+
+@article{petersen_2022_deep,
+ abstract = {Recently, research has increasingly focused on developing efficient neural
+network architectures. In this work, we explore logic gate networks for machine
+learning tasks by learning combinations of logic gates. These networks comprise
+logic gates such as "AND" and "XOR", which allow for very fast execution. The
+difficulty in learning logic gate networks is that they are conventionally
+non-differentiable and therefore do not allow training with gradient descent.
+Thus, to allow for effective training, we propose differentiable logic gate
+networks, an architecture that combines real-valued logics and a continuously
+parameterized relaxation of the network. The resulting discretized logic gate
+networks achieve fast inference speeds, e.g., beyond a million images of MNIST
+per second on a single CPU core.},
+ arxiv_url = {https://arxiv.org/pdf/2210.08277v1.pdf},
+ author = {Felix Petersen and Christian Borgelt and Hilde Kuehne and Oliver Deussen},
+ title = {Deep Differentiable Logic Gate Networks},
+ year = {2022}
+}
+
+@article{petersen_2022_deep,
+ abstract = {Recently, research has increasingly focused on developing efficient neural
+network architectures. In this work, we explore logic gate networks for machine
+learning tasks by learning combinations of logic gates. These networks comprise
+logic gates such as "AND" and "XOR", which allow for very fast execution. The
+difficulty in learning logic gate networks is that they are conventionally
+non-differentiable and therefore do not allow training with gradient descent.
+Thus, to allow for effective training, we propose differentiable logic gate
+networks, an architecture that combines real-valued logics and a continuously
+parameterized relaxation of the network. The resulting discretized logic gate
+networks achieve fast inference speeds, e.g., beyond a million images of MNIST
+per second on a single CPU core.},
+ arxiv_url = {https://arxiv.org/pdf/2210.08277v1.pdf},
+ author = {Felix Petersen and Christian Borgelt and Hilde Kuehne and Oliver Deussen},
+ title = {Deep Differentiable Logic Gate Networks},
+ year = {2022}
+}
+
+@article{petersen_2022_deep,
+ abstract = {Recently, research has increasingly focused on developing efficient neural
+network architectures. In this work, we explore logic gate networks for machine
+learning tasks by learning combinations of logic gates. These networks comprise
+logic gates such as "AND" and "XOR", which allow for very fast execution. The
+difficulty in learning logic gate networks is that they are conventionally
+non-differentiable and therefore do not allow training with gradient descent.
+Thus, to allow for effective training, we propose differentiable logic gate
+networks, an architecture that combines real-valued logics and a continuously
+parameterized relaxation of the network. The resulting discretized logic gate
+networks achieve fast inference speeds, e.g., beyond a million images of MNIST
+per second on a single CPU core.},
+ arxiv_url = {https://arxiv.org/pdf/2210.08277v1.pdf},
+ author = {Felix Petersen and Christian Borgelt and Hilde Kuehne and Oliver Deussen},
+ title = {Deep Differentiable Logic Gate Networks},
+ year = {2022}
+}
+
+@article{petersen_2022_deep,
+ abstract = {Recently, research has increasingly focused on developing efficient neural
+network architectures. In this work, we explore logic gate networks for machine
+learning tasks by learning combinations of logic gates. These networks comprise
+logic gates such as "AND" and "XOR", which allow for very fast execution. The
+difficulty in learning logic gate networks is that they are conventionally
+non-differentiable and therefore do not allow training with gradient descent.
+Thus, to allow for effective training, we propose differentiable logic gate
+networks, an architecture that combines real-valued logics and a continuously
+parameterized relaxation of the network. The resulting discretized logic gate
+networks achieve fast inference speeds, e.g., beyond a million images of MNIST
+per second on a single CPU core.},
+ arxiv_url = {https://arxiv.org/pdf/2210.08277v1.pdf},
+ author = {Felix Petersen and Christian Borgelt and Hilde Kuehne and Oliver Deussen},
+ title = {Deep Differentiable Logic Gate Networks},
+ year = {2022}
+}
+
+@article{petersen_2024_convolutional,
+ abstract = {With the increasing inference cost of machine learning models, there is a
+growing interest in models with fast and efficient inference. Recently, an
+approach for learning logic gate networks directly via a differentiable
+relaxation was proposed. Logic gate networks are faster than conventional
+neural network approaches because their inference only requires logic gate
+operators such as NAND, OR, and XOR, which are the underlying building blocks
+of current hardware and can be efficiently executed. We build on this idea,
+extending it by deep logic gate tree convolutions, logical OR pooling, and
+residual initializations. This allows scaling logic gate networks up by over
+one order of magnitude and utilizing the paradigm of convolution. On CIFAR-10,
+we achieve an accuracy of 86.29% using only 61 million logic gates, which
+improves over the SOTA while being 29x smaller.},
+ arxiv_url = {https://arxiv.org/pdf/2411.04732v1.pdf},
+ author = {Felix Petersen and Hilde Kuehne and Christian Borgelt and Julian Welzel and Stefano Ermon},
+ title = {Convolutional Differentiable Logic Gate Networks},
+ year = {2024}
+}
+
+@article{petersen_2024_convolutional,
+ abstract = {With the increasing inference cost of machine learning models, there is a
+growing interest in models with fast and efficient inference. Recently, an
+approach for learning logic gate networks directly via a differentiable
+relaxation was proposed. Logic gate networks are faster than conventional
+neural network approaches because their inference only requires logic gate
+operators such as NAND, OR, and XOR, which are the underlying building blocks
+of current hardware and can be efficiently executed. We build on this idea,
+extending it by deep logic gate tree convolutions, logical OR pooling, and
+residual initializations. This allows scaling logic gate networks up by over
+one order of magnitude and utilizing the paradigm of convolution. On CIFAR-10,
+we achieve an accuracy of 86.29% using only 61 million logic gates, which
+improves over the SOTA while being 29x smaller.},
+ arxiv_url = {https://arxiv.org/pdf/2411.04732v1.pdf},
+ author = {Felix Petersen and Hilde Kuehne and Christian Borgelt and Julian Welzel and Stefano Ermon},
+ github_url = {https://github.com/jiecaoyu/XNOR-Net-PyTorch},
+ title = {Convolutional Differentiable Logic Gate Networks},
+ year = {2024}
+}
+
+@article{petersen_2024_convolutional,
+ abstract = {With the increasing inference cost of machine learning models, there is a
+growing interest in models with fast and efficient inference. Recently, an
+approach for learning logic gate networks directly via a differentiable
+relaxation was proposed. Logic gate networks are faster than conventional
+neural network approaches because their inference only requires logic gate
+operators such as NAND, OR, and XOR, which are the underlying building blocks
+of current hardware and can be efficiently executed. We build on this idea,
+extending it by deep logic gate tree convolutions, logical OR pooling, and
+residual initializations. This allows scaling logic gate networks up by over
+one order of magnitude and utilizing the paradigm of convolution. On CIFAR-10,
+we achieve an accuracy of 86.29% using only 61 million logic gates, which
+improves over the SOTA while being 29x smaller.},
+ arxiv_url = {https://arxiv.org/pdf/2411.04732v1.pdf},
+ author = {Felix Petersen and Hilde Kuehne and Christian Borgelt and Julian Welzel and Stefano Ermon},
+ title = {Convolutional Differentiable Logic Gate Networks},
+ year = {2024}
+}
+
+@article{petersen_2024_convolutional,
+ abstract = {With the increasing inference cost of machine learning models, there is a
+growing interest in models with fast and efficient inference. Recently, an
+approach for learning logic gate networks directly via a differentiable
+relaxation was proposed. Logic gate networks are faster than conventional
+neural network approaches because their inference only requires logic gate
+operators such as NAND, OR, and XOR, which are the underlying building blocks
+of current hardware and can be efficiently executed. We build on this idea,
+extending it by deep logic gate tree convolutions, logical OR pooling, and
+residual initializations. This allows scaling logic gate networks up by over
+one order of magnitude and utilizing the paradigm of convolution. On CIFAR-10,
+we achieve an accuracy of 86.29% using only 61 million logic gates, which
+improves over the SOTA while being 29x smaller.},
+ arxiv_url = {https://arxiv.org/pdf/2411.04732v1.pdf},
+ author = {Felix Petersen and Hilde Kuehne and Christian Borgelt and Julian Welzel and Stefano Ermon},
+ title = {Convolutional Differentiable Logic Gate Networks},
+ year = {2024}
+}
+
+@article{petersen_2024_convolutional,
+ abstract = {With the increasing inference cost of machine learning models, there is a
+growing interest in models with fast and efficient inference. Recently, an
+approach for learning logic gate networks directly via a differentiable
+relaxation was proposed. Logic gate networks are faster than conventional
+neural network approaches because their inference only requires logic gate
+operators such as NAND, OR, and XOR, which are the underlying building blocks
+of current hardware and can be efficiently executed. We build on this idea,
+extending it by deep logic gate tree convolutions, logical OR pooling, and
+residual initializations. This allows scaling logic gate networks up by over
+one order of magnitude and utilizing the paradigm of convolution. On CIFAR-10,
+we achieve an accuracy of 86.29% using only 61 million logic gates, which
+improves over the SOTA while being 29x smaller.},
+ arxiv_url = {https://arxiv.org/pdf/2411.04732v1.pdf},
+ author = {Felix Petersen and Hilde Kuehne and Christian Borgelt and Julian Welzel and Stefano Ermon},
+ title = {Convolutional Differentiable Logic Gate Networks},
+ year = {2024}
+}
+
+@article{rawat_2024_unconditional,
+ abstract = {Stability in recurrent neural models poses a significant challenge,
+particularly in developing biologically plausible neurodynamical models that
+can be seamlessly trained. Traditional cortical circuit models are notoriously
+difficult to train due to expansive nonlinearities in the dynamical system,
+leading to an optimization problem with nonlinear stability constraints that
+are difficult to impose. Conversely, recurrent neural networks (RNNs) excel in
+tasks involving sequential data but lack biological plausibility and
+interpretability. In this work, we address these challenges by linking dynamic
+divisive normalization (DN) to the stability of ORGaNICs, a biologically
+plausible recurrent cortical circuit model that dynamically achieves DN and
+that has been shown to simulate a wide range of neurophysiological phenomena.
+By using the indirect method of Lyapunov, we prove the remarkable property of
+unconditional local stability for an arbitrary-dimensional ORGaNICs circuit
+when the recurrent weight matrix is the identity. We thus connect ORGaNICs to a
+system of coupled damped harmonic oscillators, which enables us to derive the
+circuit's energy function, providing a normative principle of what the circuit,
+and individual neurons, aim to accomplish. Further, for a generic recurrent
+weight matrix, we prove the stability of the 2D model and demonstrate
+empirically that stability holds in higher dimensions. Finally, we show that
+ORGaNICs can be trained by backpropagation through time without gradient
+clipping/scaling, thanks to its intrinsic stability property and adaptive time
+constants, which address the problems of exploding, vanishing, and oscillating
+gradients. By evaluating the model's performance on RNN benchmarks, we find
+that ORGaNICs outperform alternative neurodynamical models on static image
+classification tasks and perform comparably to LSTMs on sequential tasks.},
+ arxiv_url = {https://arxiv.org/pdf/2409.18946v3.pdf},
+ author = {Shivang Rawat and David J. Heeger and Stefano Martiniani},
+ title = {Unconditional stability of a recurrent neural circuit implementing divisive normalization},
+ year = {2024}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{gholami_2021_survey,
+ abstract = {As soon as abstract mathematical computations were adapted to computation on
+digital computers, the problem of efficient representation, manipulation, and
+communication of the numerical values in those computations arose. Strongly
+related to the problem of numerical representation is the problem of
+quantization: in what manner should a set of continuous real-valued numbers be
+distributed over a fixed discrete set of numbers to minimize the number of bits
+required and also to maximize the accuracy of the attendant computations? This
+perennial problem of quantization is particularly relevant whenever memory
+and/or computational resources are severely restricted, and it has come to the
+forefront in recent years due to the remarkable performance of Neural Network
+models in computer vision, natural language processing, and related areas.
+Moving from floating-point representations to low-precision fixed integer
+values represented in four bits or less holds the potential to reduce the
+memory footprint and latency by a factor of 16x; and, in fact, reductions of 4x
+to 8x are often realized in practice in these applications. Thus, it is not
+surprising that quantization has emerged recently as an important and very
+active sub-area of research in the efficient implementation of computations
+associated with Neural Networks. In this article, we survey approaches to the
+problem of quantizing the numerical values in deep Neural Network computations,
+covering the advantages/disadvantages of current methods. With this survey and
+its organization, we hope to have presented a useful snapshot of the current
+research in quantization for Neural Networks and to have given an intelligent
+organization to ease the evaluation of future research in this area.},
+ arxiv_url = {https://arxiv.org/pdf/2103.13630v3.pdf},
+ author = {Amir Gholami and Sehoon Kim and Zhen Dong and Zhewei Yao and Michael W. Mahoney and Kurt Keutzer},
+ title = {A survey of quantization methods for efficient neural network inference},
+ year = {2021}
+}
+
+@article{hoefler_2021_sparsity,
+ abstract = {The growing energy and performance costs of deep learning have driven the
+community to reduce the size of neural networks by selectively pruning
+components. Similarly to their biological counterparts, sparse networks
+generalize just as well, if not better than, the original dense networks.
+Sparsity can reduce the memory footprint of regular networks to fit mobile
+devices, as well as shorten training time for ever growing networks. In this
+paper, we survey prior work on sparsity in deep learning and provide an
+extensive tutorial of sparsification for both inference and training. We
+describe approaches to remove and add elements of neural networks, different
+training strategies to achieve model sparsity, and mechanisms to exploit
+sparsity in practice. Our work distills ideas from more than 300 research
+papers and provides guidance to practitioners who wish to utilize sparsity
+today, as well as to researchers whose goal is to push the frontier forward. We
+include the necessary background on mathematical methods in sparsification,
+describe phenomena such as early structure adaptation, the intricate relations
+between sparsity and the training process, and show techniques for achieving
+acceleration on real hardware. We also define a metric of pruned parameter
+efficiency that could serve as a baseline for comparison of different sparse
+networks. We close by speculating on how sparsity can improve future workloads
+and outline major open problems in the field.},
+ arxiv_url = {https://arxiv.org/pdf/2102.00554v1.pdf},
+ author = {Torsten Hoefler and Dan Alistarh and Tal Ben-Nun and Nikoli Dryden and Alexandra Peste},
+ title = {Sparsity in deep learning: Pruning and growth for efficient inference and training in neural networks},
+ year = {2021}
+}
+
+@article{krieken_2020_analyzing,
+ abstract = {The AI community is increasingly putting its attention towards combining
+symbolic and neural approaches, as it is often argued that the strengths and
+weaknesses of these approaches are complementary. One recent trend in the
+literature are weakly supervised learning techniques that employ operators from
+fuzzy logics. In particular, these use prior background knowledge described in
+such logics to help the training of a neural network from unlabeled and noisy
+data. By interpreting logical symbols using neural networks, this background
+knowledge can be added to regular loss functions, hence making reasoning a part
+of learning. We study, both formally and empirically, how a large collection of
+logical operators from the fuzzy logic literature behave in a differentiable
+learning setting. We find that many of these operators, including some of the
+most well-known, are highly unsuitable in this setting. A further finding
+concerns the treatment of implication in these fuzzy logics, and shows a strong
+imbalance between gradients driven by the antecedent and the consequent of the
+implication. Furthermore, we introduce a new family of fuzzy implications
+(called sigmoidal implications) to tackle this phenomenon. Finally, we
+empirically show that it is possible to use Differentiable Fuzzy Logics for
+semi-supervised learning, and compare how different operators behave in
+practice. We find that, to achieve the largest performance improvement over a
+supervised baseline, we have to resort to non-standard combinations of logical
+operators which perform well in learning, but no longer satisfy the usual
+logical laws.},
+ arxiv_url = {https://arxiv.org/pdf/2002.06100v2.pdf},
+ author = {Emile van Krieken and Erman Acar and Frank van Harmelen},
+ doi = {10.1016/j.artint.2021.103602},
+ title = {Analyzing differentiable fuzzy logic operators},
+ year = {2020}
+}
+
+@article{liu_2022_the,
+ abstract = {Random pruning is arguably the most naive way to attain sparsity in neural
+networks, but has been deemed uncompetitive by either post-training pruning or
+sparse training. In this paper, we focus on sparse training and highlight a
+perhaps counter-intuitive finding, that random pruning at initialization can be
+quite powerful for the sparse training of modern neural networks. Without any
+delicate pruning criteria or carefully pursued sparsity structures, we
+empirically demonstrate that sparsely training a randomly pruned network from
+scratch can match the performance of its dense equivalent. There are two key
+factors that contribute to this revival: (i) the network sizes matter: as the
+original dense networks grow wider and deeper, the performance of training a
+randomly pruned sparse network will quickly grow to matching that of its dense
+equivalent, even at high sparsity ratios; (ii) appropriate layer-wise sparsity
+ratios can be pre-chosen for sparse training, which shows to be another
+important performance booster. Simple as it looks, a randomly pruned subnetwork
+of Wide ResNet-50 can be sparsely trained to outperforming a dense Wide
+ResNet-50, on ImageNet. We also observed such randomly pruned networks
+outperform dense counterparts in other favorable aspects, such as
+out-of-distribution detection, uncertainty estimation, and adversarial
+robustness. Overall, our results strongly suggest there is larger-than-expected
+room for sparse training at scale, and the benefits of sparsity might be more
+universal beyond carefully designed pruning. Our source code can be found at
+https://github.com/VITA-Group/Random_Pruning.},
+ arxiv_url = {https://arxiv.org/pdf/2202.02643v1.pdf},
+ author = {Shiwei Liu and Tianlong Chen and Xiaohan Chen and Li Shen and Decebal Constantin Mocanu and Zhangyang Wang and Mykola Pechenizkiy},
+ title = {The unreasonable effectiveness of random pruning: Return of the most naive baseline for sparse training},
+ year = {2022}
+}
+
+@article{molchanov_2016_pruning,
+ abstract = {We propose a new formulation for pruning convolutional kernels in neural
+networks to enable efficient inference. We interleave greedy criteria-based
+pruning with fine-tuning by backpropagation - a computationally efficient
+procedure that maintains good generalization in the pruned network. We propose
+a new criterion based on Taylor expansion that approximates the change in the
+cost function induced by pruning network parameters. We focus on transfer
+learning, where large pretrained networks are adapted to specialized tasks. The
+proposed criterion demonstrates superior performance compared to other
+criteria, e.g. the norm of kernel weights or feature map activation, for
+pruning large CNNs after adaptation to fine-grained classification tasks
+(Birds-200 and Flowers-102) relaying only on the first order gradient
+information. We also show that pruning can lead to more than 10x theoretical
+(5x practical) reduction in adapted 3D-convolutional filters with a small drop
+in accuracy in a recurrent gesture classifier. Finally, we show results for the
+large-scale ImageNet dataset to emphasize the flexibility of our approach.},
+ arxiv_url = {https://arxiv.org/pdf/1611.06440v2.pdf},
+ author = {Pavlo Molchanov and Stephen Tyree and Tero Karras and Timo Aila and Jan Kautz},
+ title = {Pruning convolutional neural networks for resource efficient inference},
+ year = {2016}
+}
+
+@article{petersen_2022_deep,
+ abstract = {Recently, research has increasingly focused on developing efficient neural
+network architectures. In this work, we explore logic gate networks for machine
+learning tasks by learning combinations of logic gates. These networks comprise
+logic gates such as "AND" and "XOR", which allow for very fast execution. The
+difficulty in learning logic gate networks is that they are conventionally
+non-differentiable and therefore do not allow training with gradient descent.
+Thus, to allow for effective training, we propose differentiable logic gate
+networks, an architecture that combines real-valued logics and a continuously
+parameterized relaxation of the network. The resulting discretized logic gate
+networks achieve fast inference speeds, e.g., beyond a million images of MNIST
+per second on a single CPU core.},
+ arxiv_url = {https://arxiv.org/pdf/2210.08277v1.pdf},
+ author = {Felix Petersen and Christian Borgelt and Hilde Kuehne and Oliver Deussen},
+ title = {Deep Differentiable Logic Gate Networks},
+ year = {2022}
+}
+
+@article{qin_2020_binary,
+ abstract = {The binary neural network, largely saving the storage and computation, serves
+as a promising technique for deploying deep models on resource-limited devices.
+However, the binarization inevitably causes severe information loss, and even
+worse, its discontinuity brings difficulty to the optimization of the deep
+network. To address these issues, a variety of algorithms have been proposed,
+and achieved satisfying progress in recent years. In this paper, we present a
+comprehensive survey of these algorithms, mainly categorized into the native
+solutions directly conducting binarization, and the optimized ones using
+techniques like minimizing the quantization error, improving the network loss
+function, and reducing the gradient error. We also investigate other practical
+aspects of binary neural networks such as the hardware-friendly design and the
+training tricks. Then, we give the evaluation and discussions on different
+tasks, including image classification, object detection and semantic
+segmentation. Finally, the challenges that may be faced in future research are
+prospected.},
+ arxiv_url = {https://arxiv.org/pdf/2004.03333v1.pdf},
+ author = {Haotong Qin and Ruihao Gong and Xianglong Liu and Xiao Bai and Jingkuan Song and Nicu Sebe},
+ doi = {10.1016/j.patcog.2020.107281},
+ journal = {Pattern Recognition (2020) 107281},
+ title = {Binary neural networks: A survey},
+ year = {2020}
+}

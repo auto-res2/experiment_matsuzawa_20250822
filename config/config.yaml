@@ -1,0 +1,13 @@
+# Experiment Configuration
+methods: ['Uniform', 'PCGrad', 'CAGrad', 'MetaGrad']
+seeds: [42, 1337]
+lambda_sweep: [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+num_epochs: 3
+batch_size: 8
+num_batches_per_epoch: 20
+learning_rate_model: 0.0001
+learning_rate_policy: 0.001
+device: "cuda"
+metagrad_rank: 8
+tasks: ['segmentation', 'depth']
+test_mode: false

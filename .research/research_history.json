@@ -1,0 +1,10 @@
+{
+  "research_topic": "QLoRAの量子化誤差に関して改善したい",
+  "queries": [
+    "QLoRA quantization error",
+    "NF4 quantization error",
+    "double quantization QLoRA",
+    "AWQ LLM",
+    "GPTQ LLM"
+  ]
+}

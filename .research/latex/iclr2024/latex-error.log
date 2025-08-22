@@ -264,79 +264,18 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-
-Package natbib Warning: Citation `author-year-meta' on page 1 undefined on inpu
-t line 55.
-
-
-Package natbib Warning: Citation `deng-2022-accelerated' on page 1 undefined on
- input line 55.
-
-
-Package natbib Warning: Citation `daxberger-2021-laplace' on page 1 undefined o
-n input line 55.
-
-
-Package natbib Warning: Citation `hiratani-2024-disentangling' on page 1 undefi
-ned on input line 57.
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
-dist/fonts/enc/dvips/base/8r.enc}]
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-
-Package natbib Warning: Citation `author-year-long' on page 2 undefined on inpu
-t line 75.
-
-
-Package natbib Warning: Citation `sun-2023-regularizing' on page 2 undefined on
- input line 75.
-
-
-Package natbib Warning: Citation `daxberger-2021-laplace' on page 2 undefined o
-n input line 78.
-
-
-Package natbib Warning: Citation `deng-2022-accelerated' on page 2 undefined on
- input line 78.
-
-[2]
-
-Package natbib Warning: Citation `finn-2017-model' on page 3 undefined on input
- line 81.
-
-
-Package natbib Warning: Citation `author-year-meta' on page 3 undefined on inpu
-t line 81.
-
-
-Package natbib Warning: Citation `deng-2022-accelerated' on page 3 undefined on
- input line 94.
-
-[3]
-
-Package natbib Warning: Citation `deng-2022-accelerated' on page 4 undefined on
- input line 104.
-
-[4] [5] [6]
-Underfull \vbox (badness 2326) has occurred while \output is active [7 <./image
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1{/var/lib/texm
+f/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/d
+vips/base/8r.enc}] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+[2] [3] [4] [5] [6]
+Underfull \vbox (badness 3068) has occurred while \output is active [7 <./image
 s/metrics_comparison_permuted_mnist.pdf> <./images/metrics_comparison_split_cif
-ar100.pdf> <./images/accuracy_heatmap_soca.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active [8 <./imag
-es/accuracy_heatmap_experience_replay.pdf> <./images/accuracy_heatmap_finetune.
-pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active [9 <./imag
-es/forgetting_analysis_soca.pdf> <./images/forgetting_analysis_experience_repla
-y.pdf>]
-
-Package natbib Warning: Citation `airas2025' on page 10 undefined on input line
- 225.
-
+ar100.pdf> <./images/accuracy_heatmap_soca.pdf>] [8 <./images/accuracy_heatmap_
+experience_replay.pdf> <./images/accuracy_heatmap_finetune.pdf>] [9 <./images/f
+orgetting_analysis_soca.pdf> <./images/forgetting_analysis_experience_replay.pd
+f> <./images/forgetting_analysis_finetune.pdf>]
 No file paper.bbl.
-
-Package natbib Warning: There were undefined citations.
-
-[10 <./images/forgetting_analysis_finetune.pdf>] (./paper.aux)
+[10] (./paper.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -355,20 +294,14 @@ nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
 sbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (10 pages, 249479 bytes).
+Output written on paper.pdf (10 pages, 248957 bytes).
 Transcript written on paper.log.
 This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
 The top-level auxiliary file: paper.aux
 The style file: iclr2024_conference.bst
+I found no \citation commands---while reading file paper.aux
 Database file #1: references.bib
-Warning--I didn't find a database entry for "author-year-meta"
-Warning--I didn't find a database entry for "deng-2022-accelerated"
-Warning--I didn't find a database entry for "daxberger-2021-laplace"
-Warning--I didn't find a database entry for "hiratani-2024-disentangling"
-Warning--I didn't find a database entry for "author-year-long"
-Warning--I didn't find a database entry for "sun-2023-regularizing"
-Warning--I didn't find a database entry for "finn-2017-model"
-(There were 7 warnings)
+(There was 1 error message)
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
@@ -636,84 +569,20 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-
-Package natbib Warning: Citation `author-year-meta' on page 1 undefined on inpu
-t line 55.
-
-
-Package natbib Warning: Citation `deng-2022-accelerated' on page 1 undefined on
- input line 55.
-
-
-Package natbib Warning: Citation `daxberger-2021-laplace' on page 1 undefined o
-n input line 55.
-
-
-Package natbib Warning: Citation `hiratani-2024-disentangling' on page 1 undefi
-ned on input line 57.
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
-dist/fonts/enc/dvips/base/8r.enc}]
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-
-Package natbib Warning: Citation `author-year-long' on page 2 undefined on inpu
-t line 75.
-
-
-Package natbib Warning: Citation `sun-2023-regularizing' on page 2 undefined on
- input line 75.
-
-
-Package natbib Warning: Citation `daxberger-2021-laplace' on page 2 undefined o
-n input line 78.
-
-
-Package natbib Warning: Citation `deng-2022-accelerated' on page 2 undefined on
- input line 78.
-
-[2]
-
-Package natbib Warning: Citation `finn-2017-model' on page 3 undefined on input
- line 81.
-
-
-Package natbib Warning: Citation `author-year-meta' on page 3 undefined on inpu
-t line 81.
-
-
-Package natbib Warning: Citation `deng-2022-accelerated' on page 3 undefined on
- input line 94.
-
-[3]
-
-Package natbib Warning: Citation `deng-2022-accelerated' on page 4 undefined on
- input line 104.
-
-[4] [5] [6]
-Underfull \vbox (badness 2326) has occurred while \output is active [7 <./image
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1{/var/lib/texm
+f/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/d
+vips/base/8r.enc}] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+[2] [3] [4] [5] [6]
+Underfull \vbox (badness 3068) has occurred while \output is active [7 <./image
 s/metrics_comparison_permuted_mnist.pdf> <./images/metrics_comparison_split_cif
-ar100.pdf> <./images/accuracy_heatmap_soca.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active [8 <./imag
-es/accuracy_heatmap_experience_replay.pdf> <./images/accuracy_heatmap_finetune.
-pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active [9 <./imag
-es/forgetting_analysis_soca.pdf> <./images/forgetting_analysis_experience_repla
-y.pdf>]
+ar100.pdf> <./images/accuracy_heatmap_soca.pdf>] [8 <./images/accuracy_heatmap_
+experience_replay.pdf> <./images/accuracy_heatmap_finetune.pdf>] [9 <./images/f
+orgetting_analysis_soca.pdf> <./images/forgetting_analysis_experience_replay.pd
+f> <./images/forgetting_analysis_finetune.pdf>] (./paper.bbl
 
-Package natbib Warning: Citation `airas2025' on page 10 undefined on input line
- 225.
+Package natbib Warning: Empty `thebibliography' environment on input line 8.
 
-(./paper.bbl (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd))
-
-Package natbib Warning: There were undefined citations.
-
-[10 <./images/forgetting_analysis_finetune.pdf>] (./paper.aux
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-) )
+) [10] (./paper.aux) )
 (see the transcript file for additional information)</usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
@@ -721,10 +590,9 @@ e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
-sbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (10 pages, 261901 bytes).
+sbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on paper.pdf (10 pages, 251191 bytes).
 Transcript written on paper.log.
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
@@ -993,75 +861,20 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-
-Package natbib Warning: Citation `author-year-meta' on page 1 undefined on inpu
-t line 55.
-
-
-Package natbib Warning: Citation `deng-2022-accelerated' on page 1 undefined on
- input line 55.
-
-
-Package natbib Warning: Citation `daxberger-2021-laplace' on page 1 undefined o
-n input line 55.
-
-
-Package natbib Warning: Citation `hiratani-2024-disentangling' on page 1 undefi
-ned on input line 57.
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
-dist/fonts/enc/dvips/base/8r.enc}]
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-
-Package natbib Warning: Citation `author-year-long' on page 2 undefined on inpu
-t line 75.
-
-
-Package natbib Warning: Citation `sun-2023-regularizing' on page 2 undefined on
- input line 75.
-
-
-Package natbib Warning: Citation `daxberger-2021-laplace' on page 2 undefined o
-n input line 78.
-
-
-Package natbib Warning: Citation `deng-2022-accelerated' on page 2 undefined on
- input line 78.
-
-[2]
-
-Package natbib Warning: Citation `finn-2017-model' on page 3 undefined on input
- line 81.
-
-
-Package natbib Warning: Citation `author-year-meta' on page 3 undefined on inpu
-t line 81.
-
-
-Package natbib Warning: Citation `deng-2022-accelerated' on page 3 undefined on
- input line 94.
-
-[3]
-
-Package natbib Warning: Citation `deng-2022-accelerated' on page 4 undefined on
- input line 104.
-
-[4] [5] [6]
-Underfull \vbox (badness 2326) has occurred while \output is active [7 <./image
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1{/var/lib/texm
+f/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/d
+vips/base/8r.enc}] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+[2] [3] [4] [5] [6]
+Underfull \vbox (badness 3068) has occurred while \output is active [7 <./image
 s/metrics_comparison_permuted_mnist.pdf> <./images/metrics_comparison_split_cif
-ar100.pdf> <./images/accuracy_heatmap_soca.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active [8 <./imag
-es/accuracy_heatmap_experience_replay.pdf> <./images/accuracy_heatmap_finetune.
-pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active [9 <./imag
-es/forgetting_analysis_soca.pdf> <./images/forgetting_analysis_experience_repla
-y.pdf>] (./paper.bbl (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd))
+ar100.pdf> <./images/accuracy_heatmap_soca.pdf>] [8 <./images/accuracy_heatmap_
+experience_replay.pdf> <./images/accuracy_heatmap_finetune.pdf>] [9 <./images/f
+orgetting_analysis_soca.pdf> <./images/forgetting_analysis_experience_replay.pd
+f> <./images/forgetting_analysis_finetune.pdf>] (./paper.bbl
 
+Package natbib Warning: Empty `thebibliography' environment on input line 8.
 
-Package natbib Warning: There were undefined citations.
-
-[10 <./images/forgetting_analysis_finetune.pdf>] (./paper.aux) )
+) [10] (./paper.aux) )
 (see the transcript file for additional information)</usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
@@ -1069,8 +882,7 @@ e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
-sbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (10 pages, 261961 bytes).
+sbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on paper.pdf (10 pages, 251191 bytes).
 Transcript written on paper.log.

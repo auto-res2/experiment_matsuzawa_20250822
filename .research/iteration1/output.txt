@@ -1,0 +1,12 @@
+=== pip install start Fri Aug 22 08:46:18 UTC 2025 ===
+Collecting numpy>=1.22 (from -r requirements.txt (line 1))
+  Downloading numpy-2.3.2-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+Collecting torch>=2.0 (from -r requirements.txt (line 2))
+  Downloading torch-2.8.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (30 kB)
+Collecting matplotlib>=3.6 (from -r requirements.txt (line 3))
+  Downloading matplotlib-3.10.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (11 kB)
+Collecting seaborn>=0.12 (from -r requirements.txt (line 4))
+  Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting pandas>=1.5 (from -r requirements.txt (line 5))
+  Downloading pandas-2.3.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (91 kB)
+=== experiment start Fri Aug 22 08:46:20 UTC 2025 ===

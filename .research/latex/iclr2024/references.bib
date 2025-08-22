@@ -5,3 +5,564 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{guo_2023_architecture,
+ abstract = {With the prosperity of contrastive learning for visual representation
+learning (VCL), it is also adapted to the graph domain and yields promising
+performance. However, through a systematic study of various graph contrastive
+learning (GCL) methods, we observe that some common phenomena among existing
+GCL methods that are quite different from the original VCL methods, including
+1) positive samples are not a must for GCL; 2) negative samples are not
+necessary for graph classification, neither for node classification when
+adopting specific normalization modules; 3) data augmentations have much less
+influence on GCL, as simple domain-agnostic augmentations (e.g., Gaussian
+noise) can also attain fairly good performance. By uncovering how the implicit
+inductive bias of GNNs works in contrastive learning, we theoretically provide
+insights into the above intriguing properties of GCL. Rather than directly
+porting existing VCL methods to GCL, we advocate for more attention toward the
+unique architecture of graph learning and consider its implicit influence when
+designing GCL methods. Code is available at https:
+//github.com/PKU-ML/ArchitectureMattersGCL.},
+ arxiv_url = {https://arxiv.org/pdf/2311.02687v1.pdf},
+ author = {Xiaojun Guo and Yifei Wang and Zeming Wei and Yisen Wang},
+ title = {Architecture Matters: Uncovering Implicit Mechanisms in Graph Contrastive Learning},
+ year = {2023}
+}
+
+@article{guo_2023_architecture,
+ abstract = {With the prosperity of contrastive learning for visual representation
+learning (VCL), it is also adapted to the graph domain and yields promising
+performance. However, through a systematic study of various graph contrastive
+learning (GCL) methods, we observe that some common phenomena among existing
+GCL methods that are quite different from the original VCL methods, including
+1) positive samples are not a must for GCL; 2) negative samples are not
+necessary for graph classification, neither for node classification when
+adopting specific normalization modules; 3) data augmentations have much less
+influence on GCL, as simple domain-agnostic augmentations (e.g., Gaussian
+noise) can also attain fairly good performance. By uncovering how the implicit
+inductive bias of GNNs works in contrastive learning, we theoretically provide
+insights into the above intriguing properties of GCL. Rather than directly
+porting existing VCL methods to GCL, we advocate for more attention toward the
+unique architecture of graph learning and consider its implicit influence when
+designing GCL methods. Code is available at https:
+//github.com/PKU-ML/ArchitectureMattersGCL.},
+ arxiv_url = {https://arxiv.org/pdf/2311.02687v1.pdf},
+ author = {Xiaojun Guo and Yifei Wang and Zeming Wei and Yisen Wang},
+ title = {Architecture Matters: Uncovering Implicit Mechanisms in Graph Contrastive Learning},
+ year = {2023}
+}
+
+@article{guo_2023_contranorm,
+ abstract = {Oversmoothing is a common phenomenon in a wide range of Graph Neural Networks
+(GNNs) and Transformers, where performance worsens as the number of layers
+increases. Instead of characterizing oversmoothing from the view of complete
+collapse in which representations converge to a single point, we dive into a
+more general perspective of dimensional collapse in which representations lie
+in a narrow cone. Accordingly, inspired by the effectiveness of contrastive
+learning in preventing dimensional collapse, we propose a novel normalization
+layer called ContraNorm. Intuitively, ContraNorm implicitly shatters
+representations in the embedding space, leading to a more uniform distribution
+and a slighter dimensional collapse. On the theoretical analysis, we prove that
+ContraNorm can alleviate both complete collapse and dimensional collapse under
+certain conditions. Our proposed normalization layer can be easily integrated
+into GNNs and Transformers with negligible parameter overhead. Experiments on
+various real-world datasets demonstrate the effectiveness of our proposed
+ContraNorm. Our implementation is available at
+https://github.com/PKU-ML/ContraNorm.},
+ arxiv_url = {https://arxiv.org/pdf/2303.06562v2.pdf},
+ author = {Xiaojun Guo and Yifei Wang and Tianqi Du and Yisen Wang},
+ github_url = {https://github.com/PKU-ML/ContraNorm},
+ title = {ContraNorm: A Contrastive Learning Perspective on Oversmoothing and Beyond},
+ year = {2023}
+}
+
+@article{hassani_2020_contrastive,
+ abstract = {We introduce a self-supervised approach for learning node and graph level
+representations by contrasting structural views of graphs. We show that unlike
+visual representation learning, increasing the number of views to more than two
+or contrasting multi-scale encodings do not improve performance, and the best
+performance is achieved by contrasting encodings from first-order neighbors and
+a graph diffusion. We achieve new state-of-the-art results in self-supervised
+learning on 8 out of 8 node and graph classification benchmarks under the
+linear evaluation protocol. For example, on Cora (node) and Reddit-Binary
+(graph) classification benchmarks, we achieve 86.8% and 84.5% accuracy, which
+are 5.5% and 2.4% relative improvements over previous state-of-the-art. When
+compared to supervised baselines, our approach outperforms them in 4 out of 8
+benchmarks. Source code is released at: https://github.com/kavehhassani/mvgrl},
+ arxiv_url = {https://arxiv.org/pdf/2006.05582v1.pdf},
+ author = {Kaveh Hassani and Amir Hosein Khasahmadi},
+ title = {Contrastive Multi-View Representation Learning on Graphs},
+ year = {2020}
+}
+
+@article{kothapalli_2023_neural,
+ abstract = {Graph neural networks (GNNs) have become increasingly popular for
+classification tasks on graph-structured data. Yet, the interplay between graph
+topology and feature evolution in GNNs is not well understood. In this paper,
+we focus on node-wise classification, illustrated with community detection on
+stochastic block model graphs, and explore the feature evolution through the
+lens of the "Neural Collapse" (NC) phenomenon. When training instance-wise deep
+classifiers (e.g. for image classification) beyond the zero training error
+point, NC demonstrates a reduction in the deepest features' within-class
+variability and an increased alignment of their class means to certain
+symmetric structures. We start with an empirical study that shows that a
+decrease in within-class variability is also prevalent in the node-wise
+classification setting, however, not to the extent observed in the
+instance-wise case. Then, we theoretically study this distinction.
+Specifically, we show that even an "optimistic" mathematical model requires
+that the graphs obey a strict structural condition in order to possess a
+minimizer with exact collapse. Interestingly, this condition is viable also for
+heterophilic graphs and relates to recent empirical studies on settings with
+improved GNNs' generalization. Furthermore, by studying the gradient dynamics
+of the theoretical model, we provide reasoning for the partial collapse
+observed empirically. Finally, we present a study on the evolution of within-
+and between-class feature variability across layers of a well-trained GNN and
+contrast the behavior with spectral methods.},
+ arxiv_url = {https://arxiv.org/pdf/2307.01951v2.pdf},
+ author = {Vignesh Kothapalli and Tom Tirer and Joan Bruna},
+ github_url = {https://github.com/kvignesh1420/gnn_collapse},
+ title = {A Neural Collapse Perspective on Feature Evolution in Graph Neural Networks},
+ year = {2023}
+}
+
+@article{kothapalli_2023_neural,
+ abstract = {Graph neural networks (GNNs) have become increasingly popular for
+classification tasks on graph-structured data. Yet, the interplay between graph
+topology and feature evolution in GNNs is not well understood. In this paper,
+we focus on node-wise classification, illustrated with community detection on
+stochastic block model graphs, and explore the feature evolution through the
+lens of the "Neural Collapse" (NC) phenomenon. When training instance-wise deep
+classifiers (e.g. for image classification) beyond the zero training error
+point, NC demonstrates a reduction in the deepest features' within-class
+variability and an increased alignment of their class means to certain
+symmetric structures. We start with an empirical study that shows that a
+decrease in within-class variability is also prevalent in the node-wise
+classification setting, however, not to the extent observed in the
+instance-wise case. Then, we theoretically study this distinction.
+Specifically, we show that even an "optimistic" mathematical model requires
+that the graphs obey a strict structural condition in order to possess a
+minimizer with exact collapse. Interestingly, this condition is viable also for
+heterophilic graphs and relates to recent empirical studies on settings with
+improved GNNs' generalization. Furthermore, by studying the gradient dynamics
+of the theoretical model, we provide reasoning for the partial collapse
+observed empirically. Finally, we present a study on the evolution of within-
+and between-class feature variability across layers of a well-trained GNN and
+contrast the behavior with spectral methods.},
+ arxiv_url = {https://arxiv.org/pdf/2307.01951v2.pdf},
+ author = {Vignesh Kothapalli and Tom Tirer and Joan Bruna},
+ github_url = {https://github.com/kvignesh1420/gnn_collapse},
+ title = {A Neural Collapse Perspective on Feature Evolution in Graph Neural Networks},
+ year = {2023}
+}
+
+@article{poklukar_2021_geomca,
+ abstract = {Evaluating the quality of learned representations without relying on a
+downstream task remains one of the challenges in representation learning. In
+this work, we present Geometric Component Analysis (GeomCA) algorithm that
+evaluates representation spaces based on their geometric and topological
+properties. GeomCA can be applied to representations of any dimension,
+independently of the model that generated them. We demonstrate its
+applicability by analyzing representations obtained from a variety of
+scenarios, such as contrastive learning models, generative models and
+supervised learning models.},
+ arxiv_url = {https://arxiv.org/pdf/2105.12486v1.pdf},
+ author = {Petra Poklukar and Anastasia Varava and Danica Kragic},
+ title = {GeomCA: Geometric Evaluation of Data Representations},
+ year = {2021}
+}
+
+@article{skenk_2024_neural,
+ abstract = {Deep neural networks (DNNs) exhibit a surprising structure in their final
+layer known as neural collapse (NC), and a growing body of works has currently
+investigated the propagation of neural collapse to earlier layers of DNNs -- a
+phenomenon called deep neural collapse (DNC). However, existing theoretical
+results are restricted to special cases: linear models, only two layers or
+binary classification. In contrast, we focus on non-linear models of arbitrary
+depth in multi-class classification and reveal a surprising qualitative shift.
+As soon as we go beyond two layers or two classes, DNC stops being optimal for
+the deep unconstrained features model (DUFM) -- the standard theoretical
+framework for the analysis of collapse. The main culprit is a low-rank bias of
+multi-layer regularization schemes: this bias leads to optimal solutions of
+even lower rank than the neural collapse. We support our theoretical findings
+with experiments on both DUFM and real data, which show the emergence of the
+low-rank structure in the solution found by gradient descent.},
+ arxiv_url = {https://arxiv.org/pdf/2405.14468v2.pdf},
+ author = {Peter Súkeník and Marco Mondelli and Christoph Lampert},
+ title = {Neural collapse vs. low-rank bias: Is deep neural collapse really optimal?},
+ year = {2024}
+}
+
+@article{sylvain_2019_locality,
+ abstract = {In this work we study locality and compositionality in the context of
+learning representations for Zero Shot Learning (ZSL). In order to well-isolate
+the importance of these properties in learned representations, we impose the
+additional constraint that, differently from most recent work in ZSL, no
+pre-training on different datasets (e.g. ImageNet) is performed. The results of
+our experiments show how locality, in terms of small parts of the input, and
+compositionality, i.e. how well can the learned representations be expressed as
+a function of a smaller vocabulary, are both deeply related to generalization
+and motivate the focus on more local-aware models in future research directions
+for representation learning.},
+ arxiv_url = {https://arxiv.org/pdf/1912.12179v1.pdf},
+ author = {Tristan Sylvain and Linda Petrini and Devon Hjelm},
+ title = {Locality and Compositionality in Zero-Shot Learning},
+ year = {2019}
+}
+
+@article{wang_2022_uncovering,
+ abstract = {Recent studies show that graph convolutional network (GCN) often performs
+worse for low-degree nodes, exhibiting the so-called structural unfairness for
+graphs with long-tailed degree distributions prevalent in the real world. Graph
+contrastive learning (GCL), which marries the power of GCN and contrastive
+learning, has emerged as a promising self-supervised approach for learning node
+representations. How does GCL behave in terms of structural fairness?
+Surprisingly, we find that representations obtained by GCL methods are already
+fairer to degree bias than those learned by GCN. We theoretically show that
+this fairness stems from intra-community concentration and inter-community
+scatter properties of GCL, resulting in a much clear community structure to
+drive low-degree nodes away from the community boundary. Based on our
+theoretical analysis, we further devise a novel graph augmentation method,
+called GRAph contrastive learning for DEgree bias (GRADE), which applies
+different strategies to low- and high-degree nodes. Extensive experiments on
+various benchmarks and evaluation protocols validate the effectiveness of the
+proposed method.},
+ arxiv_url = {https://arxiv.org/pdf/2210.03011v1.pdf},
+ author = {Ruijia Wang and Xiao Wang and Chuan Shi and Le Song},
+ title = {Uncovering the Structural Fairness in Graph Contrastive Learning},
+ year = {2022}
+}
+
+@article{wu_2024_linguistic,
+ abstract = {Neural collapse ($\mathcal{NC}$) is a phenomenon observed in classification
+tasks where top-layer representations collapse into their class means, which
+become equinorm, equiangular and aligned with the classifiers. These behaviours
+-- associated with generalization and robustness -- would manifest under
+specific conditions: models are trained towards zero loss, with noise-free
+labels belonging to balanced classes, which do not outnumber the model's hidden
+dimension. Recent studies have explored $\mathcal{NC}$ in the absence of one or
+more of these conditions to extend and capitalize on the associated benefits of
+ideal geometries. Language modelling presents a curious frontier, as
+\textit{training by token prediction} constitutes a classification task where
+none of the conditions exist: the vocabulary is imbalanced and exceeds the
+embedding dimension; different tokens might correspond to similar contextual
+embeddings; and large language models (LLMs) in particular are typically only
+trained for a few epochs. This paper empirically investigates the impact of
+scaling the architectures and training of causal language models (CLMs) on
+their progression towards $\mathcal{NC}$. We find that $\mathcal{NC}$
+properties that develop with scale (and regularization) are linked to
+generalization. Moreover, there is evidence of some relationship between
+$\mathcal{NC}$ and generalization independent of scale. Our work thereby
+underscores the generality of $\mathcal{NC}$ as it extends to the novel and
+more challenging setting of language modelling. Downstream, we seek to inspire
+further research on the phenomenon to deepen our understanding of LLMs -- and
+neural networks at large -- and improve existing architectures based on
+$\mathcal{NC}$-related properties. Our code is hosted on GitHub at
+https://github.com/rhubarbwu/linguistic-collapse .},
+ arxiv_url = {https://arxiv.org/pdf/2405.17767v3.pdf},
+ author = {Robert Wu and Vardan Papyan},
+ github_url = {https://github.com/rhubarbwu/linguistic-collapse},
+ title = {Linguistic Collapse: Neural Collapse in (Large) Language Models},
+ year = {2024}
+}
+
+@article{xu_2021_infogcl,
+ abstract = {Various graph contrastive learning models have been proposed to improve the
+performance of learning tasks on graph datasets in recent years. While
+effective and prevalent, these models are usually carefully customized. In
+particular, although all recent researches create two contrastive views, they
+differ greatly in view augmentations, architectures, and objectives. It remains
+an open question how to build your graph contrastive learning model from
+scratch for particular graph learning tasks and datasets. In this work, we aim
+to fill this gap by studying how graph information is transformed and
+transferred during the contrastive learning process and proposing an
+information-aware graph contrastive learning framework called InfoGCL. The key
+point of this framework is to follow the Information Bottleneck principle to
+reduce the mutual information between contrastive parts while keeping
+task-relevant information intact at both the levels of the individual module
+and the entire framework so that the information loss during graph
+representation learning can be minimized. We show for the first time that all
+recent graph contrastive learning methods can be unified by our framework. We
+empirically validate our theoretical analysis on both node and graph
+classification benchmark datasets, and demonstrate that our algorithm
+significantly outperforms the state-of-the-arts.},
+ arxiv_url = {https://arxiv.org/pdf/2110.15438v1.pdf},
+ author = {Dongkuan Xu and Wei Cheng and Dongsheng Luo and Haifeng Chen and Xiang Zhang},
+ title = {InfoGCL: Information-Aware Graph Contrastive Learning},
+ year = {2021}
+}
+
+@article{yang_2023_are,
+ abstract = {Recent work has observed an intriguing ''Neural Collapse'' phenomenon in
+well-trained neural networks, where the last-layer representations of training
+samples with the same label collapse into each other. This appears to suggest
+that the last-layer representations are completely determined by the labels,
+and do not depend on the intrinsic structure of input distribution. We provide
+evidence that this is not a complete description, and that the apparent
+collapse hides important fine-grained structure in the representations.
+Specifically, even when representations apparently collapse, the small amount
+of remaining variation can still faithfully and accurately captures the
+intrinsic structure of input distribution. As an example, if we train on
+CIFAR-10 using only 5 coarse-grained labels (by combining two classes into one
+super-class) until convergence, we can reconstruct the original 10-class labels
+from the learned representations via unsupervised clustering. The reconstructed
+labels achieve $93\%$ accuracy on the CIFAR-10 test set, nearly matching the
+normal CIFAR-10 accuracy for the same architecture. We also provide an initial
+theoretical result showing the fine-grained representation structure in a
+simplified synthetic setting. Our results show concretely how the structure of
+input data can play a significant role in determining the fine-grained
+structure of neural representations, going beyond what Neural Collapse
+predicts.},
+ arxiv_url = {https://arxiv.org/pdf/2306.17105v1.pdf},
+ author = {Yongyi Yang and Jacob Steinhardt and Wei Hu},
+ title = {Are Neurons Actually Collapsed? On the Fine-Grained Structure in Neural Representations},
+ year = {2023}
+}
+
+@article{zhou_2023_combating,
+ abstract = {Although link prediction on graphs has achieved great success with the
+development of graph neural networks (GNNs), the potential robustness under the
+edge noise is still less investigated. To close this gap, we first conduct an
+empirical study to disclose that the edge noise bilaterally perturbs both input
+topology and target label, yielding severe performance degradation and
+representation collapse. To address this dilemma, we propose an
+information-theory-guided principle, Robust Graph Information Bottleneck
+(RGIB), to extract reliable supervision signals and avoid representation
+collapse. Different from the basic information bottleneck, RGIB further
+decouples and balances the mutual dependence among graph topology, target
+labels, and representation, building new learning objectives for robust
+representation against the bilateral noise. Two instantiations, RGIB-SSL and
+RGIB-REP, are explored to leverage the merits of different methodologies, i.e.,
+self-supervised learning and data reparameterization, for implicit and explicit
+data denoising, respectively. Extensive experiments on six datasets and three
+GNNs with diverse noisy scenarios verify the effectiveness of our RGIB
+instantiations. The code is publicly available at:
+https://github.com/tmlr-group/RGIB.},
+ arxiv_url = {https://arxiv.org/pdf/2311.01196v1.pdf},
+ author = {Zhanke Zhou and Jiangchao Yao and Jiaxu Liu and Xiawei Guo and Quanming Yao and Li He and Liang Wang and Bo Zheng and Bo Han},
+ github_url = {https://github.com/tmlr-group/RGIB},
+ title = {Combating Bilateral Edge Noise for Robust Link Prediction},
+ year = {2023}
+}
+
+@article{zhu_2021_geometric,
+ abstract = {We provide the first global optimization landscape analysis of
+$Neural\;Collapse$ -- an intriguing empirical phenomenon that arises in the
+last-layer classifiers and features of neural networks during the terminal
+phase of training. As recently reported by Papyan et al., this phenomenon
+implies that ($i$) the class means and the last-layer classifiers all collapse
+to the vertices of a Simplex Equiangular Tight Frame (ETF) up to scaling, and
+($ii$) cross-example within-class variability of last-layer activations
+collapses to zero. We study the problem based on a simplified
+$unconstrained\;feature\;model$, which isolates the topmost layers from the
+classifier of the neural network. In this context, we show that the classical
+cross-entropy loss with weight decay has a benign global landscape, in the
+sense that the only global minimizers are the Simplex ETFs while all other
+critical points are strict saddles whose Hessian exhibit negative curvature
+directions. In contrast to existing landscape analysis for deep neural networks
+which is often disconnected from practice, our analysis of the simplified model
+not only does it explain what kind of features are learned in the last layer,
+but it also shows why they can be efficiently optimized in the simplified
+settings, matching the empirical observations in practical deep network
+architectures. These findings could have profound implications for
+optimization, generalization, and robustness of broad interests. For example,
+our experiments demonstrate that one may set the feature dimension equal to the
+number of classes and fix the last-layer classifier to be a Simplex ETF for
+network training, which reduces memory cost by over $20\%$ on ResNet18 without
+sacrificing the generalization performance.},
+ arxiv_url = {https://arxiv.org/pdf/2105.02375v1.pdf},
+ author = {Zhihui Zhu and Tianyu Ding and Jinxin Zhou and Xiao Li and Chong You and Jeremias Sulam and Qing Qu},
+ github_url = {https://github.com/tding1/Neural-Collapse},
+ title = {A Geometric Analysis of Neural Collapse with Unconstrained Features},
+ year = {2021}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{ba_2016_layer,
+ abstract = {Training state-of-the-art, deep neural networks is computationally expensive.
+One way to reduce the training time is to normalize the activities of the
+neurons. A recently introduced technique called batch normalization uses the
+distribution of the summed input to a neuron over a mini-batch of training
+cases to compute a mean and variance which are then used to normalize the
+summed input to that neuron on each training case. This significantly reduces
+the training time in feed-forward neural networks. However, the effect of batch
+normalization is dependent on the mini-batch size and it is not obvious how to
+apply it to recurrent neural networks. In this paper, we transpose batch
+normalization into layer normalization by computing the mean and variance used
+for normalization from all of the summed inputs to the neurons in a layer on a
+single training case. Like batch normalization, we also give each neuron its
+own adaptive bias and gain which are applied after the normalization but before
+the non-linearity. Unlike batch normalization, layer normalization performs
+exactly the same computation at training and test times. It is also
+straightforward to apply to recurrent neural networks by computing the
+normalization statistics separately at each time step. Layer normalization is
+very effective at stabilizing the hidden state dynamics in recurrent networks.
+Empirically, we show that layer normalization can substantially reduce the
+training time compared with previously published techniques.},
+ arxiv_url = {https://arxiv.org/pdf/1607.06450v1.pdf},
+ author = {Jimmy Lei Ba and Jamie Ryan Kiros and Geoffrey E. Hinton},
+ title = {Layer normalization},
+ year = {2016}
+}
+
+@article{bardes_2021_vicreg,
+ abstract = {Recent self-supervised methods for image representation learning are based on
+maximizing the agreement between embedding vectors from different views of the
+same image. A trivial solution is obtained when the encoder outputs constant
+vectors. This collapse problem is often avoided through implicit biases in the
+learning architecture, that often lack a clear justification or interpretation.
+In this paper, we introduce VICReg (Variance-Invariance-Covariance
+Regularization), a method that explicitly avoids the collapse problem with a
+simple regularization term on the variance of the embeddings along each
+dimension individually. VICReg combines the variance term with a decorrelation
+mechanism based on redundancy reduction and covariance regularization, and
+achieves results on par with the state of the art on several downstream tasks.
+In addition, we show that incorporating our new variance term into other
+methods helps stabilize the training and leads to performance improvements.},
+ arxiv_url = {https://arxiv.org/pdf/2105.04906v3.pdf},
+ author = {Adrien Bardes and Jean Ponce and Yann LeCun},
+ title = {Vicreg: Variance-invariance-covariance regularization for self-supervised learning},
+ year = {2021}
+}
+
+@article{chen_2020_exploring,
+ abstract = {Siamese networks have become a common structure in various recent models for
+unsupervised visual representation learning. These models maximize the
+similarity between two augmentations of one image, subject to certain
+conditions for avoiding collapsing solutions. In this paper, we report
+surprising empirical results that simple Siamese networks can learn meaningful
+representations even using none of the following: (i) negative sample pairs,
+(ii) large batches, (iii) momentum encoders. Our experiments show that
+collapsing solutions do exist for the loss and structure, but a stop-gradient
+operation plays an essential role in preventing collapsing. We provide a
+hypothesis on the implication of stop-gradient, and further show
+proof-of-concept experiments verifying it. Our "SimSiam" method achieves
+competitive results on ImageNet and downstream tasks. We hope this simple
+baseline will motivate people to rethink the roles of Siamese architectures for
+unsupervised representation learning. Code will be made available.},
+ arxiv_url = {https://arxiv.org/pdf/2011.10566v1.pdf},
+ author = {Xinlei Chen and Kaiming He},
+ title = {Exploring simple siamese representation learning},
+ year = {2020}
+}
+
+@article{chen_2020_simple,
+ abstract = {Graph convolutional networks (GCNs) are a powerful deep learning approach for
+graph-structured data. Recently, GCNs and subsequent variants have shown
+superior performance in various application areas on real-world datasets.
+Despite their success, most of the current GCN models are shallow, due to the
+{\em over-smoothing} problem. In this paper, we study the problem of designing
+and analyzing deep graph convolutional networks. We propose the GCNII, an
+extension of the vanilla GCN model with two simple yet effective techniques:
+{\em Initial residual} and {\em Identity mapping}. We provide theoretical and
+empirical evidence that the two techniques effectively relieves the problem of
+over-smoothing. Our experiments show that the deep GCNII model outperforms the
+state-of-the-art methods on various semi- and full-supervised tasks. Code is
+available at https://github.com/chennnM/GCNII .},
+ arxiv_url = {https://arxiv.org/pdf/2007.02133v1.pdf},
+ author = {Ming Chen and Zhewei Wei and Zengfeng Huang and Bolin Ding and Yaliang Li},
+ title = {Simple and deep graph convolutional networks},
+ year = {2020}
+}
+
+@article{chen_2022_optimization,
+ abstract = {Due to the over-smoothing issue, most existing graph neural networks can only
+capture limited dependencies with their inherently finite aggregation layers.
+To overcome this limitation, we propose a new kind of graph convolution, called
+Graph Implicit Nonlinear Diffusion (GIND), which implicitly has access to
+infinite hops of neighbors while adaptively aggregating features with nonlinear
+diffusion to prevent over-smoothing. Notably, we show that the learned
+representation can be formalized as the minimizer of an explicit convex
+optimization objective. With this property, we can theoretically characterize
+the equilibrium of our GIND from an optimization perspective. More
+interestingly, we can induce new structural variants by modifying the
+corresponding optimization objective. To be specific, we can embed prior
+properties to the equilibrium, as well as introducing skip connections to
+promote training stability. Extensive experiments show that GIND is good at
+capturing long-range dependencies, and performs well on both homophilic and
+heterophilic graphs with nonlinear diffusion. Moreover, we show that the
+optimization-induced variants of our models can boost the performance and
+improve training stability and efficiency as well. As a result, our GIND
+obtains significant improvements on both node-level and graph-level tasks.},
+ arxiv_url = {https://arxiv.org/pdf/2206.14418v1.pdf},
+ author = {Qi Chen and Yifei Wang and Yisen Wang and Jiansheng Yang and Zhouchen Lin},
+ title = {Optimization-induced graph implicit nonlinear diffusion},
+ year = {2022}
+}
+
+@article{chien_2021_node,
+ abstract = {Learning on graphs has attracted significant attention in the learning
+community due to numerous real-world applications. In particular, graph neural
+networks (GNNs), which take numerical node features and graph structure as
+inputs, have been shown to achieve state-of-the-art performance on various
+graph-related learning tasks. Recent works exploring the correlation between
+numerical node features and graph structure via self-supervised learning have
+paved the way for further performance improvements of GNNs. However, methods
+used for extracting numerical node features from raw data are still
+graph-agnostic within standard GNN pipelines. This practice is sub-optimal as
+it prevents one from fully utilizing potential correlations between graph
+topology and node attributes. To mitigate this issue, we propose a new
+self-supervised learning framework, Graph Information Aided Node feature
+exTraction (GIANT). GIANT makes use of the eXtreme Multi-label Classification
+(XMC) formalism, which is crucial for fine-tuning the language model based on
+graph information, and scales to large datasets. We also provide a theoretical
+analysis that justifies the use of XMC over link prediction and motivates
+integrating XR-Transformers, a powerful method for solving XMC problems, into
+the GIANT framework. We demonstrate the superior performance of GIANT over the
+standard GNN pipeline on Open Graph Benchmark datasets: For example, we improve
+the accuracy of the top-ranked method GAMLP from $68.25\%$ to $69.67\%$, SGC
+from $63.29\%$ to $66.10\%$ and MLP from $47.24\%$ to $61.10\%$ on the
+ogbn-papers100M dataset by leveraging GIANT.},
+ arxiv_url = {https://arxiv.org/pdf/2111.00064v3.pdf},
+ author = {Eli Chien and Wei-Cheng Chang and Cho-Jui Hsieh and Hsiang-Fu Yu and Jiong Zhang and Olgica Milenkovic and Inderjit S Dhillon},
+ title = {Node feature extraction by self-supervised multi-scale neighborhood prediction},
+ year = {2021}
+}
+
+@article{devlin_2018_bert,
+ abstract = {We introduce a new language representation model called BERT, which stands
+for Bidirectional Encoder Representations from Transformers. Unlike recent
+language representation models, BERT is designed to pre-train deep
+bidirectional representations from unlabeled text by jointly conditioning on
+both left and right context in all layers. As a result, the pre-trained BERT
+model can be fine-tuned with just one additional output layer to create
+state-of-the-art models for a wide range of tasks, such as question answering
+and language inference, without substantial task-specific architecture
+modifications.
+  BERT is conceptually simple and empirically powerful. It obtains new
+state-of-the-art results on eleven natural language processing tasks, including
+pushing the GLUE score to 80.5% (7.7% point absolute improvement), MultiNLI
+accuracy to 86.7% (4.6% absolute improvement), SQuAD v1.1 question answering
+Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1
+(5.1 point absolute improvement).},
+ arxiv_url = {https://arxiv.org/pdf/1810.04805v2.pdf},
+ author = {Jacob Devlin and Ming-Wei Chang and Kenton Lee and Kristina Toutanova},
+ title = {Bert: Pre-training of deep bidirectional transformers for language understanding},
+ year = {2018}
+}
+
+@article{dong_2021_attention,
+ abstract = {Attention-based architectures have become ubiquitous in machine learning, yet
+our understanding of the reasons for their effectiveness remains limited. This
+work proposes a new way to understand self-attention networks: we show that
+their output can be decomposed into a sum of smaller terms, each involving the
+operation of a sequence of attention heads across layers. Using this
+decomposition, we prove that self-attention possesses a strong inductive bias
+towards "token uniformity". Specifically, without skip connections or
+multi-layer perceptrons (MLPs), the output converges doubly exponentially to a
+rank-1 matrix. On the other hand, skip connections and MLPs stop the output
+from degeneration. Our experiments verify the identified convergence phenomena
+on different variants of standard transformer architectures.},
+ arxiv_url = {https://arxiv.org/pdf/2103.03404v2.pdf},
+ author = {Yihe Dong and Jean-Baptiste Cordonnier and Andreas Loukas},
+ title = {Attention is not all you need: Pure attention loses rank doubly exponentially with depth},
+ year = {2021}
+}

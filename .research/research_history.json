@@ -6,5 +6,52 @@
     "高次元 因果推論",
     "因果推論 計算量",
     "Efficient Causal Discovery"
+  ],
+  "research_study_list": [
+    {
+      "title": "Learning and Sampling of Atomic Interventions from Observations"
+    },
+    {
+      "title": "Fast Proxy Experiment Design for Causal Effect Identification"
+    },
+    {
+      "title": "LazyIter: A Fast Algorithm for Counting Markov Equivalent DAGs and Designing Experiments"
+    },
+    {
+      "title": "Unified Covariate Adjustment for Causal Inference"
+    },
+    {
+      "title": "Large-Scale Differentiable Causal Discovery of Factor Graphs"
+    },
+    {
+      "title": "QWO: Speeding Up Permutation-Based Causal Discovery in LiGAMs"
+    },
+    {
+      "title": "Large-Scale Differentiable Causal Discovery of Factor Graphs"
+    },
+    {
+      "title": "Latent Hierarchical Causal Structure Discovery with Rank Constraints"
+    },
+    {
+      "title": "Causal-StoNet: Causal Inference for High-Dimensional Complex Data"
+    },
+    {
+      "title": "Learning and Sampling of Atomic Interventions from Observations"
+    },
+    {
+      "title": "Efficient Intervention Design for Causal Discovery with Latents"
+    },
+    {
+      "title": "On the Complexity of Identification in Linear Structural Causal Models"
+    },
+    {
+      "title": "Causal Discovery with Fewer Conditional Independence Tests"
+    },
+    {
+      "title": "Fast Proxy Experiment Design for Causal Effect Identification"
+    },
+    {
+      "title": "LazyIter: A Fast Algorithm for Counting Markov Equivalent DAGs and Designing Experiments"
+    }
   ]
 }

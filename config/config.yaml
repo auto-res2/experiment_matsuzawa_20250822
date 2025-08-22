@@ -1,0 +1,31 @@
+data:
+  h5_filename: 'dales_mock.h5'
+  num_train_points: 5000000
+  num_test_points: 1000000
+  num_scenes: 5
+  num_classes: 8
+  feature_dim: 6
+  geom_feature_dim: 6
+
+training:
+  device: 'cuda'
+  batch_size: 4096
+  ptv3_epochs: 5
+  lgs_epochs: 10
+  ptv3_lr: 0.001
+  lgs_lr: 0.0001
+  num_sicod_iterations: 2
+
+evaluation:
+  eval_batch_size: 8192
+
+coreset:
+  sizes: [500000, 1000000]
+
+model:
+  ptv3_dim: 64
+  ptv3_depth: 4
+  lgs_channels: [16, 32, 64]
+  lgs_voxel_size: 0.1
+
+seeds: [42, 84, 126]

@@ -1,1 +1,11 @@
-# Please list the required python packages.
+torch
+numpy
+h5py
+matplotlib
+seaborn
+scikit-learn
+pyyaml
+# For the LGS model, MinkowskiEngine is required.
+# Please follow the official installation instructions for your CUDA version.
+# Example: pip install git+https://github.com/NVIDIA/MinkowskiEngine -v --no-deps --install-option="--force_cuda"
+MinkowskiEngine

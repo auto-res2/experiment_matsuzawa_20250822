@@ -1,0 +1,97 @@
+{
+  "memory_benchmark": [
+    {
+      "name": "Baseline",
+      "resolution": 256,
+      "batch_size": 2,
+      "peak_memory_gb": 0.0005988217890262604,
+      "step_time_s": 3.9339206218719482,
+      "loss": 2.0808591842651367
+    },
+    {
+      "name": "Rev-SS2D",
+      "resolution": 256,
+      "batch_size": 2,
+      "peak_memory_gb": 0.0001517869532108307,
+      "step_time_s": 3.4553589820861816,
+      "loss": 2.644676685333252
+    },
+    {
+      "name": "Baseline",
+      "resolution": 512,
+      "batch_size": 1,
+      "peak_memory_gb": 0.0005988217890262604,
+      "step_time_s": 10.344978094100952,
+      "loss": 1.5581917762756348
+    },
+    {
+      "name": "Rev-SS2D",
+      "resolution": 512,
+      "batch_size": 1,
+      "peak_memory_gb": 0.0001517869532108307,
+      "step_time_s": 11.989928245544434,
+      "loss": 2.632639169692993
+    }
+  ],
+  "gradient_correctness": {
+    "baseline_loss": 1.8768939971923828,
+    "rev_loss": 1.0911543369293213,
+    "max_grad_error": 0.6475875377655029,
+    "mean_grad_error": 0.4241490500668685,
+    "correctness_passed": false
+  },
+  "ablation_study": [
+    {
+      "config": "Baseline",
+      "peak_memory_gb": 0.0007167421281337738,
+      "final_loss": 1.3460900783538818,
+      "losses": [
+        1.7557079792022705,
+        1.5366476774215698,
+        1.3460900783538818
+      ]
+    },
+    {
+      "config": "Rev Only",
+      "peak_memory_gb": 0.00018030032515525818,
+      "final_loss": 1.1274302005767822,
+      "losses": [
+        1.362848162651062,
+        1.2363234758377075,
+        1.1274302005767822
+      ]
+    },
+    {
+      "config": "Rev + Shared",
+      "peak_memory_gb": 0.00018030032515525818,
+      "final_loss": 1.3793079853057861,
+      "losses": [
+        1.6693378686904907,
+        1.5190963745117188,
+        1.3793079853057861
+      ]
+    },
+    {
+      "config": "Rev + Streaming",
+      "peak_memory_gb": 0.00018030032515525818,
+      "final_loss": 1.5246119499206543,
+      "losses": [
+        1.9864897727966309,
+        1.7437034845352173,
+        1.5246119499206543
+      ]
+    },
+    {
+      "config": "Full Rev-SS2D",
+      "peak_memory_gb": 0.00018030032515525818,
+      "final_loss": 1.732537865638733,
+      "losses": [
+        2.0976271629333496,
+        1.9084926843643188,
+        1.732537865638733
+      ]
+    }
+  ],
+  "timestamp": 1755839945.3820872,
+  "device": "cpu"
+}

@@ -116,6 +116,11 @@ class LowBitAccLinear(nn.Linear):
             while x.size(1) > 1:
                 x1 = x[:, 0::2, :]
                 x2 = x[:, 1::2, :]
+                
+                if x1.size(1) > x2.size(1):
+                    pad_size = x1.size(1) - x2.size(1)
+                    x2 = torch.cat([x2, torch.zeros(x2.size(0), pad_size, x2.size(2), device=x2.device, dtype=x2.dtype)], dim=1)
+                
                 s = x1 + x2
                 swamp = (x2.abs() < (1e-6 + 1e-3 * x1.abs())).float().sum()
                 self.swamp_count += swamp.long()

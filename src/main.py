@@ -11,12 +11,19 @@ import sys
 import time
 import json
 import argparse
+import glob
 from pathlib import Path
 
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
+
+try:
+    import psutil
+    HAS_PSUTIL = True
+except ImportError:
+    HAS_PSUTIL = False
 
 from preprocess import preprocess_data
 from train import train_model, LowBitAccLinear
@@ -310,6 +317,14 @@ def main():
     print(f"Using device: {args.device}")
     print(f"Quick test mode: {args.quick_test}")
     
+    if torch.cuda.is_available():
+        print(f"CUDA device: {torch.cuda.get_device_name()}")
+        print(f"CUDA memory: {torch.cuda.get_device_properties(0).total_memory / 1e9:.1f} GB")
+    
+    if HAS_PSUTIL:
+        print(f"System RAM: {psutil.virtual_memory().total / 1e9:.1f} GB")
+        print(f"Available RAM: {psutil.virtual_memory().available / 1e9:.1f} GB")
+    
     set_seed(42)
     
     os.makedirs(".research/iteration1/images", exist_ok=True)
@@ -318,7 +333,11 @@ def main():
     
     if "1" in args.experiments:
         try:
+            print(f"\n[{time.strftime('%H:%M:%S')}] Starting Experiment 1 (MLP on CIFAR-10)...")
+            start_time = time.time()
             summary1 = run_experiment_1(quick_test=args.quick_test, device=args.device)
+            elapsed = time.time() - start_time
+            print(f"[{time.strftime('%H:%M:%S')}] Experiment 1 completed in {elapsed:.1f}s")
             all_summaries["experiment_1"] = summary1
         except Exception as e:
             print(f"Experiment 1 failed: {e}")
@@ -326,7 +345,11 @@ def main():
     
     if "2" in args.experiments:
         try:
+            print(f"\n[{time.strftime('%H:%M:%S')}] Starting Experiment 2 (CNN/ResNet-18 on CIFAR-10)...")
+            start_time = time.time()
             summary2 = run_experiment_2(quick_test=args.quick_test, device=args.device)
+            elapsed = time.time() - start_time
+            print(f"[{time.strftime('%H:%M:%S')}] Experiment 2 completed in {elapsed:.1f}s")
             all_summaries["experiment_2"] = summary2
         except Exception as e:
             print(f"Experiment 2 failed: {e}")
@@ -334,7 +357,11 @@ def main():
     
     if "3" in args.experiments:
         try:
+            print(f"\n[{time.strftime('%H:%M:%S')}] Starting Experiment 3 (Transformer-small on synthetic text)...")
+            start_time = time.time()
             summary3 = run_experiment_3(quick_test=args.quick_test, device=args.device)
+            elapsed = time.time() - start_time
+            print(f"[{time.strftime('%H:%M:%S')}] Experiment 3 completed in {elapsed:.1f}s")
             all_summaries["experiment_3"] = summary3
         except Exception as e:
             print(f"Experiment 3 failed: {e}")
@@ -342,7 +369,11 @@ def main():
     
     if "microbench" in args.experiments:
         try:
+            print(f"\n[{time.strftime('%H:%M:%S')}] Starting GEMM Microbenchmark...")
+            start_time = time.time()
             microbench_results = run_gemm_microbenchmark(quick_test=args.quick_test, device=args.device)
+            elapsed = time.time() - start_time
+            print(f"[{time.strftime('%H:%M:%S')}] Microbenchmark completed in {elapsed:.1f}s")
             all_summaries["microbenchmark"] = {"num_configs": len(microbench_results)}
         except Exception as e:
             print(f"Microbenchmark failed: {e}")
@@ -354,17 +385,28 @@ def main():
     print("\n" + "=" * 60)
     print("EXPERIMENT SUMMARY")
     print("=" * 60)
-    for exp_name, summary in all_summaries.items():
-        print(f"{exp_name}:")
-        if "error" in summary:
-            print(f"  ERROR: {summary['error']}")
-        else:
-            for key, value in summary.items():
-                print(f"  {key}: {value}")
-        print()
+    total_experiments = len([k for k in all_summaries.keys() if not k.startswith("microbench")])
+    successful_experiments = len([k for k, v in all_summaries.items() if "error" not in v and not k.startswith("microbench")])
+    print(f"Experiments completed: {successful_experiments}/{total_experiments}")
     
-    print("All experiments completed!")
+    for exp_name, summary in all_summaries.items():
+        print(f"\n{exp_name}:")
+        if "error" in summary:
+            print(f"  ❌ ERROR: {summary['error']}")
+        else:
+            print(f"  ✅ SUCCESS")
+            for key, value in summary.items():
+                if isinstance(value, float):
+                    print(f"  {key}: {value:.4f}")
+                else:
+                    print(f"  {key}: {value}")
+    
+    print(f"\nAll experiments completed!")
     print(f"Results and plots saved to: .research/iteration1/images/")
+    
+    pdf_files = glob.glob(".research/iteration1/images/*.pdf")
+    json_files = glob.glob(".research/iteration1/images/*.json")
+    print(f"Generated {len(pdf_files)} PDF plots and {len(json_files)} result files")
     
     print("\nSetting status_enum to 'stopped'")
 

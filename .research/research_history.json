@@ -6,5 +6,52 @@
     "adapter tuning forgetting",
     "prefix tuning continual learning",
     "orthogonal gradients PEFT"
+  ],
+  "research_study_list": [
+    {
+      "title": "InfLoRA: Interference-Free Low-Rank Adaptation for Continual Learning"
+    },
+    {
+      "title": "Memory Efficient Continual Learning with Transformers"
+    },
+    {
+      "title": "What Will My Model Forget? Forecasting Forgotten Examples in Language Model Refinement"
+    },
+    {
+      "title": "Flora: Low-Rank Adapters Are Secretly Gradient Compressors"
+    },
+    {
+      "title": "Continual Forgetting for Pre-trained Vision Models"
+    },
+    {
+      "title": "Seeking Neural Nuggets: Knowledge Transfer in Large Language Models from a Parametric Perspective"
+    },
+    {
+      "title": "Conditionally Adaptive Multi-Task Learning: Improving Transfer Learning in NLP Using Fewer Parameters & Less Data"
+    },
+    {
+      "title": "Fine-tuning Reinforcement Learning Models is Secretly a Forgetting Mitigation Problem"
+    },
+    {
+      "title": "Semantically-Shifted Incremental Adapter-Tuning is A Continual ViTransformer"
+    },
+    {
+      "title": "Semantically-Shifted Incremental Adapter-Tuning is A Continual ViTransformer"
+    },
+    {
+      "title": "Progressive Prompts: Continual Learning for Language Models"
+    },
+    {
+      "title": "Achieving Forgetting Prevention and Knowledge Transfer in Continual Learning"
+    },
+    {
+      "title": "Parameter-Efficient Orthogonal Finetuning via Butterfly Factorization"
+    },
+    {
+      "title": "Group and Shuffle: Efficient Structured Orthogonal Parametrization"
+    },
+    {
+      "title": "Parameter Efficient Quasi-Orthogonal Fine-Tuning via Givens Rotation"
+    }
   ]
 }

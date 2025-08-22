@@ -6,5 +6,52 @@
     "Cascaded Diffusion Models computation",
     "Diffusion Models fast sampling",
     "Hierarchical Diffusion computational cost"
+  ],
+  "research_study_list": [
+    {
+      "title": "Hierarchical Patch Diffusion Models for High-Resolution Video Generation"
+    },
+    {
+      "title": "Improving Training Efficiency of Diffusion Models via Multi-Stage Framework and Tailored Multi-Decoder Architecture"
+    },
+    {
+      "title": "Simple Hierarchical Planning with Diffusion"
+    },
+    {
+      "title": "Wavelet Diffusion Models Are Fast and Scalable Image Generators"
+    },
+    {
+      "title": "First Hitting Diffusion Models for Generating Manifold, Graph and Categorical Data"
+    },
+    {
+      "title": "Hyperbolic Diffusion Embedding and Distance for Hierarchical Representation Learning"
+    },
+    {
+      "title": "Likelihood Training of Cascaded Diffusion Models via Hierarchical Volume-preserving Maps"
+    },
+    {
+      "title": "Improving Training Efficiency of Diffusion Models via Multi-Stage Framework and Tailored Multi-Decoder Architecture"
+    },
+    {
+      "title": "Cache Me if You Can: Accelerating Diffusion Models through Block Caching"
+    },
+    {
+      "title": "Multistep Distillation of Diffusion Models via Moment Matching"
+    },
+    {
+      "title": "A Simple Early Exiting Framework for Accelerated Sampling in Diffusion Models"
+    },
+    {
+      "title": "Denoising Diffusion Implicit Models"
+    },
+    {
+      "title": "Simple Hierarchical Planning with Diffusion"
+    },
+    {
+      "title": "Hyperbolic Diffusion Embedding and Distance for Hierarchical Representation Learning"
+    },
+    {
+      "title": "Hierarchical Integration Diffusion Model for Realistic Image Deblurring"
+    }
   ]
 }

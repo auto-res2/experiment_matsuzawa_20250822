@@ -367,30 +367,20 @@ line 151.
 Package natbib Warning: Citation `liu2021conflict' on page 6 undefined on input
  line 151.
 
-
-LaTeX Warning: File `pareto_front_plot.png' not found on input line 161.
-
-
-! Package pdftex.def Error: File `pareto_front_plot.png' not found: using draft
- setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.161 ...dth=0.7\linewidth]{pareto_front_plot.png}
-                                                  
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
-Underfull \vbox (badness 10000) has occurred while \output is active [6]
+[6]
 
 Package natbib Warning: Citation `airas2025' on page 7 undefined on input line 
 174.
 
-No file paper.bbl.
 
 Package natbib Warning: There were undefined citations.
 
-[7] (./paper.aux)
+[7] (./paper.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
 
 LaTeX Warning: There were undefined references.
 
@@ -402,37 +392,23 @@ Package rerunfilecheck Warning: File `paper.out' has changed.
 (rerunfilecheck)                Rerun to get outlines right
 (rerunfilecheck)                or use package `bookmark'.
 
- )
-(see the transcript file for additional information)</usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
-w/times/utmri8a.pfb>
-Output written on paper.pdf (7 pages, 156671 bytes).
+ )</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
+/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (7 pages, 158468 bytes).
 Transcript written on paper.log.
 This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
 The top-level auxiliary file: paper.aux
-The style file: iclr2024_conference.bst
-Database file #1: references.bib
-Warning--I didn't find a database entry for "wu2020understanding"
-Warning--I didn't find a database entry for "tiomoko2021pca"
-Warning--I didn't find a database entry for "yu2020gradient"
-Warning--I didn't find a database entry for "liu2021conflict"
-Warning--I didn't find a database entry for "standley2019which"
-Warning--I didn't find a database entry for "gurulingan2023multi"
-Warning--I didn't find a database entry for "jiang2023forkmerge"
-Warning--I didn't find a database entry for "jeong2024quantifying"
-Warning--I didn't find a database entry for "shi2023recon"
-Warning--I didn't find a database entry for "xin2022current"
-Warning--I didn't find a database entry for "chen2017gradnorm"
-(There were 11 warnings)
+I found no \bibdata command---while reading file paper.aux
+I found no \bibstyle command---while reading file paper.aux
+(There were 2 error messages)
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
@@ -700,135 +676,12 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-
-Package natbib Warning: Citation `wu2020understanding' on page 1 undefined on i
-nput line 55.
-
-
-Package natbib Warning: Citation `tiomoko2021pca' on page 1 undefined on input 
-line 55.
-
-
-Package natbib Warning: Citation `yu2020gradient' on page 1 undefined on input 
-line 57.
-
-
-Package natbib Warning: Citation `liu2021conflict' on page 1 undefined on input
- line 57.
-
-
-Package natbib Warning: Citation `standley2019which' on page 1 undefined on inp
-ut line 59.
-
-
-Package natbib Warning: Citation `gurulingan2023multi' on page 1 undefined on i
-nput line 59.
-
-
-Package natbib Warning: Citation `jiang2023forkmerge' on page 1 undefined on in
-put line 59.
-
-
-Package natbib Warning: Citation `jeong2024quantifying' on page 1 undefined on 
-input line 61.
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
-dist/fonts/enc/dvips/base/8r.enc}]
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-
-Package natbib Warning: Citation `yu2020gradient' on page 2 undefined on input 
-line 75.
-
-
-Package natbib Warning: Citation `liu2021conflict' on page 2 undefined on input
- line 75.
-
-
-Package natbib Warning: Citation `standley2019which' on page 2 undefined on inp
-ut line 77.
-
-
-Package natbib Warning: Citation `gurulingan2023multi' on page 2 undefined on i
-nput line 77.
-
-
-Package natbib Warning: Citation `jiang2023forkmerge' on page 2 undefined on in
-put line 77.
-
-
-Package natbib Warning: Citation `shi2023recon' on page 2 undefined on input li
-ne 77.
-
-
-Package natbib Warning: Citation `xin2022current' on page 2 undefined on input 
-line 79.
-
-
-Package natbib Warning: Citation `chen2017gradnorm' on page 2 undefined on inpu
-t line 79.
-
-
-Package natbib Warning: Citation `jeong2024quantifying' on page 2 undefined on 
-input line 79.
-
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1{/var/lib/texm
+f/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/d
+vips/base/8r.enc}] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
 [2]
-
-Package natbib Warning: Citation `wu2020understanding' on page 3 undefined on i
-nput line 85.
-
-
-Package natbib Warning: Citation `tiomoko2021pca' on page 3 undefined on input 
-line 91.
-
-[3] [4]
-
-Package natbib Warning: Citation `yu2020gradient' on page 5 undefined on input 
-line 135.
-
-
-Package natbib Warning: Citation `liu2021conflict' on page 5 undefined on input
- line 136.
-
-[5]
-
-Package natbib Warning: Citation `yu2020gradient' on page 6 undefined on input 
-line 151.
-
-
-Package natbib Warning: Citation `liu2021conflict' on page 6 undefined on input
- line 151.
-
-
-LaTeX Warning: File `pareto_front_plot.png' not found on input line 161.
-
-
-! Package pdftex.def Error: File `pareto_front_plot.png' not found: using draft
- setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.161 ...dth=0.7\linewidth]{pareto_front_plot.png}
-                                                  
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
-Underfull \vbox (badness 10000) has occurred while \output is active [6]
-
-Package natbib Warning: Citation `airas2025' on page 7 undefined on input line 
-174.
-
-(./paper.bbl
-Underfull \vbox (badness 10000) has occurred while \output is active [7])
-
-Package natbib Warning: There were undefined citations.
-
-[8] (./paper.aux
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-) )
+Underfull \vbox (badness 1019) has occurred while \output is active [3]
+[4] [5] [6] [7] (./paper.aux) )
 (see the transcript file for additional information)</usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/ty
@@ -837,11 +690,10 @@ lic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
-w/times/utmri8a.pfb>
-Output written on paper.pdf (8 pages, 160421 bytes).
+usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (7 pages, 160456 bytes).
 Transcript written on paper.log.
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
@@ -1110,126 +962,12 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-
-Package natbib Warning: Citation `wu2020understanding' on page 1 undefined on i
-nput line 55.
-
-
-Package natbib Warning: Citation `tiomoko2021pca' on page 1 undefined on input 
-line 55.
-
-
-Package natbib Warning: Citation `yu2020gradient' on page 1 undefined on input 
-line 57.
-
-
-Package natbib Warning: Citation `liu2021conflict' on page 1 undefined on input
- line 57.
-
-
-Package natbib Warning: Citation `standley2019which' on page 1 undefined on inp
-ut line 59.
-
-
-Package natbib Warning: Citation `gurulingan2023multi' on page 1 undefined on i
-nput line 59.
-
-
-Package natbib Warning: Citation `jiang2023forkmerge' on page 1 undefined on in
-put line 59.
-
-
-Package natbib Warning: Citation `jeong2024quantifying' on page 1 undefined on 
-input line 61.
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
-dist/fonts/enc/dvips/base/8r.enc}]
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-
-Package natbib Warning: Citation `yu2020gradient' on page 2 undefined on input 
-line 75.
-
-
-Package natbib Warning: Citation `liu2021conflict' on page 2 undefined on input
- line 75.
-
-
-Package natbib Warning: Citation `standley2019which' on page 2 undefined on inp
-ut line 77.
-
-
-Package natbib Warning: Citation `gurulingan2023multi' on page 2 undefined on i
-nput line 77.
-
-
-Package natbib Warning: Citation `jiang2023forkmerge' on page 2 undefined on in
-put line 77.
-
-
-Package natbib Warning: Citation `shi2023recon' on page 2 undefined on input li
-ne 77.
-
-
-Package natbib Warning: Citation `xin2022current' on page 2 undefined on input 
-line 79.
-
-
-Package natbib Warning: Citation `chen2017gradnorm' on page 2 undefined on inpu
-t line 79.
-
-
-Package natbib Warning: Citation `jeong2024quantifying' on page 2 undefined on 
-input line 79.
-
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1{/var/lib/texm
+f/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/d
+vips/base/8r.enc}] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
 [2]
-
-Package natbib Warning: Citation `wu2020understanding' on page 3 undefined on i
-nput line 85.
-
-
-Package natbib Warning: Citation `tiomoko2021pca' on page 3 undefined on input 
-line 91.
-
-[3] [4]
-
-Package natbib Warning: Citation `yu2020gradient' on page 5 undefined on input 
-line 135.
-
-
-Package natbib Warning: Citation `liu2021conflict' on page 5 undefined on input
- line 136.
-
-[5]
-
-Package natbib Warning: Citation `yu2020gradient' on page 6 undefined on input 
-line 151.
-
-
-Package natbib Warning: Citation `liu2021conflict' on page 6 undefined on input
- line 151.
-
-
-LaTeX Warning: File `pareto_front_plot.png' not found on input line 161.
-
-
-! Package pdftex.def Error: File `pareto_front_plot.png' not found: using draft
- setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.161 ...dth=0.7\linewidth]{pareto_front_plot.png}
-                                                  
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
-Underfull \vbox (badness 10000) has occurred while \output is active [6]
-(./paper.bbl
-Underfull \vbox (badness 10000) has occurred while \output is active [7])
-
-Package natbib Warning: There were undefined citations.
-
-[8] (./paper.aux) )
+Underfull \vbox (badness 1019) has occurred while \output is active [3]
+[4] [5] [6] [7] (./paper.aux) )
 (see the transcript file for additional information)</usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/ty
@@ -1238,9 +976,8 @@ lic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
-w/times/utmri8a.pfb>
-Output written on paper.pdf (8 pages, 160393 bytes).
+usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (7 pages, 160456 bytes).
 Transcript written on paper.log.

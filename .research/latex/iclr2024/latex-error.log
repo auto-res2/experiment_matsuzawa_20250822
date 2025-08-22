@@ -265,533 +265,252 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Undefined control sequence.
-l.55 ...d defer to human experts when necessary.\n
-                                                  \nCurrent UQ methodologies...
-
-! Undefined control sequence.
-l.55 ...o human experts when necessary.\n\nCurrent
-                                                   UQ methodologies for LLMs...
-
 
 Package natbib Warning: Citation `wang_2024_blob' on page 1 undefined on input 
-line 55.
+line 57.
 
 
 Package natbib Warning: Citation `kapoor_2024_large' on page 1 undefined on inp
-ut line 55.
-
-! Undefined control sequence.
-l.55 ...in billion-parameter open-weight models.\n
-                                                  \nThe second category comp...
-
-! Undefined control sequence.
-l.55 ...llion-parameter open-weight models.\n\nThe
-                                                   second category comprises...
+ut line 57.
 
 
 Package natbib Warning: Citation `quach_2023_conformal' on page 1 undefined on 
-input line 55.
+input line 59.
 
 
 Package natbib Warning: Citation `mohri_2024_language' on page 1 undefined on i
-nput line 55.
+nput line 59.
 
 
 Package natbib Warning: Citation `liu_2023_litcab' on page 1 undefined on input
- line 55.
+ line 59.
 
 
 Package natbib Warning: Citation `mohri_2024_language' on page 1 undefined on i
-nput line 55.
+nput line 59.
 
 
 Package natbib Warning: Citation `du_2024_haloscope' on page 1 undefined on inp
-ut line 55.
+ut line 59.
 
-! Undefined control sequence.
-l.55 ...al dynamics of the generation *process*.\n
-                                                  \nTo address this gap, we ...
-
-! Undefined control sequence.
-l.55 ...ynamics of the generation *process*.\n\nTo
-                                                   address this gap, we prop...
-
-! Undefined control sequence.
-l.55 ...etric that operationalizes this concept.\n
-                                                  \nOur contributions are as...
-
-! Undefined control sequence.
-l.55 ... that operationalizes this concept.\n\nOur
-                                                   contributions are as foll...
-
-! Undefined control sequence.
-l.55 ...pt.\n\nOur contributions are as follows:\n
-                                                  \n\begin{itemize}
-! Undefined control sequence.
-l.55 ....\n\nOur contributions are as follows:\n\n
-                                                  \begin{itemize}
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}]
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
 
 Package natbib Warning: Citation `cherian_2024_large' on page 2 undefined on in
-put line 59.
+put line 69.
 
 
 Package natbib Warning: Citation `hou_2023_decomposing' on page 2 undefined on 
-input line 60.
-
-! Undefined control sequence.
-l.65 ...eas and contrast our approach with each.\n
-                                                  \n\textbf{Training-Based U...
-
-! Undefined control sequence.
-l.65 ...s and contrast our approach with each.\n\n
-                                                  \textbf{Training-Based Unc...
+input line 70.
 
 
 Package natbib Warning: Citation `wang_2024_blob' on page 2 undefined on input 
-line 65.
+line 77.
 
 
 Package natbib Warning: Citation `kapoor_2024_large' on page 2 undefined on inp
-ut line 65.
-
-! Undefined control sequence.
-l.65 ...model that provides hidden state access.\n
-                                                  \n\textbf{Logit-Based and ...
-
-! Undefined control sequence.
-l.65 ...del that provides hidden state access.\n\n
-                                                  \textbf{Logit-Based and Ca...
+ut line 77.
 
 
 Package natbib Warning: Citation `quach_2023_conformal' on page 2 undefined on 
-input line 65.
+input line 79.
 
 
 Package natbib Warning: Citation `mohri_2024_language' on page 2 undefined on i
-nput line 65.
-
-
-Package natbib Warning: Citation `shen_2024_thermometer' on page 2 undefined on
- input line 65.
-
-
-Package natbib Warning: Citation `liu_2023_litcab' on page 2 undefined on input
- line 65.
-
-! Undefined control sequence.
-l.65 ...n states, making it a logit-free metric.\n
-                                                  \n\textbf{Text-Based Uncer...
-
-! Undefined control sequence.
-l.65 ...states, making it a logit-free metric.\n\n
-                                                  \textbf{Text-Based Uncerta...
-
-
-Package natbib Warning: Citation `mohri_2024_language' on page 2 undefined on i
-nput line 65.
-
-! Undefined control sequence.
-l.65 ...orm and robust to different text styles.\n
-                                                  \n\textbf{Latent Space Pro...
-
-! Undefined control sequence.
-l.65 ...m and robust to different text styles.\n\n
-                                                  \textbf{Latent Space Probi...
-
-
-Package natbib Warning: Citation `burns_2022_discovering' on page 2 undefined o
-n input line 65.
-
-
-Package natbib Warning: Citation `azaria_2023_the' on page 2 undefined on input
- line 65.
-
-
-Package natbib Warning: Citation `du_2024_haloscope' on page 2 undefined on inp
-ut line 65.
-
-[2]
-! Undefined control sequence.
-l.69 ...and formally define the problem setting.\n
-                                                  \nUncertainty in machine l...
-
-! Undefined control sequence.
-l.69 ...define the problem setting.\n\nUncertainty
-                                                   in machine learning model...
-
-
-Package natbib Warning: Citation `ahdritz_2024_distinguishing' on page 3 undefi
-ned on input line 69.
-
-
-Package natbib Warning: Citation `hou_2023_decomposing' on page 3 undefined on 
-input line 69.
-
-! Undefined control sequence.
-l.69 ... model's response should not be trusted.\n
-                                                  \nOur work proposes a nove...
-
-! Undefined control sequence.
-l.69 ...l's response should not be trusted.\n\nOur
-                                                   work proposes a novel way...
-
-! Undefined control sequence.
-l.69 ...ores multiple, competing semantic paths.\n
-                                                  \n\textbf{Problem Setting ...
-
-! Undefined control sequence.
-l.69 ...es multiple, competing semantic paths.\n\n
-                                                  \textbf{Problem Setting an...
-
-! Undefined control sequence.
-<recently read> \n 
-                   
-l.69 ...n\n\textbf{Problem Setting and Notation}\n
-                                                  \nWe consider a large lang...
-
-! Undefined control sequence.
-l.69 ...textbf{Problem Setting and Notation}\n\nWe
-                                                   consider a large language...
-
-! Undefined control sequence.
-l.69 ... prompt and previously generated tokens:\n
-                                                  \[ P(y_t | p, y_{<t}; \the...
-
-! Undefined control sequence.
-l.70 \nDuring
-              this forward pass, the model produces a sequence of hidden sta...
-
-! Undefined control sequence.
-l.70 ...hidden states for a complete generation:\n
-                                                  \[ T = (h_1, h_2, ..., h_L...
-
-! Undefined control sequence.
-l.71 \nThe
-           length $L$ of the trajectory can vary for different generations f...
-
-! Undefined control sequence.
-l.75 ...n a training-free and logit-free manner.\n
-                                                  \nThe LTD score is compute...
-
-! Undefined control sequence.
-l.75 ...raining-free and logit-free manner.\n\nThe
-                                                   LTD score is computed thr...
-
-! Undefined control sequence.
-l.75 ... by an efficient divergence calculation.\n
-                                                  \n\textbf{1. Ensemble Traj...
-
-! Undefined control sequence.
-l.75 ...y an efficient divergence calculation.\n\n
-                                                  \textbf{1. Ensemble Trajec...
-
-! Undefined control sequence.
-<recently read> \n 
-                   
-l.75 ...extbf{1. Ensemble Trajectory Generation}\n
-                                                  \nFor a given input prompt...
-
-! Undefined control sequence.
-l.75 ...{1. Ensemble Trajectory Generation}\n\nFor
-                                                   a given input prompt $p$,...
-
-! Undefined control sequence.
-l.75 ...lengths of the generated text responses.\n
-                                                  \n\textbf{2. Efficient Div...
-
-! Undefined control sequence.
-l.75 ...ngths of the generated text responses.\n\n
-                                                  \textbf{2. Efficient Diver...
-
-! Undefined control sequence.
-<recently read> \n 
-                   
-l.75 ...a Trajectory Barycenter Alignment (TBA)}\n
-                                                  \nA naive comparison of al...
-
-! Undefined control sequence.
-l.75 ...rajectory Barycenter Alignment (TBA)}\n\nA
-                                                   naive comparison of all t...
-
-! Undefined control sequence.
-l.75 ... The LTD score is calculated as follows:\n
-                                                  \n\begin{itemize}
-! Undefined control sequence.
-l.75 ...he LTD score is calculated as follows:\n\n
-                                                  \begin{itemize}
-[3]
-! Undefined control sequence.
-l.76 ...ents the consensus path of the ensemble.\n
-                                                      \item \textbf{b. Diver...
-
-! Undefined control sequence.
-l.79 \nA
-         higher LTD score signifies greater geometric divergence among the l...
-
-! Undefined control sequence.
-l.79 ...ys, indicating higher model uncertainty.\n
-                                                  \n\textbf{Diagnostic Mappi...
-
-! Undefined control sequence.
-l.79 ..., indicating higher model uncertainty.\n\n
-                                                  \textbf{Diagnostic Mapping...
-
-! Undefined control sequence.
-<recently read> \n 
-                   
-l.79 ...ic Mapping: The Uncertainty Seismograph}\n
-                                                  \nThe DTW alignment proces...
-
-! Undefined control sequence.
-l.79 ...pping: The Uncertainty Seismograph}\n\nThe
-                                                   DTW alignment process pro...
-
-! Undefined control sequence.
-l.79 ...hat cause the model to become uncertain.\n
-                                                  \n\textbf{Applications of ...
-
-! Undefined control sequence.
-l.79 ...t cause the model to become uncertain.\n\n
-                                                  \textbf{Applications of LT...
-
-! Undefined control sequence.
-<recently read> \n 
-                   
-l.79 ...certain.\n\n\textbf{Applications of LTD}\n
-                                                  \nThe LTD score's robustne...
-
-! Undefined control sequence.
-l.79 ...in.\n\n\textbf{Applications of LTD}\n\nThe
-                                                   LTD score's robustness ma...
-
-
-Package natbib Warning: Citation `mohri_2024_language' on page 4 undefined on i
 nput line 79.
 
 
+Package natbib Warning: Citation `shen_2024_thermometer' on page 2 undefined on
+ input line 79.
+
+
+Package natbib Warning: Citation `liu_2023_litcab' on page 2 undefined on input
+ line 79.
+
+
+Package natbib Warning: Citation `mohri_2024_language' on page 2 undefined on i
+nput line 81.
+
+[2]
+
+Package natbib Warning: Citation `burns_2022_discovering' on page 3 undefined o
+n input line 83.
+
+
+Package natbib Warning: Citation `azaria_2023_the' on page 3 undefined on input
+ line 83.
+
+
+Package natbib Warning: Citation `du_2024_haloscope' on page 3 undefined on inp
+ut line 83.
+
+
+Package natbib Warning: Citation `ahdritz_2024_distinguishing' on page 3 undefi
+ned on input line 89.
+
+
+Package natbib Warning: Citation `hou_2023_decomposing' on page 3 undefined on 
+input line 89.
+
+[3]
+
+Package natbib Warning: Citation `mohri_2024_language' on page 4 undefined on i
+nput line 129.
+
+
 Package natbib Warning: Citation `hou_2023_decomposing' on page 4 undefined on 
-input line 79.
+input line 129.
 
-! Undefined control sequence.
-l.83 ...uncertainty quantification (UQ) methods.\n
-                                                  \n\textbf{Hypothesis}\nOur...
-
-! Undefined control sequence.
-l.83 ...certainty quantification (UQ) methods.\n\n
-                                                  \textbf{Hypothesis}\nOur c...
-
-! Undefined control sequence.
-<recently read> \nOur 
-                      
-l.83 ... (UQ) methods.\n\n\textbf{Hypothesis}\nOur
-                                                   core hypothesis is that a...
-
-! Undefined control sequence.
-l.83 ...hing correct from incorrect generations.\n
-                                                  \n\textbf{Models and Datas...
-
-! Undefined control sequence.
-l.83 ...ng correct from incorrect generations.\n\n
-                                                  \textbf{Models and Dataset...
-
-! Undefined control sequence.
-<recently read> \nTo 
-                     
-l.83 ...tions.\n\n\textbf{Models and Datasets}\nTo
-                                                   ensure generalizability, ...
-
-! Undefined control sequence.
-l.83 ...ance across different knowledge domains:\n
-                                                  \begin{itemize}
 [4]
-! Undefined control sequence.
-l.89 \n
-       \textbf{Experimental Protocol}\nFor each question in the datasets, we...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.148 ...$ responses using nucleus sampling (`top_
+                                                  p=0.9`, `temperature=0.7`)...
 
-! Undefined control sequence.
-<recently read> \nFor 
-                      
-l.89 \n\textbf{Experimental Protocol}\nFor
-                                           each question in the datasets, we...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.149 
+      
 
-! Undefined control sequence.
-l.89 ... token, forming $k$ latent trajectories.\n
-                                                  \nWe compute the following...
+Underfull \hbox (badness 6380) in paragraph at lines 147--149
+[]\T1/ptm/b/n/10 (+20) Experimental Pro-to-col \T1/ptm/m/n/10 (+20) For each qu
+es-tion in the datasets, we gen-er-ate an en-sem-
 
-! Undefined control sequence.
-l.89 ...en, forming $k$ latent trajectories.\n\nWe
-                                                   compute the following unc...
+Underfull \hbox (badness 2689) in paragraph at lines 147--149
+\T1/ptm/m/n/10 (+20) ble of $\OML/cmm/m/it/10 k \OT1/cmr/m/n/10 = 10$ \T1/ptm/m
+/n/10 (+20) re-sponses us-ing nu-cleus sam-pling (`top$[] \OT1/cmr/m/n/10 = 0\O
+ML/cmm/m/it/10 :\OT1/cmr/m/n/10 9`\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 `\OML/cmm/
+m/it/10 temperature \OT1/cmr/m/n/10 =
 
-! Undefined control sequence.
-l.89 ...inty scores for each generated ensemble:\n
-                                                  \begin{enumerate}
+Underfull \hbox (badness 10000) in paragraph at lines 147--149
+\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 7`)\OML/cmm/m/it/10 :Duringg
+eneration; weusePyTorchhooksonthefinalpre \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10
+ layer \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (5.5773pt too wide) in paragraph at lines 147--149
+\OML/cmm/m/it/10 normmoduletoextractthehiddenstateforeverygeneratedtoken; formi
+ng$\T1/ptm/m/n/10 (-20) k$\OML/cmm/m/it/10 latenttrajectories:$ 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.153 ...-L6-v2`), perform k-means clustering (`k_
+                                                  se=3`), and compute the en...
+
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.154     \item
+                \textbf{Lexical Similarity:} Calculated as the average pairw...
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.154     \item \textbf
+                       {Lexical Similarity:} Calculated as the average pairw...
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.154     \item \textbf
+                       {Lexical Similarity:} Calculated as the average pairw...
+
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.155     \item
+                \textbf{HaloScope \cite{du_2024_haloscope}:} To be included ...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.155     \item \textbf
+                       {HaloScope \cite{du_2024_haloscope}:} To be included ...
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.155     \item \textbf
+                       {HaloScope \cite{du_2024_haloscope}:} To be included ...
+
+
+Underfull \hbox (badness 4779) in paragraph at lines 153--155
+[]\T1/ptm/b/n/10 (+20) Semantic En-tropy (SE): \T1/ptm/m/n/10 (+20) We em-bed e
+ach of the $\OML/cmm/m/it/10 k$ \T1/ptm/m/n/10 (+20) text re-sponses us-ing a
+
+Underfull \hbox (badness 2384) in paragraph at lines 153--155
+\T1/ptm/m/n/10 (+20) sentence-transformer (`all-MiniLM-L6-v2`), per-form k-mean
+s clus-ter-ing (`k$[]\OML/cmm/m/it/10 e \OT1/cmr/m/n/10 =
+
+Overfull \hbox (140.69417pt too wide) in paragraph at lines 153--155
+\OT1/cmr/m/n/10 3`)\OML/cmm/m/it/10 ; andcomputetheentropyoftheclusterdistribut
+ion:[][][]CalculatedastheaveragepairwiseROUGE \OMS/cmsy/m/n/10 ^^@
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.155     \item \textbf
+                       {HaloScope \cite{du_2024_haloscope}:} To be included ...
+
 
 Package natbib Warning: Citation `du_2024_haloscope' on page 5 undefined on inp
-ut line 93.
+ut line 155.
 
-! Undefined control sequence.
-l.95 \n
-       \textbf{Ground-Truth Labeling and Evaluation}\nEach of the $k$ indivi...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.168 ...sampling parameters (`temperature`, `top_
+                                                  p`), and comparing the uti...
 
-! Undefined control sequence.
-<recently read> \nEach 
-                       
-l.95 ...round-Truth Labeling and Evaluation}\nEach
-                                                   of the $k$ individual gen...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.169 
+      
 
-! Undefined control sequence.
-l.95 ...r for error detection is measured using:\n
-                                                  \begin{itemize}
-! Undefined control sequence.
-l.100 ...ferences between LTD and the baselines.\n
-                                                  \n\textbf{Ablation Studies...
+Underfull \hbox (badness 1087) in paragraph at lines 167--169
+[]\T1/ptm/b/n/10 (+20) Ablation Stud-ies \T1/ptm/m/n/10 (+20) To en-sure ro-bus
+t-ness, we plan sev-eral ab-la-tion stud-ies, in-clud-ing vary-
 
-! Undefined control sequence.
-l.100 ...rences between LTD and the baselines.\n\n
-                                                  \textbf{Ablation Studies}\...
-
-! Undefined control sequence.
-<recently read> \nTo 
-                     
-l.100 ...selines.\n\n\textbf{Ablation Studies}\nTo
-                                                   ensure robustness, we pla...
-
-! Undefined control sequence.
-l.104 ...as generated using stochastic sampling.\n
-                                                  \nThe results of this prel...
-
-! Undefined control sequence.
-l.104 ...nerated using stochastic sampling.\n\nThe
-                                                   results of this prelimina...
-
-! Undefined control sequence.
-l.104 ...generations, are summarized in Table 1.\n
-                                                  \n\begin{table}[H]
-! Undefined control sequence.
-l.104 ...nerations, are summarized in Table 1.\n\n
-                                                  \begin{table}[H]
-! Undefined control sequence.
-l.119 \n
-        *Table 1: Performance of UQ methods on error detection for the `gpt2...
-
-! Undefined control sequence.
-l.119 ... performance worse than random chance.*\n
-                                                  \nContrary to our central ...
-
-! Undefined control sequence.
-l.119 ...ce worse than random chance.*\n\nContrary
-                                                   to our central hypothesis...
-
-! Undefined control sequence.
-l.119 ...cope baseline performed equally poorly.\n
-                                                  \nSemantic Entropy perform...
-
-! Undefined control sequence.
-l.119 ...ine performed equally poorly.\n\nSemantic
-                                                   Entropy performed at the ...
-
-! Undefined control sequence.
-l.119 ... for all methods are shown in Figure 1.\n
-                                                  \n\begin{figure}[H]
-! Undefined control sequence.
-l.119 ...or all methods are shown in Figure 1.\n\n
-                                                  \begin{figure}[H]
+Underfull \hbox (badness 1221) in paragraph at lines 167--169
+\T1/ptm/m/n/10 (+20) ing the en-sem-ble size $\OML/cmm/m/it/10 k$ \T1/ptm/m/n/1
+0 (+20) ({3, 5, 10, 20}), ad-just-ing sam-pling pa-ram-e-ters (`tem-per-a-ture`
+,
 [5]
-! Undefined control sequence.
-l.125 \nTo
-           further understand these results, we plotted the score distributi...
-
-! Undefined control sequence.
-l.125 ...ending to have higher diversity scores.\n
-                                                  \n\begin{figure}[H]
-! Undefined control sequence.
-l.125 ...ding to have higher diversity scores.\n\n
-                                                  \begin{figure}[H]
-! Undefined control sequence.
-l.131 \n
-        \begin{figure}[H]
-
-Underfull \vbox (badness 10000) has occurred while \output is active [6 <./imag
-es/roc_curves_comparison_gpt2.pdf>]
-! Undefined control sequence.
-l.137 \n
-        \begin{figure}[H]
-! Undefined control sequence.
-l.143 \n
-        \begin{figure}[H]
-
+Underfull \vbox (badness 10000) has occurred while \output is active [6]
 Underfull \vbox (badness 10000) has occurred while \output is active [7 <./imag
-es/score_distributions_ltd_gpt2.pdf> <./images/score_distributions_lexical_dive
-rsity_gpt2.pdf>]
-! Undefined control sequence.
-l.149 \n
-        \textbf{Limitations and Discussion}\nIt is crucial to interpret thes...
+es/roc_curves_comparison_gpt2.pdf> <./images/score_distributions_ltd_gpt2.pdf>]
 
-! Undefined control sequence.
-<recently read> \nIt 
-                     
-l.149 \n\textbf{Limitations and Discussion}\nIt
-                                                is crucial to interpret thes...
+Underfull \vbox (badness 10000) has occurred while \output is active [8 <./imag
+es/score_distributions_lexical_diversity_gpt2.pdf> <./images/score_distribution
+s_semantic_entropy_gpt2.pdf>] [9 <./images/score_distributions_haloscope_(mock)
+_gpt2.pdf>]
 
-! Undefined control sequence.
-l.149 ...t was severely limited in several ways:\n
-                                                  1.  \textbf{Model Scale:} ...
-
-! Undefined control sequence.
-l.149 ... differ fundamentally in larger models.\n
-                                                  2.  \textbf{Dataset Size:}...
-
-! Undefined control sequence.
-l.149 ...otal and not statistically significant.\n
-                                                  3.  \textbf{Ensemble Size:...
-
-! Undefined control sequence.
-l.149 ...able estimate of trajectory divergence.\n
-                                                  \nWhile this initial test ...
-
-! Undefined control sequence.
-l.149 ...timate of trajectory divergence.\n\nWhile
-                                                   this initial test failed ...
-
-! Undefined control sequence.
-l.153 ...atent space pathways during generation.\n
-                                                  \nWe presented a complete ...
-
-! Undefined control sequence.
-l.153 ...t space pathways during generation.\n\nWe
-                                                   presented a complete meth...
-
-! Undefined control sequence.
-l.153 ...the-art UQ methods for error detection.\n
-                                                  \nA preliminary experiment...
-
-! Undefined control sequence.
-l.153 ...-art UQ methods for error detection.\n\nA
-                                                   preliminary experiment co...
-
-! Undefined control sequence.
-l.153 ...ty of LTD for modern, large-scale LLMs.\n
-                                                  \nThe primary implication ...
-
-! Undefined control sequence.
-l.153 ... LTD for modern, large-scale LLMs.\n\nThe
-                                                   primary implication of ou...
-
-[8 <./images/score_distributions_semantic_entropy_gpt2.pdf> <./images/score_dis
-tributions_haloscope_(mock)_gpt2.pdf>]
-
-Package natbib Warning: Citation `airas2025' on page 9 undefined on input line 
-155.
+Package natbib Warning: Citation `airas2025' on page 10 undefined on input line
+ 253.
 
 No file paper.bbl.
 
 Package natbib Warning: There were undefined citations.
 
-[9] (./paper.aux)
+[10] (./paper.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -810,7 +529,7 @@ fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (9 pages, 188550 bytes).
+Output written on paper.pdf (10 pages, 195138 bytes).
 Transcript written on paper.log.
 This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
 The top-level auxiliary file: paper.aux
@@ -1101,529 +820,248 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Undefined control sequence.
-l.55 ...d defer to human experts when necessary.\n
-                                                  \nCurrent UQ methodologies...
-
-! Undefined control sequence.
-l.55 ...o human experts when necessary.\n\nCurrent
-                                                   UQ methodologies for LLMs...
-
 
 Package natbib Warning: Citation `wang_2024_blob' on page 1 undefined on input 
-line 55.
+line 57.
 
 
 Package natbib Warning: Citation `kapoor_2024_large' on page 1 undefined on inp
-ut line 55.
-
-! Undefined control sequence.
-l.55 ...in billion-parameter open-weight models.\n
-                                                  \nThe second category comp...
-
-! Undefined control sequence.
-l.55 ...llion-parameter open-weight models.\n\nThe
-                                                   second category comprises...
+ut line 57.
 
 
 Package natbib Warning: Citation `quach_2023_conformal' on page 1 undefined on 
-input line 55.
+input line 59.
 
 
 Package natbib Warning: Citation `mohri_2024_language' on page 1 undefined on i
-nput line 55.
+nput line 59.
 
 
 Package natbib Warning: Citation `liu_2023_litcab' on page 1 undefined on input
- line 55.
+ line 59.
 
 
 Package natbib Warning: Citation `mohri_2024_language' on page 1 undefined on i
-nput line 55.
+nput line 59.
 
 
 Package natbib Warning: Citation `du_2024_haloscope' on page 1 undefined on inp
-ut line 55.
+ut line 59.
 
-! Undefined control sequence.
-l.55 ...al dynamics of the generation *process*.\n
-                                                  \nTo address this gap, we ...
-
-! Undefined control sequence.
-l.55 ...ynamics of the generation *process*.\n\nTo
-                                                   address this gap, we prop...
-
-! Undefined control sequence.
-l.55 ...etric that operationalizes this concept.\n
-                                                  \nOur contributions are as...
-
-! Undefined control sequence.
-l.55 ... that operationalizes this concept.\n\nOur
-                                                   contributions are as foll...
-
-! Undefined control sequence.
-l.55 ...pt.\n\nOur contributions are as follows:\n
-                                                  \n\begin{itemize}
-! Undefined control sequence.
-l.55 ....\n\nOur contributions are as follows:\n\n
-                                                  \begin{itemize}
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
 dist/fonts/enc/dvips/base/8r.enc}]
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
 
 Package natbib Warning: Citation `cherian_2024_large' on page 2 undefined on in
-put line 59.
+put line 69.
 
 
 Package natbib Warning: Citation `hou_2023_decomposing' on page 2 undefined on 
-input line 60.
-
-! Undefined control sequence.
-l.65 ...eas and contrast our approach with each.\n
-                                                  \n\textbf{Training-Based U...
-
-! Undefined control sequence.
-l.65 ...s and contrast our approach with each.\n\n
-                                                  \textbf{Training-Based Unc...
+input line 70.
 
 
 Package natbib Warning: Citation `wang_2024_blob' on page 2 undefined on input 
-line 65.
+line 77.
 
 
 Package natbib Warning: Citation `kapoor_2024_large' on page 2 undefined on inp
-ut line 65.
-
-! Undefined control sequence.
-l.65 ...model that provides hidden state access.\n
-                                                  \n\textbf{Logit-Based and ...
-
-! Undefined control sequence.
-l.65 ...del that provides hidden state access.\n\n
-                                                  \textbf{Logit-Based and Ca...
+ut line 77.
 
 
 Package natbib Warning: Citation `quach_2023_conformal' on page 2 undefined on 
-input line 65.
+input line 79.
 
 
 Package natbib Warning: Citation `mohri_2024_language' on page 2 undefined on i
-nput line 65.
-
-
-Package natbib Warning: Citation `shen_2024_thermometer' on page 2 undefined on
- input line 65.
-
-
-Package natbib Warning: Citation `liu_2023_litcab' on page 2 undefined on input
- line 65.
-
-! Undefined control sequence.
-l.65 ...n states, making it a logit-free metric.\n
-                                                  \n\textbf{Text-Based Uncer...
-
-! Undefined control sequence.
-l.65 ...states, making it a logit-free metric.\n\n
-                                                  \textbf{Text-Based Uncerta...
-
-
-Package natbib Warning: Citation `mohri_2024_language' on page 2 undefined on i
-nput line 65.
-
-! Undefined control sequence.
-l.65 ...orm and robust to different text styles.\n
-                                                  \n\textbf{Latent Space Pro...
-
-! Undefined control sequence.
-l.65 ...m and robust to different text styles.\n\n
-                                                  \textbf{Latent Space Probi...
-
-
-Package natbib Warning: Citation `burns_2022_discovering' on page 2 undefined o
-n input line 65.
-
-
-Package natbib Warning: Citation `azaria_2023_the' on page 2 undefined on input
- line 65.
-
-
-Package natbib Warning: Citation `du_2024_haloscope' on page 2 undefined on inp
-ut line 65.
-
-[2]
-! Undefined control sequence.
-l.69 ...and formally define the problem setting.\n
-                                                  \nUncertainty in machine l...
-
-! Undefined control sequence.
-l.69 ...define the problem setting.\n\nUncertainty
-                                                   in machine learning model...
-
-
-Package natbib Warning: Citation `ahdritz_2024_distinguishing' on page 3 undefi
-ned on input line 69.
-
-
-Package natbib Warning: Citation `hou_2023_decomposing' on page 3 undefined on 
-input line 69.
-
-! Undefined control sequence.
-l.69 ... model's response should not be trusted.\n
-                                                  \nOur work proposes a nove...
-
-! Undefined control sequence.
-l.69 ...l's response should not be trusted.\n\nOur
-                                                   work proposes a novel way...
-
-! Undefined control sequence.
-l.69 ...ores multiple, competing semantic paths.\n
-                                                  \n\textbf{Problem Setting ...
-
-! Undefined control sequence.
-l.69 ...es multiple, competing semantic paths.\n\n
-                                                  \textbf{Problem Setting an...
-
-! Undefined control sequence.
-<recently read> \n 
-                   
-l.69 ...n\n\textbf{Problem Setting and Notation}\n
-                                                  \nWe consider a large lang...
-
-! Undefined control sequence.
-l.69 ...textbf{Problem Setting and Notation}\n\nWe
-                                                   consider a large language...
-
-! Undefined control sequence.
-l.69 ... prompt and previously generated tokens:\n
-                                                  \[ P(y_t | p, y_{<t}; \the...
-
-! Undefined control sequence.
-l.70 \nDuring
-              this forward pass, the model produces a sequence of hidden sta...
-
-! Undefined control sequence.
-l.70 ...hidden states for a complete generation:\n
-                                                  \[ T = (h_1, h_2, ..., h_L...
-
-! Undefined control sequence.
-l.71 \nThe
-           length $L$ of the trajectory can vary for different generations f...
-
-! Undefined control sequence.
-l.75 ...n a training-free and logit-free manner.\n
-                                                  \nThe LTD score is compute...
-
-! Undefined control sequence.
-l.75 ...raining-free and logit-free manner.\n\nThe
-                                                   LTD score is computed thr...
-
-! Undefined control sequence.
-l.75 ... by an efficient divergence calculation.\n
-                                                  \n\textbf{1. Ensemble Traj...
-
-! Undefined control sequence.
-l.75 ...y an efficient divergence calculation.\n\n
-                                                  \textbf{1. Ensemble Trajec...
-
-! Undefined control sequence.
-<recently read> \n 
-                   
-l.75 ...extbf{1. Ensemble Trajectory Generation}\n
-                                                  \nFor a given input prompt...
-
-! Undefined control sequence.
-l.75 ...{1. Ensemble Trajectory Generation}\n\nFor
-                                                   a given input prompt $p$,...
-
-! Undefined control sequence.
-l.75 ...lengths of the generated text responses.\n
-                                                  \n\textbf{2. Efficient Div...
-
-! Undefined control sequence.
-l.75 ...ngths of the generated text responses.\n\n
-                                                  \textbf{2. Efficient Diver...
-
-! Undefined control sequence.
-<recently read> \n 
-                   
-l.75 ...a Trajectory Barycenter Alignment (TBA)}\n
-                                                  \nA naive comparison of al...
-
-! Undefined control sequence.
-l.75 ...rajectory Barycenter Alignment (TBA)}\n\nA
-                                                   naive comparison of all t...
-
-! Undefined control sequence.
-l.75 ... The LTD score is calculated as follows:\n
-                                                  \n\begin{itemize}
-! Undefined control sequence.
-l.75 ...he LTD score is calculated as follows:\n\n
-                                                  \begin{itemize}
-[3]
-! Undefined control sequence.
-l.76 ...ents the consensus path of the ensemble.\n
-                                                      \item \textbf{b. Diver...
-
-! Undefined control sequence.
-l.79 \nA
-         higher LTD score signifies greater geometric divergence among the l...
-
-! Undefined control sequence.
-l.79 ...ys, indicating higher model uncertainty.\n
-                                                  \n\textbf{Diagnostic Mappi...
-
-! Undefined control sequence.
-l.79 ..., indicating higher model uncertainty.\n\n
-                                                  \textbf{Diagnostic Mapping...
-
-! Undefined control sequence.
-<recently read> \n 
-                   
-l.79 ...ic Mapping: The Uncertainty Seismograph}\n
-                                                  \nThe DTW alignment proces...
-
-! Undefined control sequence.
-l.79 ...pping: The Uncertainty Seismograph}\n\nThe
-                                                   DTW alignment process pro...
-
-! Undefined control sequence.
-l.79 ...hat cause the model to become uncertain.\n
-                                                  \n\textbf{Applications of ...
-
-! Undefined control sequence.
-l.79 ...t cause the model to become uncertain.\n\n
-                                                  \textbf{Applications of LT...
-
-! Undefined control sequence.
-<recently read> \n 
-                   
-l.79 ...certain.\n\n\textbf{Applications of LTD}\n
-                                                  \nThe LTD score's robustne...
-
-! Undefined control sequence.
-l.79 ...in.\n\n\textbf{Applications of LTD}\n\nThe
-                                                   LTD score's robustness ma...
-
-
-Package natbib Warning: Citation `mohri_2024_language' on page 4 undefined on i
 nput line 79.
 
 
+Package natbib Warning: Citation `shen_2024_thermometer' on page 2 undefined on
+ input line 79.
+
+
+Package natbib Warning: Citation `liu_2023_litcab' on page 2 undefined on input
+ line 79.
+
+
+Package natbib Warning: Citation `mohri_2024_language' on page 2 undefined on i
+nput line 81.
+
+[2]
+
+Package natbib Warning: Citation `burns_2022_discovering' on page 3 undefined o
+n input line 83.
+
+
+Package natbib Warning: Citation `azaria_2023_the' on page 3 undefined on input
+ line 83.
+
+
+Package natbib Warning: Citation `du_2024_haloscope' on page 3 undefined on inp
+ut line 83.
+
+
+Package natbib Warning: Citation `ahdritz_2024_distinguishing' on page 3 undefi
+ned on input line 89.
+
+
+Package natbib Warning: Citation `hou_2023_decomposing' on page 3 undefined on 
+input line 89.
+
+[3]
+
+Package natbib Warning: Citation `mohri_2024_language' on page 4 undefined on i
+nput line 129.
+
+
 Package natbib Warning: Citation `hou_2023_decomposing' on page 4 undefined on 
-input line 79.
+input line 129.
 
-! Undefined control sequence.
-l.83 ...uncertainty quantification (UQ) methods.\n
-                                                  \n\textbf{Hypothesis}\nOur...
-
-! Undefined control sequence.
-l.83 ...certainty quantification (UQ) methods.\n\n
-                                                  \textbf{Hypothesis}\nOur c...
-
-! Undefined control sequence.
-<recently read> \nOur 
-                      
-l.83 ... (UQ) methods.\n\n\textbf{Hypothesis}\nOur
-                                                   core hypothesis is that a...
-
-! Undefined control sequence.
-l.83 ...hing correct from incorrect generations.\n
-                                                  \n\textbf{Models and Datas...
-
-! Undefined control sequence.
-l.83 ...ng correct from incorrect generations.\n\n
-                                                  \textbf{Models and Dataset...
-
-! Undefined control sequence.
-<recently read> \nTo 
-                     
-l.83 ...tions.\n\n\textbf{Models and Datasets}\nTo
-                                                   ensure generalizability, ...
-
-! Undefined control sequence.
-l.83 ...ance across different knowledge domains:\n
-                                                  \begin{itemize}
 [4]
-! Undefined control sequence.
-l.89 \n
-       \textbf{Experimental Protocol}\nFor each question in the datasets, we...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.148 ...$ responses using nucleus sampling (`top_
+                                                  p=0.9`, `temperature=0.7`)...
 
-! Undefined control sequence.
-<recently read> \nFor 
-                      
-l.89 \n\textbf{Experimental Protocol}\nFor
-                                           each question in the datasets, we...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.149 
+      
 
-! Undefined control sequence.
-l.89 ... token, forming $k$ latent trajectories.\n
-                                                  \nWe compute the following...
+Underfull \hbox (badness 6380) in paragraph at lines 147--149
+[]\T1/ptm/b/n/10 (+20) Experimental Pro-to-col \T1/ptm/m/n/10 (+20) For each qu
+es-tion in the datasets, we gen-er-ate an en-sem-
 
-! Undefined control sequence.
-l.89 ...en, forming $k$ latent trajectories.\n\nWe
-                                                   compute the following unc...
+Underfull \hbox (badness 2689) in paragraph at lines 147--149
+\T1/ptm/m/n/10 (+20) ble of $\OML/cmm/m/it/10 k \OT1/cmr/m/n/10 = 10$ \T1/ptm/m
+/n/10 (+20) re-sponses us-ing nu-cleus sam-pling (`top$[] \OT1/cmr/m/n/10 = 0\O
+ML/cmm/m/it/10 :\OT1/cmr/m/n/10 9`\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 `\OML/cmm/
+m/it/10 temperature \OT1/cmr/m/n/10 =
 
-! Undefined control sequence.
-l.89 ...inty scores for each generated ensemble:\n
-                                                  \begin{enumerate}
+Underfull \hbox (badness 10000) in paragraph at lines 147--149
+\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 7`)\OML/cmm/m/it/10 :Duringg
+eneration; weusePyTorchhooksonthefinalpre \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10
+ layer \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (5.5773pt too wide) in paragraph at lines 147--149
+\OML/cmm/m/it/10 normmoduletoextractthehiddenstateforeverygeneratedtoken; formi
+ng$\T1/ptm/m/n/10 (-20) k$\OML/cmm/m/it/10 latenttrajectories:$ 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.153 ...-L6-v2`), perform k-means clustering (`k_
+                                                  se=3`), and compute the en...
+
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.154     \item
+                \textbf{Lexical Similarity:} Calculated as the average pairw...
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.154     \item \textbf
+                       {Lexical Similarity:} Calculated as the average pairw...
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.154     \item \textbf
+                       {Lexical Similarity:} Calculated as the average pairw...
+
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.155     \item
+                \textbf{HaloScope \cite{du_2024_haloscope}:} To be included ...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.155     \item \textbf
+                       {HaloScope \cite{du_2024_haloscope}:} To be included ...
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.155     \item \textbf
+                       {HaloScope \cite{du_2024_haloscope}:} To be included ...
+
+
+Underfull \hbox (badness 4779) in paragraph at lines 153--155
+[]\T1/ptm/b/n/10 (+20) Semantic En-tropy (SE): \T1/ptm/m/n/10 (+20) We em-bed e
+ach of the $\OML/cmm/m/it/10 k$ \T1/ptm/m/n/10 (+20) text re-sponses us-ing a
+
+Underfull \hbox (badness 2384) in paragraph at lines 153--155
+\T1/ptm/m/n/10 (+20) sentence-transformer (`all-MiniLM-L6-v2`), per-form k-mean
+s clus-ter-ing (`k$[]\OML/cmm/m/it/10 e \OT1/cmr/m/n/10 =
+
+Overfull \hbox (140.69417pt too wide) in paragraph at lines 153--155
+\OT1/cmr/m/n/10 3`)\OML/cmm/m/it/10 ; andcomputetheentropyoftheclusterdistribut
+ion:[][][]CalculatedastheaveragepairwiseROUGE \OMS/cmsy/m/n/10 ^^@
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.155     \item \textbf
+                       {HaloScope \cite{du_2024_haloscope}:} To be included ...
+
 
 Package natbib Warning: Citation `du_2024_haloscope' on page 5 undefined on inp
-ut line 93.
+ut line 155.
 
-! Undefined control sequence.
-l.95 \n
-       \textbf{Ground-Truth Labeling and Evaluation}\nEach of the $k$ indivi...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.168 ...sampling parameters (`temperature`, `top_
+                                                  p`), and comparing the uti...
 
-! Undefined control sequence.
-<recently read> \nEach 
-                       
-l.95 ...round-Truth Labeling and Evaluation}\nEach
-                                                   of the $k$ individual gen...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.169 
+      
 
-! Undefined control sequence.
-l.95 ...r for error detection is measured using:\n
-                                                  \begin{itemize}
-! Undefined control sequence.
-l.100 ...ferences between LTD and the baselines.\n
-                                                  \n\textbf{Ablation Studies...
+Underfull \hbox (badness 1087) in paragraph at lines 167--169
+[]\T1/ptm/b/n/10 (+20) Ablation Stud-ies \T1/ptm/m/n/10 (+20) To en-sure ro-bus
+t-ness, we plan sev-eral ab-la-tion stud-ies, in-clud-ing vary-
 
-! Undefined control sequence.
-l.100 ...rences between LTD and the baselines.\n\n
-                                                  \textbf{Ablation Studies}\...
-
-! Undefined control sequence.
-<recently read> \nTo 
-                     
-l.100 ...selines.\n\n\textbf{Ablation Studies}\nTo
-                                                   ensure robustness, we pla...
-
-! Undefined control sequence.
-l.104 ...as generated using stochastic sampling.\n
-                                                  \nThe results of this prel...
-
-! Undefined control sequence.
-l.104 ...nerated using stochastic sampling.\n\nThe
-                                                   results of this prelimina...
-
-! Undefined control sequence.
-l.104 ...generations, are summarized in Table 1.\n
-                                                  \n\begin{table}[H]
-! Undefined control sequence.
-l.104 ...nerations, are summarized in Table 1.\n\n
-                                                  \begin{table}[H]
-! Undefined control sequence.
-l.119 \n
-        *Table 1: Performance of UQ methods on error detection for the `gpt2...
-
-! Undefined control sequence.
-l.119 ... performance worse than random chance.*\n
-                                                  \nContrary to our central ...
-
-! Undefined control sequence.
-l.119 ...ce worse than random chance.*\n\nContrary
-                                                   to our central hypothesis...
-
-! Undefined control sequence.
-l.119 ...cope baseline performed equally poorly.\n
-                                                  \nSemantic Entropy perform...
-
-! Undefined control sequence.
-l.119 ...ine performed equally poorly.\n\nSemantic
-                                                   Entropy performed at the ...
-
-! Undefined control sequence.
-l.119 ... for all methods are shown in Figure 1.\n
-                                                  \n\begin{figure}[H]
-! Undefined control sequence.
-l.119 ...or all methods are shown in Figure 1.\n\n
-                                                  \begin{figure}[H]
+Underfull \hbox (badness 1221) in paragraph at lines 167--169
+\T1/ptm/m/n/10 (+20) ing the en-sem-ble size $\OML/cmm/m/it/10 k$ \T1/ptm/m/n/1
+0 (+20) ({3, 5, 10, 20}), ad-just-ing sam-pling pa-ram-e-ters (`tem-per-a-ture`
+,
 [5]
-! Undefined control sequence.
-l.125 \nTo
-           further understand these results, we plotted the score distributi...
-
-! Undefined control sequence.
-l.125 ...ending to have higher diversity scores.\n
-                                                  \n\begin{figure}[H]
-! Undefined control sequence.
-l.125 ...ding to have higher diversity scores.\n\n
-                                                  \begin{figure}[H]
-! Undefined control sequence.
-l.131 \n
-        \begin{figure}[H]
-
-Underfull \vbox (badness 10000) has occurred while \output is active [6 <./imag
-es/roc_curves_comparison_gpt2.pdf>]
-! Undefined control sequence.
-l.137 \n
-        \begin{figure}[H]
-! Undefined control sequence.
-l.143 \n
-        \begin{figure}[H]
-
+Underfull \vbox (badness 10000) has occurred while \output is active [6]
 Underfull \vbox (badness 10000) has occurred while \output is active [7 <./imag
-es/score_distributions_ltd_gpt2.pdf> <./images/score_distributions_lexical_dive
-rsity_gpt2.pdf>]
-! Undefined control sequence.
-l.149 \n
-        \textbf{Limitations and Discussion}\nIt is crucial to interpret thes...
+es/roc_curves_comparison_gpt2.pdf> <./images/score_distributions_ltd_gpt2.pdf>]
 
-! Undefined control sequence.
-<recently read> \nIt 
-                     
-l.149 \n\textbf{Limitations and Discussion}\nIt
-                                                is crucial to interpret thes...
+Underfull \vbox (badness 10000) has occurred while \output is active [8 <./imag
+es/score_distributions_lexical_diversity_gpt2.pdf> <./images/score_distribution
+s_semantic_entropy_gpt2.pdf>] [9 <./images/score_distributions_haloscope_(mock)
+_gpt2.pdf>]
 
-! Undefined control sequence.
-l.149 ...t was severely limited in several ways:\n
-                                                  1.  \textbf{Model Scale:} ...
+Package natbib Warning: Citation `airas2025' on page 10 undefined on input line
+ 253.
 
-! Undefined control sequence.
-l.149 ... differ fundamentally in larger models.\n
-                                                  2.  \textbf{Dataset Size:}...
-
-! Undefined control sequence.
-l.149 ...otal and not statistically significant.\n
-                                                  3.  \textbf{Ensemble Size:...
-
-! Undefined control sequence.
-l.149 ...able estimate of trajectory divergence.\n
-                                                  \nWhile this initial test ...
-
-! Undefined control sequence.
-l.149 ...timate of trajectory divergence.\n\nWhile
-                                                   this initial test failed ...
-
-! Undefined control sequence.
-l.153 ...atent space pathways during generation.\n
-                                                  \nWe presented a complete ...
-
-! Undefined control sequence.
-l.153 ...t space pathways during generation.\n\nWe
-                                                   presented a complete meth...
-
-! Undefined control sequence.
-l.153 ...the-art UQ methods for error detection.\n
-                                                  \nA preliminary experiment...
-
-! Undefined control sequence.
-l.153 ...-art UQ methods for error detection.\n\nA
-                                                   preliminary experiment co...
-
-! Undefined control sequence.
-l.153 ...ty of LTD for modern, large-scale LLMs.\n
-                                                  \nThe primary implication ...
-
-! Undefined control sequence.
-l.153 ... LTD for modern, large-scale LLMs.\n\nThe
-                                                   primary implication of ou...
-
-[8 <./images/score_distributions_semantic_entropy_gpt2.pdf> <./images/score_dis
-tributions_haloscope_(mock)_gpt2.pdf>]
-
-Package natbib Warning: Citation `airas2025' on page 9 undefined on input line 
-155.
-
-(./paper.bbl (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd) [9])
+(./paper.bbl (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd))
 
 Package natbib Warning: There were undefined citations.
 
@@ -1643,7 +1081,7 @@ fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (10 pages, 201856 bytes).
+Output written on paper.pdf (10 pages, 208124 bytes).
 Transcript written on paper.log.
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
@@ -1912,431 +1350,147 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Undefined control sequence.
-l.55 ...d defer to human experts when necessary.\n
-                                                  \nCurrent UQ methodologies...
-
-! Undefined control sequence.
-l.55 ...o human experts when necessary.\n\nCurrent
-                                                   UQ methodologies for LLMs...
-
-! Undefined control sequence.
-l.55 ...in billion-parameter open-weight models.\n
-                                                  \nThe second category comp...
-
-! Undefined control sequence.
-l.55 ...llion-parameter open-weight models.\n\nThe
-                                                   second category comprises...
-
-! Undefined control sequence.
-l.55 ...al dynamics of the generation *process*.\n
-                                                  \nTo address this gap, we ...
-
-! Undefined control sequence.
-l.55 ...ynamics of the generation *process*.\n\nTo
-                                                   address this gap, we prop...
-
-! Undefined control sequence.
-l.55 ...etric that operationalizes this concept.\n
-                                                  \nOur contributions are as...
-
-! Undefined control sequence.
-l.55 ... that operationalizes this concept.\n\nOur
-                                                   contributions are as foll...
-
-! Undefined control sequence.
-l.55 ...pt.\n\nOur contributions are as follows:\n
-                                                  \n\begin{itemize}
-! Undefined control sequence.
-l.55 ....\n\nOur contributions are as follows:\n\n
-                                                  \begin{itemize}
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
-dist/fonts/enc/dvips/base/8r.enc}]
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-! Undefined control sequence.
-l.65 ...eas and contrast our approach with each.\n
-                                                  \n\textbf{Training-Based U...
-
-! Undefined control sequence.
-l.65 ...s and contrast our approach with each.\n\n
-                                                  \textbf{Training-Based Unc...
-
-! Undefined control sequence.
-l.65 ...model that provides hidden state access.\n
-                                                  \n\textbf{Logit-Based and ...
-
-! Undefined control sequence.
-l.65 ...del that provides hidden state access.\n\n
-                                                  \textbf{Logit-Based and Ca...
-
-! Undefined control sequence.
-l.65 ...n states, making it a logit-free metric.\n
-                                                  \n\textbf{Text-Based Uncer...
-
-! Undefined control sequence.
-l.65 ...states, making it a logit-free metric.\n\n
-                                                  \textbf{Text-Based Uncerta...
-
-! Undefined control sequence.
-l.65 ...orm and robust to different text styles.\n
-                                                  \n\textbf{Latent Space Pro...
-
-! Undefined control sequence.
-l.65 ...m and robust to different text styles.\n\n
-                                                  \textbf{Latent Space Probi...
-
-[2]
-! Undefined control sequence.
-l.69 ...and formally define the problem setting.\n
-                                                  \nUncertainty in machine l...
-
-! Undefined control sequence.
-l.69 ...define the problem setting.\n\nUncertainty
-                                                   in machine learning model...
-
-! Undefined control sequence.
-l.69 ... model's response should not be trusted.\n
-                                                  \nOur work proposes a nove...
-
-! Undefined control sequence.
-l.69 ...l's response should not be trusted.\n\nOur
-                                                   work proposes a novel way...
-
-! Undefined control sequence.
-l.69 ...ores multiple, competing semantic paths.\n
-                                                  \n\textbf{Problem Setting ...
-
-! Undefined control sequence.
-l.69 ...es multiple, competing semantic paths.\n\n
-                                                  \textbf{Problem Setting an...
-
-! Undefined control sequence.
-<recently read> \n 
-                   
-l.69 ...n\n\textbf{Problem Setting and Notation}\n
-                                                  \nWe consider a large lang...
-
-! Undefined control sequence.
-l.69 ...textbf{Problem Setting and Notation}\n\nWe
-                                                   consider a large language...
-
-! Undefined control sequence.
-l.69 ... prompt and previously generated tokens:\n
-                                                  \[ P(y_t | p, y_{<t}; \the...
-
-! Undefined control sequence.
-l.70 \nDuring
-              this forward pass, the model produces a sequence of hidden sta...
-
-! Undefined control sequence.
-l.70 ...hidden states for a complete generation:\n
-                                                  \[ T = (h_1, h_2, ..., h_L...
-
-! Undefined control sequence.
-l.71 \nThe
-           length $L$ of the trajectory can vary for different generations f...
-
-! Undefined control sequence.
-l.75 ...n a training-free and logit-free manner.\n
-                                                  \nThe LTD score is compute...
-
-! Undefined control sequence.
-l.75 ...raining-free and logit-free manner.\n\nThe
-                                                   LTD score is computed thr...
-
-! Undefined control sequence.
-l.75 ... by an efficient divergence calculation.\n
-                                                  \n\textbf{1. Ensemble Traj...
-
-! Undefined control sequence.
-l.75 ...y an efficient divergence calculation.\n\n
-                                                  \textbf{1. Ensemble Trajec...
-
-! Undefined control sequence.
-<recently read> \n 
-                   
-l.75 ...extbf{1. Ensemble Trajectory Generation}\n
-                                                  \nFor a given input prompt...
-
-! Undefined control sequence.
-l.75 ...{1. Ensemble Trajectory Generation}\n\nFor
-                                                   a given input prompt $p$,...
-
-! Undefined control sequence.
-l.75 ...lengths of the generated text responses.\n
-                                                  \n\textbf{2. Efficient Div...
-
-! Undefined control sequence.
-l.75 ...ngths of the generated text responses.\n\n
-                                                  \textbf{2. Efficient Diver...
-
-! Undefined control sequence.
-<recently read> \n 
-                   
-l.75 ...a Trajectory Barycenter Alignment (TBA)}\n
-                                                  \nA naive comparison of al...
-
-! Undefined control sequence.
-l.75 ...rajectory Barycenter Alignment (TBA)}\n\nA
-                                                   naive comparison of all t...
-
-! Undefined control sequence.
-l.75 ... The LTD score is calculated as follows:\n
-                                                  \n\begin{itemize}
-! Undefined control sequence.
-l.75 ...he LTD score is calculated as follows:\n\n
-                                                  \begin{itemize}
-[3]
-! Undefined control sequence.
-l.76 ...ents the consensus path of the ensemble.\n
-                                                      \item \textbf{b. Diver...
-
-! Undefined control sequence.
-l.79 \nA
-         higher LTD score signifies greater geometric divergence among the l...
-
-! Undefined control sequence.
-l.79 ...ys, indicating higher model uncertainty.\n
-                                                  \n\textbf{Diagnostic Mappi...
-
-! Undefined control sequence.
-l.79 ..., indicating higher model uncertainty.\n\n
-                                                  \textbf{Diagnostic Mapping...
-
-! Undefined control sequence.
-<recently read> \n 
-                   
-l.79 ...ic Mapping: The Uncertainty Seismograph}\n
-                                                  \nThe DTW alignment proces...
-
-! Undefined control sequence.
-l.79 ...pping: The Uncertainty Seismograph}\n\nThe
-                                                   DTW alignment process pro...
-
-! Undefined control sequence.
-l.79 ...hat cause the model to become uncertain.\n
-                                                  \n\textbf{Applications of ...
-
-! Undefined control sequence.
-l.79 ...t cause the model to become uncertain.\n\n
-                                                  \textbf{Applications of LT...
-
-! Undefined control sequence.
-<recently read> \n 
-                   
-l.79 ...certain.\n\n\textbf{Applications of LTD}\n
-                                                  \nThe LTD score's robustne...
-
-! Undefined control sequence.
-l.79 ...in.\n\n\textbf{Applications of LTD}\n\nThe
-                                                   LTD score's robustness ma...
-
-! Undefined control sequence.
-l.83 ...uncertainty quantification (UQ) methods.\n
-                                                  \n\textbf{Hypothesis}\nOur...
-
-! Undefined control sequence.
-l.83 ...certainty quantification (UQ) methods.\n\n
-                                                  \textbf{Hypothesis}\nOur c...
-
-! Undefined control sequence.
-<recently read> \nOur 
-                      
-l.83 ... (UQ) methods.\n\n\textbf{Hypothesis}\nOur
-                                                   core hypothesis is that a...
-
-! Undefined control sequence.
-l.83 ...hing correct from incorrect generations.\n
-                                                  \n\textbf{Models and Datas...
-
-! Undefined control sequence.
-l.83 ...ng correct from incorrect generations.\n\n
-                                                  \textbf{Models and Dataset...
-
-! Undefined control sequence.
-<recently read> \nTo 
-                     
-l.83 ...tions.\n\n\textbf{Models and Datasets}\nTo
-                                                   ensure generalizability, ...
-
-! Undefined control sequence.
-l.83 ...ance across different knowledge domains:\n
-                                                  \begin{itemize}
-[4]
-! Undefined control sequence.
-l.89 \n
-       \textbf{Experimental Protocol}\nFor each question in the datasets, we...
-
-! Undefined control sequence.
-<recently read> \nFor 
-                      
-l.89 \n\textbf{Experimental Protocol}\nFor
-                                           each question in the datasets, we...
-
-! Undefined control sequence.
-l.89 ... token, forming $k$ latent trajectories.\n
-                                                  \nWe compute the following...
-
-! Undefined control sequence.
-l.89 ...en, forming $k$ latent trajectories.\n\nWe
-                                                   compute the following unc...
-
-! Undefined control sequence.
-l.89 ...inty scores for each generated ensemble:\n
-                                                  \begin{enumerate}
-! Undefined control sequence.
-l.95 \n
-       \textbf{Ground-Truth Labeling and Evaluation}\nEach of the $k$ indivi...
-
-! Undefined control sequence.
-<recently read> \nEach 
-                       
-l.95 ...round-Truth Labeling and Evaluation}\nEach
-                                                   of the $k$ individual gen...
-
-! Undefined control sequence.
-l.95 ...r for error detection is measured using:\n
-                                                  \begin{itemize}
-! Undefined control sequence.
-l.100 ...ferences between LTD and the baselines.\n
-                                                  \n\textbf{Ablation Studies...
-
-! Undefined control sequence.
-l.100 ...rences between LTD and the baselines.\n\n
-                                                  \textbf{Ablation Studies}\...
-
-! Undefined control sequence.
-<recently read> \nTo 
-                     
-l.100 ...selines.\n\n\textbf{Ablation Studies}\nTo
-                                                   ensure robustness, we pla...
-
-! Undefined control sequence.
-l.104 ...as generated using stochastic sampling.\n
-                                                  \nThe results of this prel...
-
-! Undefined control sequence.
-l.104 ...nerated using stochastic sampling.\n\nThe
-                                                   results of this prelimina...
-
-! Undefined control sequence.
-l.104 ...generations, are summarized in Table 1.\n
-                                                  \n\begin{table}[H]
-! Undefined control sequence.
-l.104 ...nerations, are summarized in Table 1.\n\n
-                                                  \begin{table}[H]
-! Undefined control sequence.
-l.119 \n
-        *Table 1: Performance of UQ methods on error detection for the `gpt2...
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1{/var/lib/texm
+f/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/d
+vips/base/8r.enc}] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+[2] [3] [4]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.148 ...$ responses using nucleus sampling (`top_
+                                                  p=0.9`, `temperature=0.7`)...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.149 
+      
+
+Underfull \hbox (badness 6380) in paragraph at lines 147--149
+[]\T1/ptm/b/n/10 (+20) Experimental Pro-to-col \T1/ptm/m/n/10 (+20) For each qu
+es-tion in the datasets, we gen-er-ate an en-sem-
+
+Underfull \hbox (badness 2689) in paragraph at lines 147--149
+\T1/ptm/m/n/10 (+20) ble of $\OML/cmm/m/it/10 k \OT1/cmr/m/n/10 = 10$ \T1/ptm/m
+/n/10 (+20) re-sponses us-ing nu-cleus sam-pling (`top$[] \OT1/cmr/m/n/10 = 0\O
+ML/cmm/m/it/10 :\OT1/cmr/m/n/10 9`\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 `\OML/cmm/
+m/it/10 temperature \OT1/cmr/m/n/10 =
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--149
+\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 7`)\OML/cmm/m/it/10 :Duringg
+eneration; weusePyTorchhooksonthefinalpre \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10
+ layer \OMS/cmsy/m/n/10 ^^@
+
+Overfull \hbox (5.5773pt too wide) in paragraph at lines 147--149
+\OML/cmm/m/it/10 normmoduletoextractthehiddenstateforeverygeneratedtoken; formi
+ng$\T1/ptm/m/n/10 (-20) k$\OML/cmm/m/it/10 latenttrajectories:$ 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.153 ...-L6-v2`), perform k-means clustering (`k_
+                                                  se=3`), and compute the en...
+
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.154     \item
+                \textbf{Lexical Similarity:} Calculated as the average pairw...
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.154     \item \textbf
+                       {Lexical Similarity:} Calculated as the average pairw...
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.154     \item \textbf
+                       {Lexical Similarity:} Calculated as the average pairw...
+
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.155     \item
+                \textbf{HaloScope \cite{du_2024_haloscope}:} To be included ...
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.155     \item \textbf
+                       {HaloScope \cite{du_2024_haloscope}:} To be included ...
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.155     \item \textbf
+                       {HaloScope \cite{du_2024_haloscope}:} To be included ...
+
+
+Underfull \hbox (badness 4779) in paragraph at lines 153--155
+[]\T1/ptm/b/n/10 (+20) Semantic En-tropy (SE): \T1/ptm/m/n/10 (+20) We em-bed e
+ach of the $\OML/cmm/m/it/10 k$ \T1/ptm/m/n/10 (+20) text re-sponses us-ing a
+
+Underfull \hbox (badness 2384) in paragraph at lines 153--155
+\T1/ptm/m/n/10 (+20) sentence-transformer (`all-MiniLM-L6-v2`), per-form k-mean
+s clus-ter-ing (`k$[]\OML/cmm/m/it/10 e \OT1/cmr/m/n/10 =
+
+Overfull \hbox (140.69417pt too wide) in paragraph at lines 153--155
+\OT1/cmr/m/n/10 3`)\OML/cmm/m/it/10 ; andcomputetheentropyoftheclusterdistribut
+ion:[][][]CalculatedastheaveragepairwiseROUGE \OMS/cmsy/m/n/10 ^^@
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.155     \item \textbf
+                       {HaloScope \cite{du_2024_haloscope}:} To be included ...
 
 [5]
-! Undefined control sequence.
-l.119 ... performance worse than random chance.*\n
-                                                  \nContrary to our central ...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.168 ...sampling parameters (`temperature`, `top_
+                                                  p`), and comparing the uti...
 
-! Undefined control sequence.
-l.119 ...ce worse than random chance.*\n\nContrary
-                                                   to our central hypothesis...
+! Missing $ inserted.
+<inserted text> 
+                $
+l.169 
+      
 
-! Undefined control sequence.
-l.119 ...cope baseline performed equally poorly.\n
-                                                  \nSemantic Entropy perform...
+Underfull \hbox (badness 1087) in paragraph at lines 167--169
+[]\T1/ptm/b/n/10 (+20) Ablation Stud-ies \T1/ptm/m/n/10 (+20) To en-sure ro-bus
+t-ness, we plan sev-eral ab-la-tion stud-ies, in-clud-ing vary-
 
-! Undefined control sequence.
-l.119 ...ine performed equally poorly.\n\nSemantic
-                                                   Entropy performed at the ...
+Underfull \hbox (badness 1221) in paragraph at lines 167--169
+\T1/ptm/m/n/10 (+20) ing the en-sem-ble size $\OML/cmm/m/it/10 k$ \T1/ptm/m/n/1
+0 (+20) ({3, 5, 10, 20}), ad-just-ing sam-pling pa-ram-e-ters (`tem-per-a-ture`
+,
 
-! Undefined control sequence.
-l.119 ... for all methods are shown in Figure 1.\n
-                                                  \n\begin{figure}[H]
-! Undefined control sequence.
-l.119 ...or all methods are shown in Figure 1.\n\n
-                                                  \begin{figure}[H]
-! Undefined control sequence.
-l.125 \nTo
-           further understand these results, we plotted the score distributi...
-
-! Undefined control sequence.
-l.125 ...ending to have higher diversity scores.\n
-                                                  \n\begin{figure}[H]
-! Undefined control sequence.
-l.125 ...ding to have higher diversity scores.\n\n
-                                                  \begin{figure}[H]
-! Undefined control sequence.
-l.131 \n
-        \begin{figure}[H]
-
-Underfull \vbox (badness 10000) has occurred while \output is active [6 <./imag
-es/roc_curves_comparison_gpt2.pdf>]
-! Undefined control sequence.
-l.137 \n
-        \begin{figure}[H]
-! Undefined control sequence.
-l.143 \n
-        \begin{figure}[H]
-
+Underfull \vbox (badness 10000) has occurred while \output is active [6]
 Underfull \vbox (badness 10000) has occurred while \output is active [7 <./imag
-es/score_distributions_ltd_gpt2.pdf> <./images/score_distributions_lexical_dive
-rsity_gpt2.pdf>]
-! Undefined control sequence.
-l.149 \n
-        \textbf{Limitations and Discussion}\nIt is crucial to interpret thes...
+es/roc_curves_comparison_gpt2.pdf> <./images/score_distributions_ltd_gpt2.pdf>]
 
-! Undefined control sequence.
-<recently read> \nIt 
-                     
-l.149 \n\textbf{Limitations and Discussion}\nIt
-                                                is crucial to interpret thes...
-
-! Undefined control sequence.
-l.149 ...t was severely limited in several ways:\n
-                                                  1.  \textbf{Model Scale:} ...
-
-! Undefined control sequence.
-l.149 ... differ fundamentally in larger models.\n
-                                                  2.  \textbf{Dataset Size:}...
-
-! Undefined control sequence.
-l.149 ...otal and not statistically significant.\n
-                                                  3.  \textbf{Ensemble Size:...
-
-! Undefined control sequence.
-l.149 ...able estimate of trajectory divergence.\n
-                                                  \nWhile this initial test ...
-
-! Undefined control sequence.
-l.149 ...timate of trajectory divergence.\n\nWhile
-                                                   this initial test failed ...
-
-! Undefined control sequence.
-l.153 ...atent space pathways during generation.\n
-                                                  \nWe presented a complete ...
-
-! Undefined control sequence.
-l.153 ...t space pathways during generation.\n\nWe
-                                                   presented a complete meth...
-
-! Undefined control sequence.
-l.153 ...the-art UQ methods for error detection.\n
-                                                  \nA preliminary experiment...
-
-! Undefined control sequence.
-l.153 ...-art UQ methods for error detection.\n\nA
-                                                   preliminary experiment co...
-
-! Undefined control sequence.
-l.153 ...ty of LTD for modern, large-scale LLMs.\n
-                                                  \nThe primary implication ...
-
-! Undefined control sequence.
-l.153 ... LTD for modern, large-scale LLMs.\n\nThe
-                                                   primary implication of ou...
-
-[8 <./images/score_distributions_semantic_entropy_gpt2.pdf> <./images/score_dis
-tributions_haloscope_(mock)_gpt2.pdf>] (./paper.bbl
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd) [9]) [10]
-(./paper.aux)
+Underfull \vbox (badness 10000) has occurred while \output is active [8 <./imag
+es/score_distributions_lexical_diversity_gpt2.pdf> <./images/score_distribution
+s_semantic_entropy_gpt2.pdf>] [9 <./images/score_distributions_haloscope_(mock)
+_gpt2.pdf>] (./paper.bbl
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)) [10] (./paper.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -2351,5 +1505,5 @@ fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (10 pages, 204777 bytes).
+Output written on paper.pdf (10 pages, 211122 bytes).
 Transcript written on paper.log.

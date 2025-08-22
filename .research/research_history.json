@@ -6,5 +6,52 @@
     "scalable LIME",
     "efficient counterfactual explanations",
     "approximate Shapley explanations"
+  ],
+  "research_study_list": [
+    {
+      "title": "Accelerating Shapley Explanation via Contributive Cooperator Selection"
+    },
+    {
+      "title": "Accelerating Shapley Explanation via Contributive Cooperator Selection"
+    },
+    {
+      "title": "CoRTX: Contrastive Framework for Real-time Explanation"
+    },
+    {
+      "title": "RKHS-SHAP: Shapley Values for Kernel Methods"
+    },
+    {
+      "title": "Linear tree shap"
+    },
+    {
+      "title": "Near Input Sparsity Time Kernel Embeddings via Adaptive Sampling"
+    },
+    {
+      "title": "GLIME: General, Stable and Local LIME Explanation"
+    },
+    {
+      "title": "Reliable Post hoc Explanations: Modeling Uncertainty in Explainability"
+    },
+    {
+      "title": "SLICE: Stabilized LIME for Consistent Explanations for Image Classification"
+    },
+    {
+      "title": "GLOBE-CE: A Translation Based Approach for Global Counterfactual Explanations"
+    },
+    {
+      "title": "Optimal Counterfactual Explanations in Tree Ensembles"
+    },
+    {
+      "title": "A query-optimal algorithm for finding counterfactuals"
+    },
+    {
+      "title": "SHAP-IQ: Unified Approximation of any-order Shapley Interactions"
+    },
+    {
+      "title": "shapiq: Shapley Interactions for Machine Learning"
+    },
+    {
+      "title": "Shapley Residuals: Quantifying the limits of the Shapley value for explanations"
+    }
   ]
 }

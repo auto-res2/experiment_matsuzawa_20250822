@@ -265,188 +265,81 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...f spiking neurons \cite{author\_year\_how}
-                                                  . This has led to powerful...
+
+Package natbib Warning: Citation `author_year_how' on page 1 undefined on input
+ line 55.
 
 
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-ehow' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...rough Time (BPTT) \cite{author\_year\_can}
-                                                   and, more recently, its m...
+Package natbib Warning: Citation `author_year_can' on page 1 undefined on input
+ line 55.
 
 
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-ecan' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...ough Time (OTTT) \cite{xiao\_2022\_online}
-                                                  . The primary challenge wi...
+Package natbib Warning: Citation `xiao_2022_online' on page 1 undefined on inpu
+t line 55.
 
 
-Package natbib Warning: Citation `xiao\T1\textunderscore2022\T1\textunderscoreo
-nline' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ... dynamics \cite{pereznieves\_2021\_sparse}
-                                                  , these solutions often re...
-
-
-Package natbib Warning: Citation `pereznieves\T1\textunderscore2021\T1\textunde
-rscoresparse' on page 1 undefined on input line 55.
+Package natbib Warning: Citation `pereznieves_2021_sparse' on page 1 undefined 
+on input line 55.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd) [1{/var/lib/texmf/fon
 ts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/
 base/8r.enc}] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.68 ...hiele\_2019\_spikegrad, author\_year\_how}
-                                                  . While BPTT achieves stat...
+
+Package natbib Warning: Citation `thiele_2019_spikegrad' on page 2 undefined on
+ input line 68.
 
 
-Package natbib Warning: Citation `thiele\T1\textunderscore2019\T1\textunderscor
-espikegrad' on page 2 undefined on input line 68.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.68 ...hiele\_2019\_spikegrad, author\_year\_how}
-                                                  . While BPTT achieves stat...
+Package natbib Warning: Citation `author_year_how' on page 2 undefined on input
+ line 68.
 
 
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-ehow' on page 2 undefined on input line 68.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.68 ...igibility traces \cite{xiao\_2022\_online}
-                                                  . FG-OTTT is built directl...
+Package natbib Warning: Citation `xiao_2022_online' on page 2 undefined on inpu
+t line 68.
 
 
-Package natbib Warning: Citation `xiao\T1\textunderscore2022\T1\textunderscoreo
-nline' on page 2 undefined on input line 68.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.71 ...es et al. \cite{pereznieves\_2021\_sparse}
-                                                   introduced a sparse spiki...
+Package natbib Warning: Citation `pereznieves_2021_sparse' on page 2 undefined 
+on input line 71.
 
 
-Package natbib Warning: Citation `pereznieves\T1\textunderscore2021\T1\textunde
-rscoresparse' on page 2 undefined on input line 71.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.71 ...nference \cite{chakraborty\_2024\_towards}
-                                                  , but does not directly ta...
+Package natbib Warning: Citation `chakraborty_2024_towards' on page 2 undefined
+ on input line 71.
 
 
-Package natbib Warning: Citation `chakraborty\T1\textunderscore2024\T1\textunde
-rscoretowards' on page 2 undefined on input line 71.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.74 ...ticity (STDP) \cite{goupy\_2024\_neuronal}
-                                                   and alternative credit as...
+Package natbib Warning: Citation `goupy_2024_neuronal' on page 2 undefined on i
+nput line 74.
 
 
-Package natbib Warning: Citation `goupy\T1\textunderscore2024\T1\textunderscore
-neuronal' on page 2 undefined on input line 74.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.74 ...2020\_theoretical, ernoult\_2022\_towards}
-                                                  . Some models also investi...
+Package natbib Warning: Citation `meulemans_2020_theoretical' on page 2 undefin
+ed on input line 74.
 
 
-Package natbib Warning: Citation `meulemans\T1\textunderscore2020\T1\textunders
-coretheoretical' on page 2 undefined on input line 74.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.74 ...2020\_theoretical, ernoult\_2022\_towards}
-                                                  . Some models also investi...
+Package natbib Warning: Citation `ernoult_2022_towards' on page 2 undefined on 
+input line 74.
 
 
-Package natbib Warning: Citation `ernoult\T1\textunderscore2022\T1\textundersco
-retowards' on page 2 undefined on input line 74.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.74 ...n over time \cite{liu\_2022\_biologically}
-                                                   or use meta-learning to d...
+Package natbib Warning: Citation `liu_2022_biologically' on page 2 undefined on
+ input line 74.
 
 
-Package natbib Warning: Citation `liu\T1\textunderscore2022\T1\textunderscorebi
-ologically' on page 2 undefined on input line 74.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.74 ...plasticity rules \cite{author\_year\_meta}
-                                                  . While our method's Hebbi...
-
-
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-emeta' on page 2 undefined on input line 74.
+Package natbib Warning: Citation `author_year_meta' on page 2 undefined on inpu
+t line 74.
 
 [2]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.81 ...the backward pass \cite{author\_year\_how}
-                                                  .
 
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-ehow' on page 3 undefined on input line 81.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.84 ...(OTTT) algorithm \cite{xiao\_2022\_online}
-                                                  . OTTT was developed as an...
+Package natbib Warning: Citation `author_year_how' on page 3 undefined on input
+ line 81.
 
 
-Package natbib Warning: Citation `xiao\T1\textunderscore2022\T1\textunderscoreo
-nline' on page 3 undefined on input line 84.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.86 ...ning stability \cite{author\_year\_online}
-                                                  . The algorithm achieves i...
+Package natbib Warning: Citation `xiao_2022_online' on page 3 undefined on inpu
+t line 84.
 
 
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-eonline' on page 3 undefined on input line 86.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.93 ...entation of OTTT \cite{xiao\_2022\_online}
-                                                  . We utilize its online, f...
+Package natbib Warning: Citation `author_year_online' on page 3 undefined on in
+put line 86.
 
 
-Package natbib Warning: Citation `xiao\T1\textunderscore2022\T1\textunderscoreo
-nline' on page 3 undefined on input line 93.
+Package natbib Warning: Citation `xiao_2022_online' on page 3 undefined on inpu
+t line 93.
 
 
 Underfull \vbox (badness 1152) has occurred while \output is active [3]
@@ -459,26 +352,20 @@ Underfull \hbox (badness 1424) in paragraph at lines 107--108
  re-trieves the saved mask $\OML/cmm/m/it/10 M$ \T1/ptm/m/n/10 (+20) and uses i
 t to per-form
 [4]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.129 ...training method \cite{xiao\_2022\_online}
-                                                  , serving as our primary a...
 
+Package natbib Warning: Citation `xiao_2022_online' on page 5 undefined on inpu
+t line 129.
 
-Package natbib Warning: Citation `xiao\T1\textunderscore2022\T1\textunderscoreo
-nline' on page 5 undefined on input line 129.
+[5]
 
-[5] [6]
-
-Package natbib Warning: Citation `airas2025' on page 7 undefined on input line 
+Package natbib Warning: Citation `airas2025' on page 6 undefined on input line 
 163.
 
 No file paper.bbl.
 
 Package natbib Warning: There were undefined citations.
 
-[7] (./paper.aux)
+[6] (./paper.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
@@ -496,81 +383,40 @@ ic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (7 pages, 121326 bytes).
+Output written on paper.pdf (6 pages, 118046 bytes).
 Transcript written on paper.log.
 This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
 The top-level auxiliary file: paper.aux
-White space in argument---line 5 of file paper.aux
- : \citation{author\protect
- :                          \T1\textunderscore year\protect \T1\textunderscore how}
-I'm skipping whatever remains of this command
-White space in argument---line 6 of file paper.aux
- : \citation{author\protect
- :                          \T1\textunderscore year\protect \T1\textunderscore can}
-I'm skipping whatever remains of this command
-White space in argument---line 7 of file paper.aux
- : \citation{xiao\protect
- :                        \T1\textunderscore 2022\protect \T1\textunderscore online}
-I'm skipping whatever remains of this command
-White space in argument---line 8 of file paper.aux
- : \citation{pereznieves\protect
- :                               \T1\textunderscore 2021\protect \T1\textunderscore sparse}
-I'm skipping whatever remains of this command
-White space in argument---line 12 of file paper.aux
- : \citation{thiele\protect
- :                          \T1\textunderscore 2019\protect \T1\textunderscore spikegrad,author\protect \T1\textunderscore year\protect \T1\textunderscore how}
-I'm skipping whatever remains of this command
-White space in argument---line 13 of file paper.aux
- : \citation{xiao\protect
- :                        \T1\textunderscore 2022\protect \T1\textunderscore online}
-I'm skipping whatever remains of this command
-White space in argument---line 14 of file paper.aux
- : \citation{pereznieves\protect
- :                               \T1\textunderscore 2021\protect \T1\textunderscore sparse}
-I'm skipping whatever remains of this command
-White space in argument---line 15 of file paper.aux
- : \citation{chakraborty\protect
- :                               \T1\textunderscore 2024\protect \T1\textunderscore towards}
-I'm skipping whatever remains of this command
-White space in argument---line 16 of file paper.aux
- : \citation{goupy\protect
- :                         \T1\textunderscore 2024\protect \T1\textunderscore neuronal}
-I'm skipping whatever remains of this command
-White space in argument---line 17 of file paper.aux
- : \citation{meulemans\protect
- :                             \T1\textunderscore 2020\protect \T1\textunderscore theoretical,ernoult\protect \T1\textunderscore 2022\protect \T1\textunderscore towards}
-I'm skipping whatever remains of this command
-White space in argument---line 18 of file paper.aux
- : \citation{liu\protect
- :                       \T1\textunderscore 2022\protect \T1\textunderscore biologically}
-I'm skipping whatever remains of this command
-White space in argument---line 19 of file paper.aux
- : \citation{author\protect
- :                          \T1\textunderscore year\protect \T1\textunderscore meta}
-I'm skipping whatever remains of this command
-White space in argument---line 26 of file paper.aux
- : \citation{author\protect
- :                          \T1\textunderscore year\protect \T1\textunderscore how}
-I'm skipping whatever remains of this command
-White space in argument---line 27 of file paper.aux
- : \citation{xiao\protect
- :                        \T1\textunderscore 2022\protect \T1\textunderscore online}
-I'm skipping whatever remains of this command
-White space in argument---line 28 of file paper.aux
- : \citation{author\protect
- :                          \T1\textunderscore year\protect \T1\textunderscore online}
-I'm skipping whatever remains of this command
-White space in argument---line 29 of file paper.aux
- : \citation{xiao\protect
- :                        \T1\textunderscore 2022\protect \T1\textunderscore online}
-I'm skipping whatever remains of this command
-White space in argument---line 42 of file paper.aux
- : \citation{xiao\protect
- :                        \T1\textunderscore 2022\protect \T1\textunderscore online}
-I'm skipping whatever remains of this command
 The style file: iclr2024_conference.bst
 Database file #1: references.bib
-(There were 17 error messages)
+Repeated entry---line 286 of file references.bib
+ : @article{xiao_2022_online
+ :                          ,
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in author_year_how
+Warning--to sort, need author or key in author_year_can
+Warning--to sort, need author or key in author_year_meta
+Warning--to sort, need author or key in author_year_online
+Warning--empty author in author_year_can
+Warning--empty journal in author_year_can
+Warning--empty year in author_year_can
+Warning--empty author in author_year_how
+Warning--empty journal in author_year_how
+Warning--empty year in author_year_how
+Warning--empty author in author_year_meta
+Warning--empty journal in author_year_meta
+Warning--empty year in author_year_meta
+Warning--empty author in author_year_online
+Warning--empty journal in author_year_online
+Warning--empty year in author_year_online
+Warning--empty journal in chakraborty_2024_towards
+Warning--empty journal in ernoult_2022_towards
+Warning--empty journal in goupy_2024_neuronal
+Warning--empty journal in liu_2022_biologically
+Warning--empty journal in meulemans_2020_theoretical
+Warning--empty journal in thiele_2019_spikegrad
+Warning--empty journal in xiao_2022_online
+(There was 1 error message)
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
@@ -839,188 +685,81 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...f spiking neurons \cite{author\_year\_how}
-                                                  . This has led to powerful...
+
+Package natbib Warning: Citation `author_year_how' on page 1 undefined on input
+ line 55.
 
 
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-ehow' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...rough Time (BPTT) \cite{author\_year\_can}
-                                                   and, more recently, its m...
+Package natbib Warning: Citation `author_year_can' on page 1 undefined on input
+ line 55.
 
 
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-ecan' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...ough Time (OTTT) \cite{xiao\_2022\_online}
-                                                  . The primary challenge wi...
+Package natbib Warning: Citation `xiao_2022_online' on page 1 undefined on inpu
+t line 55.
 
 
-Package natbib Warning: Citation `xiao\T1\textunderscore2022\T1\textunderscoreo
-nline' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ... dynamics \cite{pereznieves\_2021\_sparse}
-                                                  , these solutions often re...
-
-
-Package natbib Warning: Citation `pereznieves\T1\textunderscore2021\T1\textunde
-rscoresparse' on page 1 undefined on input line 55.
+Package natbib Warning: Citation `pereznieves_2021_sparse' on page 1 undefined 
+on input line 55.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd) [1{/var/lib/texmf/fon
 ts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/
 base/8r.enc}] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.68 ...hiele\_2019\_spikegrad, author\_year\_how}
-                                                  . While BPTT achieves stat...
+
+Package natbib Warning: Citation `thiele_2019_spikegrad' on page 2 undefined on
+ input line 68.
 
 
-Package natbib Warning: Citation `thiele\T1\textunderscore2019\T1\textunderscor
-espikegrad' on page 2 undefined on input line 68.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.68 ...hiele\_2019\_spikegrad, author\_year\_how}
-                                                  . While BPTT achieves stat...
+Package natbib Warning: Citation `author_year_how' on page 2 undefined on input
+ line 68.
 
 
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-ehow' on page 2 undefined on input line 68.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.68 ...igibility traces \cite{xiao\_2022\_online}
-                                                  . FG-OTTT is built directl...
+Package natbib Warning: Citation `xiao_2022_online' on page 2 undefined on inpu
+t line 68.
 
 
-Package natbib Warning: Citation `xiao\T1\textunderscore2022\T1\textunderscoreo
-nline' on page 2 undefined on input line 68.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.71 ...es et al. \cite{pereznieves\_2021\_sparse}
-                                                   introduced a sparse spiki...
+Package natbib Warning: Citation `pereznieves_2021_sparse' on page 2 undefined 
+on input line 71.
 
 
-Package natbib Warning: Citation `pereznieves\T1\textunderscore2021\T1\textunde
-rscoresparse' on page 2 undefined on input line 71.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.71 ...nference \cite{chakraborty\_2024\_towards}
-                                                  , but does not directly ta...
+Package natbib Warning: Citation `chakraborty_2024_towards' on page 2 undefined
+ on input line 71.
 
 
-Package natbib Warning: Citation `chakraborty\T1\textunderscore2024\T1\textunde
-rscoretowards' on page 2 undefined on input line 71.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.74 ...ticity (STDP) \cite{goupy\_2024\_neuronal}
-                                                   and alternative credit as...
+Package natbib Warning: Citation `goupy_2024_neuronal' on page 2 undefined on i
+nput line 74.
 
 
-Package natbib Warning: Citation `goupy\T1\textunderscore2024\T1\textunderscore
-neuronal' on page 2 undefined on input line 74.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.74 ...2020\_theoretical, ernoult\_2022\_towards}
-                                                  . Some models also investi...
+Package natbib Warning: Citation `meulemans_2020_theoretical' on page 2 undefin
+ed on input line 74.
 
 
-Package natbib Warning: Citation `meulemans\T1\textunderscore2020\T1\textunders
-coretheoretical' on page 2 undefined on input line 74.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.74 ...2020\_theoretical, ernoult\_2022\_towards}
-                                                  . Some models also investi...
+Package natbib Warning: Citation `ernoult_2022_towards' on page 2 undefined on 
+input line 74.
 
 
-Package natbib Warning: Citation `ernoult\T1\textunderscore2022\T1\textundersco
-retowards' on page 2 undefined on input line 74.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.74 ...n over time \cite{liu\_2022\_biologically}
-                                                   or use meta-learning to d...
+Package natbib Warning: Citation `liu_2022_biologically' on page 2 undefined on
+ input line 74.
 
 
-Package natbib Warning: Citation `liu\T1\textunderscore2022\T1\textunderscorebi
-ologically' on page 2 undefined on input line 74.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.74 ...plasticity rules \cite{author\_year\_meta}
-                                                  . While our method's Hebbi...
-
-
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-emeta' on page 2 undefined on input line 74.
+Package natbib Warning: Citation `author_year_meta' on page 2 undefined on inpu
+t line 74.
 
 [2]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.81 ...the backward pass \cite{author\_year\_how}
-                                                  .
 
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-ehow' on page 3 undefined on input line 81.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.84 ...(OTTT) algorithm \cite{xiao\_2022\_online}
-                                                  . OTTT was developed as an...
+Package natbib Warning: Citation `author_year_how' on page 3 undefined on input
+ line 81.
 
 
-Package natbib Warning: Citation `xiao\T1\textunderscore2022\T1\textunderscoreo
-nline' on page 3 undefined on input line 84.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.86 ...ning stability \cite{author\_year\_online}
-                                                  . The algorithm achieves i...
+Package natbib Warning: Citation `xiao_2022_online' on page 3 undefined on inpu
+t line 84.
 
 
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-eonline' on page 3 undefined on input line 86.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.93 ...entation of OTTT \cite{xiao\_2022\_online}
-                                                  . We utilize its online, f...
+Package natbib Warning: Citation `author_year_online' on page 3 undefined on in
+put line 86.
 
 
-Package natbib Warning: Citation `xiao\T1\textunderscore2022\T1\textunderscoreo
-nline' on page 3 undefined on input line 93.
+Package natbib Warning: Citation `xiao_2022_online' on page 3 undefined on inpu
+t line 93.
 
 
 Underfull \vbox (badness 1152) has occurred while \output is active [3]
@@ -1033,22 +772,16 @@ Underfull \hbox (badness 1424) in paragraph at lines 107--108
  re-trieves the saved mask $\OML/cmm/m/it/10 M$ \T1/ptm/m/n/10 (+20) and uses i
 t to per-form
 [4]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.129 ...training method \cite{xiao\_2022\_online}
-                                                  , serving as our primary a...
 
+Package natbib Warning: Citation `xiao_2022_online' on page 5 undefined on inpu
+t line 129.
 
-Package natbib Warning: Citation `xiao\T1\textunderscore2022\T1\textunderscoreo
-nline' on page 5 undefined on input line 129.
+[5]
 
-[5] [6]
-
-Package natbib Warning: Citation `airas2025' on page 7 undefined on input line 
+Package natbib Warning: Citation `airas2025' on page 6 undefined on input line 
 163.
 
-(./paper.bbl)
+(./paper.bbl [6])
 
 Package natbib Warning: There were undefined citations.
 
@@ -1065,8 +798,9 @@ e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (7 pages, 124243 bytes).
+e/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (7 pages, 134378 bytes).
 Transcript written on paper.log.
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
@@ -1336,191 +1070,10 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...f spiking neurons \cite{author\_year\_how}
-                                                  . This has led to powerful...
-
-
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-ehow' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...rough Time (BPTT) \cite{author\_year\_can}
-                                                   and, more recently, its m...
-
-
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-ecan' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ...ough Time (OTTT) \cite{xiao\_2022\_online}
-                                                  . The primary challenge wi...
-
-
-Package natbib Warning: Citation `xiao\T1\textunderscore2022\T1\textunderscoreo
-nline' on page 1 undefined on input line 55.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.55 ... dynamics \cite{pereznieves\_2021\_sparse}
-                                                  , these solutions often re...
-
-
-Package natbib Warning: Citation `pereznieves\T1\textunderscore2021\T1\textunde
-rscoresparse' on page 1 undefined on input line 55.
-
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd) [1{/var/lib/texmf/fon
 ts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/
 base/8r.enc}] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.68 ...hiele\_2019\_spikegrad, author\_year\_how}
-                                                  . While BPTT achieves stat...
-
-
-Package natbib Warning: Citation `thiele\T1\textunderscore2019\T1\textunderscor
-espikegrad' on page 2 undefined on input line 68.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.68 ...hiele\_2019\_spikegrad, author\_year\_how}
-                                                  . While BPTT achieves stat...
-
-
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-ehow' on page 2 undefined on input line 68.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.68 ...igibility traces \cite{xiao\_2022\_online}
-                                                  . FG-OTTT is built directl...
-
-
-Package natbib Warning: Citation `xiao\T1\textunderscore2022\T1\textunderscoreo
-nline' on page 2 undefined on input line 68.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.71 ...es et al. \cite{pereznieves\_2021\_sparse}
-                                                   introduced a sparse spiki...
-
-
-Package natbib Warning: Citation `pereznieves\T1\textunderscore2021\T1\textunde
-rscoresparse' on page 2 undefined on input line 71.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.71 ...nference \cite{chakraborty\_2024\_towards}
-                                                  , but does not directly ta...
-
-
-Package natbib Warning: Citation `chakraborty\T1\textunderscore2024\T1\textunde
-rscoretowards' on page 2 undefined on input line 71.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.74 ...ticity (STDP) \cite{goupy\_2024\_neuronal}
-                                                   and alternative credit as...
-
-
-Package natbib Warning: Citation `goupy\T1\textunderscore2024\T1\textunderscore
-neuronal' on page 2 undefined on input line 74.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.74 ...2020\_theoretical, ernoult\_2022\_towards}
-                                                  . Some models also investi...
-
-
-Package natbib Warning: Citation `meulemans\T1\textunderscore2020\T1\textunders
-coretheoretical' on page 2 undefined on input line 74.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.74 ...2020\_theoretical, ernoult\_2022\_towards}
-                                                  . Some models also investi...
-
-
-Package natbib Warning: Citation `ernoult\T1\textunderscore2022\T1\textundersco
-retowards' on page 2 undefined on input line 74.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.74 ...n over time \cite{liu\_2022\_biologically}
-                                                   or use meta-learning to d...
-
-
-Package natbib Warning: Citation `liu\T1\textunderscore2022\T1\textunderscorebi
-ologically' on page 2 undefined on input line 74.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.74 ...plasticity rules \cite{author\_year\_meta}
-                                                  . While our method's Hebbi...
-
-
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-emeta' on page 2 undefined on input line 74.
-
-[2]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.81 ...the backward pass \cite{author\_year\_how}
-                                                  .
-
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-ehow' on page 3 undefined on input line 81.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.84 ...(OTTT) algorithm \cite{xiao\_2022\_online}
-                                                  . OTTT was developed as an...
-
-
-Package natbib Warning: Citation `xiao\T1\textunderscore2022\T1\textunderscoreo
-nline' on page 3 undefined on input line 84.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.86 ...ning stability \cite{author\_year\_online}
-                                                  . The algorithm achieves i...
-
-
-Package natbib Warning: Citation `author\T1\textunderscoreyear\T1\textunderscor
-eonline' on page 3 undefined on input line 86.
-
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.93 ...entation of OTTT \cite{xiao\_2022\_online}
-                                                  . We utilize its online, f...
-
-
-Package natbib Warning: Citation `xiao\T1\textunderscore2022\T1\textunderscoreo
-nline' on page 3 undefined on input line 93.
-
-
-Underfull \vbox (badness 1152) has occurred while \output is active [3]
+[2] [3]
 Underfull \hbox (badness 4479) in paragraph at lines 107--108
 []\T1/ptm/b/n/10 (+20) Backward Method: \T1/ptm/m/n/10 (+20) The \T1/pcr/m/n/10
  backward \T1/ptm/m/n/10 (+20) method re-ceives the up-stream gra-di-ent
@@ -1529,22 +1082,7 @@ Underfull \hbox (badness 1424) in paragraph at lines 107--108
 \T1/ptm/m/n/10 (+20) (\T1/pcr/m/n/10 grad_output\T1/ptm/m/n/10 (+20) ). It then
  re-trieves the saved mask $\OML/cmm/m/it/10 M$ \T1/ptm/m/n/10 (+20) and uses i
 t to per-form
-[4]
-! Missing \endcsname inserted.
-<to be read again> 
-                   \protect 
-l.129 ...training method \cite{xiao\_2022\_online}
-                                                  , serving as our primary a...
-
-
-Package natbib Warning: Citation `xiao\T1\textunderscore2022\T1\textunderscoreo
-nline' on page 5 undefined on input line 129.
-
-[5] [6] (./paper.bbl)
-
-Package natbib Warning: There were undefined citations.
-
-[7] (./paper.aux) )
+[4] [5] (./paper.bbl [6]) [7] (./paper.aux) )
 (see the transcript file for additional information)</usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
@@ -1552,6 +1090,7 @@ e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (7 pages, 124317 bytes).
+e/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (7 pages, 135916 bytes).
 Transcript written on paper.log.

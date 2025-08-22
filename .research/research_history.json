@@ -6,5 +6,52 @@
     "top-k expert routing",
     "MoE load balancing",
     "optimal transport MoE"
+  ],
+  "research_study_list": [
+    {
+      "title": "OpenMoE: An Early Effort on Open Mixture-of-Experts Language Models"
+    },
+    {
+      "title": "TA-MoE: Topology-Aware Large Scale Mixture-of-Expert Training"
+    },
+    {
+      "title": "On the Representation Collapse of Sparse Mixture of Experts"
+    },
+    {
+      "title": "OpenMoE: An Early Effort on Open Mixture-of-Experts Language Models"
+    },
+    {
+      "title": "TA-MoE: Topology-Aware Large Scale Mixture-of-Expert Training"
+    },
+    {
+      "title": "Mixture-of-Experts with Expert Choice Routing"
+    },
+    {
+      "title": "TA-MoE: Topology-Aware Large Scale Mixture-of-Expert Training"
+    },
+    {
+      "title": "DSelect-k: Differentiable Selection in the Mixture of Experts with Applications to Multi-Task Learning"
+    },
+    {
+      "title": "Mixture-of-Experts with Expert Choice Routing"
+    },
+    {
+      "title": "Toward Efficient Inference for Mixture of Experts"
+    },
+    {
+      "title": "Scaling Beyond the GPU Memory Limit for Large Mixture-of-Experts Model Training"
+    },
+    {
+      "title": "DeepSpeed-MoE: Advancing Mixture-of-Experts Inference and Training to Power Next-Generation AI Scale"
+    },
+    {
+      "title": "Sparsity-Constrained Optimal Transport"
+    },
+    {
+      "title": "Sparsity-Constrained Optimal Transport"
+    },
+    {
+      "title": "Neural Topic Model via Optimal Transport"
+    }
   ]
 }

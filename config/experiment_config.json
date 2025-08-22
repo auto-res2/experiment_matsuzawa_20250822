@@ -7,6 +7,6 @@
   "num_workers": 2,
   "save_dir": "./models",
   "image_dir": "./.research/iteration1/images",
-  "status_enum": "test_passed",
+  "status_enum": "stopped",
   "last_updated": "2025-08-22 04:56:37"
 }

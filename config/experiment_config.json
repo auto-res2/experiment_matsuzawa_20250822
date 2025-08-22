@@ -1,0 +1,70 @@
+{
+  "qelo_configs": [
+    {
+      "name": "QELO-3bit-uniform",
+      "bits": 3,
+      "group_size": 32,
+      "scheme": "uniform",
+      "rank": 8,
+      "use_aws": true,
+      "use_lut_learning": true,
+      "use_error_shaping": true
+    },
+    {
+      "name": "QELO-2bit-uniform",
+      "bits": 2,
+      "group_size": 32,
+      "scheme": "uniform",
+      "rank": 16,
+      "use_aws": true,
+      "use_lut_learning": true,
+      "use_error_shaping": true
+    },
+    {
+      "name": "QELO-3bit-nf",
+      "bits": 3,
+      "group_size": 32,
+      "scheme": "nf",
+      "rank": 8,
+      "use_aws": true,
+      "use_lut_learning": true,
+      "use_error_shaping": true
+    }
+  ],
+  "baseline_configs": [
+    {
+      "name": "Standard-SVD-3bit",
+      "bits": 3,
+      "group_size": 32,
+      "scheme": "uniform",
+      "rank": 8,
+      "use_aws": false,
+      "use_lut_learning": false,
+      "use_error_shaping": false
+    },
+    {
+      "name": "LUT-only-3bit",
+      "bits": 3,
+      "group_size": 32,
+      "scheme": "uniform",
+      "rank": 8,
+      "use_aws": false,
+      "use_lut_learning": true,
+      "use_error_shaping": false
+    }
+  ],
+  "data_config": {
+    "calibration_samples": 512,
+    "evaluation_samples": 1000,
+    "max_length": 2048,
+    "synthetic_patterns": [
+      "gauss_iso",
+      "gauss_aniso",
+      "laplace"
+    ]
+  },
+  "model_config": {
+    "model_name": "EleutherAI/pythia-410m",
+    "device": "cpu"
+  }
+}

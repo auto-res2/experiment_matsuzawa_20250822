@@ -1,0 +1,158 @@
+{
+  "Full-QELO": {
+    "quality_metrics": {
+      "frobenius_error": 2.134190320968628,
+      "relative_frobenius_error": 0.23833905787377255,
+      "activation_mse": 0.07198546081781387,
+      "weighted_activation_mse": 0.09239907562732697,
+      "relative_activation_mse": 0.05712950784868961,
+      "snr_db": 12.431395172228223
+    },
+    "stability_metrics": {
+      "code_utilization": 0.875,
+      "code_entropy": 2.456488847732544,
+      "normalized_code_entropy": 0.818829615910848,
+      "num_unique_codes": 7,
+      "total_possible_codes": 8,
+      "monotonicity_violations": 0,
+      "avg_lut_range": 6.950942397117615
+    },
+    "training_metrics": {
+      "initial_loss": 103305.09375,
+      "final_loss": 5913.5400390625,
+      "lut_updates": 60,
+      "aws_updates": 2
+    },
+    "optimization_time": 0.42345523834228516,
+    "config": {
+      "name": "Full-QELO",
+      "use_aws": true,
+      "use_lut_learning": true,
+      "use_error_shaping": true
+    }
+  },
+  "No-AWS": {
+    "quality_metrics": {
+      "frobenius_error": 2.3920347690582275,
+      "relative_frobenius_error": 0.26713424180458817,
+      "activation_mse": 0.09044674038887024,
+      "weighted_activation_mse": 0.11631390452384949,
+      "relative_activation_mse": 0.07178085277542126,
+      "snr_db": 11.439913864393938
+    },
+    "stability_metrics": {
+      "code_utilization": 0.875,
+      "code_entropy": 2.456488847732544,
+      "normalized_code_entropy": 0.818829615910848,
+      "num_unique_codes": 7,
+      "total_possible_codes": 8,
+      "monotonicity_violations": 0,
+      "avg_lut_range": 7.002243518829346
+    },
+    "training_metrics": {
+      "initial_loss": 103305.09375,
+      "final_loss": 7444.08984375,
+      "lut_updates": 60,
+      "aws_updates": 0
+    },
+    "optimization_time": 0.41628193855285645,
+    "config": {
+      "name": "No-AWS",
+      "use_aws": false,
+      "use_lut_learning": true,
+      "use_error_shaping": true
+    }
+  },
+  "No-LUT": {
+    "quality_metrics": {
+      "frobenius_error": 2.1523866653442383,
+      "relative_frobenius_error": 0.24037116322661725,
+      "activation_mse": 0.07339788973331451,
+      "weighted_activation_mse": 0.09412873536348343,
+      "relative_activation_mse": 0.058250447659272044,
+      "snr_db": 12.347007327018652
+    },
+    "stability_metrics": {
+      "code_utilization": 0.875,
+      "code_entropy": 2.456488847732544,
+      "normalized_code_entropy": 0.818829615910848,
+      "num_unique_codes": 7,
+      "total_possible_codes": 8
+    },
+    "training_metrics": {
+      "initial_loss": 103305.09375,
+      "final_loss": 6024.2392578125,
+      "lut_updates": 0,
+      "aws_updates": 2
+    },
+    "optimization_time": 0.006011247634887695,
+    "config": {
+      "name": "No-LUT",
+      "use_aws": true,
+      "use_lut_learning": false,
+      "use_error_shaping": true
+    }
+  },
+  "No-ErrorShape": {
+    "quality_metrics": {
+      "frobenius_error": 2.134190320968628,
+      "relative_frobenius_error": 0.23833905787377255,
+      "activation_mse": 0.07198546081781387,
+      "weighted_activation_mse": 0.09239907562732697,
+      "relative_activation_mse": 0.05712950784868961,
+      "snr_db": 12.431395172228223
+    },
+    "stability_metrics": {
+      "code_utilization": 0.875,
+      "code_entropy": 2.456488847732544,
+      "normalized_code_entropy": 0.818829615910848,
+      "num_unique_codes": 7,
+      "total_possible_codes": 8,
+      "monotonicity_violations": 0,
+      "avg_lut_range": 6.950942397117615
+    },
+    "training_metrics": {
+      "initial_loss": 103305.09375,
+      "final_loss": 5913.5400390625,
+      "lut_updates": 60,
+      "aws_updates": 2
+    },
+    "optimization_time": 0.4047691822052002,
+    "config": {
+      "name": "No-ErrorShape",
+      "use_aws": true,
+      "use_lut_learning": true,
+      "use_error_shaping": false
+    }
+  },
+  "Baseline": {
+    "quality_metrics": {
+      "frobenius_error": 2.4036638736724854,
+      "relative_frobenius_error": 0.26843294033697573,
+      "activation_mse": 0.0914321318268776,
+      "weighted_activation_mse": 0.11748799681663513,
+      "relative_activation_mse": 0.07256288469203492,
+      "snr_db": 11.392854604996401
+    },
+    "stability_metrics": {
+      "code_utilization": 0.875,
+      "code_entropy": 2.456488847732544,
+      "normalized_code_entropy": 0.818829615910848,
+      "num_unique_codes": 7,
+      "total_possible_codes": 8
+    },
+    "training_metrics": {
+      "initial_loss": 103305.09375,
+      "final_loss": 7519.232421875,
+      "lut_updates": 0,
+      "aws_updates": 0
+    },
+    "optimization_time": 0.004050016403198242,
+    "config": {
+      "name": "Baseline",
+      "use_aws": false,
+      "use_lut_learning": false,
+      "use_error_shaping": false
+    }
+  }
+}

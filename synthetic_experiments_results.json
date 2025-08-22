@@ -1,0 +1,396 @@
+{
+  "QELO-3bit-uniform": {
+    "gauss_iso": {
+      "quality_metrics": {
+        "frobenius_error": 2.1796581745147705,
+        "relative_frobenius_error": 0.23889326437543312,
+        "activation_mse": 0.07458939403295517,
+        "weighted_activation_mse": 0.09386343508958817,
+        "relative_activation_mse": 0.05638946667129293,
+        "snr_db": 12.488020129273385
+      },
+      "stability_metrics": {
+        "code_utilization": 0.875,
+        "code_entropy": 2.4292428493499756,
+        "normalized_code_entropy": 0.8097476164499918,
+        "num_unique_codes": 7,
+        "total_possible_codes": 8,
+        "monotonicity_violations": 0,
+        "avg_lut_range": 6.821680903434753
+      },
+      "training_metrics": {
+        "initial_loss": 106353.96875,
+        "final_loss": 6007.2587890625,
+        "lut_updates": 60,
+        "aws_updates": 2
+      },
+      "optimization_time": 0.42307090759277344
+    },
+    "gauss_aniso": {
+      "quality_metrics": {
+        "frobenius_error": 1.7762186527252197,
+        "relative_frobenius_error": 0.19661159361143832,
+        "activation_mse": 0.15740007162094116,
+        "weighted_activation_mse": 0.7206437587738037,
+        "relative_activation_mse": 0.03370498305877034,
+        "snr_db": 14.723058868157821
+      },
+      "stability_metrics": {
+        "code_utilization": 0.875,
+        "code_entropy": 2.4475598335266113,
+        "normalized_code_entropy": 0.8158532778422037,
+        "num_unique_codes": 7,
+        "total_possible_codes": 8,
+        "monotonicity_violations": 0,
+        "avg_lut_range": 6.796024203300476
+      },
+      "training_metrics": {
+        "initial_loss": 1386496.625,
+        "final_loss": 46121.1953125,
+        "lut_updates": 60,
+        "aws_updates": 2
+      },
+      "optimization_time": 0.41487812995910645
+    },
+    "laplace": {
+      "quality_metrics": {
+        "frobenius_error": 1.669081211090088,
+        "relative_frobenius_error": 0.1838172979518831,
+        "activation_mse": 0.0868154987692833,
+        "weighted_activation_mse": 0.221697136759758,
+        "relative_activation_mse": 0.03375847831216228,
+        "snr_db": 14.716171377432211
+      },
+      "stability_metrics": {
+        "code_utilization": 0.875,
+        "code_entropy": 2.448929786682129,
+        "normalized_code_entropy": 0.816309928894043,
+        "num_unique_codes": 7,
+        "total_possible_codes": 8,
+        "monotonicity_violations": 0,
+        "avg_lut_range": 6.8437659740448
+      },
+      "training_metrics": {
+        "initial_loss": 425966.9375,
+        "final_loss": 14188.6171875,
+        "lut_updates": 60,
+        "aws_updates": 2
+      },
+      "optimization_time": 0.4157993793487549
+    }
+  },
+  "QELO-2bit-uniform": {
+    "gauss_iso": {
+      "quality_metrics": {
+        "frobenius_error": 3.7414541244506836,
+        "relative_frobenius_error": 0.41531295414279856,
+        "activation_mse": 0.2213638573884964,
+        "weighted_activation_mse": 0.2728436291217804,
+        "relative_activation_mse": 0.17205999619916557,
+        "snr_db": 7.643200910289464
+      },
+      "stability_metrics": {
+        "code_utilization": 0.75,
+        "code_entropy": 1.0482404232025146,
+        "normalized_code_entropy": 0.5241202116012573,
+        "num_unique_codes": 3,
+        "total_possible_codes": 4,
+        "monotonicity_violations": 0,
+        "avg_lut_range": 2.6488840579986572
+      },
+      "training_metrics": {
+        "initial_loss": 103837.578125,
+        "final_loss": 17461.990234375,
+        "lut_updates": 60,
+        "aws_updates": 2
+      },
+      "optimization_time": 0.27278709411621094
+    },
+    "gauss_aniso": {
+      "quality_metrics": {
+        "frobenius_error": 4.580076694488525,
+        "relative_frobenius_error": 0.509252320661862,
+        "activation_mse": 1.0789140462875366,
+        "weighted_activation_mse": 4.944071292877197,
+        "relative_activation_mse": 0.24147153830178558,
+        "snr_db": 6.171340511937058
+      },
+      "stability_metrics": {
+        "code_utilization": 0.75,
+        "code_entropy": 1.0900421142578125,
+        "normalized_code_entropy": 0.5450210571289062,
+        "num_unique_codes": 3,
+        "total_possible_codes": 4,
+        "monotonicity_violations": 0,
+        "avg_lut_range": 2.607166051864624
+      },
+      "training_metrics": {
+        "initial_loss": 1320756.75,
+        "final_loss": 316420.5625,
+        "lut_updates": 60,
+        "aws_updates": 2
+      },
+      "optimization_time": 0.27183008193969727
+    },
+    "laplace": {
+      "quality_metrics": {
+        "frobenius_error": 4.1196699142456055,
+        "relative_frobenius_error": 0.4595640798493662,
+        "activation_mse": 0.5307435393333435,
+        "weighted_activation_mse": 1.3560866117477417,
+        "relative_activation_mse": 0.21180745585924893,
+        "snr_db": 6.740587563081481
+      },
+      "stability_metrics": {
+        "code_utilization": 0.75,
+        "code_entropy": 1.066158652305603,
+        "normalized_code_entropy": 0.5330793261528015,
+        "num_unique_codes": 3,
+        "total_possible_codes": 4,
+        "monotonicity_violations": 0,
+        "avg_lut_range": 2.6116087436676025
+      },
+      "training_metrics": {
+        "initial_loss": 415765.1875,
+        "final_loss": 86789.546875,
+        "lut_updates": 60,
+        "aws_updates": 2
+      },
+      "optimization_time": 0.2769284248352051
+    }
+  },
+  "QELO-3bit-nf": {
+    "gauss_iso": {
+      "quality_metrics": {
+        "frobenius_error": 2.1064438819885254,
+        "relative_frobenius_error": 0.2308475079002299,
+        "activation_mse": 0.06991961598396301,
+        "weighted_activation_mse": 0.08876729011535645,
+        "relative_activation_mse": 0.05350932171420465,
+        "snr_db": 12.715705541209628
+      },
+      "stability_metrics": {
+        "code_utilization": 1.0,
+        "code_entropy": 2.8374738693237305,
+        "normalized_code_entropy": 0.9458246231079102,
+        "num_unique_codes": 8,
+        "total_possible_codes": 8,
+        "monotonicity_violations": 0,
+        "avg_lut_range": 1.9795765280723572
+      },
+      "training_metrics": {
+        "initial_loss": 105054.5625,
+        "final_loss": 5681.10595703125,
+        "lut_updates": 60,
+        "aws_updates": 2
+      },
+      "optimization_time": 0.45511555671691895
+    },
+    "gauss_aniso": {
+      "quality_metrics": {
+        "frobenius_error": 1.3396140336990356,
+        "relative_frobenius_error": 0.14953516407980633,
+        "activation_mse": 0.08828065544366837,
+        "weighted_activation_mse": 0.4042859971523285,
+        "relative_activation_mse": 0.019921931198848875,
+        "snr_db": 17.006685640874867
+      },
+      "stability_metrics": {
+        "code_utilization": 1.0,
+        "code_entropy": 2.839374303817749,
+        "normalized_code_entropy": 0.946458101272583,
+        "num_unique_codes": 8,
+        "total_possible_codes": 8,
+        "monotonicity_violations": 0,
+        "avg_lut_range": 1.8817990720272064
+      },
+      "training_metrics": {
+        "initial_loss": 1307208.0,
+        "final_loss": 25874.302734375,
+        "lut_updates": 60,
+        "aws_updates": 2
+      },
+      "optimization_time": 0.4522285461425781
+    },
+    "laplace": {
+      "quality_metrics": {
+        "frobenius_error": 1.3652468919754028,
+        "relative_frobenius_error": 0.15197785428285215,
+        "activation_mse": 0.05749741941690445,
+        "weighted_activation_mse": 0.14720454812049866,
+        "relative_activation_mse": 0.022878233558445916,
+        "snr_db": 16.40577510710965
+      },
+      "stability_metrics": {
+        "code_utilization": 1.0,
+        "code_entropy": 2.848446846008301,
+        "normalized_code_entropy": 0.949482282002767,
+        "num_unique_codes": 8,
+        "total_possible_codes": 8,
+        "monotonicity_violations": 0,
+        "avg_lut_range": 1.8937271237373352
+      },
+      "training_metrics": {
+        "initial_loss": 415235.25,
+        "final_loss": 9421.0908203125,
+        "lut_updates": 60,
+        "aws_updates": 2
+      },
+      "optimization_time": 0.4488525390625
+    }
+  },
+  "Standard-SVD-3bit": {
+    "gauss_iso": {
+      "quality_metrics": {
+        "frobenius_error": 2.43566632270813,
+        "relative_frobenius_error": 0.2655012990323373,
+        "activation_mse": 0.0933036208152771,
+        "weighted_activation_mse": 0.11716879159212112,
+        "relative_activation_mse": 0.07084686116327932,
+        "snr_db": 11.496793862021871
+      },
+      "stability_metrics": {
+        "code_utilization": 0.875,
+        "code_entropy": 2.4634170532226562,
+        "normalized_code_entropy": 0.8211390177408854,
+        "num_unique_codes": 7,
+        "total_possible_codes": 8
+      },
+      "training_metrics": {
+        "initial_loss": 105856.1875,
+        "final_loss": 7498.802734375,
+        "lut_updates": 0,
+        "aws_updates": 0
+      },
+      "optimization_time": 0.004095315933227539
+    },
+    "gauss_aniso": {
+      "quality_metrics": {
+        "frobenius_error": 2.4284069538116455,
+        "relative_frobenius_error": 0.26875417888559183,
+        "activation_mse": 0.34371522068977356,
+        "weighted_activation_mse": 1.5897538661956787,
+        "relative_activation_mse": 0.07469578477649545,
+        "snr_db": 11.26703905546857
+      },
+      "stability_metrics": {
+        "code_utilization": 0.875,
+        "code_entropy": 2.4767863750457764,
+        "normalized_code_entropy": 0.8255954583485922,
+        "num_unique_codes": 7,
+        "total_possible_codes": 8
+      },
+      "training_metrics": {
+        "initial_loss": 1361337.875,
+        "final_loss": 101744.25,
+        "lut_updates": 0,
+        "aws_updates": 0
+      },
+      "optimization_time": 0.0038602352142333984
+    },
+    "laplace": {
+      "quality_metrics": {
+        "frobenius_error": 2.414510488510132,
+        "relative_frobenius_error": 0.26577272454340545,
+        "activation_mse": 0.18142016232013702,
+        "weighted_activation_mse": 0.4715287387371063,
+        "relative_activation_mse": 0.07064500276570906,
+        "snr_db": 11.50918553532833
+      },
+      "stability_metrics": {
+        "code_utilization": 0.875,
+        "code_entropy": 2.452054977416992,
+        "normalized_code_entropy": 0.8173516591389974,
+        "num_unique_codes": 7,
+        "total_possible_codes": 8
+      },
+      "training_metrics": {
+        "initial_loss": 423917.21875,
+        "final_loss": 30177.841796875,
+        "lut_updates": 0,
+        "aws_updates": 0
+      },
+      "optimization_time": 0.003782033920288086
+    }
+  },
+  "LUT-only-3bit": {
+    "gauss_iso": {
+      "quality_metrics": {
+        "frobenius_error": 2.378396987915039,
+        "relative_frobenius_error": 0.2598165002276844,
+        "activation_mse": 0.08921696990728378,
+        "weighted_activation_mse": 0.11227670311927795,
+        "relative_activation_mse": 0.06772336694739718,
+        "snr_db": 11.692614585618298
+      },
+      "stability_metrics": {
+        "code_utilization": 0.875,
+        "code_entropy": 2.4654510021209717,
+        "normalized_code_entropy": 0.8218170007069906,
+        "num_unique_codes": 7,
+        "total_possible_codes": 8,
+        "monotonicity_violations": 0,
+        "avg_lut_range": 6.910902261734009
+      },
+      "training_metrics": {
+        "initial_loss": 106229.78125,
+        "final_loss": 7185.708984375,
+        "lut_updates": 60,
+        "aws_updates": 0
+      },
+      "optimization_time": 0.4296915531158447
+    },
+    "gauss_aniso": {
+      "quality_metrics": {
+        "frobenius_error": 2.404252290725708,
+        "relative_frobenius_error": 0.2645557870395391,
+        "activation_mse": 0.3269791901111603,
+        "weighted_activation_mse": 1.5132806301116943,
+        "relative_activation_mse": 0.06967776987463642,
+        "snr_db": 11.569057579234519
+      },
+      "stability_metrics": {
+        "code_utilization": 0.875,
+        "code_entropy": 2.450507164001465,
+        "normalized_code_entropy": 0.8168357213338217,
+        "num_unique_codes": 7,
+        "total_possible_codes": 8,
+        "monotonicity_violations": 0,
+        "avg_lut_range": 6.89522385597229
+      },
+      "training_metrics": {
+        "initial_loss": 1398838.375,
+        "final_loss": 96849.96875,
+        "lut_updates": 60,
+        "aws_updates": 0
+      },
+      "optimization_time": 0.4256260395050049
+    },
+    "laplace": {
+      "quality_metrics": {
+        "frobenius_error": 2.403843641281128,
+        "relative_frobenius_error": 0.26411088514629494,
+        "activation_mse": 0.17896611988544464,
+        "weighted_activation_mse": 0.4619574546813965,
+        "relative_activation_mse": 0.06985872733499673,
+        "snr_db": 11.557793304708134
+      },
+      "stability_metrics": {
+        "code_utilization": 0.875,
+        "code_entropy": 2.4797263145446777,
+        "normalized_code_entropy": 0.8265754381815592,
+        "num_unique_codes": 7,
+        "total_possible_codes": 8,
+        "monotonicity_violations": 0,
+        "avg_lut_range": 6.819370627403259
+      },
+      "training_metrics": {
+        "initial_loss": 423713.0,
+        "final_loss": 29565.27734375,
+        "lut_updates": 60,
+        "aws_updates": 0
+      },
+      "optimization_time": 0.41941213607788086
+    }
+  }
+}

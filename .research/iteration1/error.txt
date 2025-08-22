@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/runner/work/experiment_matsuzawa_20250822/experiment_matsuzawa_20250822/src/main.py", line 21, in <module>
+    from preprocess import preprocess_all
+  File "/home/runner/work/experiment_matsuzawa_20250822/experiment_matsuzawa_20250822/src/preprocess.py", line 11, in <module>
+    from train import make_synthetic_dataset
+  File "/home/runner/work/experiment_matsuzawa_20250822/experiment_matsuzawa_20250822/src/train.py", line 1424
+    print(f"Exp1: SURGE test(A,orig) acc={res1['final_scores']['SURGE'][(\'A\',1.0)]['acc']:.3f}")
+                                                                                                 ^
+SyntaxError: f-string expression part cannot include a backslash

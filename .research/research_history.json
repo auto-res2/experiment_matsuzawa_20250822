@@ -368,6 +368,38 @@
       }
     }
   ],
+  "reference_research_study_list": [
+    {
+      "title": "Gpt-4 technical report"
+    },
+    {
+      "title": "Flamingo: a visual language model for few-shot learning"
+    },
+    {
+      "title": "Large-dit-imagenet"
+    },
+    {
+      "title": "Palm 2 technical report"
+    },
+    {
+      "title": "Qwen technical report"
+    },
+    {
+      "title": "Sequential modeling enables scalable learning for large vision models"
+    },
+    {
+      "title": "Analytic-dpm: an analytic estimate of the optimal reverse variance in diffusion probabilistic models"
+    },
+    {
+      "title": "All are worth words: A vit backbone for diffusion models"
+    },
+    {
+      "title": "Vidu: a highly consistent, dynamic and skilled text-to-video generator with diffusion models"
+    },
+    {
+      "title": "Beit: Bert pre-training of image transformers"
+    }
+  ],
   "new_method": {
     "method": "The proposed research, Grouped Autoregressive Scale Prediction (GASP), presents a principled architectural solution to the primary bottleneck of Visual Autoregressive (VAR) models: their inherently sequential, scale-by-scale inference process. Instead of relying on post-hoc sampling accelerators which offer unpredictable, content-dependent speedups, GASP re-engineers the generative process itself for deterministic, controllable parallelism. The core idea is to shift the prediction target from a single scale to a 'group of scales' within each autoregressive step. This is achieved through three key architectural innovations. First, a **Hierarchical Group-Causal Attention Mask** is introduced, modifying the standard causal mask to enforce causality strictly *between* groups while permitting fully parallel, non-causal attention *within* the target group being generated. This enables the simultaneous prediction of all tokens for multiple scales in a single forward pass. Second, to handle the increased complexity of predicting a scale group, the simple additive feature map (`f_hat`) of the original VAR is replaced with a **Group Conditioning Adapter (GCA)**. The GCA is a lightweight cross-attention module, akin to a Perceiver, that distills the entire history of previously generated groups into a concise and powerful set of conditioning tokens. This provides a much richer, globally-aware context for the complex task of multi-scale group prediction, potentially improving long-range coherence in the generated images. Third, the autoregressive inference loop is modified to perform **Group-wise Ancestral Sampling**, iterating over M groups instead of N scales, which guarantees a predictable reduction in the number of sequential generation steps. This research introduces group size as a new, transparent hyperparameter, creating a direct and principled lever to navigate the speed-quality trade-off. We expect this approach to yield a near-linear reduction in inference latency proportional to the average group size, making high-resolution VAR models viable for interactive applications. Furthermore, we hypothesize that the GCA's sophisticated context summarization will lead to improved sample quality and global consistency. This work pioneers a new direction in autoregressive modeling focused on co-designing architectures for structured parallel decoding, moving beyond sequential generation.",
     "experimental_design": {

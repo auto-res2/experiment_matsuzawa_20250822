@@ -382,6 +382,38 @@
       }
     }
   ],
+  "reference_research_study_list": [
+    {
+      "title": "Language models are few-shot learners"
+    },
+    {
+      "title": "Gpt-4 technical report"
+    },
+    {
+      "title": "Training language models to follow instructions with human feedback"
+    },
+    {
+      "title": "Llama: Open and efficient foundation language models"
+    },
+    {
+      "title": "Llama 2: Open foundation and fine-tuned chat models"
+    },
+    {
+      "title": "Introducing meta llama 3: The most capable openly available llm to date"
+    },
+    {
+      "title": "Scaling laws for neural language models"
+    },
+    {
+      "title": "Gemini: a family of highly capable multimodal models"
+    },
+    {
+      "title": "Efficiently scaling transformer inference"
+    },
+    {
+      "title": "Training verifiers to solve math word problems"
+    }
+  ],
   "new_method": {
     "method": "{\"Motivation\": \"Existing KV cache compression techniques like KIVI, ZipCache, and MiniCache rely on static, manually-tuned heuristics, which are suboptimal. The ideal trade-off between orthogonal compression axes—recency (time), saliency (importance), and structural redundancy (depth)—is not fixed. It changes dynamically with the task (e.g., code generation vs. summarization), generation stage (prompt vs. token decoding), and model depth (syntactic vs. semantic layers). Current methods commit to one fixed strategy, creating a performance ceiling. We propose ALM-Cache (Adaptive Layer-wise Meta-Cache), a framework that replaces static heuristics with a learned meta-policy. This policy dynamically controls a unified set of compression 'knobs' on a per-layer basis, navigating the complex trade-offs in real-time to achieve a superior balance of accuracy, memory, and latency.\", \"Methodology\": \"ALM-Cache formulates KV cache management as a real-time optimal control problem solved via reinforcement learning. It creates a single, parameterized compression pipeline unifying concepts from prior work into a controllable action space. 1. **Unified Multi-Axis Compression Framework:** We integrate three orthogonal compression strategies into a single module configurable on a per-layer-block basis: a) a **Recency Window (`R`)**, inspired by KIVI, setting the number of recent tokens kept in full precision; b) a **Saliency Budget (`S`)**, inspired by ZipCache/H2O, defining the percentage of non-recent tokens to retain based on attention scores; and c) a **Layer-Merging Ratio (`M`)**, inspired by MiniCache, controlling the aggressiveness of cross-layer cache merging via SLERP. 2. **Reinforcement Learning Formulation:** A single, lightweight RL agent (e.g., a small MLP using PPO) learns to control this framework. **State:** At each decision step (e.g., every 16 tokens), the agent observes a vector of global features (memory pressure, sequence length) and per-layer-block features (historical average attention entropy, max attention value). **Action:** The agent outputs a policy vector `(R, S, M)` for each layer block, allowing it to learn context-dependent strategies like preserving high recency in deep layers for factual recall while aggressively merging shallow layers to compress syntactic information. 3. **Two-Stage Training with Hybrid Proxy Reward:** To make training tractable, we use a two-stage process. **Stage 1 (Offline Pre-training):** The agent is pre-trained on a diverse corpus to maximize a computationally cheap proxy reward. This reward is a weighted sum of the KL-divergence of attention distributions and the attention-weighted L2 distance between the original and reconstructed Value vectors, preserving the model's internal computations. **Stage 2 (Online Fine-tuning):** The policy is fine-tuned on specific tasks using a full reward: `Reward = α * log(1/Perplexity) - β * MemoryUsage - γ * Latency`. **Novelty:** Unlike prior work on static compression algorithms or greedy, single-axis dynamic methods like H2O, ALM-Cache's novelty lies in using RL to learn a non-myopic, multi-objective policy that orchestrates three orthogonal compression strategies simultaneously and adaptively across different model depths and generation contexts.\", \"Expected Impact\": \"ALM-Cache will redefine the problem from designing fixed compression algorithms to learning dynamic resource management policies for LLM inference. It is expected to establish a new state-of-the-art by autonomously discovering and applying near-optimal, context-sensitive compression policies, significantly outperforming any static combination of techniques. The primary impact will be in real-world, mixed-workload serving environments, where a single deployed model can seamlessly handle diverse tasks—like an interactive coding assistant (prioritizing recency) and a document summarizer (prioritizing saliency)—without manual reconfiguration. This will make high-performance, long-context LLM inference more robust, efficient, and accessible on resource-constrained hardware.\"}",
     "experimental_design": {

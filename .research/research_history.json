@@ -269,6 +269,38 @@
       }
     }
   ],
+  "reference_research_study_list": [
+    {
+      "title": "Playing atari with deep reinforcement learning"
+    },
+    {
+      "title": "Mastering the game of go with deep neural networks and tree search"
+    },
+    {
+      "title": "End-to-end training of deep visuomotor policies"
+    },
+    {
+      "title": "Model-agnostic meta-learning for fast adaptation of deep networks"
+    },
+    {
+      "title": "Dueling network architectures for deep reinforcement learning"
+    },
+    {
+      "title": "Rl2: Fast reinforcement learning via slow reinforcement learning"
+    },
+    {
+      "title": "Evolved policy gradients"
+    },
+    {
+      "title": "Discovering reinforcement learning algorithms"
+    },
+    {
+      "title": "Meta-gradient reinforcement learning with an objective discovered online"
+    },
+    {
+      "title": "Efﬁcient off-policy meta-reinforcement learning via probabilistic context variables"
+    }
+  ],
   "new_method": {
     "method": "{\"Motivation\": \"Modern Meta-Continual Learning (Meta-CL) is split between two paradigms: first-order streaming methods like DGC and CSVRG, which are computationally efficient but geometrically naive, and offline second-order methods like ELLA and Laplace Redux, which capture rich geometric information but cannot incrementally fuse knowledge from a stream of tasks. This creates a critical gap for true lifelong learning systems that require both efficiency and rapid, geometrically-informed adaptation. The proposed research, Streaming Orthogonal Curvature Aggregation (SOCA), directly bridges this gap. SOCA introduces a novel framework to build and maintain a persistent, low-rank, global 'meta-curvature' model in a fully online manner. This model acts as a learned geometric prior on the task distribution, serving a dual role: it regularizes updates to remain within a shared low-loss subspace, preventing catastrophic forgetting, and simultaneously acts as a meta-learned pre-conditioner to accelerate few-shot adaptation to new tasks by identifying and amplifying learning along truly novel geometric directions.\",\"Methodology\": \"SOCA advances beyond simple additive updates or replay-based methods by introducing a principled orthogonal fusion mechanism that explicitly disentangles new information from existing knowledge, ensuring the global model remains compact, expressive, and stable. The methodology unfolds in three key stages:\\n1. **Task-Local Curvature Estimation:** For each incoming task 't', we leverage the ELLA framework to compute an efficient, low-rank Hessian approximation, H_t ≈ V_t * Λ_t * V_t^T. This step uses a Nyström approximation of the Neural Tangent Kernel to extract the task's most salient curvature directions (its eigenbasis V_t) without forming the full Hessian.\\n2. **Streaming Orthogonal Curvature Fusion (Core Novelty):** This stage replaces naive additive fusion with a more stable, geometrically-grounded update. Given the current global curvature H_global = U_global * S_global * U_global^T, the update proceeds as follows:\\n   a) **Orthogonal Decomposition:** Project the new task's basis V_t onto the existing global basis U_global to isolate the novel geometric information orthogonal to the learned subspace: V_t_perp = V_t - U_global * (U_global^T * V_t).\\n   b) **Subspace Augmentation & Re-optimization:** Orthonormalize V_t_perp and augment the global basis to form U_aug = [U_global, V_t_perp_ortho]. A new, small subspace Hessian H_sub is formed by projecting a weighted average of the old global and new task Hessians onto this augmented basis: H_sub = U_aug^T * (α*H_global + (1-α)*H_t) * U_aug, where α is a forgetting factor. This update is performed on a small (K_global + K_task) x (K_global + K_task) matrix, ensuring efficiency.\\n   c) **Principled Truncation:** An eigendecomposition of the small H_sub matrix yields an updated global basis and eigenvalues. The new global model (U_global', S_global') is formed by selecting the top K_global eigenpairs, which guarantees bounded memory and computational complexity for the meta-model, irrespective of the number of tasks seen.\\n3. **Dual-Use Meta-Curvature for Stability and Plasticity:** The updated global model H_global' guides learning for subsequent tasks:\\n   a) **(Stability) Subspace Regularization:** A quadratic penalty L_reg = λ(θ - θ*)^T * H_global' * (θ - θ*) constrains parameter updates within the learned low-loss subspace of past tasks, explicitly preventing catastrophic forgetting.\\n   b) **(Plasticity) Meta-Preconditioning:** For new tasks, the inverse, (H_global')^-1, serves as a pre-conditioner for a quasi-Newton optimizer. This reshapes the loss landscape, damping updates in well-learned directions (large eigenvalues) and accelerating learning in novel, orthogonal directions (small eigenvalues), enabling rapid, meta-learned adaptation.\",\"Expected impact\": \"1. **Unification of Streaming and Geometric CL:** SOCA will be the first framework to successfully unify the efficiency of streaming first-order methods with the geometric insight of second-order methods, creating a new class of practical and powerful lifelong learning algorithms.\\n2. **Principled Stability-Plasticity Management:** The orthogonal decomposition provides a formal mechanism to disentangle novel from existing knowledge. This allows the system to protect consolidated knowledge while remaining highly adaptive to new information, moving beyond heuristic or replay-dependent solutions to the stability-plasticity dilemma.\\n3. **Guaranteed Bounded Complexity for Lifelong Learning:** By maintaining a fixed-rank global curvature model through principled truncation, SOCA ensures that its memory and per-task computational overhead remain constant. This makes it a truly scalable solution for systems designed to learn continuously from infinite data streams.\\n4. **Enhanced Forward and Backward Transfer:** By learning a compact, non-redundant basis for the shared structure across tasks, SOCA is expected to yield superior knowledge transfer. The pre-conditioning mechanism will improve forward transfer (faster learning on new tasks), while the subspace regularization will improve backward transfer (less forgetting of old tasks).\"}",
     "experimental_design": {

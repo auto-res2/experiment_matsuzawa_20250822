@@ -1,0 +1,26 @@
+{
+  "backend_compatibility": {
+    "baseline": {
+      "torchscript_export": true,
+      "model_size_mb": 0
+    },
+    "dash": {
+      "torchscript_export": true,
+      "model_size_mb": 0
+    },
+    "hilo": {
+      "torchscript_export": true,
+      "model_size_mb": 0
+    },
+    "full": {
+      "torchscript_export": true,
+      "model_size_mb": 0
+    }
+  },
+  "index_stability": {
+    "dash": {
+      "avg_jaccard_similarity": 1.0,
+      "stability_score": 1.0
+    }
+  }
+}

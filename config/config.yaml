@@ -1,0 +1,44 @@
+# SketchBank toy experiments configuration
+seed: 1234
+quick: true
+
+# Paths
+output_image_dir: .research/iteration1/images
+models_dir: models
+data_dir: data
+
+# Device preference (auto-fallback to CPU if CUDA not available)
+device: cuda
+
+# Experiments toggle
+experiments:
+  enable_vision: true
+  enable_quant_only: true
+  enable_kws: true
+
+# Vision task
+num_classes: 10
+
+# KWS task
+kws_num_classes: 12
+
+# Pretraining hyperparameters
+training:
+  steps: 120
+  lr: 0.005
+
+# Offline precompute
+precompute:
+  r_e: 8
+  ridge_lambda: 0.01
+
+# Adapter lrs/clips (used inside code defaults)
+adapters:
+  bias_bn:
+    lr: 0.3
+    mom: 0.9
+    clip: 0.05
+  quant:
+    lr: 0.05
+    mom: 0.9
+    clip: 0.02

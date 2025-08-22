@@ -6,5 +6,52 @@
     "importance weighting knowledge distillation",
     "distribution alignment knowledge distillation",
     "covariate shift knowledge distillation"
+  ],
+  "research_study_list": [
+    {
+      "title": "Large Scale Dataset Distillation with Domain Shift"
+    },
+    {
+      "title": "Respecting Transfer Gap in Knowledge Distillation"
+    },
+    {
+      "title": "What Knowledge Gets Distilled in Knowledge Distillation?"
+    },
+    {
+      "title": "KD3A: Unsupervised Multi-Source Decentralized Domain Adaptation via Knowledge Distillation"
+    },
+    {
+      "title": "AnyDA: Anytime Domain Adaptation"
+    },
+    {
+      "title": "Divide to Adapt: Mitigating Confirmation Bias for Domain Adaptation of Black-Box Predictors"
+    },
+    {
+      "title": "Respecting Transfer Gap in Knowledge Distillation"
+    },
+    {
+      "title": "Rethinking Soft Labels for Knowledge Distillation: A Bias–Variance Tradeoff Perspective"
+    },
+    {
+      "title": "Knowledge Distillation Based on Transformed Teacher Matching"
+    },
+    {
+      "title": "Knowledge Distillation with Auxiliary Variable"
+    },
+    {
+      "title": "Multi-Level Logit Distillation"
+    },
+    {
+      "title": "Feature-map-level Online Adversarial Knowledge Distillation"
+    },
+    {
+      "title": "Robust Correction of Sampling Bias using Cumulative Distribution Functions"
+    },
+    {
+      "title": "Comprehensive Knowledge Distillation with Causal Intervention"
+    },
+    {
+      "title": "Knowledge Distillation with Auxiliary Variable"
+    }
   ]
 }

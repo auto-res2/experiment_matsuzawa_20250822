@@ -343,26 +343,6 @@ ation.add_safe_globals needed due to PyTorch version mismatch.",[]
 Overfull \hbox (51.91469pt too wide) in paragraph at lines 166--166
 []        \T1/pcr/m/n/7 "ogbn-products": "EOF when reading a line. Potentially 
 incomplete download or resource limitation."[] 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.167 ...res. (filename: experiment_summary.json)}
-                                                  
-! Missing $ inserted.
-<inserted text> 
-                $
-l.167 ...res. (filename: experiment_summary.json)}
-                                                  
-! Missing $ inserted.
-<inserted text> 
-                $
-l.167 ...res. (filename: experiment_summary.json)}
-                                                  
-! Missing $ inserted.
-<inserted text> 
-                $
-l.167 ...res. (filename: experiment_summary.json)}
-                                                  
 
 Package natbib Warning: Citation `skenk-2024-neural' on page 6 undefined on inp
 ut line 175.
@@ -404,7 +384,7 @@ usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb>
-Output written on paper.pdf (6 pages, 167077 bytes).
+Output written on paper.pdf (6 pages, 165628 bytes).
 Transcript written on paper.log.
 This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
 The top-level auxiliary file: paper.aux
@@ -758,26 +738,6 @@ ation.add_safe_globals needed due to PyTorch version mismatch.",[]
 Overfull \hbox (51.91469pt too wide) in paragraph at lines 166--166
 []        \T1/pcr/m/n/7 "ogbn-products": "EOF when reading a line. Potentially 
 incomplete download or resource limitation."[] 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.167 ...res. (filename: experiment_summary.json)}
-                                                  
-! Missing $ inserted.
-<inserted text> 
-                $
-l.167 ...res. (filename: experiment_summary.json)}
-                                                  
-! Missing $ inserted.
-<inserted text> 
-                $
-l.167 ...res. (filename: experiment_summary.json)}
-                                                  
-! Missing $ inserted.
-<inserted text> 
-                $
-l.167 ...res. (filename: experiment_summary.json)}
-                                                  
 
 Package natbib Warning: Citation `skenk-2024-neural' on page 6 undefined on inp
 ut line 175.
@@ -790,8 +750,7 @@ put line 175.
 Package natbib Warning: Citation `airas2025' on page 6 undefined on input line 
 183.
 
-(./paper.bbl
-Underfull \vbox (badness 1087) has occurred while \output is active [6])
+(./paper.bbl [6])
 
 Package natbib Warning: There were undefined citations.
 
@@ -813,7 +772,7 @@ usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb>
-Output written on paper.pdf (7 pages, 168922 bytes).
+Output written on paper.pdf (7 pages, 167473 bytes).
 Transcript written on paper.log.
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
@@ -1156,26 +1115,6 @@ ation.add_safe_globals needed due to PyTorch version mismatch.",[]
 Overfull \hbox (51.91469pt too wide) in paragraph at lines 166--166
 []        \T1/pcr/m/n/7 "ogbn-products": "EOF when reading a line. Potentially 
 incomplete download or resource limitation."[] 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.167 ...res. (filename: experiment_summary.json)}
-                                                  
-! Missing $ inserted.
-<inserted text> 
-                $
-l.167 ...res. (filename: experiment_summary.json)}
-                                                  
-! Missing $ inserted.
-<inserted text> 
-                $
-l.167 ...res. (filename: experiment_summary.json)}
-                                                  
-! Missing $ inserted.
-<inserted text> 
-                $
-l.167 ...res. (filename: experiment_summary.json)}
-                                                  
 
 Package natbib Warning: Citation `skenk-2024-neural' on page 6 undefined on inp
 ut line 175.
@@ -1184,8 +1123,7 @@ ut line 175.
 Package natbib Warning: Citation `zhu-2021-geometric' on page 6 undefined on in
 put line 175.
 
-(./paper.bbl
-Underfull \vbox (badness 1087) has occurred while \output is active [6])
+(./paper.bbl [6])
 
 Package natbib Warning: There were undefined citations.
 
@@ -1202,5 +1140,5 @@ usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/times/utmr8a.pfb>
-Output written on paper.pdf (7 pages, 169005 bytes).
+Output written on paper.pdf (7 pages, 167547 bytes).
 Transcript written on paper.log.

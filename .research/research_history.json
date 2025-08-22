@@ -408,6 +408,38 @@
       }
     }
   ],
+  "reference_research_study_list": [
+    {
+      "title": "Self-consuming generative models go MAD"
+    },
+    {
+      "title": "Synthetic data from diffusion models improves imagenet classification"
+    },
+    {
+      "title": "On the stability of iterative retraining of generative models on their own data"
+    },
+    {
+      "title": "Movi: A large multi-purpose human motion and video dataset"
+    },
+    {
+      "title": "Generating diverse and natural 3d human motions from text"
+    },
+    {
+      "title": "Is synthetic data from generative models ready for image recognition?"
+    },
+    {
+      "title": "Classifier-free diffusion guidance"
+    },
+    {
+      "title": "Denoising diffusion probabilistic models"
+    },
+    {
+      "title": "Generative models as a data source for multiview representation learning"
+    },
+    {
+      "title": "Generalization error in deep learning"
+    }
+  ],
   "new_method": {
     "method": "{\"Motivation\": \"While prior works like DistDiff and GIF demonstrate the potential of prototype-guided diffusion for data expansion, their reliance on computationally expensive online optimization at each sampling step creates a significant efficiency bottleneck, limiting their scalability. Conversely, fine-tuning approaches like 'Real-Fake' are more efficient at inference time but lack fine-grained control over the generated data's characteristics. Furthermore, recent research in data-centric AI and dataset distillation reveals that not all data points are equally valuable; 'hard' or 'ambiguous' samples are often crucial for robust model training, and soft labels carry critical semantic information. The proposed 'MAP-IGD' idea correctly identifies the need for better priors and intrinsic guidance but retains a slow, step-wise online guidance mechanism. We propose a new framework, 'Data-Centric Distillation and Prototype-Conditioned Expansion' (DCD-PCE), that shifts the guidance mechanism from a slow online process to an efficient offline fine-tuning stage. This creates a fast, controllable, and semantically-aware generation pipeline that synthesizes insights from distillation, data-centric analysis, and efficient model adaptation.\", \"Methodology\": \"DCD-PCE is a two-stage framework that prioritizes online efficiency. **Stage 1: Data-Centric Prior Distillation (Offline).** 1) **Data Profiling & Stratification:** We first analyze the original real dataset using a data-centric method (e.g., Data-IQ) to partition it into 'easy', 'ambiguous', and 'hard' subsets based on training dynamics. 2) **Stratified Prior Extraction:** From these stratified real data subsets, we extract hierarchical visual prototypes (mean CLIP embeddings) and semantic prototypes (mean soft labels from an early-stopped expert), resulting in distinct prototypes for each class-difficulty combination (e.g., `P_dog_easy`, `P_dog_hard`). 3) **Distillation:** We use an accelerated method like 'Model Augmentation' to create a compact synthetic dataset, `S_distill`, that preserves the core information from the original data, potentially weighting the distillation loss to better represent the 'hard' samples. **Stage 2: Prototype-Conditioned Model Fine-tuning (Offline).** 1) **Model and Conditioning:** We take a pre-trained text-to-image diffusion model and adapt it using Low-Rank Adaptation (LoRA) for efficient fine-tuning. We introduce a novel multi-modal conditioning mechanism where the cross-attention module is conditioned on a sequence of embeddings: `[Text_Embedding, Visual_Prototype_Embedding, Semantic_Prototype_Embedding]`. 2) **Guided Fine-tuning:** The model is fine-tuned on `S_distill`. The training objective combines the standard diffusion loss with a prototype-matching loss that encourages the CLIP embedding of the predicted clean image (`x_0_pred`) to be close to the target prototype corresponding to its class and difficulty. This 'bakes' the complex guidance logic directly into the LoRA weights. 3) **Generation (Online & Fast):** At inference time, data generation is a standard, fast forward pass. We can now control the characteristics of the output by simply providing different prototype embeddings in the condition. For instance, to generate a challenging 'cat' image, we provide the text prompt 'a photo of a cat' along with the pre-computed `P_cat_hard` visual and semantic prototypes. **Difference from Prior Work:** DCD-PCE fundamentally differs from 'MAP-IGD', 'DistDiff', and 'GIF' by moving guidance from a slow, per-sample online optimization to a one-time, offline fine-tuning process, resulting in vastly superior generation speed. Unlike 'Real-Fake', which uses a single mean visual embedding per class, DCD-PCE employs a more expressive conditioning mechanism with hierarchical, data-centric prototypes (visual and semantic), enabling fine-grained control over the generation process.\", \"Expected Impact\": \"DCD-PCE is expected to significantly advance the state-of-the-art in the quality-efficiency trade-off for synthetic data generation. By eliminating online optimization, it will enable the large-scale generation of high-quality data orders of magnitude faster than current guided methods. The novel prototype-conditioning mechanism provides unprecedented control, allowing users to explicitly request data with desired characteristics (e.g., 'hard' edge cases), which can be used for targeted data augmentation, curriculum learning, and improving model robustness against underrepresented data slices. This framework establishes a new paradigm that integrates data-centric insights directly into the generative process, creating a more efficient, controllable, and powerful tool for training next-generation machine learning models.\"}",
     "experimental_design": {

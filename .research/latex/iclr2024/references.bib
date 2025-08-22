@@ -5,3 +5,424 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{author_year_shapley,
+ title = {Shapley Residuals: Quantifying the limits of the Shapley value for explanations}
+}
+
+@article{author_year_slice,
+ title = {SLICE: Stabilized LIME for Consistent Explanations for Image Classification}
+}
+
+@article{blanc_2022_query,
+ abstract = {We design an algorithm for finding counterfactuals with strong theoretical
+guarantees on its performance. For any monotone model $f : X^d \to \{0,1\}$ and
+instance $x^\star$, our algorithm makes \[ {S(f)^{O(\Delta_f(x^\star))}\cdot
+\log d}\] queries to $f$ and returns {an {\sl optimal}} counterfactual for
+$x^\star$: a nearest instance $x'$ to $x^\star$ for which $f(x')\ne
+f(x^\star)$. Here $S(f)$ is the sensitivity of $f$, a discrete analogue of the
+Lipschitz constant, and $\Delta_f(x^\star)$ is the distance from $x^\star$ to
+its nearest counterfactuals. The previous best known query complexity was
+$d^{\,O(\Delta_f(x^\star))}$, achievable by brute-force local search. We
+further prove a lower bound of $S(f)^{\Omega(\Delta_f(x^\star))} + \Omega(\log
+d)$ on the query complexity of any algorithm, thereby showing that the
+guarantees of our algorithm are essentially optimal.},
+ arxiv_url = {https://arxiv.org/pdf/2207.07072v1.pdf},
+ author = {Guy Blanc and Caleb Koch and Jane Lange and Li-Yang Tan},
+ title = {A query-optimal algorithm for finding counterfactuals},
+ year = {2022}
+}
+
+@article{chau_2021_rkhs,
+ abstract = {Feature attribution for kernel methods is often heuristic and not
+individualised for each prediction. To address this, we turn to the concept of
+Shapley values~(SV), a coalition game theoretical framework that has previously
+been applied to different machine learning model interpretation tasks, such as
+linear models, tree ensembles and deep networks. By analysing SVs from a
+functional perspective, we propose \textsc{RKHS-SHAP}, an attribution method
+for kernel machines that can efficiently compute both \emph{Interventional} and
+\emph{Observational Shapley values} using kernel mean embeddings of
+distributions. We show theoretically that our method is robust with respect to
+local perturbations - a key yet often overlooked desideratum for consistent
+model interpretation. Further, we propose \emph{Shapley regulariser},
+applicable to a general empirical risk minimisation framework, allowing
+learning while controlling the level of specific feature's contributions to the
+model. We demonstrate that the Shapley regulariser enables learning which is
+robust to covariate shift of a given feature and fair learning which controls
+the SVs of sensitive features.},
+ arxiv_url = {https://arxiv.org/pdf/2110.09167v2.pdf},
+ author = {Siu Lun Chau and Robert Hu and Javier Gonzalez and Dino Sejdinovic},
+ title = {RKHS-SHAP: Shapley Values for Kernel Methods},
+ year = {2021}
+}
+
+@article{chuang_2023_cortx,
+ abstract = {Recent advancements in explainable machine learning provide effective and
+faithful solutions for interpreting model behaviors. However, many explanation
+methods encounter efficiency issues, which largely limit their deployments in
+practical scenarios. Real-time explainer (RTX) frameworks have thus been
+proposed to accelerate the model explanation process by learning a
+one-feed-forward explainer. Existing RTX frameworks typically build the
+explainer under the supervised learning paradigm, which requires large amounts
+of explanation labels as the ground truth. Considering that accurate
+explanation labels are usually hard to obtain due to constrained computational
+resources and limited human efforts, effective explainer training is still
+challenging in practice. In this work, we propose a COntrastive Real-Time
+eXplanation (CoRTX) framework to learn the explanation-oriented representation
+and relieve the intensive dependence of explainer training on explanation
+labels. Specifically, we design a synthetic strategy to select positive and
+negative instances for the learning of explanation. Theoretical analysis show
+that our selection strategy can benefit the contrastive learning process on
+explanation tasks. Experimental results on three real-world datasets further
+demonstrate the efficiency and efficacy of our proposed CoRTX framework.},
+ arxiv_url = {https://arxiv.org/pdf/2303.02794v1.pdf},
+ author = {Yu-Neng Chuang and Guanchu Wang and Fan Yang and Quan Zhou and Pushkar Tripathi and Xuanting Cai and Xia Hu},
+ github_url = {https://github.com/ynchuang/CoRTX-720},
+ title = {CoRTX: Contrastive Framework for Real-time Explanation},
+ year = {2023}
+}
+
+@article{fumagalli_2023_shap,
+ abstract = {Predominately in explainable artificial intelligence (XAI) research, the
+Shapley value (SV) is applied to determine feature attributions for any black
+box model. Shapley interaction indices extend the SV to define any-order
+feature interactions. Defining a unique Shapley interaction index is an open
+research question and, so far, three definitions have been proposed, which
+differ by their choice of axioms. Moreover, each definition requires a specific
+approximation technique. Here, we propose SHAPley Interaction Quantification
+(SHAP-IQ), an efficient sampling-based approximator to compute Shapley
+interactions for arbitrary cardinal interaction indices (CII), i.e. interaction
+indices that satisfy the linearity, symmetry and dummy axiom. SHAP-IQ is based
+on a novel representation and, in contrast to existing methods, we provide
+theoretical guarantees for its approximation quality, as well as estimates for
+the variance of the point estimates. For the special case of SV, our approach
+reveals a novel representation of the SV and corresponds to Unbiased KernelSHAP
+with a greatly simplified calculation. We illustrate the computational
+efficiency and effectiveness by explaining language, image classification and
+high-dimensional synthetic models.},
+ arxiv_url = {https://arxiv.org/pdf/2303.01179v3.pdf},
+ author = {Fabian Fumagalli and Maximilian Muschalik and Patrick Kolpaczki and Eyke Hüllermeier and Barbara Hammer},
+ title = {SHAP-IQ: Unified Approximation of any-order Shapley Interactions},
+ year = {2023}
+}
+
+@article{ley_2023_globe,
+ abstract = {Counterfactual explanations have been widely studied in explainability, with
+a range of application dependent methods prominent in fairness, recourse and
+model understanding. The major shortcoming associated with these methods,
+however, is their inability to provide explanations beyond the local or
+instance-level. While many works touch upon the notion of a global explanation,
+typically suggesting to aggregate masses of local explanations in the hope of
+ascertaining global properties, few provide frameworks that are both reliable
+and computationally tractable. Meanwhile, practitioners are requesting more
+efficient and interactive explainability tools. We take this opportunity to
+propose Global & Efficient Counterfactual Explanations (GLOBE-CE), a flexible
+framework that tackles the reliability and scalability issues associated with
+current state-of-the-art, particularly on higher dimensional datasets and in
+the presence of continuous features. Furthermore, we provide a unique
+mathematical analysis of categorical feature translations, utilising it in our
+method. Experimental evaluation with publicly available datasets and user
+studies demonstrate that GLOBE-CE performs significantly better than the
+current state-of-the-art across multiple metrics (e.g., speed, reliability).},
+ arxiv_url = {https://arxiv.org/pdf/2305.17021v2.pdf},
+ author = {Dan Ley and Saumitra Mishra and Daniele Magazzeni},
+ title = {GLOBE-CE: A Translation Based Approach for Global Counterfactual Explanations},
+ year = {2023}
+}
+
+@article{muschalik_2024_shapiq,
+ abstract = {Originally rooted in game theory, the Shapley Value (SV) has recently become
+an important tool in machine learning research. Perhaps most notably, it is
+used for feature attribution and data valuation in explainable artificial
+intelligence. Shapley Interactions (SIs) naturally extend the SV and address
+its limitations by assigning joint contributions to groups of entities, which
+enhance understanding of black box machine learning models. Due to the
+exponential complexity of computing SVs and SIs, various methods have been
+proposed that exploit structural assumptions or yield probabilistic estimates
+given limited resources. In this work, we introduce shapiq, an open-source
+Python package that unifies state-of-the-art algorithms to efficiently compute
+SVs and any-order SIs in an application-agnostic framework. Moreover, it
+includes a benchmarking suite containing 11 machine learning applications of
+SIs with pre-computed games and ground-truth values to systematically assess
+computational performance across domains. For practitioners, shapiq is able to
+explain and visualize any-order feature interactions in predictions of models,
+including vision transformers, language models, as well as XGBoost and LightGBM
+with TreeSHAP-IQ. With shapiq, we extend shap beyond feature attributions and
+consolidate the application of SVs and SIs in machine learning that facilitates
+future research. The source code and documentation are available at
+https://github.com/mmschlk/shapiq.},
+ arxiv_url = {https://arxiv.org/pdf/2410.01649v1.pdf},
+ author = {Maximilian Muschalik and Hubert Baniecki and Fabian Fumagalli and Patrick Kolpaczki and Barbara Hammer and Eyke Hüllermeier},
+ github_url = {https://github.com/mmschlk/shapiq},
+ title = {shapiq: Shapley Interactions for Machine Learning},
+ year = {2024}
+}
+
+@article{parmentier_2021_optimal,
+ abstract = {Counterfactual explanations are usually generated through heuristics that are
+sensitive to the search's initial conditions. The absence of guarantees of
+performance and robustness hinders trustworthiness. In this paper, we take a
+disciplined approach towards counterfactual explanations for tree ensembles. We
+advocate for a model-based search aiming at "optimal" explanations and propose
+efficient mixed-integer programming approaches. We show that isolation forests
+can be modeled within our framework to focus the search on plausible
+explanations with a low outlier score. We provide comprehensive coverage of
+additional constraints that model important objectives, heterogeneous data
+types, structural constraints on the feature space, along with resource and
+actionability restrictions. Our experimental analyses demonstrate that the
+proposed search approach requires a computational effort that is orders of
+magnitude smaller than previous mathematical programming algorithms. It scales
+up to large data sets and tree ensembles, where it provides, within seconds,
+systematic explanations grounded on well-defined models solved to optimality.},
+ arxiv_url = {https://arxiv.org/pdf/2106.06631v2.pdf},
+ author = {Axel Parmentier and Thibaut Vidal},
+ github_url = {https://github.com/vidalt/OCEAN},
+ title = {Optimal Counterfactual Explanations in Tree Ensembles},
+ year = {2021}
+}
+
+@article{slack_2020_reliable,
+ abstract = {As black box explanations are increasingly being employed to establish model
+credibility in high-stakes settings, it is important to ensure that these
+explanations are accurate and reliable. However, prior work demonstrates that
+explanations generated by state-of-the-art techniques are inconsistent,
+unstable, and provide very little insight into their correctness and
+reliability. In addition, these methods are also computationally inefficient,
+and require significant hyper-parameter tuning. In this paper, we address the
+aforementioned challenges by developing a novel Bayesian framework for
+generating local explanations along with their associated uncertainty. We
+instantiate this framework to obtain Bayesian versions of LIME and KernelSHAP
+which output credible intervals for the feature importances, capturing the
+associated uncertainty. The resulting explanations not only enable us to make
+concrete inferences about their quality (e.g., there is a 95% chance that the
+feature importance lies within the given range), but are also highly consistent
+and stable. We carry out a detailed theoretical analysis that leverages the
+aforementioned uncertainty to estimate how many perturbations to sample, and
+how to sample for faster convergence. This work makes the first attempt at
+addressing several critical issues with popular explanation methods in one
+shot, thereby generating consistent, stable, and reliable explanations with
+guarantees in a computationally efficient manner. Experimental evaluation with
+multiple real world datasets and user studies demonstrate that the efficacy of
+the proposed framework.},
+ arxiv_url = {https://arxiv.org/pdf/2008.05030v4.pdf},
+ author = {Dylan Slack and Sophie Hilgard and Sameer Singh and Himabindu Lakkaraju},
+ title = {Reliable Post hoc Explanations: Modeling Uncertainty in Explainability},
+ year = {2020}
+}
+
+@article{tan_2023_glime,
+ abstract = {As black-box machine learning models grow in complexity and find applications
+in high-stakes scenarios, it is imperative to provide explanations for their
+predictions. Although Local Interpretable Model-agnostic Explanations (LIME)
+[22] is a widely adpoted method for understanding model behaviors, it is
+unstable with respect to random seeds [35,24,3] and exhibits low local fidelity
+(i.e., how well the explanation approximates the model's local behaviors)
+[21,16]. Our study shows that this instability problem stems from small sample
+weights, leading to the dominance of regularization and slow convergence.
+Additionally, LIME's sampling neighborhood is non-local and biased towards the
+reference, resulting in poor local fidelity and sensitivity to reference
+choice. To tackle these challenges, we introduce GLIME, an enhanced framework
+extending LIME and unifying several prior methods. Within the GLIME framework,
+we derive an equivalent formulation of LIME that achieves significantly faster
+convergence and improved stability. By employing a local and unbiased sampling
+distribution, GLIME generates explanations with higher local fidelity compared
+to LIME. GLIME explanations are independent of reference choice. Moreover,
+GLIME offers users the flexibility to choose a sampling distribution based on
+their specific scenarios.},
+ arxiv_url = {https://arxiv.org/pdf/2311.15722v1.pdf},
+ author = {Zeren Tan and Yang Tian and Jian Li},
+ github_url = {https://github.com/thutzr/GLIME-General-Stable-and-Local-LIME-Explanation},
+ title = {GLIME: General, Stable and Local LIME Explanation},
+ year = {2023}
+}
+
+@article{wang_2022_accelerating,
+ abstract = {Even though Shapley value provides an effective explanation for a DNN model
+prediction, the computation relies on the enumeration of all possible input
+feature coalitions, which leads to the exponentially growing complexity. To
+address this problem, we propose a novel method SHEAR to significantly
+accelerate the Shapley explanation for DNN models, where only a few coalitions
+of input features are involved in the computation. The selection of the feature
+coalitions follows our proposed Shapley chain rule to minimize the absolute
+error from the ground-truth Shapley values, such that the computation can be
+both efficient and accurate. To demonstrate the effectiveness, we
+comprehensively evaluate SHEAR across multiple metrics including the absolute
+error from the ground-truth Shapley value, the faithfulness of the
+explanations, and running speed. The experimental results indicate SHEAR
+consistently outperforms state-of-the-art baseline methods across different
+evaluation metrics, which demonstrates its potentials in real-world
+applications where the computational resource is limited.},
+ arxiv_url = {https://arxiv.org/pdf/2206.08529v2.pdf},
+ author = {Guanchu Wang and Yu-Neng Chuang and Mengnan Du and Fan Yang and Quan Zhou and Pushkar Tripathi and Xuanting Cai and Xia Hu},
+ title = {Accelerating Shapley Explanation via Contributive Cooperator Selection},
+ year = {2022}
+}
+
+@article{wang_2022_accelerating,
+ abstract = {Even though Shapley value provides an effective explanation for a DNN model
+prediction, the computation relies on the enumeration of all possible input
+feature coalitions, which leads to the exponentially growing complexity. To
+address this problem, we propose a novel method SHEAR to significantly
+accelerate the Shapley explanation for DNN models, where only a few coalitions
+of input features are involved in the computation. The selection of the feature
+coalitions follows our proposed Shapley chain rule to minimize the absolute
+error from the ground-truth Shapley values, such that the computation can be
+both efficient and accurate. To demonstrate the effectiveness, we
+comprehensively evaluate SHEAR across multiple metrics including the absolute
+error from the ground-truth Shapley value, the faithfulness of the
+explanations, and running speed. The experimental results indicate SHEAR
+consistently outperforms state-of-the-art baseline methods across different
+evaluation metrics, which demonstrates its potentials in real-world
+applications where the computational resource is limited.},
+ arxiv_url = {https://arxiv.org/pdf/2206.08529v2.pdf},
+ author = {Guanchu Wang and Yu-Neng Chuang and Mengnan Du and Fan Yang and Quan Zhou and Pushkar Tripathi and Xuanting Cai and Xia Hu},
+ title = {Accelerating Shapley Explanation via Contributive Cooperator Selection},
+ year = {2022}
+}
+
+@article{woodruff_2020_near,
+ abstract = {To accelerate kernel methods, we propose a near input sparsity time algorithm
+for sampling the high-dimensional feature space implicitly defined by a kernel
+transformation. Our main contribution is an importance sampling method for
+subsampling the feature space of a degree $q$ tensoring of data points in
+almost input sparsity time, improving the recent oblivious sketching method of
+(Ahle et al., 2020) by a factor of $q^{5/2}/\epsilon^2$. This leads to a
+subspace embedding for the polynomial kernel, as well as the Gaussian kernel,
+with a target dimension that is only linearly dependent on the statistical
+dimension of the kernel and in time which is only linearly dependent on the
+sparsity of the input dataset. We show how our subspace embedding bounds imply
+new statistical guarantees for kernel ridge regression. Furthermore, we
+empirically show that in large-scale regression tasks, our algorithm
+outperforms state-of-the-art kernel approximation methods.},
+ arxiv_url = {https://arxiv.org/pdf/2007.03927v2.pdf},
+ author = {David P. Woodruff and Amir Zandieh},
+ title = {Near Input Sparsity Time Kernel Embeddings via Adaptive Sampling},
+ year = {2020}
+}
+
+@article{yu_2022_linear,
+ abstract = {Decision trees are well-known due to their ease of interpretability. To
+improve accuracy, we need to grow deep trees or ensembles of trees. These are
+hard to interpret, offsetting their original benefits. Shapley values have
+recently become a popular way to explain the predictions of tree-based machine
+learning models. It provides a linear weighting to features independent of the
+tree structure. The rise in popularity is mainly due to TreeShap, which solves
+a general exponential complexity problem in polynomial time. Following
+extensive adoption in the industry, more efficient algorithms are required.
+This paper presents a more efficient and straightforward algorithm: Linear
+TreeShap. Like TreeShap, Linear TreeShap is exact and requires the same amount
+of memory.},
+ arxiv_url = {https://arxiv.org/pdf/2209.08192v2.pdf},
+ author = {Peng Yu and Chao Xu and Albert Bifet and Jesse Read},
+ title = {Linear tree shap},
+ year = {2022}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{author_year_establishing,
+ title = {Establishing the rules for building trustworthy ai}
+}
+
+@article{author_year_guide,
+ title = {A guide to deep learning in healthcare}
+}
+
+@article{author_year_pearson,
+ title = {Pearson correlation coefficient}
+}
+
+@article{chen_2018_shapley,
+ abstract = {We study instancewise feature importance scoring as a method for model
+interpretation. Any such method yields, for each predicted instance, a vector
+of importance scores associated with the feature vector. Methods based on the
+Shapley score have been proposed as a fair way of computing feature
+attributions of this kind, but incur an exponential complexity in the number of
+features. This combinatorial explosion arises from the definition of the
+Shapley value and prevents these methods from being scalable to large data sets
+and complex models. We focus on settings in which the data have a graph
+structure, and the contribution of features to the target variable is
+well-approximated by a graph-structured factorization. In such settings, we
+develop two algorithms with linear complexity for instancewise feature
+importance scoring. We establish the relationship of our methods to the Shapley
+value and another closely related concept known as the Myerson value from
+cooperative game theory. We demonstrate on both language and image data that
+our algorithms compare favorably with other methods for model interpretation.},
+ arxiv_url = {https://arxiv.org/pdf/1808.02610v1.pdf},
+ author = {Jianbo Chen and Le Song and Martin J. Wainwright and Michael I. Jordan},
+ title = {L-shapley and c-shapley: Efficient model interpretation for structured data},
+ year = {2018}
+}
+
+@article{chuang_2023_efficient,
+ abstract = {Recently, there has been a growing demand for the deployment of Explainable
+Artificial Intelligence (XAI) algorithms in real-world applications. However,
+traditional XAI methods typically suffer from a high computational complexity
+problem, which discourages the deployment of real-time systems to meet the
+time-demanding requirements of real-world scenarios. Although many approaches
+have been proposed to improve the efficiency of XAI methods, a comprehensive
+understanding of the achievements and challenges is still needed. To this end,
+in this paper we provide a review of efficient XAI. Specifically, we categorize
+existing techniques of XAI acceleration into efficient non-amortized and
+efficient amortized methods. The efficient non-amortized methods focus on
+data-centric or model-centric acceleration upon each individual instance. In
+contrast, amortized methods focus on learning a unified distribution of model
+explanations, following the predictive, generative, or reinforcement
+frameworks, to rapidly derive multiple model explanations. We also analyze the
+limitations of an efficient XAI pipeline from the perspectives of the training
+phase, the deployment phase, and the use scenarios. Finally, we summarize the
+challenges of deploying XAI acceleration methods to real-world scenarios,
+overcoming the trade-off between faithfulness and efficiency, and the selection
+of different acceleration methods.},
+ arxiv_url = {https://arxiv.org/pdf/2302.03225v2.pdf},
+ author = {Yu-Neng Chuang and Guanchu Wang and Fan Yang and Zirui Liu and Xuanting Cai and Mengnan Du and Xia Hu},
+ title = {Efficient xai techniques: A taxonomic survey},
+ year = {2023}
+}
+
+@article{covert_2020_improving,
+ abstract = {The Shapley value concept from cooperative game theory has become a popular
+technique for interpreting ML models, but efficiently estimating these values
+remains challenging, particularly in the model-agnostic setting. Here, we
+revisit the idea of estimating Shapley values via linear regression to
+understand and improve upon this approach. By analyzing the original KernelSHAP
+alongside a newly proposed unbiased version, we develop techniques to detect
+its convergence and calculate uncertainty estimates. We also find that the
+original version incurs a negligible increase in bias in exchange for
+significantly lower variance, and we propose a variance reduction technique
+that further accelerates the convergence of both estimators. Finally, we
+develop a version of KernelSHAP for stochastic cooperative games that yields
+fast new estimators for two global explanation methods.},
+ arxiv_url = {https://arxiv.org/pdf/2012.01536v3.pdf},
+ author = {Ian Covert and Su-In Lee},
+ title = {Improving kernelshap: Practical shapley value estimation using linear regression},
+ year = {2020}
+}
+
+@article{goodman_2016_european,
+ abstract = {We summarize the potential impact that the European Union's new General Data
+Protection Regulation will have on the routine use of machine learning
+algorithms. Slated to take effect as law across the EU in 2018, it will
+restrict automated individual decision-making (that is, algorithms that make
+decisions based on user-level predictors) which "significantly affect" users.
+The law will also effectively create a "right to explanation," whereby a user
+can ask for an explanation of an algorithmic decision that was made about them.
+We argue that while this law will pose large challenges for industry, it
+highlights opportunities for computer scientists to take the lead in designing
+algorithms and evaluation frameworks which avoid discrimination and enable
+explanation.},
+ arxiv_url = {https://arxiv.org/pdf/1606.08813v3.pdf},
+ author = {Bryce Goodman and Seth Flaxman},
+ doi = {10.1609/aimag.v38i3.2741},
+ journal = {AI Magazine, Vol 38, No 3, 2017},
+ title = {European union regulations on algorithmic decision-making and a “right to explanation”},
+ year = {2016}
+}

@@ -1,0 +1,6 @@
+train_batch_shape: torch.Size([16, 127])
+val_batch_shape: torch.Size([16, 127])
+test_batch_shape: torch.Size([8, 254])
+train_batches: 313
+val_batches: 63
+test_batches: 63

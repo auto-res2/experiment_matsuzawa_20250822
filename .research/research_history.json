@@ -6,5 +6,52 @@
     "High-Resolution Autoregressive Models",
     "Transformer-based Image Generation",
     "Image Super-Resolution Autoregressive"
+  ],
+  "research_study_list": [
+    {
+      "title": "Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction"
+    },
+    {
+      "title": "Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction"
+    },
+    {
+      "title": "ImageBART: Bidirectional Context with Multinomial Diffusion for Autoregressive Image Synthesis"
+    },
+    {
+      "title": "Autoregressive Image Generation without Vector Quantization"
+    },
+    {
+      "title": "ImageBART: Bidirectional Context with Multinomial Diffusion for Autoregressive Image Synthesis"
+    },
+    {
+      "title": "Predictive Sampling with Forecasting Autoregressive Models"
+    },
+    {
+      "title": "Parallel and Flexible Sampling from Autoregressive Models via Langevin Dynamics"
+    },
+    {
+      "title": "Improved Autoregressive Modeling with Distribution Smoothing"
+    },
+    {
+      "title": "Improved Autoregressive Modeling with Distribution Smoothing"
+    },
+    {
+      "title": "TransGAN: Two Pure Transformers Can Make One Strong GAN, and That Can Scale Up"
+    },
+    {
+      "title": "Generating images with sparse representations"
+    },
+    {
+      "title": "Generating images with sparse representations"
+    },
+    {
+      "title": "Arbitrary-Scale Image Generation and Upsampling using Latent Diffusion Model and Implicit Neural Decoder"
+    },
+    {
+      "title": "Parallel and Flexible Sampling from Autoregressive Models via Langevin Dynamics"
+    },
+    {
+      "title": "ImageBART: Bidirectional Context with Multinomial Diffusion for Autoregressive Image Synthesis"
+    }
   ]
 }

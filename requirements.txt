@@ -1,1 +1,13 @@
-# Please list the required python packages.
+# Required Python packages for CCAD-KD implementation
+torch>=2.1.0
+torchvision>=0.16.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+scikit-learn>=1.3.0
+pandas>=2.0.0
+tqdm>=4.65.0
+tdigest>=0.5.2
+timm>=0.9.0
+einops>=0.7.0
+torchmetrics>=1.0.0

@@ -5,3 +5,486 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{author_year_llm,
+ title = {LLM-Check: Investigating Detection of Hallucinations in Large Language Models}
+}
+
+@article{chen_2023_teaching,
+ abstract = {Large language models (LLMs) have achieved impressive performance on code
+generation. However, for complex programming tasks, generating the correct
+solution in one go becomes challenging, thus some prior works have designed
+program repair approaches to improve code generation performance. In this work,
+we propose Self-Debugging, which teaches a large language model to debug its
+predicted program via few-shot demonstrations. In particular, we demonstrate
+that Self-Debugging can teach the large language model to perform rubber duck
+debugging; i.e., without any human feedback on the code correctness or error
+messages, the model is able to identify its mistakes by investigating the
+execution results and explaining the generated code in natural language.
+Self-Debugging achieves the state-of-the-art performance on several code
+generation benchmarks, including the Spider dataset for text-to-SQL generation,
+TransCoder for C++-to-Python translation, and MBPP for text-to-Python
+generation. On the Spider benchmark where there are no unit tests to verify the
+correctness of predictions, Self-Debugging with code explanation consistently
+improves the baseline by 2-3%, and improves the prediction accuracy on problems
+of the hardest level by 9%. On TransCoder and MBPP where unit tests are
+available, Self-Debugging improves the baseline accuracy by up to 12%.
+Meanwhile, by leveraging feedback messages and reusing failed predictions,
+Self-Debugging notably improves sample efficiency, and can match or outperform
+baseline models that generate more than 10x candidate programs.},
+ arxiv_url = {https://arxiv.org/pdf/2304.05128v2.pdf},
+ author = {Xinyun Chen and Maxwell Lin and Nathanael Schärli and Denny Zhou},
+ title = {Teaching Large Language Models to Self-Debug},
+ year = {2023}
+}
+
+@article{huang_2023_large,
+ abstract = {Large Language Models (LLMs) have emerged as a groundbreaking technology with
+their unparalleled text generation capabilities across various applications.
+Nevertheless, concerns persist regarding the accuracy and appropriateness of
+their generated content. A contemporary methodology, self-correction, has been
+proposed as a remedy to these issues. Building upon this premise, this paper
+critically examines the role and efficacy of self-correction within LLMs,
+shedding light on its true potential and limitations. Central to our
+investigation is the notion of intrinsic self-correction, whereby an LLM
+attempts to correct its initial responses based solely on its inherent
+capabilities, without the crutch of external feedback. In the context of
+reasoning, our research indicates that LLMs struggle to self-correct their
+responses without external feedback, and at times, their performance even
+degrades after self-correction. Drawing from these insights, we offer
+suggestions for future research and practical applications in this field.},
+ arxiv_url = {https://arxiv.org/pdf/2310.01798v2.pdf},
+ author = {Jie Huang and Xinyun Chen and Swaroop Mishra and Huaixiu Steven Zheng and Adams Wei Yu and Xinying Song and Denny Zhou},
+ title = {Large Language Models Cannot Self-Correct Reasoning Yet},
+ year = {2023}
+}
+
+@article{huang_2023_large,
+ abstract = {Large Language Models (LLMs) have emerged as a groundbreaking technology with
+their unparalleled text generation capabilities across various applications.
+Nevertheless, concerns persist regarding the accuracy and appropriateness of
+their generated content. A contemporary methodology, self-correction, has been
+proposed as a remedy to these issues. Building upon this premise, this paper
+critically examines the role and efficacy of self-correction within LLMs,
+shedding light on its true potential and limitations. Central to our
+investigation is the notion of intrinsic self-correction, whereby an LLM
+attempts to correct its initial responses based solely on its inherent
+capabilities, without the crutch of external feedback. In the context of
+reasoning, our research indicates that LLMs struggle to self-correct their
+responses without external feedback, and at times, their performance even
+degrades after self-correction. Drawing from these insights, we offer
+suggestions for future research and practical applications in this field.},
+ arxiv_url = {https://arxiv.org/pdf/2310.01798v2.pdf},
+ author = {Jie Huang and Xinyun Chen and Swaroop Mishra and Huaixiu Steven Zheng and Adams Wei Yu and Xinying Song and Denny Zhou},
+ title = {Large Language Models Cannot Self-Correct Reasoning Yet},
+ year = {2023}
+}
+
+@article{kapoor_2024_large,
+ abstract = {When using large language models (LLMs) in high-stakes applications, we need
+to know when we can trust their predictions. Some works argue that prompting
+high-performance LLMs is sufficient to produce calibrated uncertainties, while
+others introduce sampling methods that can be prohibitively expensive. In this
+work, we first argue that prompting on its own is insufficient to achieve good
+calibration and then show that fine-tuning on a small dataset of correct and
+incorrect answers can create an uncertainty estimate with good generalization
+and small computational overhead. We show that a thousand graded examples are
+sufficient to outperform baseline methods and that training through the
+features of a model is necessary for good performance and tractable for large
+open-source models when using LoRA. We also investigate the mechanisms that
+enable reliable LLM uncertainty estimation, finding that many models can be
+used as general-purpose uncertainty estimators, applicable not just to their
+own uncertainties but also the uncertainty of other models. Lastly, we show
+that uncertainty estimates inform human use of LLMs in human-AI collaborative
+settings through a user study.},
+ arxiv_url = {https://arxiv.org/pdf/2406.08391v3.pdf},
+ author = {Sanyam Kapoor and Nate Gruver and Manley Roberts and Katherine Collins and Arka Pal and Umang Bhatt and Adrian Weller and Samuel Dooley and Micah Goldblum and Andrew Gordon Wilson},
+ github_url = {https://github.com/activatedgeek/calibration-tuning},
+ title = {Large Language Models Must Be Taught to Know What They Don’t Know},
+ year = {2024}
+}
+
+@article{li_2024_autoformalize,
+ abstract = {Autoformalization, the task of automatically translating natural language
+descriptions into a formal language, poses a significant challenge across
+various domains, especially in mathematics. Recent advancements in large
+language models (LLMs) have unveiled their promising capabilities to formalize
+even competition-level math problems. However, we observe a considerable
+discrepancy between pass@1 and pass@k accuracies in LLM-generated
+formalizations. To address this gap, we introduce a novel framework that scores
+and selects the best result from k autoformalization candidates based on two
+complementary self-consistency methods: symbolic equivalence and semantic
+consistency. Elaborately, symbolic equivalence identifies the logical
+homogeneity among autoformalization candidates using automated theorem provers,
+and semantic consistency evaluates the preservation of the original meaning by
+informalizing the candidates and computing the similarity between the
+embeddings of the original and informalized texts. Our extensive experiments on
+the MATH and miniF2F datasets demonstrate that our approach significantly
+enhances autoformalization accuracy, achieving up to 0.22-1.35x relative
+improvements across various LLMs and baseline methods.},
+ arxiv_url = {https://arxiv.org/pdf/2410.20936v2.pdf},
+ author = {Zenan Li and Yifan Wu and Zhaoyu Li and Xinming Wei and Xian Zhang and Fan Yang and Xiaoxing Ma},
+ github_url = {https://github.com/Miracle-Messi/Isa-AutoFormal},
+ title = {Autoformalize Mathematical Statements by Symbolic Equivalence and Semantic Consistency},
+ year = {2024}
+}
+
+@article{ling_2023_deductive,
+ abstract = {Large Language Models (LLMs) significantly benefit from Chain-of-Thought
+(CoT) prompting in performing various reasoning tasks. While CoT allows models
+to produce more comprehensive reasoning processes, its emphasis on intermediate
+reasoning steps can inadvertently introduce hallucinations and accumulated
+errors, thereby limiting models' ability to solve complex reasoning tasks.
+Inspired by how humans engage in careful and meticulous deductive logical
+reasoning processes to solve tasks, we seek to enable language models to
+perform explicit and rigorous deductive reasoning, and also ensure the
+trustworthiness of their reasoning process through self-verification. However,
+directly verifying the validity of an entire deductive reasoning process is
+challenging, even with advanced models like ChatGPT. In light of this, we
+propose to decompose a reasoning verification process into a series of
+step-by-step subprocesses, each only receiving their necessary context and
+premises. To facilitate this procedure, we propose Natural Program, a natural
+language-based deductive reasoning format. Our approach enables models to
+generate precise reasoning steps where subsequent steps are more rigorously
+grounded on prior steps. It also empowers language models to carry out
+reasoning self-verification in a step-by-step manner. By integrating this
+verification process into each deductive reasoning stage, we significantly
+enhance the rigor and trustfulness of generated reasoning steps. Along this
+process, we also improve the answer correctness on complex reasoning tasks.
+Code will be released at https://github.com/lz1oceani/verify_cot.},
+ arxiv_url = {https://arxiv.org/pdf/2306.03872v3.pdf},
+ author = {Zhan Ling and Yunhao Fang and Xuanlin Li and Zhiao Huang and Mingu Lee and Roland Memisevic and Hao Su},
+ github_url = {https://github.com/lz1oceani/verify_cot},
+ title = {Deductive Verification of Chain-of-Thought Reasoning},
+ year = {2023}
+}
+
+@article{miao_2023_selfcheck,
+ abstract = {The recent progress in large language models (LLMs), especially the invention
+of chain-of-thought prompting, has made it possible to automatically answer
+questions by stepwise reasoning. However, when faced with more complicated
+problems that require non-linear thinking, even the strongest LLMs make
+mistakes. To address this, we explore whether LLMs are able to recognize errors
+in their own step-by-step reasoning, without resorting to external resources.
+To this end, we propose SelfCheck, a general-purpose zero-shot verification
+schema for recognizing such errors. We then use the results of these checks to
+improve question-answering performance by conducting weighted voting on
+multiple solutions to the question. We test SelfCheck on three datasets (GSM8K,
+MathQA, and MATH) and find that it successfully recognizes errors and, in turn,
+increases final answer accuracies.},
+ arxiv_url = {https://arxiv.org/pdf/2308.00436v3.pdf},
+ author = {Ning Miao and Yee Whye Teh and Tom Rainforth},
+ github_url = {https://github.com/NingMiao/SelfCheck},
+ title = {SelfCheck: Using LLMs to Zero-Shot Check Their Own Step-by-Step Reasoning},
+ year = {2023}
+}
+
+@article{miao_2023_selfcheck,
+ abstract = {The recent progress in large language models (LLMs), especially the invention
+of chain-of-thought prompting, has made it possible to automatically answer
+questions by stepwise reasoning. However, when faced with more complicated
+problems that require non-linear thinking, even the strongest LLMs make
+mistakes. To address this, we explore whether LLMs are able to recognize errors
+in their own step-by-step reasoning, without resorting to external resources.
+To this end, we propose SelfCheck, a general-purpose zero-shot verification
+schema for recognizing such errors. We then use the results of these checks to
+improve question-answering performance by conducting weighted voting on
+multiple solutions to the question. We test SelfCheck on three datasets (GSM8K,
+MathQA, and MATH) and find that it successfully recognizes errors and, in turn,
+increases final answer accuracies.},
+ arxiv_url = {https://arxiv.org/pdf/2308.00436v3.pdf},
+ author = {Ning Miao and Yee Whye Teh and Tom Rainforth},
+ github_url = {https://github.com/NingMiao/SelfCheck},
+ title = {SelfCheck: Using LLMs to Zero-Shot Check Their Own Step-by-Step Reasoning},
+ year = {2023}
+}
+
+@article{olausson_2023_self,
+ abstract = {Large language models have shown remarkable aptitude in code generation, but
+still struggle to perform complex tasks. Self-repair -- in which the model
+debugs and repairs its own code -- has recently become a popular way to boost
+performance in these settings. However, despite its increasing popularity,
+existing studies of self-repair have been limited in scope; in many settings,
+its efficacy thus remains poorly understood. In this paper, we analyze Code
+Llama, GPT-3.5 and GPT-4's ability to perform self-repair on problems taken
+from HumanEval and APPS. We find that when the cost of carrying out repair is
+taken into account, performance gains are often modest, vary a lot between
+subsets of the data, and are sometimes not present at all. We hypothesize that
+this is because self-repair is bottlenecked by the model's ability to provide
+feedback on its own code; using a stronger model to artificially boost the
+quality of the feedback, we observe substantially larger performance gains.
+Similarly, a small-scale study in which we provide GPT-4 with feedback from
+human participants suggests that even for the strongest models, self-repair
+still lags far behind what can be achieved with human-level debugging.},
+ arxiv_url = {https://arxiv.org/pdf/2306.09896v5.pdf},
+ author = {Theo X. Olausson and Jeevana Priya Inala and Chenglong Wang and Jianfeng Gao and Armando Solar-Lezama},
+ title = {Is Self-Repair a Silver Bullet for Code Generation?},
+ year = {2023}
+}
+
+@article{shen_2024_thermometer,
+ abstract = {We consider the issue of calibration in large language models (LLM). Recent
+studies have found that common interventions such as instruction tuning often
+result in poorly calibrated LLMs. Although calibration is well-explored in
+traditional applications, calibrating LLMs is uniquely challenging. These
+challenges stem as much from the severe computational requirements of LLMs as
+from their versatility, which allows them to be applied to diverse tasks.
+Addressing these challenges, we propose THERMOMETER, a calibration approach
+tailored to LLMs. THERMOMETER learns an auxiliary model, given data from
+multiple tasks, for calibrating a LLM. It is computationally efficient,
+preserves the accuracy of the LLM, and produces better-calibrated responses for
+new tasks. Extensive empirical evaluations across various benchmarks
+demonstrate the effectiveness of the proposed method.},
+ arxiv_url = {https://arxiv.org/pdf/2403.08819v2.pdf},
+ author = {Maohao Shen and Subhro Das and Kristjan Greenewald and Prasanna Sattigeri and Gregory Wornell and Soumya Ghosh},
+ title = {Thermometer: Towards Universal Calibration for Large Language Models},
+ year = {2024}
+}
+
+@article{wang_2022_self,
+ abstract = {Chain-of-thought prompting combined with pre-trained large language models
+has achieved encouraging results on complex reasoning tasks. In this paper, we
+propose a new decoding strategy, self-consistency, to replace the naive greedy
+decoding used in chain-of-thought prompting. It first samples a diverse set of
+reasoning paths instead of only taking the greedy one, and then selects the
+most consistent answer by marginalizing out the sampled reasoning paths.
+Self-consistency leverages the intuition that a complex reasoning problem
+typically admits multiple different ways of thinking leading to its unique
+correct answer. Our extensive empirical evaluation shows that self-consistency
+boosts the performance of chain-of-thought prompting with a striking margin on
+a range of popular arithmetic and commonsense reasoning benchmarks, including
+GSM8K (+17.9%), SVAMP (+11.0%), AQuA (+12.2%), StrategyQA (+6.4%) and
+ARC-challenge (+3.9%).},
+ arxiv_url = {https://arxiv.org/pdf/2203.11171v4.pdf},
+ author = {Xuezhi Wang and Jason Wei and Dale Schuurmans and Quoc Le and Ed Chi and Sharan Narang and Aakanksha Chowdhery and Denny Zhou},
+ github_url = {https://github.com/google-research/google-research},
+ title = {Self-Consistency Improves Chain of Thought Reasoning in Language Models},
+ year = {2022}
+}
+
+@article{wei_2022_chain,
+ abstract = {We explore how generating a chain of thought -- a series of intermediate
+reasoning steps -- significantly improves the ability of large language models
+to perform complex reasoning. In particular, we show how such reasoning
+abilities emerge naturally in sufficiently large language models via a simple
+method called chain of thought prompting, where a few chain of thought
+demonstrations are provided as exemplars in prompting. Experiments on three
+large language models show that chain of thought prompting improves performance
+on a range of arithmetic, commonsense, and symbolic reasoning tasks. The
+empirical gains can be striking. For instance, prompting a 540B-parameter
+language model with just eight chain of thought exemplars achieves state of the
+art accuracy on the GSM8K benchmark of math word problems, surpassing even
+finetuned GPT-3 with a verifier.},
+ arxiv_url = {https://arxiv.org/pdf/2201.11903v6.pdf},
+ author = {Jason Wei and Xuezhi Wang and Dale Schuurmans and Maarten Bosma and Brian Ichter and Fei Xia and Ed Chi and Quoc Le and Denny Zhou},
+ github_url = {https://github.com/deepmind/AQuA},
+ title = {Chain-of-Thought Prompting Elicits Reasoning in Large Language Models},
+ year = {2022}
+}
+
+@article{xiong_2023_can,
+ abstract = {Empowering large language models to accurately express confidence in their
+answers is essential for trustworthy decision-making. Previous confidence
+elicitation methods, which primarily rely on white-box access to internal model
+information or model fine-tuning, have become less suitable for LLMs,
+especially closed-source commercial APIs. This leads to a growing need to
+explore the untapped area of black-box approaches for LLM uncertainty
+estimation. To better break down the problem, we define a systematic framework
+with three components: prompting strategies for eliciting verbalized
+confidence, sampling methods for generating multiple responses, and aggregation
+techniques for computing consistency. We then benchmark these methods on two
+key tasks-confidence calibration and failure prediction-across five types of
+datasets (e.g., commonsense and arithmetic reasoning) and five widely-used LLMs
+including GPT-4 and LLaMA 2 Chat. Our analysis uncovers several key insights:
+1) LLMs, when verbalizing their confidence, tend to be overconfident,
+potentially imitating human patterns of expressing confidence. 2) As model
+capability scales up, both calibration and failure prediction performance
+improve. 3) Employing our proposed strategies, such as human-inspired prompts,
+consistency among multiple responses, and better aggregation strategies can
+help mitigate this overconfidence from various perspectives. 4) Comparisons
+with white-box methods indicate that while white-box methods perform better,
+the gap is narrow, e.g., 0.522 to 0.605 in AUROC. Despite these advancements,
+none of these techniques consistently outperform others, and all investigated
+methods struggle in challenging tasks, such as those requiring professional
+knowledge, indicating significant scope for improvement. We believe this study
+can serve as a strong baseline and provide insights for eliciting confidence in
+black-box LLMs.},
+ arxiv_url = {https://arxiv.org/pdf/2306.13063v2.pdf},
+ author = {Miao Xiong and Zhiyuan Hu and Xinyang Lu and Yifei Li and Jie Fu and Junxian He and Bryan Hooi},
+ github_url = {https://github.com/MiaoXiong2320/llm-uncertainty},
+ title = {Can LLMs Express Their Uncertainty? An Empirical Evaluation of Confidence Elicitation in LLMs},
+ year = {2023}
+}
+
+@article{zhang_2022_automatic,
+ abstract = {Large language models (LLMs) can perform complex reasoning by generating
+intermediate reasoning steps. Providing these steps for prompting
+demonstrations is called chain-of-thought (CoT) prompting. CoT prompting has
+two major paradigms. One leverages a simple prompt like "Let's think step by
+step" to facilitate step-by-step thinking before answering a question. The
+other uses a few manual demonstrations one by one, each composed of a question
+and a reasoning chain that leads to an answer. The superior performance of the
+second paradigm hinges on the hand-crafting of task-specific demonstrations one
+by one. We show that such manual efforts may be eliminated by leveraging LLMs
+with the "Let's think step by step" prompt to generate reasoning chains for
+demonstrations one by one, i.e., let's think not just step by step, but also
+one by one. However, these generated chains often come with mistakes. To
+mitigate the effect of such mistakes, we find that diversity matters for
+automatically constructing demonstrations. We propose an automatic CoT
+prompting method: Auto-CoT. It samples questions with diversity and generates
+reasoning chains to construct demonstrations. On ten public benchmark reasoning
+tasks with GPT-3, Auto-CoT consistently matches or exceeds the performance of
+the CoT paradigm that requires manual designs of demonstrations. Code is
+available at https://github.com/amazon-research/auto-cot},
+ arxiv_url = {https://arxiv.org/pdf/2210.03493v1.pdf},
+ author = {Zhuosheng Zhang and Aston Zhang and Mu Li and Alex Smola},
+ github_url = {https://github.com/amazon-research/auto-cot},
+ title = {Automatic Chain of Thought Prompting in Large Language Models},
+ year = {2022}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{austin_2021_program,
+ abstract = {This paper explores the limits of the current generation of large language
+models for program synthesis in general purpose programming languages. We
+evaluate a collection of such models (with between 244M and 137B parameters) on
+two new benchmarks, MBPP and MathQA-Python, in both the few-shot and
+fine-tuning regimes. Our benchmarks are designed to measure the ability of
+these models to synthesize short Python programs from natural language
+descriptions. The Mostly Basic Programming Problems (MBPP) dataset contains 974
+programming tasks, designed to be solvable by entry-level programmers. The
+MathQA-Python dataset, a Python version of the MathQA benchmark, contains 23914
+problems that evaluate the ability of the models to synthesize code from more
+complex text. On both datasets, we find that synthesis performance scales
+log-linearly with model size. Our largest models, even without finetuning on a
+code dataset, can synthesize solutions to 59.6 percent of the problems from
+MBPP using few-shot learning with a well-designed prompt. Fine-tuning on a
+held-out portion of the dataset improves performance by about 10 percentage
+points across most model sizes. On the MathQA-Python dataset, the largest
+fine-tuned model achieves 83.8 percent accuracy. Going further, we study the
+model's ability to engage in dialog about code, incorporating human feedback to
+improve its solutions. We find that natural language feedback from a human
+halves the error rate compared to the model's initial prediction. Additionally,
+we conduct an error analysis to shed light on where these models fall short and
+what types of programs are most difficult to generate. Finally, we explore the
+semantic grounding of these models by fine-tuning them to predict the results
+of program execution. We find that even our best models are generally unable to
+predict the output of a program given a specific input.},
+ arxiv_url = {https://arxiv.org/pdf/2108.07732v1.pdf},
+ author = {Jacob Austin and Augustus Odena and Maxwell Nye and Maarten Bosma and Henryk Michalewski and David Dohan and Ellen Jiang and Carrie Cai and Michael Terry and Quoc Le and Charles Sutton},
+ title = {Program Synthesis with Large Language Models},
+ year = {2021}
+}
+
+@article{author_year_dreamcoder,
+ title = {DreamCoder: Bootstrapping Inductive Program Synthesis with Wake-Sleep Library Learning.}
+}
+
+@article{bader_2019_getafix,
+ abstract = {Static analyzers help find bugs early by warning about recurring bug
+categories. While fixing these bugs still remains a mostly manual task in
+practice, we observe that fixes for a specific bug category often are
+repetitive. This paper addresses the problem of automatically fixing instances
+of common bugs by learning from past fixes. We present Getafix, an approach
+that produces human-like fixes while being fast enough to suggest fixes in time
+proportional to the amount of time needed to obtain static analysis results in
+the first place. Getafix is based on a novel hierarchical clustering algorithm
+that summarizes fix patterns into a hierarchy ranging from general to specific
+patterns. Instead of a computationally expensive exploration of a potentially
+large space of candidate fixes, Getafix uses a simple yet effective ranking
+technique that uses the context of a code change to select the most appropriate
+fix for a given bug. Our evaluation applies Getafix to 1,268 bug fixes for six
+bug categories reported by popular static analyzers for Java, including null
+dereferences, incorrect API calls, and misuses of particular language
+constructs. The approach predicts exactly the human-written fix as the top-most
+suggestion between 12% and 91% of the time, depending on the bug category. The
+top-5 suggestions contain fixes for 526 of the 1,268 bugs. Moreover, we report
+on deploying the approach within Facebook, where it contributes to the
+reliability of software used by billions of people. To the best of our
+knowledge, Getafix is the first industrially-deployed automated bug-fixing tool
+that learns fix patterns from past, human-written fixes to produce human-like
+fixes.},
+ arxiv_url = {https://arxiv.org/pdf/1902.06111v5.pdf},
+ author = {Johannes Bader and Andrew Scott and Michael Pradel and Satish Chandra},
+ title = {Getafix: Learning to fix bugs automatically.},
+ year = {2019}
+}
+
+@article{chen_2021_evaluating,
+ abstract = {We introduce Codex, a GPT language model fine-tuned on publicly available
+code from GitHub, and study its Python code-writing capabilities. A distinct
+production version of Codex powers GitHub Copilot. On HumanEval, a new
+evaluation set we release to measure functional correctness for synthesizing
+programs from docstrings, our model solves 28.8% of the problems, while GPT-3
+solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling
+from the model is a surprisingly effective strategy for producing working
+solutions to difficult prompts. Using this method, we solve 70.2% of our
+problems with 100 samples per problem. Careful investigation of our model
+reveals its limitations, including difficulty with docstrings describing long
+chains of operations and with binding operations to variables. Finally, we
+discuss the potential broader impacts of deploying powerful code generation
+technologies, covering safety, security, and economics.},
+ arxiv_url = {https://arxiv.org/pdf/2107.03374v2.pdf},
+ author = {Mark Chen and Jerry Tworek and Heewoo Jun and Qiming Yuan and Henrique Ponde de Oliveira Pinto and Jared Kaplan and Harri Edwards and Yuri Burda and Nicholas Joseph and Greg Brockman and Alex Ray and Raul Puri and Gretchen Krueger and Michael Petrov and Heidy Khlaaf and Girish Sastry and Pamela Mishkin and Brooke Chan and Scott Gray and Nick Ryder and Mikhail Pavlov and Alethea Power and Lukasz Kaiser and Mohammad Bavarian and Clemens Winter and Philippe Tillet and Felipe Petroski Such and Dave Cummings and Matthias Plappert and Fotios Chantzis and Elizabeth Barnes and Ariel Herbert-Voss and William Hebgen Guss and Alex Nichol and Alex Paino and Nikolas Tezak and Jie Tang and Igor Babuschkin and Suchir Balaji and Shantanu Jain and William Saunders and Christopher Hesse and Andrew N. Carr and Jan Leike and Josh Achiam and Vedant Misra and Evan Morikawa and Alec Radford and Matthew Knight and Miles Brundage and Mira Murati and Katie Mayer and Peter Welinder and Bob McGrew and Dario Amodei and Sam McCandlish and Ilya Sutskever and Wojciech Zaremba},
+ title = {Evaluating Large Language Models Trained on Code},
+ year = {2021}
+}
+
+@article{chen_2022_codet,
+ abstract = {The task of generating code solutions for a given programming problem can
+benefit from the use of pre-trained language models such as Codex, which can
+produce multiple diverse samples. However, a major challenge for this task is
+to select the most appropriate solution from the multiple samples generated by
+the pre-trained language models. A natural way to evaluate the quality and
+correctness of a code solution is to run it against a set of test cases, but
+the manual creation of such test cases is often costly and time-consuming. In
+this paper, we propose a novel method, CodeT, that leverages the same
+pre-trained language models to automatically generate test cases for the code
+samples, thus reducing the human effort and increasing the coverage of the test
+scenarios. CodeT then executes the code samples using the generated test cases,
+and performs a dual execution agreement, which considers both the consistency
+of the outputs against the generated test cases and the agreement of the
+outputs with other code samples. We conduct comprehensive experiments on four
+benchmarks, HumanEval, MBPP, APPS and CodeContests, using five different
+pre-trained language models with varying sizes and capabilities. Our results
+show that CodeT can significantly improve the performance of code solution
+selection over previous methods, achieving remarkable and consistent gains
+across different models and benchmarks. For instance, CodeT improves the pass@1
+metric on HumanEval to 65.8%, which represents an absolute improvement of 18.8%
+over the code-davinci-002 model, and an absolute improvement of more than 20%
+over the previous state-of-the-art results.},
+ arxiv_url = {https://arxiv.org/pdf/2207.10397v2.pdf},
+ author = {Bei Chen and Fengji Zhang and Anh Nguyen and Daoguang Zan and Zeqi Lin and Jian-Guang Lou and Weizhu Chen},
+ title = {CodeT: Code generation with generated tests.},
+ year = {2022}
+}
+
+@article{fried_2022_incoder,
+ abstract = {Code is seldom written in a single left-to-right pass and is instead
+repeatedly edited and refined. We introduce InCoder, a unified generative model
+that can perform program synthesis (via left-to-right generation) as well as
+editing (via infilling). InCoder is trained to generate code files from a large
+corpus of permissively licensed code, where regions of code have been randomly
+masked and moved to the end of each file, allowing code infilling with
+bidirectional context. Our model is the first generative model that is able to
+directly perform zero-shot code infilling, which we evaluate on challenging
+tasks such as type inference, comment generation, and variable re-naming. We
+find that the ability to condition on bidirectional context substantially
+improves performance on these tasks, while still performing comparably on
+standard program synthesis benchmarks in comparison to left-to-right only
+models pretrained at similar scale. The InCoder models and code are publicly
+released. https://sites.google.com/view/incoder-code-models},
+ arxiv_url = {https://arxiv.org/pdf/2204.05999v3.pdf},
+ author = {Daniel Fried and Armen Aghajanyan and Jessy Lin and Sida Wang and Eric Wallace and Freda Shi and Ruiqi Zhong and Wen-tau Yih and Luke Zettlemoyer and Mike Lewis},
+ title = {InCoder: A generative model for code infilling and synthesis.},
+ year = {2022}
+}

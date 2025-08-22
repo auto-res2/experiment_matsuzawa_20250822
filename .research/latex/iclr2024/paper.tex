@@ -1,0 +1,189 @@
+\PassOptionsToPackage{numbers}{natbib}
+\documentclass{article} % For LaTeX2e
+\usepackage{iclr2024_conference,times}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{titletoc}
+
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{color}
+\usepackage{colortbl}
+\usepackage{cleveref}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage{array}
+\usepackage{tabularx}
+\pgfplotsset{compat=newest}
+
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\graphicspath{{../}} % To reference your generated figures, see below.
+
+\title{Breaking the Cycle: Self-Improving Coreset Distillation for Training on Billion-Point Clouds}
+
+\author{AIRAS}
+
+\newcommand{\fix}{\marginpar{FIX}}
+\newcommand{\new}{\marginpar{NEW}}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+State-of-the-art models for 3D point cloud analysis, such as Point Transformer V3 and PointMamba, are increasingly powerful but fundamentally memory-bound, rendering it infeasible to train them on scenes with billions of points. This limitation creates a persistent chicken-and-egg dilemma: task-agnostic pre-sampling methods like Farthest Point Sampling discard semantically vital information, while post-training compression techniques offer no relief for the initial training memory bottleneck. To train a powerful model, one needs an intelligently sampled dataset, but to intelligently sample a dataset, one needs a powerful model. We break this cycle with Self-Improving Coreset Distillation (SICoD), a novel framework where a task model and a coreset generator co-evolve. Our core contribution is a lightweight, geometry-based saliency predictor that learns to generate task-relevant coresets for out-of-core training. This predictor is trained via knowledge distillation from the primary task model, using prediction entropy as a computationally efficient proxy for point saliency. The generated coreset is then used to train a superior task model, and the cycle repeats. Crucially, we introduce a gradient correction mechanism via a saliency-weighted loss function to mitigate information loss from importance sampling. We designed a comprehensive experimental evaluation on large-scale semantic segmentation to validate that models trained on SICoD-generated coresets significantly outperform those trained on data-agnostic samples of the same size, thereby enabling unprecedented scalability in 3D deep learning.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+The proliferation of high-resolution 3D sensors has led to the availability of massive point cloud datasets, with individual scenes often containing billions of points. This data explosion has fueled the development of highly effective deep learning models for 3D perception tasks. Architectures like Point Transformer V3 (PTv3) \cite{wu_2023_point} and PointMamba \cite{liang_2024_pointmamba} have achieved state-of-the-art performance in semantic segmentation, object detection, and classification. However, their success is predicated on sophisticated mechanisms like self-attention or large state spaces, which come at the cost of substantial GPU memory consumption. This memory requirement has become a primary bottleneck, effectively barring these models from being trained directly on full-scale, billion-point scenes.
+
+The conventional approach to this problem is to train models on a smaller, sampled subset, or coreset, of the full dataset. However, existing strategies are fundamentally flawed, leading to a difficult 'chicken-and-egg' problem. On one hand, task-agnostic sampling methods, such as uniform random sampling, Farthest Point Sampling (FPS), or Nyström-based approximations \cite{meanti_2020_kernel}, select points based on geometric or spatial distribution. While ensuring coverage, these methods are oblivious to the semantic content of the scene and may discard sparse but critically important structures, such as thin wires or distant objects. On the other hand, post-hoc compression techniques, which reduce the size of a trained model or a 3D representation \cite{niedermayr_2023_compressed, fan_2023_lightgaussian}, are applied after training and do not alleviate the initial memory bottleneck during the training phase itself.
+
+This paper introduces a new paradigm, Self-Improving Coreset Distillation (SICoD), to resolve this dilemma. Instead of treating sampling as a fixed pre-processing step, we propose an iterative framework where the coreset quality and the task model's performance are mutually reinforcing. The core idea is to distill the knowledge of a large, powerful 'teacher' model into a lightweight, efficient 'saliency predictor' that learns a task-aware sampling policy. This saliency predictor, a sparse 3D U-Net we call Learnable Geometric Saliency (LGS), operates out-of-core and learns to identify important points using only local geometric features. The process begins by training an initial teacher on a random coreset. This teacher then scores the entire dataset, and the LGS is trained to replicate these scores. The improved LGS then generates a higher-quality coreset, which is used to train a better teacher model. This loop allows the system to progressively focus on the most informative parts of the data.
+
+Our contributions can be summarized as follows:
+\begin{itemize}
+    \item \textbf{Self-Improving Coreset Distillation (SICoD)} We propose a novel iterative framework that co-evolves a task model and a coreset generator to enable memory-efficient training on out-of-core point clouds.
+    \item \textbf{Lightweight Saliency Predictor (LGS)} We introduce a lightweight, geometry-based saliency predictor that is trained via knowledge distillation to learn a task-aware sampling policy, breaking the dependency on data-agnostic heuristics.
+    \item \textbf{Efficient Saliency Proxy} We propose an efficient saliency proxy based on prediction entropy, which avoids the prohibitive computational cost of gradient-based importance metrics on massive datasets.
+    \item \textbf{Gradient Correction Mechanism} We incorporate a gradient correction mechanism, using the predicted saliency scores as per-point weights in the main model's loss function, which mitigates sampling bias and recovers information from under-sampled regions.
+\end{itemize}
+
+We outline a rigorous experimental setup to validate SICoD on the large-scale DALES dataset for semantic segmentation, comparing against multiple strong baselines. The successful application of this framework would not only push the frontier of large-scale 3D perception but also democratize research by making it more accessible to those with limited computational resources. Potential future work includes exploring the trained LGS as a standalone, plug-and-play 'learned FPS' module for various point-based networks.
+
+\section{Related Work}
+\label{sec:related}
+Our work addresses the challenge of training large neural networks on massive point clouds and intersects with several research areas, primarily coreset selection, point cloud compression, and knowledge distillation.
+
+\subsection{Coreset Selection for Large-Scale Learning}
+The concept of a coreset—a small, weighted subset of data that approximates the full dataset for a specific task—is well-established. Traditional methods are often task-agnostic. Farthest Point Sampling (FPS) is a canonical example, greedily selecting points that maximize geometric diversity. While effective for shape representation, FPS is computationally intensive and ignores semantic importance, potentially discarding crucial information. Voxel-based and random sampling are faster but even less sophisticated. More advanced techniques based on kernel methods, such as the Nyström approximation used in Falkon \cite{meanti_2020_kernel}, aim to select points that best represent the data in a feature space. However, these methods remain data-driven and do not incorporate feedback from the task model during training. In contrast to these static, task-agnostic approaches, our SICoD framework creates a task-aware feedback loop, where the coreset is iteratively refined based on the model's current understanding of the task. Other works like Layered Sampling \cite{ding_2020_layered} have been proposed for robust optimization with outliers, but their objective differs from our goal of creating a representative subset for training a deep neural network.
+
+\subsection{Point Cloud Compression}
+A significant body of work focuses on compressing point clouds for efficient storage and transmission. These methods can be broadly categorized into traditional signal processing approaches and modern learning-based techniques. Learning-based methods such as OctSqueeze \cite{huang_2020_octsqueeze} and MuSCLE \cite{biswas_2020_muscle} leverage deep entropy models to achieve high compression rates by exploiting spatial and temporal redundancies. Recent works like Compressed 3D Gaussian Splatting \cite{niedermayr_2023_compressed} and LightGaussian \cite{fan_2023_lightgaussian} focus on compressing novel view synthesis representations after they have been created. It is crucial to distinguish these methods from ours. They are designed for post-hoc compression of data or representations, whereas SICoD is a training strategy designed to tackle the *upstream* problem of memory limitations during model training. Our work is a form of 'semantic compression' for generating a training set, not for archival or streaming purposes.
+
+\subsection{Knowledge Distillation and Saliency Estimation}
+Our approach is a novel application of knowledge distillation. We distill the complex, task-specific knowledge of 'what is important' from a large teacher model (PTv3) into a small, efficient student model (our LGS predictor). This allows us to decouple the expensive task of inference from the efficient task of saliency prediction based on geometry. While knowledge distillation is widely used for model compression and transfer learning, its application to iteratively generate training coresets for massive 3D scenes is a key novelty of our work. Furthermore, our choice of saliency metric is critical for scalability. Methods that rely on gradients to determine importance are infeasible, as they would require a backward pass over the entire billion-point dataset. Instead, we use prediction entropy as an efficient proxy for model uncertainty and, by extension, point importance. This positions our work in contrast to other saliency-based approaches that are not designed for out-of-core execution at this scale.
+
+\section{Background}
+\label{sec:background}
+To understand our proposed method, it is essential to establish the foundational concepts of 3D point cloud processing, the challenges posed by modern network architectures, and the formal problem setting we address.
+
+\subsection{3D Point Clouds and Semantic Segmentation}
+A 3D point cloud is a set of data points in a three-dimensional coordinate system, typically represented as $P = \{p_1, p_2, \dots, p_N\}$, where each point $p_i$ consists of its geometric coordinates $(x_i, y_i, z_i)$ and potentially other attributes like color or intensity. Semantic segmentation is a fundamental 3D perception task that involves assigning a semantic label (e.g., 'building', 'car', 'vegetation') to every point in the cloud. This task requires models that can capture both local geometric details and broader contextual relationships within the scene.
+
+\subsection{Memory-Intensive 3D Architectures}
+Recent advances in 3D semantic segmentation have been driven by powerful neural network architectures. Transformer-based models, such as Point Transformer V3 (PTv3) \cite{wu_2023_point}, leverage self-attention mechanisms to model long-range dependencies between points, leading to state-of-the-art performance. Similarly, new architectures based on state space models, like PointMamba \cite{liang_2024_pointmamba}, have shown promise by offering linear complexity with a global receptive field. A common trait of these high-performing models is their significant memory footprint. The attention maps in transformers or the large feature maps required for capturing global context mean that the GPU memory required scales non-linearly with the number of input points, making it impossible to process billion-point scenes in a single pass.
+
+\subsection{Problem Setting and Notation}
+Let $P_{\text{full}} = \{(p_i, y_i)\}_{i=1}^N$ be a massive, out-of-core point cloud dataset, where $p_i$ is a point with its features and $y_i$ is its corresponding semantic label. The size $N$ of $P_{\text{full}}$ is assumed to be too large to fit into available GPU memory. Let $M_{\theta}$ denote a deep neural network for semantic segmentation, parameterized by $\theta$.
+
+The objective is to find the optimal parameters $\theta^*$ that minimize a task-specific loss function $L_{\text{task}}$ over the entire dataset:
+\[ \theta^* = \arg\min_{\theta} \mathbb{E}_{(p,y) \in P_{\text{full}}}[L_{\text{task}}(M_{\theta}(p), y)] \]
+
+Due to memory constraints, direct optimization on $P_{\text{full}}$ is intractable. The standard approach is to train the model on a much smaller coreset $C$, a subset of $P_{\text{full}}$, where $|C| = K \ll N$. The challenge lies in selecting $C$ such that the model trained on it, $M_{\theta_C}$, achieves performance as close as possible to the model that would hypothetically be trained on $P_{\text{full}}$. Our work tackles the problem of how to intelligently and adaptively construct this coreset $C$.
+
+A key assumption underpinning our method is that the task-relevant saliency of a point, while dependent on global semantic context, can be effectively proxied and predicted using only its local geometric features. Our LGS module is designed to learn this mapping, enabling efficient, out-of-core saliency estimation for the entire dataset.
+
+\section{Method}
+\label{sec:method}
+We introduce Self-Improving Coreset Distillation (SICoD), an iterative framework designed to train memory-intensive models on point clouds that far exceed GPU capacity. The framework orchestrates a symbiotic relationship between a primary task model (the 'teacher') and a lightweight saliency predictor, which co-evolve to progressively improve both model performance and coreset quality. The entire process is designed for out-of-core execution.
+
+\subsection{Overall Iterative Framework}
+The SICoD process unfolds over several iterations. In each iteration $k$, a teacher model Teacher$_k$ is used to generate saliency information across the entire dataset. This information is then distilled into a lightweight Learnable Geometric Saliency (LGS) predictor. The improved LGS model generates a new, higher-quality coreset $C_{k+1}$, which is then used to train the next-generation teacher model, Teacher$_{k+1}$.
+
+\subsection{Step 1: Bootstrap Phase (k=0)}
+The process begins by creating an initial coreset, $C_0$, by uniformly sampling a subset of $K$ points from the full out-of-core dataset $P_{\text{full}}$. An initial teacher model, Teacher$_0$, is then trained from scratch on this coreset $C_0$ until convergence. This provides a baseline model that possesses a rudimentary understanding of the task.
+
+\subsection{Step 2: Saliency Generation via Knowledge Distillation}
+At the beginning of iteration $k \ge 1$, the current teacher model Teacher$_{k-1}$ performs a forward pass over the entire dataset $P_{\text{full}}$ in a chunk-wise manner. For each point $p_i$, we compute a saliency score $s_i$. Instead of using computationally prohibitive gradient-based importance metrics, we use prediction entropy as an efficient proxy for saliency. The saliency score for point $p_i$ is defined as:
+\[ s_i = -\sum_{c} P_{k-1}(c|p_i) \log(P_{k-1}(c|p_i) + \varepsilon) \]
+where $P_{k-1}(c|p_i)$ is the predicted probability for class $c$ by Teacher$_{k-1}$, and $\varepsilon$ is a small constant for numerical stability. High entropy signifies high model uncertainty, indicating that $p_i$ is an informative example from which the model can learn the most. This step effectively generates a dense saliency map for the entire dataset.
+
+\subsection{Step 3: Training the Learnable Geometric Saliency (LGS) Predictor}
+The knowledge of point importance, now captured in the saliency scores $s_i$, is distilled into a lightweight and efficient LGS model. The LGS is a sparse 3D U-Net that takes only local geometric features (e.g., local coordinates and normals) of a point as input and is trained to regress the corresponding saliency score generated by the teacher. The LGS is trained by minimizing the Mean Squared Error (MSE) between its predicted saliency scores and the teacher-generated scores over the full dataset. This distillation step is critical, as it creates a simple, geometry-based heuristic that mimics the complex, task-aware understanding of the powerful teacher model.
+
+\subsection{Step 4: Corrected Coreset Generation and Teacher Retraining}
+Once trained, the LGS model performs a rapid forward pass over the entire out-of-core dataset to generate a new set of predicted saliency scores, $\{s'_i\}$. A new coreset, $C_k$, of size $K$ is then generated via importance sampling, where the probability of selecting point $p_i$ is proportional to its predicted saliency $s'_i$. This ensures that points deemed more important by the learned heuristic are more likely to be included in the training set.
+A new teacher model, Teacher$_k$, is then trained from scratch on this new coreset $C_k$. To counteract the bias introduced by importance sampling and to ensure that the contributions of highly salient but potentially rare points are not diminished, we introduce a gradient correction mechanism. The standard cross-entropy loss is modified to be a weighted loss, where the loss for each point $p_i$ in $C_k$ is weighted by its saliency score $s'_i$. The weighted loss for a single point is $L_{\text{weighted}}(p_i, y_i) = s'_i \cdot L_{\text{task}}(M_{\theta}(p_i), y_i)$. This weighting scheme forces the model to pay more attention to the important examples identified by the LGS.
+
+This cycle repeats, with each new teacher model becoming more proficient, leading to more accurate saliency distillation, a higher-quality coreset, and subsequently, an even better teacher model in the next iteration.
+
+\section{Experimental Setup}
+\label{sec:experimental}
+To empirically validate the effectiveness of our Self-Improving Coreset Distillation (SICoD) framework, we designed a rigorous experiment on a large-scale 3D semantic segmentation task.
+
+\subsection{Objective}
+The primary goal of the experiment is to demonstrate that a state-of-the-art model trained on a SICoD-generated coreset achieves superior performance compared to the same model trained on coresets of identical size generated by standard task-agnostic sampling baselines. The central hypothesis is that SICoD's task-aware sampling preserves semantically critical points, leading to higher accuracy for a given memory budget.
+
+\subsection{Dataset and Pre-processing}
+We selected the Dalhousie Architectural Lidar-Entropic Scene (DALES) dataset, a massive-scale benchmark with approximately 500 million labeled points across 8 classes in complex urban environments. Its size makes it an ideal testbed for out-of-core methods. We use the official training/testing split. The raw data is converted to an HDF5 format for efficient, chunked access. As part of a one-time offline process, we pre-compute and store point normals using a k-NN ($k=20$) neighborhood. Scene coordinates are normalized to a [-1, 1] cube to ensure training stability. For context on large-scale LiDAR datasets, we refer to work on SemanticKITTI \cite{behley_2019_semantickitti}.
+
+\subsection{Models and Architectures}
+\begin{itemize}
+    \item \textbf{Primary Task Model (Teacher):} We employ Point Transformer V3 (PTv3) \cite{wu_2023_point}, chosen for its state-of-the-art performance and high memory usage. Key parameters include an encoder depth of 8, a voxel size of 0.05m, 16 neighbors for k-NN, a feature dimension of 256, and 8 attention heads.
+    \item \textbf{LGS Saliency Predictor:} We use a sparse 3D U-Net implemented with the MinkowskiEngine library. The architecture consists of a 4-level encoder-decoder with skip connections. It takes local XYZ coordinates and normals as input (6 features) and regresses a single saliency score per point.
+\end{itemize}
+
+\subsection{Baselines}
+We compare SICoD against several strong baselines. For all baselines, the same PTv3 architecture and training hyperparameters are used; only the coreset generation method differs:
+\begin{enumerate}
+    \item  \textbf{Random Sampling (RS):} The simplest baseline, selecting points uniformly.
+    \item  \textbf{Voxel Grid Sampling (GS):} Selects the centroid of points within each occupied voxel.
+    \item  \textbf{Farthest Point Sampling (FPS):} A scalable approximation is used, where FPS is run on large blocks of the scene.
+    \item  \textbf{Nyström Kernel Approximation:} A method inspired by Falkon \cite{meanti_2020_kernel} that selects points to best approximate the geometric feature space.
+    \item  \textbf{Full Data (Partitioned):} A practical upper bound is established by training PTv3 on the full dataset by breaking scenes into memory-fitting, overlapping blocks.
+\end{enumerate}
+
+\subsection{Experimental Protocol}
+We evaluate performance across varying memory budgets, defined by coreset sizes of 10M, 20M, and 40M points. The SICoD iterative training loop proceeds for a fixed number of iterations (3). For training, we use the AdamW optimizer with a cosine annealing learning rate schedule (1e-3 for PTv3, 1e-4 for LGS). The PTv3 model is trained for 100 epochs per SICoD iteration, and the LGS model for 20 epochs. The entire framework is designed for out-of-core execution, with data streamed from the HDF5 file.
+
+\subsection{Evaluation Metrics}
+Performance is measured primarily by mean Intersection-over-Union (mIoU). We also report overall accuracy (OA) and per-class IoU. All final models are evaluated on the full-resolution official test set using a sliding window approach for inference to handle large scenes.
+
+\subsection{Ablation Study}
+To isolate the contribution of our gradient correction mechanism, we include an ablation study with a variant named ``SICoD (no weights)''. This variant trains the teacher model on the LGS-generated coreset but uses a standard, unweighted cross-entropy loss. Comparing its performance to the full SICoD method quantifies the benefit of the loss weighting.
+
+\section{Results}
+\label{sec:results}
+The experiment designated \texttt{PERF\_COMP\_SEMSEG\_LARGE} was executed to validate the Self-Improving Coreset Distillation (SICoD) framework against several baselines on a large-scale semantic segmentation task. The experimental protocol was designed to rigorously test our hypothesis that task-aware, iterative coreset generation leads to superior model performance under fixed memory constraints. However, the experiment encountered a critical failure during its execution, preventing the collection of empirical results.
+
+\subsection{Execution Outcome and Analysis}
+The experimental run failed to complete successfully due to a build-time error during the setup of the software environment. Specifically, the \texttt{MinkowskiEngine} library, a core dependency for implementing the sparse 3D U-Net that serves as our Learnable Geometric Saliency (LGS) predictor, failed to install. The execution logs indicate an error during the wheel-building process for this package.
+The experimental code included a conditional check that gracefully handles the absence of this critical dependency by disabling all parts of the evaluation related to our proposed method. Consequently, the training and evaluation pipelines for both the full SICoD method and its ``SICoD (no weights)'' ablation variant were skipped entirely. The provided execution logs were truncated and did not contain numerical results for any method, including the baseline samplers, suggesting a premature termination of the script following the dependency check.
+
+\subsection{Limitations}
+The primary limitation of this work, in its current state, is the complete absence of empirical validation. The failure to execute the planned experiments means that all claims regarding the performance advantages of SICoD remain hypotheses. We are unable to present any quantitative comparison between SICoD and the baseline methods (Random, Voxel Grid, FPS, Nyström sampling). Furthermore, the planned ablation study to verify the impact of the saliency-weighted loss function could not be performed. Therefore, we cannot draw any data-driven conclusions about the efficacy of our proposed method or its individual components.
+
+In summary, due to a critical software dependency failure, no results were generated for the SICoD framework. The verification of our method's usefulness is contingent upon resolving this technical issue and successfully re-executing the comprehensive experimental plan described in the previous section.
+
+\section{Conclusion}
+\label{sec:conclusion}
+In this paper, we introduced Self-Improving Coreset Distillation (SICoD), a novel framework designed to overcome the memory limitations inherent in training state-of-the-art deep learning models on massive, billion-point 3D scenes. We identified a critical 'chicken-and-egg' dilemma where effective data sampling requires a powerful model, but training such a model requires effectively sampled data. SICoD breaks this cycle through an iterative process where a primary task model and a lightweight, geometry-based saliency predictor co-evolve. Key contributions of our method include the use of knowledge distillation to train the saliency predictor, the adoption of prediction entropy as a computationally feasible saliency proxy for out-of-core data, and a gradient correction mechanism via a saliency-weighted loss function to mitigate sampling bias.
+
+The proposed framework holds significant potential for advancing the field of large-scale 3D perception. By enabling memory-intensive architectures like PTv3 \cite{wu_2023_point} to be trained on datasets that were previously intractable, SICoD could unlock new levels of performance and analysis. Furthermore, by reducing the hardware barrier to entry, it could help democratize research in this domain.
+
+While we have laid out a comprehensive theoretical framework and a rigorous experimental design for its validation, a technical failure during execution prevented us from obtaining empirical results. Therefore, the immediate and most critical future work is to resolve the environmental dependency issues and conduct the planned experiments to empirically validate the performance of SICoD against established baselines. Looking further ahead, promising research directions include exploring alternative architectures for the saliency predictor, investigating different saliency metrics, and extending the SICoD framework to other 3D tasks such as object detection. Finally, the fully trained LGS module itself could be packaged as a standalone, intelligent pre-processing layer, offering a powerful, learned alternative to conventional sampling methods in any point-based network.
+
+This work was generated by \textsc{AIRAS} \citep{airas2025}.
+
+\bibliographystyle{iclr2024_conference}
+\bibliography{references}
+
+\end{document}

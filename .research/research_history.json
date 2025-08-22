@@ -6,5 +6,52 @@
     "Vision Mamba architecture",
     "SSM duality vision",
     "Visual State Space Model"
+  ],
+  "research_study_list": [
+    {
+      "title": "VMamba: Visual State Space Model"
+    },
+    {
+      "title": "Vision Mamba Mender"
+    },
+    {
+      "title": "MambaTree: Tree Topology is All You Need in State Space Model"
+    },
+    {
+      "title": "Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality"
+    },
+    {
+      "title": "Vision Mamba Mender"
+    },
+    {
+      "title": "MambaTree: Tree Topology is All You Need in State Space Model"
+    },
+    {
+      "title": "VMamba: Visual State Space Model"
+    },
+    {
+      "title": "Vision Mamba Mender"
+    },
+    {
+      "title": "Multi-Scale VMamba: Hierarchy in Hierarchy Visual State Space Model"
+    },
+    {
+      "title": "Transformers are SSMs: Generalized Models and Efficient Algorithms Through Structured State Space Duality"
+    },
+    {
+      "title": "Matching Structure for Dual Learning"
+    },
+    {
+      "title": "Matching Structure for Dual Learning"
+    },
+    {
+      "title": "Vision Mamba: Efficient Visual Representation Learning with Bidirectional State Space Model"
+    },
+    {
+      "title": "A 2-Dimensional State Space Layer for Spatial Inductive Bias"
+    },
+    {
+      "title": "Slot State Space Models"
+    }
   ]
 }

@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/home/runner/work/experiment_matsuzawa_20250822/experiment_matsuzawa_20250822/src/main.py", line 39, in <module>
+    run_pipeline(args.config)
+  File "/home/runner/work/experiment_matsuzawa_20250822/experiment_matsuzawa_20250822/src/main.py", line 22, in run_pipeline
+    preprocess_dataset(config_path)
+  File "/home/runner/work/experiment_matsuzawa_20250822/experiment_matsuzawa_20250822/src/preprocess.py", line 88, in preprocess_dataset
+    with open(config_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'config/default.yaml'

@@ -6,5 +6,52 @@
     "Mamba pretraining low-resource",
     "S4 pretraining low-data",
     "self-supervised SSM"
+  ],
+  "research_study_list": [
+    {
+      "title": "Never Train from Scratch: Fair Comparison of Long-Sequence Models Requires Data-Driven Priors"
+    },
+    {
+      "title": "Never Train from Scratch: Fair Comparison of Long-Sequence Models Requires Data-Driven Priors"
+    },
+    {
+      "title": "Transformers to SSMs: Distilling Quadratic Knowledge to Subquadratic Models"
+    },
+    {
+      "title": "Low-Rank Constraints for Fast Inference in Structured Models"
+    },
+    {
+      "title": "eXponential FAmily Dynamical Systems (XFADS): Large-scale nonlinear Gaussian state-space modeling"
+    },
+    {
+      "title": "Diagonal State Spaces are as Effective as Structured State Spaces"
+    },
+    {
+      "title": "The Mamba in the Llama: Distilling and Accelerating Hybrid Models"
+    },
+    {
+      "title": "Transformers to SSMs: Distilling Quadratic Knowledge to Subquadratic Models"
+    },
+    {
+      "title": "SLTrain: a sparse plus low rank approach for parameter and memory efficient pretraining"
+    },
+    {
+      "title": "Enhancing Vision-Language Pre-training with Rich Supervisions"
+    },
+    {
+      "title": "No \"Zero-Shot\" Without Exponential Data: Pretraining Concept Frequency Determines Multimodal Model Performance"
+    },
+    {
+      "title": "Multi-Environment Pretraining Enables Transfer to Action Limited Datasets"
+    },
+    {
+      "title": "Slot State Space Models"
+    },
+    {
+      "title": "Masked Prediction: A Parameter Identifiability View"
+    },
+    {
+      "title": "Relational State-Space Model for Stochastic Multi-Object Systems"
+    }
   ]
 }

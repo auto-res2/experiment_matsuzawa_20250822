@@ -6,5 +6,52 @@
     "Mamba Transformer hybrid",
     "gated SSM attention",
     "state space transformer fusion"
+  ],
+  "research_study_list": [
+    {
+      "title": "Block-State Transformers"
+    },
+    {
+      "title": "Hungry Hungry Hippos: Towards Language Modeling with State Space Models"
+    },
+    {
+      "title": "Hungry Hungry Hippos: Towards Language Modeling with State Space Models"
+    },
+    {
+      "title": "Magneto: A Foundation Transformer"
+    },
+    {
+      "title": "Training Transformers with 4-bit Integers"
+    },
+    {
+      "title": "Parallelizing Linear Transformers with the Delta Rule over Sequence Length"
+    },
+    {
+      "title": "Decision Mamba: Reinforcement Learning via Hybrid Selective Sequence Modeling"
+    },
+    {
+      "title": "The Mamba in the Llama: Distilling and Accelerating Hybrid Models"
+    },
+    {
+      "title": "Can Mamba Learn How To Learn? A Comparative Study on In-Context Learning Tasks"
+    },
+    {
+      "title": "Long Range Language Modeling via Gated State Spaces"
+    },
+    {
+      "title": "Probabilistic Transformer For Time Series Analysis"
+    },
+    {
+      "title": "Slot State Space Models"
+    },
+    {
+      "title": "Transformer Fusion with Optimal Transport"
+    },
+    {
+      "title": "Block-State Transformers"
+    },
+    {
+      "title": "State-space models with layer-wise nonlinearity are universal approximators with exponential decaying memory"
+    }
   ]
 }

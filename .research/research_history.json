@@ -6,5 +6,52 @@
     "マルチタスク学習 勾配衝突",
     "タスク間干渉 抑制",
     "Multi-Task Learning Task Interference"
+  ],
+  "research_study_list": [
+    {
+      "title": "Understanding and Improving Information Transfer in Multi-Task Learning"
+    },
+    {
+      "title": "Do Current Multi-Task Optimization Methods in Deep Learning Even Help?"
+    },
+    {
+      "title": "PCA-based Multi-Task Learning: a Random Matrix Approach"
+    },
+    {
+      "title": "Understanding and Improving Information Transfer in Multi-Task Learning"
+    },
+    {
+      "title": "ForkMerge: Mitigating Negative Transfer in Auxiliary-Task Learning"
+    },
+    {
+      "title": "Quantifying Task Priority for Multi-Task Optimization"
+    },
+    {
+      "title": "Recon: Reducing Conflicting Gradients From the Root For Multi-Task Learning"
+    },
+    {
+      "title": "Conflict-Averse Gradient Descent for Multi-task learning"
+    },
+    {
+      "title": "Gradient Surgery for Multi-Task Learning"
+    },
+    {
+      "title": "Recon: Reducing Conflicting Gradients From the Root For Multi-Task Learning"
+    },
+    {
+      "title": "Which Tasks Should Be Learned Together in Multi-task Learning?"
+    },
+    {
+      "title": "Gradient Surgery for Multi-Task Learning"
+    },
+    {
+      "title": "Gradient Surgery for Multi-Task Learning"
+    },
+    {
+      "title": "Which Tasks Should Be Learned Together in Multi-task Learning?"
+    },
+    {
+      "title": "Multi-Task Structural Learning using Local Task Similarity induced Neuron Creation and Removal"
+    }
   ]
 }

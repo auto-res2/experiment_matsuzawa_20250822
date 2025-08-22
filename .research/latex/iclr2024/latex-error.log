@@ -289,10 +289,6 @@ Package natbib Warning: Citation `nguyen_2019_bayesian' on page 2 undefined on
 input line 76.
 
 
-Package natbib Warning: Citation `takano_2019_multi' on page 2 undefined on inp
-ut line 76.
-
-
 Package natbib Warning: Citation `bohdal_2022_pasha' on page 2 undefined on inp
 ut line 78.
 
@@ -367,7 +363,7 @@ fonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrb8
 a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on paper.pdf (7 pages, 131763 bytes).
+Output written on paper.pdf (7 pages, 131765 bytes).
 Transcript written on paper.log.
 This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
 The top-level auxiliary file: paper.aux
@@ -377,7 +373,6 @@ Repeated entry---line 200 of file references.bib
  : @article{mlodozeniec_2023_hyperparameter
  :                                         ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "takano_2019_multi"
 Warning--empty journal in ament_2022_scalable
 Warning--empty journal in bohdal_2022_pasha
 Warning--empty journal in li_2020_multi
@@ -678,10 +673,6 @@ Package natbib Warning: Citation `nguyen_2019_bayesian' on page 2 undefined on
 input line 76.
 
 
-Package natbib Warning: Citation `takano_2019_multi' on page 2 undefined on inp
-ut line 76.
-
-
 Package natbib Warning: Citation `bohdal_2022_pasha' on page 2 undefined on inp
 ut line 78.
 
@@ -753,7 +744,7 @@ a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (8 pages, 145540 bytes).
+Output written on paper.pdf (8 pages, 145542 bytes).
 Transcript written on paper.log.
 This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
@@ -1025,10 +1016,6 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg) [1{/var/lib/texm
 f/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/d
 vips/base/8r.enc}] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
-
-Package natbib Warning: Citation `takano_2019_multi' on page 2 undefined on inp
-ut line 76.
-
 [2] [3] [4] (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd)
 Underfull \hbox (badness 2951) in paragraph at lines 142--143
 []\T1/pcr/b/n/10 BNNOnProteinStructure_v0\T1/ptm/b/n/10 (+20) : \T1/ptm/m/n/10 
@@ -1041,11 +1028,7 @@ pcr/m/n/10 GPyTorch\T1/ptm/m/n/10 (+20) . We use a
 Underfull \hbox (badness 1019) in paragraph at lines 154--155
 \T1/pcr/m/n/10 gpytorch.models.MultiTaskGP \T1/ptm/m/n/10 (+20) to ex-plic-itly
  model the per-for-mance at each bud-get
-[5] [6] (./paper.bbl [7])
-
-Package natbib Warning: There were undefined citations.
-
-[8] (./paper.aux) )
+[5] [6] (./paper.bbl [7]) [8] (./paper.aux) )
 (see the transcript file for additional information)</usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
@@ -1056,5 +1039,5 @@ a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (8 pages, 147696 bytes).
+Output written on paper.pdf (8 pages, 146904 bytes).
 Transcript written on paper.log.

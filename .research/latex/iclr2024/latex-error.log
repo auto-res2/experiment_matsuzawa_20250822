@@ -1,0 +1,2355 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./paper.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo))
+(./iclr2024_conference.sty
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)))
+(./fancyhdr.sty) (./natbib.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/units/nicefrac.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered
+.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex))
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
+.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_loader.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+)
+Package pgfplots: loading complementary utilities for your pgf version...
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgfutil-common-lists.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructure.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructureext.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
+x.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
+d.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.te
+x
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.co
+de.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
+fshading.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
+shading.pgfsys-pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.
+tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.t
+ex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.cod
+e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.
+tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
+e.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathmorphing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathmorphing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathreplacing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathreplacing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.co
+ntourlua.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryplotmarks.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.co
+de.tex))) (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+No file paper.aux.
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-ptm.cfg)
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+! Undefined control sequence.
+l.55 ...d defer to human experts when necessary.\n
+                                                  \nCurrent UQ methodologies...
+
+! Undefined control sequence.
+l.55 ...o human experts when necessary.\n\nCurrent
+                                                   UQ methodologies for LLMs...
+
+
+Package natbib Warning: Citation `wang_2024_blob' on page 1 undefined on input 
+line 55.
+
+
+Package natbib Warning: Citation `kapoor_2024_large' on page 1 undefined on inp
+ut line 55.
+
+! Undefined control sequence.
+l.55 ...in billion-parameter open-weight models.\n
+                                                  \nThe second category comp...
+
+! Undefined control sequence.
+l.55 ...llion-parameter open-weight models.\n\nThe
+                                                   second category comprises...
+
+
+Package natbib Warning: Citation `quach_2023_conformal' on page 1 undefined on 
+input line 55.
+
+
+Package natbib Warning: Citation `mohri_2024_language' on page 1 undefined on i
+nput line 55.
+
+
+Package natbib Warning: Citation `liu_2023_litcab' on page 1 undefined on input
+ line 55.
+
+
+Package natbib Warning: Citation `mohri_2024_language' on page 1 undefined on i
+nput line 55.
+
+
+Package natbib Warning: Citation `du_2024_haloscope' on page 1 undefined on inp
+ut line 55.
+
+! Undefined control sequence.
+l.55 ...al dynamics of the generation *process*.\n
+                                                  \nTo address this gap, we ...
+
+! Undefined control sequence.
+l.55 ...ynamics of the generation *process*.\n\nTo
+                                                   address this gap, we prop...
+
+! Undefined control sequence.
+l.55 ...etric that operationalizes this concept.\n
+                                                  \nOur contributions are as...
+
+! Undefined control sequence.
+l.55 ... that operationalizes this concept.\n\nOur
+                                                   contributions are as foll...
+
+! Undefined control sequence.
+l.55 ...pt.\n\nOur contributions are as follows:\n
+                                                  \n\begin{itemize}
+! Undefined control sequence.
+l.55 ....\n\nOur contributions are as follows:\n\n
+                                                  \begin{itemize}
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
+dist/fonts/enc/dvips/base/8r.enc}]
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+
+Package natbib Warning: Citation `cherian_2024_large' on page 2 undefined on in
+put line 59.
+
+
+Package natbib Warning: Citation `hou_2023_decomposing' on page 2 undefined on 
+input line 60.
+
+! Undefined control sequence.
+l.65 ...eas and contrast our approach with each.\n
+                                                  \n\textbf{Training-Based U...
+
+! Undefined control sequence.
+l.65 ...s and contrast our approach with each.\n\n
+                                                  \textbf{Training-Based Unc...
+
+
+Package natbib Warning: Citation `wang_2024_blob' on page 2 undefined on input 
+line 65.
+
+
+Package natbib Warning: Citation `kapoor_2024_large' on page 2 undefined on inp
+ut line 65.
+
+! Undefined control sequence.
+l.65 ...model that provides hidden state access.\n
+                                                  \n\textbf{Logit-Based and ...
+
+! Undefined control sequence.
+l.65 ...del that provides hidden state access.\n\n
+                                                  \textbf{Logit-Based and Ca...
+
+
+Package natbib Warning: Citation `quach_2023_conformal' on page 2 undefined on 
+input line 65.
+
+
+Package natbib Warning: Citation `mohri_2024_language' on page 2 undefined on i
+nput line 65.
+
+
+Package natbib Warning: Citation `shen_2024_thermometer' on page 2 undefined on
+ input line 65.
+
+
+Package natbib Warning: Citation `liu_2023_litcab' on page 2 undefined on input
+ line 65.
+
+! Undefined control sequence.
+l.65 ...n states, making it a logit-free metric.\n
+                                                  \n\textbf{Text-Based Uncer...
+
+! Undefined control sequence.
+l.65 ...states, making it a logit-free metric.\n\n
+                                                  \textbf{Text-Based Uncerta...
+
+
+Package natbib Warning: Citation `mohri_2024_language' on page 2 undefined on i
+nput line 65.
+
+! Undefined control sequence.
+l.65 ...orm and robust to different text styles.\n
+                                                  \n\textbf{Latent Space Pro...
+
+! Undefined control sequence.
+l.65 ...m and robust to different text styles.\n\n
+                                                  \textbf{Latent Space Probi...
+
+
+Package natbib Warning: Citation `burns_2022_discovering' on page 2 undefined o
+n input line 65.
+
+
+Package natbib Warning: Citation `azaria_2023_the' on page 2 undefined on input
+ line 65.
+
+
+Package natbib Warning: Citation `du_2024_haloscope' on page 2 undefined on inp
+ut line 65.
+
+[2]
+! Undefined control sequence.
+l.69 ...and formally define the problem setting.\n
+                                                  \nUncertainty in machine l...
+
+! Undefined control sequence.
+l.69 ...define the problem setting.\n\nUncertainty
+                                                   in machine learning model...
+
+
+Package natbib Warning: Citation `ahdritz_2024_distinguishing' on page 3 undefi
+ned on input line 69.
+
+
+Package natbib Warning: Citation `hou_2023_decomposing' on page 3 undefined on 
+input line 69.
+
+! Undefined control sequence.
+l.69 ... model's response should not be trusted.\n
+                                                  \nOur work proposes a nove...
+
+! Undefined control sequence.
+l.69 ...l's response should not be trusted.\n\nOur
+                                                   work proposes a novel way...
+
+! Undefined control sequence.
+l.69 ...ores multiple, competing semantic paths.\n
+                                                  \n\textbf{Problem Setting ...
+
+! Undefined control sequence.
+l.69 ...es multiple, competing semantic paths.\n\n
+                                                  \textbf{Problem Setting an...
+
+! Undefined control sequence.
+<recently read> \n 
+                   
+l.69 ...n\n\textbf{Problem Setting and Notation}\n
+                                                  \nWe consider a large lang...
+
+! Undefined control sequence.
+l.69 ...textbf{Problem Setting and Notation}\n\nWe
+                                                   consider a large language...
+
+! Undefined control sequence.
+l.69 ... prompt and previously generated tokens:\n
+                                                  \[ P(y_t | p, y_{<t}; \the...
+
+! Undefined control sequence.
+l.70 \nDuring
+              this forward pass, the model produces a sequence of hidden sta...
+
+! Undefined control sequence.
+l.70 ...hidden states for a complete generation:\n
+                                                  \[ T = (h_1, h_2, ..., h_L...
+
+! Undefined control sequence.
+l.71 \nThe
+           length $L$ of the trajectory can vary for different generations f...
+
+! Undefined control sequence.
+l.75 ...n a training-free and logit-free manner.\n
+                                                  \nThe LTD score is compute...
+
+! Undefined control sequence.
+l.75 ...raining-free and logit-free manner.\n\nThe
+                                                   LTD score is computed thr...
+
+! Undefined control sequence.
+l.75 ... by an efficient divergence calculation.\n
+                                                  \n\textbf{1. Ensemble Traj...
+
+! Undefined control sequence.
+l.75 ...y an efficient divergence calculation.\n\n
+                                                  \textbf{1. Ensemble Trajec...
+
+! Undefined control sequence.
+<recently read> \n 
+                   
+l.75 ...extbf{1. Ensemble Trajectory Generation}\n
+                                                  \nFor a given input prompt...
+
+! Undefined control sequence.
+l.75 ...{1. Ensemble Trajectory Generation}\n\nFor
+                                                   a given input prompt $p$,...
+
+! Undefined control sequence.
+l.75 ...lengths of the generated text responses.\n
+                                                  \n\textbf{2. Efficient Div...
+
+! Undefined control sequence.
+l.75 ...ngths of the generated text responses.\n\n
+                                                  \textbf{2. Efficient Diver...
+
+! Undefined control sequence.
+<recently read> \n 
+                   
+l.75 ...a Trajectory Barycenter Alignment (TBA)}\n
+                                                  \nA naive comparison of al...
+
+! Undefined control sequence.
+l.75 ...rajectory Barycenter Alignment (TBA)}\n\nA
+                                                   naive comparison of all t...
+
+! Undefined control sequence.
+l.75 ... The LTD score is calculated as follows:\n
+                                                  \n\begin{itemize}
+! Undefined control sequence.
+l.75 ...he LTD score is calculated as follows:\n\n
+                                                  \begin{itemize}
+[3]
+! Undefined control sequence.
+l.76 ...ents the consensus path of the ensemble.\n
+                                                      \item \textbf{b. Diver...
+
+! Undefined control sequence.
+l.79 \nA
+         higher LTD score signifies greater geometric divergence among the l...
+
+! Undefined control sequence.
+l.79 ...ys, indicating higher model uncertainty.\n
+                                                  \n\textbf{Diagnostic Mappi...
+
+! Undefined control sequence.
+l.79 ..., indicating higher model uncertainty.\n\n
+                                                  \textbf{Diagnostic Mapping...
+
+! Undefined control sequence.
+<recently read> \n 
+                   
+l.79 ...ic Mapping: The Uncertainty Seismograph}\n
+                                                  \nThe DTW alignment proces...
+
+! Undefined control sequence.
+l.79 ...pping: The Uncertainty Seismograph}\n\nThe
+                                                   DTW alignment process pro...
+
+! Undefined control sequence.
+l.79 ...hat cause the model to become uncertain.\n
+                                                  \n\textbf{Applications of ...
+
+! Undefined control sequence.
+l.79 ...t cause the model to become uncertain.\n\n
+                                                  \textbf{Applications of LT...
+
+! Undefined control sequence.
+<recently read> \n 
+                   
+l.79 ...certain.\n\n\textbf{Applications of LTD}\n
+                                                  \nThe LTD score's robustne...
+
+! Undefined control sequence.
+l.79 ...in.\n\n\textbf{Applications of LTD}\n\nThe
+                                                   LTD score's robustness ma...
+
+
+Package natbib Warning: Citation `mohri_2024_language' on page 4 undefined on i
+nput line 79.
+
+
+Package natbib Warning: Citation `hou_2023_decomposing' on page 4 undefined on 
+input line 79.
+
+! Undefined control sequence.
+l.83 ...uncertainty quantification (UQ) methods.\n
+                                                  \n\textbf{Hypothesis}\nOur...
+
+! Undefined control sequence.
+l.83 ...certainty quantification (UQ) methods.\n\n
+                                                  \textbf{Hypothesis}\nOur c...
+
+! Undefined control sequence.
+<recently read> \nOur 
+                      
+l.83 ... (UQ) methods.\n\n\textbf{Hypothesis}\nOur
+                                                   core hypothesis is that a...
+
+! Undefined control sequence.
+l.83 ...hing correct from incorrect generations.\n
+                                                  \n\textbf{Models and Datas...
+
+! Undefined control sequence.
+l.83 ...ng correct from incorrect generations.\n\n
+                                                  \textbf{Models and Dataset...
+
+! Undefined control sequence.
+<recently read> \nTo 
+                     
+l.83 ...tions.\n\n\textbf{Models and Datasets}\nTo
+                                                   ensure generalizability, ...
+
+! Undefined control sequence.
+l.83 ...ance across different knowledge domains:\n
+                                                  \begin{itemize}
+[4]
+! Undefined control sequence.
+l.89 \n
+       \textbf{Experimental Protocol}\nFor each question in the datasets, we...
+
+! Undefined control sequence.
+<recently read> \nFor 
+                      
+l.89 \n\textbf{Experimental Protocol}\nFor
+                                           each question in the datasets, we...
+
+! Undefined control sequence.
+l.89 ... token, forming $k$ latent trajectories.\n
+                                                  \nWe compute the following...
+
+! Undefined control sequence.
+l.89 ...en, forming $k$ latent trajectories.\n\nWe
+                                                   compute the following unc...
+
+! Undefined control sequence.
+l.89 ...inty scores for each generated ensemble:\n
+                                                  \begin{enumerate}
+
+Package natbib Warning: Citation `du_2024_haloscope' on page 5 undefined on inp
+ut line 93.
+
+! Undefined control sequence.
+l.95 \n
+       \textbf{Ground-Truth Labeling and Evaluation}\nEach of the $k$ indivi...
+
+! Undefined control sequence.
+<recently read> \nEach 
+                       
+l.95 ...round-Truth Labeling and Evaluation}\nEach
+                                                   of the $k$ individual gen...
+
+! Undefined control sequence.
+l.95 ...r for error detection is measured using:\n
+                                                  \begin{itemize}
+! Undefined control sequence.
+l.100 ...ferences between LTD and the baselines.\n
+                                                  \n\textbf{Ablation Studies...
+
+! Undefined control sequence.
+l.100 ...rences between LTD and the baselines.\n\n
+                                                  \textbf{Ablation Studies}\...
+
+! Undefined control sequence.
+<recently read> \nTo 
+                     
+l.100 ...selines.\n\n\textbf{Ablation Studies}\nTo
+                                                   ensure robustness, we pla...
+
+! Undefined control sequence.
+l.104 ...as generated using stochastic sampling.\n
+                                                  \nThe results of this prel...
+
+! Undefined control sequence.
+l.104 ...nerated using stochastic sampling.\n\nThe
+                                                   results of this prelimina...
+
+! Undefined control sequence.
+l.104 ...generations, are summarized in Table 1.\n
+                                                  \n\begin{table}[H]
+! Undefined control sequence.
+l.104 ...nerations, are summarized in Table 1.\n\n
+                                                  \begin{table}[H]
+! Undefined control sequence.
+l.119 \n
+        *Table 1: Performance of UQ methods on error detection for the `gpt2...
+
+! Undefined control sequence.
+l.119 ... performance worse than random chance.*\n
+                                                  \nContrary to our central ...
+
+! Undefined control sequence.
+l.119 ...ce worse than random chance.*\n\nContrary
+                                                   to our central hypothesis...
+
+! Undefined control sequence.
+l.119 ...cope baseline performed equally poorly.\n
+                                                  \nSemantic Entropy perform...
+
+! Undefined control sequence.
+l.119 ...ine performed equally poorly.\n\nSemantic
+                                                   Entropy performed at the ...
+
+! Undefined control sequence.
+l.119 ... for all methods are shown in Figure 1.\n
+                                                  \n\begin{figure}[H]
+! Undefined control sequence.
+l.119 ...or all methods are shown in Figure 1.\n\n
+                                                  \begin{figure}[H]
+[5]
+! Undefined control sequence.
+l.125 \nTo
+           further understand these results, we plotted the score distributi...
+
+! Undefined control sequence.
+l.125 ...ending to have higher diversity scores.\n
+                                                  \n\begin{figure}[H]
+! Undefined control sequence.
+l.125 ...ding to have higher diversity scores.\n\n
+                                                  \begin{figure}[H]
+! Undefined control sequence.
+l.131 \n
+        \begin{figure}[H]
+
+Underfull \vbox (badness 10000) has occurred while \output is active [6 <./imag
+es/roc_curves_comparison_gpt2.pdf>]
+! Undefined control sequence.
+l.137 \n
+        \begin{figure}[H]
+! Undefined control sequence.
+l.143 \n
+        \begin{figure}[H]
+
+Underfull \vbox (badness 10000) has occurred while \output is active [7 <./imag
+es/score_distributions_ltd_gpt2.pdf> <./images/score_distributions_lexical_dive
+rsity_gpt2.pdf>]
+! Undefined control sequence.
+l.149 \n
+        \textbf{Limitations and Discussion}\nIt is crucial to interpret thes...
+
+! Undefined control sequence.
+<recently read> \nIt 
+                     
+l.149 \n\textbf{Limitations and Discussion}\nIt
+                                                is crucial to interpret thes...
+
+! Undefined control sequence.
+l.149 ...t was severely limited in several ways:\n
+                                                  1.  \textbf{Model Scale:} ...
+
+! Undefined control sequence.
+l.149 ... differ fundamentally in larger models.\n
+                                                  2.  \textbf{Dataset Size:}...
+
+! Undefined control sequence.
+l.149 ...otal and not statistically significant.\n
+                                                  3.  \textbf{Ensemble Size:...
+
+! Undefined control sequence.
+l.149 ...able estimate of trajectory divergence.\n
+                                                  \nWhile this initial test ...
+
+! Undefined control sequence.
+l.149 ...timate of trajectory divergence.\n\nWhile
+                                                   this initial test failed ...
+
+! Undefined control sequence.
+l.153 ...atent space pathways during generation.\n
+                                                  \nWe presented a complete ...
+
+! Undefined control sequence.
+l.153 ...t space pathways during generation.\n\nWe
+                                                   presented a complete meth...
+
+! Undefined control sequence.
+l.153 ...the-art UQ methods for error detection.\n
+                                                  \nA preliminary experiment...
+
+! Undefined control sequence.
+l.153 ...-art UQ methods for error detection.\n\nA
+                                                   preliminary experiment co...
+
+! Undefined control sequence.
+l.153 ...ty of LTD for modern, large-scale LLMs.\n
+                                                  \nThe primary implication ...
+
+! Undefined control sequence.
+l.153 ... LTD for modern, large-scale LLMs.\n\nThe
+                                                   primary implication of ou...
+
+[8 <./images/score_distributions_semantic_entropy_gpt2.pdf> <./images/score_dis
+tributions_haloscope_(mock)_gpt2.pdf>]
+
+Package natbib Warning: Citation `airas2025' on page 9 undefined on input line 
+155.
+
+No file paper.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+[9] (./paper.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `paper.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)</usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
+msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on paper.pdf (9 pages, 188550 bytes).
+Transcript written on paper.log.
+This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+The top-level auxiliary file: paper.aux
+The style file: iclr2024_conference.bst
+Database file #1: references.bib
+Repeated entry---line 170 of file references.bib
+ : @article{hou_2023_decomposing
+ :                              ,
+I'm skipping whatever remains of this entry
+Warning--empty journal in ahdritz_2024_distinguishing
+Warning--empty journal in azaria_2023_the
+Warning--empty journal in burns_2022_discovering
+Warning--empty journal in cherian_2024_large
+Warning--empty journal in du_2024_haloscope
+Warning--empty journal in hou_2023_decomposing
+Warning--empty journal in kapoor_2024_large
+Warning--empty journal in liu_2023_litcab
+Warning--empty journal in mohri_2024_language
+Warning--empty journal in quach_2023_conformal
+Warning--empty journal in shen_2024_thermometer
+Warning--empty journal in wang_2024_blob
+(There was 1 error message)
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./paper.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo))
+(./iclr2024_conference.sty
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)))
+(./fancyhdr.sty) (./natbib.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/units/nicefrac.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered
+.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex))
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
+.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_loader.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+)
+Package pgfplots: loading complementary utilities for your pgf version...
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgfutil-common-lists.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructure.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructureext.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
+x.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
+d.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.te
+x
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.co
+de.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
+fshading.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
+shading.pgfsys-pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.
+tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.t
+ex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.cod
+e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.
+tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
+e.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathmorphing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathmorphing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathreplacing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathreplacing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.co
+ntourlua.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryplotmarks.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.co
+de.tex))) (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./paper.aux)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(./paper.out) (./paper.out)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-ptm.cfg)
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+! Undefined control sequence.
+l.55 ...d defer to human experts when necessary.\n
+                                                  \nCurrent UQ methodologies...
+
+! Undefined control sequence.
+l.55 ...o human experts when necessary.\n\nCurrent
+                                                   UQ methodologies for LLMs...
+
+
+Package natbib Warning: Citation `wang_2024_blob' on page 1 undefined on input 
+line 55.
+
+
+Package natbib Warning: Citation `kapoor_2024_large' on page 1 undefined on inp
+ut line 55.
+
+! Undefined control sequence.
+l.55 ...in billion-parameter open-weight models.\n
+                                                  \nThe second category comp...
+
+! Undefined control sequence.
+l.55 ...llion-parameter open-weight models.\n\nThe
+                                                   second category comprises...
+
+
+Package natbib Warning: Citation `quach_2023_conformal' on page 1 undefined on 
+input line 55.
+
+
+Package natbib Warning: Citation `mohri_2024_language' on page 1 undefined on i
+nput line 55.
+
+
+Package natbib Warning: Citation `liu_2023_litcab' on page 1 undefined on input
+ line 55.
+
+
+Package natbib Warning: Citation `mohri_2024_language' on page 1 undefined on i
+nput line 55.
+
+
+Package natbib Warning: Citation `du_2024_haloscope' on page 1 undefined on inp
+ut line 55.
+
+! Undefined control sequence.
+l.55 ...al dynamics of the generation *process*.\n
+                                                  \nTo address this gap, we ...
+
+! Undefined control sequence.
+l.55 ...ynamics of the generation *process*.\n\nTo
+                                                   address this gap, we prop...
+
+! Undefined control sequence.
+l.55 ...etric that operationalizes this concept.\n
+                                                  \nOur contributions are as...
+
+! Undefined control sequence.
+l.55 ... that operationalizes this concept.\n\nOur
+                                                   contributions are as foll...
+
+! Undefined control sequence.
+l.55 ...pt.\n\nOur contributions are as follows:\n
+                                                  \n\begin{itemize}
+! Undefined control sequence.
+l.55 ....\n\nOur contributions are as follows:\n\n
+                                                  \begin{itemize}
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
+dist/fonts/enc/dvips/base/8r.enc}]
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+
+Package natbib Warning: Citation `cherian_2024_large' on page 2 undefined on in
+put line 59.
+
+
+Package natbib Warning: Citation `hou_2023_decomposing' on page 2 undefined on 
+input line 60.
+
+! Undefined control sequence.
+l.65 ...eas and contrast our approach with each.\n
+                                                  \n\textbf{Training-Based U...
+
+! Undefined control sequence.
+l.65 ...s and contrast our approach with each.\n\n
+                                                  \textbf{Training-Based Unc...
+
+
+Package natbib Warning: Citation `wang_2024_blob' on page 2 undefined on input 
+line 65.
+
+
+Package natbib Warning: Citation `kapoor_2024_large' on page 2 undefined on inp
+ut line 65.
+
+! Undefined control sequence.
+l.65 ...model that provides hidden state access.\n
+                                                  \n\textbf{Logit-Based and ...
+
+! Undefined control sequence.
+l.65 ...del that provides hidden state access.\n\n
+                                                  \textbf{Logit-Based and Ca...
+
+
+Package natbib Warning: Citation `quach_2023_conformal' on page 2 undefined on 
+input line 65.
+
+
+Package natbib Warning: Citation `mohri_2024_language' on page 2 undefined on i
+nput line 65.
+
+
+Package natbib Warning: Citation `shen_2024_thermometer' on page 2 undefined on
+ input line 65.
+
+
+Package natbib Warning: Citation `liu_2023_litcab' on page 2 undefined on input
+ line 65.
+
+! Undefined control sequence.
+l.65 ...n states, making it a logit-free metric.\n
+                                                  \n\textbf{Text-Based Uncer...
+
+! Undefined control sequence.
+l.65 ...states, making it a logit-free metric.\n\n
+                                                  \textbf{Text-Based Uncerta...
+
+
+Package natbib Warning: Citation `mohri_2024_language' on page 2 undefined on i
+nput line 65.
+
+! Undefined control sequence.
+l.65 ...orm and robust to different text styles.\n
+                                                  \n\textbf{Latent Space Pro...
+
+! Undefined control sequence.
+l.65 ...m and robust to different text styles.\n\n
+                                                  \textbf{Latent Space Probi...
+
+
+Package natbib Warning: Citation `burns_2022_discovering' on page 2 undefined o
+n input line 65.
+
+
+Package natbib Warning: Citation `azaria_2023_the' on page 2 undefined on input
+ line 65.
+
+
+Package natbib Warning: Citation `du_2024_haloscope' on page 2 undefined on inp
+ut line 65.
+
+[2]
+! Undefined control sequence.
+l.69 ...and formally define the problem setting.\n
+                                                  \nUncertainty in machine l...
+
+! Undefined control sequence.
+l.69 ...define the problem setting.\n\nUncertainty
+                                                   in machine learning model...
+
+
+Package natbib Warning: Citation `ahdritz_2024_distinguishing' on page 3 undefi
+ned on input line 69.
+
+
+Package natbib Warning: Citation `hou_2023_decomposing' on page 3 undefined on 
+input line 69.
+
+! Undefined control sequence.
+l.69 ... model's response should not be trusted.\n
+                                                  \nOur work proposes a nove...
+
+! Undefined control sequence.
+l.69 ...l's response should not be trusted.\n\nOur
+                                                   work proposes a novel way...
+
+! Undefined control sequence.
+l.69 ...ores multiple, competing semantic paths.\n
+                                                  \n\textbf{Problem Setting ...
+
+! Undefined control sequence.
+l.69 ...es multiple, competing semantic paths.\n\n
+                                                  \textbf{Problem Setting an...
+
+! Undefined control sequence.
+<recently read> \n 
+                   
+l.69 ...n\n\textbf{Problem Setting and Notation}\n
+                                                  \nWe consider a large lang...
+
+! Undefined control sequence.
+l.69 ...textbf{Problem Setting and Notation}\n\nWe
+                                                   consider a large language...
+
+! Undefined control sequence.
+l.69 ... prompt and previously generated tokens:\n
+                                                  \[ P(y_t | p, y_{<t}; \the...
+
+! Undefined control sequence.
+l.70 \nDuring
+              this forward pass, the model produces a sequence of hidden sta...
+
+! Undefined control sequence.
+l.70 ...hidden states for a complete generation:\n
+                                                  \[ T = (h_1, h_2, ..., h_L...
+
+! Undefined control sequence.
+l.71 \nThe
+           length $L$ of the trajectory can vary for different generations f...
+
+! Undefined control sequence.
+l.75 ...n a training-free and logit-free manner.\n
+                                                  \nThe LTD score is compute...
+
+! Undefined control sequence.
+l.75 ...raining-free and logit-free manner.\n\nThe
+                                                   LTD score is computed thr...
+
+! Undefined control sequence.
+l.75 ... by an efficient divergence calculation.\n
+                                                  \n\textbf{1. Ensemble Traj...
+
+! Undefined control sequence.
+l.75 ...y an efficient divergence calculation.\n\n
+                                                  \textbf{1. Ensemble Trajec...
+
+! Undefined control sequence.
+<recently read> \n 
+                   
+l.75 ...extbf{1. Ensemble Trajectory Generation}\n
+                                                  \nFor a given input prompt...
+
+! Undefined control sequence.
+l.75 ...{1. Ensemble Trajectory Generation}\n\nFor
+                                                   a given input prompt $p$,...
+
+! Undefined control sequence.
+l.75 ...lengths of the generated text responses.\n
+                                                  \n\textbf{2. Efficient Div...
+
+! Undefined control sequence.
+l.75 ...ngths of the generated text responses.\n\n
+                                                  \textbf{2. Efficient Diver...
+
+! Undefined control sequence.
+<recently read> \n 
+                   
+l.75 ...a Trajectory Barycenter Alignment (TBA)}\n
+                                                  \nA naive comparison of al...
+
+! Undefined control sequence.
+l.75 ...rajectory Barycenter Alignment (TBA)}\n\nA
+                                                   naive comparison of all t...
+
+! Undefined control sequence.
+l.75 ... The LTD score is calculated as follows:\n
+                                                  \n\begin{itemize}
+! Undefined control sequence.
+l.75 ...he LTD score is calculated as follows:\n\n
+                                                  \begin{itemize}
+[3]
+! Undefined control sequence.
+l.76 ...ents the consensus path of the ensemble.\n
+                                                      \item \textbf{b. Diver...
+
+! Undefined control sequence.
+l.79 \nA
+         higher LTD score signifies greater geometric divergence among the l...
+
+! Undefined control sequence.
+l.79 ...ys, indicating higher model uncertainty.\n
+                                                  \n\textbf{Diagnostic Mappi...
+
+! Undefined control sequence.
+l.79 ..., indicating higher model uncertainty.\n\n
+                                                  \textbf{Diagnostic Mapping...
+
+! Undefined control sequence.
+<recently read> \n 
+                   
+l.79 ...ic Mapping: The Uncertainty Seismograph}\n
+                                                  \nThe DTW alignment proces...
+
+! Undefined control sequence.
+l.79 ...pping: The Uncertainty Seismograph}\n\nThe
+                                                   DTW alignment process pro...
+
+! Undefined control sequence.
+l.79 ...hat cause the model to become uncertain.\n
+                                                  \n\textbf{Applications of ...
+
+! Undefined control sequence.
+l.79 ...t cause the model to become uncertain.\n\n
+                                                  \textbf{Applications of LT...
+
+! Undefined control sequence.
+<recently read> \n 
+                   
+l.79 ...certain.\n\n\textbf{Applications of LTD}\n
+                                                  \nThe LTD score's robustne...
+
+! Undefined control sequence.
+l.79 ...in.\n\n\textbf{Applications of LTD}\n\nThe
+                                                   LTD score's robustness ma...
+
+
+Package natbib Warning: Citation `mohri_2024_language' on page 4 undefined on i
+nput line 79.
+
+
+Package natbib Warning: Citation `hou_2023_decomposing' on page 4 undefined on 
+input line 79.
+
+! Undefined control sequence.
+l.83 ...uncertainty quantification (UQ) methods.\n
+                                                  \n\textbf{Hypothesis}\nOur...
+
+! Undefined control sequence.
+l.83 ...certainty quantification (UQ) methods.\n\n
+                                                  \textbf{Hypothesis}\nOur c...
+
+! Undefined control sequence.
+<recently read> \nOur 
+                      
+l.83 ... (UQ) methods.\n\n\textbf{Hypothesis}\nOur
+                                                   core hypothesis is that a...
+
+! Undefined control sequence.
+l.83 ...hing correct from incorrect generations.\n
+                                                  \n\textbf{Models and Datas...
+
+! Undefined control sequence.
+l.83 ...ng correct from incorrect generations.\n\n
+                                                  \textbf{Models and Dataset...
+
+! Undefined control sequence.
+<recently read> \nTo 
+                     
+l.83 ...tions.\n\n\textbf{Models and Datasets}\nTo
+                                                   ensure generalizability, ...
+
+! Undefined control sequence.
+l.83 ...ance across different knowledge domains:\n
+                                                  \begin{itemize}
+[4]
+! Undefined control sequence.
+l.89 \n
+       \textbf{Experimental Protocol}\nFor each question in the datasets, we...
+
+! Undefined control sequence.
+<recently read> \nFor 
+                      
+l.89 \n\textbf{Experimental Protocol}\nFor
+                                           each question in the datasets, we...
+
+! Undefined control sequence.
+l.89 ... token, forming $k$ latent trajectories.\n
+                                                  \nWe compute the following...
+
+! Undefined control sequence.
+l.89 ...en, forming $k$ latent trajectories.\n\nWe
+                                                   compute the following unc...
+
+! Undefined control sequence.
+l.89 ...inty scores for each generated ensemble:\n
+                                                  \begin{enumerate}
+
+Package natbib Warning: Citation `du_2024_haloscope' on page 5 undefined on inp
+ut line 93.
+
+! Undefined control sequence.
+l.95 \n
+       \textbf{Ground-Truth Labeling and Evaluation}\nEach of the $k$ indivi...
+
+! Undefined control sequence.
+<recently read> \nEach 
+                       
+l.95 ...round-Truth Labeling and Evaluation}\nEach
+                                                   of the $k$ individual gen...
+
+! Undefined control sequence.
+l.95 ...r for error detection is measured using:\n
+                                                  \begin{itemize}
+! Undefined control sequence.
+l.100 ...ferences between LTD and the baselines.\n
+                                                  \n\textbf{Ablation Studies...
+
+! Undefined control sequence.
+l.100 ...rences between LTD and the baselines.\n\n
+                                                  \textbf{Ablation Studies}\...
+
+! Undefined control sequence.
+<recently read> \nTo 
+                     
+l.100 ...selines.\n\n\textbf{Ablation Studies}\nTo
+                                                   ensure robustness, we pla...
+
+! Undefined control sequence.
+l.104 ...as generated using stochastic sampling.\n
+                                                  \nThe results of this prel...
+
+! Undefined control sequence.
+l.104 ...nerated using stochastic sampling.\n\nThe
+                                                   results of this prelimina...
+
+! Undefined control sequence.
+l.104 ...generations, are summarized in Table 1.\n
+                                                  \n\begin{table}[H]
+! Undefined control sequence.
+l.104 ...nerations, are summarized in Table 1.\n\n
+                                                  \begin{table}[H]
+! Undefined control sequence.
+l.119 \n
+        *Table 1: Performance of UQ methods on error detection for the `gpt2...
+
+! Undefined control sequence.
+l.119 ... performance worse than random chance.*\n
+                                                  \nContrary to our central ...
+
+! Undefined control sequence.
+l.119 ...ce worse than random chance.*\n\nContrary
+                                                   to our central hypothesis...
+
+! Undefined control sequence.
+l.119 ...cope baseline performed equally poorly.\n
+                                                  \nSemantic Entropy perform...
+
+! Undefined control sequence.
+l.119 ...ine performed equally poorly.\n\nSemantic
+                                                   Entropy performed at the ...
+
+! Undefined control sequence.
+l.119 ... for all methods are shown in Figure 1.\n
+                                                  \n\begin{figure}[H]
+! Undefined control sequence.
+l.119 ...or all methods are shown in Figure 1.\n\n
+                                                  \begin{figure}[H]
+[5]
+! Undefined control sequence.
+l.125 \nTo
+           further understand these results, we plotted the score distributi...
+
+! Undefined control sequence.
+l.125 ...ending to have higher diversity scores.\n
+                                                  \n\begin{figure}[H]
+! Undefined control sequence.
+l.125 ...ding to have higher diversity scores.\n\n
+                                                  \begin{figure}[H]
+! Undefined control sequence.
+l.131 \n
+        \begin{figure}[H]
+
+Underfull \vbox (badness 10000) has occurred while \output is active [6 <./imag
+es/roc_curves_comparison_gpt2.pdf>]
+! Undefined control sequence.
+l.137 \n
+        \begin{figure}[H]
+! Undefined control sequence.
+l.143 \n
+        \begin{figure}[H]
+
+Underfull \vbox (badness 10000) has occurred while \output is active [7 <./imag
+es/score_distributions_ltd_gpt2.pdf> <./images/score_distributions_lexical_dive
+rsity_gpt2.pdf>]
+! Undefined control sequence.
+l.149 \n
+        \textbf{Limitations and Discussion}\nIt is crucial to interpret thes...
+
+! Undefined control sequence.
+<recently read> \nIt 
+                     
+l.149 \n\textbf{Limitations and Discussion}\nIt
+                                                is crucial to interpret thes...
+
+! Undefined control sequence.
+l.149 ...t was severely limited in several ways:\n
+                                                  1.  \textbf{Model Scale:} ...
+
+! Undefined control sequence.
+l.149 ... differ fundamentally in larger models.\n
+                                                  2.  \textbf{Dataset Size:}...
+
+! Undefined control sequence.
+l.149 ...otal and not statistically significant.\n
+                                                  3.  \textbf{Ensemble Size:...
+
+! Undefined control sequence.
+l.149 ...able estimate of trajectory divergence.\n
+                                                  \nWhile this initial test ...
+
+! Undefined control sequence.
+l.149 ...timate of trajectory divergence.\n\nWhile
+                                                   this initial test failed ...
+
+! Undefined control sequence.
+l.153 ...atent space pathways during generation.\n
+                                                  \nWe presented a complete ...
+
+! Undefined control sequence.
+l.153 ...t space pathways during generation.\n\nWe
+                                                   presented a complete meth...
+
+! Undefined control sequence.
+l.153 ...the-art UQ methods for error detection.\n
+                                                  \nA preliminary experiment...
+
+! Undefined control sequence.
+l.153 ...-art UQ methods for error detection.\n\nA
+                                                   preliminary experiment co...
+
+! Undefined control sequence.
+l.153 ...ty of LTD for modern, large-scale LLMs.\n
+                                                  \nThe primary implication ...
+
+! Undefined control sequence.
+l.153 ... LTD for modern, large-scale LLMs.\n\nThe
+                                                   primary implication of ou...
+
+[8 <./images/score_distributions_semantic_entropy_gpt2.pdf> <./images/score_dis
+tributions_haloscope_(mock)_gpt2.pdf>]
+
+Package natbib Warning: Citation `airas2025' on page 9 undefined on input line 
+155.
+
+(./paper.bbl (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd) [9])
+
+Package natbib Warning: There were undefined citations.
+
+[10] (./paper.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+) )
+(see the transcript file for additional information)</usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
+msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on paper.pdf (10 pages, 201856 bytes).
+Transcript written on paper.log.
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./paper.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo))
+(./iclr2024_conference.sty
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)))
+(./fancyhdr.sty) (./natbib.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty)
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/units/nicefrac.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-pdftex.def)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg))
+(/usr/share/texlive/texmf-dist/tex/latex/titlesec/titletoc.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty)))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered
+.code.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex))
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
+.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_loader.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+)
+Package pgfplots: loading complementary utilities for your pgf version...
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_pgfutil-common-lists.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructure.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructureext.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
+x.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
+d.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.te
+x
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.co
+de.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
+fshading.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
+shading.pgfsys-pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.
+tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.t
+ex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.cod
+e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.
+tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
+e.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathmorphing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathmorphing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathreplacing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathreplacing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplots.co
+ntourlua.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryplotmarks.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.co
+de.tex))) (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def)
+(./paper.aux)
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(./paper.out) (./paper.out)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-ptm.cfg)
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg)
+! Undefined control sequence.
+l.55 ...d defer to human experts when necessary.\n
+                                                  \nCurrent UQ methodologies...
+
+! Undefined control sequence.
+l.55 ...o human experts when necessary.\n\nCurrent
+                                                   UQ methodologies for LLMs...
+
+! Undefined control sequence.
+l.55 ...in billion-parameter open-weight models.\n
+                                                  \nThe second category comp...
+
+! Undefined control sequence.
+l.55 ...llion-parameter open-weight models.\n\nThe
+                                                   second category comprises...
+
+! Undefined control sequence.
+l.55 ...al dynamics of the generation *process*.\n
+                                                  \nTo address this gap, we ...
+
+! Undefined control sequence.
+l.55 ...ynamics of the generation *process*.\n\nTo
+                                                   address this gap, we prop...
+
+! Undefined control sequence.
+l.55 ...etric that operationalizes this concept.\n
+                                                  \nOur contributions are as...
+
+! Undefined control sequence.
+l.55 ... that operationalizes this concept.\n\nOur
+                                                   contributions are as foll...
+
+! Undefined control sequence.
+l.55 ...pt.\n\nOur contributions are as follows:\n
+                                                  \n\begin{itemize}
+! Undefined control sequence.
+l.55 ....\n\nOur contributions are as follows:\n\n
+                                                  \begin{itemize}
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
+dist/fonts/enc/dvips/base/8r.enc}]
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+! Undefined control sequence.
+l.65 ...eas and contrast our approach with each.\n
+                                                  \n\textbf{Training-Based U...
+
+! Undefined control sequence.
+l.65 ...s and contrast our approach with each.\n\n
+                                                  \textbf{Training-Based Unc...
+
+! Undefined control sequence.
+l.65 ...model that provides hidden state access.\n
+                                                  \n\textbf{Logit-Based and ...
+
+! Undefined control sequence.
+l.65 ...del that provides hidden state access.\n\n
+                                                  \textbf{Logit-Based and Ca...
+
+! Undefined control sequence.
+l.65 ...n states, making it a logit-free metric.\n
+                                                  \n\textbf{Text-Based Uncer...
+
+! Undefined control sequence.
+l.65 ...states, making it a logit-free metric.\n\n
+                                                  \textbf{Text-Based Uncerta...
+
+! Undefined control sequence.
+l.65 ...orm and robust to different text styles.\n
+                                                  \n\textbf{Latent Space Pro...
+
+! Undefined control sequence.
+l.65 ...m and robust to different text styles.\n\n
+                                                  \textbf{Latent Space Probi...
+
+[2]
+! Undefined control sequence.
+l.69 ...and formally define the problem setting.\n
+                                                  \nUncertainty in machine l...
+
+! Undefined control sequence.
+l.69 ...define the problem setting.\n\nUncertainty
+                                                   in machine learning model...
+
+! Undefined control sequence.
+l.69 ... model's response should not be trusted.\n
+                                                  \nOur work proposes a nove...
+
+! Undefined control sequence.
+l.69 ...l's response should not be trusted.\n\nOur
+                                                   work proposes a novel way...
+
+! Undefined control sequence.
+l.69 ...ores multiple, competing semantic paths.\n
+                                                  \n\textbf{Problem Setting ...
+
+! Undefined control sequence.
+l.69 ...es multiple, competing semantic paths.\n\n
+                                                  \textbf{Problem Setting an...
+
+! Undefined control sequence.
+<recently read> \n 
+                   
+l.69 ...n\n\textbf{Problem Setting and Notation}\n
+                                                  \nWe consider a large lang...
+
+! Undefined control sequence.
+l.69 ...textbf{Problem Setting and Notation}\n\nWe
+                                                   consider a large language...
+
+! Undefined control sequence.
+l.69 ... prompt and previously generated tokens:\n
+                                                  \[ P(y_t | p, y_{<t}; \the...
+
+! Undefined control sequence.
+l.70 \nDuring
+              this forward pass, the model produces a sequence of hidden sta...
+
+! Undefined control sequence.
+l.70 ...hidden states for a complete generation:\n
+                                                  \[ T = (h_1, h_2, ..., h_L...
+
+! Undefined control sequence.
+l.71 \nThe
+           length $L$ of the trajectory can vary for different generations f...
+
+! Undefined control sequence.
+l.75 ...n a training-free and logit-free manner.\n
+                                                  \nThe LTD score is compute...
+
+! Undefined control sequence.
+l.75 ...raining-free and logit-free manner.\n\nThe
+                                                   LTD score is computed thr...
+
+! Undefined control sequence.
+l.75 ... by an efficient divergence calculation.\n
+                                                  \n\textbf{1. Ensemble Traj...
+
+! Undefined control sequence.
+l.75 ...y an efficient divergence calculation.\n\n
+                                                  \textbf{1. Ensemble Trajec...
+
+! Undefined control sequence.
+<recently read> \n 
+                   
+l.75 ...extbf{1. Ensemble Trajectory Generation}\n
+                                                  \nFor a given input prompt...
+
+! Undefined control sequence.
+l.75 ...{1. Ensemble Trajectory Generation}\n\nFor
+                                                   a given input prompt $p$,...
+
+! Undefined control sequence.
+l.75 ...lengths of the generated text responses.\n
+                                                  \n\textbf{2. Efficient Div...
+
+! Undefined control sequence.
+l.75 ...ngths of the generated text responses.\n\n
+                                                  \textbf{2. Efficient Diver...
+
+! Undefined control sequence.
+<recently read> \n 
+                   
+l.75 ...a Trajectory Barycenter Alignment (TBA)}\n
+                                                  \nA naive comparison of al...
+
+! Undefined control sequence.
+l.75 ...rajectory Barycenter Alignment (TBA)}\n\nA
+                                                   naive comparison of all t...
+
+! Undefined control sequence.
+l.75 ... The LTD score is calculated as follows:\n
+                                                  \n\begin{itemize}
+! Undefined control sequence.
+l.75 ...he LTD score is calculated as follows:\n\n
+                                                  \begin{itemize}
+[3]
+! Undefined control sequence.
+l.76 ...ents the consensus path of the ensemble.\n
+                                                      \item \textbf{b. Diver...
+
+! Undefined control sequence.
+l.79 \nA
+         higher LTD score signifies greater geometric divergence among the l...
+
+! Undefined control sequence.
+l.79 ...ys, indicating higher model uncertainty.\n
+                                                  \n\textbf{Diagnostic Mappi...
+
+! Undefined control sequence.
+l.79 ..., indicating higher model uncertainty.\n\n
+                                                  \textbf{Diagnostic Mapping...
+
+! Undefined control sequence.
+<recently read> \n 
+                   
+l.79 ...ic Mapping: The Uncertainty Seismograph}\n
+                                                  \nThe DTW alignment proces...
+
+! Undefined control sequence.
+l.79 ...pping: The Uncertainty Seismograph}\n\nThe
+                                                   DTW alignment process pro...
+
+! Undefined control sequence.
+l.79 ...hat cause the model to become uncertain.\n
+                                                  \n\textbf{Applications of ...
+
+! Undefined control sequence.
+l.79 ...t cause the model to become uncertain.\n\n
+                                                  \textbf{Applications of LT...
+
+! Undefined control sequence.
+<recently read> \n 
+                   
+l.79 ...certain.\n\n\textbf{Applications of LTD}\n
+                                                  \nThe LTD score's robustne...
+
+! Undefined control sequence.
+l.79 ...in.\n\n\textbf{Applications of LTD}\n\nThe
+                                                   LTD score's robustness ma...
+
+! Undefined control sequence.
+l.83 ...uncertainty quantification (UQ) methods.\n
+                                                  \n\textbf{Hypothesis}\nOur...
+
+! Undefined control sequence.
+l.83 ...certainty quantification (UQ) methods.\n\n
+                                                  \textbf{Hypothesis}\nOur c...
+
+! Undefined control sequence.
+<recently read> \nOur 
+                      
+l.83 ... (UQ) methods.\n\n\textbf{Hypothesis}\nOur
+                                                   core hypothesis is that a...
+
+! Undefined control sequence.
+l.83 ...hing correct from incorrect generations.\n
+                                                  \n\textbf{Models and Datas...
+
+! Undefined control sequence.
+l.83 ...ng correct from incorrect generations.\n\n
+                                                  \textbf{Models and Dataset...
+
+! Undefined control sequence.
+<recently read> \nTo 
+                     
+l.83 ...tions.\n\n\textbf{Models and Datasets}\nTo
+                                                   ensure generalizability, ...
+
+! Undefined control sequence.
+l.83 ...ance across different knowledge domains:\n
+                                                  \begin{itemize}
+[4]
+! Undefined control sequence.
+l.89 \n
+       \textbf{Experimental Protocol}\nFor each question in the datasets, we...
+
+! Undefined control sequence.
+<recently read> \nFor 
+                      
+l.89 \n\textbf{Experimental Protocol}\nFor
+                                           each question in the datasets, we...
+
+! Undefined control sequence.
+l.89 ... token, forming $k$ latent trajectories.\n
+                                                  \nWe compute the following...
+
+! Undefined control sequence.
+l.89 ...en, forming $k$ latent trajectories.\n\nWe
+                                                   compute the following unc...
+
+! Undefined control sequence.
+l.89 ...inty scores for each generated ensemble:\n
+                                                  \begin{enumerate}
+! Undefined control sequence.
+l.95 \n
+       \textbf{Ground-Truth Labeling and Evaluation}\nEach of the $k$ indivi...
+
+! Undefined control sequence.
+<recently read> \nEach 
+                       
+l.95 ...round-Truth Labeling and Evaluation}\nEach
+                                                   of the $k$ individual gen...
+
+! Undefined control sequence.
+l.95 ...r for error detection is measured using:\n
+                                                  \begin{itemize}
+! Undefined control sequence.
+l.100 ...ferences between LTD and the baselines.\n
+                                                  \n\textbf{Ablation Studies...
+
+! Undefined control sequence.
+l.100 ...rences between LTD and the baselines.\n\n
+                                                  \textbf{Ablation Studies}\...
+
+! Undefined control sequence.
+<recently read> \nTo 
+                     
+l.100 ...selines.\n\n\textbf{Ablation Studies}\nTo
+                                                   ensure robustness, we pla...
+
+! Undefined control sequence.
+l.104 ...as generated using stochastic sampling.\n
+                                                  \nThe results of this prel...
+
+! Undefined control sequence.
+l.104 ...nerated using stochastic sampling.\n\nThe
+                                                   results of this prelimina...
+
+! Undefined control sequence.
+l.104 ...generations, are summarized in Table 1.\n
+                                                  \n\begin{table}[H]
+! Undefined control sequence.
+l.104 ...nerations, are summarized in Table 1.\n\n
+                                                  \begin{table}[H]
+! Undefined control sequence.
+l.119 \n
+        *Table 1: Performance of UQ methods on error detection for the `gpt2...
+
+[5]
+! Undefined control sequence.
+l.119 ... performance worse than random chance.*\n
+                                                  \nContrary to our central ...
+
+! Undefined control sequence.
+l.119 ...ce worse than random chance.*\n\nContrary
+                                                   to our central hypothesis...
+
+! Undefined control sequence.
+l.119 ...cope baseline performed equally poorly.\n
+                                                  \nSemantic Entropy perform...
+
+! Undefined control sequence.
+l.119 ...ine performed equally poorly.\n\nSemantic
+                                                   Entropy performed at the ...
+
+! Undefined control sequence.
+l.119 ... for all methods are shown in Figure 1.\n
+                                                  \n\begin{figure}[H]
+! Undefined control sequence.
+l.119 ...or all methods are shown in Figure 1.\n\n
+                                                  \begin{figure}[H]
+! Undefined control sequence.
+l.125 \nTo
+           further understand these results, we plotted the score distributi...
+
+! Undefined control sequence.
+l.125 ...ending to have higher diversity scores.\n
+                                                  \n\begin{figure}[H]
+! Undefined control sequence.
+l.125 ...ding to have higher diversity scores.\n\n
+                                                  \begin{figure}[H]
+! Undefined control sequence.
+l.131 \n
+        \begin{figure}[H]
+
+Underfull \vbox (badness 10000) has occurred while \output is active [6 <./imag
+es/roc_curves_comparison_gpt2.pdf>]
+! Undefined control sequence.
+l.137 \n
+        \begin{figure}[H]
+! Undefined control sequence.
+l.143 \n
+        \begin{figure}[H]
+
+Underfull \vbox (badness 10000) has occurred while \output is active [7 <./imag
+es/score_distributions_ltd_gpt2.pdf> <./images/score_distributions_lexical_dive
+rsity_gpt2.pdf>]
+! Undefined control sequence.
+l.149 \n
+        \textbf{Limitations and Discussion}\nIt is crucial to interpret thes...
+
+! Undefined control sequence.
+<recently read> \nIt 
+                     
+l.149 \n\textbf{Limitations and Discussion}\nIt
+                                                is crucial to interpret thes...
+
+! Undefined control sequence.
+l.149 ...t was severely limited in several ways:\n
+                                                  1.  \textbf{Model Scale:} ...
+
+! Undefined control sequence.
+l.149 ... differ fundamentally in larger models.\n
+                                                  2.  \textbf{Dataset Size:}...
+
+! Undefined control sequence.
+l.149 ...otal and not statistically significant.\n
+                                                  3.  \textbf{Ensemble Size:...
+
+! Undefined control sequence.
+l.149 ...able estimate of trajectory divergence.\n
+                                                  \nWhile this initial test ...
+
+! Undefined control sequence.
+l.149 ...timate of trajectory divergence.\n\nWhile
+                                                   this initial test failed ...
+
+! Undefined control sequence.
+l.153 ...atent space pathways during generation.\n
+                                                  \nWe presented a complete ...
+
+! Undefined control sequence.
+l.153 ...t space pathways during generation.\n\nWe
+                                                   presented a complete meth...
+
+! Undefined control sequence.
+l.153 ...the-art UQ methods for error detection.\n
+                                                  \nA preliminary experiment...
+
+! Undefined control sequence.
+l.153 ...-art UQ methods for error detection.\n\nA
+                                                   preliminary experiment co...
+
+! Undefined control sequence.
+l.153 ...ty of LTD for modern, large-scale LLMs.\n
+                                                  \nThe primary implication ...
+
+! Undefined control sequence.
+l.153 ... LTD for modern, large-scale LLMs.\n\nThe
+                                                   primary implication of ou...
+
+[8 <./images/score_distributions_semantic_entropy_gpt2.pdf> <./images/score_dis
+tributions_haloscope_(mock)_gpt2.pdf>] (./paper.bbl
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd) [9]) [10]
+(./paper.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)</usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
+msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on paper.pdf (10 pages, 204777 bytes).
+Transcript written on paper.log.

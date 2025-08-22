@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/runner/work/experiment_matsuzawa_20250822/experiment_matsuzawa_20250822/src/main.py", line 5, in <module>
+    from .train import run_experiment1, run_experiment2, run_experiment3
+ImportError: attempted relative import with no known parent package

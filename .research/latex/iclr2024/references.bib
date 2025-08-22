@@ -5,3 +5,545 @@
   publisher = {GitHub},
   url       = {https://github.com/airas-org/airas}
 }
+
+% ===========================================
+% REQUIRED CITATIONS
+% These papers must be cited in the manuscript
+% ===========================================
+
+@article{gurulingan_2023_multi,
+ abstract = {Multi-task learning has the potential to improve generalization by maximizing
+positive transfer between tasks while reducing task interference. Fully
+achieving this potential is hindered by manually designed architectures that
+remain static throughout training. On the contrary, learning in the brain
+occurs through structural changes that are in tandem with changes in synaptic
+strength. Thus, we propose \textit{Multi-Task Structural Learning (MTSL)} that
+simultaneously learns the multi-task architecture and its parameters. MTSL
+begins with an identical single-task network for each task and alternates
+between a task-learning phase and a structural-learning phase. In the task
+learning phase, each network specializes in the corresponding task. In each of
+the structural learning phases, starting from the earliest layer, locally
+similar task layers first transfer their knowledge to a newly created group
+layer before being removed. MTSL then uses the group layer in place of the
+corresponding removed task layers and moves on to the next layers. Our
+empirical results show that MTSL achieves competitive generalization with
+various baselines and improves robustness to out-of-distribution data.},
+ arxiv_url = {https://arxiv.org/pdf/2305.00441v1.pdf},
+ author = {Naresh Kumar Gurulingan and Bahram Zonooz and Elahe Arani},
+ github_url = {https://github.com/NeurAI-Lab/MTSL},
+ title = {Multi-Task Structural Learning using Local Task Similarity induced Neuron Creation and Removal},
+ year = {2023}
+}
+
+@article{jeong_2024_quantifying,
+ abstract = {The goal of multi-task learning is to learn diverse tasks within a single
+unified network. As each task has its own unique objective function, conflicts
+emerge during training, resulting in negative transfer among them. Earlier
+research identified these conflicting gradients in shared parameters between
+tasks and attempted to realign them in the same direction. However, we prove
+that such optimization strategies lead to sub-optimal Pareto solutions due to
+their inability to accurately determine the individual contributions of each
+parameter across various tasks. In this paper, we propose the concept of task
+priority to evaluate parameter contributions across different tasks. To learn
+task priority, we identify the type of connections related to links between
+parameters influenced by task-specific losses during backpropagation. The
+strength of connections is gauged by the magnitude of parameters to determine
+task priority. Based on these, we present a new method named connection
+strength-based optimization for multi-task learning which consists of two
+phases. The first phase learns the task priority within the network, while the
+second phase modifies the gradients while upholding this priority. This
+ultimately leads to finding new Pareto optimal solutions for multiple tasks.
+Through extensive experiments, we show that our approach greatly enhances
+multi-task performance in comparison to earlier gradient manipulation methods.},
+ arxiv_url = {https://arxiv.org/pdf/2406.02996v1.pdf},
+ author = {Wooseong Jeong and Kuk-Jin Yoon},
+ journal = {CVPR 2024},
+ title = {Quantifying Task Priority for Multi-Task Optimization},
+ year = {2024}
+}
+
+@article{jiang_2023_forkmerge,
+ abstract = {Auxiliary-Task Learning (ATL) aims to improve the performance of the target
+task by leveraging the knowledge obtained from related tasks. Occasionally,
+learning multiple tasks simultaneously results in lower accuracy than learning
+only the target task, which is known as negative transfer. This problem is
+often attributed to the gradient conflicts among tasks, and is frequently
+tackled by coordinating the task gradients in previous works. However, these
+optimization-based methods largely overlook the auxiliary-target generalization
+capability. To better understand the root cause of negative transfer, we
+experimentally investigate it from both optimization and generalization
+perspectives. Based on our findings, we introduce ForkMerge, a novel approach
+that periodically forks the model into multiple branches, automatically
+searches the varying task weights by minimizing target validation errors, and
+dynamically merges all branches to filter out detrimental task-parameter
+updates. On a series of auxiliary-task learning benchmarks, ForkMerge
+outperforms existing methods and effectively mitigates negative transfer.},
+ arxiv_url = {https://arxiv.org/pdf/2301.12618v3.pdf},
+ author = {Junguang Jiang and Baixu Chen and Junwei Pan and Ximei Wang and Liu Dapeng and Jie Jiang and Mingsheng Long},
+ github_url = {https://github.com/thuml/ForkMerge},
+ title = {ForkMerge: Mitigating Negative Transfer in Auxiliary-Task Learning},
+ year = {2023}
+}
+
+@article{liu_2021_conflict,
+ abstract = {The goal of multi-task learning is to enable more efficient learning than
+single task learning by sharing model structures for a diverse set of tasks. A
+standard multi-task learning objective is to minimize the average loss across
+all tasks. While straightforward, using this objective often results in much
+worse final performance for each task than learning them independently. A major
+challenge in optimizing a multi-task model is the conflicting gradients, where
+gradients of different task objectives are not well aligned so that following
+the average gradient direction can be detrimental to specific tasks'
+performance. Previous work has proposed several heuristics to manipulate the
+task gradients for mitigating this problem. But most of them lack convergence
+guarantee and/or could converge to any Pareto-stationary point. In this paper,
+we introduce Conflict-Averse Gradient descent (CAGrad) which minimizes the
+average loss function, while leveraging the worst local improvement of
+individual tasks to regularize the algorithm trajectory. CAGrad balances the
+objectives automatically and still provably converges to a minimum over the
+average loss. It includes the regular gradient descent (GD) and the multiple
+gradient descent algorithm (MGDA) in the multi-objective optimization (MOO)
+literature as special cases. On a series of challenging multi-task supervised
+learning and reinforcement learning tasks, CAGrad achieves improved performance
+over prior state-of-the-art multi-objective gradient manipulation methods.},
+ arxiv_url = {https://arxiv.org/pdf/2110.14048v2.pdf},
+ author = {Bo Liu and Xingchao Liu and Xiaojie Jin and Peter Stone and Qiang Liu},
+ github_url = {https://github.com/Cranial-XIX/CAGrad},
+ title = {Conflict-Averse Gradient Descent for Multi-task learning},
+ year = {2021}
+}
+
+@article{shi_2023_recon,
+ abstract = {A fundamental challenge for multi-task learning is that different tasks may
+conflict with each other when they are solved jointly, and a cause of this
+phenomenon is conflicting gradients during optimization. Recent works attempt
+to mitigate the influence of conflicting gradients by directly altering the
+gradients based on some criteria. However, our empirical study shows that
+``gradient surgery'' cannot effectively reduce the occurrence of conflicting
+gradients. In this paper, we take a different approach to reduce conflicting
+gradients from the root. In essence, we investigate the task gradients w.r.t.
+each shared network layer, select the layers with high conflict scores, and
+turn them to task-specific layers. Our experiments show that such a simple
+approach can greatly reduce the occurrence of conflicting gradients in the
+remaining shared layers and achieve better performance, with only a slight
+increase in model parameters in many cases. Our approach can be easily applied
+to improve various state-of-the-art methods including gradient manipulation
+methods and branched architecture search methods. Given a network architecture
+(e.g., ResNet18), it only needs to search for the conflict layers once, and the
+network can be modified to be used with different methods on the same or even
+different datasets to gain performance improvement. The source code is
+available at https://github.com/moukamisama/Recon.},
+ arxiv_url = {https://arxiv.org/pdf/2302.11289v1.pdf},
+ author = {Guangyuan Shi and Qimai Li and Wenlong Zhang and Jiaxin Chen and Xiao-Ming Wu},
+ title = {Recon: Reducing Conflicting Gradients From the Root For Multi-Task Learning},
+ year = {2023}
+}
+
+@article{shi_2023_recon,
+ abstract = {A fundamental challenge for multi-task learning is that different tasks may
+conflict with each other when they are solved jointly, and a cause of this
+phenomenon is conflicting gradients during optimization. Recent works attempt
+to mitigate the influence of conflicting gradients by directly altering the
+gradients based on some criteria. However, our empirical study shows that
+``gradient surgery'' cannot effectively reduce the occurrence of conflicting
+gradients. In this paper, we take a different approach to reduce conflicting
+gradients from the root. In essence, we investigate the task gradients w.r.t.
+each shared network layer, select the layers with high conflict scores, and
+turn them to task-specific layers. Our experiments show that such a simple
+approach can greatly reduce the occurrence of conflicting gradients in the
+remaining shared layers and achieve better performance, with only a slight
+increase in model parameters in many cases. Our approach can be easily applied
+to improve various state-of-the-art methods including gradient manipulation
+methods and branched architecture search methods. Given a network architecture
+(e.g., ResNet18), it only needs to search for the conflict layers once, and the
+network can be modified to be used with different methods on the same or even
+different datasets to gain performance improvement. The source code is
+available at https://github.com/moukamisama/Recon.},
+ arxiv_url = {https://arxiv.org/pdf/2302.11289v1.pdf},
+ author = {Guangyuan Shi and Qimai Li and Wenlong Zhang and Jiaxin Chen and Xiao-Ming Wu},
+ title = {Recon: Reducing Conflicting Gradients From the Root For Multi-Task Learning},
+ year = {2023}
+}
+
+@article{standley_2019_which,
+ abstract = {Many computer vision applications require solving multiple tasks in
+real-time. A neural network can be trained to solve multiple tasks
+simultaneously using multi-task learning. This can save computation at
+inference time as only a single network needs to be evaluated. Unfortunately,
+this often leads to inferior overall performance as task objectives can
+compete, which consequently poses the question: which tasks should and should
+not be learned together in one network when employing multi-task learning? We
+study task cooperation and competition in several different learning settings
+and propose a framework for assigning tasks to a few neural networks such that
+cooperating tasks are computed by the same neural network, while competing
+tasks are computed by different networks. Our framework offers a time-accuracy
+trade-off and can produce better accuracy using less inference time than not
+only a single large multi-task neural network but also many single-task
+networks.},
+ arxiv_url = {https://arxiv.org/pdf/1905.07553v4.pdf},
+ author = {Trevor Standley and Amir R. Zamir and Dawn Chen and Leonidas Guibas and Jitendra Malik and Silvio Savarese},
+ title = {Which Tasks Should Be Learned Together in Multi-task Learning?},
+ year = {2019}
+}
+
+@article{standley_2019_which,
+ abstract = {Many computer vision applications require solving multiple tasks in
+real-time. A neural network can be trained to solve multiple tasks
+simultaneously using multi-task learning. This can save computation at
+inference time as only a single network needs to be evaluated. Unfortunately,
+this often leads to inferior overall performance as task objectives can
+compete, which consequently poses the question: which tasks should and should
+not be learned together in one network when employing multi-task learning? We
+study task cooperation and competition in several different learning settings
+and propose a framework for assigning tasks to a few neural networks such that
+cooperating tasks are computed by the same neural network, while competing
+tasks are computed by different networks. Our framework offers a time-accuracy
+trade-off and can produce better accuracy using less inference time than not
+only a single large multi-task neural network but also many single-task
+networks.},
+ arxiv_url = {https://arxiv.org/pdf/1905.07553v4.pdf},
+ author = {Trevor Standley and Amir R. Zamir and Dawn Chen and Leonidas Guibas and Jitendra Malik and Silvio Savarese},
+ title = {Which Tasks Should Be Learned Together in Multi-task Learning?},
+ year = {2019}
+}
+
+@article{tiomoko_2021_pca,
+ abstract = {The article proposes and theoretically analyses a \emph{computationally
+efficient} multi-task learning (MTL) extension of popular principal component
+analysis (PCA)-based supervised learning schemes
+\cite{barshan2011supervised,bair2006prediction}. The analysis reveals that (i)
+by default learning may dramatically fail by suffering from \emph{negative
+transfer}, but that (ii) simple counter-measures on data labels avert negative
+transfer and necessarily result in improved performances.
+  Supporting experiments on synthetic and real data benchmarks show that the
+proposed method achieves comparable performance with state-of-the-art MTL
+methods but at a \emph{significantly reduced computational cost}.},
+ arxiv_url = {https://arxiv.org/pdf/2111.00924v1.pdf},
+ author = {Malik Tiomoko and Romain Couillet and Frédéric Pascal},
+ title = {PCA-based Multi-Task Learning: a Random Matrix Approach},
+ year = {2021}
+}
+
+@article{wu_2020_understanding,
+ abstract = {We investigate multi-task learning approaches that use a shared feature
+representation for all tasks. To better understand the transfer of task
+information, we study an architecture with a shared module for all tasks and a
+separate output module for each task. We study the theory of this setting on
+linear and ReLU-activated models. Our key observation is that whether or not
+tasks' data are well-aligned can significantly affect the performance of
+multi-task learning. We show that misalignment between task data can cause
+negative transfer (or hurt performance) and provide sufficient conditions for
+positive transfer. Inspired by the theoretical insights, we show that aligning
+tasks' embedding layers leads to performance gains for multi-task training and
+transfer learning on the GLUE benchmark and sentiment analysis tasks; for
+example, we obtain a 2.35% GLUE score average improvement on 5 GLUE tasks over
+BERT-LARGE using our alignment method. We also design an SVD-based task
+reweighting scheme and show that it improves the robustness of multi-task
+training on a multi-label image dataset.},
+ arxiv_url = {https://arxiv.org/pdf/2005.00944v1.pdf},
+ author = {Sen Wu and Hongyang R. Zhang and Christopher Ré},
+ title = {Understanding and Improving Information Transfer in Multi-Task Learning},
+ year = {2020}
+}
+
+@article{wu_2020_understanding,
+ abstract = {We investigate multi-task learning approaches that use a shared feature
+representation for all tasks. To better understand the transfer of task
+information, we study an architecture with a shared module for all tasks and a
+separate output module for each task. We study the theory of this setting on
+linear and ReLU-activated models. Our key observation is that whether or not
+tasks' data are well-aligned can significantly affect the performance of
+multi-task learning. We show that misalignment between task data can cause
+negative transfer (or hurt performance) and provide sufficient conditions for
+positive transfer. Inspired by the theoretical insights, we show that aligning
+tasks' embedding layers leads to performance gains for multi-task training and
+transfer learning on the GLUE benchmark and sentiment analysis tasks; for
+example, we obtain a 2.35% GLUE score average improvement on 5 GLUE tasks over
+BERT-LARGE using our alignment method. We also design an SVD-based task
+reweighting scheme and show that it improves the robustness of multi-task
+training on a multi-label image dataset.},
+ arxiv_url = {https://arxiv.org/pdf/2005.00944v1.pdf},
+ author = {Sen Wu and Hongyang R. Zhang and Christopher Ré},
+ title = {Understanding and Improving Information Transfer in Multi-Task Learning},
+ year = {2020}
+}
+
+@article{xin_2022_current,
+ abstract = {Recent research has proposed a series of specialized optimization algorithms
+for deep multi-task models. It is often claimed that these multi-task
+optimization (MTO) methods yield solutions that are superior to the ones found
+by simply optimizing a weighted average of the task losses. In this paper, we
+perform large-scale experiments on a variety of language and vision tasks to
+examine the empirical validity of these claims. We show that, despite the added
+design and computational complexity of these algorithms, MTO methods do not
+yield any performance improvements beyond what is achievable via traditional
+optimization approaches. We highlight alternative strategies that consistently
+yield improvements to the performance profile and point out common training
+pitfalls that might cause suboptimal results. Finally, we outline challenges in
+reliably evaluating the performance of MTO algorithms and discuss potential
+solutions.},
+ arxiv_url = {https://arxiv.org/pdf/2209.11379v1.pdf},
+ author = {Derrick Xin and Behrooz Ghorbani and Ankush Garg and Orhan Firat and Justin Gilmer},
+ title = {Do Current Multi-Task Optimization Methods in Deep Learning Even Help?},
+ year = {2022}
+}
+
+@article{yu_2020_gradient,
+ abstract = {While deep learning and deep reinforcement learning (RL) systems have
+demonstrated impressive results in domains such as image classification, game
+playing, and robotic control, data efficiency remains a major challenge.
+Multi-task learning has emerged as a promising approach for sharing structure
+across multiple tasks to enable more efficient learning. However, the
+multi-task setting presents a number of optimization challenges, making it
+difficult to realize large efficiency gains compared to learning tasks
+independently. The reasons why multi-task learning is so challenging compared
+to single-task learning are not fully understood. In this work, we identify a
+set of three conditions of the multi-task optimization landscape that cause
+detrimental gradient interference, and develop a simple yet general approach
+for avoiding such interference between task gradients. We propose a form of
+gradient surgery that projects a task's gradient onto the normal plane of the
+gradient of any other task that has a conflicting gradient. On a series of
+challenging multi-task supervised and multi-task RL problems, this approach
+leads to substantial gains in efficiency and performance. Further, it is
+model-agnostic and can be combined with previously-proposed multi-task
+architectures for enhanced performance.},
+ arxiv_url = {https://arxiv.org/pdf/2001.06782v4.pdf},
+ author = {Tianhe Yu and Saurabh Kumar and Abhishek Gupta and Sergey Levine and Karol Hausman and Chelsea Finn},
+ github_url = {https://github.com/tianheyu927/PCGrad},
+ title = {Gradient Surgery for Multi-Task Learning},
+ year = {2020}
+}
+
+@article{yu_2020_gradient,
+ abstract = {While deep learning and deep reinforcement learning (RL) systems have
+demonstrated impressive results in domains such as image classification, game
+playing, and robotic control, data efficiency remains a major challenge.
+Multi-task learning has emerged as a promising approach for sharing structure
+across multiple tasks to enable more efficient learning. However, the
+multi-task setting presents a number of optimization challenges, making it
+difficult to realize large efficiency gains compared to learning tasks
+independently. The reasons why multi-task learning is so challenging compared
+to single-task learning are not fully understood. In this work, we identify a
+set of three conditions of the multi-task optimization landscape that cause
+detrimental gradient interference, and develop a simple yet general approach
+for avoiding such interference between task gradients. We propose a form of
+gradient surgery that projects a task's gradient onto the normal plane of the
+gradient of any other task that has a conflicting gradient. On a series of
+challenging multi-task supervised and multi-task RL problems, this approach
+leads to substantial gains in efficiency and performance. Further, it is
+model-agnostic and can be combined with previously-proposed multi-task
+architectures for enhanced performance.},
+ arxiv_url = {https://arxiv.org/pdf/2001.06782v4.pdf},
+ author = {Tianhe Yu and Saurabh Kumar and Abhishek Gupta and Sergey Levine and Karol Hausman and Chelsea Finn},
+ github_url = {https://github.com/tianheyu927/PCGrad},
+ title = {Gradient Surgery for Multi-Task Learning},
+ year = {2020}
+}
+
+@article{yu_2020_gradient,
+ abstract = {While deep learning and deep reinforcement learning (RL) systems have
+demonstrated impressive results in domains such as image classification, game
+playing, and robotic control, data efficiency remains a major challenge.
+Multi-task learning has emerged as a promising approach for sharing structure
+across multiple tasks to enable more efficient learning. However, the
+multi-task setting presents a number of optimization challenges, making it
+difficult to realize large efficiency gains compared to learning tasks
+independently. The reasons why multi-task learning is so challenging compared
+to single-task learning are not fully understood. In this work, we identify a
+set of three conditions of the multi-task optimization landscape that cause
+detrimental gradient interference, and develop a simple yet general approach
+for avoiding such interference between task gradients. We propose a form of
+gradient surgery that projects a task's gradient onto the normal plane of the
+gradient of any other task that has a conflicting gradient. On a series of
+challenging multi-task supervised and multi-task RL problems, this approach
+leads to substantial gains in efficiency and performance. Further, it is
+model-agnostic and can be combined with previously-proposed multi-task
+architectures for enhanced performance.},
+ arxiv_url = {https://arxiv.org/pdf/2001.06782v4.pdf},
+ author = {Tianhe Yu and Saurabh Kumar and Abhishek Gupta and Sergey Levine and Karol Hausman and Chelsea Finn},
+ github_url = {https://github.com/tianheyu927/PCGrad},
+ title = {Gradient Surgery for Multi-Task Learning},
+ year = {2020}
+}
+
+% ===========================================
+% REFERENCE CANDIDATES
+% Additional reference papers for context
+% ===========================================
+
+@article{arivazhagan_2019_massively,
+ abstract = {We introduce our efforts towards building a universal neural machine
+translation (NMT) system capable of translating between any language pair. We
+set a milestone towards this goal by building a single massively multilingual
+NMT model handling 103 languages trained on over 25 billion examples. Our
+system demonstrates effective transfer learning ability, significantly
+improving translation quality of low-resource languages, while keeping
+high-resource language translation quality on-par with competitive bilingual
+baselines. We provide in-depth analysis of various aspects of model building
+that are crucial to achieving quality and practicality in universal NMT. While
+we prototype a high-quality universal translation system, our extensive
+empirical analysis exposes issues that need to be further addressed, and we
+suggest directions for future research.},
+ arxiv_url = {https://arxiv.org/pdf/1907.05019v1.pdf},
+ author = {Naveen Arivazhagan and Ankur Bapna and Orhan Firat and Dmitry Lepikhin and Melvin Johnson and Maxim Krikun and Mia Xu Chen and Yuan Cao and George Foster and Colin Cherry and Wolfgang Macherey and Zhifeng Chen and Yonghui Wu},
+ title = {Massively multilingual neural machine translation in the wild: Findings and challenges},
+ year = {2019}
+}
+
+@article{author_year_multiple,
+ title = {Multiple-gradient descent algorithm (mgda) for multiobjective optimization}
+}
+
+@article{bapna_2022_mslam,
+ abstract = {We present mSLAM, a multilingual Speech and LAnguage Model that learns
+cross-lingual cross-modal representations of speech and text by pre-training
+jointly on large amounts of unlabeled speech and text in multiple languages.
+mSLAM combines w2v-BERT pre-training on speech with SpanBERT pre-training on
+character-level text, along with Connectionist Temporal Classification (CTC)
+losses on paired speech and transcript data, to learn a single model capable of
+learning from and representing both speech and text signals in a shared
+representation space. We evaluate mSLAM on several downstream speech
+understanding tasks and find that joint pre-training with text improves quality
+on speech translation, speech intent classification and speech language-ID
+while being competitive on multilingual ASR, when compared against speech-only
+pre-training. Our speech translation model demonstrates zero-shot text
+translation without seeing any text translation data, providing evidence for
+cross-modal alignment of representations. mSLAM also benefits from multi-modal
+fine-tuning, further improving the quality of speech translation by directly
+leveraging text translation data during the fine-tuning process. Our empirical
+analysis highlights several opportunities and challenges arising from
+large-scale multimodal pre-training, suggesting directions for future research.},
+ arxiv_url = {https://arxiv.org/pdf/2202.01374v1.pdf},
+ author = {Ankur Bapna and Colin Cherry and Yu Zhang and Ye Jia and Melvin Johnson and Yong Cheng and Simran Khanuja and Jason Riesa and Alexis Conneau},
+ title = {mslam: Massively multilingual joint pre-training for speech and text},
+ year = {2022}
+}
+
+@article{chen_2017_gradnorm,
+ abstract = {Deep multitask networks, in which one neural network produces multiple
+predictive outputs, can offer better speed and performance than their
+single-task counterparts but are challenging to train properly. We present a
+gradient normalization (GradNorm) algorithm that automatically balances
+training in deep multitask models by dynamically tuning gradient magnitudes. We
+show that for various network architectures, for both regression and
+classification tasks, and on both synthetic and real datasets, GradNorm
+improves accuracy and reduces overfitting across multiple tasks when compared
+to single-task networks, static baselines, and other adaptive multitask loss
+balancing techniques. GradNorm also matches or surpasses the performance of
+exhaustive grid search methods, despite only involving a single asymmetry
+hyperparameter $\alpha$. Thus, what was once a tedious search process that
+incurred exponentially more compute for each task added can now be accomplished
+within a few training runs, irrespective of the number of tasks. Ultimately, we
+will demonstrate that gradient manipulation affords us great control over the
+training dynamics of multitask networks and may be one of the keys to unlocking
+the potential of multitask learning.},
+ arxiv_url = {https://arxiv.org/pdf/1711.02257v4.pdf},
+ author = {Zhao Chen and Vijay Badrinarayanan and Chen-Yu Lee and Andrew Rabinovich},
+ journal = {Proceedings of the 35th International Conference on Machine
+  Learning (2018), 793-802},
+ title = {Gradnorm: Gradient normalization for adaptive loss balancing in deep multitask networks},
+ year = {2017}
+}
+
+@article{chen_2020_just,
+ abstract = {The vast majority of deep models use multiple gradient signals, typically
+corresponding to a sum of multiple loss terms, to update a shared set of
+trainable weights. However, these multiple updates can impede optimal training
+by pulling the model in conflicting directions. We present Gradient Sign
+Dropout (GradDrop), a probabilistic masking procedure which samples gradients
+at an activation layer based on their level of consistency. GradDrop is
+implemented as a simple deep layer that can be used in any deep net and
+synergizes with other gradient balancing approaches. We show that GradDrop
+outperforms the state-of-the-art multiloss methods within traditional multitask
+and transfer learning settings, and we discuss how GradDrop reveals links
+between optimal multiloss training and gradient stochasticity.},
+ arxiv_url = {https://arxiv.org/pdf/2010.06808v1.pdf},
+ author = {Zhao Chen and Jiquan Ngiam and Yanping Huang and Thang Luong and Henrik Kretzschmar and Yuning Chai and Dragomir Anguelov},
+ title = {Just pick a sign: Optimizing deep multitask models with gradient sign dropout},
+ year = {2020}
+}
+
+@article{cordts_2016_the,
+ abstract = {Visual understanding of complex urban street scenes is an enabling factor for
+a wide range of applications. Object detection has benefited enormously from
+large-scale datasets, especially in the context of deep learning. For semantic
+urban scene understanding, however, no current dataset adequately captures the
+complexity of real-world urban scenes.
+  To address this, we introduce Cityscapes, a benchmark suite and large-scale
+dataset to train and test approaches for pixel-level and instance-level
+semantic labeling. Cityscapes is comprised of a large, diverse set of stereo
+video sequences recorded in streets from 50 different cities. 5000 of these
+images have high quality pixel-level annotations; 20000 additional images have
+coarse annotations to enable methods that leverage large volumes of
+weakly-labeled data. Crucially, our effort exceeds previous attempts in terms
+of dataset size, annotation richness, scene variability, and complexity. Our
+accompanying empirical study provides an in-depth analysis of the dataset
+characteristics, as well as a performance evaluation of several
+state-of-the-art approaches based on our benchmark.},
+ arxiv_url = {https://arxiv.org/pdf/1604.01685v2.pdf},
+ author = {Marius Cordts and Mohamed Omran and Sebastian Ramos and Timo Rehfeld and Markus Enzweiler and Rodrigo Benenson and Uwe Franke and Stefan Roth and Bernt Schiele},
+ title = {The cityscapes dataset for semantic urban scene understanding},
+ year = {2016}
+}
+
+@article{fifty_2021_identifying,
+ abstract = {Multi-task learning can leverage information learned by one task to benefit
+the training of other tasks. Despite this capacity, naively training all tasks
+together in one model often degrades performance, and exhaustively searching
+through combinations of task groupings can be prohibitively expensive. As a
+result, efficiently identifying the tasks that would benefit from training
+together remains a challenging design question without a clear solution. In
+this paper, we suggest an approach to select which tasks should train together
+in multi-task learning models. Our method determines task groupings in a single
+run by training all tasks together and quantifying the effect to which one
+task's gradient would affect another task's loss. On the large-scale Taskonomy
+computer vision dataset, we find this method can decrease test loss by 10.0%
+compared to simply training all tasks together while operating 11.6 times
+faster than a state-of-the-art task grouping method.},
+ arxiv_url = {https://arxiv.org/pdf/2109.04617v2.pdf},
+ author = {Christopher Fifty and Ehsan Amid and Zhe Zhao and Tianhe Yu and Rohan Anil and Chelsea Finn},
+ title = {Efﬁciently identifying task groupings for multi-task learning},
+ year = {2021}
+}
+
+@article{graves_2017_automated,
+ abstract = {We introduce a method for automatically selecting the path, or syllabus, that
+a neural network follows through a curriculum so as to maximise learning
+efficiency. A measure of the amount that the network learns from each data
+sample is provided as a reward signal to a nonstationary multi-armed bandit
+algorithm, which then determines a stochastic syllabus. We consider a range of
+signals derived from two distinct indicators of learning progress: rate of
+increase in prediction accuracy, and rate of increase in network complexity.
+Experimental results for LSTM networks on three curricula demonstrate that our
+approach can significantly accelerate learning, in some cases halving the time
+required to attain a satisfactory performance level.},
+ arxiv_url = {https://arxiv.org/pdf/1704.03003v1.pdf},
+ author = {Alex Graves and Marc G. Bellemare and Jacob Menick and Remi Munos and Koray Kavukcuoglu},
+ title = {Automated curriculum learning for neural networks},
+ year = {2017}
+}
+
+@article{vorontsova_2021_convex,
+ abstract = {This textbook is based on lectures given by the authors at MIPT (Moscow), HSE
+(Moscow), FEFU (Vladivostok), V.I. Vernadsky KFU (Simferopol), ASU (Republic of
+Adygea), and the University of Grenoble-Alpes (Grenoble, France). First of all,
+the authors focused on the program of a two-semester course of lectures on
+convex optimization, which is given to students of MIPT. The first chapter of
+this book contains the materials of the first semester ("Fundamentals of convex
+analysis and optimization"), the second and third chapters contain the
+materials of the second semester ("Numerical methods of convex optimization").
+  The textbook has a number of features. First, in contrast to the classic
+manuals, this book does not provide proofs of all the theorems mentioned. This
+allowed, on one side, to describe more themes, but on the other side, made the
+presentation less self-sufficient. The second important point is that part of
+the material is advanced and is published in the Russian educational
+literature, apparently for the first time. Third, the accents that are given do
+not always coincide with the generally accepted accents in the textbooks that
+are now popular. First of all, we talk about a sufficiently advanced
+presentation of conic optimization, including robust optimization, as a vivid
+demonstration of the capabilities of modern convex analysis.},
+ arxiv_url = {https://arxiv.org/pdf/2106.01946v4.pdf},
+ author = {Evgeniya Vorontsova and Roland Hildebrand and Alexander Gasnikov and Fedor Stonyakin},
+ title = {Convex optimization},
+ year = {2021}
+}

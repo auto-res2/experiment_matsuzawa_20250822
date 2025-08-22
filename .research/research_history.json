@@ -6,5 +6,52 @@
     "dataset distillation",
     "training data pruning",
     "active learning efficiency"
+  ],
+  "research_study_list": [
+    {
+      "title": "Training Data Subset Selection for Regression with Controlled Generalization Error"
+    },
+    {
+      "title": "Towards a statistical theory of data selection under weak supervision"
+    },
+    {
+      "title": "Balancing Feature Similarity and Label Variability for Optimal Size-Aware One-shot Subset Selection"
+    },
+    {
+      "title": "Generic Coreset for Scalable Learning of Monotonic Kernels: Logistic Regression, Sigmoid and more"
+    },
+    {
+      "title": "Generic Coreset for Scalable Learning of Monotonic Kernels: Logistic Regression, Sigmoid and more"
+    },
+    {
+      "title": "AutoCoreset: An Automatic Practical Coreset Construction Framework"
+    },
+    {
+      "title": "What is Dataset Distillation Learning?"
+    },
+    {
+      "title": "Dataset Distillation with Infinitely Wide Convolutional Networks"
+    },
+    {
+      "title": "Slimmable Dataset Condensation"
+    },
+    {
+      "title": "Robust Data Pruning under Label Noise via Maximizing Re-labeling Accuracy"
+    },
+    {
+      "title": "Dataset Pruning: Reducing Training Data by Examining Generalization Influence"
+    },
+    {
+      "title": "Deep Learning on a Data Diet: Finding Important Examples Early in Training"
+    },
+    {
+      "title": "Batch Active Learning at Scale"
+    },
+    {
+      "title": "Improved Algorithms for Agnostic Pool-based Active Classification"
+    },
+    {
+      "title": "Efficient Active Learning with Abstention"
+    }
   ]
 }
